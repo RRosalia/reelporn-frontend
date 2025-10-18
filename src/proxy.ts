@@ -40,7 +40,6 @@ async function isCrawler(request: NextRequest): Promise<boolean> {
     request.headers.get('cf-connecting-ip') ||
     request.headers.get('x-real-ip') ||
     request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.ip ||
     'unknown';
 
   if (ip === 'unknown') {
