@@ -31,12 +31,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build application
-        run: yarn build
+      - name: Build with @cloudflare/next-on-pages
+        run: npx @cloudflare/next-on-pages@latest
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=frontend
+          command: pages deploy .vercel/output/static --project-name=frontend
