@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+// @ts-ignore - No types available for react-gtm-module
 import TagManager from 'react-gtm-module';
 
 interface CookiePreferences {

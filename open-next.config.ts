@@ -1,3 +1,4 @@
+// @ts-ignore - OpenNext types are only available after build
 import type { OpenNextConfig } from '@opennextjs/cloudflare';
 
 const config: OpenNextConfig = {

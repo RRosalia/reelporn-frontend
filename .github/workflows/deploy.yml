@@ -35,4 +35,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .open-next/worker --project-name=frontend
+          command: pages deploy .open-next/cloudflare --project-name=frontend
