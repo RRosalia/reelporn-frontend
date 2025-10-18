@@ -8,9 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "type-check": "tsc --noEmit",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -36,7 +34,6 @@
     "tailwindcss": "4.1.14",
     "@tailwindcss/postcss": "^4.1.14",
     "postcss": "^8.4.49",
-    "autoprefixer": "^10.4.21",
-    "@opennextjs/cloudflare": "^1.0.0-beta"
+    "autoprefixer": "^10.4.21"
   }
 }
