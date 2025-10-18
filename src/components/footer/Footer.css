@@ -1,0 +1,226 @@
+/* Modern Footer Styling */
+.modern-footer {
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.footer-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        #c2338a 25%,
+        #f8c537 50%,
+        #c2338a 75%,
+        transparent 100%
+    );
+}
+
+.footer-brand .brand-logo {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* Social Links */
+.modern-footer .social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modern-footer .social-links .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.modern-footer .social-links .social-icon:hover {
+    background: linear-gradient(135deg, #c2338a 0%, #e74c3c 100%);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Footer Headings */
+.footer-heading {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #c2338a, #f8c537);
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #f8c537;
+    transform: translateX(5px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.brand-highlight {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+.cookie-settings-btn {
+    background: rgba(43, 40, 56, 0.8);
+    color: white;
+    border: 1px solid rgba(248, 197, 55, 0.3);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cookie-settings-btn:hover {
+    border-color: #f8c537;
+    background: rgba(43, 40, 56, 1);
+    color: #f8c537;
+}
+
+.cookie-settings-btn i {
+    color: #f8c537;
+    font-size: 16px;
+}
+
+.language-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-selector i {
+    color: #f8c537;
+    font-size: 18px;
+}
+
+.language-dropdown {
+    background: rgba(43, 40, 56, 0.8);
+    color: white;
+    border: 1px solid rgba(248, 197, 55, 0.3);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.language-dropdown:hover {
+    border-color: #f8c537;
+    background: rgba(43, 40, 56, 1);
+}
+
+.language-dropdown option {
+    background: #2b2838;
+    color: white;
+    padding: 8px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer-heading {
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-brand .brand-logo {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .footer-description {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+}

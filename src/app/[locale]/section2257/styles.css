@@ -1,0 +1,67 @@
+/* Section 2257 Page Styles */
+.section2257-page {
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    padding-top: 80px;
+}
+
+.custodian-box {
+    background: rgba(194, 51, 138, 0.1);
+    border: 1px solid rgba(194, 51, 138, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.custodian-info {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.custodian-info p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.legal-box {
+    background: rgba(248, 197, 55, 0.1);
+    border: 1px solid rgba(248, 197, 55, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.legal-box p {
+    margin-bottom: 15px;
+}
+
+.legal-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #f8c537;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    background: rgba(248, 197, 55, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(248, 197, 55, 0.3);
+}
+
+.contact-link:hover {
+    color: #c2338a;
+    background: rgba(194, 51, 138, 0.1);
+    border-color: rgba(194, 51, 138, 0.3);
+}
+
+.contact-link i {
+    font-size: 20px;
+}

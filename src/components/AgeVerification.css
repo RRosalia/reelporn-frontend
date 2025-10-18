@@ -1,0 +1,218 @@
+/* Prevent flash of content before age verification */
+html.age-verification-pending body > *:not(.age-verification-overlay) {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Ensure age verification overlay is always visible and on top */
+html.age-verification-pending .age-verification-overlay {
+    display: flex !important;
+    visibility: visible !important;
+}
+
+/* Age Verification Modal */
+.age-verification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.age-verification-modal {
+    background: rgba(26, 22, 38, 0.95);
+    border: 2px solid transparent;
+    background-image: linear-gradient(rgba(26, 22, 38, 0.95), rgba(26, 22, 38, 0.95)),
+                      linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(194, 51, 138, 0.2);
+}
+
+/* Language Selector */
+.age-lang-selector {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.age-lang-dropdown {
+    background: rgba(43, 40, 56, 0.8);
+    color: #f8c537;
+    border: 1px solid rgba(248, 197, 55, 0.3);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.age-lang-dropdown:hover {
+    border-color: #f8c537;
+    background: rgba(43, 40, 56, 1);
+}
+
+/* Logo */
+.age-logo {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.age-logo-reel {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.age-logo-porn {
+    background: linear-gradient(135deg, #f8c537 0%, #c2338a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Title */
+.age-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Notice Badge */
+.age-notice-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(194, 51, 138, 0.4);
+}
+
+/* Warning Text */
+.age-warning-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.age-warning-text p {
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.age-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.age-btn {
+    flex: 1;
+    max-width: 250px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.age-btn-enter {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(194, 51, 138, 0.4);
+}
+
+.age-btn-enter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 51, 138, 0.6);
+}
+
+.age-btn-exit {
+    background: rgba(43, 40, 56, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.age-btn-exit:hover {
+    background: rgba(43, 40, 56, 1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Parental Control Link */
+.age-parental-link {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.age-parental-link a {
+    color: #f8c537;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.age-parental-link a:hover {
+    color: #c2338a;
+    text-decoration: underline;
+}
+
+/* Footer */
+.age-footer {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .age-verification-modal {
+        padding: 30px 20px;
+    }
+
+    .age-logo {
+        font-size: 36px;
+    }
+
+    .age-title {
+        font-size: 24px;
+    }
+
+    .age-buttons {
+        flex-direction: column;
+    }
+
+    .age-btn {
+        max-width: 100%;
+    }
+
+    .age-warning-text {
+        font-size: 13px;
+    }
+}

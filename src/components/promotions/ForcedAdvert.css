@@ -1,0 +1,273 @@
+/* Forced Advert Styling */
+.forced-advert {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Ad Tag Overlay */
+.ad-tag-overlay {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.ad-badge {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f8c537;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid rgba(248, 197, 55, 0.5);
+}
+
+.ad-timer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ad-timer i {
+    color: #f8c537;
+}
+
+/* Ad Content Center */
+.ad-content-center {
+    text-align: center;
+    z-index: 5;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.ad-logo {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: bounceIn 0.8s ease-out;
+}
+
+.ad-logo i {
+    color: white;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.ad-advertiser {
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.ad-message {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Skip Button */
+.skip-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: not-allowed;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.skip-button.disabled {
+    opacity: 0.5;
+}
+
+.skip-button.active {
+    background: white;
+    border-color: white;
+    color: #333;
+    cursor: pointer;
+    animation: pulse 2s ease infinite;
+}
+
+.skip-button.active:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+.skip-button i {
+    margin-right: 5px;
+}
+
+/* CTA Button */
+.ad-cta-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+.ad-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(194, 51, 138, 0.5);
+    color: white;
+}
+
+/* Progress Bar */
+.ad-progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.ad-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c2338a 0%, #f8c537 100%);
+    transition: width 1s linear;
+}
+
+/* Decorative Elements */
+.ad-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseRing 3s ease-out infinite;
+}
+
+.pulse-ring:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.pulse-ring:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes pulseRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ad-logo {
+        font-size: 60px;
+    }
+
+    .ad-advertiser {
+        font-size: 28px;
+    }
+
+    .ad-message {
+        font-size: 16px;
+    }
+
+    .skip-button {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    .ad-cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,491 @@
+{
+  "header": {
+    "home": "Startseite",
+    "categories": "Kategorien",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "watch": "Ansehen",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "profile": {
+    "register": "Registrieren",
+    "login": "Einloggen",
+    "liked": "Gelikte Videos",
+    "subscriptions": "Abonnements",
+    "faq": "FAQ",
+    "support": "Support Kontaktieren",
+    "account": "Mein Konto",
+    "logout": "Abmelden"
+  },
+  "home": {
+    "hero": {
+      "title": "Entdecke Heiße 15-Sekunden Reels",
+      "subtitle": "Schaue Tausende kurze Clips. Swipe, Like und genieße.",
+      "watchNow": "Jetzt Ansehen",
+      "getPremium": "Premium Holen",
+      "featuredContent": "Empfohlene Inhalte",
+      "trending": "🔥 Im Trend"
+    },
+    "stats": {
+      "videos": "Videos",
+      "users": "Aktive Nutzer",
+      "daily": "Tägliche Updates"
+    },
+    "viewAll": "Alle Anzeigen",
+    "search": {
+      "placeholder": "Videos suchen..."
+    },
+    "loadMore": "Mehr Videos Laden",
+    "premium": {
+      "title": "Premium-Funktionen Freischalten",
+      "subtitle": "Erhalten Sie unbegrenzten Zugriff auf exklusive Inhalte und Funktionen",
+      "feature1": "Werbefreies Streaming-Erlebnis",
+      "feature2": "HD & 4K Videoqualität",
+      "feature3": "Videos für Offline-Ansicht herunterladen",
+      "feature4": "Früher Zugang zu Neuveröffentlichungen",
+      "cta": "Jetzt Premium Werden"
+    }
+  },
+  "category": {
+    "trending": "Im Trend",
+    "new": "Neu",
+    "popular": "Beliebt",
+    "amateur": "Amateur",
+    "professional": "Professionell",
+    "featured": "Vorgestellt",
+    "topRated": "Am Besten Bewertet",
+    "mostViewed": "Meistgesehen"
+  },
+  "login": {
+    "title": "Willkommen Zurück!",
+    "welcomeBack": "Willkommen Zurück!",
+    "signIn": "Anmelden",
+    "hero": {
+      "title": "Bereit Fortzufahren?",
+      "subtitle": "Ihre Lieblingsinhalte warten",
+      "description": "Greifen Sie auf Ihre persönliche Bibliothek zu und fahren Sie dort fort, wo Sie aufgehört haben"
+    },
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "username": "Benutzername oder E-Mail",
+    "password": "Passwort",
+    "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+    "rememberMe": "Angemeldet bleiben",
+    "forgotPassword": "Passwort Vergessen?",
+    "submit": "Anmelden",
+    "loading": "Anmeldung läuft...",
+    "noAccount": "Noch kein Konto?",
+    "createAccount": "Konto Erstellen",
+    "error": {
+      "rateLimitExceeded": "Zu viele Anmeldeversuche. Bitte versuchen Sie es später erneut.",
+      "invalidCredentials": "Ungültige E-Mail oder Passwort. Bitte versuchen Sie es erneut.",
+      "validationFailed": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut.",
+      "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+      "server": "Serverfehler. Bitte versuchen Sie es später erneut.",
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "loginRequired": "Bitte melden Sie sich an, um fortzufahren.",
+      "logoutSuccess": "Sie wurden erfolgreich abgemeldet."
+    }
+  },
+  "account": {
+    "title": "Mein Konto",
+    "profile": {
+      "title": "Profilinformationen",
+      "name": "Name",
+      "nickname": "Nickname",
+      "nicknameHint": "Sie können Ihren Nickname nur einmal pro Monat ändern.",
+      "email": "E-Mail-Adresse",
+      "emailVerified": "E-Mail Verifiziert",
+      "update": "Profil Aktualisieren",
+      "updating": "Aktualisierung...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!"
+    },
+    "password": {
+      "title": "Passwort Ändern",
+      "current": "Aktuelles Passwort",
+      "new": "Neues Passwort",
+      "confirm": "Neues Passwort Bestätigen",
+      "update": "Passwort Ändern",
+      "updating": "Ändern...",
+      "updateSuccess": "Passwort erfolgreich geändert!",
+      "mismatch": "Neue Passwörter stimmen nicht überein."
+    },
+    "logout": {
+      "title": "Abmelden",
+      "description": "Von Ihrem Konto abmelden",
+      "button": "Abmelden",
+      "confirm": "Sind Sie sicher, dass Sie sich abmelden möchten?"
+    },
+    "info": {
+      "title": "Kontoinformationen",
+      "memberId": "Mitglieds-ID",
+      "memberSince": "Mitglied Seit",
+      "lastUpdated": "Zuletzt Aktualisiert"
+    },
+    "error": {
+      "validationFailed": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut.",
+      "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "twoFactor": {
+      "title": "Zwei-Faktor-Authentifizierung",
+      "description": "Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu, indem Sie die Zwei-Faktor-Authentifizierung aktivieren.",
+      "enableButton": "Zwei-Faktor-Authentifizierung Aktivieren",
+      "setup": {
+        "title": "Zwei-Faktor-Authentifizierung Aktivieren",
+        "description": "Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu. Sie müssen bei jeder Anmeldung einen Code aus Ihrer Authenticator-App eingeben.",
+        "enable": "2FA Aktivieren",
+        "enabling": "Aktivierung...",
+        "cancel": "Abbrechen"
+      },
+      "scan": {
+        "title": "Richten Sie Ihre Authenticator-App Ein",
+        "instruction": "Scannen Sie diesen QR-Code mit Ihrer Authenticator-App (Google Authenticator, Authy, usw.):",
+        "showSecret": "Geheimschlüssel für manuelle Eingabe anzeigen",
+        "hideSecret": "Geheimschlüssel ausblenden",
+        "enterCode": "Geben Sie nach dem Scannen des QR-Codes den 6-stelligen Code aus Ihrer Authenticator-App ein, um zu verifizieren:",
+        "verify": "Verifizieren & Fortfahren",
+        "verifying": "Verifizierung..."
+      },
+      "recovery": {
+        "title": "Speichern Sie Ihre Wiederherstellungscodes",
+        "important": "Wichtig",
+        "warning": "Bewahren Sie diese Wiederherstellungscodes an einem sicheren Ort auf. Sie können sie verwenden, um auf Ihr Konto zuzugreifen, wenn Sie den Zugriff auf Ihre Authenticator-App verlieren.",
+        "download": "Codes Herunterladen",
+        "copy": "In Zwischenablage Kopieren",
+        "continue": "Ich Habe Meine Wiederherstellungscodes Gespeichert"
+      },
+      "manage": {
+        "title": "Zwei-Faktor-Authentifizierung",
+        "enabled": "Die Zwei-Faktor-Authentifizierung ist derzeit für Ihr Konto aktiviert.",
+        "description": "Ihr Konto ist mit Zwei-Faktor-Authentifizierung geschützt. Sie können Ihre Wiederherstellungscodes verwalten oder 2FA unten deaktivieren.",
+        "recoveryCodes": "Wiederherstellungscodes",
+        "viewCodes": "Wiederherstellungscodes Anzeigen",
+        "hideCodes": "Codes Ausblenden",
+        "loading": "Laden...",
+        "regenerate": "Wiederherstellungscodes Regenerieren",
+        "regenerating": "Regenerierung...",
+        "regenerateConfirm": "Sind Sie sicher, dass Sie Ihre Wiederherstellungscodes regenerieren möchten? Dies wird Ihre alten Wiederherstellungscodes ungültig machen.",
+        "regenerateSuccess": "Wiederherstellungscodes erfolgreich regeneriert! Bitte speichern Sie sie an einem sicheren Ort.",
+        "copiedSuccess": "Wiederherstellungscodes in die Zwischenablage kopiert!",
+        "disableTitle": "Zwei-Faktor-Authentifizierung Deaktivieren",
+        "disableDescription": "Das Deaktivieren von 2FA macht Ihr Konto weniger sicher. Sind Sie sicher, dass Sie fortfahren möchten?",
+        "disable": "2FA Deaktivieren",
+        "disabling": "Deaktivierung...",
+        "disableConfirm": "Sind Sie sicher, dass Sie die Zwei-Faktor-Authentifizierung deaktivieren möchten? Dies wird Ihr Konto weniger sicher machen."
+      },
+      "error": {
+        "enableFailed": "Fehler beim Aktivieren der Zwei-Faktor-Authentifizierung. Bitte versuchen Sie es erneut.",
+        "invalidCode": "Der bereitgestellte Zwei-Faktor-Authentifizierungscode war ungültig.",
+        "verifyFailed": "Fehler beim Verifizieren des Codes. Bitte versuchen Sie es erneut.",
+        "fetchCodesFailed": "Fehler beim Abrufen der Wiederherstellungscodes. Bitte versuchen Sie es erneut.",
+        "regenerateFailed": "Fehler beim Regenerieren der Wiederherstellungscodes. Bitte versuchen Sie es erneut.",
+        "disableFailed": "Fehler beim Deaktivieren der Zwei-Faktor-Authentifizierung. Bitte versuchen Sie es erneut."
+      }
+    }
+  },
+  "register": {
+    "title": "Heute Beitreten!",
+    "choosePlan": "Wählen Sie Ihre Mitgliedschaft"
+  },
+  "signup": {
+    "title": "Wählen Sie Ihre Mitgliedschaft",
+    "username": "Benutzername",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirmPassword": "Passwort Bestätigen",
+    "paymentMethod": "Zahlungsmethode",
+    "creditCard": "Kreditkarte",
+    "paypal": "PayPal",
+    "crypto": "Kryptowährung",
+    "submit": "Registrierung Abschließen",
+    "subscribeFor": "Abonnieren für",
+    "selectPlan": "Wählen Sie einen Plan",
+    "cancel": "Abbrechen",
+    "billedAt": "Abgerechnet mit",
+    "haveAccount": "Haben Sie bereits ein Konto?",
+    "clickHere": "Hier klicken",
+    "promo": {
+      "title": "Jetzt Exklusive Inhalte Ansehen!",
+      "subtitle": "Tritt Tausenden zufriedenen Mitgliedern bei",
+      "description": "Erhalte unbegrenzten Zugriff auf Premium-Inhalte"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "Keine Werbung",
+      "description": "Alle Werbung entfernen"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Voller Zugriff auf alle Funktionen"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "Ultimatives VIP-Erlebnis"
+    },
+    "from": "ab",
+    "perMonth": "Monat",
+    "popular": "Beliebt",
+    "bestValue": "Bester Wert",
+    "exclusive": "Exklusiv",
+    "save": "Sparen",
+    "features": "Enthaltene Funktionen",
+    "duration": {
+      "1month": "1 Monat",
+      "6months": "6 Monate",
+      "12months": "12 Monate"
+    },
+    "feature": {
+      "noAds": "Werbefreies Erlebnis",
+      "basicSupport": "Basis-Support",
+      "hdStreaming": "HD-Streaming",
+      "downloadVideos": "Videos herunterladen",
+      "exclusiveContent": "Exklusive Inhalte",
+      "prioritySupport": "Prioritäts-Support",
+      "4kStreaming": "4K Ultra HD-Streaming",
+      "unlimitedDownloads": "Unbegrenzte Downloads",
+      "earlyAccess": "Früher Zugang zu neuen Inhalten",
+      "vipSupport": "24/7 VIP-Support",
+      "customPlaylist": "Benutzerdefinierte Playlists"
+    }
+  },
+  "footer": {
+    "description": "Ihre erstklassige Destination für hochwertige Kurzform-Videoinhalte. Entdecken, ansehen und teilen Sie erstaunliche Reels.",
+    "quickLinks": "Schnellzugriff",
+    "shorts": "Shorts",
+    "account": "Konto",
+    "support": "Support",
+    "legal": "Rechtliches",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz",
+    "dmca": "DMCA",
+    "cookies": "Cookie-Richtlinie",
+    "language": "Sprache",
+    "cookieSettings": "Cookie-Einstellungen",
+    "copyright": "Alle Rechte vorbehalten"
+  },
+  "age": {
+    "title": "Dies ist eine Erwachsenen (18+) Website",
+    "notice": "Hinweis an Nutzer",
+    "warning1": "Diese Website enthält altersbeschränkte Materialien, einschließlich Nacktheit und explizite Darstellungen sexueller Aktivitäten. Durch den Eintritt bestätigen Sie, dass Sie mindestens 18 Jahre alt sind oder das Volljährigkeitsalter in der Gerichtsbarkeit erreicht haben, von der aus Sie auf die Website zugreifen, und Sie stimmen der Ansicht von sexuell explizitem Inhalt zu.",
+    "warning2": "Unsere Seite zur elterlichen Kontrolle erklärt, wie Sie den Zugriff auf diese Seite einfach blockieren können.",
+    "enter": "Ich bin 18 Jahre oder älter - Eintreten",
+    "exit": "Ich bin unter 18 Jahren - Verlassen",
+    "parentalInfo": "Erfahren Sie mehr auf unserer",
+    "parentalLink": "Seite zur elterlichen Kontrolle"
+  },
+  "blocked": {
+    "title": "Diese Website ist ausschließlich für Benutzer ab 18 Jahren bestimmt.",
+    "message": "Wir nehmen unsere Verantwortung, Minderjährige vom Zugriff auf Inhalte für Erwachsene abzuhalten, sehr ernst. Wenn Sie glauben, dass Sie diese Seite irrtümlich erreicht haben, schließen Sie bitte dieses Fenster und kontaktieren Sie unser Support-Team."
+  },
+  "parental": {
+    "title": "Elterliche Kontrolle",
+    "subtitle": "Kinder vor dem Zugriff auf altersbeschränkte Inhalte schützen",
+    "intro": {
+      "title": "Über Elterliche Kontrolle",
+      "text1": "ReelPorn setzt sich dafür ein, Minderjährige vom Zugriff auf Inhalte für Erwachsene abzuhalten. Wir ermutigen Eltern und Erziehungsberechtigte nachdrücklich, eine aktive Rolle bei der Überwachung und Kontrolle der Internetnutzung ihrer Kinder zu übernehmen.",
+      "text2": "Diese Seite bietet Informationen über verschiedene Methoden und Tools, mit denen Sie den Zugriff auf Websites für Erwachsene, einschließlich ReelPorn.com, auf von Kindern genutzten Geräten verhindern können."
+    },
+    "methods": {
+      "title": "So Blockieren Sie Inhalte für Erwachsene",
+      "intro": "Es gibt mehrere effektive Möglichkeiten, den Zugriff auf Websites für Erwachsene einzuschränken:",
+      "router": {
+        "title": "Blockierung auf Router-Ebene",
+        "text": "Die meisten modernen Router verfügen über Funktionen zur elterlichen Kontrolle, mit denen Sie bestimmte Websites oder Inhaltskategorien auf allen mit Ihrem Heimnetzwerk verbundenen Geräten blockieren können. Weitere Informationen finden Sie in der Dokumentation Ihres Routers oder wenden Sie sich an Ihren Router-Hersteller."
+      },
+      "isp": {
+        "title": "Kontrollen des Internetdienstanbieters (ISP)",
+        "text": "Viele Internetdienstanbieter bieten Dienste zur elterlichen Kontrolle an, die Inhalte filtern können, bevor sie Ihr Zuhause erreichen. Wenden Sie sich an Ihren ISP, um mehr über verfügbare Optionen zur elterlichen Kontrolle und deren Aktivierung zu erfahren."
+      },
+      "device": {
+        "title": "Kontrollen auf Geräteebene",
+        "text": "Sowohl Computer als auch mobile Geräte verfügen über integrierte Funktionen zur elterlichen Kontrolle. Verwenden Sie unter Windows Family Safety. Verwenden Sie auf dem Mac Bildschirmzeit und Kindersicherung. Auf iOS- und Android-Geräten verwenden Sie die integrierten Funktionen Bildschirmzeit bzw. Family Link."
+      }
+    },
+    "software": {
+      "title": "Filtersoftware von Drittanbietern",
+      "intro": "Mehrere seriöse Unternehmen bieten umfassende Lösungen für elterliche Kontrolle und Inhaltsfilterung an:",
+      "netnanny": "Umfassende Internetfilter- und Kindersicherungssoftware für Windows, Mac, Android und iOS-Geräte.",
+      "norton": "Kostenloser Kindersicherungsdienst von Norton, der Kinder vor unangemessenen Inhalten schützt.",
+      "qustodio": "Plattformübergreifende Kindersicherungssoftware mit Webfilterung, Zeitlimits und Aktivitätsüberwachung.",
+      "opendns": "Kostenloser DNS-basierter Filterdienst, der Inhalte für Erwachsene auf Netzwerkebene blockiert."
+    },
+    "resources": {
+      "title": "Zusätzliche Ressourcen",
+      "text": "Weitere Informationen über Internetsicherheit und den Schutz von Kindern online finden Sie unter diesen Ressourcen:"
+    },
+    "notice": {
+      "title": "Wichtiger Hinweis",
+      "text": "Obwohl wir alle Anstrengungen unternehmen, um Minderjährige durch Altersverifikation vom Zugriff auf unsere Website abzuhalten, liegt die letztendliche Verantwortung dafür, dass Kinder keinen Zugriff auf Inhalte für Erwachsene erhalten, bei den Eltern und Erziehungsberechtigten. Wir empfehlen dringend, mehrere Schutzebenen mit den oben beschriebenen Methoden zu implementieren."
+    }
+  },
+  "cookies": {
+    "title": "Wir verwenden Cookies",
+    "description": "Wir verwenden Cookies und ähnliche Technologien, um Ihr Surferlebnis zu verbessern, Inhalte und Anzeigen zu personalisieren, Social-Media-Funktionen bereitzustellen und unseren Datenverkehr zu analysieren. Sie können wählen, welche Cookies Sie akzeptieren.",
+    "acceptAll": "Alle Cookies akzeptieren",
+    "customize": "Cookies anpassen",
+    "cancel": "Abbrechen",
+    "savePreferences": "Einstellungen speichern",
+    "preferences": {
+      "title": "Cookie-Einstellungen",
+      "description": "Wir verwenden verschiedene Arten von Cookies, um Ihre Erfahrung auf unserer Website zu optimieren. Klicken Sie auf die Kategorien unten, um mehr zu erfahren und Ihre Einstellungen anzupassen. Bitte beachten Sie, dass das Blockieren einiger Cookie-Typen Ihre Erfahrung beeinträchtigen kann."
+    },
+    "essential": {
+      "title": "Essenzielle Cookies",
+      "description": "Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden. Sie werden normalerweise nur als Reaktion auf von Ihnen durchgeführte Aktionen gesetzt, wie z. B. das Festlegen Ihrer Datenschutzeinstellungen, das Anmelden oder das Ausfüllen von Formularen."
+    },
+    "functional": {
+      "title": "Funktionale Cookies",
+      "description": "Diese Cookies ermöglichen erweiterte Funktionen und Personalisierung wie Videos und Live-Chats. Sie können von uns oder von Drittanbietern gesetzt werden, deren Dienste wir zu unseren Seiten hinzugefügt haben."
+    },
+    "analytics": {
+      "title": "Analyse-Cookies",
+      "description": "Mit diesen Cookies können wir Besuche und Verkehrsquellen zählen, damit wir die Leistung unserer Website messen und verbessern können. Sie helfen uns zu verstehen, welche Seiten am beliebtesten und am wenigsten beliebt sind und wie sich Besucher auf der Website bewegen."
+    },
+    "advertising": {
+      "title": "Targeting/Werbe-Cookies",
+      "description": "Diese Cookies können über unsere Website von unseren Werbepartnern gesetzt werden. Sie können von diesen Unternehmen verwendet werden, um ein Profil Ihrer Interessen zu erstellen und Ihnen relevante Anzeigen auf anderen Websites zu zeigen."
+    }
+  },
+  "pornstars": {
+    "title": "Pornostars",
+    "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
+    "sort": {
+      "popular": "Beliebteste",
+      "newest": "Neueste",
+      "mostVideos": "Meiste Videos",
+      "mostViewed": "Am meisten angesehen"
+    },
+    "pagination": {
+      "showing": "Zeige {start}-{end} von {total} Pornostars"
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Videos",
+      "views": "Aufrufe",
+      "likes": "Likes",
+      "followers": "Follower"
+    },
+    "follow": "Folgen",
+    "following": "Folgend",
+    "message": "Nachricht",
+    "tip": "Trinkgeld senden",
+    "tabs": {
+      "videos": "Videos",
+      "photos": "Fotos",
+      "about": "Über"
+    },
+    "loadMore": "Mehr Videos laden",
+    "about": {
+      "bio": "Biografie",
+      "categories": "Kategorien",
+      "social": "Soziale Medien",
+      "details": "Persönliche Details"
+    },
+    "details": {
+      "age": "Alter",
+      "country": "Land",
+      "height": "Größe",
+      "weight": "Gewicht",
+      "measurements": "Maße",
+      "hair": "Haarfarbe",
+      "eyes": "Augenfarbe",
+      "ethnicity": "Ethnizität"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Zugriff Verboten",
+      "message": "Entschuldigung, Sie haben keine Berechtigung, auf diese Seite zuzugreifen. Dieser Bereich ist möglicherweise eingeschränkt oder erfordert eine spezielle Autorisierung."
+    },
+    "404": {
+      "title": "Seite Nicht Gefunden",
+      "message": "Hoppla! Die gesuchte Seite existiert nicht. Sie wurde möglicherweise verschoben oder gelöscht."
+    },
+    "500": {
+      "title": "Interner Serverfehler",
+      "message": "Auf unserer Seite ist etwas schief gelaufen. Unsere Ingenieure wurden benachrichtigt und arbeiten an einer Lösung."
+    },
+    "503": {
+      "title": "Service Nicht Verfügbar",
+      "message": "Wir führen derzeit Wartungsarbeiten durch oder haben viel Verkehr. Unsere Ingenieure wurden benachrichtigt und arbeiten daran, den Service wiederherzustellen."
+    },
+    "default": {
+      "title": "Etwas Ist Schief Gelaufen",
+      "message": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+    },
+    "goHome": "Zurück zur Startseite",
+    "serverNotice": "Bitte versuchen Sie es später erneut. Unsere Ingenieure wurden benachrichtigt und arbeiten daran, dieses Problem so schnell wie möglich zu beheben."
+  },
+  "subscriptions": {
+    "title": "Wählen Sie Ihr Erlebnis",
+    "subtitle": "Schalten Sie Premium-Funktionen und exklusive Inhalte frei",
+    "billing": {
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "saveUpTo": "Sparen Sie bis zu 40%"
+    },
+    "price": {
+      "perMonth": "/Monat",
+      "billedYearly": "jährlich abgerechnet",
+      "free": "Kostenlos",
+      "forever": "Für Immer"
+    },
+    "button": {
+      "getCurrentPlan": "Aktueller Plan",
+      "getStarted": "Jetzt Starten"
+    },
+    "comparison": {
+      "title": "Detaillierter Funktionsvergleich",
+      "feature": "Funktion"
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen zu Abonnements",
+      "changePlans": {
+        "question": "Kann ich jederzeit den Plan wechseln?",
+        "answer": "Ja! Sie können Ihr Abonnement jederzeit upgraden oder downgraden. Änderungen treten bei Ihrem nächsten Abrechnungszyklus in Kraft."
+      },
+      "freeTrial": {
+        "question": "Gibt es eine kostenlose Testversion?",
+        "answer": "Neue Benutzer erhalten 7 Tage kostenlose Premium-Testversion. Keine Kreditkarte erforderlich zum Starten."
+      },
+      "cancel": {
+        "question": "Wie kann ich kündigen?",
+        "answer": "Sie können Ihr Abonnement jederzeit in Ihren Kontoeinstellungen kündigen. Sie behalten den Zugriff bis zum Ende Ihres Abrechnungszeitraums."
+      },
+      "payment": {
+        "question": "Welche Zahlungsmethoden werden akzeptiert?",
+        "answer": "Wir akzeptieren alle gängigen Kreditkarten, PayPal und Kryptowährung für Ihre Privatsphäre."
+      }
+    },
+    "guarantee": {
+      "title": "30-Tage-Geld-zurück-Garantie",
+      "description": "Nicht zufrieden? Erhalten Sie innerhalb von 30 Tagen eine vollständige Rückerstattung, ohne Fragen."
+    },
+    "loading": "Abonnementpläne werden geladen...",
+    "error": {
+      "title": "Pläne Können Nicht Geladen Werden",
+      "description": "Wir konnten die Abonnementpläne nicht laden. Bitte versuchen Sie es später erneut.",
+      "retry": "Erneut Versuchen"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Neueste Nachrichten, Updates und Einblicke",
+    "allCategories": "Alle Kategorien",
+    "minRead": "Min. Lesezeit",
+    "views": "Aufrufe",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "noPosts": "Keine Blog-Beiträge gefunden",
+    "backToBlog": "Zurück zum Blog",
+    "relatedPosts": "Verwandte Beiträge",
+    "notFound": "Blog-Beitrag nicht gefunden",
+    "notFoundDescription": "Der gesuchte Blog-Beitrag existiert nicht oder wurde entfernt."
+  }
+}

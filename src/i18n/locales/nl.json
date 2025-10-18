@@ -1,0 +1,491 @@
+{
+  "header": {
+    "home": "Home",
+    "categories": "Categorieën",
+    "about": "Over Ons",
+    "contact": "Contact",
+    "watch": "Kijken",
+    "login": "Inloggen",
+    "register": "Registreren"
+  },
+  "profile": {
+    "register": "Registreer",
+    "login": "Log In",
+    "liked": "Gelikte video's",
+    "subscriptions": "Abonnementen",
+    "faq": "V&A",
+    "support": "Neem contact op met ondersteuning",
+    "account": "Mijn Account",
+    "logout": "Uitloggen"
+  },
+  "home": {
+    "hero": {
+      "title": "Ontdek Hete 15-Seconden Reels",
+      "subtitle": "Bekijk duizenden korte clips. Swipe, like en geniet.",
+      "watchNow": "Kijk Nu",
+      "getPremium": "Premium Worden",
+      "featuredContent": "Uitgelichte Inhoud",
+      "trending": "🔥 Trending"
+    },
+    "stats": {
+      "videos": "Video's",
+      "users": "Actieve Gebruikers",
+      "daily": "Dagelijkse Updates"
+    },
+    "viewAll": "Bekijk Alles",
+    "search": {
+      "placeholder": "Zoek video's..."
+    },
+    "loadMore": "Meer Video's Laden",
+    "premium": {
+      "title": "Ontgrendel Premium Functies",
+      "subtitle": "Krijg onbeperkte toegang tot exclusieve inhoud en functies",
+      "feature1": "Advertentievrije streaming ervaring",
+      "feature2": "HD & 4K videokwaliteit",
+      "feature3": "Download video's voor offline kijken",
+      "feature4": "Vroege toegang tot nieuwe releases",
+      "cta": "Word Nu Premium"
+    }
+  },
+  "category": {
+    "trending": "Trending",
+    "new": "Nieuw",
+    "popular": "Populair",
+    "amateur": "Amateur",
+    "professional": "Professioneel",
+    "featured": "Uitgelicht",
+    "topRated": "Best Beoordeeld",
+    "mostViewed": "Meest Bekeken"
+  },
+  "login": {
+    "title": "Welkom Terug!",
+    "welcomeBack": "Welkom Terug!",
+    "signIn": "Inloggen",
+    "hero": {
+      "title": "Klaar om Door te Gaan?",
+      "subtitle": "Je favoriete content wacht op je",
+      "description": "Toegang tot je persoonlijke bibliotheek en ga verder waar je gebleven was"
+    },
+    "email": "E-mailadres",
+    "emailPlaceholder": "Voer je e-mail in",
+    "username": "Gebruikersnaam of E-mail",
+    "password": "Wachtwoord",
+    "passwordPlaceholder": "Voer je wachtwoord in",
+    "rememberMe": "Onthoud mij",
+    "forgotPassword": "Wachtwoord Vergeten?",
+    "submit": "Inloggen",
+    "loading": "Bezig met inloggen...",
+    "noAccount": "Nog geen account?",
+    "createAccount": "Account Aanmaken",
+    "error": {
+      "rateLimitExceeded": "Te veel inlogpogingen. Probeer het later opnieuw.",
+      "invalidCredentials": "Ongeldig e-mailadres of wachtwoord. Probeer het opnieuw.",
+      "validationFailed": "Controleer uw invoer en probeer het opnieuw.",
+      "network": "Netwerkfout. Controleer uw verbinding en probeer het opnieuw.",
+      "server": "Serverfout. Probeer het later opnieuw.",
+      "generic": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
+    "info": {
+      "loginRequired": "Log in om door te gaan.",
+      "logoutSuccess": "U bent succesvol uitgelogd."
+    }
+  },
+  "account": {
+    "title": "Mijn Account",
+    "profile": {
+      "title": "Profielinformatie",
+      "name": "Naam",
+      "nickname": "Nickname",
+      "nicknameHint": "U kunt uw nickname slechts één keer per maand wijzigen.",
+      "email": "E-mailadres",
+      "emailVerified": "E-mail Geverifieerd",
+      "update": "Profiel Bijwerken",
+      "updating": "Bijwerken...",
+      "updateSuccess": "Profiel succesvol bijgewerkt!"
+    },
+    "password": {
+      "title": "Wachtwoord Wijzigen",
+      "current": "Huidig Wachtwoord",
+      "new": "Nieuw Wachtwoord",
+      "confirm": "Bevestig Nieuw Wachtwoord",
+      "update": "Wachtwoord Wijzigen",
+      "updating": "Wijzigen...",
+      "updateSuccess": "Wachtwoord succesvol gewijzigd!",
+      "mismatch": "Nieuwe wachtwoorden komen niet overeen."
+    },
+    "logout": {
+      "title": "Uitloggen",
+      "description": "Uitloggen van uw account",
+      "button": "Uitloggen",
+      "confirm": "Weet u zeker dat u wilt uitloggen?"
+    },
+    "info": {
+      "title": "Accountinformatie",
+      "memberId": "Lid-ID",
+      "memberSince": "Lid Sinds",
+      "lastUpdated": "Laatst Bijgewerkt"
+    },
+    "error": {
+      "validationFailed": "Controleer uw invoer en probeer het opnieuw.",
+      "network": "Netwerkfout. Controleer uw verbinding en probeer het opnieuw.",
+      "generic": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
+    "twoFactor": {
+      "title": "Twee-Factor Authenticatie",
+      "description": "Voeg een extra beveiligingslaag toe aan uw account door twee-factor authenticatie in te schakelen.",
+      "enableButton": "Twee-Factor Authenticatie Inschakelen",
+      "setup": {
+        "title": "Twee-Factor Authenticatie Inschakelen",
+        "description": "Voeg een extra beveiligingslaag toe aan uw account. U moet bij elke aanmelding een code uit uw authenticator-app invoeren.",
+        "enable": "2FA Inschakelen",
+        "enabling": "Inschakelen...",
+        "cancel": "Annuleren"
+      },
+      "scan": {
+        "title": "Stel Uw Authenticator-App In",
+        "instruction": "Scan deze QR-code met uw authenticator-app (Google Authenticator, Authy, etc.):",
+        "showSecret": "Toon geheime sleutel voor handmatige invoer",
+        "hideSecret": "Verberg geheime sleutel",
+        "enterCode": "Voer na het scannen van de QR-code de 6-cijferige code uit uw authenticator-app in om te verifiëren:",
+        "verify": "Verifiëren & Doorgaan",
+        "verifying": "Verifiëren..."
+      },
+      "recovery": {
+        "title": "Bewaar Uw Herstelcodes",
+        "important": "Belangrijk",
+        "warning": "Bewaar deze herstelcodes op een veilige plaats. U kunt ze gebruiken om toegang te krijgen tot uw account als u de toegang tot uw authenticator-app verliest.",
+        "download": "Codes Downloaden",
+        "copy": "Kopiëren naar Klembord",
+        "continue": "Ik Heb Mijn Herstelcodes Opgeslagen"
+      },
+      "manage": {
+        "title": "Twee-Factor Authenticatie",
+        "enabled": "Twee-factor authenticatie is momenteel ingeschakeld op uw account.",
+        "description": "Uw account is beschermd met twee-factor authenticatie. U kunt uw herstelcodes beheren of 2FA hieronder uitschakelen.",
+        "recoveryCodes": "Herstelcodes",
+        "viewCodes": "Herstelcodes Bekijken",
+        "hideCodes": "Codes Verbergen",
+        "loading": "Laden...",
+        "regenerate": "Herstelcodes Opnieuw Genereren",
+        "regenerating": "Opnieuw genereren...",
+        "regenerateConfirm": "Weet u zeker dat u uw herstelcodes opnieuw wilt genereren? Dit zal uw oude herstelcodes ongeldig maken.",
+        "regenerateSuccess": "Herstelcodes succesvol opnieuw gegenereerd! Bewaar ze op een veilige plaats.",
+        "copiedSuccess": "Herstelcodes gekopieerd naar klembord!",
+        "disableTitle": "Twee-Factor Authenticatie Uitschakelen",
+        "disableDescription": "Het uitschakelen van 2FA maakt uw account minder veilig. Weet u zeker dat u wilt doorgaan?",
+        "disable": "2FA Uitschakelen",
+        "disabling": "Uitschakelen...",
+        "disableConfirm": "Weet u zeker dat u twee-factor authenticatie wilt uitschakelen? Dit maakt uw account minder veilig."
+      },
+      "error": {
+        "enableFailed": "Kon twee-factor authenticatie niet inschakelen. Probeer het opnieuw.",
+        "invalidCode": "De opgegeven twee-factor authenticatiecode was ongeldig.",
+        "verifyFailed": "Kon code niet verifiëren. Probeer het opnieuw.",
+        "fetchCodesFailed": "Kon herstelcodes niet ophalen. Probeer het opnieuw.",
+        "regenerateFailed": "Kon herstelcodes niet opnieuw genereren. Probeer het opnieuw.",
+        "disableFailed": "Kon twee-factor authenticatie niet uitschakelen. Probeer het opnieuw."
+      }
+    }
+  },
+  "register": {
+    "title": "Word Vandaag Lid!",
+    "choosePlan": "Kies Uw Lidmaatschap"
+  },
+  "signup": {
+    "title": "Kies Uw Lidmaatschap",
+    "username": "Gebruikersnaam",
+    "email": "E-mailadres",
+    "password": "Wachtwoord",
+    "confirmPassword": "Bevestig Wachtwoord",
+    "paymentMethod": "Betaalmethode",
+    "creditCard": "Creditcard",
+    "paypal": "PayPal",
+    "crypto": "Cryptocurrency",
+    "submit": "Registratie Voltooien",
+    "subscribeFor": "Abonneren voor",
+    "selectPlan": "Selecteer een abonnement",
+    "cancel": "Annuleren",
+    "billedAt": "Gefactureerd op",
+    "haveAccount": "Heb je al een account?",
+    "clickHere": "Klik hier",
+    "promo": {
+      "title": "Bekijk Nu Exclusieve Inhoud!",
+      "subtitle": "Sluit je aan bij duizenden tevreden leden",
+      "description": "Krijg onbeperkte toegang tot premium content"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "Geen Advertenties",
+      "description": "Verwijder alle advertenties"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Volledige toegang tot alle functies"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "Ultieme VIP-ervaring"
+    },
+    "from": "vanaf",
+    "perMonth": "maand",
+    "popular": "Populair",
+    "bestValue": "Beste Waarde",
+    "exclusive": "Exclusief",
+    "save": "Bespaar",
+    "features": "Inbegrepen functies",
+    "duration": {
+      "1month": "1 Maand",
+      "6months": "6 Maanden",
+      "12months": "12 Maanden"
+    },
+    "feature": {
+      "noAds": "Advertentievrije ervaring",
+      "basicSupport": "Basisondersteuning",
+      "hdStreaming": "HD-streaming",
+      "downloadVideos": "Video's downloaden",
+      "exclusiveContent": "Exclusieve inhoud",
+      "prioritySupport": "Prioriteitsondersteuning",
+      "4kStreaming": "4K Ultra HD-streaming",
+      "unlimitedDownloads": "Onbeperkte downloads",
+      "earlyAccess": "Vroege toegang tot nieuwe inhoud",
+      "vipSupport": "24/7 VIP-ondersteuning",
+      "customPlaylist": "Aangepaste afspeellijsten"
+    }
+  },
+  "footer": {
+    "description": "Jouw topbestemming voor hoogwaardige korte video-inhoud. Ontdek, bekijk en deel geweldige reels.",
+    "quickLinks": "Snelle Links",
+    "shorts": "Shorts",
+    "account": "Account",
+    "support": "Ondersteuning",
+    "legal": "Juridisch",
+    "terms": "Servicevoorwaarden",
+    "privacy": "Privacybeleid",
+    "dmca": "DMCA",
+    "cookies": "Cookiebeleid",
+    "language": "Taal",
+    "cookieSettings": "Cookie-instellingen",
+    "copyright": "Alle rechten voorbehouden"
+  },
+  "age": {
+    "title": "Dit is een volwassen (18+) website",
+    "notice": "Kennisgeving aan Gebruikers",
+    "warning1": "Deze website bevat leeftijdsgebonden materiaal, waaronder naaktheid en expliciete afbeeldingen van seksuele activiteit. Door binnen te komen, bevestigt u dat u ten minste 18 jaar oud bent of de meerderjarige leeftijd heeft bereikt in het rechtsgebied van waaruit u de website bezoekt en dat u toestemming geeft voor het bekijken van seksueel expliciet materiaal.",
+    "warning2": "Onze pagina over ouderlijk toezicht legt uit hoe u eenvoudig toegang tot deze site kunt blokkeren.",
+    "enter": "Ik ben 18 jaar of ouder - Doorgaan",
+    "exit": "Ik ben jonger dan 18 jaar - Afsluiten",
+    "parentalInfo": "Lees meer op onze",
+    "parentalLink": "pagina over ouderlijk toezicht"
+  },
+  "blocked": {
+    "title": "Deze website is uitsluitend bedoeld voor gebruikers van 18 jaar en ouder.",
+    "message": "We nemen onze verantwoordelijkheid om te voorkomen dat minderjarigen toegang krijgen tot inhoud voor volwassenen zeer serieus. Als u denkt dat u deze pagina per ongeluk heeft bereikt, sluit dan dit venster en neem contact op met ons ondersteuningsteam."
+  },
+  "parental": {
+    "title": "Ouderlijk Toezicht",
+    "subtitle": "Kinderen beschermen tegen toegang tot leeftijdsgebonden inhoud",
+    "intro": {
+      "title": "Over Ouderlijk Toezicht",
+      "text1": "ReelPorn zet zich in om te voorkomen dat minderjarigen toegang krijgen tot inhoud voor volwassenen. We moedigen ouders en voogden sterk aan om een actieve rol te spelen bij het monitoren en controleren van het internetgebruik van hun kinderen.",
+      "text2": "Deze pagina biedt informatie over verschillende methoden en tools die u kunt gebruiken om de toegang tot websites voor volwassenen, waaronder ReelPorn.com, op apparaten die door kinderen worden gebruikt, te blokkeren."
+    },
+    "methods": {
+      "title": "Hoe u Inhoud voor Volwassenen Kunt Blokkeren",
+      "intro": "Er zijn verschillende effectieve manieren om de toegang tot websites voor volwassenen te beperken:",
+      "router": {
+        "title": "Blokkering op Routerniveau",
+        "text": "De meeste moderne routers bevatten functies voor ouderlijk toezicht waarmee u specifieke websites of categorieën inhoud kunt blokkeren op alle apparaten die zijn verbonden met uw thuisnetwerk. Raadpleeg de documentatie van uw router of neem contact op met de fabrikant van uw router voor installatie-instructies."
+      },
+      "isp": {
+        "title": "Controles van Internetprovider (ISP)",
+        "text": "Veel internetproviders bieden diensten voor ouderlijk toezicht die inhoud kunnen filteren voordat deze uw huis bereikt. Neem contact op met uw ISP om te leren over beschikbare opties voor ouderlijk toezicht en hoe u deze kunt inschakelen."
+      },
+      "device": {
+        "title": "Controles op Apparaatniveau",
+        "text": "Zowel computers als mobiele apparaten hebben ingebouwde functies voor ouderlijk toezicht. Gebruik op Windows Family Safety. Gebruik op Mac Schermtijd en Ouderlijk Toezicht. Op iOS- en Android-apparaten gebruikt u respectievelijk de ingebouwde Schermtijd en Family Link-functies."
+      }
+    },
+    "software": {
+      "title": "Filtersoftware van Derden",
+      "intro": "Verschillende gerenommeerde bedrijven bieden uitgebreide oplossingen voor ouderlijk toezicht en inhoudsfiltering:",
+      "netnanny": "Uitgebreide internetfilter- en ouderlijk toezichtsoftware voor Windows, Mac, Android en iOS-apparaten.",
+      "norton": "Gratis ouderlijk toezichtservice van Norton die helpt kinderen te beschermen tegen ongepaste inhoud.",
+      "qustodio": "Cross-platform ouderlijk toezichtsoftware met webfiltering, tijdslimieten en activiteitenbewaking.",
+      "opendns": "Gratis DNS-gebaseerde filterservice die inhoud voor volwassenen op netwerkniveau blokkeert."
+    },
+    "resources": {
+      "title": "Aanvullende Bronnen",
+      "text": "Voor meer informatie over internetveiligheid en het beschermen van kinderen online, bezoek deze bronnen:"
+    },
+    "notice": {
+      "title": "Belangrijke Kennisgeving",
+      "text": "Hoewel we er alles aan doen om te voorkomen dat minderjarigen toegang krijgen tot onze site via leeftijdsverificatie, ligt de uiteindelijke verantwoordelijkheid voor het voorkomen dat kinderen toegang krijgen tot inhoud voor volwassenen bij ouders en voogden. We raden sterk aan om meerdere beschermingslagen te implementeren met behulp van de hierboven beschreven methoden."
+    }
+  },
+  "cookies": {
+    "title": "We gebruiken cookies",
+    "description": "We gebruiken cookies en vergelijkbare technologieën om uw browse-ervaring te verbeteren, inhoud en advertenties te personaliseren, sociale mediafuncties aan te bieden en ons verkeer te analyseren. U kunt kiezen welke cookies u accepteert.",
+    "acceptAll": "Alle cookies accepteren",
+    "customize": "Cookies aanpassen",
+    "cancel": "Annuleren",
+    "savePreferences": "Voorkeuren opslaan",
+    "preferences": {
+      "title": "Cookie voorkeuren",
+      "description": "We gebruiken verschillende soorten cookies om uw ervaring op onze website te optimaliseren. Klik op de onderstaande categorieën voor meer informatie en om uw voorkeuren aan te passen. Houd er rekening mee dat het blokkeren van sommige soorten cookies uw ervaring kan beïnvloeden."
+    },
+    "essential": {
+      "title": "Essentiële cookies",
+      "description": "Deze cookies zijn noodzakelijk voor het functioneren van de website en kunnen niet worden uitgeschakeld. Ze worden meestal alleen ingesteld als reactie op acties die u onderneemt, zoals het instellen van uw privacyvoorkeuren, inloggen of het invullen van formulieren."
+    },
+    "functional": {
+      "title": "Functionele cookies",
+      "description": "Deze cookies maken verbeterde functionaliteit en personalisatie mogelijk, zoals video's en livechats. Ze kunnen door ons of door externe providers worden ingesteld wiens diensten we aan onze pagina's hebben toegevoegd."
+    },
+    "analytics": {
+      "title": "Analytische cookies",
+      "description": "Met deze cookies kunnen we bezoeken en verkeersbronnen tellen, zodat we de prestaties van onze site kunnen meten en verbeteren. Ze helpen ons te begrijpen welke pagina's het meest en minst populair zijn en te zien hoe bezoekers zich over de site verplaatsen."
+    },
+    "advertising": {
+      "title": "Targeting/Advertentiecookies",
+      "description": "Deze cookies kunnen via onze site worden ingesteld door onze advertentiepartners. Ze kunnen door die bedrijven worden gebruikt om een profiel van uw interesses op te bouwen en u relevante advertenties op andere sites te tonen."
+    }
+  },
+  "pornstars": {
+    "title": "Pornsterren",
+    "subtitle": "Bekijk onze {count} geweldige artiesten",
+    "sort": {
+      "popular": "Meest Populair",
+      "newest": "Nieuwste",
+      "mostVideos": "Meeste Video's",
+      "mostViewed": "Meest Bekeken"
+    },
+    "pagination": {
+      "showing": "Toont {start}-{end} van {total} pornsterren"
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Video's",
+      "views": "Weergaven",
+      "likes": "Likes",
+      "followers": "Volgers"
+    },
+    "follow": "Volgen",
+    "following": "Volgend",
+    "message": "Bericht",
+    "tip": "Fooi Sturen",
+    "tabs": {
+      "videos": "Video's",
+      "photos": "Foto's",
+      "about": "Over"
+    },
+    "loadMore": "Meer Video's Laden",
+    "about": {
+      "bio": "Biografie",
+      "categories": "Categorieën",
+      "social": "Sociale Media",
+      "details": "Persoonlijke Details"
+    },
+    "details": {
+      "age": "Leeftijd",
+      "country": "Land",
+      "height": "Lengte",
+      "weight": "Gewicht",
+      "measurements": "Afmetingen",
+      "hair": "Haarkleur",
+      "eyes": "Oogkleur",
+      "ethnicity": "Etniciteit"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Toegang Verboden",
+      "message": "Sorry, u heeft geen toestemming om deze pagina te bekijken. Dit gebied is mogelijk beperkt of vereist speciale autorisatie."
+    },
+    "404": {
+      "title": "Pagina Niet Gevonden",
+      "message": "Oeps! De pagina die u zoekt bestaat niet. Het kan zijn verplaatst of verwijderd."
+    },
+    "500": {
+      "title": "Interne Serverfout",
+      "message": "Er is iets misgegaan aan onze kant. Onze ingenieurs zijn op de hoogte gebracht en werken aan een oplossing."
+    },
+    "503": {
+      "title": "Service Niet Beschikbaar",
+      "message": "We ondergaan momenteel onderhoud of ervaren veel verkeer. Onze ingenieurs zijn op de hoogte gebracht en werken aan het herstellen van de service."
+    },
+    "default": {
+      "title": "Er Is Iets Misgegaan",
+      "message": "Er is een onverwachte fout opgetreden. Probeer het later opnieuw."
+    },
+    "goHome": "Ga Terug naar Home",
+    "serverNotice": "Probeer het later opnieuw. Onze ingenieurs zijn op de hoogte gebracht en werken aan een oplossing voor dit probleem zo snel mogelijk."
+  },
+  "subscriptions": {
+    "title": "Kies Uw Ervaring",
+    "subtitle": "Ontgrendel premium functies en exclusieve inhoud",
+    "billing": {
+      "monthly": "Maandelijks",
+      "yearly": "Jaarlijks",
+      "saveUpTo": "Bespaar tot 40%"
+    },
+    "price": {
+      "perMonth": "/maand",
+      "billedYearly": "jaarlijks gefactureerd",
+      "free": "Gratis",
+      "forever": "Voor Altijd"
+    },
+    "button": {
+      "getCurrentPlan": "Huidig Abonnement",
+      "getStarted": "Aan de Slag"
+    },
+    "comparison": {
+      "title": "Gedetailleerde Functievergelijking",
+      "feature": "Functie"
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen over Abonnementen",
+      "changePlans": {
+        "question": "Kan ik op elk moment van abonnement wisselen?",
+        "answer": "Ja! U kunt uw abonnement op elk moment upgraden of downgraden. Wijzigingen worden van kracht bij uw volgende factureringscyclus."
+      },
+      "freeTrial": {
+        "question": "Is er een gratis proefperiode?",
+        "answer": "Nieuwe gebruikers krijgen 7 dagen gratis Premium proefperiode. Geen creditcard vereist om te starten."
+      },
+      "cancel": {
+        "question": "Hoe kan ik opzeggen?",
+        "answer": "U kunt uw abonnement op elk moment opzeggen via uw accountinstellingen. U behoudt toegang tot het einde van uw factureringsperiode."
+      },
+      "payment": {
+        "question": "Welke betaalmethoden worden geaccepteerd?",
+        "answer": "We accepteren alle belangrijke creditcards, PayPal en cryptocurrency voor uw privacy."
+      }
+    },
+    "guarantee": {
+      "title": "30 Dagen Geld-Terug-Garantie",
+      "description": "Niet tevreden? Krijg een volledige terugbetaling binnen 30 dagen, geen vragen gesteld."
+    },
+    "loading": "Abonnementen worden geladen...",
+    "error": {
+      "title": "Kan Abonnementen Niet Laden",
+      "description": "We konden de abonnementen niet laden. Probeer het later opnieuw.",
+      "retry": "Opnieuw Proberen"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Laatste nieuws, updates en inzichten",
+    "allCategories": "Alle categorieën",
+    "minRead": "min lezen",
+    "views": "weergaven",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "noPosts": "Geen blogberichten gevonden",
+    "backToBlog": "Terug naar Blog",
+    "relatedPosts": "Gerelateerde berichten",
+    "notFound": "Blogbericht niet gevonden",
+    "notFoundDescription": "Het blogbericht dat u zoekt bestaat niet of is verwijderd."
+  }
+}

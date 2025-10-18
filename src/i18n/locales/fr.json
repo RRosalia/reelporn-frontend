@@ -1,0 +1,439 @@
+{
+  "header": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "about": "À Propos",
+    "contact": "Contact",
+    "watch": "Regarder",
+    "login": "Connexion",
+    "register": "S'inscrire"
+  },
+  "profile": {
+    "register": "S'inscrire",
+    "login": "Se Connecter",
+    "liked": "Vidéos Aimées",
+    "subscriptions": "Abonnements",
+    "faq": "FAQ",
+    "support": "Contacter le Support",
+    "account": "Mon Compte",
+    "logout": "Déconnexion"
+  },
+  "home": {
+    "hero": {
+      "title": "Découvrez des Reels Chauds de 15 Secondes",
+      "subtitle": "Regardez des milliers de clips courts. Swipe, like et profitez.",
+      "watchNow": "Regarder Maintenant",
+      "getPremium": "Obtenir Premium",
+      "featuredContent": "Contenu en Vedette",
+      "trending": "🔥 Tendances"
+    },
+    "stats": {
+      "videos": "Vidéos",
+      "users": "Utilisateurs Actifs",
+      "daily": "Mises à Jour Quotidiennes"
+    },
+    "viewAll": "Voir Tout",
+    "search": {
+      "placeholder": "Rechercher des vidéos..."
+    },
+    "loadMore": "Charger Plus de Vidéos",
+    "premium": {
+      "title": "Débloquez les Fonctionnalités Premium",
+      "subtitle": "Obtenez un accès illimité au contenu et aux fonctionnalités exclusifs",
+      "feature1": "Expérience de streaming sans publicité",
+      "feature2": "Qualité vidéo HD & 4K",
+      "feature3": "Téléchargez des vidéos pour une visualisation hors ligne",
+      "feature4": "Accès anticipé aux nouvelles sorties",
+      "cta": "Obtenir Premium Maintenant"
+    }
+  },
+  "category": {
+    "trending": "Tendances",
+    "new": "Nouveau",
+    "popular": "Populaire",
+    "amateur": "Amateur",
+    "professional": "Professionnel",
+    "featured": "En Vedette",
+    "topRated": "Les Mieux Notées",
+    "mostViewed": "Les Plus Vues"
+  },
+  "login": {
+    "title": "Bienvenue !",
+    "welcomeBack": "Bon Retour !",
+    "signIn": "Se Connecter",
+    "hero": {
+      "title": "Prêt à Continuer ?",
+      "subtitle": "Votre contenu préféré vous attend",
+      "description": "Accédez à votre bibliothèque personnalisée et continuez là où vous vous êtes arrêté"
+    },
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "username": "Nom d'utilisateur ou e-mail",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "rememberMe": "Se souvenir de moi",
+    "forgotPassword": "Mot de passe oublié ?",
+    "submit": "Se Connecter",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "createAccount": "Créer un compte",
+    "loading": "Connexion en cours...",
+    "error": {
+      "rateLimitExceeded": "Trop de tentatives de connexion. Veuillez réessayer plus tard.",
+      "invalidCredentials": "E-mail ou mot de passe invalide. Veuillez réessayer.",
+      "validationFailed": "Veuillez vérifier votre saisie et réessayer.",
+      "network": "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
+      "server": "Erreur du serveur. Veuillez réessayer plus tard.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "info": {
+      "loginRequired": "Veuillez vous connecter pour continuer.",
+      "logoutSuccess": "Vous avez été déconnecté avec succès."
+    }
+  },
+  "register": {
+    "title": "Rejoignez-nous aujourd'hui !",
+    "choosePlan": "Choisissez votre plan d'adhésion"
+  },
+  "signup": {
+    "title": "Choisissez votre abonnement",
+    "username": "Nom d'utilisateur",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "paymentMethod": "Méthode de paiement",
+    "creditCard": "Carte de crédit",
+    "paypal": "PayPal",
+    "crypto": "Cryptomonnaie",
+    "submit": "Finaliser l'inscription",
+    "subscribeFor": "S'abonner pour",
+    "selectPlan": "Sélectionnez un plan",
+    "cancel": "Annuler",
+    "billedAt": "Facturé à",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "clickHere": "Cliquez ici",
+    "promo": {
+      "title": "Regardez du Contenu Exclusif Maintenant !",
+      "subtitle": "Rejoignez des milliers de membres satisfaits",
+      "description": "Obtenez un accès illimité au contenu premium"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "Sans Publicités",
+      "description": "Supprimer toutes les publicités"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Accès complet à toutes les fonctionnalités"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "Expérience VIP ultime"
+    },
+    "from": "à partir de",
+    "perMonth": "mois",
+    "popular": "Populaire",
+    "bestValue": "Meilleure Valeur",
+    "exclusive": "Exclusif",
+    "save": "Économisez",
+    "features": "Fonctionnalités incluses",
+    "duration": {
+      "1month": "1 Mois",
+      "6months": "6 Mois",
+      "12months": "12 Mois"
+    },
+    "feature": {
+      "noAds": "Expérience sans publicité",
+      "basicSupport": "Support de base",
+      "hdStreaming": "Streaming HD",
+      "downloadVideos": "Télécharger des vidéos",
+      "exclusiveContent": "Contenu exclusif",
+      "prioritySupport": "Support prioritaire",
+      "4kStreaming": "Streaming 4K Ultra HD",
+      "unlimitedDownloads": "Téléchargements illimités",
+      "earlyAccess": "Accès anticipé au nouveau contenu",
+      "vipSupport": "Support VIP 24/7",
+      "customPlaylist": "Listes de lecture personnalisées"
+    }
+  },
+  "footer": {
+    "description": "Votre destination de choix pour du contenu vidéo court de haute qualité. Découvrez, regardez et partagez des reels incroyables.",
+    "quickLinks": "Liens Rapides",
+    "shorts": "Shorts",
+    "account": "Compte",
+    "support": "Support",
+    "legal": "Légal",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "dmca": "DMCA",
+    "cookies": "Politique de cookies",
+    "language": "Langue",
+    "cookieSettings": "Paramètres des cookies",
+    "copyright": "Tous droits réservés"
+  },
+  "age": {
+    "title": "Ceci est un site pour adultes (18+)",
+    "notice": "Avis aux Utilisateurs",
+    "warning1": "Ce site Web contient du matériel réservé aux adultes, y compris de la nudité et des représentations explicites d'activités sexuelles. En entrant, vous confirmez que vous avez au moins 18 ans ou l'âge de la majorité dans la juridiction d'où vous accédez au site Web et que vous consentez à visionner du contenu sexuellement explicite.",
+    "warning2": "Notre page de contrôle parental explique comment vous pouvez facilement bloquer l'accès à ce site.",
+    "enter": "J'ai 18 ans ou plus - Entrer",
+    "exit": "J'ai moins de 18 ans - Quitter",
+    "parentalInfo": "En savoir plus sur notre",
+    "parentalLink": "page de contrôle parental"
+  },
+  "blocked": {
+    "title": "Ce site est exclusivement réservé aux utilisateurs de 18 ans et plus.",
+    "message": "Nous prenons très au sérieux notre responsabilité d'empêcher les mineurs d'accéder à du contenu pour adultes. Si vous pensez avoir atteint cette page par erreur, veuillez fermer cette fenêtre et contacter notre équipe d'assistance."
+  },
+  "parental": {
+    "title": "Contrôle Parental",
+    "subtitle": "Protéger les enfants de l'accès au contenu réservé aux adultes",
+    "intro": {
+      "title": "À Propos du Contrôle Parental",
+      "text1": "ReelPorn s'engage à empêcher les mineurs d'accéder à du contenu pour adultes. Nous encourageons fortement les parents et tuteurs à jouer un rôle actif dans la surveillance et le contrôle de l'utilisation d'Internet par leurs enfants.",
+      "text2": "Cette page fournit des informations sur diverses méthodes et outils que vous pouvez utiliser pour empêcher l'accès aux sites Web pour adultes, y compris ReelPorn.com, sur les appareils utilisés par les enfants."
+    },
+    "methods": {
+      "title": "Comment Bloquer le Contenu pour Adultes",
+      "intro": "Il existe plusieurs moyens efficaces de restreindre l'accès aux sites Web pour adultes :",
+      "router": {
+        "title": "Blocage au Niveau du Routeur",
+        "text": "La plupart des routeurs modernes incluent des fonctionnalités de contrôle parental qui vous permettent de bloquer des sites Web spécifiques ou des catégories de contenu sur tous les appareils connectés à votre réseau domestique. Consultez la documentation de votre routeur ou contactez le fabricant de votre routeur pour obtenir des instructions d'installation."
+      },
+      "isp": {
+        "title": "Contrôles du Fournisseur d'Accès Internet (FAI)",
+        "text": "De nombreux fournisseurs d'accès Internet offrent des services de contrôle parental qui peuvent filtrer le contenu avant qu'il n'atteigne votre domicile. Contactez votre FAI pour en savoir plus sur les options de contrôle parental disponibles et comment les activer."
+      },
+      "device": {
+        "title": "Contrôles au Niveau de l'Appareil",
+        "text": "Les ordinateurs et les appareils mobiles disposent de fonctionnalités de contrôle parental intégrées. Sous Windows, utilisez Family Safety. Sur Mac, utilisez Temps d'écran et Contrôle parental. Sur les appareils iOS et Android, utilisez respectivement les fonctionnalités intégrées Temps d'écran et Family Link."
+      }
+    },
+    "software": {
+      "title": "Logiciels de Filtrage Tiers",
+      "intro": "Plusieurs entreprises réputées proposent des solutions complètes de contrôle parental et de filtrage de contenu :",
+      "netnanny": "Logiciel complet de filtrage Internet et de contrôle parental pour les appareils Windows, Mac, Android et iOS.",
+      "norton": "Service gratuit de contrôle parental de Norton qui aide à protéger les enfants contre le contenu inapproprié.",
+      "qustodio": "Logiciel de contrôle parental multiplateforme avec filtrage Web, limites de temps et surveillance des activités.",
+      "opendns": "Service de filtrage gratuit basé sur DNS qui bloque le contenu pour adultes au niveau du réseau."
+    },
+    "resources": {
+      "title": "Ressources Supplémentaires",
+      "text": "Pour plus d'informations sur la sécurité sur Internet et la protection des enfants en ligne, visitez ces ressources :"
+    },
+    "notice": {
+      "title": "Avis Important",
+      "text": "Bien que nous fassions tous les efforts possibles pour empêcher les mineurs d'accéder à notre site par la vérification de l'âge, la responsabilité ultime d'empêcher les enfants d'accéder au contenu pour adultes incombe aux parents et tuteurs. Nous recommandons fortement de mettre en œuvre plusieurs couches de protection en utilisant les méthodes décrites ci-dessus."
+    }
+  },
+  "cookies": {
+    "title": "Nous utilisons des cookies",
+    "description": "Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience de navigation, personnaliser le contenu et les publicités, fournir des fonctionnalités de médias sociaux et analyser notre trafic. Vous pouvez choisir les cookies à accepter.",
+    "acceptAll": "Accepter tous les cookies",
+    "customize": "Personnaliser les cookies",
+    "cancel": "Annuler",
+    "savePreferences": "Enregistrer les préférences",
+    "preferences": {
+      "title": "Préférences de cookies",
+      "description": "Nous utilisons différents types de cookies pour optimiser votre expérience sur notre site Web. Cliquez sur les catégories ci-dessous pour en savoir plus et personnaliser vos préférences. Veuillez noter que le blocage de certains types de cookies peut avoir un impact sur votre expérience."
+    },
+    "essential": {
+      "title": "Cookies essentiels",
+      "description": "Ces cookies sont nécessaires au fonctionnement du site Web et ne peuvent pas être désactivés. Ils ne sont généralement définis qu'en réponse à des actions que vous effectuez, telles que la définition de vos préférences de confidentialité, la connexion ou le remplissage de formulaires."
+    },
+    "functional": {
+      "title": "Cookies fonctionnels",
+      "description": "Ces cookies permettent des fonctionnalités améliorées et une personnalisation, telles que des vidéos et des chats en direct. Ils peuvent être définis par nous ou par des fournisseurs tiers dont nous avons ajouté les services à nos pages."
+    },
+    "analytics": {
+      "title": "Cookies analytiques",
+      "description": "Ces cookies nous permettent de compter les visites et les sources de trafic afin que nous puissions mesurer et améliorer les performances de notre site. Ils nous aident à comprendre quelles pages sont les plus et les moins populaires et à voir comment les visiteurs se déplacent sur le site."
+    },
+    "advertising": {
+      "title": "Cookies de ciblage/publicité",
+      "description": "Ces cookies peuvent être définis via notre site par nos partenaires publicitaires. Ils peuvent être utilisés par ces entreprises pour créer un profil de vos intérêts et vous montrer des publicités pertinentes sur d'autres sites."
+    }
+  },
+  "pornstars": {
+    "title": "Pornstars",
+    "subtitle": "Parcourez nos {count} artistes incroyables",
+    "sort": {
+      "popular": "Les plus populaires",
+      "newest": "Les plus récents",
+      "mostVideos": "Le plus de vidéos",
+      "mostViewed": "Les plus vus"
+    },
+    "pagination": {
+      "showing": "Affichage de {start}-{end} sur {total} pornstars"
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Vidéos",
+      "views": "Vues",
+      "likes": "J'aime",
+      "followers": "Abonnés"
+    },
+    "follow": "Suivre",
+    "following": "Suivi",
+    "message": "Message",
+    "tip": "Envoyer un pourboire",
+    "tabs": {
+      "videos": "Vidéos",
+      "photos": "Photos",
+      "about": "À propos"
+    },
+    "loadMore": "Charger plus de vidéos",
+    "about": {
+      "bio": "Biographie",
+      "categories": "Catégories",
+      "social": "Réseaux sociaux",
+      "details": "Détails personnels"
+    },
+    "details": {
+      "age": "Âge",
+      "country": "Pays",
+      "height": "Taille",
+      "weight": "Poids",
+      "measurements": "Mensurations",
+      "hair": "Couleur de cheveux",
+      "eyes": "Couleur des yeux",
+      "ethnicity": "Ethnicité"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Accès Interdit",
+      "message": "Désolé, vous n'avez pas la permission d'accéder à cette page. Cette zone peut être restreinte ou nécessiter une autorisation spéciale."
+    },
+    "404": {
+      "title": "Page Non Trouvée",
+      "message": "Oups! La page que vous recherchez n'existe pas. Elle a peut-être été déplacée ou supprimée."
+    },
+    "500": {
+      "title": "Erreur Interne du Serveur",
+      "message": "Quelque chose s'est mal passé de notre côté. Nos ingénieurs ont été notifiés et travaillent à résoudre le problème."
+    },
+    "503": {
+      "title": "Service Indisponible",
+      "message": "Nous effectuons actuellement une maintenance ou connaissons un trafic élevé. Nos ingénieurs ont été notifiés et travaillent à rétablir le service."
+    },
+    "default": {
+      "title": "Quelque Chose S'est Mal Passé",
+      "message": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard."
+    },
+    "goHome": "Retour à l'Accueil",
+    "serverNotice": "Veuillez réessayer plus tard. Nos ingénieurs ont été notifiés et travaillent à résoudre ce problème aussi rapidement que possible."
+  },
+  "account": {
+    "title": "Mon Compte",
+    "profile": {
+      "title": "Informations du Profil",
+      "name": "Nom",
+      "nickname": "Pseudo",
+      "nicknameHint": "Vous ne pouvez changer votre pseudo qu'une fois par mois.",
+      "email": "Adresse e-mail",
+      "emailVerified": "E-mail Vérifié",
+      "update": "Mettre à Jour le Profil",
+      "updating": "Mise à jour...",
+      "updateSuccess": "Profil mis à jour avec succès!"
+    },
+    "password": {
+      "title": "Changer le Mot de Passe",
+      "current": "Mot de Passe Actuel",
+      "new": "Nouveau Mot de Passe",
+      "confirm": "Confirmer le Nouveau Mot de Passe",
+      "update": "Changer le Mot de Passe",
+      "updating": "Changement...",
+      "updateSuccess": "Mot de passe changé avec succès!",
+      "mismatch": "Les nouveaux mots de passe ne correspondent pas."
+    },
+    "logout": {
+      "title": "Déconnexion",
+      "description": "Déconnectez-vous de votre compte",
+      "button": "Se Déconnecter",
+      "confirm": "Êtes-vous sûr de vouloir vous déconnecter?"
+    },
+    "info": {
+      "title": "Informations du Compte",
+      "memberId": "ID Membre",
+      "memberSince": "Membre Depuis",
+      "lastUpdated": "Dernière Mise à Jour"
+    },
+    "error": {
+      "validationFailed": "Veuillez vérifier votre saisie et réessayer.",
+      "network": "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "twoFactor": {
+      "title": "Authentification à Deux Facteurs",
+      "description": "Ajoutez une couche de sécurité supplémentaire à votre compte en activant l'authentification à deux facteurs.",
+      "enableButton": "Activer l'Authentification à Deux Facteurs",
+      "setup": {
+        "title": "Activer l'Authentification à Deux Facteurs",
+        "description": "Ajoutez une couche de sécurité supplémentaire à votre compte. Vous devrez entrer un code de votre application d'authentification à chaque connexion.",
+        "enable": "Activer 2FA",
+        "enabling": "Activation...",
+        "cancel": "Annuler"
+      },
+      "scan": {
+        "title": "Configurez Votre Application d'Authentification",
+        "instruction": "Scannez ce code QR avec votre application d'authentification (Google Authenticator, Authy, etc.):",
+        "showSecret": "Afficher la clé secrète pour la saisie manuelle",
+        "hideSecret": "Masquer la clé secrète",
+        "enterCode": "Après avoir scanné le code QR, entrez le code à 6 chiffres de votre application d'authentification pour vérifier:",
+        "verify": "Vérifier & Continuer",
+        "verifying": "Vérification..."
+      },
+      "recovery": {
+        "title": "Enregistrez Vos Codes de Récupération",
+        "important": "Important",
+        "warning": "Conservez ces codes de récupération dans un endroit sûr. Vous pouvez les utiliser pour accéder à votre compte si vous perdez l'accès à votre application d'authentification.",
+        "download": "Télécharger les Codes",
+        "copy": "Copier dans le Presse-papiers",
+        "continue": "J'ai Sauvegardé Mes Codes de Récupération"
+      },
+      "manage": {
+        "title": "Authentification à Deux Facteurs",
+        "enabled": "L'authentification à deux facteurs est actuellement activée sur votre compte.",
+        "description": "Votre compte est protégé par l'authentification à deux facteurs. Vous pouvez gérer vos codes de récupération ou désactiver 2FA ci-dessous.",
+        "recoveryCodes": "Codes de Récupération",
+        "viewCodes": "Afficher les Codes de Récupération",
+        "hideCodes": "Masquer les Codes",
+        "loading": "Chargement...",
+        "regenerate": "Régénérer les Codes de Récupération",
+        "regenerating": "Régénération...",
+        "regenerateConfirm": "Êtes-vous sûr de vouloir régénérer vos codes de récupération? Cela invalidera vos anciens codes de récupération.",
+        "regenerateSuccess": "Codes de récupération régénérés avec succès! Veuillez les enregistrer dans un endroit sûr.",
+        "copiedSuccess": "Codes de récupération copiés dans le presse-papiers!",
+        "disableTitle": "Désactiver l'Authentification à Deux Facteurs",
+        "disableDescription": "La désactivation de 2FA rendra votre compte moins sécurisé. Êtes-vous sûr de vouloir continuer?",
+        "disable": "Désactiver 2FA",
+        "disabling": "Désactivation...",
+        "disableConfirm": "Êtes-vous sûr de vouloir désactiver l'authentification à deux facteurs? Cela rendra votre compte moins sécurisé."
+      },
+      "error": {
+        "enableFailed": "Échec de l'activation de l'authentification à deux facteurs. Veuillez réessayer.",
+        "invalidCode": "Le code d'authentification à deux facteurs fourni était invalide.",
+        "verifyFailed": "Échec de la vérification du code. Veuillez réessayer.",
+        "fetchCodesFailed": "Échec de la récupération des codes de récupération. Veuillez réessayer.",
+        "regenerateFailed": "Échec de la régénération des codes de récupération. Veuillez réessayer.",
+        "disableFailed": "Échec de la désactivation de l'authentification à deux facteurs. Veuillez réessayer."
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Dernières actualités, mises à jour et informations",
+    "allCategories": "Toutes les catégories",
+    "minRead": "min de lecture",
+    "views": "vues",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "noPosts": "Aucun article de blog trouvé",
+    "backToBlog": "Retour au blog",
+    "relatedPosts": "Articles connexes",
+    "notFound": "Article de blog non trouvé",
+    "notFoundDescription": "L'article de blog que vous recherchez n'existe pas ou a été supprimé."
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "header": {
+    "home": "Home",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact",
+    "watch": "Watch",
+    "login": "Login",
+    "register": "Register"
+  },
+  "profile": {
+    "register": "Register",
+    "login": "Log In",
+    "liked": "Liked Videos",
+    "account": "My Account",
+    "subscriptions": "Subscriptions",
+    "faq": "Q&A",
+    "support": "Contact Support",
+    "logout": "Logout"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Hot 15-Second Reels",
+      "subtitle": "Watch thousands of short adult clips. Swipe, like, and enjoy.",
+      "watchNow": "Watch Now",
+      "getPremium": "Get Premium",
+      "featuredContent": "Featured Content",
+      "trending": "🔥 Trending"
+    },
+    "stats": {
+      "videos": "Videos",
+      "users": "Active Users",
+      "daily": "Daily Updates"
+    },
+    "viewAll": "View All",
+    "search": {
+      "placeholder": "Search videos..."
+    },
+    "loadMore": "Load More Videos",
+    "premium": {
+      "title": "Unlock Premium Features",
+      "subtitle": "Get unlimited access to exclusive content and features",
+      "feature1": "Ad-free streaming experience",
+      "feature2": "HD & 4K video quality",
+      "feature3": "Download videos for offline viewing",
+      "feature4": "Early access to new releases",
+      "cta": "Get Premium Now"
+    }
+  },
+  "category": {
+    "trending": "Trending",
+    "new": "New",
+    "popular": "Popular",
+    "amateur": "Amateur",
+    "professional": "Professional",
+    "featured": "Featured",
+    "topRated": "Top Rated",
+    "mostViewed": "Most Viewed"
+  },
+  "login": {
+    "title": "Welcome Back!",
+    "welcomeBack": "Welcome Back!",
+    "signIn": "Sign In",
+    "hero": {
+      "title": "Ready to Continue?",
+      "subtitle": "Your favorite content awaits",
+      "description": "Access your personalized library and continue where you left off"
+    },
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "username": "Username or Email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password?",
+    "submit": "Sign In",
+    "loading": "Signing in...",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create Account",
+    "error": {
+      "rateLimitExceeded": "Too many login attempts. Please try again later.",
+      "invalidCredentials": "Invalid email or password. Please try again.",
+      "validationFailed": "Please check your input and try again.",
+      "network": "Network error. Please check your connection and try again.",
+      "server": "Server error. Please try again later.",
+      "generic": "An error occurred. Please try again."
+    },
+    "info": {
+      "loginRequired": "Please log in to continue.",
+      "logoutSuccess": "You have been successfully logged out."
+    }
+  },
+  "account": {
+    "title": "My Account",
+    "profile": {
+      "title": "Profile Information",
+      "name": "Name",
+      "nickname": "Nickname",
+      "nicknameHint": "You can only change your nickname once per month.",
+      "email": "Email Address",
+      "emailVerified": "Email Verified",
+      "update": "Update Profile",
+      "updating": "Updating...",
+      "updateSuccess": "Profile updated successfully!"
+    },
+    "password": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm New Password",
+      "update": "Change Password",
+      "updating": "Changing...",
+      "updateSuccess": "Password changed successfully!",
+      "mismatch": "New passwords do not match."
+    },
+    "logout": {
+      "title": "Logout",
+      "description": "Sign out of your account",
+      "button": "Logout",
+      "confirm": "Are you sure you want to logout?"
+    },
+    "info": {
+      "title": "Account Information",
+      "memberId": "Member ID",
+      "memberSince": "Member Since",
+      "lastUpdated": "Last Updated"
+    },
+    "error": {
+      "validationFailed": "Please check your input and try again.",
+      "network": "Network error. Please check your connection and try again.",
+      "generic": "An error occurred. Please try again."
+    },
+    "twoFactor": {
+      "title": "Two-Factor Authentication",
+      "description": "Add an extra layer of security to your account by enabling two-factor authentication.",
+      "enableButton": "Enable Two-Factor Authentication",
+      "setup": {
+        "title": "Enable Two-Factor Authentication",
+        "description": "Add an extra layer of security to your account. You'll need to enter a code from your authenticator app each time you sign in.",
+        "enable": "Enable 2FA",
+        "enabling": "Enabling...",
+        "cancel": "Cancel"
+      },
+      "scan": {
+        "title": "Set Up Your Authenticator App",
+        "instruction": "Scan this QR code with your authenticator app (Google Authenticator, Authy, etc.):",
+        "showSecret": "Show secret key for manual entry",
+        "hideSecret": "Hide secret key",
+        "enterCode": "After scanning the QR code, enter the 6-digit code from your authenticator app to verify:",
+        "verify": "Verify & Continue",
+        "verifying": "Verifying..."
+      },
+      "recovery": {
+        "title": "Save Your Recovery Codes",
+        "important": "Important",
+        "warning": "Store these recovery codes in a safe place. You can use them to access your account if you lose access to your authenticator app.",
+        "download": "Download Codes",
+        "copy": "Copy to Clipboard",
+        "continue": "I've Saved My Recovery Codes"
+      },
+      "manage": {
+        "title": "Two-Factor Authentication",
+        "enabled": "Two-factor authentication is currently enabled on your account.",
+        "description": "Your account is protected with two-factor authentication. You can manage your recovery codes or disable 2FA below.",
+        "recoveryCodes": "Recovery Codes",
+        "viewCodes": "View Recovery Codes",
+        "hideCodes": "Hide Codes",
+        "loading": "Loading...",
+        "regenerate": "Regenerate Recovery Codes",
+        "regenerating": "Regenerating...",
+        "regenerateConfirm": "Are you sure you want to regenerate your recovery codes? This will invalidate your old recovery codes.",
+        "regenerateSuccess": "Recovery codes regenerated successfully! Please save them in a safe place.",
+        "copiedSuccess": "Recovery codes copied to clipboard!",
+        "disableTitle": "Disable Two-Factor Authentication",
+        "disableDescription": "Disabling 2FA will make your account less secure. Are you sure you want to continue?",
+        "disable": "Disable 2FA",
+        "disabling": "Disabling...",
+        "disableConfirm": "Are you sure you want to disable two-factor authentication? This will make your account less secure."
+      },
+      "error": {
+        "enableFailed": "Failed to enable two-factor authentication. Please try again.",
+        "invalidCode": "The provided two factor authentication code was invalid.",
+        "verifyFailed": "Failed to verify code. Please try again.",
+        "fetchCodesFailed": "Failed to fetch recovery codes. Please try again.",
+        "regenerateFailed": "Failed to regenerate recovery codes. Please try again.",
+        "disableFailed": "Failed to disable two-factor authentication. Please try again."
+      }
+    }
+  },
+  "register": {
+    "title": "Join Us Today!",
+    "choosePlan": "Choose Your Membership Plan"
+  },
+  "signup": {
+    "title": "Choose Your Membership",
+    "username": "Username",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "paymentMethod": "Payment Method",
+    "creditCard": "Credit Card",
+    "paypal": "PayPal",
+    "crypto": "Cryptocurrency",
+    "submit": "Complete Registration",
+    "subscribeFor": "Subscribe for",
+    "selectPlan": "Select a plan",
+    "cancel": "Cancel",
+    "billedAt": "Billed at",
+    "haveAccount": "Already have an account?",
+    "clickHere": "Click here",
+    "promo": {
+      "title": "Watch Exclusive Content Now!",
+      "subtitle": "Join thousands of satisfied members",
+      "description": "Get unlimited access to premium content"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "No Ads",
+      "description": "Remove all advertisements"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Full access to all features"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "Ultimate VIP experience"
+    },
+    "from": "from",
+    "perMonth": "month",
+    "popular": "Popular",
+    "bestValue": "Best Value",
+    "exclusive": "Exclusive",
+    "save": "Save",
+    "features": "Features included",
+    "duration": {
+      "1month": "1 Month",
+      "6months": "6 Months",
+      "12months": "12 Months"
+    },
+    "feature": {
+      "noAds": "Ad-free experience",
+      "basicSupport": "Basic support",
+      "hdStreaming": "HD streaming",
+      "downloadVideos": "Download videos",
+      "exclusiveContent": "Exclusive content",
+      "prioritySupport": "Priority support",
+      "4kStreaming": "4K Ultra HD streaming",
+      "unlimitedDownloads": "Unlimited downloads",
+      "earlyAccess": "Early access to new content",
+      "vipSupport": "24/7 VIP support",
+      "customPlaylist": "Custom playlists"
+    }
+  },
+  "footer": {
+    "description": "Your premier destination for high-quality short-form video content. Discover, watch, and share amazing reels.",
+    "quickLinks": "Quick Links",
+    "shorts": "Shorts",
+    "account": "Account",
+    "support": "Support",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "dmca": "DMCA",
+    "cookies": "Cookie Policy",
+    "language": "Language",
+    "cookieSettings": "Cookie settings",
+    "copyright": "All rights reserved"
+  },
+  "age": {
+    "title": "This is an adult (18+) website",
+    "notice": "Notice to Users",
+    "warning1": "This website contains age-restricted materials including nudity and explicit depictions of sexual activity. By entering, you affirm that you are at least 18 years of age or the age of majority in the jurisdiction you are accessing the website from and you consent to viewing sexually explicit content.",
+    "warning2": "Our parental controls page explains how you can easily block access to this site.",
+    "enter": "I am 18 or older - Enter",
+    "exit": "I am under 18 - Exit",
+    "parentalInfo": "Learn more on our",
+    "parentalLink": "parental control page"
+  },
+  "blocked": {
+    "title": "This website is exclusively for users 18 years and older.",
+    "message": "We take our responsibility to prevent minors from accessing adult content very seriously. If you believe you have reached this page in error, please close this window and contact our support team."
+  },
+  "parental": {
+    "title": "Parental Controls",
+    "subtitle": "Protecting children from accessing age-restricted content",
+    "intro": {
+      "title": "About Parental Controls",
+      "text1": "ReelPorn is committed to preventing minors from accessing adult content. We strongly encourage parents and guardians to take an active role in monitoring and controlling their children's internet usage.",
+      "text2": "This page provides information about various methods and tools you can use to prevent access to adult websites, including ReelPorn.com, on devices used by children."
+    },
+    "methods": {
+      "title": "How to Block Adult Content",
+      "intro": "There are several effective ways to restrict access to adult websites:",
+      "router": {
+        "title": "Router-Level Blocking",
+        "text": "Most modern routers include parental control features that allow you to block specific websites or categories of content across all devices connected to your home network. Check your router's documentation or contact your router manufacturer for setup instructions."
+      },
+      "isp": {
+        "title": "Internet Service Provider (ISP) Controls",
+        "text": "Many internet service providers offer parental control services that can filter content before it reaches your home. Contact your ISP to learn about available parental control options and how to enable them."
+      },
+      "device": {
+        "title": "Device-Level Controls",
+        "text": "Both computers and mobile devices have built-in parental control features. On Windows, use Family Safety. On Mac, use Screen Time and Parental Controls. On iOS and Android devices, use the built-in Screen Time and Family Link features respectively."
+      }
+    },
+    "software": {
+      "title": "Third-Party Filtering Software",
+      "intro": "Several reputable companies offer comprehensive parental control and content filtering solutions:",
+      "netnanny": "Comprehensive internet filtering and parental control software for Windows, Mac, Android, and iOS devices.",
+      "norton": "Free parental control service from Norton that helps protect children from inappropriate content.",
+      "qustodio": "Cross-platform parental control software with web filtering, time limits, and activity monitoring.",
+      "opendns": "Free DNS-based filtering service that blocks adult content at the network level."
+    },
+    "resources": {
+      "title": "Additional Resources",
+      "text": "For more information about internet safety and protecting children online, visit these resources:"
+    },
+    "notice": {
+      "title": "Important Notice",
+      "text": "While we make every effort to prevent minors from accessing our site through age verification, the ultimate responsibility for preventing children from accessing adult content lies with parents and guardians. We strongly recommend implementing multiple layers of protection using the methods described above."
+    }
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies and similar technologies to enhance your browsing experience, personalize content and ads, provide social media features, and analyze our traffic. You can choose which cookies to accept.",
+    "acceptAll": "Accept all cookies",
+    "customize": "Customize cookies",
+    "cancel": "Cancel",
+    "savePreferences": "Save preferences",
+    "preferences": {
+      "title": "Cookie preferences",
+      "description": "We use different types of cookies to optimize your experience on our website. Click on the categories below to learn more and customize your preferences. Please note that blocking some types of cookies may impact your experience."
+    },
+    "essential": {
+      "title": "Essential cookies",
+      "description": "These cookies are necessary for the website to function and cannot be disabled. They are usually only set in response to actions made by you such as setting your privacy preferences, logging in or filling in forms."
+    },
+    "functional": {
+      "title": "Functional cookies",
+      "description": "These cookies enable enhanced functionality and personalization, such as videos and live chats. They may be set by us or by third party providers whose services we have added to our pages."
+    },
+    "analytics": {
+      "title": "Analytics cookies",
+      "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us understand which pages are most and least popular and see how visitors move around the site."
+    },
+    "advertising": {
+      "title": "Targeting/Advertising cookies",
+      "description": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant ads on other sites."
+    }
+  },
+  "pornstars": {
+    "title": "Pornstars",
+    "subtitle": "Browse our {count} amazing performers",
+    "sort": {
+      "popular": "Most Popular",
+      "newest": "Newest",
+      "mostVideos": "Most Videos",
+      "mostViewed": "Most Viewed"
+    },
+    "pagination": {
+      "showing": "Showing {start}-{end} of {total} pornstars"
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Videos",
+      "views": "Views",
+      "likes": "Likes",
+      "followers": "Followers"
+    },
+    "follow": "Follow",
+    "following": "Following",
+    "message": "Message",
+    "tip": "Send Tip",
+    "tabs": {
+      "videos": "Videos",
+      "photos": "Photos",
+      "about": "About"
+    },
+    "loadMore": "Load More Videos",
+    "about": {
+      "bio": "Biography",
+      "categories": "Categories",
+      "social": "Social Media",
+      "details": "Personal Details"
+    },
+    "details": {
+      "age": "Age",
+      "country": "Country",
+      "height": "Height",
+      "weight": "Weight",
+      "measurements": "Measurements",
+      "hair": "Hair Color",
+      "eyes": "Eye Color",
+      "ethnicity": "Ethnicity"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Access Forbidden",
+      "message": "Sorry, you don't have permission to access this page. This area might be restricted or require special authorization."
+    },
+    "404": {
+      "title": "Page Not Found",
+      "message": "Oops! The page you're looking for doesn't exist. It might have been moved or deleted."
+    },
+    "500": {
+      "title": "Internal Server Error",
+      "message": "Something went wrong on our end. Our engineers have been notified and are working to fix the issue."
+    },
+    "503": {
+      "title": "Service Unavailable",
+      "message": "We're currently undergoing maintenance or experiencing high traffic. Our engineers have been notified and are working to restore service."
+    },
+    "default": {
+      "title": "Something Went Wrong",
+      "message": "An unexpected error occurred. Please try again later."
+    },
+    "goHome": "Go Back Home",
+    "serverNotice": "Please try again later. Our engineers have been notified and are working to resolve this issue as quickly as possible."
+  },
+  "subscriptions": {
+    "title": "Choose Your Experience",
+    "subtitle": "Unlock premium features and exclusive content",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "saveUpTo": "Save up to 40%"
+    },
+    "price": {
+      "perMonth": "/month",
+      "billedYearly": "billed yearly",
+      "free": "Free",
+      "forever": "Forever"
+    },
+    "button": {
+      "getCurrentPlan": "Current Plan",
+      "getStarted": "Get Started"
+    },
+    "comparison": {
+      "title": "Detailed Feature Comparison",
+      "feature": "Feature"
+    },
+    "faq": {
+      "title": "Subscription FAQs",
+      "changePlans": {
+        "question": "Can I change plans anytime?",
+        "answer": "Yes! You can upgrade or downgrade your subscription at any time. Changes take effect at your next billing cycle."
+      },
+      "freeTrial": {
+        "question": "Is there a free trial?",
+        "answer": "New users get 7 days free trial of Premium. No credit card required to start."
+      },
+      "cancel": {
+        "question": "How do I cancel?",
+        "answer": "You can cancel your subscription anytime from your account settings. You'll keep access until the end of your billing period."
+      },
+      "payment": {
+        "question": "What payment methods are accepted?",
+        "answer": "We accept all major credit cards, PayPal, and cryptocurrency for your privacy."
+      }
+    },
+    "guarantee": {
+      "title": "30-Day Money Back Guarantee",
+      "description": "Not satisfied? Get a full refund within 30 days, no questions asked."
+    },
+    "loading": "Loading subscription plans...",
+    "error": {
+      "title": "Unable to Load Plans",
+      "description": "We couldn't load the subscription plans. Please try again later.",
+      "retry": "Retry"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest news, updates, and insights",
+    "allCategories": "All Categories",
+    "minRead": "min read",
+    "views": "views",
+    "previous": "Previous",
+    "next": "Next",
+    "noPosts": "No blog posts found",
+    "backToBlog": "Back to Blog",
+    "relatedPosts": "Related Posts",
+    "notFound": "Blog Post Not Found",
+    "notFoundDescription": "The blog post you are looking for does not exist or has been removed."
+  }
+}

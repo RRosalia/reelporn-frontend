@@ -1,0 +1,36 @@
+.top-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.top-loader-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c2338a 0%, #f8c537 100%);
+    box-shadow: 0 0 10px rgba(194, 51, 138, 0.7), 0 0 5px rgba(248, 197, 55, 0.7);
+    transition: width 200ms ease-out;
+}
+
+.top-loader-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}

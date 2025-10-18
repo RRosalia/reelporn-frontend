@@ -1,0 +1,317 @@
+/* Pornstars Page Styles */
+.pornstars-page {
+    padding-bottom: 40px;
+    background: #f8f9fa;
+}
+
+/* Header */
+.pornstars-header {
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.pornstars-title {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.pornstars-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+/* Grid View */
+.pornstar-card {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.pornstar-card:hover {
+    transform: translateY(-5px);
+}
+
+.pornstar-avatar-wrapper {
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pornstar-avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.pornstar-card:hover .pornstar-avatar {
+    transform: scale(1.05);
+}
+
+.verified-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pornstar-info {
+    padding: 12px 0;
+    text-align: center;
+}
+
+.pornstar-name {
+    color: #2b2838;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pornstar-stats {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+.pornstar-stats i {
+    color: #c2338a;
+    margin-right: 3px;
+}
+
+/* List View */
+.pornstars-list {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pornstar-list-item {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.pornstar-list-item:last-child {
+    border-bottom: none;
+}
+
+.pornstar-list-item:hover {
+    background: #f8f9fa;
+}
+
+.pornstar-list-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.pornstar-list-name {
+    color: #2b2838;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.pornstar-list-details {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.pornstar-list-stats {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+.pornstar-list-stats div {
+    margin-bottom: 4px;
+}
+
+.pornstar-list-stats i {
+    color: #c2338a;
+    margin-right: 6px;
+}
+
+/* Pagination */
+.pagination-wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pagination-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination-btn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    color: #2b2838;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    border-color: #c2338a;
+    color: #c2338a;
+}
+
+.pagination-btn.active {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    border-color: transparent;
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-dots {
+    color: #999;
+    padding: 0 8px;
+}
+
+/* View Mode Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #c2338a 20%, #f8c537 100%);
+}
+
+.btn-outline-primary {
+    color: #c2338a;
+    border-color: #c2338a;
+    background: white;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    border-color: transparent;
+}
+
+/* Form Select */
+.form-select {
+    border: 2px solid rgba(248, 197, 55, 0.3);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background: white;
+}
+
+.form-select:focus {
+    border-color: #f8c537;
+    box-shadow: 0 0 0 0.25rem rgba(248, 197, 55, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pornstars-title {
+        font-size: 36px;
+    }
+
+    .pornstars-subtitle {
+        font-size: 16px;
+    }
+
+    .pornstar-list-item {
+        padding: 15px;
+    }
+
+    .pornstar-list-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pornstar-list-name {
+        font-size: 18px;
+    }
+
+    .pornstar-list-stats {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pornstars-header {
+        padding: 40px 0;
+    }
+
+    .pornstars-title {
+        font-size: 28px;
+    }
+
+    .pornstar-list-item .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pornstar-list-stats {
+        text-align: center;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .pagination-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

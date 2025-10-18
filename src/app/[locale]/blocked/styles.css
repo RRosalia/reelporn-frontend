@@ -1,0 +1,71 @@
+/* Blocked Page */
+.blocked-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    padding: 20px;
+    z-index: 99999;
+}
+
+.blocked-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Logo */
+.blocked-logo {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.blocked-logo-reel {
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.blocked-logo-porn {
+    background: linear-gradient(135deg, #f8c537 0%, #c2338a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Title */
+.blocked-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Message */
+.blocked-message {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blocked-logo {
+        font-size: 42px;
+    }
+
+    .blocked-title {
+        font-size: 22px;
+    }
+
+    .blocked-message {
+        font-size: 14px;
+    }
+}
