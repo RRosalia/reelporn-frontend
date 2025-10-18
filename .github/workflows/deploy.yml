@@ -29,6 +29,8 @@ jobs:
 
       - name: Build with OpenNext for Cloudflare
         run: bunx opennextjs-cloudflare build
+        env:
+          TURBOPACK: 0
 
       - name: Deploy to Cloudflare Pages
         run: bunx opennextjs-cloudflare deploy
