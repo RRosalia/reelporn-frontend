@@ -12,6 +12,14 @@ export interface TwoFactorConfirmRequest {
   code: string;
 }
 
+export interface TwoFactorDisableRequest {
+  code: string;
+}
+
+export interface RecoveryCodesResponse {
+  recoveryCodes: string[];
+}
+
 class TwoFactorRepository {
   /**
    * Enable 2FA for the authenticated user
@@ -47,22 +55,23 @@ class TwoFactorRepository {
    * Get recovery codes
    */
   async getRecoveryCodes(): Promise<string[]> {
-    const response = await apiClient.get<string[]>('/account/two-factor-recovery-codes');
-    return response.data;
+    const response = await apiClient.get<RecoveryCodesResponse>('/account/two-factor-recovery-codes');
+    return response.data.recoveryCodes;
   }
 
   /**
    * Regenerate recovery codes
    */
-  async regenerateRecoveryCodes(): Promise<void> {
-    await apiClient.post('/account/two-factor-recovery-codes');
+  async regenerateRecoveryCodes(): Promise<string[]> {
+    const response = await apiClient.post<RecoveryCodesResponse>('/account/two-factor-recovery-codes');
+    return response.data.recoveryCodes;
   }
 
   /**
-   * Disable 2FA
+   * Disable 2FA (requires verification code)
    */
-  async disable(): Promise<void> {
-    await apiClient.delete('/account/two-factor-authentication');
+  async disable(data: TwoFactorDisableRequest): Promise<void> {
+    await apiClient.delete('/account/two-factor-authentication', { data });
   }
 }
 

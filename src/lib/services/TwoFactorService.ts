@@ -50,17 +50,17 @@ class TwoFactorService {
    * @returns Promise with new array of recovery codes
    */
   async regenerateRecoveryCodes(): Promise<string[]> {
-    await TwoFactorRepository.regenerateRecoveryCodes();
-    // Fetch the new codes after regeneration
-    return await TwoFactorRepository.getRecoveryCodes();
+    // The regenerate endpoint now returns the new codes directly
+    return await TwoFactorRepository.regenerateRecoveryCodes();
   }
 
   /**
    * Disable 2FA for the current user
+   * @param code - 6-digit verification code from authenticator app
    * @returns Promise that resolves when 2FA is disabled
    */
-  async disableTwoFactor(): Promise<void> {
-    return await TwoFactorRepository.disable();
+  async disableTwoFactor(code: string): Promise<void> {
+    return await TwoFactorRepository.disable({ code });
   }
 }
 

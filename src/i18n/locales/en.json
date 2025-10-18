@@ -194,7 +194,8 @@
         "disableDescription": "Disabling 2FA will make your account less secure. Are you sure you want to continue?",
         "disable": "Disable 2FA",
         "disabling": "Disabling...",
-        "disableConfirm": "Are you sure you want to disable two-factor authentication? This will make your account less secure."
+        "disableConfirm": "Are you sure you want to disable two-factor authentication? This will make your account less secure.",
+        "confirmDisable": "Confirm & Disable 2FA"
       },
       "error": {
         "enableFailed": "Failed to enable two-factor authentication. Please try again.",
@@ -1220,5 +1221,8 @@
       "expired": "Expired",
       "cancelled": "Cancelled"
     }
+  },
+  "common": {
+    "cancel": "Cancel"
   }
 }

@@ -194,7 +194,8 @@
         "disableDescription": "Das Deaktivieren von 2FA macht Ihr Konto weniger sicher. Sind Sie sicher, dass Sie fortfahren möchten?",
         "disable": "2FA Deaktivieren",
         "disabling": "Deaktivierung...",
-        "disableConfirm": "Sind Sie sicher, dass Sie die Zwei-Faktor-Authentifizierung deaktivieren möchten? Dies wird Ihr Konto weniger sicher machen."
+        "disableConfirm": "Sind Sie sicher, dass Sie die Zwei-Faktor-Authentifizierung deaktivieren möchten? Dies wird Ihr Konto weniger sicher machen.",
+        "confirmDisable": "Bestätigen & 2FA Deaktivieren"
       },
       "error": {
         "enableFailed": "Fehler beim Aktivieren der Zwei-Faktor-Authentifizierung. Bitte versuchen Sie es erneut.",
@@ -1220,5 +1221,8 @@
       "expired": "Abgelaufen",
       "cancelled": "Abgebrochen"
     }
+  },
+  "common": {
+    "cancel": "Abbrechen"
   }
 }

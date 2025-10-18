@@ -15,6 +15,8 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   const [success, setSuccess] = useState<string>('');
+  const [showDisableConfirm, setShowDisableConfirm] = useState<boolean>(false);
+  const [disableCode, setDisableCode] = useState<string>('');
 
   const handleViewRecoveryCodes = async () => {
     setIsLoading(true);
@@ -52,8 +54,23 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
     }
   };
 
-  const handleDisable2FA = async () => {
-    if (!window.confirm(t('account.twoFactor.manage.disableConfirm'))) {
+  const handleShowDisableConfirm = () => {
+    setShowDisableConfirm(true);
+    setDisableCode('');
+    setError('');
+  };
+
+  const handleCancelDisable = () => {
+    setShowDisableConfirm(false);
+    setDisableCode('');
+    setError('');
+  };
+
+  const handleDisable2FA = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!disableCode || disableCode.length !== 6) {
+      setError(t('account.twoFactor.error.invalidCode'));
       return;
     }
 
@@ -61,7 +78,7 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
     setError('');
 
     try {
-      await TwoFactorService.disableTwoFactor();
+      await TwoFactorService.disableTwoFactor(disableCode);
       onDisabled();
     } catch (err: any) {
       setError(err.message || t('account.twoFactor.error.disableFailed'));
@@ -187,16 +204,60 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
         <p className="text-white/70 mb-3">
           {t('account.twoFactor.manage.disableDescription')}
         </p>
-        <button
-          className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500"
-          onClick={handleDisable2FA}
-          disabled={isLoading}
-        >
-          {isLoading
-            ? t('account.twoFactor.manage.disabling')
-            : t('account.twoFactor.manage.disable')
-          }
-        </button>
+
+        {!showDisableConfirm ? (
+          <button
+            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500"
+            onClick={handleShowDisableConfirm}
+            disabled={isLoading}
+          >
+            {t('account.twoFactor.manage.disable')}
+          </button>
+        ) : (
+          <form onSubmit={handleDisable2FA} className="space-y-3">
+            <div className="bg-yellow-500/10 border border-yellow-500 text-yellow-500 px-4 py-3 rounded">
+              {t('account.twoFactor.manage.disableConfirm')}
+            </div>
+
+            <div>
+              <label htmlFor="disableCode" className="block text-white mb-2">
+                {t('account.twoFactor.confirmCode')}
+              </label>
+              <input
+                type="text"
+                id="disableCode"
+                value={disableCode}
+                onChange={(e) => setDisableCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                className="w-full p-3 bg-gray-700 border border-gray-600 rounded text-white focus:border-pink-500 focus:outline-none"
+                placeholder="000000"
+                maxLength={6}
+                autoComplete="off"
+                disabled={isLoading}
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                type="submit"
+                className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500"
+                disabled={isLoading || disableCode.length !== 6}
+              >
+                {isLoading
+                  ? t('account.twoFactor.manage.disabling')
+                  : t('account.twoFactor.manage.confirmDisable')
+                }
+              </button>
+              <button
+                type="button"
+                className="px-4 py-2 border border-gray-500 text-gray-300 rounded hover:bg-gray-700"
+                onClick={handleCancelDisable}
+                disabled={isLoading}
+              >
+                {t('common.cancel')}
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );

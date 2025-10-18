@@ -194,7 +194,8 @@
         "disableDescription": "Het uitschakelen van 2FA maakt uw account minder veilig. Weet u zeker dat u wilt doorgaan?",
         "disable": "2FA Uitschakelen",
         "disabling": "Uitschakelen...",
-        "disableConfirm": "Weet u zeker dat u twee-factor authenticatie wilt uitschakelen? Dit maakt uw account minder veilig."
+        "disableConfirm": "Weet u zeker dat u twee-factor authenticatie wilt uitschakelen? Dit maakt uw account minder veilig.",
+        "confirmDisable": "Bevestig & Schakel 2FA uit"
       },
       "error": {
         "enableFailed": "Kon twee-factor authenticatie niet inschakelen. Probeer het opnieuw.",
@@ -1220,5 +1221,8 @@
       "expired": "Verlopen",
       "cancelled": "Geannuleerd"
     }
+  },
+  "common": {
+    "cancel": "Annuleren"
   }
 }
