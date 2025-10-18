@@ -5,12 +5,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  // Disable turbopack for production builds (not supported by OpenNext)
-  turbo: undefined,
   experimental: {
     // Optimize for i18n
     optimizePackageImports: ['bootstrap-icons'],
-    turbo: undefined,
   },
   async rewrites() {
     return [
