@@ -27,12 +27,12 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Build with @cloudflare/next-on-pages
-        run: bunx --bun @cloudflare/next-on-pages@latest
+      - name: Build Next.js app
+        run: bun run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=frontend
+          command: pages deploy .open-next/worker --project-name=frontend

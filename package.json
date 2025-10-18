@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "opennextjs-cloudflare",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -33,6 +33,7 @@
     "tailwindcss": "4.1.14",
     "@tailwindcss/postcss": "^4.1.14",
     "postcss": "^8.4.49",
-    "autoprefixer": "^10.4.21"
+    "autoprefixer": "^10.4.21",
+    "@opennextjs/cloudflare": "^1.0.0-beta"
   }
 }
