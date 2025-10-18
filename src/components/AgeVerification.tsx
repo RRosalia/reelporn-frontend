@@ -45,6 +45,16 @@ function AgeVerification() {
 
         // Check verification status
         if (typeof window !== 'undefined') {
+            // Check if this is a crawler (cookie set by middleware)
+            const isCrawler = document.cookie.split('; ').find(row => row.startsWith('crawler-bypass='));
+
+            if (isCrawler) {
+                // Skip age verification for crawlers
+                setShowModal(false);
+                document.documentElement.classList.remove('age-verification-pending');
+                return;
+            }
+
             const verified = localStorage.getItem('ageVerified');
             const blocked = localStorage.getItem('ageBlocked');
 

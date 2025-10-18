@@ -4,9 +4,10 @@ FROM oven/bun:latest AS base
 FROM base AS deps
 WORKDIR /app
 
-# Install dependencies
+# Install dependencies with cache mount
 COPY package.json bun.lock* ./
-RUN bun install --frozen-lockfile
+RUN --mount=type=cache,target=/root/.bun/install/cache \
+    bun install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -19,7 +20,9 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN bun run build
+# Build with Next.js cache mount
+RUN --mount=type=cache,target=/app/.next/cache \
+    bun run build
 
 # Production image, copy all the files and run next
 FROM oven/bun:alpine AS runner

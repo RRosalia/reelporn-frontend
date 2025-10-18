@@ -3,6 +3,12 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
+// Initialize OpenNext Cloudflare for local development
+if (process.env.NODE_ENV === 'development') {
+  const { initOpenNextCloudflareForDev } = await import('@opennextjs/cloudflare');
+  await initOpenNextCloudflareForDev();
+}
+
 const nextConfig: NextConfig = {
   output: 'standalone',
   experimental: {

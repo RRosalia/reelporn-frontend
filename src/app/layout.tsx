@@ -26,17 +26,23 @@ export default function RootLayout({
                                    path.includes('/error-codes/') ||
                                    path.includes('/parental-controls');
 
-                  if (!isExcluded) {
-                    var verified = localStorage.getItem('ageVerified');
-                    var blocked = localStorage.getItem('ageBlocked');
+                  // Check if this is a crawler (cookie set by middleware)
+                  var isCrawler = document.cookie.split('; ').find(row => row.startsWith('crawler-bypass='));
 
-                    if (blocked === 'true') {
-                      // Add class to hide content during redirect
-                      document.documentElement.classList.add('age-verification-pending');
-                      window.location.href = '/blocked';
-                    } else if (verified !== 'true') {
-                      document.documentElement.classList.add('age-verification-pending');
-                    }
+                  // Skip age verification for crawlers
+                  if (isCrawler || isExcluded) {
+                    return;
+                  }
+
+                  var verified = localStorage.getItem('ageVerified');
+                  var blocked = localStorage.getItem('ageBlocked');
+
+                  if (blocked === 'true') {
+                    // Add class to hide content during redirect
+                    document.documentElement.classList.add('age-verification-pending');
+                    window.location.href = '/blocked';
+                  } else if (verified !== 'true') {
+                    document.documentElement.classList.add('age-verification-pending');
                   }
                 } catch (e) {
                   console.error('Age verification check error:', e);
