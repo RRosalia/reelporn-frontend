@@ -16,7 +16,7 @@ export default function HomePage() {
     const mockVideos = Array.from({ length: 24 }, (_, i) => ({
         id: i + 1,
         title: `Hot Video ${i + 1}`,
-        thumbnail: `https://via.placeholder.com/300x533/2b2838/f8c537?text=Video+${i + 1}`,
+        thumbnail: `https://images.unsplash.com/photo-${1500000000000 + (i * 123456789)}?w=300&h=533&fit=crop&auto=format`,
         duration: ((i * 7) % 15) + 1,
         views: `${((i * 13) % 100) + 1}K`,
         likes: `${((i * 11) % 50) + 1}K`,
@@ -26,7 +26,7 @@ export default function HomePage() {
     const mockPornstars = Array.from({ length: 12 }, (_, i) => ({
         id: i + 1,
         name: `Star ${i + 1}`,
-        avatar: `https://via.placeholder.com/200x200/2b2838/f8c537?text=Star+${i + 1}`,
+        avatar: `https://images.unsplash.com/photo-${1600000000000 + (i * 987654321)}?w=200&h=200&fit=crop&auto=format`,
         videos: ((i * 37) % 200) + 50,
         views: `${((i * 3) % 10) + 1}M`,
         verified: i % 3 !== 0,
