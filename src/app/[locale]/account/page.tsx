@@ -59,6 +59,9 @@ function AccountPageContent() {
     const [showRecoveryCodes, setShowRecoveryCodes] = useState(false);
     const [twoFactorError, setTwoFactorError] = useState('');
     const [twoFactorSuccess, setTwoFactorSuccess] = useState('');
+    const [showDisableModal, setShowDisableModal] = useState(false);
+    const [disableCode, setDisableCode] = useState('');
+    const [isDisabling2FA, setIsDisabling2FA] = useState(false);
 
     // Load profile on mount
     useEffect(() => {
@@ -220,26 +223,30 @@ function AccountPageContent() {
         }
     };
 
-    const handleDisable2FA = async () => {
-        if (!window.confirm(t('account.twoFactor.disableConfirm'))) {
-            return;
-        }
-
+    const handleDisable2FA = async (e: React.FormEvent) => {
+        e.preventDefault();
         setTwoFactorError('');
         setTwoFactorSuccess('');
+        setIsDisabling2FA(true);
 
         try {
-            await TwoFactorService.disableTwoFactor();
+            await TwoFactorService.disableTwoFactor(disableCode);
             setTwoFactorEnabled(false);
             setRecoveryCodes([]);
             setShowRecoveryCodes(false);
+            setShowDisableModal(false);
+            setDisableCode('');
             setTwoFactorSuccess(t('account.twoFactor.disableSuccess'));
         } catch (err) {
-            if (err instanceof NetworkException) {
+            if (err instanceof ValidationException) {
+                setTwoFactorError(err.errors.code?.[0] || t('account.error.validationFailed'));
+            } else if (err instanceof NetworkException) {
                 setTwoFactorError(t('account.error.network'));
             } else {
                 setTwoFactorError(t('account.error.generic'));
             }
+        } finally {
+            setIsDisabling2FA(false);
         }
     };
 
@@ -622,7 +629,7 @@ function AccountPageContent() {
                                             {t('account.twoFactor.regenerateRecoveryCodes')}
                                         </button>
                                         <button
-                                            onClick={handleDisable2FA}
+                                            onClick={() => setShowDisableModal(true)}
                                             className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors"
                                         >
                                             {t('account.twoFactor.disable')}
@@ -672,6 +679,64 @@ function AccountPageContent() {
                         )}
                     </div>
                 </div>
+
+                {/* Disable 2FA Modal */}
+                {showDisableModal && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                        <div className="w-full max-w-md p-6 rounded-[15px]" style={{ background: '#3a3646' }}>
+                            <h3 className="text-white text-2xl mb-4">
+                                {t('account.twoFactor.disableTitle')}
+                            </h3>
+                            <p className="text-white/70 mb-4">
+                                {t('account.twoFactor.disableConfirm')}
+                            </p>
+                            <form onSubmit={handleDisable2FA}>
+                                <div className="mb-4">
+                                    <label className="text-white mb-2 block">
+                                        {t('account.twoFactor.confirmCode')}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-pink-500"
+                                        value={disableCode}
+                                        onChange={(e) => setDisableCode(e.target.value)}
+                                        required
+                                        maxLength={6}
+                                        pattern="[0-9]{6}"
+                                        disabled={isDisabling2FA}
+                                        placeholder="123456"
+                                        autoFocus
+                                    />
+                                </div>
+                                <div className="flex gap-3">
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setShowDisableModal(false);
+                                            setDisableCode('');
+                                            setTwoFactorError('');
+                                        }}
+                                        disabled={isDisabling2FA}
+                                        className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60"
+                                    >
+                                        {t('account.twoFactor.cancel')}
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        disabled={isDisabling2FA}
+                                        className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60"
+                                        style={{ background: '#c2338a' }}
+                                    >
+                                        {isDisabling2FA
+                                            ? t('account.twoFactor.disabling')
+                                            : t('account.twoFactor.disable')
+                                        }
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
