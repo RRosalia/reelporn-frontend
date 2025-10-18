@@ -1,40 +1,41 @@
 import TwoFactorRepository, { TwoFactorConfirmRequest } from '../repositories/TwoFactorRepository';
 
+interface TwoFactorSetupData {
+  qrCode: string;
+  secret: string;
+}
+
 class TwoFactorService {
   /**
    * Enable 2FA for the current user
-   * @returns Promise that resolves when 2FA is enabled
+   * @returns Promise with QR code and secret key
    */
-  async enableTwoFactor(): Promise<void> {
-    return await TwoFactorRepository.enable();
+  async enableTwoFactor(): Promise<TwoFactorSetupData> {
+    const response = await TwoFactorRepository.enable();
+    return {
+      qrCode: response.data.svg,
+      secret: response.data.secret,
+    };
   }
 
   /**
-   * Get the QR code SVG for scanning with authenticator app
+   * Get the QR code SVG for scanning with authenticator app (re-fetch)
    * @returns Promise with QR code SVG string
    */
   async getQRCode(): Promise<string> {
     const response = await TwoFactorRepository.getQRCode();
-    return response.svg;
-  }
-
-  /**
-   * Get the secret key for manual entry in authenticator app
-   * @returns Promise with secret key string
-   */
-  async getSecretKey(): Promise<string> {
-    const response = await TwoFactorRepository.getSecretKey();
-    return response.secretKey;
+    return response.data.svg;
   }
 
   /**
    * Confirm 2FA setup with verification code from authenticator app
    * @param code - 6-digit verification code
-   * @returns Promise that resolves when 2FA is confirmed
+   * @returns Promise with array of recovery codes
    */
-  async confirmTwoFactor(code: string): Promise<void> {
+  async confirmTwoFactor(code: string): Promise<string[]> {
     const data: TwoFactorConfirmRequest = { code };
-    return await TwoFactorRepository.confirm(data);
+    const response = await TwoFactorRepository.confirm(data);
+    return response.data.recovery_codes;
   }
 
   /**

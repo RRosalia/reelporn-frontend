@@ -22,6 +22,7 @@ interface Profile {
     created_at: string;
     updated_at: string;
     email_verified_at: string | null;
+    two_factor_enabled: boolean;
 }
 
 function AccountPageContent() {
@@ -75,6 +76,7 @@ function AccountPageContent() {
             setProfile(data);
             setName(data.name || '');
             setNickname(data.nickname || '');
+            setTwoFactorEnabled(data.two_factor_enabled || false);
         } catch (error) {
             console.error('Failed to load profile:', error);
         } finally {
@@ -169,15 +171,10 @@ function AccountPageContent() {
         setIsEnabling2FA(true);
 
         try {
-            await TwoFactorService.enableTwoFactor();
+            // Enable 2FA and get QR code + secret in one call
+            const { qrCode, secret } = await TwoFactorService.enableTwoFactor();
 
-            // Get QR code and secret key
-            const [qr, secret] = await Promise.all([
-                TwoFactorService.getQRCode(),
-                TwoFactorService.getSecretKey(),
-            ]);
-
-            setQrCode(qr);
+            setQrCode(qrCode);
             setSecretKey(secret);
         } catch (err) {
             if (err instanceof NetworkException) {
@@ -197,10 +194,9 @@ function AccountPageContent() {
         setIsConfirming2FA(true);
 
         try {
-            await TwoFactorService.confirmTwoFactor(confirmationCode);
+            // Confirm 2FA and get recovery codes in one call
+            const codes = await TwoFactorService.confirmTwoFactor(confirmationCode);
 
-            // Get recovery codes
-            const codes = await TwoFactorService.getRecoveryCodes();
             setRecoveryCodes(codes);
             setShowRecoveryCodes(true);
             setTwoFactorEnabled(true);

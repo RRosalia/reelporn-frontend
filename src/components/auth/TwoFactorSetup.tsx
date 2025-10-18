@@ -28,13 +28,10 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
     setError('');
 
     try {
-      await TwoFactorService.enableTwoFactor();
-      const [qr, secret] = await Promise.all([
-        TwoFactorService.getQRCode(),
-        TwoFactorService.getSecretKey(),
-      ]);
+      // Enable 2FA and get QR code + secret in one call
+      const { qrCode, secret } = await TwoFactorService.enableTwoFactor();
 
-      setQrCode(qr);
+      setQrCode(qrCode);
       setSecretKey(secret);
       setStep('scan');
     } catch (err: any) {
@@ -50,8 +47,8 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
     setError('');
 
     try {
-      await TwoFactorService.confirmTwoFactor(verificationCode);
-      const codes = await TwoFactorService.getRecoveryCodes();
+      // Confirm 2FA and get recovery codes in one call
+      const codes = await TwoFactorService.confirmTwoFactor(verificationCode);
       setRecoveryCodes(codes);
       setStep('recovery');
     } catch (err: any) {
