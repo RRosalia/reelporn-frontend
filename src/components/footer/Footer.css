@@ -24,11 +24,13 @@
 .footer-brand .brand-logo {
     font-size: 32px;
     font-weight: 800;
-    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
     margin-bottom: 0;
+    display: inline-block;
 }
 
 .footer-description {
@@ -126,11 +128,13 @@
 }
 
 .brand-highlight {
-    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
     font-weight: 600;
+    display: inline-block;
 }
 
 .cookie-settings-btn {
@@ -157,40 +161,6 @@
 .cookie-settings-btn i {
     color: #f8c537;
     font-size: 16px;
-}
-
-.language-selector {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.language-selector i {
-    color: #f8c537;
-    font-size: 18px;
-}
-
-.language-dropdown {
-    background: rgba(43, 40, 56, 0.8);
-    color: white;
-    border: 1px solid rgba(248, 197, 55, 0.3);
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.language-dropdown:hover {
-    border-color: #f8c537;
-    background: rgba(43, 40, 56, 1);
-}
-
-.language-dropdown option {
-    background: #2b2838;
-    color: white;
-    padding: 8px;
 }
 
 /* Responsive */

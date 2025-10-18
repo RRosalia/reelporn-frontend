@@ -200,7 +200,7 @@ function SignupPage() {
 
     return (
         <div style={{ background: '#2b2838' }}>
-            <div className="container mx-auto px-4 py-5">
+            <div className="container mx-auto px-4 py-12">
                 <div className="flex flex-wrap">
                     {/* Left Side - Promotional Area */}
                     <div className="w-full md:w-full lg:w-5/12 mb-4">

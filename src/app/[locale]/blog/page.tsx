@@ -69,7 +69,7 @@ function BlogPage() {
 
     return (
         <div style={{ background: 'linear-gradient(135deg, #1a1626 0%, #2b2838 100%)', paddingTop: '80px', paddingBottom: '40px' }}>
-            <div className="container mx-auto px-4 py-5">
+            <div className="container mx-auto px-4 py-12">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h1 className="text-white text-5xl font-bold mb-4">

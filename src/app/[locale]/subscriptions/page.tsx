@@ -73,7 +73,7 @@ function SubscriptionsPage() {const t = useTranslations();
     if (loading) {
         return (
             <div className="subscriptions-page">
-                <div className="container mx-auto px-4 py-5">
+                <div className="container mx-auto px-4 py-12">
                     <div className="loading-state text-center">
                         <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500 mb-3" role="status">
                             <span className="sr-only">Loading...</span>
@@ -89,7 +89,7 @@ function SubscriptionsPage() {const t = useTranslations();
     if (error) {
         return (
             <div className="subscriptions-page">
-                <div className="container mx-auto px-4 py-5">
+                <div className="container mx-auto px-4 py-12">
                     <div className="error-state text-center">
                         <i className="bi bi-exclamation-triangle error-icon mb-3"></i>
                         <h2>{t('subscriptions.error.title')}</h2>

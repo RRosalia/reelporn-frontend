@@ -6,13 +6,15 @@
 
 .navbar-brand {
     font-size: 28px !important;
-    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
     font-weight: 800 !important;
     letter-spacing: -0.5px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .navbar-brand:hover {

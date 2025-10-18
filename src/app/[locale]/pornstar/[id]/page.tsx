@@ -148,7 +148,7 @@ function PornstarProfilePage() {
             </div>
 
             {/* Content Tabs */}
-            <div className="container mx-auto px-4 py-5">
+            <div className="container mx-auto px-4 py-12">
                 <div className="profile-tabs">
                     <button
                         className={`tab-btn ${activeTab === 'videos' ? 'active' : ''}`}

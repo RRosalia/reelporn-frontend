@@ -175,7 +175,7 @@ function PornstarsPage() {const t = useTranslations();
             </div>
 
             {/* Content */}
-            <div className="container mx-auto px-4 py-5">
+            <div className="container mx-auto px-4 py-12">
                 {viewMode === 'grid' ? (
                     <div className="flex flex-wrap gap-4">
                         {currentPornstars.map(pornstar => (

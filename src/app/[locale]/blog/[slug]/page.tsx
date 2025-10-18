@@ -71,7 +71,7 @@ function BlogDetailPage() {
 
     return (
         <div style={{ background: 'linear-gradient(135deg, #1a1626 0%, #2b2838 100%)', paddingTop: '80px', paddingBottom: '40px' }}>
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-12">
                 {/* Back Button */}
                 <Link href={"/blog" as any} className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                     <i className="bi bi-arrow-left mr-2"></i>

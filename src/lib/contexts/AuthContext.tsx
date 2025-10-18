@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { initializeEcho } from '@/lib/echo-config';
 import AuthService from '@/lib/services/AuthService';
 
 interface User {
@@ -30,7 +31,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Check authentication status on mount
+  // Check authentication status on mount and reconfigure Echo with auth token
   useEffect(() => {
     const checkAuth = () => {
       const authenticated = AuthService.isAuthenticated();
@@ -39,6 +40,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setIsAuthenticated(authenticated);
       setUser(userData);
       setIsLoading(false);
+
+      // Reconfigure Echo with authentication token if user is logged in
+      const token = AuthService.getToken();
+      if (token) {
+        initializeEcho(token);
+      }
     };
 
     checkAuth();
@@ -48,6 +55,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const data = await AuthService.login(email, password);
     setIsAuthenticated(true);
     setUser(data.user || null);
+
+    // Reconfigure Echo with authentication token
+    const token = AuthService.getToken();
+    if (token) {
+      initializeEcho(token);
+      console.log('[Echo] Reconfigured after login');
+    }
+
     return data;
   };
 
@@ -55,6 +70,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await AuthService.logout();
     setIsAuthenticated(false);
     setUser(null);
+
+    // Reconfigure Echo without authentication
+    initializeEcho();
+    console.log('[Echo] Reconfigured after logout');
   };
 
   const updateUser = (userData: User) => {

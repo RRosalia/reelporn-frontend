@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
@@ -24,6 +24,29 @@ function Header() {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [showLanguageMenu, setShowLanguageMenu] = useState(false);
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const profileMenuRef = useRef<HTMLDivElement>(null);
+    const languageMenuRef = useRef<HTMLDivElement>(null);
+
+    // Click outside handler to close dropdowns
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (profileMenuRef.current && !profileMenuRef.current.contains(event.target as Node)) {
+                setShowProfileMenu(false);
+            }
+            if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
+                setShowLanguageMenu(false);
+            }
+        };
+
+        if (showProfileMenu || showLanguageMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showProfileMenu, showLanguageMenu]);
 
     const handleLogout = async () => {
         try {
@@ -51,7 +74,7 @@ function Header() {
         <nav className="bg-gray-900 text-white">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
-                    <Link className="text-2xl font-bold" href="/">
+                    <Link className="navbar-brand text-2xl" href="/">
                         ReelPorn
                     </Link>
                     <button
@@ -97,9 +120,9 @@ function Header() {
 
                     <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-2 p-4 lg:p-0">
                         {/* Language Switcher */}
-                        <div className="relative">
+                        <div className="relative" ref={languageMenuRef}>
                             <button
-                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors"
+                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer"
                                 type="button"
                                 onClick={() => setShowLanguageMenu(!showLanguageMenu)}
                             >
@@ -110,7 +133,7 @@ function Header() {
                                     {languages.map((lang) => (
                                         <li key={lang.code}>
                                             <button
-                                                className={`w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors ${locale === lang.code ? 'bg-pink-500 text-white hover:bg-pink-600' : 'text-gray-900'}`}
+                                                className={`w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors cursor-pointer ${locale === lang.code ? 'bg-pink-500 text-white hover:bg-pink-600' : 'text-gray-900'}`}
                                                 onClick={() => handleLanguageChange(lang.code)}
                                             >
                                                 {lang.flag} {lang.name}
@@ -127,9 +150,9 @@ function Header() {
                         </Link>
 
                         {/* Profile Dropdown */}
-                        <div className="relative">
+                        <div className="relative" ref={profileMenuRef}>
                             <button
-                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors"
+                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer"
                                 type="button"
                                 onClick={() => setShowProfileMenu(!showProfileMenu)}
                             >
@@ -143,13 +166,13 @@ function Header() {
                                         <>
                                             <li className="px-3 py-2 text-center border-b border-gray-200">
                                                 <div className="flex justify-around">
-                                                    <Link href="/signup" className="no-underline text-gray-900">
+                                                    <Link href="/signup" className="no-underline text-gray-900" onClick={() => setShowProfileMenu(false)}>
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                                         </svg>
                                                         <div className="text-xs mt-1">{t('profile.register')}</div>
                                                     </Link>
-                                                    <Link href="/login" className="no-underline text-gray-900">
+                                                    <Link href="/login" className="no-underline text-gray-900" onClick={() => setShowProfileMenu(false)}>
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                                             <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
                                                         </svg>
@@ -167,7 +190,7 @@ function Header() {
                                                 <div className="text-xs text-gray-500">{user?.email}</div>
                                             </li>
                                             <li>
-                                                <Link className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900" href="/account">
+                                                <Link className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900 cursor-pointer" href="/account" onClick={() => setShowProfileMenu(false)}>
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
                                                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                                     </svg>
@@ -177,7 +200,7 @@ function Header() {
                                         </>
                                     )}
                                     <li>
-                                        <Link className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900" href="/subscriptions">
+                                        <Link className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900 cursor-pointer" href="/subscriptions" onClick={() => setShowProfileMenu(false)}>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
                                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                             </svg>
@@ -186,7 +209,7 @@ function Header() {
                                     </li>
                                     <li><hr className="border-t border-gray-200 my-1" /></li>
                                     <li>
-                                        <Link className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900" href="/faq">
+                                        <Link className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900 cursor-pointer" href="/faq" onClick={() => setShowProfileMenu(false)}>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
                                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
                                             </svg>
@@ -194,7 +217,7 @@ function Header() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900" href={"/contact" as any}>
+                                        <Link className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-gray-900 cursor-pointer" href={"/contact" as any} onClick={() => setShowProfileMenu(false)}>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
                                                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                             </svg>
@@ -206,7 +229,7 @@ function Header() {
                                             <li><hr className="border-t border-gray-200 my-1" /></li>
                                             <li>
                                                 <button
-                                                    className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-red-600"
+                                                    className="w-full text-left flex items-center px-4 py-2 hover:bg-gray-100 text-red-600 cursor-pointer"
                                                     onClick={handleLogout}
                                                 >
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">

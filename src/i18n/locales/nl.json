@@ -487,5 +487,719 @@
     "relatedPosts": "Gerelateerde berichten",
     "notFound": "Blogbericht niet gevonden",
     "notFoundDescription": "Het blogbericht dat u zoekt bestaat niet of is verwijderd."
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Alles wat u moet weten over ReelPorn",
+    "categories": {
+      "general": {
+        "title": "Algemene Vragen",
+        "q1": {
+          "question": "Wat is ReelPorn?",
+          "answer": "ReelPorn is een premium platform voor volwassen inhoud dat gespecialiseerd is in kortdurende video-inhoud (15-seconden reels). We bieden een TikTok-achtige ervaring voor volwassen entertainment met swipe-functionaliteit, gepersonaliseerde feeds en hoogwaardige inhoud van geverifieerde makers."
+        },
+        "q2": {
+          "question": "Is ReelPorn gratis te gebruiken?",
+          "answer": "ReelPorn biedt zowel gratis als premium inhoud. U kunt beperkte inhoud gratis bekijken en kijken, maar een premium abonnement geeft onbeperkte toegang tot alle video's, HD/4K-kwaliteit, downloadfuncties en advertentievrij kijken."
+        },
+        "q3": {
+          "question": "Hoe verifieer ik mijn leeftijd?",
+          "answer": "Leeftijdsverificatie is vereist om toegang te krijgen tot ReelPorn. Bij uw eerste bezoek moet u bevestigen dat u 18 jaar of ouder bent. Dit is een wettelijke vereiste om ervoor te zorgen dat minderjarigen geen toegang kunnen krijgen tot inhoud voor volwassenen."
+        },
+        "q4": {
+          "question": "Zijn mijn gegevens veilig en privé?",
+          "answer": "Ja, we nemen privacy serieus. Alle gegevens zijn versleuteld, we delen nooit persoonlijke informatie met derden zonder toestemming en u kunt anoniem browsen. Raadpleeg ons Privacybeleid voor gedetailleerde informatie."
+        }
+      },
+      "account": {
+        "title": "Account & Abonnement",
+        "q1": {
+          "question": "Hoe maak ik een account aan?",
+          "answer": "Klik op de knop \"Registreren\", kies uw lidmaatschapsplan, voer uw e-mail in en maak een wachtwoord aan. Verifieer uw e-mailadres en u bent klaar om te beginnen met kijken!"
+        },
+        "q2": {
+          "question": "Welke betaalmethoden accepteren jullie?",
+          "answer": "We accepteren alle grote creditcards (Visa, MasterCard, American Express), PayPal en cryptocurrency-betalingen (Bitcoin, Ethereum). Alle transacties worden veilig en discreet verwerkt."
+        },
+        "q3": {
+          "question": "Hoe kan ik mijn abonnement opzeggen?",
+          "answer": "U kunt uw abonnement op elk moment opzeggen via uw accountinstellingen. Ga naar Profiel > Abonnement > Abonnement Opzeggen. U behoudt toegang tot het einde van uw factureringsperiode."
+        },
+        "q4": {
+          "question": "Verschijnen kosten als \"ReelPorn\" op mijn afschrift?",
+          "answer": "Nee, voor uw privacy verschijnen kosten onder een discrete factureringsnaam zoals \"RP Media Services\" of \"Digital Entertainment Services\" op uw bankafschrift."
+        },
+        "q5": {
+          "question": "Kan ik mijn plan upgraden of downgraden?",
+          "answer": "Ja, u kunt uw abonnementsplan op elk moment wijzigen. Het nieuwe plan gaat in bij uw volgende factureringscyclus. Prijsverschillen worden naar rato berekend."
+        }
+      },
+      "content": {
+        "title": "Inhoud & Functies",
+        "q1": {
+          "question": "Welk soort inhoud is beschikbaar?",
+          "answer": "We bieden een breed scala aan volwassen inhoud in 15-seconden reel-formaat, inclusief amateur, professioneel, verschillende categorieën en fetisjen. Alle inhoud is van geverifieerde volwassenen en voldoet aan wettelijke vereisten."
+        },
+        "q2": {
+          "question": "Kan ik video's downloaden voor offline kijken?",
+          "answer": "Premium leden kunnen video's downloaden voor offline kijken. Downloads zijn versleuteld en kunnen alleen worden bekeken via onze app zolang uw abonnement actief is."
+        },
+        "q3": {
+          "question": "Hoe werkt het aanbevelingsalgoritme?",
+          "answer": "Ons AI-aangedreven algoritme leert van uw kijkgewoonten, likes en voorkeuren om u gepersonaliseerde inhoud te tonen. Hoe meer u interacteert, hoe beter de aanbevelingen worden."
+        },
+        "q4": {
+          "question": "Kan ik mijn eigen inhoud uploaden?",
+          "answer": "Ja, geverifieerde makers kunnen inhoud uploaden. U moet ons verificatieproces voor makers voltooien, 2257-documentatie aanleveren en voldoen aan onze inhoudsrichtlijnen."
+        },
+        "q5": {
+          "question": "Hoe meld ik ongepaste inhoud?",
+          "answer": "Elke video heeft een meldknop. Klik erop om inhoud te melden die onze voorwaarden schendt, niet consensueel is, minderjarigen betreft of anderszins ongepast is. We beoordelen alle meldingen binnen 24 uur."
+        }
+      },
+      "creators": {
+        "title": "Voor Makers",
+        "q1": {
+          "question": "Hoe word ik een geverifieerde maker?",
+          "answer": "Solliciteer via het Makersportaal, lever een door de overheid uitgegeven identiteitsbewijs, voltooi de 2257-documentatie en doorloop ons verificatieproces. Goedkeuring duurt doorgaans 24-48 uur."
+        },
+        "q2": {
+          "question": "Hoeveel kan ik verdienen als maker?",
+          "answer": "Makers verdienen via meerdere inkomstenstromen: advertentie-inkomstendeling (60%), fooien van fans, pay-per-view inhoud en abonnementsniveaus. Topmakers verdienen duizenden per maand."
+        },
+        "q3": {
+          "question": "Wat zijn de inhoudsvereisten?",
+          "answer": "Video's moeten 15 seconden of korter zijn, minimaal 720p kwaliteit, alle deelnemers moeten 18+ zijn en de inhoud moet consensueel zijn. We verbieden illegale inhoud, geweld en niet-consensueel materiaal."
+        },
+        "q4": {
+          "question": "Hoe word ik betaald?",
+          "answer": "Betalingen worden wekelijks verwerkt via directe overboeking, PayPal of cryptocurrency. Minimale uitbetaling is €50. U ontvangt gedetailleerde inkomstenrapporten in uw makersdashboard."
+        },
+        "q5": {
+          "question": "Behoud ik de rechten op mijn inhoud?",
+          "answer": "Ja, u behoudt het eigendom van uw inhoud. U geeft ons een licentie om deze op ons platform weer te geven. U kunt uw inhoud op elk moment verwijderen via uw makersdashboard."
+        }
+      },
+      "technical": {
+        "title": "Technische Ondersteuning",
+        "q1": {
+          "question": "Welke apparaten worden ondersteund?",
+          "answer": "ReelPorn werkt op alle moderne browsers (Chrome, Firefox, Safari, Edge) op desktop en mobiel. We hebben ook native apps voor iOS en Android (beschikbaar buiten de app stores)."
+        },
+        "q2": {
+          "question": "Waarom hapert de video-afspeling?",
+          "answer": "Dit komt meestal door een trage internetverbinding. Probeer de videokwaliteit in de instellingen te verlagen, andere tabs/apps te sluiten of over te schakelen naar een sneller netwerk. Premium leden krijgen prioriteitsstreaming."
+        },
+        "q3": {
+          "question": "Hoe wis ik mijn kijkgeschiedenis?",
+          "answer": "Ga naar Profiel > Privacyinstellingen > Geschiedenis Wissen. U kunt alle geschiedenis wissen of selectief items verwijderen. U kunt ook incognitomodus inschakelen voor privé browsen."
+        },
+        "q4": {
+          "question": "Kan ik een VPN gebruiken?",
+          "answer": "Ja, VPN-gebruik is toegestaan en aanbevolen voor privacy. Sommige functies kunnen echter beperkt zijn op basis van de VPN-locatie vanwege regionale inhoudsbeperkingen."
+        }
+      },
+      "legal": {
+        "title": "Juridisch & Veiligheid",
+        "q1": {
+          "question": "Hoe verifieert u dat performers 18+ zijn?",
+          "answer": "We voldoen aan de vereisten van 18 U.S.C. 2257. Alle makers moeten een door de overheid uitgegeven identiteitsbewijs verstrekken en we houden gedetailleerde administratie bij. We gebruiken AI en handmatige beoordeling om leeftijden te verifiëren."
+        },
+        "q2": {
+          "question": "Wat als mijn inhoud zonder toestemming is geüpload?",
+          "answer": "Dien een DMCA-verwijderingsverzoek in bij dmca@reelporn.ai met bewijs van eigendom. We verwijderen inbreukmakende inhoud binnen 24 uur na ontvangst van geldige kennisgevingen."
+        },
+        "q3": {
+          "question": "Is ReelPorn legaal in mijn land?",
+          "answer": "Wetten voor volwassen inhoud variëren per land. Het is uw verantwoordelijkheid om ervoor te zorgen dat u voldoet aan lokale wetten. We blokkeren toegang vanuit landen waar volwassen inhoud verboden is."
+        },
+        "q4": {
+          "question": "Hoe voorkomt u dat minderjarigen toegang krijgen?",
+          "answer": "We gebruiken leeftijdsverificatiepoorten, vereisen accountaanmaking met leeftijdsbevestiging, bieden informatie over ouderlijk toezicht en werken samen met filterdiensten."
+        }
+      }
+    },
+    "help": {
+      "title": "Nog steeds hulp nodig?",
+      "description": "Kunt u het antwoord dat u zoekt niet vinden? Ons ondersteuningsteam staat klaar om u te helpen!",
+      "emailSupport": "E-mail Ondersteuning",
+      "liveChat": "Live Chat"
+    }
+  },
+  "terms": {
+    "title": "Servicevoorwaarden",
+    "lastUpdated": "Laatst Bijgewerkt",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptatie van Voorwaarden",
+        "content1": "Door ReelPorn.ai (\"de Service\") te openen of te gebruiken, gaat u akkoord met deze Servicevoorwaarden en alle toepasselijke wetten en regelgeving. Als u niet akkoord gaat met een van deze voorwaarden, is het u verboden deze site te gebruiken of te bezoeken.",
+        "content2": "U moet minimaal 18 jaar oud zijn (of de meerderjarige leeftijd in uw rechtsgebied) om deze Service te gebruiken. Door de Service te gebruiken, verklaart en garandeert u dat u aan deze leeftijdseis voldoet."
+      },
+      "account": {
+        "title": "Accountregistratie",
+        "intro": "Om toegang te krijgen tot bepaalde functies van de Service, moet u een account registreren. U gaat ermee akkoord om:",
+        "item1": "Nauwkeurige, actuele en volledige informatie te verstrekken tijdens de registratie",
+        "item2": "Uw accountinformatie te onderhouden en direct bij te werken",
+        "item3": "De beveiliging en vertrouwelijkheid van uw wachtwoord te handhaven",
+        "item4": "De verantwoordelijkheid te accepteren voor alle activiteiten die onder uw account plaatsvinden",
+        "item5": "Ons onmiddellijk op de hoogte te stellen van ongeautoriseerd gebruik van uw account",
+        "outro": "We behouden ons het recht voor om accounts op te schorten of te beëindigen die deze voorwaarden schenden of frauduleuze of illegale activiteiten uitvoeren."
+      },
+      "subscription": {
+        "title": "Abonnement en Betaling",
+        "intro": "Sommige aspecten van de Service vereisen een betaald abonnement. Door een abonnement aan te schaffen, gaat u akkoord alle kosten te betalen die aan uw gekozen plan zijn verbonden.",
+        "item1": "Abonnementen worden automatisch verlengd tenzij ze vóór de verlengingsdatum worden geannuleerd",
+        "item2": "Prijzen kunnen veranderen met 30 dagen voorafgaande kennisgeving",
+        "item3": "Terugbetalingen worden alleen verstrekt zoals vereist door de wet of naar eigen goeddunken",
+        "item4": "U bent verantwoordelijk voor alle belastingen die aan uw abonnement zijn verbonden",
+        "item5": "Betalingsinformatie moet nauwkeurig en actueel zijn"
+      },
+      "userContent": {
+        "title": "Gebruikersinhoud",
+        "intro": "Gebruikers kunnen inhoud indienen bij de Service. Door inhoud in te dienen:",
+        "item1": "Verleent u ons een wereldwijde, niet-exclusieve, royaltyvrije licentie om uw inhoud te gebruiken, weer te geven en te distribueren",
+        "item2": "Garandeert u dat u eigenaar bent van of rechten heeft op alle inhoud die u indient",
+        "item3": "Bevestigt u dat alle personen in uw inhoud 18+ zijn en hebben ingestemd met de distributie ervan",
+        "item4": "Accepteert u de verantwoordelijkheid voor het bijhouden van 2257-records waar van toepassing",
+        "item5": "Gaat u ermee akkoord geen inhoud in te dienen die illegaal, schadelijk of in strijd is met de rechten van anderen"
+      },
+      "prohibited": {
+        "title": "Verboden Gedrag",
+        "intro": "U gaat ermee akkoord om niet:",
+        "item1": "De Service te gebruiken voor illegale doeleinden of in strijd met wetten",
+        "item2": "Inhoud te uploaden waarin minderjarigen of niet-toestemmende personen betrokken zijn",
+        "item3": "Andere gebruikers te lastigvallen, misbruiken of schade toe te brengen",
+        "item4": "Zich voor te doen als een persoon of entiteit",
+        "item5": "De Service of servers te verstoren of te onderbreken",
+        "item6": "Te proberen ongeautoriseerde toegang te verkrijgen tot enig deel van de Service",
+        "item7": "Geautomatiseerde systemen of software te gebruiken om gegevens uit de Service te extraheren",
+        "item8": "Virussen, malware of andere schadelijke code te verzenden",
+        "item9": "De intellectuele eigendomsrechten van anderen te schenden",
+        "item10": "Zich bezig te houden met gedrag dat het gebruik van de Service door anderen beperkt of belemmert"
+      },
+      "intellectualProperty": {
+        "title": "Intellectueel Eigendom",
+        "content1": "De Service en de oorspronkelijke inhoud (met uitzondering van gebruikersinhoud) zijn en blijven het exclusieve eigendom van ReelPorn en haar licentiegevers. De Service is beschermd door auteursrecht, handelsmerk en andere intellectuele eigendomswetten.",
+        "content2": "Onze handelsmerken en trade dress mogen niet worden gebruikt in verband met enig product of dienst zonder onze voorafgaande schriftelijke toestemming."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "content": "Uw gebruik van de Service wordt ook beheerst door ons Privacybeleid. Raadpleeg ons Privacybeleid, dat ook de Site regelt en gebruikers informeert over onze gegevensverzamelingspraktijken."
+      },
+      "dmca": {
+        "title": "DMCA-Naleving",
+        "content": "We respecteren intellectuele eigendomsrechten en zullen reageren op geldige DMCA-verwijderingsmeldingen. Als u denkt dat uw inhoud zonder toestemming is gebruikt, neem dan contact op met onze DMCA-agent op dmca@reelporn.ai."
+      },
+      "disclaimers": {
+        "title": "Disclaimers",
+        "content1": "DE SERVICE WORDT GELEVERD \"ZOALS HET IS\" ZONDER ENIGE GARANTIES, EXPLICIET OF IMPLICIET. WE WIJZEN ALLE GARANTIES AF, INCLUSIEF VERKOOPBAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK.",
+        "content2": "We garanderen niet dat de Service ononderbroken, veilig of foutloos zal zijn. We garanderen niet de nauwkeurigheid of volledigheid van enige inhoud."
+      },
+      "liability": {
+        "title": "Beperking van Aansprakelijkheid",
+        "content1": "VOOR ZOVER MAXIMAAL TOEGESTAAN DOOR DE WET, ZAL REELPORN NIET AANSPRAKELIJK ZIJN VOOR INDIRECTE, INCIDENTELE, SPECIALE, GEVOLGSCHADE OF BESTRAFFENDE SCHADE, OF ENIG VERLIES VAN WINST OF INKOMSTEN, DIRECT OF INDIRECT OPGELOPEN, OF ENIG VERLIES VAN GEGEVENS, GEBRUIK, GOODWILL OF ANDERE IMMATERIËLE VERLIEZEN.",
+        "content2": "Onze totale aansprakelijkheid zal niet hoger zijn dan het bedrag dat u ons in de twaalf maanden voorafgaand aan de claim heeft betaald."
+      },
+      "indemnification": {
+        "title": "Schadeloosstelling",
+        "content": "U gaat ermee akkoord ReelPorn en haar functionarissen, directeuren, medewerkers en agenten te vrijwaren en schadeloos te stellen voor eventuele claims, schade, verliezen, aansprakelijkheden en kosten (inclusief juridische kosten) die voortvloeien uit uw gebruik van de Service of schending van deze Voorwaarden."
+      },
+      "termination": {
+        "title": "Beëindiging",
+        "content1": "We kunnen uw account en toegang tot de Service onmiddellijk beëindigen of opschorten, zonder voorafgaande kennisgeving of aansprakelijkheid, om welke reden dan ook, inclusief schending van deze Voorwaarden.",
+        "content2": "Bij beëindiging zal uw recht om de Service te gebruiken onmiddellijk eindigen. Alle bepalingen van deze Voorwaarden die naar hun aard de beëindiging moeten overleven, blijven van kracht."
+      },
+      "governingLaw": {
+        "title": "Toepasselijk Recht",
+        "content": "Deze Voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van het rechtsgebied waarin ReelPorn actief is, zonder rekening te houden met bepalingen inzake wetsconflicten. U gaat ermee akkoord u te onderwerpen aan de persoonlijke jurisdictie van de rechtbanken binnen dat rechtsgebied."
+      },
+      "changes": {
+        "title": "Wijzigingen in Voorwaarden",
+        "content1": "We behouden ons het recht voor om deze Voorwaarden op elk moment te wijzigen. We zullen gebruikers op de hoogte stellen van eventuele materiële wijzigingen door de nieuwe Voorwaarden op deze pagina te plaatsen en de datum \"Laatst Bijgewerkt\" bij te werken.",
+        "content2": "Uw voortgezet gebruik van de Service na eventuele wijzigingen vormt acceptatie van de nieuwe Voorwaarden."
+      },
+      "contact": {
+        "title": "Contactinformatie",
+        "intro": "Voor vragen over deze Servicevoorwaarden, neem contact met ons op via:",
+        "email": "legal@reelporn.ai"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst Bijgewerkt",
+    "sections": {
+      "infoCollect": {
+        "title": "Informatie die We Verzamelen",
+        "provideTitle": "Informatie die U Verstrekt",
+        "provide1": "Accountinformatie (e-mail, gebruikersnaam, wachtwoord)",
+        "provide2": "Profielinformatie (weergavenaam, bio, voorkeuren)",
+        "provide3": "Betalingsinformatie (veilig verwerkt via externe aanbieders)",
+        "provide4": "Inhoud die u uploadt (video's, foto's, reacties)",
+        "provide5": "Communicatie met ons (supporttickets, e-mails)",
+        "autoTitle": "Automatisch Verzamelde Informatie",
+        "auto1": "IP-adres en apparaatinformatie",
+        "auto2": "Browsertype en besturingssysteem",
+        "auto3": "Gebruiksgegevens (bezochte pagina's, bekeken video's, interacties)",
+        "auto4": "Cookies en vergelijkbare trackingtechnologieën",
+        "auto5": "Locatiegegevens (alleen op land/regio niveau)"
+      },
+      "infoUse": {
+        "title": "Hoe We Uw Informatie Gebruiken",
+        "intro": "We gebruiken verzamelde informatie om:",
+        "item1": "Onze Service te leveren en te onderhouden",
+        "item2": "Transacties te verwerken en gerelateerde informatie te verzenden",
+        "item3": "Administratieve informatie en updates te verzenden",
+        "item4": "Te reageren op uw opmerkingen en vragen",
+        "item5": "Uw ervaring te personaliseren en aanbevelingen te doen",
+        "item6": "Gebruik en trends te monitoren en analyseren",
+        "item7": "Fraude en misbruik te detecteren en voorkomen",
+        "item8": "Te voldoen aan wettelijke verplichtingen"
+      },
+      "infoSharing": {
+        "title": "Informatie Delen",
+        "intro": "We verkopen uw persoonlijke informatie niet. We kunnen informatie delen in deze omstandigheden:",
+        "item1": "Dienstverleners: Met vertrouwde derden die ons helpen onze Service te exploiteren",
+        "item2": "Wettelijke Vereisten: Wanneer vereist door de wet of om rechten en veiligheid te beschermen",
+        "item3": "Bedrijfsoverdrachten: In verband met een fusie, verkoop of overname",
+        "item4": "Met Toestemming: Wanneer u expliciet akkoord gaat met delen",
+        "item5": "Geaggregeerde Gegevens: Niet-identificeerbare statistische gegevens voor analyse"
+      },
+      "dataSecurity": {
+        "title": "Gegevensbeveiliging",
+        "intro": "We implementeren passende technische en organisatorische beveiligingsmaatregelen om uw persoonlijke informatie te beschermen, waaronder:",
+        "item1": "SSL/TLS-versleuteling voor gegevensoverdracht",
+        "item2": "Versleutelde opslag van gevoelige informatie",
+        "item3": "Regelmatige beveiligingsaudits en updates",
+        "item4": "Beperkte toegang tot persoonlijke informatie",
+        "item5": "Veilige betalingsverwerking via PCI-conforme aanbieders",
+        "outro": "Geen enkele methode van overdracht of opslag is echter 100% veilig. We kunnen geen absolute beveiliging garanderen."
+      },
+      "privacyRights": {
+        "title": "Uw Privacyrechten",
+        "intro": "Afhankelijk van uw locatie heeft u mogelijk bepaalde rechten met betrekking tot uw persoonlijke informatie:",
+        "item1": "Toegang: Een kopie van uw persoonlijke informatie aanvragen",
+        "item2": "Correctie: Correctie van onjuiste informatie aanvragen",
+        "item3": "Verwijdering: Verwijdering van uw account en bijbehorende gegevens aanvragen",
+        "item4": "Overdraagbaarheid: Uw gegevens ontvangen in een overdraagbaar formaat",
+        "item5": "Bezwaar: Bezwaar maken tegen bepaalde verwerking van uw informatie",
+        "item6": "Beperking: Beperkte verwerking van uw informatie aanvragen",
+        "outro": "Om deze rechten uit te oefenen, neem contact met ons op via privacy@reelporn.ai"
+      },
+      "cookies": {
+        "title": "Cookies en Tracking",
+        "content1": "We gebruiken cookies en vergelijkbare technologieën om uw ervaring te verbeteren. Voor gedetailleerde informatie, zie ons Cookiebeleid.",
+        "content2": "U kunt cookies beheren via uw browserinstellingen en ons cookievoorkeurencentrum."
+      },
+      "thirdParty": {
+        "title": "Diensten van Derden",
+        "intro1": "Onze Service kan links bevatten naar websites en diensten van derden. We zijn niet verantwoordelijk voor hun privacypraktijken. We moedigen u aan hun privacybeleid te bekijken.",
+        "intro2": "Diensten van derden die we gebruiken zijn onder meer:",
+        "item1": "Betalingsverwerkers (Stripe, PayPal)",
+        "item2": "Analyseaanbieders (Google Analytics)",
+        "item3": "Content delivery networks (CloudFlare)",
+        "item4": "Communicatietools (e-maildiensten)"
+      },
+      "childrenPrivacy": {
+        "title": "Privacy van Kinderen",
+        "content": "Onze Service is strikt voor volwassenen van 18 jaar en ouder. We verzamelen niet bewust informatie van iemand onder de 18 jaar. Als we ontdekken dat we informatie van een minderjarige hebben verzameld, zullen we deze onmiddellijk verwijderen."
+      },
+      "dataRetention": {
+        "title": "Gegevensbewaring",
+        "intro": "We bewaren uw persoonlijke informatie zolang als nodig om:",
+        "item1": "U onze Service te bieden",
+        "item2": "Te voldoen aan wettelijke verplichtingen",
+        "item3": "Geschillen op te lossen en overeenkomsten af te dwingen",
+        "item4": "Zakelijke administratie bij te houden",
+        "outro": "Wanneer u uw account verwijdert, zullen we uw persoonlijke informatie verwijderen of anonimiseren, behalve wanneer bewaring wettelijk vereist is."
+      },
+      "internationalTransfers": {
+        "title": "Internationale Gegevensoverdrachten",
+        "content": "Uw informatie kan worden overgedragen naar en verwerkt in andere landen dan het uwe. Deze landen kunnen andere gegevensbeschermingswetten hebben. We zorgen ervoor dat passende waarborgen aanwezig zijn voor dergelijke overdrachten."
+      },
+      "californiaRights": {
+        "title": "Privacyrechten in Californië",
+        "intro": "Inwoners van Californië hebben aanvullende rechten onder de California Consumer Privacy Act (CCPA):",
+        "item1": "Recht om te weten welke persoonlijke informatie wordt verzameld",
+        "item2": "Recht om te weten of persoonlijke informatie wordt verkocht of vrijgegeven",
+        "item3": "Recht om af te zien van de verkoop van persoonlijke informatie",
+        "item4": "Recht op non-discriminatie voor het uitoefenen van privacyrechten"
+      },
+      "europeanRights": {
+        "title": "Europese Privacyrechten",
+        "content": "Als u zich in de Europese Economische Ruimte (EER) bevindt, heeft u aanvullende rechten onder de Algemene Verordening Gegevensbescherming (AVG), waaronder het recht om een klacht in te dienen bij uw lokale gegevensbeschermingsautoriteit."
+      },
+      "policyUpdates": {
+        "title": "Updates van Dit Beleid",
+        "content1": "We kunnen dit Privacybeleid van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van eventuele wijzigingen door het nieuwe Privacybeleid op deze pagina te plaatsen en de datum \"Laatst Bijgewerkt\" bij te werken.",
+        "content2": "Voor belangrijke wijzigingen zullen we extra kennisgeving geven (zoals e-mailmelding of een prominente kennisgeving op onze Service)."
+      },
+      "contact": {
+        "title": "Contactinformatie",
+        "intro": "Als u vragen heeft over dit Privacybeleid of onze privacypraktijken, neem dan contact met ons op:",
+        "email": "privacy@reelporn.ai",
+        "dpoTitle": "Functionaris voor Gegevensbescherming",
+        "dpo": "ReelPorn Juridische Afdeling",
+        "dpoEmail": "dpo@reelporn.ai"
+      }
+    }
+  },
+  "dmca": {
+    "title": "DMCA-Kennisgeving en Verwijderingsbeleid",
+    "subtitle": "Naleving van de Digital Millennium Copyright Act",
+    "sections": {
+      "notification": {
+        "title": "Kennisgeving van Auteursrechtinbreuk",
+        "content": "ReelPorn respecteert de intellectuele eigendomsrechten van anderen en verwacht dat zijn gebruikers hetzelfde doen. In overeenstemming met de Digital Millennium Copyright Act van 1998 (\"DMCA\"), zullen we snel reageren op claims van auteursrechtinbreuk die zijn gepleegd met behulp van de ReelPorn-website."
+      },
+      "filing": {
+        "title": "Een DMCA-Kennisgeving Indienen",
+        "intro": "Als u gelooft dat uw auteursrechtelijk beschermde werk is gekopieerd op een manier die auteursrechtinbreuk vormt en toegankelijk is op deze site, kunt u onze auteursrechtagent op de hoogte stellen, zoals uiteengezet in de DMCA. Om uw klacht geldig te laten zijn onder de DMCA, moet u de volgende informatie schriftelijk verstrekken:",
+        "item1": "Een elektronische of fysieke handtekening van een persoon die bevoegd is om namens de auteursrechthebbende te handelen",
+        "item2": "Identificatie van het auteursrechtelijk beschermde werk waarvan u beweert dat er inbreuk op is gemaakt",
+        "item3": "Identificatie van het materiaal waarvan wordt beweerd dat het inbreuk maakt en waar het zich op de site bevindt",
+        "item4": "Informatie die redelijkerwijs voldoende is om contact met u op te nemen, zoals uw adres, telefoonnummer en e-mailadres",
+        "item5": "Een verklaring dat u te goeder trouw gelooft dat het gebruik van het materiaal op de wijze waarover wordt geklaagd niet is toegestaan door de auteursrechthebbende, zijn agent of de wet",
+        "item6": "Een verklaring, onder straf van meineed, dat de bovenstaande informatie nauwkeurig is en dat u de auteursrechthebbende bent of bevoegd bent om namens de eigenaar te handelen"
+      },
+      "agent": {
+        "title": "Aangewezen Auteursrechtagent",
+        "intro": "Stuur alle DMCA-kennisgevingen naar onze aangewezen agent:",
+        "email": "dmca@reelporn.ai",
+        "name": "DMCA-Agent",
+        "department": "ReelPorn Juridische Afdeling"
+      },
+      "counter": {
+        "title": "Tegenkennisgeving",
+        "intro": "Als u gelooft dat uw inhoud per vergissing of verkeerde identificatie is verwijderd of de toegang ertoe is uitgeschakeld, kunt u een tegenkennisgeving bij ons indienen. Om effectief te zijn, moet een tegenkennisgeving een schriftelijke mededeling zijn die het volgende omvat:",
+        "item1": "Uw fysieke of elektronische handtekening",
+        "item2": "Identificatie van het materiaal dat is verwijderd of waartoe de toegang is uitgeschakeld en de locatie waar het materiaal verscheen voordat het werd verwijderd of de toegang werd uitgeschakeld",
+        "item3": "Een verklaring onder straf van meineed dat u te goeder trouw gelooft dat het materiaal is verwijderd of uitgeschakeld als gevolg van vergissing of verkeerde identificatie",
+        "item4": "Uw naam, adres, telefoonnummer en e-mailadres",
+        "item5": "Een verklaring dat u instemt met de jurisdictie van de federale districtsrechtbank voor het gerechtelijk district waarin uw adres zich bevindt"
+      },
+      "repeat": {
+        "title": "Recidivisten",
+        "content": "In overeenstemming met de DMCA en andere toepasselijke wetgeving hebben we een beleid aangenomen om, in passende omstandigheden, gebruikers te beëindigen die worden beschouwd als recidivisten. We kunnen ook naar eigen goeddunken de toegang tot de site beperken en/of de accounts beëindigen van alle gebruikers die inbreuk maken op intellectuele eigendomsrechten van anderen."
+      },
+      "notice": {
+        "title": "Belangrijke Kennisgeving",
+        "content": "Let op: Onder Sectie 512(f) van de DMCA kan elke persoon die bewust materieel verkeerd voorstelt dat materiaal of activiteit inbreuk maakt, aansprakelijk worden gesteld voor schade, inclusief kosten en advocaatkosten. Raadpleeg uw juridisch adviseur voordat u een kennisgeving of tegenkennisgeving indient."
+      },
+      "lastUpdated": "Laatst Bijgewerkt"
+    }
+  },
+  "section2257": {
+    "title": "18 U.S.C. 2257 Nalevingskennisgeving",
+    "subtitle": "Verklaring van Naleving van Administratieve Vereisten",
+    "sections": {
+      "compliance": {
+        "title": "Nalevingsverklaring",
+        "content1": "Alle visuele afbeeldingen die op deze website worden weergegeven, of het nu gaat om daadwerkelijk seksueel expliciet gedrag, gesimuleerde seksuele inhoud of anderszins, zijn visuele afbeeldingen van personen die ten minste 18 jaar oud waren toen die visuele afbeeldingen werden gemaakt.",
+        "content2": "Alle andere visuele afbeeldingen die op deze website worden weergegeven, zijn vrijgesteld van de bepalingen van 18 U.S.C. sectie 2257 en 28 C.F.R. 75 omdat genoemde visuele afbeeldingen niet bestaan uit afbeeldingen van gedrag zoals specifiek vermeld in 18 U.S.C sectie 2256 (2) (A) tot (D), maar slechts afbeeldingen zijn van niet-seksueel expliciete naaktheid, of afbeeldingen zijn van gesimuleerd seksueel gedrag, of anderszins zijn vrijgesteld omdat de visuele afbeeldingen vóór 3 juli 1995 zijn gemaakt."
+      },
+      "custodian": {
+        "title": "Bewaarder van Administratie",
+        "intro": "De eigenaren en exploitanten van ReelPorn.ai zetten zich in voor naleving van de Amerikaanse federale wet 18 U.S.C. 2257 en alle bijbehorende regelgeving.",
+        "custodianTitle": "De Bewaarder van Administratie voor ReelPorn.ai is:",
+        "name": "ReelPorn Juridische Naleving",
+        "role": "Bewaarder van Administratie",
+        "department": "Nalevingsafdeling"
+      },
+      "producers": {
+        "title": "Inhoudproducenten",
+        "intro": "Met betrekking tot alle visuele afbeeldingen die op deze website worden weergegeven, of het nu gaat om daadwerkelijk seksueel expliciet gedrag, gesimuleerde seksuele inhoud of anderszins, is alle inhoud verstrekt door externe producenten, webmasters of gebruikers van de website die hebben gegarandeerd dat:",
+        "item1": "Zij de bewaarder zijn van de administratie voor alle verstrekte inhoud",
+        "item2": "Alle modellen, acteurs, actrices en andere personen die verschijnen in visuele afbeeldingen ouder waren dan achttien jaar op het moment van het maken van dergelijke afbeeldingen",
+        "item3": "Zij de vereiste administratie bijhouden volgens de Amerikaanse wet 18 U.S.C. 2257",
+        "item4": "Alle inhoud en afgebeelde activiteiten consensueel zijn"
+      },
+      "original": {
+        "title": "Oorspronkelijke Producenten",
+        "intro1": "De oorspronkelijke producenten van de visuele inhoud op deze website zijn verschillende externe entiteiten. Elke producent houdt administratie bij in overeenstemming met de vereisten zoals uiteengezet in 18 U.S.C. 2257 en de regelgeving.",
+        "intro2": "Voor administratie met betrekking tot specifieke inhoud dienen de volgende entiteiten als bewaarder van administratie voor hun respectievelijke producties:",
+        "item1": "Door gebruikers geüploade inhoud: Individuele uploaders zijn verantwoordelijk voor het bijhouden van hun eigen 2257-administratie",
+        "item2": "Gelicentieerde inhoud: Oorspronkelijke producent behoudt de bewaring van administratie",
+        "item3": "Partnerinhoud: Partnerstudio's houden hun respectievelijke administratie bij"
+      },
+      "exemptions": {
+        "title": "Vrijstellingen",
+        "intro": "Sommige inhoud die op deze website wordt weergegeven, is vrijgesteld van de administratieve vereisten van 18 U.S.C. 2257, waaronder:",
+        "item1": "Visuele afbeeldingen van alleen niet-seksueel expliciete naaktheid",
+        "item2": "Visuele afbeeldingen gemaakt vóór 3 juli 1995",
+        "item3": "Visuele afbeeldingen die geen gedrag afbeelden zoals beschreven in 18 U.S.C. 2256(2)(A)",
+        "item4": "Inhoud die alleen gesimuleerd seksueel gedrag bevat waarbij geen daadwerkelijk seksueel gedrag heeft plaatsgevonden"
+      },
+      "legal": {
+        "title": "Juridische Informatie",
+        "content1": "Belangrijk: ReelPorn.ai functioneert als een platform en produceert geen originele inhoud. Alle inhoud wordt verstrekt door externe producenten die hebben verklaard en gegarandeerd dat zij voldoen aan alle toepasselijke wetten, inclusief 18 U.S.C. 2257.",
+        "content2": "Elke persoon die inhoud uploadt, indient of anderszins verstrekt aan ReelPorn.ai verklaart en garandeert dat hij/zij heeft voldaan aan de administratieve vereisten van 18 U.S.C. 2257 met betrekking tot dergelijke inhoud."
+      },
+      "contact": {
+        "title": "Contactinformatie",
+        "intro": "Voor vragen over 2257-naleving of om toegang tot administratie aan te vragen, neem contact op met:",
+        "email": "legal@reelporn.ai"
+      },
+      "lastUpdated": "Laatst Bijgewerkt"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Cookiebeleid",
+    "subtitle": "Hoe we cookies en vergelijkbare technologieën gebruiken",
+    "lastUpdated": "Laatst Bijgewerkt",
+    "sections": {
+      "whatAre": {
+        "title": "Wat zijn Cookies?",
+        "content1": "Cookies zijn kleine tekstbestanden die op uw apparaat worden geplaatst wanneer u onze website bezoekt. Ze helpen ons u een betere ervaring te bieden door uw voorkeuren te onthouden, websiteverkeer te analyseren en inhoud te personaliseren.",
+        "content2": "We gebruiken ook vergelijkbare technologieën zoals pixels, lokale opslag en apparaatvingerafdrukken om uw browse-ervaring te verbeteren en onze diensten te optimaliseren."
+      },
+      "howWeUse": {
+        "title": "Hoe We Cookies Gebruiken",
+        "intro": "We gebruiken cookies en vergelijkbare technologieën voor de volgende doeleinden:",
+        "essential": {
+          "title": "Essentiële Bewerkingen",
+          "description": "Om kernfunctionaliteit te bieden zoals gebruikersauthenticatie, beveiliging en site-integriteit"
+        },
+        "preferences": {
+          "title": "Voorkeuren & Instellingen",
+          "description": "Om uw keuzes te onthouden zoals taalvoorkeuren, afspeelkwaliteit en weergave-instellingen"
+        },
+        "analytics": {
+          "title": "Analyse & Prestaties",
+          "description": "Om te begrijpen hoe gebruikers met onze site omgaan en onze diensten te verbeteren"
+        },
+        "marketing": {
+          "title": "Marketing & Advertenties",
+          "description": "Om relevante advertenties te leveren en hun effectiviteit te meten"
+        }
+      },
+      "types": {
+        "title": "Soorten Cookies die We Gebruiken",
+        "essential": {
+          "title": "Essentiële Cookies",
+          "description": "Deze cookies zijn noodzakelijk voor het goed functioneren van de website. Ze maken basisfuncties mogelijk zoals paginanavigatie, toegang tot beveiligde gebieden en leeftijdsverificatie.",
+          "items": ["Sessiebeheer", "Leeftijdsverificatiestatus", "Beveiligingstokens", "Taakverdeling"]
+        },
+        "functional": {
+          "title": "Functionele Cookies",
+          "description": "Deze cookies maken verbeterde functionaliteit en personalisatie mogelijk. Ze kunnen door ons of door externe providers worden ingesteld wiens diensten we gebruiken.",
+          "items": ["Taalvoorkeuren", "Videospeler-instellingen", "Recent bekeken inhoud", "Gebruikersinterface-aanpassing"]
+        },
+        "analyticsType": {
+          "title": "Analytische Cookies",
+          "description": "Deze cookies helpen ons te begrijpen hoe bezoekers met onze website omgaan door anoniem informatie te verzamelen en te rapporteren.",
+          "items": ["Google Analytics", "Paginaweergave tracking", "Gebruikersgedrag analyse", "Prestatiebewaking"]
+        },
+        "advertising": {
+          "title": "Advertentiecookies",
+          "description": "Deze cookies worden gebruikt om advertenties te leveren die relevant zijn voor u en uw interesses. Ze helpen ook om het aantal keren dat u een advertentie ziet te beperken.",
+          "items": ["Gerichte advertenties", "Advertentiefrequentie beperking", "Campagneprestatiemeting", "Op interesse gebaseerde advertenties"]
+        }
+      },
+      "thirdParty": {
+        "title": "Cookies van Derden",
+        "intro1": "Sommige cookies worden geplaatst door diensten van derden die op onze pagina's verschijnen. We controleren deze cookies niet en moedigen u aan om de websites van derden te controleren voor meer informatie over hoe ze cookies gebruiken.",
+        "intro2": "Diensten van derden die we gebruiken zijn onder meer:",
+        "items": [
+          "Google Analytics - voor website-analyse",
+          "CloudFlare - voor beveiliging en prestaties",
+          "Betalingsverwerkers - voor veilige transacties",
+          "Social media platforms - voor het delen van inhoud"
+        ]
+      },
+      "managing": {
+        "title": "Beheer van Uw Cookievoorkeuren",
+        "intro": "U heeft controle over welke cookies we gebruiken. U kunt uw voorkeuren op elk moment beheren:",
+        "buttonText": "Cookie-Instellingen Beheren",
+        "buttonDescription": "Klik op de knop hierboven om uw cookievoorkeuren te bekijken en bij te werken.",
+        "browserIntro": "U kunt cookies ook beheren via uw browserinstellingen:",
+        "browsers": {
+          "chrome": "Chrome: Instellingen → Privacy en beveiliging → Cookies en andere sitegegevens",
+          "firefox": "Firefox: Instellingen → Privacy & Beveiliging → Cookies en Sitegegevens",
+          "safari": "Safari: Voorkeuren → Privacy → Websitegegevens Beheren",
+          "edge": "Edge: Instellingen → Privacy, zoeken en services → Cookies en sitemachtigingen"
+        }
+      },
+      "duration": {
+        "title": "Cookieduur",
+        "intro": "Cookies kunnen sessie- of permanente cookies zijn:",
+        "session": {
+          "title": "Sessiecookies",
+          "description": "Dit zijn tijdelijke cookies die verlopen wanneer u uw browser sluit. We gebruiken deze voor beveiliging en essentiële sitefuncties."
+        },
+        "persistent": {
+          "title": "Permanente Cookies",
+          "description": "Deze cookies blijven voor een bepaalde periode op uw apparaat of totdat u ze verwijdert. We gebruiken deze om uw voorkeuren te onthouden en gepersonaliseerde functies te bieden."
+        }
+      },
+      "updates": {
+        "title": "Updates van Dit Beleid",
+        "content": "We kunnen dit Cookiebeleid van tijd tot tijd bijwerken om veranderingen in onze praktijken weer te geven of om andere operationele, juridische of regelgevende redenen. We zullen u op de hoogte stellen van belangrijke wijzigingen door het nieuwe beleid op deze pagina te plaatsen met een bijgewerkte revisiedatum."
+      },
+      "contact": {
+        "title": "Neem Contact Met Ons Op",
+        "intro": "Als u vragen heeft over ons gebruik van cookies of dit beleid, neem dan contact met ons op:",
+        "email": "privacy@reelporn.ai"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Volwassen Entertainment Herdefiniëren",
+      "subtitle": "ReelPorn revolutioneert hoe volwassenen intieme content ontdekken en genieten door innovatieve korte video's en geavanceerde technologie.",
+      "getStarted": "Aan de Slag",
+      "meetCreators": "Ontmoet Onze Makers"
+    },
+    "stats": {
+      "users": {
+        "number": "10M+",
+        "label": "Actieve Gebruikers"
+      },
+      "videos": {
+        "number": "500K+",
+        "label": "Video's"
+      },
+      "creators": {
+        "number": "50K+",
+        "label": "Makers"
+      },
+      "countries": {
+        "number": "150+",
+        "label": "Landen"
+      }
+    },
+    "mission": {
+      "title": "Onze Missie",
+      "paragraph1": "We geloven dat volwassen entertainment veilig, consensueel en toegankelijk moet zijn. ReelPorn combineert de verslavende aard van korte content met de intimiteit van volwassen entertainment, en creëert een uniek platform waar kijkers nieuwe ervaringen kunnen ontdekken en makers kunnen floreren.",
+      "paragraph2": "Onze AI-aangedreven aanbevelingsengine leert uw voorkeuren om gepersonaliseerde content te leveren met behoud van volledige privacy. Elke video wordt geverifieerd, elke maker wordt geauthenticeerd en elke interactie is veilig.",
+      "imageCaption": "Innovatie in Beweging"
+    },
+    "values": {
+      "title": "Onze Kernwaarden",
+      "privacyFirst": {
+        "title": "Privacy Eerst",
+        "description": "Uw privacy is onze hoogste prioriteit. We gebruiken geavanceerde versleuteling en delen nooit uw gegevens."
+      },
+      "verifiedContent": {
+        "title": "Geverifieerde Inhoud",
+        "description": "Alle inhoud is van geverifieerde volwassenen. We voldoen aan alle wettelijke vereisten inclusief 2257."
+      },
+      "innovation": {
+        "title": "Innovatie",
+        "description": "Baanbrekend voor de toekomst van volwassen entertainment met geavanceerde technologie en functies."
+      },
+      "creatorSupport": {
+        "title": "Maker Ondersteuning",
+        "description": "Makers ondersteunen met eerlijke omzetdeling en krachtige tools om hun publiek te laten groeien."
+      }
+    },
+    "technology": {
+      "title": "Aangedreven door Technologie",
+      "aiRecommendations": {
+        "title": "AI-Aanbevelingen",
+        "description": "Geavanceerde machine learning-algoritmen personaliseren uw feed in real-time."
+      },
+      "encryption": {
+        "title": "End-to-End Versleuteling",
+        "description": "Militaire versleuteling beschermt uw gegevens en kijkgeschiedenis."
+      },
+      "cdn": {
+        "title": "Wereldwijd CDN",
+        "description": "Bliksemsnelle streaming vanaf servers wereldwijd voor buffervrij kijken."
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform",
+        "description": "Naadloze ervaring op alle apparaten - desktop, mobiel en tablet."
+      }
+    },
+    "team": {
+      "title": "Leiderschapsteam",
+      "ceo": {
+        "role": "CEO & Oprichter",
+        "bio": "Visionaire leider met meer dan 15 jaar ervaring in tech en entertainment"
+      },
+      "cto": {
+        "role": "CTO",
+        "bio": "Expert in AI/ML en schaalbare video streaming infrastructuur"
+      },
+      "headSafety": {
+        "role": "Hoofd Veiligheid",
+        "bio": "Toegewijd aan platformveiligheid en wettelijke naleving"
+      },
+      "headCreators": {
+        "role": "Hoofd Makers",
+        "bio": "Ondersteuning en groei van onze geweldige makerscommunity"
+      }
+    },
+    "becomeCreator": {
+      "title": "Word Maker",
+      "description": "Sluit je aan bij duizenden makers die verdienen op ReelPorn. We bieden het hoogste omzetaandeel in de industrie, krachtige analyses en een ondersteunende community.",
+      "revenueShare": "80% Omzetdeling",
+      "growthTools": "Groei Tools",
+      "support": "24/7 Ondersteuning",
+      "applyButton": "Solliciteer als Maker"
+    },
+    "contact": {
+      "title": "Neem Contact Op",
+      "general": {
+        "title": "Algemene Vragen",
+        "email": "info@reelporn.ai"
+      },
+      "support": {
+        "title": "Ondersteuning",
+        "email": "support@reelporn.ai"
+      },
+      "business": {
+        "title": "Zakelijk",
+        "email": "business@reelporn.ai"
+      }
+    }
+  },
+  "payment": {
+    "cryptoPayment": "Crypto Betaling",
+    "cryptoPaymentDescription": "Veilige en anonieme betaling met cryptocurrency",
+    "quickTransaction": "Snelle Transactie",
+    "selectPlan": "Selecteer Uw Abonnement",
+    "selectCryptocurrency": "Selecteer Cryptocurrency",
+    "plan": "Abonnement",
+    "currency": "Valuta",
+    "total": "Totaal",
+    "month": "maand",
+    "proceedToPayment": "Doorgaan naar Betaling",
+    "processing": "Verwerken...",
+    "loading": "Laden...",
+    "continue": "Doorgaan",
+    "sendExactly": "Stuur Exact",
+    "sendExactAmount": "Stuur Dit Exacte Bedrag",
+    "toAddress": "Naar Adres",
+    "toThisAddress": "Naar Dit Adres",
+    "network": "Netwerk",
+    "confirmations": "Bevestigingen",
+    "confirmationProgress": "Bevestigingsvoortgang",
+    "expiresAt": "Verloopt om {time}",
+    "paymentExpiresAt": "Betaling verloopt om {time}",
+    "viewOnBlockchain": "Bekijk op Blockchain",
+    "scanQRCode": "Scan QR-code met uw crypto wallet",
+    "copyAddress": "Kopieer Adres",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd!",
+    "cancelPayment": "Betaling Annuleren",
+    "awaitingPayment": "Wachten op Betaling",
+    "paymentCompleted": "Betaling Voltooid!",
+    "paymentFailed": "Betaling Mislukt",
+    "paymentCancelled": "Betaling Geannuleerd",
+    "failedToLoadData": "Kon betalingsgegevens niet laden",
+    "failedToInitiatePayment": "Kon betaling niet initiëren",
+    "failedToCancelPayment": "Kon betaling niet annuleren",
+    "unavailable": "Niet Beschikbaar",
+    "status": {
+      "pending": "In Afwachting",
+      "awaiting_confirmation": "Wachten op Bevestiging",
+      "confirming": "Bevestigen",
+      "completed": "Voltooid",
+      "failed": "Mislukt",
+      "expired": "Verlopen",
+      "cancelled": "Geannuleerd"
+    }
   }
 }

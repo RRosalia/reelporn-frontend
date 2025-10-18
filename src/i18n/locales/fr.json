@@ -435,5 +435,719 @@
     "relatedPosts": "Articles connexes",
     "notFound": "Article de blog non trouvé",
     "notFoundDescription": "L'article de blog que vous recherchez n'existe pas ou a été supprimé."
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur ReelPorn",
+    "categories": {
+      "general": {
+        "title": "Questions Générales",
+        "q1": {
+          "question": "Qu'est-ce que ReelPorn ?",
+          "answer": "ReelPorn est une plateforme de contenu pour adultes premium spécialisée dans le contenu vidéo de courte durée (reels de 15 secondes). Nous offrons une expérience similaire à TikTok pour le divertissement pour adultes avec fonctionnalité de balayage, flux personnalisés et contenu de haute qualité de créateurs vérifiés."
+        },
+        "q2": {
+          "question": "ReelPorn est-il gratuit ?",
+          "answer": "ReelPorn propose du contenu gratuit et premium. Vous pouvez parcourir et regarder du contenu limité gratuitement, mais un abonnement premium débloque un accès illimité à toutes les vidéos, qualité HD/4K, fonctionnalités de téléchargement et visualisation sans publicité."
+        },
+        "q3": {
+          "question": "Comment vérifier mon âge ?",
+          "answer": "La vérification de l'âge est requise pour accéder à ReelPorn. Lors de votre première visite, vous devez confirmer que vous avez 18 ans ou plus. Il s'agit d'une exigence légale pour garantir que les mineurs ne peuvent pas accéder au contenu pour adultes."
+        },
+        "q4": {
+          "question": "Mes données sont-elles sûres et privées ?",
+          "answer": "Oui, nous prenons la confidentialité au sérieux. Toutes les données sont cryptées, nous ne partageons jamais d'informations personnelles avec des tiers sans consentement et vous pouvez naviguer de manière anonyme. Veuillez consulter notre Politique de Confidentialité pour des informations détaillées."
+        }
+      },
+      "account": {
+        "title": "Compte & Abonnement",
+        "q1": {
+          "question": "Comment créer un compte ?",
+          "answer": "Cliquez sur le bouton \"S'inscrire\", choisissez votre plan d'adhésion, entrez votre email et créez un mot de passe. Vérifiez votre adresse email et vous êtes prêt à commencer à regarder !"
+        },
+        "q2": {
+          "question": "Quels modes de paiement acceptez-vous ?",
+          "answer": "Nous acceptons les principales cartes de crédit (Visa, MasterCard, American Express), PayPal et les paiements en cryptomonnaie (Bitcoin, Ethereum). Toutes les transactions sont traitées de manière sécurisée et discrète."
+        },
+        "q3": {
+          "question": "Comment annuler mon abonnement ?",
+          "answer": "Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de votre compte. Allez dans Profil > Abonnement > Annuler l'Abonnement. Vous continuerez à avoir accès jusqu'à la fin de votre période de facturation."
+        },
+        "q4": {
+          "question": "Les frais apparaissent-ils comme \"ReelPorn\" sur mon relevé ?",
+          "answer": "Non, pour votre confidentialité, les frais apparaissent sous un nom de facturation discret comme \"RP Media Services\" ou \"Digital Entertainment Services\" sur votre relevé bancaire."
+        },
+        "q5": {
+          "question": "Puis-je améliorer ou rétrograder mon plan ?",
+          "answer": "Oui, vous pouvez modifier votre plan d'abonnement à tout moment. Le nouveau plan prendra effet lors de votre prochain cycle de facturation. Toute différence de prix sera calculée au prorata."
+        }
+      },
+      "content": {
+        "title": "Contenu & Fonctionnalités",
+        "q1": {
+          "question": "Quel type de contenu est disponible ?",
+          "answer": "Nous proposons une grande variété de contenu pour adultes au format reel de 15 secondes, y compris amateur, professionnel, diverses catégories et fétiches. Tout le contenu provient d'adultes vérifiés et respecte les exigences légales."
+        },
+        "q2": {
+          "question": "Puis-je télécharger des vidéos pour une visualisation hors ligne ?",
+          "answer": "Les membres premium peuvent télécharger des vidéos pour une visualisation hors ligne. Les téléchargements sont cryptés et ne peuvent être visionnés que via notre application tant que votre abonnement est actif."
+        },
+        "q3": {
+          "question": "Comment fonctionne l'algorithme de recommandation ?",
+          "answer": "Notre algorithme alimenté par l'IA apprend de vos habitudes de visionnage, likes et préférences pour vous montrer du contenu personnalisé. Plus vous interagissez, meilleures deviennent les recommandations."
+        },
+        "q4": {
+          "question": "Puis-je télécharger mon propre contenu ?",
+          "answer": "Oui, les créateurs vérifiés peuvent télécharger du contenu. Vous devez compléter notre processus de vérification des créateurs, fournir la documentation 2257 et respecter nos directives de contenu."
+        },
+        "q5": {
+          "question": "Comment signaler du contenu inapproprié ?",
+          "answer": "Chaque vidéo a un bouton de signalement. Cliquez dessus pour signaler du contenu qui viole nos conditions, est non consensuel, implique des mineurs ou est autrement inapproprié. Nous examinons tous les signalements dans les 24 heures."
+        }
+      },
+      "creators": {
+        "title": "Pour les Créateurs",
+        "q1": {
+          "question": "Comment devenir un créateur vérifié ?",
+          "answer": "Postulez via le Portail Créateur, fournissez une pièce d'identité émise par le gouvernement, complétez la documentation 2257 et passez notre processus de vérification. L'approbation prend généralement 24-48 heures."
+        },
+        "q2": {
+          "question": "Combien puis-je gagner en tant que créateur ?",
+          "answer": "Les créateurs gagnent grâce à plusieurs sources de revenus : partage des revenus publicitaires (60%), pourboires des fans, contenu payant à la vue et niveaux d'abonnement. Les meilleurs créateurs gagnent des milliers par mois."
+        },
+        "q3": {
+          "question": "Quelles sont les exigences de contenu ?",
+          "answer": "Les vidéos doivent durer 15 secondes ou moins, qualité minimum 720p, tous les participants doivent avoir 18 ans ou plus et le contenu doit être consensuel. Nous interdisons le contenu illégal, la violence et le matériel non consensuel."
+        },
+        "q4": {
+          "question": "Comment suis-je payé ?",
+          "answer": "Les paiements sont traités chaque semaine par virement bancaire, PayPal ou cryptomonnaie. Le paiement minimum est de 50 €. Vous recevrez des rapports de revenus détaillés dans votre tableau de bord créateur."
+        },
+        "q5": {
+          "question": "Est-ce que je conserve les droits sur mon contenu ?",
+          "answer": "Oui, vous conservez la propriété de votre contenu. Vous nous accordez une licence pour l'afficher sur notre plateforme. Vous pouvez retirer votre contenu à tout moment depuis votre tableau de bord créateur."
+        }
+      },
+      "technical": {
+        "title": "Support Technique",
+        "q1": {
+          "question": "Quels appareils sont pris en charge ?",
+          "answer": "ReelPorn fonctionne sur tous les navigateurs modernes (Chrome, Firefox, Safari, Edge) sur ordinateur et mobile. Nous avons également des applications natives pour iOS et Android (disponibles en dehors des app stores)."
+        },
+        "q2": {
+          "question": "Pourquoi la lecture vidéo saccade-t-elle ?",
+          "answer": "Cela est généralement dû à une connexion Internet lente. Essayez de réduire la qualité vidéo dans les paramètres, fermez les autres onglets/applications ou passez à un réseau plus rapide. Les membres premium bénéficient du streaming prioritaire."
+        },
+        "q3": {
+          "question": "Comment effacer mon historique de visionnage ?",
+          "answer": "Allez dans Profil > Paramètres de Confidentialité > Effacer l'Historique. Vous pouvez effacer tout l'historique ou supprimer des éléments de manière sélective. Vous pouvez également activer le mode incognito pour une navigation privée."
+        },
+        "q4": {
+          "question": "Puis-je utiliser un VPN ?",
+          "answer": "Oui, l'utilisation du VPN est autorisée et recommandée pour la confidentialité. Cependant, certaines fonctionnalités peuvent être limitées en fonction de l'emplacement du VPN en raison de restrictions de contenu régionales."
+        }
+      },
+      "legal": {
+        "title": "Légal & Sécurité",
+        "q1": {
+          "question": "Comment vérifiez-vous que les artistes ont 18 ans ou plus ?",
+          "answer": "Nous respectons les exigences de 18 U.S.C. 2257. Tous les créateurs doivent fournir une pièce d'identité émise par le gouvernement et nous conservons des dossiers détaillés. Nous utilisons l'IA et la vérification manuelle pour vérifier les âges."
+        },
+        "q2": {
+          "question": "Que faire si mon contenu a été téléchargé sans permission ?",
+          "answer": "Soumettez une demande de retrait DMCA à dmca@reelporn.ai avec une preuve de propriété. Nous retirons le contenu contrefait dans les 24 heures suivant la réception d'avis valides."
+        },
+        "q3": {
+          "question": "ReelPorn est-il légal dans mon pays ?",
+          "answer": "Les lois sur le contenu pour adultes varient selon les pays. Il est de votre responsabilité de vous assurer que vous respectez les lois locales. Nous bloquons l'accès depuis les pays où le contenu pour adultes est interdit."
+        },
+        "q4": {
+          "question": "Comment empêchez-vous les mineurs d'accéder ?",
+          "answer": "Nous utilisons des portes de vérification d'âge, exigeons la création de compte avec confirmation d'âge, fournissons des informations sur le contrôle parental et coopérons avec les services de filtrage."
+        }
+      }
+    },
+    "help": {
+      "title": "Besoin d'aide supplémentaire ?",
+      "description": "Vous ne trouvez pas la réponse que vous cherchez ? Notre équipe de support est là pour vous aider !",
+      "emailSupport": "Support par Email",
+      "liveChat": "Chat en Direct"
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière Mise à Jour",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptation des Conditions",
+        "content1": "En accédant ou en utilisant ReelPorn.ai (\"le Service\"), vous acceptez d'être lié par ces Conditions d'Utilisation et toutes les lois et réglementations applicables. Si vous n'acceptez pas l'une de ces conditions, il vous est interdit d'utiliser ou d'accéder à ce site.",
+        "content2": "Vous devez avoir au moins 18 ans (ou l'âge de la majorité dans votre juridiction) pour utiliser ce Service. En utilisant le Service, vous déclarez et garantissez que vous remplissez cette condition d'âge."
+      },
+      "account": {
+        "title": "Inscription au Compte",
+        "intro": "Pour accéder à certaines fonctionnalités du Service, vous devez créer un compte. Vous acceptez de :",
+        "item1": "Fournir des informations exactes, actuelles et complètes lors de l'inscription",
+        "item2": "Maintenir et mettre à jour rapidement les informations de votre compte",
+        "item3": "Maintenir la sécurité et la confidentialité de votre mot de passe",
+        "item4": "Accepter la responsabilité de toutes les activités qui se produisent sous votre compte",
+        "item5": "Nous informer immédiatement de toute utilisation non autorisée de votre compte",
+        "outro": "Nous nous réservons le droit de suspendre ou de résilier les comptes qui violent ces conditions ou s'engagent dans des activités frauduleuses ou illégales."
+      },
+      "subscription": {
+        "title": "Abonnement et Paiement",
+        "intro": "Certains aspects du Service nécessitent un abonnement payant. En achetant un abonnement, vous acceptez de payer tous les frais associés au plan que vous avez choisi.",
+        "item1": "Les abonnements se renouvellent automatiquement sauf s'ils sont annulés avant la date de renouvellement",
+        "item2": "Les prix peuvent changer avec un préavis de 30 jours",
+        "item3": "Les remboursements ne sont accordés que conformément à la loi ou à notre seule discrétion",
+        "item4": "Vous êtes responsable de toutes les taxes associées à votre abonnement",
+        "item5": "Les informations de paiement doivent être exactes et à jour"
+      },
+      "userContent": {
+        "title": "Contenu des Utilisateurs",
+        "intro": "Les utilisateurs peuvent soumettre du contenu au Service. En soumettant du contenu, vous :",
+        "item1": "Nous accordez une licence mondiale, non exclusive et libre de droits pour utiliser, afficher et distribuer votre contenu",
+        "item2": "Garantissez que vous possédez ou avez des droits sur tout le contenu que vous soumettez",
+        "item3": "Confirmez que toutes les personnes dans votre contenu ont 18 ans ou plus et ont consenti à sa distribution",
+        "item4": "Acceptez la responsabilité de maintenir les dossiers 2257 le cas échéant",
+        "item5": "Acceptez de ne pas soumettre de contenu illégal, nuisible ou violant les droits d'autrui"
+      },
+      "prohibited": {
+        "title": "Conduite Interdite",
+        "intro": "Vous acceptez de ne pas :",
+        "item1": "Utiliser le Service à des fins illégales ou en violation de toute loi",
+        "item2": "Télécharger du contenu impliquant des mineurs ou des personnes non consentantes",
+        "item3": "Harceler, abuser ou nuire à d'autres utilisateurs",
+        "item4": "Usurper l'identité de toute personne ou entité",
+        "item5": "Interférer avec ou perturber le Service ou les serveurs",
+        "item6": "Tenter d'obtenir un accès non autorisé à toute partie du Service",
+        "item7": "Utiliser des systèmes automatisés ou des logiciels pour extraire des données du Service",
+        "item8": "Transmettre des virus, des logiciels malveillants ou d'autres codes nuisibles",
+        "item9": "Violer les droits de propriété intellectuelle d'autrui",
+        "item10": "S'engager dans toute conduite qui restreint ou inhibe l'utilisation du Service par d'autres"
+      },
+      "intellectualProperty": {
+        "title": "Propriété Intellectuelle",
+        "content1": "Le Service et son contenu original (à l'exclusion du contenu des utilisateurs) sont et resteront la propriété exclusive de ReelPorn et de ses concédants de licence. Le Service est protégé par le droit d'auteur, les marques commerciales et d'autres lois sur la propriété intellectuelle.",
+        "content2": "Nos marques commerciales et notre habillage commercial ne peuvent être utilisés en relation avec un produit ou service sans notre consentement écrit préalable."
+      },
+      "privacy": {
+        "title": "Confidentialité",
+        "content": "Votre utilisation du Service est également régie par notre Politique de Confidentialité. Veuillez consulter notre Politique de Confidentialité, qui régit également le Site et informe les utilisateurs de nos pratiques de collecte de données."
+      },
+      "dmca": {
+        "title": "Conformité DMCA",
+        "content": "Nous respectons les droits de propriété intellectuelle et répondrons aux avis de retrait DMCA valides. Si vous pensez que votre contenu a été utilisé sans autorisation, veuillez contacter notre agent DMCA à dmca@reelporn.ai."
+      },
+      "disclaimers": {
+        "title": "Avertissements",
+        "content1": "LE SERVICE EST FOURNI \"TEL QUEL\" SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE. NOUS DÉCLINONS TOUTES LES GARANTIES, Y COMPRIS LA QUALITÉ MARCHANDE, L'ADÉQUATION À UN USAGE PARTICULIER ET LA NON-VIOLATION.",
+        "content2": "Nous ne garantissons pas que le Service sera ininterrompu, sécurisé ou sans erreur. Nous ne garantissons pas l'exactitude ou l'exhaustivité de tout contenu."
+      },
+      "liability": {
+        "title": "Limitation de Responsabilité",
+        "content1": "DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI, REELPORN NE SERA PAS RESPONSABLE DES DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS OU PUNITIFS, OU DE TOUTE PERTE DE PROFITS OU DE REVENUS, QU'ILS SOIENT ENCOURUS DIRECTEMENT OU INDIRECTEMENT, OU DE TOUTE PERTE DE DONNÉES, D'UTILISATION, DE BONNE VOLONTÉ OU D'AUTRES PERTES INTANGIBLES.",
+        "content2": "Notre responsabilité totale ne dépassera pas le montant que vous nous avez payé au cours des douze mois précédant la réclamation."
+      },
+      "indemnification": {
+        "title": "Indemnisation",
+        "content": "Vous acceptez d'indemniser et de dégager de toute responsabilité ReelPorn et ses dirigeants, administrateurs, employés et agents de toute réclamation, dommage, perte, responsabilité et dépense (y compris les frais juridiques) découlant de votre utilisation du Service ou de la violation de ces Conditions."
+      },
+      "termination": {
+        "title": "Résiliation",
+        "content1": "Nous pouvons résilier ou suspendre votre compte et votre accès au Service immédiatement, sans préavis ni responsabilité, pour quelque raison que ce soit, y compris la violation de ces Conditions.",
+        "content2": "Lors de la résiliation, votre droit d'utiliser le Service cessera immédiatement. Toutes les dispositions de ces Conditions qui, par leur nature, devraient survivre à la résiliation survivront."
+      },
+      "governingLaw": {
+        "title": "Loi Applicable",
+        "content": "Ces Conditions seront régies et interprétées conformément aux lois de la juridiction dans laquelle ReelPorn opère, sans égard à ses dispositions relatives aux conflits de lois. Vous acceptez de vous soumettre à la juridiction personnelle des tribunaux situés dans cette juridiction."
+      },
+      "changes": {
+        "title": "Modifications des Conditions",
+        "content1": "Nous nous réservons le droit de modifier ces Conditions à tout moment. Nous informerons les utilisateurs de toute modification importante en publiant les nouvelles Conditions sur cette page et en mettant à jour la date \"Dernière Mise à Jour\".",
+        "content2": "Votre utilisation continue du Service après toute modification constitue une acceptation des nouvelles Conditions."
+      },
+      "contact": {
+        "title": "Informations de Contact",
+        "intro": "Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter à :",
+        "email": "legal@reelporn.ai"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière Mise à Jour",
+    "sections": {
+      "infoCollect": {
+        "title": "Informations que Nous Collectons",
+        "provideTitle": "Informations que Vous Fournissez",
+        "provide1": "Informations de compte (email, nom d'utilisateur, mot de passe)",
+        "provide2": "Informations de profil (nom d'affichage, bio, préférences)",
+        "provide3": "Informations de paiement (traitées en toute sécurité via des fournisseurs tiers)",
+        "provide4": "Contenu que vous téléchargez (vidéos, photos, commentaires)",
+        "provide5": "Communications avec nous (tickets de support, emails)",
+        "autoTitle": "Informations Collectées Automatiquement",
+        "auto1": "Adresse IP et informations sur l'appareil",
+        "auto2": "Type de navigateur et système d'exploitation",
+        "auto3": "Données d'utilisation (pages visitées, vidéos regardées, interactions)",
+        "auto4": "Cookies et technologies de suivi similaires",
+        "auto5": "Données de localisation (niveau pays/région uniquement)"
+      },
+      "infoUse": {
+        "title": "Comment Nous Utilisons Vos Informations",
+        "intro": "Nous utilisons les informations collectées pour :",
+        "item1": "Fournir et maintenir notre Service",
+        "item2": "Traiter les transactions et envoyer les informations associées",
+        "item3": "Envoyer des informations administratives et des mises à jour",
+        "item4": "Répondre à vos commentaires et questions",
+        "item5": "Personnaliser votre expérience et fournir des recommandations",
+        "item6": "Surveiller et analyser l'utilisation et les tendances",
+        "item7": "Détecter et prévenir la fraude et les abus",
+        "item8": "Respecter les obligations légales"
+      },
+      "infoSharing": {
+        "title": "Partage d'Informations",
+        "intro": "Nous ne vendons pas vos informations personnelles. Nous pouvons partager des informations dans ces circonstances :",
+        "item1": "Fournisseurs de Services : Avec des tiers de confiance qui nous aident à exploiter notre Service",
+        "item2": "Exigences Légales : Lorsque requis par la loi ou pour protéger les droits et la sécurité",
+        "item3": "Transferts Commerciaux : En relation avec une fusion, une vente ou une acquisition",
+        "item4": "Avec Consentement : Lorsque vous acceptez explicitement le partage",
+        "item5": "Données Agrégées : Données statistiques non identifiables pour l'analyse"
+      },
+      "dataSecurity": {
+        "title": "Sécurité des Données",
+        "intro": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos informations personnelles, notamment :",
+        "item1": "Chiffrement SSL/TLS pour la transmission des données",
+        "item2": "Stockage chiffré des informations sensibles",
+        "item3": "Audits de sécurité et mises à jour réguliers",
+        "item4": "Accès limité aux informations personnelles",
+        "item5": "Traitement sécurisé des paiements via des fournisseurs conformes PCI",
+        "outro": "Cependant, aucune méthode de transmission ou de stockage n'est sûre à 100%. Nous ne pouvons pas garantir une sécurité absolue."
+      },
+      "privacyRights": {
+        "title": "Vos Droits en Matière de Confidentialité",
+        "intro": "Selon votre emplacement, vous pouvez avoir certains droits concernant vos informations personnelles :",
+        "item1": "Accès : Demander une copie de vos informations personnelles",
+        "item2": "Correction : Demander la correction d'informations inexactes",
+        "item3": "Suppression : Demander la suppression de votre compte et des données associées",
+        "item4": "Portabilité : Recevoir vos données dans un format portable",
+        "item5": "Opposition : S'opposer à certains traitements de vos informations",
+        "item6": "Restriction : Demander un traitement limité de vos informations",
+        "outro": "Pour exercer ces droits, contactez-nous à privacy@reelporn.ai"
+      },
+      "cookies": {
+        "title": "Cookies et Suivi",
+        "content1": "Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience. Pour des informations détaillées, veuillez consulter notre Politique de Cookies.",
+        "content2": "Vous pouvez contrôler les cookies via les paramètres de votre navigateur et notre centre de préférences de cookies."
+      },
+      "thirdParty": {
+        "title": "Services Tiers",
+        "intro1": "Notre Service peut contenir des liens vers des sites Web et des services tiers. Nous ne sommes pas responsables de leurs pratiques en matière de confidentialité. Nous vous encourageons à consulter leurs politiques de confidentialité.",
+        "intro2": "Les services tiers que nous utilisons incluent :",
+        "item1": "Processeurs de paiement (Stripe, PayPal)",
+        "item2": "Fournisseurs d'analyses (Google Analytics)",
+        "item3": "Réseaux de diffusion de contenu (CloudFlare)",
+        "item4": "Outils de communication (services de messagerie)"
+      },
+      "childrenPrivacy": {
+        "title": "Confidentialité des Enfants",
+        "content": "Notre Service est strictement destiné aux adultes de 18 ans et plus. Nous ne collectons pas sciemment d'informations auprès de personnes de moins de 18 ans. Si nous découvrons que nous avons collecté des informations auprès d'un mineur, nous les supprimerons immédiatement."
+      },
+      "dataRetention": {
+        "title": "Conservation des Données",
+        "intro": "Nous conservons vos informations personnelles aussi longtemps que nécessaire pour :",
+        "item1": "Vous fournir notre Service",
+        "item2": "Respecter les obligations légales",
+        "item3": "Résoudre les litiges et faire respecter les accords",
+        "item4": "Maintenir les dossiers commerciaux",
+        "outro": "Lorsque vous supprimez votre compte, nous supprimerons ou anonymiserons vos informations personnelles, sauf si la conservation est requise par la loi."
+      },
+      "internationalTransfers": {
+        "title": "Transferts Internationaux de Données",
+        "content": "Vos informations peuvent être transférées et traitées dans des pays autres que le vôtre. Ces pays peuvent avoir des lois sur la protection des données différentes. Nous veillons à ce que des garanties appropriées soient en place pour ces transferts."
+      },
+      "californiaRights": {
+        "title": "Droits de Confidentialité en Californie",
+        "intro": "Les résidents de Californie ont des droits supplémentaires en vertu du California Consumer Privacy Act (CCPA) :",
+        "item1": "Droit de savoir quelles informations personnelles sont collectées",
+        "item2": "Droit de savoir si les informations personnelles sont vendues ou divulguées",
+        "item3": "Droit de refuser la vente d'informations personnelles",
+        "item4": "Droit à la non-discrimination pour l'exercice des droits à la vie privée"
+      },
+      "europeanRights": {
+        "title": "Droits Européens en Matière de Confidentialité",
+        "content": "Si vous êtes dans l'Espace Économique Européen (EEE), vous avez des droits supplémentaires en vertu du Règlement Général sur la Protection des Données (RGPD), y compris le droit de déposer une plainte auprès de votre autorité locale de protection des données."
+      },
+      "policyUpdates": {
+        "title": "Mises à Jour de Cette Politique",
+        "content1": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date \"Dernière Mise à Jour\".",
+        "content2": "Pour les changements importants, nous fournirons un avis supplémentaire (comme une notification par email ou un avis visible sur notre Service)."
+      },
+      "contact": {
+        "title": "Informations de Contact",
+        "intro": "Si vous avez des questions sur cette Politique de Confidentialité ou nos pratiques en matière de confidentialité, veuillez nous contacter :",
+        "email": "privacy@reelporn.ai",
+        "dpoTitle": "Délégué à la Protection des Données",
+        "dpo": "Département Juridique ReelPorn",
+        "dpoEmail": "dpo@reelporn.ai"
+      }
+    }
+  },
+  "dmca": {
+    "title": "Avis et Politique de Retrait DMCA",
+    "subtitle": "Conformité au Digital Millennium Copyright Act",
+    "sections": {
+      "notification": {
+        "title": "Notification de Violation du Droit d'Auteur",
+        "content": "ReelPorn respecte les droits de propriété intellectuelle d'autrui et attend de ses utilisateurs qu'ils fassent de même. Conformément au Digital Millennium Copyright Act de 1998 (\"DMCA\"), nous répondrons rapidement aux réclamations de violation du droit d'auteur commises en utilisant le site Web ReelPorn."
+      },
+      "filing": {
+        "title": "Déposer un Avis DMCA",
+        "intro": "Si vous pensez que votre œuvre protégée par le droit d'auteur a été copiée d'une manière qui constitue une violation du droit d'auteur et est accessible sur ce site, vous pouvez en informer notre agent du droit d'auteur, comme indiqué dans le DMCA. Pour que votre plainte soit valide en vertu du DMCA, vous devez fournir les informations suivantes par écrit :",
+        "item1": "Une signature électronique ou physique d'une personne autorisée à agir au nom du titulaire du droit d'auteur",
+        "item2": "Identification de l'œuvre protégée par le droit d'auteur dont vous prétendez qu'elle a été violée",
+        "item3": "Identification du matériel qui est prétendu porter atteinte et où il se trouve sur le site",
+        "item4": "Des informations raisonnablement suffisantes pour nous permettre de vous contacter, telles que votre adresse, numéro de téléphone et adresse email",
+        "item5": "Une déclaration selon laquelle vous croyez de bonne foi que l'utilisation du matériel de la manière dont vous vous plaignez n'est pas autorisée par le titulaire du droit d'auteur, son agent ou la loi",
+        "item6": "Une déclaration, faite sous peine de parjure, que les informations ci-dessus sont exactes et que vous êtes le titulaire du droit d'auteur ou êtes autorisé à agir au nom du propriétaire"
+      },
+      "agent": {
+        "title": "Agent du Droit d'Auteur Désigné",
+        "intro": "Veuillez envoyer tous les avis DMCA à notre agent désigné :",
+        "email": "dmca@reelporn.ai",
+        "name": "Agent DMCA",
+        "department": "Département Juridique ReelPorn"
+      },
+      "counter": {
+        "title": "Contre-Notification",
+        "intro": "Si vous pensez que votre contenu a été supprimé ou que l'accès à celui-ci a été désactivé par erreur ou par erreur d'identification, vous pouvez déposer une contre-notification auprès de nous. Pour être efficace, une contre-notification doit être une communication écrite qui comprend les éléments suivants :",
+        "item1": "Votre signature physique ou électronique",
+        "item2": "Identification du matériel qui a été supprimé ou auquel l'accès a été désactivé et l'emplacement où le matériel est apparu avant qu'il ne soit supprimé ou que l'accès ne soit désactivé",
+        "item3": "Une déclaration sous peine de parjure que vous croyez de bonne foi que le matériel a été supprimé ou désactivé à la suite d'une erreur ou d'une mauvaise identification",
+        "item4": "Vos nom, adresse, numéro de téléphone et adresse email",
+        "item5": "Une déclaration selon laquelle vous consentez à la juridiction du tribunal de district fédéral pour le district judiciaire dans lequel se trouve votre adresse"
+      },
+      "repeat": {
+        "title": "Contrevenants Répétés",
+        "content": "Conformément au DMCA et à d'autres lois applicables, nous avons adopté une politique de résiliation, dans des circonstances appropriées, des utilisateurs qui sont considérés comme des contrevenants répétés. Nous pouvons également, à notre seule discrétion, limiter l'accès au site et/ou résilier les comptes de tous les utilisateurs qui violent les droits de propriété intellectuelle d'autrui."
+      },
+      "notice": {
+        "title": "Avis Important",
+        "content": "Veuillez noter : En vertu de l'article 512(f) du DMCA, toute personne qui déclare sciemment de manière substantielle qu'un matériel ou une activité enfreint les droits peut être tenue responsable des dommages, y compris les frais et les honoraires d'avocat. Veuillez consulter votre conseiller juridique avant de déposer un avis ou une contre-notification."
+      },
+      "lastUpdated": "Dernière Mise à Jour"
+    }
+  },
+  "section2257": {
+    "title": "Avis de Conformité 18 U.S.C. 2257",
+    "subtitle": "Déclaration de Conformité aux Exigences de Tenue de Registres",
+    "sections": {
+      "compliance": {
+        "title": "Déclaration de Conformité",
+        "content1": "Toutes les représentations visuelles affichées sur ce site Web, qu'il s'agisse de conduite sexuellement explicite réelle, de contenu sexuel simulé ou autre, sont des représentations visuelles de personnes qui avaient au moins 18 ans lorsque ces représentations visuelles ont été créées.",
+        "content2": "Toutes les autres représentations visuelles affichées sur ce site Web sont exemptées de la disposition de 18 U.S.C. section 2257 et 28 C.F.R. 75 parce que lesdites représentations visuelles ne consistent pas en des représentations de conduite telles que spécifiquement énumérées dans 18 U.S.C section 2256 (2) (A) à (D), mais sont simplement des représentations de nudité non sexuellement explicite, ou sont des représentations de conduite sexuelle simulée, ou sont autrement exemptées parce que les représentations visuelles ont été créées avant le 3 juillet 1995."
+      },
+      "custodian": {
+        "title": "Dépositaire des Registres",
+        "intro": "Les propriétaires et exploitants de ReelPorn.ai s'engagent à respecter la loi fédérale américaine 18 U.S.C. 2257 et tous les règlements associés.",
+        "custodianTitle": "Le Dépositaire des Registres pour ReelPorn.ai est :",
+        "name": "Conformité Juridique ReelPorn",
+        "role": "Dépositaire des Registres",
+        "department": "Département de Conformité"
+      },
+      "producers": {
+        "title": "Producteurs de Contenu",
+        "intro": "En ce qui concerne toutes les représentations visuelles affichées sur ce site Web, qu'il s'agisse de conduite sexuellement explicite réelle, de contenu sexuel simulé ou autre, tout le contenu a été fourni par des producteurs tiers, des webmasters ou des utilisateurs du site Web qui ont garanti que :",
+        "item1": "Ils sont le dépositaire des registres pour tout le contenu fourni",
+        "item2": "Tous les modèles, acteurs, actrices et autres personnes apparaissant dans toute représentation visuelle avaient plus de dix-huit ans au moment de la création de ces représentations",
+        "item3": "Ils conservent les dossiers requis conformément à la loi américaine 18 U.S.C. 2257",
+        "item4": "Tout le contenu et les activités représentés sont consensuels"
+      },
+      "original": {
+        "title": "Producteurs Originaux",
+        "intro1": "Les producteurs originaux du contenu visuel contenu sur ce site Web sont diverses entités tierces. Chaque producteur conserve des dossiers conformément aux exigences énoncées dans 18 U.S.C. 2257 et ses règlements.",
+        "intro2": "Pour les dossiers relatifs à un contenu spécifique, les entités suivantes servent de dépositaire des dossiers pour leurs productions respectives :",
+        "item1": "Contenu téléchargé par les utilisateurs : Les téléchargeurs individuels sont responsables de la tenue de leurs propres dossiers 2257",
+        "item2": "Contenu sous licence : Le producteur original conserve la garde des dossiers",
+        "item3": "Contenu partenaire : Les studios partenaires conservent leurs dossiers respectifs"
+      },
+      "exemptions": {
+        "title": "Exemptions",
+        "intro": "Certains contenus affichés sur ce site Web sont exemptés des exigences de tenue de registres de 18 U.S.C. 2257, notamment :",
+        "item1": "Représentations visuelles de nudité non sexuellement explicite uniquement",
+        "item2": "Représentations visuelles créées avant le 3 juillet 1995",
+        "item3": "Représentations visuelles qui ne représentent pas de conduite telle que décrite dans 18 U.S.C. 2256(2)(A)",
+        "item4": "Contenu qui ne contient que de la conduite sexuelle simulée où aucune conduite sexuelle réelle ne s'est produite"
+      },
+      "legal": {
+        "title": "Informations Juridiques",
+        "content1": "Important : ReelPorn.ai fonctionne comme une plateforme et ne produit pas de contenu original. Tout le contenu est fourni par des producteurs tiers qui ont déclaré et garanti leur conformité à toutes les lois applicables, y compris 18 U.S.C. 2257.",
+        "content2": "Toute personne qui télécharge, soumet ou fournit autrement du contenu à ReelPorn.ai déclare et garantit qu'elle s'est conformée aux exigences de tenue de registres de 18 U.S.C. 2257 concernant ce contenu."
+      },
+      "contact": {
+        "title": "Informations de Contact",
+        "intro": "Pour toute demande concernant la conformité 2257 ou pour demander l'accès aux dossiers, veuillez contacter :",
+        "email": "legal@reelporn.ai"
+      },
+      "lastUpdated": "Dernière Mise à Jour"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Politique de Cookies",
+    "subtitle": "Comment nous utilisons les cookies et technologies similaires",
+    "lastUpdated": "Dernière Mise à Jour",
+    "sections": {
+      "whatAre": {
+        "title": "Que sont les Cookies ?",
+        "content1": "Les cookies sont de petits fichiers texte qui sont placés sur votre appareil lorsque vous visitez notre site Web. Ils nous aident à vous offrir une meilleure expérience en mémorisant vos préférences, en analysant le trafic du site et en personnalisant le contenu.",
+        "content2": "Nous utilisons également des technologies similaires telles que les pixels, le stockage local et l'empreinte digitale des appareils pour améliorer votre expérience de navigation et améliorer nos services."
+      },
+      "howWeUse": {
+        "title": "Comment Nous Utilisons les Cookies",
+        "intro": "Nous utilisons les cookies et technologies similaires aux fins suivantes :",
+        "essential": {
+          "title": "Opérations Essentielles",
+          "description": "Pour fournir des fonctionnalités de base telles que l'authentification des utilisateurs, la sécurité et l'intégrité du site"
+        },
+        "preferences": {
+          "title": "Préférences & Paramètres",
+          "description": "Pour mémoriser vos choix tels que les préférences linguistiques, la qualité de lecture et les paramètres d'affichage"
+        },
+        "analytics": {
+          "title": "Analyse & Performance",
+          "description": "Pour comprendre comment les utilisateurs interagissent avec notre site et améliorer nos services"
+        },
+        "marketing": {
+          "title": "Marketing & Publicité",
+          "description": "Pour diffuser des publicités pertinentes et mesurer leur efficacité"
+        }
+      },
+      "types": {
+        "title": "Types de Cookies que Nous Utilisons",
+        "essential": {
+          "title": "Cookies Essentiels",
+          "description": "Ces cookies sont nécessaires au bon fonctionnement du site Web. Ils permettent des fonctions de base telles que la navigation entre les pages, l'accès aux zones sécurisées et la vérification de l'âge.",
+          "items": ["Gestion de session", "Statut de vérification d'âge", "Jetons de sécurité", "Équilibrage de charge"]
+        },
+        "functional": {
+          "title": "Cookies Fonctionnels",
+          "description": "Ces cookies permettent des fonctionnalités améliorées et la personnalisation. Ils peuvent être définis par nous ou par des fournisseurs tiers dont nous utilisons les services.",
+          "items": ["Préférences linguistiques", "Paramètres du lecteur vidéo", "Contenu récemment consulté", "Personnalisation de l'interface utilisateur"]
+        },
+        "analyticsType": {
+          "title": "Cookies Analytiques",
+          "description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site Web en collectant et en rapportant des informations de manière anonyme.",
+          "items": ["Google Analytics", "Suivi des pages vues", "Analyse du comportement des utilisateurs", "Surveillance des performances"]
+        },
+        "advertising": {
+          "title": "Cookies Publicitaires",
+          "description": "Ces cookies sont utilisés pour diffuser des publicités pertinentes pour vous et vos intérêts. Ils aident également à limiter le nombre de fois que vous voyez une publicité.",
+          "items": ["Publicité ciblée", "Limitation de la fréquence des annonces", "Mesure des performances des campagnes", "Publicité basée sur les intérêts"]
+        }
+      },
+      "thirdParty": {
+        "title": "Cookies Tiers",
+        "intro1": "Certains cookies sont placés par des services tiers qui apparaissent sur nos pages. Nous ne contrôlons pas ces cookies et vous encourageons à consulter les sites Web tiers pour plus d'informations sur la façon dont ils utilisent les cookies.",
+        "intro2": "Les services tiers que nous utilisons incluent :",
+        "items": [
+          "Google Analytics - pour l'analyse du site Web",
+          "CloudFlare - pour la sécurité et les performances",
+          "Processeurs de paiement - pour des transactions sécurisées",
+          "Plateformes de médias sociaux - pour le partage de contenu"
+        ]
+      },
+      "managing": {
+        "title": "Gestion de Vos Préférences de Cookies",
+        "intro": "Vous avez le contrôle sur les cookies que nous utilisons. Vous pouvez gérer vos préférences à tout moment :",
+        "buttonText": "Gérer les Paramètres de Cookies",
+        "buttonDescription": "Cliquez sur le bouton ci-dessus pour examiner et mettre à jour vos préférences de cookies.",
+        "browserIntro": "Vous pouvez également contrôler les cookies via les paramètres de votre navigateur :",
+        "browsers": {
+          "chrome": "Chrome : Paramètres → Confidentialité et sécurité → Cookies et autres données de site",
+          "firefox": "Firefox : Paramètres → Vie privée et sécurité → Cookies et données de site",
+          "safari": "Safari : Préférences → Confidentialité → Gérer les données du site Web",
+          "edge": "Edge : Paramètres → Confidentialité, recherche et services → Cookies et autorisations de site"
+        }
+      },
+      "duration": {
+        "title": "Durée des Cookies",
+        "intro": "Les cookies peuvent être des cookies de session ou des cookies persistants :",
+        "session": {
+          "title": "Cookies de Session",
+          "description": "Ce sont des cookies temporaires qui expirent lorsque vous fermez votre navigateur. Nous les utilisons pour la sécurité et les fonctions essentielles du site."
+        },
+        "persistent": {
+          "title": "Cookies Persistants",
+          "description": "Ces cookies restent sur votre appareil pendant une période définie ou jusqu'à ce que vous les supprimiez. Nous les utilisons pour mémoriser vos préférences et fournir des fonctionnalités personnalisées."
+        }
+      },
+      "updates": {
+        "title": "Mises à Jour de Cette Politique",
+        "content": "Nous pouvons mettre à jour cette Politique de Cookies de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, juridiques ou réglementaires. Nous vous informerons de tout changement significatif en publiant la nouvelle politique sur cette page avec une date de révision mise à jour."
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "intro": "Si vous avez des questions sur notre utilisation des cookies ou cette politique, veuillez nous contacter :",
+        "email": "privacy@reelporn.ai"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Redéfinir le Divertissement pour Adultes",
+      "subtitle": "ReelPorn révolutionne la façon dont les adultes découvrent et apprécient le contenu intime grâce à des vidéos courtes innovantes et à une technologie de pointe.",
+      "getStarted": "Commencer",
+      "meetCreators": "Rencontrer Nos Créateurs"
+    },
+    "stats": {
+      "users": {
+        "number": "10M+",
+        "label": "Utilisateurs Actifs"
+      },
+      "videos": {
+        "number": "500K+",
+        "label": "Vidéos"
+      },
+      "creators": {
+        "number": "50K+",
+        "label": "Créateurs"
+      },
+      "countries": {
+        "number": "150+",
+        "label": "Pays"
+      }
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "paragraph1": "Nous croyons que le divertissement pour adultes doit être sûr, consensuel et accessible. ReelPorn combine la nature addictive du contenu court avec l'intimité du divertissement pour adultes, créant une plateforme unique où les spectateurs peuvent découvrir de nouvelles expériences et où les créateurs peuvent prospérer.",
+      "paragraph2": "Notre moteur de recommandation alimenté par l'IA apprend vos préférences pour fournir du contenu personnalisé tout en maintenant une confidentialité totale. Chaque vidéo est vérifiée, chaque créateur est authentifié et chaque interaction est sécurisée.",
+      "imageCaption": "L'Innovation en Mouvement"
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "privacyFirst": {
+        "title": "Confidentialité d'Abord",
+        "description": "Votre confidentialité est notre priorité absolue. Nous utilisons un chiffrement avancé et ne partageons jamais vos données."
+      },
+      "verifiedContent": {
+        "title": "Contenu Vérifié",
+        "description": "Tout le contenu provient d'adultes vérifiés. Nous respectons toutes les exigences légales, y compris le 2257."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Pionnier de l'avenir du divertissement pour adultes avec une technologie et des fonctionnalités de pointe."
+      },
+      "creatorSupport": {
+        "title": "Soutien aux Créateurs",
+        "description": "Autonomiser les créateurs avec un partage équitable des revenus et des outils puissants pour développer leur audience."
+      }
+    },
+    "technology": {
+      "title": "Propulsé par la Technologie",
+      "aiRecommendations": {
+        "title": "Recommandations IA",
+        "description": "Des algorithmes d'apprentissage automatique avancés personnalisent votre fil en temps réel."
+      },
+      "encryption": {
+        "title": "Chiffrement de Bout en Bout",
+        "description": "Un chiffrement de niveau militaire protège vos données et votre historique de visionnage."
+      },
+      "cdn": {
+        "title": "CDN Mondial",
+        "description": "Streaming ultra-rapide depuis des serveurs du monde entier pour un visionnage sans mise en mémoire tampon."
+      },
+      "crossPlatform": {
+        "title": "Multi-Plateforme",
+        "description": "Expérience fluide sur tous les appareils - ordinateur de bureau, mobile et tablette."
+      }
+    },
+    "team": {
+      "title": "Équipe Dirigeante",
+      "ceo": {
+        "role": "PDG & Fondateur",
+        "bio": "Leader visionnaire avec plus de 15 ans d'expérience dans la technologie et le divertissement"
+      },
+      "cto": {
+        "role": "Directeur Technique",
+        "bio": "Expert en IA/ML et infrastructure de streaming vidéo évolutive"
+      },
+      "headSafety": {
+        "role": "Responsable de la Sécurité",
+        "bio": "Dévoué à la sécurité de la plateforme et à la conformité légale"
+      },
+      "headCreators": {
+        "role": "Responsable des Créateurs",
+        "bio": "Soutenir et développer notre formidable communauté de créateurs"
+      }
+    },
+    "becomeCreator": {
+      "title": "Devenir Créateur",
+      "description": "Rejoignez des milliers de créateurs qui gagnent sur ReelPorn. Nous offrons le partage des revenus le plus élevé de l'industrie, des analyses puissantes et une communauté solidaire.",
+      "revenueShare": "80% de Partage des Revenus",
+      "growthTools": "Outils de Croissance",
+      "support": "Support 24/7",
+      "applyButton": "Postuler pour Devenir Créateur"
+    },
+    "contact": {
+      "title": "Nous Contacter",
+      "general": {
+        "title": "Demandes Générales",
+        "email": "info@reelporn.ai"
+      },
+      "support": {
+        "title": "Support",
+        "email": "support@reelporn.ai"
+      },
+      "business": {
+        "title": "Affaires",
+        "email": "business@reelporn.ai"
+      }
+    }
+  },
+  "payment": {
+    "cryptoPayment": "Paiement Crypto",
+    "cryptoPaymentDescription": "Paiement sécurisé et anonyme avec cryptomonnaie",
+    "quickTransaction": "Transaction Rapide",
+    "selectPlan": "Sélectionnez Votre Plan",
+    "selectCryptocurrency": "Sélectionnez la Cryptomonnaie",
+    "plan": "Plan",
+    "currency": "Devise",
+    "total": "Total",
+    "month": "mois",
+    "proceedToPayment": "Procéder au Paiement",
+    "processing": "Traitement...",
+    "loading": "Chargement...",
+    "continue": "Continuer",
+    "sendExactly": "Envoyer Exactement",
+    "sendExactAmount": "Envoyer Ce Montant Exact",
+    "toAddress": "À l'Adresse",
+    "toThisAddress": "À Cette Adresse",
+    "network": "Réseau",
+    "confirmations": "Confirmations",
+    "confirmationProgress": "Progression de la Confirmation",
+    "expiresAt": "Expire à {time}",
+    "paymentExpiresAt": "Le paiement expire à {time}",
+    "viewOnBlockchain": "Voir sur la Blockchain",
+    "scanQRCode": "Scannez le code QR avec votre portefeuille crypto",
+    "copyAddress": "Copier l'Adresse",
+    "copy": "Copier",
+    "copied": "Copié!",
+    "cancelPayment": "Annuler le Paiement",
+    "awaitingPayment": "En Attente de Paiement",
+    "paymentCompleted": "Paiement Terminé!",
+    "paymentFailed": "Paiement Échoué",
+    "paymentCancelled": "Paiement Annulé",
+    "failedToLoadData": "Impossible de charger les données de paiement",
+    "failedToInitiatePayment": "Impossible d'initier le paiement",
+    "failedToCancelPayment": "Impossible d'annuler le paiement",
+    "unavailable": "Indisponible",
+    "status": {
+      "pending": "En Attente",
+      "awaiting_confirmation": "En Attente de Confirmation",
+      "confirming": "En Cours de Confirmation",
+      "completed": "Terminé",
+      "failed": "Échoué",
+      "expired": "Expiré",
+      "cancelled": "Annulé"
+    }
   }
 }

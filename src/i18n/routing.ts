@@ -80,6 +80,12 @@ export const routing = defineRouting({
       de: '/uber-uns',
       fr: '/a-propos'
     },
+    '/payment/crypto': {
+      en: '/payment/crypto',
+      nl: '/betaling/crypto',
+      de: '/zahlung/krypto',
+      fr: '/paiement/crypto'
+    },
     '/error-codes/[code]': '/error-codes/[code]',
   }
 });

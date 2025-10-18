@@ -7,6 +7,7 @@ import ProtectedRoute from '@/lib/components/ProtectedRoute';
 
 import AccountService from '@/lib/services/AccountService';
 import AuthService from '@/lib/services/AuthService';
+import TwoFactorService from '@/lib/services/TwoFactorService';
 import {
     ValidationException,
     ApiException,
@@ -46,6 +47,18 @@ function AccountPageContent() {
     const [isChangingPassword, setIsChangingPassword] = useState(false);
     const [passwordError, setPasswordError] = useState('');
     const [passwordSuccess, setPasswordSuccess] = useState('');
+
+    // Two-factor authentication state
+    const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
+    const [isEnabling2FA, setIsEnabling2FA] = useState(false);
+    const [qrCode, setQrCode] = useState('');
+    const [secretKey, setSecretKey] = useState('');
+    const [confirmationCode, setConfirmationCode] = useState('');
+    const [isConfirming2FA, setIsConfirming2FA] = useState(false);
+    const [recoveryCodes, setRecoveryCodes] = useState<string[]>([]);
+    const [showRecoveryCodes, setShowRecoveryCodes] = useState(false);
+    const [twoFactorError, setTwoFactorError] = useState('');
+    const [twoFactorSuccess, setTwoFactorSuccess] = useState('');
 
     // Load profile on mount
     useEffect(() => {
@@ -144,6 +157,127 @@ function AccountPageContent() {
             }
         } finally {
             setIsChangingPassword(false);
+        }
+    };
+
+    const handleEnable2FA = async () => {
+        setTwoFactorError('');
+        setTwoFactorSuccess('');
+        setIsEnabling2FA(true);
+
+        try {
+            await TwoFactorService.enableTwoFactor();
+
+            // Get QR code and secret key
+            const [qr, secret] = await Promise.all([
+                TwoFactorService.getQRCode(),
+                TwoFactorService.getSecretKey(),
+            ]);
+
+            setQrCode(qr);
+            setSecretKey(secret);
+        } catch (err) {
+            if (err instanceof NetworkException) {
+                setTwoFactorError(t('account.error.network'));
+            } else {
+                setTwoFactorError(t('account.error.generic'));
+            }
+        } finally {
+            setIsEnabling2FA(false);
+        }
+    };
+
+    const handleConfirm2FA = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setTwoFactorError('');
+        setTwoFactorSuccess('');
+        setIsConfirming2FA(true);
+
+        try {
+            await TwoFactorService.confirmTwoFactor(confirmationCode);
+
+            // Get recovery codes
+            const codes = await TwoFactorService.getRecoveryCodes();
+            setRecoveryCodes(codes);
+            setShowRecoveryCodes(true);
+            setTwoFactorEnabled(true);
+            setTwoFactorSuccess(t('account.twoFactor.enableSuccess'));
+
+            // Clear the setup state
+            setQrCode('');
+            setSecretKey('');
+            setConfirmationCode('');
+        } catch (err) {
+            if (err instanceof ValidationException) {
+                setTwoFactorError(err.errors.code?.[0] || t('account.error.validationFailed'));
+            } else if (err instanceof NetworkException) {
+                setTwoFactorError(t('account.error.network'));
+            } else {
+                setTwoFactorError(t('account.error.generic'));
+            }
+        } finally {
+            setIsConfirming2FA(false);
+        }
+    };
+
+    const handleDisable2FA = async () => {
+        if (!window.confirm(t('account.twoFactor.disableConfirm'))) {
+            return;
+        }
+
+        setTwoFactorError('');
+        setTwoFactorSuccess('');
+
+        try {
+            await TwoFactorService.disableTwoFactor();
+            setTwoFactorEnabled(false);
+            setRecoveryCodes([]);
+            setShowRecoveryCodes(false);
+            setTwoFactorSuccess(t('account.twoFactor.disableSuccess'));
+        } catch (err) {
+            if (err instanceof NetworkException) {
+                setTwoFactorError(t('account.error.network'));
+            } else {
+                setTwoFactorError(t('account.error.generic'));
+            }
+        }
+    };
+
+    const handleShowRecoveryCodes = async () => {
+        setTwoFactorError('');
+
+        try {
+            const codes = await TwoFactorService.getRecoveryCodes();
+            setRecoveryCodes(codes);
+            setShowRecoveryCodes(true);
+        } catch (err) {
+            if (err instanceof NetworkException) {
+                setTwoFactorError(t('account.error.network'));
+            } else {
+                setTwoFactorError(t('account.error.generic'));
+            }
+        }
+    };
+
+    const handleRegenerateRecoveryCodes = async () => {
+        if (!window.confirm(t('account.twoFactor.regenerateConfirm'))) {
+            return;
+        }
+
+        setTwoFactorError('');
+        setTwoFactorSuccess('');
+
+        try {
+            const codes = await TwoFactorService.regenerateRecoveryCodes();
+            setRecoveryCodes(codes);
+            setShowRecoveryCodes(true);
+            setTwoFactorSuccess(t('account.twoFactor.regenerateSuccess'));
+        } catch (err) {
+            if (err instanceof NetworkException) {
+                setTwoFactorError(t('account.error.network'));
+            } else {
+                setTwoFactorError(t('account.error.generic'));
+            }
         }
     };
 
@@ -345,6 +479,157 @@ function AccountPageContent() {
                                     }
                                 </button>
                             </form>
+                        </div>
+
+                        {/* Two-Factor Authentication Card */}
+                        <div className="mb-4 p-4 rounded-[15px]" style={{ background: '#3a3646' }}>
+                            <h2 className="text-white mb-4 text-2xl">
+                                {t('account.twoFactor.title')}
+                            </h2>
+
+                            {twoFactorSuccess && (
+                                <div className="bg-green-500/10 border border-green-500 text-green-500 px-4 py-3 rounded mb-3" role="alert">
+                                    {twoFactorSuccess}
+                                </div>
+                            )}
+
+                            {twoFactorError && (
+                                <div className="bg-red-500/10 border border-red-500 text-red-500 px-4 py-3 rounded mb-3" role="alert">
+                                    {twoFactorError}
+                                </div>
+                            )}
+
+                            {!twoFactorEnabled && !qrCode && (
+                                <div>
+                                    <p className="text-white/50 mb-4">
+                                        {t('account.twoFactor.description')}
+                                    </p>
+                                    <button
+                                        onClick={handleEnable2FA}
+                                        disabled={isEnabling2FA}
+                                        className="px-6 py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                        style={{ background: '#c2338a' }}
+                                    >
+                                        {isEnabling2FA
+                                            ? t('account.twoFactor.enabling')
+                                            : t('account.twoFactor.enable')
+                                        }
+                                    </button>
+                                </div>
+                            )}
+
+                            {qrCode && (
+                                <div>
+                                    <p className="text-white mb-3">
+                                        {t('account.twoFactor.scanQR')}
+                                    </p>
+                                    <div
+                                        className="bg-white p-4 rounded inline-block mb-4"
+                                        dangerouslySetInnerHTML={{ __html: qrCode }}
+                                    />
+                                    <div className="mb-4">
+                                        <label className="text-white mb-2 block">
+                                            {t('account.twoFactor.secretKey')}
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="w-full px-3 py-3 rounded text-white border border-gray-600"
+                                            style={{ backgroundColor: '#2b2838' }}
+                                            value={secretKey}
+                                            readOnly
+                                        />
+                                    </div>
+                                    <form onSubmit={handleConfirm2FA}>
+                                        <div className="mb-3">
+                                            <label className="text-white mb-2 block">
+                                                {t('account.twoFactor.confirmCode')}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="w-full px-3 py-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-pink-500"
+                                                value={confirmationCode}
+                                                onChange={(e) => setConfirmationCode(e.target.value)}
+                                                required
+                                                maxLength={6}
+                                                pattern="[0-9]{6}"
+                                                disabled={isConfirming2FA}
+                                                placeholder="123456"
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                            disabled={isConfirming2FA}
+                                            style={{ background: '#c2338a' }}
+                                        >
+                                            {isConfirming2FA
+                                                ? t('account.twoFactor.confirming')
+                                                : t('account.twoFactor.confirm')
+                                            }
+                                        </button>
+                                    </form>
+                                </div>
+                            )}
+
+                            {twoFactorEnabled && (
+                                <div>
+                                    <div className="mb-4">
+                                        <span className="inline-block px-3 py-1 bg-green-600 text-white rounded">
+                                            {t('account.twoFactor.enabled')}
+                                        </span>
+                                    </div>
+
+                                    {showRecoveryCodes && recoveryCodes.length > 0 && (
+                                        <div className="mb-4 p-4 rounded bg-gray-700/50">
+                                            <h3 className="text-white mb-2 font-bold">
+                                                {t('account.twoFactor.recoveryCodes')}
+                                            </h3>
+                                            <p className="text-white/50 mb-3 text-sm">
+                                                {t('account.twoFactor.recoveryCodesDescription')}
+                                            </p>
+                                            <div className="grid grid-cols-2 gap-2 mb-3">
+                                                {recoveryCodes.map((code, index) => (
+                                                    <div
+                                                        key={index}
+                                                        className="px-3 py-2 bg-gray-800 text-white rounded font-mono text-sm"
+                                                    >
+                                                        {code}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <button
+                                                onClick={() => setShowRecoveryCodes(false)}
+                                                className="text-white/50 hover:text-white text-sm"
+                                            >
+                                                {t('account.twoFactor.hideRecoveryCodes')}
+                                            </button>
+                                        </div>
+                                    )}
+
+                                    <div className="flex flex-wrap gap-3">
+                                        {!showRecoveryCodes && (
+                                            <button
+                                                onClick={handleShowRecoveryCodes}
+                                                className="px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors"
+                                            >
+                                                {t('account.twoFactor.showRecoveryCodes')}
+                                            </button>
+                                        )}
+                                        <button
+                                            onClick={handleRegenerateRecoveryCodes}
+                                            className="px-6 py-3 border-2 border-yellow-600 text-yellow-600 rounded hover:bg-yellow-600 hover:text-white transition-colors"
+                                        >
+                                            {t('account.twoFactor.regenerateRecoveryCodes')}
+                                        </button>
+                                        <button
+                                            onClick={handleDisable2FA}
+                                            className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors"
+                                        >
+                                            {t('account.twoFactor.disable')}
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* Logout Card */}

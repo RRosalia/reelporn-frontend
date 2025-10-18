@@ -43,30 +43,6 @@ function Footer() {
             <div className="footer-gradient"></div>
             <div className="container mx-auto px-4 py-12 relative">
                 <div className="flex flex-wrap -mx-2">
-                    {/* Brand Section */}
-                    <div className="w-full px-2 mb-8">
-                        <div className="footer-brand mb-3">
-                            <h3 className="brand-logo">ReelPorn</h3>
-                        </div>
-                        <p className="footer-description max-w-md">
-                            {t('footer.description')}
-                        </p>
-                        <div className="social-links mt-4">
-                            <a href="#" className="social-icon" aria-label="Twitter">
-                                <i className="bi bi-twitter"></i>
-                            </a>
-                            <a href="#" className="social-icon" aria-label="Instagram">
-                                <i className="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" className="social-icon" aria-label="Discord">
-                                <i className="bi bi-discord"></i>
-                            </a>
-                            <a href="#" className="social-icon" aria-label="Telegram">
-                                <i className="bi bi-telegram"></i>
-                            </a>
-                        </div>
-                    </div>
-
                     {/* Quick Links */}
                     <div className="w-1/2 md:w-1/4 lg:w-1/4 px-2">
                         <h5 className="footer-heading">{t('footer.quickLinks')}</h5>
@@ -164,6 +140,30 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
+
+                    {/* Brand Section */}
+                    <div className="w-full px-2 mt-8 mb-8">
+                        <div className="footer-brand mb-3">
+                            <h3 className="brand-logo">ReelPorn</h3>
+                        </div>
+                        <p className="footer-description max-w-md">
+                            {t('footer.description')}
+                        </p>
+                        <div className="social-links mt-4">
+                            <a href="#" className="social-icon" aria-label="Twitter">
+                                <i className="bi bi-twitter"></i>
+                            </a>
+                            <a href="#" className="social-icon" aria-label="Instagram">
+                                <i className="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" className="social-icon" aria-label="Discord">
+                                <i className="bi bi-discord"></i>
+                            </a>
+                            <a href="#" className="social-icon" aria-label="Telegram">
+                                <i className="bi bi-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Bottom Bar */}
@@ -183,15 +183,15 @@ function Footer() {
                                     <i className="bi bi-gear mr-2"></i>
                                     {t('footer.cookieSettings')}
                                 </button>
-                                <div className="language-selector">
-                                    <i className="bi bi-globe2 mr-2"></i>
+                                <div className="inline-flex items-center gap-2">
+                                    <i className="bi bi-globe2 text-[#f8c537] text-lg"></i>
                                     <select
                                         value={locale}
                                         onChange={(e) => handleLanguageChange(e.target.value)}
-                                        className="language-dropdown"
+                                        className="bg-[rgba(43,40,56,0.8)] text-white border border-[rgba(248,197,55,0.3)] rounded-lg px-4 py-2 text-sm cursor-pointer outline-none transition-all duration-300 hover:border-[#f8c537] hover:bg-[rgba(43,40,56,1)]"
                                     >
                                         {languages.map((lang) => (
-                                            <option key={lang.code} value={lang.code}>
+                                            <option key={lang.code} value={lang.code} className="bg-[#2b2838] text-white p-2">
                                                 {lang.flag} {lang.name}
                                             </option>
                                         ))}

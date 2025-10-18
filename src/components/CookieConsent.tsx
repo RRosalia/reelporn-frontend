@@ -80,6 +80,8 @@ function CookieConsent() {
         };
         if (typeof window !== 'undefined') {
             localStorage.setItem('cookieConsent', JSON.stringify(allAccepted));
+            // Dispatch event for GTM to update consent
+            window.dispatchEvent(new CustomEvent('cookieConsentUpdated'));
         }
         setCookiePreferences(allAccepted);
         setShowBanner(false);
@@ -89,6 +91,8 @@ function CookieConsent() {
     const handleSavePreferences = () => {
         if (typeof window !== 'undefined') {
             localStorage.setItem('cookieConsent', JSON.stringify(cookiePreferences));
+            // Dispatch event for GTM to update consent
+            window.dispatchEvent(new CustomEvent('cookieConsentUpdated'));
         }
         setShowBanner(false);
         setShowPreferences(false);

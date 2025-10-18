@@ -1,0 +1,641 @@
+.crypto-payment-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+  padding: 40px 20px;
+}
+
+.crypto-payment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.payment-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.payment-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-banner {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid #dc3545;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  color: #ff6b6b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.error-banner i {
+  font-size: 24px;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #c2338a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+/* Plans Section */
+.plans-section {
+  margin-bottom: 48px;
+}
+
+.plans-section h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 28px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.plan-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(194, 51, 138, 0.5);
+  transform: translateY(-4px);
+}
+
+.plan-card.selected {
+  background: rgba(194, 51, 138, 0.15);
+  border-color: #c2338a;
+  box-shadow: 0 8px 32px rgba(194, 51, 138, 0.3);
+}
+
+.plan-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.plan-header h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  color: #f8c537;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.plan-price .period {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.plan-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-features li i {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+/* Currency Section */
+.currency-section {
+  margin-bottom: 48px;
+}
+
+.currency-section h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.currency-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.currency-card:hover:not(:has(.disabled-overlay)) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(194, 51, 138, 0.5);
+  transform: translateY(-4px);
+}
+
+.currency-card.selected {
+  background: rgba(194, 51, 138, 0.15);
+  border-color: #c2338a;
+  box-shadow: 0 8px 32px rgba(194, 51, 138, 0.3);
+}
+
+.currency-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.currency-symbol {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f8c537;
+}
+
+.currency-info h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.currency-code {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.currency-amount {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crypto-value {
+  color: #f8c537;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.usd-price {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.network-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(194, 51, 138, 0.3);
+  color: #c2338a;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.disabled-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Payment Summary */
+.payment-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-content {
+  margin-bottom: 24px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row.total {
+  padding-top: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.summary-row strong {
+  color: #f8c537;
+}
+
+.proceed-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.proceed-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(194, 51, 138, 0.4);
+}
+
+.proceed-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Payment Details Section */
+.payment-details-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-indicator i {
+  font-size: 24px;
+}
+
+.status-pending,
+.status-awaiting_confirmation {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 2px solid #ffc107;
+}
+
+.status-confirming {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 2px solid #2196f3;
+}
+
+.status-completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.status-failed,
+.status-expired {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 2px solid #dc3545;
+}
+
+.payment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.qr-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.qr-container {
+  text-align: center;
+}
+
+.qr-image {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.qr-instruction {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.detail-card label {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.value-display {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.crypto-highlight {
+  color: #f8c537;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.value-subtext {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.address-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.address-value {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  word-break: break-all;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copy-button {
+  background: rgba(194, 51, 138, 0.3);
+  border: 1px solid #c2338a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.copy-button:hover {
+  background: rgba(194, 51, 138, 0.5);
+}
+
+.network-badge-large {
+  display: inline-block;
+  background: rgba(194, 51, 138, 0.2);
+  border: 1px solid #c2338a;
+  color: #c2338a;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.confirmation-tracker {
+  margin-top: 8px;
+}
+
+.confirmation-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.confirmation-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #c2338a 0%, #f8c537 100%);
+  transition: width 0.5s ease;
+  border-radius: 5px;
+}
+
+.confirmation-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.expiry-warning {
+  background: rgba(255, 193, 7, 0.15);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #ffc107;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blockchain-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(33, 150, 243, 0.15);
+  border: 1px solid rgba(33, 150, 243, 0.3);
+  border-radius: 12px;
+  padding: 14px;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.blockchain-link:hover {
+  background: rgba(33, 150, 243, 0.25);
+}
+
+.cancel-button {
+  background: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 12px;
+  padding: 14px;
+  color: #dc3545;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cancel-button:hover {
+  background: rgba(220, 53, 69, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crypto-payment-page {
+    padding: 20px 16px;
+  }
+
+  .payment-header h1 {
+    font-size: 32px;
+  }
+
+  .payment-header p {
+    font-size: 16px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .currency-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .qr-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .payment-details-section {
+    padding: 24px;
+  }
+}

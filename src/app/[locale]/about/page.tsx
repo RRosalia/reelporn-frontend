@@ -6,7 +6,8 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import './styles.css';
 
-function AboutPage() {const t = useTranslations();
+function AboutPage() {
+    const t = useTranslations('about');
     const params = useParams();
     const locale = (params?.locale as string) || 'en';
     const router = useRouter();
@@ -16,54 +17,54 @@ function AboutPage() {const t = useTranslations();
     };
 
     const stats = [
-        { number: '10M+', label: 'Active Users', icon: 'bi-people-fill' },
-        { number: '500K+', label: 'Videos', icon: 'bi-camera-video-fill' },
-        { number: '50K+', label: 'Creators', icon: 'bi-star-fill' },
-        { number: '150+', label: 'Countries', icon: 'bi-globe' }
+        { number: t('stats.users.number'), label: t('stats.users.label'), icon: 'bi-people-fill' },
+        { number: t('stats.videos.number'), label: t('stats.videos.label'), icon: 'bi-camera-video-fill' },
+        { number: t('stats.creators.number'), label: t('stats.creators.label'), icon: 'bi-star-fill' },
+        { number: t('stats.countries.number'), label: t('stats.countries.label'), icon: 'bi-globe' }
     ];
 
     const values = [
         {
             icon: 'bi-shield-check',
-            title: 'Privacy First',
-            description: 'Your privacy is our top priority. We use advanced encryption and never share your data.'
+            title: t('values.privacyFirst.title'),
+            description: t('values.privacyFirst.description')
         },
         {
             icon: 'bi-patch-check',
-            title: 'Verified Content',
-            description: 'All content is from verified adults. We comply with all legal requirements including 2257.'
+            title: t('values.verifiedContent.title'),
+            description: t('values.verifiedContent.description')
         },
         {
             icon: 'bi-lightning-charge',
-            title: 'Innovation',
-            description: 'Pioneering the future of adult entertainment with cutting-edge technology and features.'
+            title: t('values.innovation.title'),
+            description: t('values.innovation.description')
         },
         {
             icon: 'bi-heart',
-            title: 'Creator Support',
-            description: 'Empowering creators with fair revenue sharing and powerful tools to grow their audience.'
+            title: t('values.creatorSupport.title'),
+            description: t('values.creatorSupport.description')
         }
     ];
 
     const team = [
         {
-            role: 'CEO & Founder',
-            bio: 'Visionary leader with 15+ years in tech and entertainment',
+            role: t('team.ceo.role'),
+            bio: t('team.ceo.bio'),
             color: '#c2338a'
         },
         {
-            role: 'CTO',
-            bio: 'Expert in AI/ML and scalable video streaming infrastructure',
+            role: t('team.cto.role'),
+            bio: t('team.cto.bio'),
             color: '#f8c537'
         },
         {
-            role: 'Head of Safety',
-            bio: 'Dedicated to platform safety and legal compliance',
+            role: t('team.headSafety.role'),
+            bio: t('team.headSafety.bio'),
             color: '#48bb78'
         },
         {
-            role: 'Head of Creators',
-            bio: 'Supporting and growing our amazing creator community',
+            role: t('team.headCreators.role'),
+            bio: t('team.headCreators.bio'),
             color: '#6c63ff'
         }
     ];
@@ -74,25 +75,20 @@ function AboutPage() {const t = useTranslations();
             <section className="about-hero">
                 <div className="container mx-auto px-4">
                     <div className="hero-content">
-                        <h1 className="hero-title">
-                            Redefining Adult Entertainment
-                        </h1>
-                        <p className="hero-subtitle">
-                            ReelPorn is revolutionizing how adults discover and enjoy intimate content
-                            through innovative short-form videos and cutting-edge technology.
-                        </p>
+                        <h1 className="hero-title">{t('hero.title')}</h1>
+                        <p className="hero-subtitle">{t('hero.subtitle')}</p>
                         <div className="hero-actions">
                             <button
                                 className="btn-primary"
                                 onClick={() => router.push('/signup')}
                             >
-                                Get Started
+                                {t('hero.getStarted')}
                             </button>
                             <button
                                 className="btn-secondary"
                                 onClick={() => router.push('/pornstars')}
                             >
-                                Meet Our Creators
+                                {t('hero.meetCreators')}
                             </button>
                         </div>
                     </div>
@@ -119,24 +115,15 @@ function AboutPage() {const t = useTranslations();
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap items-center">
                         <div className="w-full lg:w-6/12">
-                            <h2 className="section-title">Our Mission</h2>
-                            <p className="mission-text">
-                                We believe adult entertainment should be safe, consensual, and accessible.
-                                ReelPorn combines the addictive nature of short-form content with the
-                                intimacy of adult entertainment, creating a unique platform where viewers
-                                can discover new experiences and creators can thrive.
-                            </p>
-                            <p className="mission-text">
-                                Our AI-powered recommendation engine learns your preferences to deliver
-                                personalized content while maintaining complete privacy. Every video is
-                                verified, every creator is authenticated, and every interaction is secure.
-                            </p>
+                            <h2 className="section-title">{t('mission.title')}</h2>
+                            <p className="mission-text">{t('mission.paragraph1')}</p>
+                            <p className="mission-text">{t('mission.paragraph2')}</p>
                         </div>
                         <div className="w-full lg:w-6/12">
                             <div className="mission-image">
                                 <div className="image-placeholder">
                                     <i className="bi bi-play-circle-fill"></i>
-                                    <span>Innovation in Motion</span>
+                                    <span>{t('mission.imageCaption')}</span>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +134,7 @@ function AboutPage() {const t = useTranslations();
             {/* Values Section */}
             <section className="values-section">
                 <div className="container mx-auto px-4">
-                    <h2 className="section-title text-center mb-5">Our Core Values</h2>
+                    <h2 className="section-title text-center mb-5">{t('values.title')}</h2>
                     <div className="values-grid">
                         {values.map((value, idx) => (
                             <div key={idx} className="value-card">
@@ -163,34 +150,34 @@ function AboutPage() {const t = useTranslations();
             {/* Technology Section */}
             <section className="technology-section">
                 <div className="container mx-auto px-4">
-                    <h2 className="section-title text-center mb-5">Powered by Technology</h2>
+                    <h2 className="section-title text-center mb-5">{t('technology.title')}</h2>
                     <div className="flex flex-wrap">
                         <div className="w-full md:w-6/12 lg:w-3/12">
                             <div className="tech-card">
                                 <i className="bi bi-cpu tech-icon"></i>
-                                <h4>AI Recommendations</h4>
-                                <p>Advanced machine learning algorithms personalize your feed in real-time.</p>
+                                <h4>{t('technology.aiRecommendations.title')}</h4>
+                                <p>{t('technology.aiRecommendations.description')}</p>
                             </div>
                         </div>
                         <div className="w-full md:w-6/12 lg:w-3/12">
                             <div className="tech-card">
                                 <i className="bi bi-shield-lock tech-icon"></i>
-                                <h4>End-to-End Encryption</h4>
-                                <p>Military-grade encryption protects your data and viewing history.</p>
+                                <h4>{t('technology.encryption.title')}</h4>
+                                <p>{t('technology.encryption.description')}</p>
                             </div>
                         </div>
                         <div className="w-full md:w-6/12 lg:w-3/12">
                             <div className="tech-card">
                                 <i className="bi bi-speedometer2 tech-icon"></i>
-                                <h4>Global CDN</h4>
-                                <p>Lightning-fast streaming from servers worldwide for buffer-free viewing.</p>
+                                <h4>{t('technology.cdn.title')}</h4>
+                                <p>{t('technology.cdn.description')}</p>
                             </div>
                         </div>
                         <div className="w-full md:w-6/12 lg:w-3/12">
                             <div className="tech-card">
                                 <i className="bi bi-phone tech-icon"></i>
-                                <h4>Cross-Platform</h4>
-                                <p>Seamless experience across all devices - desktop, mobile, and tablet.</p>
+                                <h4>{t('technology.crossPlatform.title')}</h4>
+                                <p>{t('technology.crossPlatform.description')}</p>
                             </div>
                         </div>
                     </div>
@@ -200,7 +187,7 @@ function AboutPage() {const t = useTranslations();
             {/* Team Section */}
             <section className="team-section">
                 <div className="container mx-auto px-4">
-                    <h2 className="section-title text-center mb-5">Leadership Team</h2>
+                    <h2 className="section-title text-center mb-5">{t('team.title')}</h2>
                     <div className="team-grid">
                         {team.map((member, idx) => (
                             <div key={idx} className="team-card">
@@ -222,26 +209,23 @@ function AboutPage() {const t = useTranslations();
             <section className="creator-section">
                 <div className="container mx-auto px-4">
                     <div className="creator-content">
-                        <h2>Become a Creator</h2>
-                        <p>
-                            Join thousands of creators earning on ReelPorn. We offer the highest
-                            revenue share in the industry, powerful analytics, and a supportive community.
-                        </p>
+                        <h2>{t('becomeCreator.title')}</h2>
+                        <p>{t('becomeCreator.description')}</p>
                         <div className="creator-benefits">
                             <div className="benefit">
                                 <i className="bi bi-cash-stack"></i>
-                                <span>80% Revenue Share</span>
+                                <span>{t('becomeCreator.revenueShare')}</span>
                             </div>
                             <div className="benefit">
                                 <i className="bi bi-graph-up-arrow"></i>
-                                <span>Growth Tools</span>
+                                <span>{t('becomeCreator.growthTools')}</span>
                             </div>
                             <div className="benefit">
                                 <i className="bi bi-headset"></i>
-                                <span>24/7 Support</span>
+                                <span>{t('becomeCreator.support')}</span>
                             </div>
                         </div>
-                        <button className="btn-creator">Apply to Become a Creator</button>
+                        <button className="btn-creator">{t('becomeCreator.applyButton')}</button>
                     </div>
                 </div>
             </section>
@@ -249,27 +233,27 @@ function AboutPage() {const t = useTranslations();
             {/* Contact Section */}
             <section className="contact-section">
                 <div className="container mx-auto px-4">
-                    <h2 className="section-title text-center mb-5">Get in Touch</h2>
+                    <h2 className="section-title text-center mb-5">{t('contact.title')}</h2>
                     <div className="flex flex-wrap">
                         <div className="w-full md:w-4/12">
                             <div className="contact-card">
                                 <i className="bi bi-envelope"></i>
-                                <h4>General Inquiries</h4>
-                                <a href="mailto:info@reelporn.ai">info@reelporn.ai</a>
+                                <h4>{t('contact.general.title')}</h4>
+                                <a href={`mailto:${t('contact.general.email')}`}>{t('contact.general.email')}</a>
                             </div>
                         </div>
                         <div className="w-full md:w-4/12">
                             <div className="contact-card">
                                 <i className="bi bi-headset"></i>
-                                <h4>Support</h4>
-                                <a href="mailto:support@reelporn.ai">support@reelporn.ai</a>
+                                <h4>{t('contact.support.title')}</h4>
+                                <a href={`mailto:${t('contact.support.email')}`}>{t('contact.support.email')}</a>
                             </div>
                         </div>
                         <div className="w-full md:w-4/12">
                             <div className="contact-card">
                                 <i className="bi bi-briefcase"></i>
-                                <h4>Business</h4>
-                                <a href="mailto:business@reelporn.ai">business@reelporn.ai</a>
+                                <h4>{t('contact.business.title')}</h4>
+                                <a href={`mailto:${t('contact.business.email')}`}>{t('contact.business.email')}</a>
                             </div>
                         </div>
                     </div>

@@ -181,7 +181,7 @@ export default function HomePage() {
             </div>
 
             {/* Video Grid */}
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-12">
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-bold mb-0 text-gray-900">
                         {categories.find(c => c.key === activeTab)?.icon} {categories.find(c => c.key === activeTab)?.label}
