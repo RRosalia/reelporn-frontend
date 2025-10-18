@@ -27,6 +27,7 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-gtm-module": "^2.0.3",
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "beta",

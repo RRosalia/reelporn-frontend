@@ -45,7 +45,7 @@ export function usePaymentWebSocket(
   );
 
   const { leaveChannel, stopListening, listen } = useEcho(
-    transactionId ? `crypto.payment.${transactionId}` : null,
+    transactionId ? `crypto.payment.${transactionId}` : '',
     [
       'payment.status.updated',
       'payment.completed',
@@ -99,7 +99,7 @@ export function useUserPaymentNotifications(
   );
 
   const { leaveChannel, stopListening, listen } = useEcho(
-    userId ? `user.${userId}.payments` : null,
+    userId ? `user.${userId}.payments` : '',
     [
       'payment.status.updated',
       'payment.completed',

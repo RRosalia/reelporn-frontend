@@ -8,8 +8,8 @@ import type {
   QuickTransactionConfig,
   CryptoCurrency,
   CryptoPrice,
-  PaymentStatus,
 } from '@/types/Payment';
+import { PaymentStatus } from '@/types/Payment';
 import './QuickTransaction.css';
 
 interface QuickTransactionProps {
