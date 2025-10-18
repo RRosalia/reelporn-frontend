@@ -19,6 +19,8 @@ function Footer() {
     const params = useParams();
     const locale = (params?.locale as string) || 'en';
     const currentYear = new Date().getFullYear();
+    const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
+    const languageMenuRef = React.useRef<HTMLDivElement>(null);
 
     const languages: Language[] = [
         { code: 'en', name: 'English', flag: '🇬🇧' },
@@ -27,7 +29,25 @@ function Footer() {
         { code: 'fr', name: 'Français', flag: '🇫🇷' }
     ];
 
+    // Click outside handler to close dropdown
+    React.useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
+                setShowLanguageMenu(false);
+            }
+        };
+
+        if (showLanguageMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showLanguageMenu]);
+
     const handleLanguageChange = (newLang: string) => {
+        setShowLanguageMenu(false);
         router.push(pathname as any, { locale: newLang });
     };
 
@@ -183,19 +203,28 @@ function Footer() {
                                     <i className="bi bi-gear mr-2"></i>
                                     {t('footer.cookieSettings')}
                                 </button>
-                                <div className="inline-flex items-center gap-2">
-                                    <i className="bi bi-globe2 text-[#f8c537] text-lg"></i>
-                                    <select
-                                        value={locale}
-                                        onChange={(e) => handleLanguageChange(e.target.value)}
-                                        className="bg-[rgba(43,40,56,0.8)] text-white border border-[rgba(248,197,55,0.3)] rounded-lg px-4 py-2 text-sm cursor-pointer outline-none transition-all duration-300 hover:border-[#f8c537] hover:bg-[rgba(43,40,56,1)]"
+                                <div className="relative" ref={languageMenuRef}>
+                                    <button
+                                        onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+                                        className="inline-flex items-center gap-2 bg-[rgba(43,40,56,0.8)] text-white border border-[rgba(248,197,55,0.3)] rounded-lg px-4 py-2 text-sm cursor-pointer outline-none transition-all duration-300 hover:border-[#f8c537] hover:bg-[rgba(43,40,56,1)]"
                                     >
-                                        {languages.map((lang) => (
-                                            <option key={lang.code} value={lang.code} className="bg-[#2b2838] text-white p-2">
-                                                {lang.flag} {lang.name}
-                                            </option>
-                                        ))}
-                                    </select>
+                                        <i className="bi bi-globe2 text-[#f8c537]"></i>
+                                        <span>{languages.find(l => l.code === locale)?.flag} {languages.find(l => l.code === locale)?.name}</span>
+                                    </button>
+                                    {showLanguageMenu && (
+                                        <ul className="absolute bottom-full right-0 mb-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-700 overflow-hidden">
+                                            {languages.map((lang) => (
+                                                <li key={lang.code}>
+                                                    <button
+                                                        className={`w-full text-left px-4 py-2 hover:bg-gray-700 transition-colors cursor-pointer ${locale === lang.code ? 'bg-pink-500 text-white hover:bg-pink-600' : 'text-gray-100'}`}
+                                                        onClick={() => handleLanguageChange(lang.code)}
+                                                    >
+                                                        {lang.flag} {lang.name}
+                                                    </button>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
                             </div>
                         </div>

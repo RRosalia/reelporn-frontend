@@ -2,6 +2,18 @@
 .navbar-dark {
     background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
+    transition: all 0.3s ease;
+}
+
+/* Add backdrop blur effect when scrolling */
+.navbar-dark.scrolled {
+    background: linear-gradient(135deg, rgba(26, 22, 38, 0.95) 0%, rgba(43, 40, 56, 0.95) 100%) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {

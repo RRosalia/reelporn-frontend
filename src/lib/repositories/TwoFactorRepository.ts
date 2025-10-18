@@ -17,14 +17,14 @@ class TwoFactorRepository {
    * Enable 2FA for the authenticated user
    */
   async enable(): Promise<void> {
-    await apiClient.post('/user/two-factor-authentication');
+    await apiClient.post('/account/two-factor-authentication');
   }
 
   /**
    * Get the QR code SVG for 2FA setup
    */
   async getQRCode(): Promise<TwoFactorQRResponse> {
-    const response = await apiClient.get<TwoFactorQRResponse>('/user/two-factor-qr-code');
+    const response = await apiClient.get<TwoFactorQRResponse>('/account/two-factor-qr-code');
     return response.data;
   }
 
@@ -32,7 +32,7 @@ class TwoFactorRepository {
    * Get the secret key for 2FA setup
    */
   async getSecretKey(): Promise<TwoFactorSecretResponse> {
-    const response = await apiClient.get<TwoFactorSecretResponse>('/user/two-factor-secret-key');
+    const response = await apiClient.get<TwoFactorSecretResponse>('/account/two-factor-secret-key');
     return response.data;
   }
 
@@ -40,14 +40,14 @@ class TwoFactorRepository {
    * Confirm 2FA with a verification code
    */
   async confirm(data: TwoFactorConfirmRequest): Promise<void> {
-    await apiClient.post('/user/confirmed-two-factor-authentication', data);
+    await apiClient.post('/account/confirmed-two-factor-authentication', data);
   }
 
   /**
    * Get recovery codes
    */
   async getRecoveryCodes(): Promise<string[]> {
-    const response = await apiClient.get<string[]>('/user/two-factor-recovery-codes');
+    const response = await apiClient.get<string[]>('/account/two-factor-recovery-codes');
     return response.data;
   }
 
@@ -55,14 +55,14 @@ class TwoFactorRepository {
    * Regenerate recovery codes
    */
   async regenerateRecoveryCodes(): Promise<void> {
-    await apiClient.post('/user/two-factor-recovery-codes');
+    await apiClient.post('/account/two-factor-recovery-codes');
   }
 
   /**
    * Disable 2FA
    */
   async disable(): Promise<void> {
-    await apiClient.delete('/user/two-factor-authentication');
+    await apiClient.delete('/account/two-factor-authentication');
   }
 }
 

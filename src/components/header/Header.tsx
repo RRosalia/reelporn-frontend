@@ -27,6 +27,23 @@ function Header() {
 
     const profileMenuRef = useRef<HTMLDivElement>(null);
     const languageMenuRef = useRef<HTMLDivElement>(null);
+    const navbarRef = useRef<HTMLElement>(null);
+
+    // Scroll handler to add/remove scrolled class
+    useEffect(() => {
+        const handleScroll = () => {
+            if (navbarRef.current) {
+                if (window.scrollY > 50) {
+                    navbarRef.current.classList.add('scrolled');
+                } else {
+                    navbarRef.current.classList.remove('scrolled');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Click outside handler to close dropdowns
     useEffect(() => {
@@ -71,7 +88,7 @@ function Header() {
     };
 
     return (
-        <nav className="bg-gray-900 text-white">
+        <nav ref={navbarRef} className="navbar-dark bg-gray-900 text-white">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
                     <Link className="navbar-brand text-2xl" href="/">
