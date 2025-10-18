@@ -438,6 +438,7 @@ function AccountPageContent() {
                                         onChange={(e) => setCurrentPassword(e.target.value)}
                                         required
                                         disabled={isChangingPassword}
+                                        autoComplete="current-password"
                                     />
                                 </div>
 
@@ -454,6 +455,7 @@ function AccountPageContent() {
                                         required
                                         minLength={8}
                                         disabled={isChangingPassword}
+                                        autoComplete="new-password"
                                     />
                                 </div>
 
@@ -470,6 +472,7 @@ function AccountPageContent() {
                                         required
                                         minLength={8}
                                         disabled={isChangingPassword}
+                                        autoComplete="new-password"
                                     />
                                 </div>
 
