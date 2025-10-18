@@ -28,7 +28,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build with OpenNext for Cloudflare
-        run: bunx @opennextjs/cloudflare build
+        run: bunx opennextjs-cloudflare build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

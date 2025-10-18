@@ -53,7 +53,7 @@ export default function CryptoPaymentPage() {
       if (update.status === 'completed' as PaymentStatus) {
         // Payment successful, redirect to success page
         setTimeout(() => {
-          router.push('/account?payment=success');
+          router.push('/account?payment=success' as any);
         }, 2000);
       } else if (update.status === 'failed' as PaymentStatus) {
         setError(update.message || t('payment.paymentFailed'));
