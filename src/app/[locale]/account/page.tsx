@@ -393,7 +393,7 @@ function AccountPageContent() {
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                    className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                     disabled={isEditingProfile}
                                     style={{ background: '#c2338a' }}
                                 >
@@ -477,7 +477,7 @@ function AccountPageContent() {
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                    className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                     disabled={isChangingPassword}
                                     style={{ background: '#c2338a' }}
                                 >
@@ -515,7 +515,7 @@ function AccountPageContent() {
                                     <button
                                         onClick={handleEnable2FA}
                                         disabled={isEnabling2FA}
-                                        className="px-6 py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                        className="px-6 py-3 text-white text-base font-bold rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                         style={{ background: '#c2338a' }}
                                     >
                                         {isEnabling2FA
@@ -566,7 +566,7 @@ function AccountPageContent() {
                                         </div>
                                         <button
                                             type="submit"
-                                            className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60"
+                                            className="w-full py-3 text-white text-base font-bold rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                             disabled={isConfirming2FA}
                                             style={{ background: '#c2338a' }}
                                         >
@@ -607,7 +607,7 @@ function AccountPageContent() {
                                             </div>
                                             <button
                                                 onClick={() => setShowRecoveryCodes(false)}
-                                                className="text-white/50 hover:text-white text-sm"
+                                                className="text-white/50 hover:text-white text-sm cursor-pointer"
                                             >
                                                 {t('account.twoFactor.hideRecoveryCodes')}
                                             </button>
@@ -618,20 +618,20 @@ function AccountPageContent() {
                                         {!showRecoveryCodes && (
                                             <button
                                                 onClick={handleShowRecoveryCodes}
-                                                className="px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors"
+                                                className="px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors cursor-pointer"
                                             >
                                                 {t('account.twoFactor.showRecoveryCodes')}
                                             </button>
                                         )}
                                         <button
                                             onClick={() => setShowRegenerateModal(true)}
-                                            className="px-6 py-3 border-2 border-yellow-600 text-yellow-600 rounded hover:bg-yellow-600 hover:text-white transition-colors"
+                                            className="px-6 py-3 border-2 border-yellow-600 text-yellow-600 rounded hover:bg-yellow-600 hover:text-white transition-colors cursor-pointer"
                                         >
                                             {t('account.twoFactor.regenerateRecoveryCodes')}
                                         </button>
                                         <button
                                             onClick={() => setShowDisableModal(true)}
-                                            className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors"
+                                            className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors cursor-pointer"
                                         >
                                             {t('account.twoFactor.disable')}
                                         </button>
@@ -650,7 +650,7 @@ function AccountPageContent() {
                             </p>
                             <button
                                 onClick={handleLogout}
-                                className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors"
+                                className="px-6 py-3 border-2 border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition-colors cursor-pointer"
                             >
                                 {t('account.logout.button')}
                             </button>
@@ -718,14 +718,14 @@ function AccountPageContent() {
                                             setTwoFactorError('');
                                         }}
                                         disabled={isDisabling2FA}
-                                        className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60"
+                                        className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                     >
                                         {t('account.twoFactor.setup.cancel')}
                                     </button>
                                     <button
                                         type="submit"
                                         disabled={isDisabling2FA}
-                                        className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60"
+                                        className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                         style={{ background: '#c2338a' }}
                                     >
                                         {isDisabling2FA
@@ -761,7 +761,7 @@ function AccountPageContent() {
                                         setTwoFactorError('');
                                     }}
                                     disabled={isRegenerating}
-                                    className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60"
+                                    className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                 >
                                     {t('account.twoFactor.setup.cancel')}
                                 </button>
@@ -769,7 +769,7 @@ function AccountPageContent() {
                                     type="button"
                                     onClick={handleRegenerateRecoveryCodes}
                                     disabled={isRegenerating}
-                                    className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60"
+                                    className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                                     style={{ background: '#f59e0b' }}
                                 >
                                     {isRegenerating
