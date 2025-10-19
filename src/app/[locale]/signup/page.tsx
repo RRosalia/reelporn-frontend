@@ -99,7 +99,7 @@ function SignupPage() {
             };
 
             // Add plan and payment details if a paid plan is selected
-            const isPaidPlan = selectedPlan && parseFloat(selectedPlan.price) > 0;
+            const isPaidPlan = selectedPlan && selectedPlan.price > 0;
             if (selectedPlan) {
                 registerData.plan_id = selectedPlan.id;
 
@@ -123,7 +123,7 @@ function SignupPage() {
             // Redirect based on payment requirement
             if (response.data.requires_payment && response.data.payment) {
                 // Redirect to payment status page
-                router.push(`/payment/${response.data.payment.payment_id}`);
+                router.push({ pathname: '/payment/[id]', params: { id: response.data.payment.payment_id } });
             } else {
                 // Redirect to account/dashboard
                 router.push('/account');
@@ -189,7 +189,7 @@ function SignupPage() {
         );
     }
 
-    const isPaidPlan = selectedPlan && parseFloat(selectedPlan.price) > 0;
+    const isPaidPlan = selectedPlan && selectedPlan.price > 0;
 
     return (
         <div style={{ background: '#2b2838' }}>
@@ -277,7 +277,7 @@ function SignupPage() {
                                 {groupedPlans.map((group) => {
                                     const plan = getPlanForBillingCycle(group);
                                     if (!plan) return null;
-                                    const isFree = parseFloat(plan.price) === 0;
+                                    const isFree = plan.price === 0;
                                     const groupColor = getGroupColor(group.group);
 
                                     return (
@@ -303,7 +303,7 @@ function SignupPage() {
                                                     <strong style={{ fontSize: '24px' }}>{t('subscriptions.price.free')}</strong>
                                                 ) : (
                                                     <>
-                                                        <strong style={{ fontSize: '24px' }}>${parseFloat(plan.price).toFixed(2)}</strong>
+                                                        <strong style={{ fontSize: '24px' }}>${(plan.price / 100).toFixed(2)}</strong>
                                                         <small>/{plan.periodicity} {plan.periodicity_type}</small>
                                                     </>
                                                 )}
@@ -408,7 +408,7 @@ function SignupPage() {
                                 >
                                     {submitting ? t('signup.processing') : (
                                         selectedPlan && isPaidPlan
-                                            ? `${t('signup.subscribeFor')} $${parseFloat(selectedPlan.price).toFixed(2)}`
+                                            ? `${t('signup.subscribeFor')} $${(selectedPlan.price / 100).toFixed(2)}`
                                             : t('signup.createAccount')
                                     )}
                                 </button>

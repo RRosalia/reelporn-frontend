@@ -116,7 +116,7 @@ export default function SubscriptionCheckoutPage() {
                   const displayPlan = getPlanForDisplay(group);
                   if (!displayPlan) return null;
 
-                  const isFree = parseFloat(displayPlan.price) === 0;
+                  const isFree = displayPlan.price === 0;
                   const isPopular = index === 1; // Middle plan
 
                   return (
@@ -142,7 +142,7 @@ export default function SubscriptionCheckoutPage() {
                         {!isFree ? (
                           <div className="mb-4">
                             <span className="text-4xl font-bold text-pink-500">
-                              ${(parseFloat(displayPlan.price) / 100).toFixed(2)}
+                              ${(displayPlan.price / 100).toFixed(2)}
                             </span>
                             <span className="ml-2 text-gray-600">
                               /{displayPlan.periodicity_type}
@@ -261,7 +261,7 @@ export default function SubscriptionCheckoutPage() {
 
               <div className="flex items-baseline gap-2 mb-6">
                 <span className="text-5xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                  ${(parseFloat(plan.price) / 100).toFixed(2)}
+                  ${(plan.price / 100).toFixed(2)}
                 </span>
                 <span className="text-lg text-gray-500 dark:text-gray-400">
                   / {plan.periodicity} {plan.periodicity_type}

@@ -65,27 +65,28 @@ export function initializeEcho(authToken?: string | null) {
 
   // Log connector info
   console.log('[Echo] Connector:', echoInstance.connector);
-  console.log('[Echo] Socket state:', echoInstance.connector?.pusher?.connection?.state);
+  console.log('[Echo] Socket state:', (echoInstance.connector as any)?.pusher?.connection?.state);
 
   // Add connection event listeners for debugging
-  if (echoInstance.connector?.pusher) {
-    echoInstance.connector.pusher.connection.bind('connected', () => {
+  const connector = echoInstance.connector as any;
+  if (connector?.pusher) {
+    connector.pusher.connection.bind('connected', () => {
       console.log('[Echo] ✅ WebSocket connected successfully');
     });
 
-    echoInstance.connector.pusher.connection.bind('connecting', () => {
+    connector.pusher.connection.bind('connecting', () => {
       console.log('[Echo] 🔄 WebSocket connecting...');
     });
 
-    echoInstance.connector.pusher.connection.bind('disconnected', () => {
+    connector.pusher.connection.bind('disconnected', () => {
       console.log('[Echo] ❌ WebSocket disconnected');
     });
 
-    echoInstance.connector.pusher.connection.bind('error', (error: any) => {
+    connector.pusher.connection.bind('error', (error: any) => {
       console.error('[Echo] ❌ WebSocket error:', error);
     });
 
-    echoInstance.connector.pusher.connection.bind('state_change', (states: any) => {
+    connector.pusher.connection.bind('state_change', (states: any) => {
       console.log('[Echo] State change:', states.previous, '->', states.current);
     });
   }

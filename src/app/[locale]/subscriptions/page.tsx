@@ -50,8 +50,8 @@ function SubscriptionsPage() {const t = useTranslations();
         if (!monthlyPlan || !yearlyPlan) return 0;
 
         // Prices are in cents, convert to dollars
-        const monthlyPrice = parseFloat(monthlyPlan.price) / 100;
-        const yearlyPrice = parseFloat(yearlyPlan.price) / 100;
+        const monthlyPrice = monthlyPlan.price / 100;
+        const yearlyPrice = yearlyPlan.price / 100;
 
         // Calculate what 12 months would cost at monthly rate
         const yearlyAtMonthlyRate = monthlyPrice * 12;
@@ -66,7 +66,7 @@ function SubscriptionsPage() {const t = useTranslations();
     // Get monthly equivalent price for display (prices are in cents from backend)
     const getMonthlyEquivalentPrice = (plan: Plan): string => {
         // Convert cents to dollars
-        const price = parseFloat(plan.price) / 100;
+        const price = plan.price / 100;
 
         if (plan.periodicity_type === PeriodicityType.MONTH) {
             return price.toFixed(2);
@@ -155,7 +155,7 @@ function SubscriptionsPage() {const t = useTranslations();
 
                         const monthlyEquivalentPrice = getMonthlyEquivalentPrice(plan);
                         const yearlyDiscount = calculateYearlyDiscount(group);
-                        const isFree = parseFloat(plan.price) === 0; // Price in cents, 0 is still 0
+                        const isFree = plan.price === 0; // Price in cents, 0 is still 0
                         const isPopular = index === Math.floor(groupedPlans.length / 2); // Middle plan is popular
 
                         return (
@@ -212,7 +212,7 @@ function SubscriptionsPage() {const t = useTranslations();
                                             {billingCycle === 'yearly' && (
                                                 <div className="billing-info">
                                                     <span className="total-price">
-                                                        ${(parseFloat(plan.price) / 100).toFixed(2)} {t('subscriptions.price.billedYearly')}
+                                                        ${(plan.price / 100).toFixed(2)} {t('subscriptions.price.billedYearly')}
                                                     </span>
                                                 </div>
                                             )}
@@ -238,7 +238,7 @@ function SubscriptionsPage() {const t = useTranslations();
                                         if (isFree) {
                                             router.push('/signup');
                                         } else {
-                                            router.push(`/subscriptions/${plan.id}/checkout`);
+                                            router.push({ pathname: '/subscriptions/[id]/checkout', params: { id: plan.id.toString() } });
                                         }
                                     }}
                                     style={{

@@ -10,7 +10,7 @@ import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import type {
   CryptoCurrency,
   CryptoPrice,
-  SubscriptionPlan,
+  Plan,
   PaymentStatus,
 } from '@/types/Payment';
 import './crypto.css';
@@ -33,8 +33,8 @@ export default function CryptoPaymentPage() {
 
   const [currencies, setCurrencies] = useState<CryptoCurrency[]>([]);
   const [prices, setPrices] = useState<CryptoPrice[]>([]);
-  const [plans, setPlans] = useState<SubscriptionPlan[]>([]);
-  const [selectedPlan, setSelectedPlan] = useState<SubscriptionPlan | null>(null);
+  const [plans, setPlans] = useState<Plan[]>([]);
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
   const [selectedCurrency, setSelectedCurrency] = useState<CryptoCurrency | null>(null);
   const [loading, setLoading] = useState(true);
   const [processing, setProcessing] = useState(false);
@@ -69,7 +69,7 @@ export default function CryptoPaymentPage() {
   // Auto-select plan from URL parameter
   useEffect(() => {
     if (planId && plans.length > 0) {
-      const plan = plans.find((p) => p.id === planId);
+      const plan = plans.find((p) => p.id === parseInt(planId, 10));
       if (plan) {
         setSelectedPlan(plan);
       }
@@ -98,8 +98,10 @@ export default function CryptoPaymentPage() {
   const calculateCryptoAmount = (currency: CryptoCurrency): string => {
     if (!selectedPlan) return '0';
     try {
+      // Convert cents to dollars
+      const priceInDollars = selectedPlan.price / 100;
       return PaymentService.calculateCryptoAmount(
-        selectedPlan.price,
+        priceInDollars,
         prices,
         currency.code,
         currency.decimals
@@ -216,16 +218,15 @@ export default function CryptoPaymentPage() {
                     <div className="plan-header">
                       <h3>{plan.name}</h3>
                       <div className="plan-price">
-                        ${plan.price.toFixed(2)}
+                        ${(plan.price / 100).toFixed(2)}
                         <span className="period">/{t('payment.month')}</span>
                       </div>
                     </div>
-                    <p className="plan-description">{plan.description}</p>
                     <ul className="plan-features">
-                      {plan.features.map((feature, index) => (
-                        <li key={index}>
+                      {plan.features.map((feature) => (
+                        <li key={feature.id}>
                           <i className="bi bi-check-circle"></i>
-                          {feature}
+                          {feature.name}
                         </li>
                       ))}
                     </ul>

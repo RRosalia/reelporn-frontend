@@ -40,9 +40,9 @@ export interface CryptoPrice {
 }
 
 export interface CryptoPaymentRequest {
-  subscriptionPlanId: string;
+  subscriptionPlanId: number;
   currencyCode: string; // Crypto currency code (e.g., 'BTC')
-  amount: number; // Amount in USD
+  amount: number; // Amount in USD cents
   amountCrypto: string; // Amount in cryptocurrency
   walletAddress: string; // Backend-generated wallet address
   userId?: string;
@@ -133,7 +133,7 @@ export interface Plan {
   id: number;
   name: string;
   plan_group: string;
-  price: string;
+  price: number; // Price in cents
   periodicity_type: PeriodicityType;
   periodicity: number;
   grace_days: number;

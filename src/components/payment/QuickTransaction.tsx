@@ -103,7 +103,7 @@ export default function QuickTransaction({
       );
 
       const response = await PaymentService.initiatePayment({
-        subscriptionPlanId: '', // Quick transaction doesn't need plan
+        subscriptionPlanId: 0, // Quick transaction doesn't need plan
         currencyCode: selectedCurrency.code,
         amount: config.amount,
         amountCrypto: amount,

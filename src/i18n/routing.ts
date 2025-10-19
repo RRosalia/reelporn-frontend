@@ -74,6 +74,12 @@ export const routing = defineRouting({
       de: '/abonnements',
       fr: '/abonnements'
     },
+    '/subscriptions/[id]/checkout': {
+      en: '/subscriptions/[id]/checkout',
+      nl: '/abbonementen/[id]/afrekenen',
+      de: '/abonnements/[id]/kasse',
+      fr: '/abonnements/[id]/paiement'
+    },
     '/about': {
       en: '/about',
       nl: '/over-ons',

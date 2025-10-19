@@ -256,7 +256,7 @@ export default function PaymentStatusPage() {
 
       if (newPaymentId) {
         // Redirect to the new payment page
-        router.push(`/payment/${newPaymentId}`);
+        router.push({ pathname: '/payment/[id]', params: { id: newPaymentId } });
       } else {
         throw new Error('No payment ID returned');
       }

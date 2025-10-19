@@ -7,7 +7,7 @@ import {
   PaymentMethod,
   CheckoutPreviewResponse,
   CheckoutConfirmResponse,
-  CheckoutPaymentStatusResponse,
+  PaymentStatusPollResponse,
 } from '@/types/Payment';
 import './checkout.css';
 
@@ -35,7 +35,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null); // Code to use (native or token)
   const [preview, setPreview] = useState<CheckoutPreviewResponse | null>(null);
   const [confirmedPayment, setConfirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
-  const [paymentStatus, setPaymentStatus] = useState<CheckoutPaymentStatusResponse | null>(null);
+  const [paymentStatus, setPaymentStatus] = useState<PaymentStatusPollResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [loadingPreview, setLoadingPreview] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -71,7 +71,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
           setPaymentStatus(status);
 
           // If payment is completed, stop polling and call onSuccess
-          if (status.payment.status === 'completed') {
+          if (status.status === 'completed') {
             if (pollingInterval) {
               clearInterval(pollingInterval);
               setPollingInterval(null);
@@ -82,7 +82,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
           }
 
           // If payment expired or failed, stop polling
-          if (status.payment.status === 'expired' || status.payment.status === 'failed') {
+          if (status.status === 'expired' || status.status === 'failed') {
             if (pollingInterval) {
               clearInterval(pollingInterval);
               setPollingInterval(null);
@@ -187,8 +187,8 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
         options: { currency: selectedCurrency },
       });
 
-      // Extract payment_id from response - API returns { data: { payment_id: ... } }
-      const paymentId = response.data?.payment_id || response.payment_id || response.payment?.id || response.payment?.payment_id;
+      // Extract payment_id from response
+      const paymentId = response.payment.id;
       if (paymentId) {
         // Use window.location.href to navigate to payment page
         // The router will automatically handle localization
@@ -439,11 +439,11 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
   // Render payment status step
   const renderStatusStep = () => {
-    const status = paymentStatus || { payment: confirmedPayment?.payment, crypto_details: confirmedPayment?.crypto_details };
-    const isPending = status.payment?.status === 'pending' || status.payment?.status === 'awaiting_confirmation';
-    const isCompleted = status.payment?.status === 'completed';
-    const isExpired = status.payment?.status === 'expired';
-    const isFailed = status.payment?.status === 'failed';
+    const status = paymentStatus?.status || confirmedPayment?.payment?.status || 'pending';
+    const isPending = status === 'pending' || status === 'awaiting_confirmation';
+    const isCompleted = status === 'completed';
+    const isExpired = status === 'expired';
+    const isFailed = status === 'failed';
 
     return (
       <div className="checkout-step">
@@ -524,7 +524,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
               <div className="status-section error">
                 <i className="bi bi-x-circle error-icon"></i>
                 <h3>{isExpired ? t('checkout.status.paymentExpired') : t('checkout.status.paymentFailed')}</h3>
-                <button className="checkout-btn-primary" onClick={handleBack}>
+                <button className="checkout-btn-primary" onClick={() => setCurrentStep('selection')}>
                   {t('checkout.tryAgain')}
                 </button>
               </div>
