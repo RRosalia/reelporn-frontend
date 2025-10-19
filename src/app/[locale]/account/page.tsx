@@ -63,6 +63,8 @@ function AccountPageContent() {
     const [showDisableModal, setShowDisableModal] = useState(false);
     const [disableCode, setDisableCode] = useState('');
     const [isDisabling2FA, setIsDisabling2FA] = useState(false);
+    const [showRegenerateModal, setShowRegenerateModal] = useState(false);
+    const [isRegenerating, setIsRegenerating] = useState(false);
 
     // Load profile on mount
     useEffect(() => {
@@ -263,17 +265,15 @@ function AccountPageContent() {
     };
 
     const handleRegenerateRecoveryCodes = async () => {
-        if (!window.confirm(t('account.twoFactor.regenerateConfirm'))) {
-            return;
-        }
-
         setTwoFactorError('');
         setTwoFactorSuccess('');
+        setIsRegenerating(true);
 
         try {
             const codes = await TwoFactorService.regenerateRecoveryCodes();
             setRecoveryCodes(codes);
             setShowRecoveryCodes(true);
+            setShowRegenerateModal(false);
             setTwoFactorSuccess(t('account.twoFactor.regenerateSuccess'));
         } catch (err) {
             if (err instanceof NetworkException) {
@@ -281,6 +281,8 @@ function AccountPageContent() {
             } else {
                 setTwoFactorError(t('account.error.generic'));
             }
+        } finally {
+            setIsRegenerating(false);
         }
     };
 
@@ -622,7 +624,7 @@ function AccountPageContent() {
                                             </button>
                                         )}
                                         <button
-                                            onClick={handleRegenerateRecoveryCodes}
+                                            onClick={() => setShowRegenerateModal(true)}
                                             className="px-6 py-3 border-2 border-yellow-600 text-yellow-600 rounded hover:bg-yellow-600 hover:text-white transition-colors"
                                         >
                                             {t('account.twoFactor.regenerateRecoveryCodes')}
@@ -684,10 +686,10 @@ function AccountPageContent() {
                     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
                         <div className="w-full max-w-md p-6 rounded-[15px]" style={{ background: '#3a3646' }}>
                             <h3 className="text-white text-2xl mb-4">
-                                {t('account.twoFactor.disableTitle')}
+                                {t('account.twoFactor.manage.disableTitle')}
                             </h3>
                             <p className="text-white/70 mb-4">
-                                {t('account.twoFactor.disableConfirm')}
+                                {t('account.twoFactor.manage.disableConfirm')}
                             </p>
                             <form onSubmit={handleDisable2FA}>
                                 <div className="mb-4">
@@ -718,7 +720,7 @@ function AccountPageContent() {
                                         disabled={isDisabling2FA}
                                         className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60"
                                     >
-                                        {t('account.twoFactor.cancel')}
+                                        {t('account.twoFactor.setup.cancel')}
                                     </button>
                                     <button
                                         type="submit"
@@ -727,12 +729,55 @@ function AccountPageContent() {
                                         style={{ background: '#c2338a' }}
                                     >
                                         {isDisabling2FA
-                                            ? t('account.twoFactor.disabling')
-                                            : t('account.twoFactor.disable')
+                                            ? t('account.twoFactor.manage.disabling')
+                                            : t('account.twoFactor.manage.disable')
                                         }
                                     </button>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                )}
+
+                {/* Regenerate Recovery Codes Modal */}
+                {showRegenerateModal && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                        <div className="w-full max-w-md p-6 rounded-[15px]" style={{ background: '#3a3646' }}>
+                            <h3 className="text-white text-2xl mb-4">
+                                {t('account.twoFactor.manage.regenerate')}
+                            </h3>
+                            <div className="bg-yellow-500/10 border border-yellow-500 text-yellow-500 px-4 py-3 rounded mb-4">
+                                <strong>{t('account.twoFactor.recovery.important')}:</strong>{' '}
+                                {t('account.twoFactor.manage.regenerateConfirm')}
+                            </div>
+                            <p className="text-white/70 mb-4">
+                                {t('account.twoFactor.regenerateConfirm')}
+                            </p>
+                            <div className="flex gap-3">
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        setShowRegenerateModal(false);
+                                        setTwoFactorError('');
+                                    }}
+                                    disabled={isRegenerating}
+                                    className="flex-1 px-6 py-3 border-2 border-white text-white rounded hover:bg-white hover:text-gray-900 transition-colors disabled:opacity-60"
+                                >
+                                    {t('account.twoFactor.setup.cancel')}
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={handleRegenerateRecoveryCodes}
+                                    disabled={isRegenerating}
+                                    className="flex-1 px-6 py-3 text-white rounded border-none disabled:opacity-60"
+                                    style={{ background: '#f59e0b' }}
+                                >
+                                    {isRegenerating
+                                        ? t('account.twoFactor.manage.regenerating')
+                                        : t('account.twoFactor.manage.regenerate')
+                                    }
+                                </button>
+                            </div>
                         </div>
                     </div>
                 )}
