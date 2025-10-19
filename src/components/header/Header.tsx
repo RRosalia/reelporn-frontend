@@ -146,11 +146,11 @@ function Header() {
                                 {languages.find(l => l.code === locale)?.flag} {languages.find(l => l.code === locale)?.code.toUpperCase()}
                             </button>
                             {showLanguageMenu && (
-                                <ul className="absolute right-0 mt-2 w-48 bg-white rounded shadow-lg z-50">
+                                <ul className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-700 overflow-hidden">
                                     {languages.map((lang) => (
                                         <li key={lang.code}>
                                             <button
-                                                className={`w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors cursor-pointer ${locale === lang.code ? 'bg-pink-500 text-white hover:bg-pink-600' : 'text-gray-900'}`}
+                                                className={`w-full text-left px-4 py-2 hover:bg-gray-700 transition-colors cursor-pointer ${locale === lang.code ? 'bg-pink-500 text-white hover:bg-pink-600' : 'text-gray-100'}`}
                                                 onClick={() => handleLanguageChange(lang.code)}
                                             >
                                                 {lang.flag} {lang.name}

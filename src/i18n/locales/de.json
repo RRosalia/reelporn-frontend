@@ -213,6 +213,7 @@
   },
   "signup": {
     "title": "Wählen Sie Ihre Mitgliedschaft",
+    "name": "Vollständiger Name",
     "username": "Benutzername",
     "email": "E-Mail-Adresse",
     "password": "Passwort",
@@ -222,6 +223,8 @@
     "paypal": "PayPal",
     "crypto": "Kryptowährung",
     "submit": "Registrierung Abschließen",
+    "processing": "Wird verarbeitet...",
+    "createAccount": "Konto Erstellen",
     "subscribeFor": "Abonnieren für",
     "selectPlan": "Wählen Sie einen Plan",
     "cancel": "Abbrechen",
@@ -443,8 +446,12 @@
     "serverNotice": "Bitte versuchen Sie es später erneut. Unsere Ingenieure wurden benachrichtigt und arbeiten daran, dieses Problem so schnell wie möglich zu beheben."
   },
   "subscriptions": {
-    "title": "Wählen Sie Ihr Erlebnis",
-    "subtitle": "Schalten Sie Premium-Funktionen und exklusive Inhalte frei",
+    "meta": {
+      "title": "Premium-Abonnementpläne - Exklusive Inhalte Freischalten | ReelPorn",
+      "description": "Schalten Sie Premium-Funktionen und exklusive Inhalte mit unseren Abonnementplänen frei. Sichere Kryptowährungszahlungen für Ihre Privatsphäre."
+    },
+    "title": "Premium-Abonnementpläne",
+    "subtitle": "Exklusive Inhalte und Premium-Funktionen freischalten",
     "billing": {
       "monthly": "Monatlich",
       "yearly": "Jährlich",
@@ -470,17 +477,13 @@
         "question": "Kann ich jederzeit den Plan wechseln?",
         "answer": "Ja! Sie können Ihr Abonnement jederzeit upgraden oder downgraden. Änderungen treten bei Ihrem nächsten Abrechnungszyklus in Kraft."
       },
-      "freeTrial": {
-        "question": "Gibt es eine kostenlose Testversion?",
-        "answer": "Neue Benutzer erhalten 7 Tage kostenlose Premium-Testversion. Keine Kreditkarte erforderlich zum Starten."
-      },
       "cancel": {
         "question": "Wie kann ich kündigen?",
         "answer": "Sie können Ihr Abonnement jederzeit in Ihren Kontoeinstellungen kündigen. Sie behalten den Zugriff bis zum Ende Ihres Abrechnungszeitraums."
       },
       "payment": {
         "question": "Welche Zahlungsmethoden werden akzeptiert?",
-        "answer": "Wir akzeptieren alle gängigen Kreditkarten, PayPal und Kryptowährung für Ihre Privatsphäre."
+        "answer": "Wir akzeptieren Kryptowährungszahlungen für Ihre Privatsphäre und Sicherheit."
       }
     },
     "guarantee": {
@@ -1206,6 +1209,17 @@
     "cancelPayment": "Zahlung abbrechen",
     "awaitingPayment": "Warte auf Zahlung",
     "paymentCompleted": "Zahlung abgeschlossen!",
+    "expired": {
+      "title": "Zahlung Abgelaufen",
+      "message": "Diese Zahlung ist abgelaufen. Möchten Sie eine neue Zahlung erstellen, um Ihren Kauf abzuschließen?",
+      "retryButton": "Zahlung Wiederholen",
+      "creatingPayment": "Neue Zahlung Erstellen...",
+      "returnHome": "Zurück zur Startseite"
+    },
+    "earlyRetry": {
+      "button": "Neue Zahlung Starten",
+      "message": "Zahlung läuft bald ab? Starten Sie jetzt eine neue."
+    },
     "paymentFailed": "Zahlung fehlgeschlagen",
     "paymentCancelled": "Zahlung abgebrochen",
     "failedToLoadData": "Zahlungsdaten konnten nicht geladen werden",
@@ -1224,5 +1238,93 @@
   },
   "common": {
     "cancel": "Abbrechen"
+  },
+  "checkout": {
+    "title": "Kauf Abschließen",
+    "selectPaymentMethod": "Zahlungsmethode Wählen",
+    "reviewPayment": "Zahlung Überprüfen",
+    "loading": "Laden...",
+    "loadingPlan": "Plan-Details laden...",
+    "processing": "Wird verarbeitet...",
+    "cancel": "Abbrechen",
+    "back": "Zurück",
+    "backToSubscriptions": "Zurück zu Abonnements",
+    "confirmPayment": "Zahlung Bestätigen",
+    "tryAgain": "Erneut Versuchen",
+    "minAmount": "Min",
+    "orderSummary": "Bestellübersicht",
+    "paymentDetails": "Zahlungsdetails",
+    "paymentMethod": "Zahlungsmethode",
+    "amountUsd": "Betrag (USD)",
+    "amountCrypto": "Betrag (Krypto)",
+    "exchangeRate": "Wechselkurs",
+    "status": {
+      "awaitingPayment": "Warte auf Zahlung",
+      "completed": "Zahlung Abgeschlossen!",
+      "expired": "Zahlung Abgelaufen",
+      "failed": "Zahlung Fehlgeschlagen",
+      "sendPayment": "Zahlung Senden",
+      "paymentAddress": "Zahlungsadresse",
+      "exactAmount": "Exakter Zu Sendender Betrag",
+      "confirmations": "Bestätigungen",
+      "expiresIn": "Läuft ab in",
+      "subscriptionActivated": "Abonnement Aktiviert!",
+      "thankYou": "Vielen Dank für Ihren Kauf. Ihr Abonnement ist jetzt aktiv.",
+      "paymentExpired": "Diese Zahlung ist abgelaufen. Bitte starten Sie eine neue Zahlung.",
+      "paymentFailed": "Zahlung fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode."
+    },
+    "error": {
+      "title": "Fehler",
+      "planNotFound": "Plan nicht gefunden. Bitte wählen Sie einen gültigen Abonnementplan.",
+      "planNotFoundTitle": "Hoppla! Dieser Plan Ist Nicht Verfügbar",
+      "planNotFoundDescription": "Der von Ihnen gesuchte Abonnementplan existiert nicht oder ist nicht mehr verfügbar. Keine Sorge, wir haben andere großartige Optionen für Sie!",
+      "alternativePlans": "Sehen Sie Sich Diese Beliebten Pläne An",
+      "selectPlan": "Diesen Plan Wählen",
+      "viewAllPlans": "Alle Pläne Ansehen",
+      "goBack": "Zurück"
+    }
+  },
+  "videos": {
+    "loading": "Video wird geladen...",
+    "error": "Fehler beim Laden des Videos",
+    "notFound": "Video nicht gefunden",
+    "notFoundTitle": "Video Nicht Gefunden oder Gelöscht",
+    "notFoundDescription": "Dieses Video wurde möglicherweise entfernt, gelöscht oder der Link ist falsch.",
+    "goBack": "Zurück",
+    "goHome": "Zur Startseite",
+    "suggestions": "Vorschläge:",
+    "suggestionCheckUrl": "Überprüfen Sie, ob die URL korrekt ist",
+    "suggestionVideoDeleted": "Das Video wurde möglicherweise vom Ersteller gelöscht",
+    "suggestionBrowseCategories": "Durchsuchen Sie unsere Kategorien, um ähnliche Inhalte zu finden",
+    "premium": "Premium",
+    "videoNotSupported": "Ihr Browser unterstützt das Video-Tag nicht.",
+    "views": "Aufrufe",
+    "likes": "Likes",
+    "comments": "Kommentare",
+    "uploadedMinutesAgo": "vor {minutes}m",
+    "uploadedHoursAgo": "vor {hours}h",
+    "uploadedDaysAgo": "vor {days}T",
+    "uploadedMonthsAgo": "vor {months}M",
+    "uploadedYearsAgo": "vor {years}J",
+    "subscribe": "Abonnieren",
+    "description": "Beschreibung",
+    "category": "Kategorie",
+    "tags": "Tags",
+    "like": "Gefällt mir",
+    "liked": "Gefällt mir",
+    "share": "Teilen",
+    "report": "Melden",
+    "relatedVideos": "Ähnliche Videos",
+    "tryTheseVideos": "Probieren Sie Diese Videos",
+    "linkCopied": "Link in Zwischenablage kopiert!",
+    "loginToLike": "Gefällt Ihnen dieses Video?",
+    "loginToLikeDescription": "Erstellen Sie ein kostenloses Konto oder melden Sie sich an, um Videos zu liken und Ihre Favoritensammlung aufzubauen."
+  },
+  "authModal": {
+    "defaultTitle": "Anmeldung Erforderlich",
+    "defaultMessage": "Bitte melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.",
+    "login": "Anmelden",
+    "register": "Konto Erstellen",
+    "maybeLater": "Vielleicht Später"
   }
 }

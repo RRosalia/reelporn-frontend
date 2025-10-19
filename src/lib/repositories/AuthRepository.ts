@@ -7,11 +7,50 @@ interface LoginResponse {
 }
 
 interface RegisterData {
+  name: string;
   email: string;
   password: string;
   password_confirmation: string;
-  name?: string;
-  [key: string]: any;
+  plan_id?: number;
+  payment_method?: string;
+  payment_options?: {
+    currency?: string;
+  };
+}
+
+interface RegisterUser {
+  id: string;
+  name: string;
+  email: string;
+  created_at: string;
+}
+
+interface RegisterPaymentCrypto {
+  currency: string;
+  amount: string;
+  payment_address: string;
+  exchange_rate_cents: number;
+  exchange_rate_usd: number;
+  required_confirmations: number;
+}
+
+interface RegisterPayment {
+  payment_id: string;
+  status: string;
+  amount_cents: number;
+  amount_usd: number;
+  payment_method: string;
+  expires_at: string;
+  crypto?: RegisterPaymentCrypto;
+}
+
+interface RegisterResponse {
+  data: {
+    user: RegisterUser;
+    token: string;
+    requires_payment: boolean;
+    payment?: RegisterPayment;
+  };
 }
 
 interface ResetPasswordData {
@@ -40,11 +79,11 @@ class AuthRepository {
   }
 
   /**
-   * Register new user
-   * @param {RegisterData} userData
-   * @returns {Promise<any>} Response data
+   * Register new user with optional plan and payment details
+   * @param {RegisterData} userData - User registration data including optional payment info
+   * @returns {Promise<RegisterResponse>} Response data containing user, token, and optional payment details
    */
-  async register(userData: RegisterData): Promise<any> {
+  async register(userData: RegisterData): Promise<RegisterResponse> {
     const response = await apiClient.post('/register', userData);
     return response.data;
   }
@@ -98,3 +137,14 @@ class AuthRepository {
 }
 
 export default new AuthRepository();
+
+// Export types for use in components
+export type {
+  LoginResponse,
+  RegisterData,
+  RegisterUser,
+  RegisterPayment,
+  RegisterPaymentCrypto,
+  RegisterResponse,
+  ResetPasswordData,
+};

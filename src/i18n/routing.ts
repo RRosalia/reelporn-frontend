@@ -86,6 +86,12 @@ export const routing = defineRouting({
       de: '/zahlung/krypto',
       fr: '/paiement/crypto'
     },
+    '/payment/[id]': {
+      en: '/payment/[id]',
+      nl: '/betaling/[id]',
+      de: '/zahlung/[id]',
+      fr: '/paiement/[id]'
+    },
     '/error-codes/[code]': '/error-codes/[code]',
   }
 });

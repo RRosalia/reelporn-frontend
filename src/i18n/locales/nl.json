@@ -213,6 +213,7 @@
   },
   "signup": {
     "title": "Kies Uw Lidmaatschap",
+    "name": "Volledige Naam",
     "username": "Gebruikersnaam",
     "email": "E-mailadres",
     "password": "Wachtwoord",
@@ -222,6 +223,8 @@
     "paypal": "PayPal",
     "crypto": "Cryptocurrency",
     "submit": "Registratie Voltooien",
+    "processing": "Verwerken...",
+    "createAccount": "Account Aanmaken",
     "subscribeFor": "Abonneren voor",
     "selectPlan": "Selecteer een abonnement",
     "cancel": "Annuleren",
@@ -443,8 +446,12 @@
     "serverNotice": "Probeer het later opnieuw. Onze ingenieurs zijn op de hoogte gebracht en werken aan een oplossing voor dit probleem zo snel mogelijk."
   },
   "subscriptions": {
-    "title": "Kies Uw Ervaring",
-    "subtitle": "Ontgrendel premium functies en exclusieve inhoud",
+    "meta": {
+      "title": "Premium Abonnementen - Ontgrendel Exclusieve Inhoud | ReelPorn",
+      "description": "Ontgrendel premium functies en exclusieve inhoud met onze abonnementen. Veilige cryptocurrency betalingen voor uw privacy."
+    },
+    "title": "Premium Abonnementen",
+    "subtitle": "Ontgrendel exclusieve inhoud en premium functies",
     "billing": {
       "monthly": "Maandelijks",
       "yearly": "Jaarlijks",
@@ -470,17 +477,13 @@
         "question": "Kan ik op elk moment van abonnement wisselen?",
         "answer": "Ja! U kunt uw abonnement op elk moment upgraden of downgraden. Wijzigingen worden van kracht bij uw volgende factureringscyclus."
       },
-      "freeTrial": {
-        "question": "Is er een gratis proefperiode?",
-        "answer": "Nieuwe gebruikers krijgen 7 dagen gratis Premium proefperiode. Geen creditcard vereist om te starten."
-      },
       "cancel": {
         "question": "Hoe kan ik opzeggen?",
         "answer": "U kunt uw abonnement op elk moment opzeggen via uw accountinstellingen. U behoudt toegang tot het einde van uw factureringsperiode."
       },
       "payment": {
         "question": "Welke betaalmethoden worden geaccepteerd?",
-        "answer": "We accepteren alle belangrijke creditcards, PayPal en cryptocurrency voor uw privacy."
+        "answer": "We accepteren cryptocurrency betalingen voor uw privacy en veiligheid."
       }
     },
     "guarantee": {
@@ -1206,6 +1209,17 @@
     "cancelPayment": "Betaling Annuleren",
     "awaitingPayment": "Wachten op Betaling",
     "paymentCompleted": "Betaling Voltooid!",
+    "expired": {
+      "title": "Betaling Verlopen",
+      "message": "Deze betaling is verlopen. Wilt u een nieuwe betaling aanmaken om uw aankoop te voltooien?",
+      "retryButton": "Betaling Opnieuw Proberen",
+      "creatingPayment": "Nieuwe Betaling Aanmaken...",
+      "returnHome": "Terug naar Home"
+    },
+    "earlyRetry": {
+      "button": "Nieuwe Betaling Starten",
+      "message": "Betaling verloopt binnenkort? Start nu een nieuwe."
+    },
     "paymentFailed": "Betaling Mislukt",
     "paymentCancelled": "Betaling Geannuleerd",
     "failedToLoadData": "Kon betalingsgegevens niet laden",
@@ -1224,5 +1238,93 @@
   },
   "common": {
     "cancel": "Annuleren"
+  },
+  "checkout": {
+    "title": "Voltooi Uw Aankoop",
+    "selectPaymentMethod": "Selecteer Betaalmethode",
+    "reviewPayment": "Controleer Betaling",
+    "loading": "Laden...",
+    "loadingPlan": "Plan details laden...",
+    "processing": "Verwerken...",
+    "cancel": "Annuleren",
+    "back": "Terug",
+    "backToSubscriptions": "Terug naar Abonnementen",
+    "confirmPayment": "Bevestig Betaling",
+    "tryAgain": "Opnieuw Proberen",
+    "minAmount": "Min",
+    "orderSummary": "Besteloverzicht",
+    "paymentDetails": "Betalingsdetails",
+    "paymentMethod": "Betaalmethode",
+    "amountUsd": "Bedrag (USD)",
+    "amountCrypto": "Bedrag (Crypto)",
+    "exchangeRate": "Wisselkoers",
+    "status": {
+      "awaitingPayment": "Wachten op Betaling",
+      "completed": "Betaling Voltooid!",
+      "expired": "Betaling Verlopen",
+      "failed": "Betaling Mislukt",
+      "sendPayment": "Betaling Versturen",
+      "paymentAddress": "Betaaladres",
+      "exactAmount": "Exact Te Versturen Bedrag",
+      "confirmations": "Bevestigingen",
+      "expiresIn": "Verloopt Over",
+      "subscriptionActivated": "Abonnement Geactiveerd!",
+      "thankYou": "Bedankt voor uw aankoop. Uw abonnement is nu actief.",
+      "paymentExpired": "Deze betaling is verlopen. Start een nieuwe betaling.",
+      "paymentFailed": "Betaling mislukt. Probeer opnieuw of gebruik een andere betaalmethode."
+    },
+    "error": {
+      "title": "Fout",
+      "planNotFound": "Plan niet gevonden. Selecteer een geldig abonnementsplan.",
+      "planNotFoundTitle": "Oeps! Dit Plan Is Niet Beschikbaar",
+      "planNotFoundDescription": "Het abonnementsplan dat u zoekt bestaat niet of is niet meer beschikbaar. Geen zorgen, we hebben andere geweldige opties voor u!",
+      "alternativePlans": "Bekijk Deze Populaire Plannen",
+      "selectPlan": "Selecteer Dit Plan",
+      "viewAllPlans": "Bekijk Alle Plannen",
+      "goBack": "Ga Terug"
+    }
+  },
+  "videos": {
+    "loading": "Video laden...",
+    "error": "Fout bij het laden van video",
+    "notFound": "Video niet gevonden",
+    "notFoundTitle": "Video Niet Gevonden of Verwijderd",
+    "notFoundDescription": "Deze video is mogelijk verwijderd, gewist of de link is onjuist.",
+    "goBack": "Ga Terug",
+    "goHome": "Ga naar Startpagina",
+    "suggestions": "Suggesties:",
+    "suggestionCheckUrl": "Controleer of de URL correct is",
+    "suggestionVideoDeleted": "De video is mogelijk verwijderd door de maker",
+    "suggestionBrowseCategories": "Blader door onze categorieën om vergelijkbare content te vinden",
+    "premium": "Premium",
+    "videoNotSupported": "Uw browser ondersteunt de video-tag niet.",
+    "views": "weergaven",
+    "likes": "likes",
+    "comments": "reacties",
+    "uploadedMinutesAgo": "{minutes}m geleden",
+    "uploadedHoursAgo": "{hours}u geleden",
+    "uploadedDaysAgo": "{days}d geleden",
+    "uploadedMonthsAgo": "{months}mnd geleden",
+    "uploadedYearsAgo": "{years}j geleden",
+    "subscribe": "Abonneren",
+    "description": "Beschrijving",
+    "category": "Categorie",
+    "tags": "Tags",
+    "like": "Leuk vinden",
+    "liked": "Vind ik leuk",
+    "share": "Delen",
+    "report": "Rapporteren",
+    "relatedVideos": "Gerelateerde Video's",
+    "tryTheseVideos": "Probeer Deze Video's",
+    "linkCopied": "Link gekopieerd naar klembord!",
+    "loginToLike": "Vind je deze video leuk?",
+    "loginToLikeDescription": "Maak een gratis account aan of log in om video's leuk te vinden en je favorieten collectie op te bouwen."
+  },
+  "authModal": {
+    "defaultTitle": "Inloggen Vereist",
+    "defaultMessage": "Log in of maak een account aan om verder te gaan.",
+    "login": "Inloggen",
+    "register": "Account Aanmaken",
+    "maybeLater": "Misschien Later"
   }
 }

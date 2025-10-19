@@ -96,6 +96,7 @@
   },
   "signup": {
     "title": "Choisissez votre abonnement",
+    "name": "Nom Complet",
     "username": "Nom d'utilisateur",
     "email": "Adresse e-mail",
     "password": "Mot de passe",
@@ -105,6 +106,8 @@
     "paypal": "PayPal",
     "crypto": "Cryptomonnaie",
     "submit": "Finaliser l'inscription",
+    "processing": "Traitement...",
+    "createAccount": "Créer un Compte",
     "subscribeFor": "S'abonner pour",
     "selectPlan": "Sélectionnez un plan",
     "cancel": "Annuler",
@@ -1154,6 +1157,17 @@
     "cancelPayment": "Annuler le Paiement",
     "awaitingPayment": "En Attente de Paiement",
     "paymentCompleted": "Paiement Terminé!",
+    "expired": {
+      "title": "Paiement Expiré",
+      "message": "Ce paiement a expiré. Souhaitez-vous créer un nouveau paiement pour finaliser votre achat ?",
+      "retryButton": "Réessayer le Paiement",
+      "creatingPayment": "Création d'un Nouveau Paiement...",
+      "returnHome": "Retour à l'Accueil"
+    },
+    "earlyRetry": {
+      "button": "Démarrer un Nouveau Paiement",
+      "message": "Paiement expire bientôt ? Démarrez-en un nouveau maintenant."
+    },
     "paymentFailed": "Paiement Échoué",
     "paymentCancelled": "Paiement Annulé",
     "failedToLoadData": "Impossible de charger les données de paiement",
@@ -1170,7 +1184,147 @@
       "cancelled": "Annulé"
     }
   },
+  "subscriptions": {
+    "meta": {
+      "title": "Plans d'Abonnement Premium - Débloquer du Contenu Exclusif | ReelPorn",
+      "description": "Débloquez des fonctionnalités premium et du contenu exclusif avec nos plans d'abonnement. Paiements en cryptomonnaie sécurisés pour votre confidentialité."
+    },
+    "title": "Plans d'Abonnement Premium",
+    "subtitle": "Débloquez du contenu exclusif et des fonctionnalités premium",
+    "billing": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "saveUpTo": "Économisez jusqu'à 40%"
+    },
+    "price": {
+      "perMonth": "/mois",
+      "billedYearly": "facturé annuellement",
+      "free": "Gratuit",
+      "forever": "Pour Toujours"
+    },
+    "button": {
+      "getCurrentPlan": "Plan Actuel",
+      "getStarted": "Commencer"
+    },
+    "comparison": {
+      "title": "Comparaison Détaillée des Fonctionnalités",
+      "feature": "Fonctionnalité"
+    },
+    "faq": {
+      "title": "FAQ sur les Abonnements",
+      "changePlans": {
+        "question": "Puis-je changer de plan à tout moment ?",
+        "answer": "Oui ! Vous pouvez mettre à niveau ou rétrograder votre abonnement à tout moment. Les modifications prennent effet lors de votre prochain cycle de facturation."
+      },
+      "cancel": {
+        "question": "Comment puis-je annuler ?",
+        "answer": "Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de votre compte. Vous conserverez l'accès jusqu'à la fin de votre période de facturation."
+      },
+      "payment": {
+        "question": "Quelles méthodes de paiement sont acceptées ?",
+        "answer": "Nous acceptons les paiements en cryptomonnaie pour votre confidentialité et votre sécurité."
+      }
+    },
+    "guarantee": {
+      "title": "Garantie de Remboursement de 30 Jours",
+      "description": "Pas satisfait ? Obtenez un remboursement complet dans les 30 jours, sans poser de questions."
+    },
+    "loading": "Chargement des plans d'abonnement...",
+    "error": {
+      "title": "Impossible de Charger les Plans",
+      "description": "Nous n'avons pas pu charger les plans d'abonnement. Veuillez réessayer plus tard.",
+      "retry": "Réessayer"
+    }
+  },
   "common": {
     "cancel": "Annuler"
+  },
+  "checkout": {
+    "title": "Finaliser Votre Achat",
+    "selectPaymentMethod": "Sélectionner le Mode de Paiement",
+    "reviewPayment": "Vérifier le Paiement",
+    "loading": "Chargement...",
+    "loadingPlan": "Chargement des détails du plan...",
+    "processing": "Traitement...",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "backToSubscriptions": "Retour aux Abonnements",
+    "confirmPayment": "Confirmer le Paiement",
+    "tryAgain": "Réessayer",
+    "minAmount": "Min",
+    "orderSummary": "Résumé de la Commande",
+    "paymentDetails": "Détails du Paiement",
+    "paymentMethod": "Mode de Paiement",
+    "amountUsd": "Montant (USD)",
+    "amountCrypto": "Montant (Crypto)",
+    "exchangeRate": "Taux de Change",
+    "status": {
+      "awaitingPayment": "En Attente de Paiement",
+      "completed": "Paiement Terminé !",
+      "expired": "Paiement Expiré",
+      "failed": "Paiement Échoué",
+      "sendPayment": "Envoyer le Paiement",
+      "paymentAddress": "Adresse de Paiement",
+      "exactAmount": "Montant Exact à Envoyer",
+      "confirmations": "Confirmations",
+      "expiresIn": "Expire Dans",
+      "subscriptionActivated": "Abonnement Activé !",
+      "thankYou": "Merci pour votre achat. Votre abonnement est maintenant actif.",
+      "paymentExpired": "Ce paiement a expiré. Veuillez démarrer un nouveau paiement.",
+      "paymentFailed": "Le paiement a échoué. Veuillez réessayer ou utiliser un autre mode de paiement."
+    },
+    "error": {
+      "title": "Erreur",
+      "planNotFound": "Plan introuvable. Veuillez sélectionner un plan d'abonnement valide.",
+      "planNotFoundTitle": "Oups ! Ce Plan N'est Pas Disponible",
+      "planNotFoundDescription": "Le plan d'abonnement que vous recherchez n'existe pas ou n'est plus disponible. Ne vous inquiétez pas, nous avons d'autres excellentes options pour vous !",
+      "alternativePlans": "Découvrez Ces Plans Populaires",
+      "selectPlan": "Sélectionner Ce Plan",
+      "viewAllPlans": "Voir Tous Les Plans",
+      "goBack": "Retour"
+    }
+  },
+  "videos": {
+    "loading": "Chargement de la vidéo...",
+    "error": "Erreur lors du chargement de la vidéo",
+    "notFound": "Vidéo introuvable",
+    "notFoundTitle": "Vidéo Introuvable ou Supprimée",
+    "notFoundDescription": "Cette vidéo a peut-être été supprimée ou le lien est incorrect.",
+    "goBack": "Retour",
+    "goHome": "Accueil",
+    "suggestions": "Suggestions :",
+    "suggestionCheckUrl": "Vérifiez que l'URL est correcte",
+    "suggestionVideoDeleted": "La vidéo a peut-être été supprimée par le créateur",
+    "suggestionBrowseCategories": "Parcourez nos catégories pour trouver un contenu similaire",
+    "premium": "Premium",
+    "videoNotSupported": "Votre navigateur ne supporte pas la balise vidéo.",
+    "views": "vues",
+    "likes": "j'aime",
+    "comments": "commentaires",
+    "uploadedMinutesAgo": "il y a {minutes}m",
+    "uploadedHoursAgo": "il y a {hours}h",
+    "uploadedDaysAgo": "il y a {days}j",
+    "uploadedMonthsAgo": "il y a {months}mois",
+    "uploadedYearsAgo": "il y a {years}ans",
+    "subscribe": "S'abonner",
+    "description": "Description",
+    "category": "Catégorie",
+    "tags": "Tags",
+    "like": "J'aime",
+    "liked": "Aimé",
+    "share": "Partager",
+    "report": "Signaler",
+    "relatedVideos": "Vidéos Similaires",
+    "tryTheseVideos": "Essayez Ces Vidéos",
+    "linkCopied": "Lien copié dans le presse-papiers !",
+    "loginToLike": "Vous aimez cette vidéo ?",
+    "loginToLikeDescription": "Créez un compte gratuit ou connectez-vous pour aimer des vidéos et créer votre collection de favoris."
+  },
+  "authModal": {
+    "defaultTitle": "Connexion Requise",
+    "defaultMessage": "Veuillez vous connecter ou créer un compte pour continuer.",
+    "login": "Se Connecter",
+    "register": "Créer un Compte",
+    "maybeLater": "Peut-être Plus Tard"
   }
 }

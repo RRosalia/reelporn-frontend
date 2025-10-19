@@ -8,6 +8,13 @@ export enum PaymentStatus {
   CANCELLED = 'cancelled',
 }
 
+export enum PeriodicityType {
+  DAY = 'day',
+  WEEK = 'week',
+  MONTH = 'month',
+  YEAR = 'year',
+}
+
 /**
  * Cryptocurrency configuration from backend
  */
@@ -73,7 +80,8 @@ export interface SubscriptionPlan {
   description: string;
   price: number;
   currency: string;
-  duration: number;
+  periodicity: number;
+  periodicity_type: PeriodicityType;
   features: string[];
 }
 
@@ -98,4 +106,260 @@ export interface PaymentContextType {
   checkPaymentStatus: (transactionId: string) => Promise<PaymentStatusUpdate>;
   loadSupportedCurrencies: () => Promise<void>;
   loadCryptoPrices: () => Promise<void>;
+}
+
+/**
+ * Feature associated with a subscription plan
+ */
+export interface PlanFeature {
+  id: number;
+  name: string;
+  consumable: boolean;
+  quota: number | null;
+  periodicity_type: PeriodicityType;
+  periodicity: number;
+  postpaid: boolean;
+  created_at: string;
+  updated_at: string;
+  pivot?: {
+    charges?: number;
+  };
+}
+
+/**
+ * Subscription plan with features
+ */
+export interface Plan {
+  id: number;
+  name: string;
+  plan_group: string;
+  price: string;
+  periodicity_type: PeriodicityType;
+  periodicity: number;
+  grace_days: number;
+  features: PlanFeature[];
+  created_at: string;
+  updated_at: string;
+}
+
+/**
+ * Grouped plans by plan group (free, basic, premium, etc.)
+ */
+export interface GroupedPlans {
+  group: string;
+  plans: Plan[];
+}
+
+/**
+ * Response from GET /subscription-plans
+ */
+export interface SubscriptionPlansResponse {
+  data: Plan[];
+  grouped: GroupedPlans[];
+}
+
+/**
+ * User subscription
+ */
+export interface Subscription {
+  id: number;
+  plan: Plan;
+  started_at: string;
+  expired_at: string;
+  canceled_at: string | null;
+  grace_days_ended_at: string | null;
+  suppressed_at: string | null;
+  was_switched: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+/**
+ * Checkout & Payment Types
+ */
+
+/**
+ * Payment method from GET /checkout/payment-methods
+ */
+export interface PaymentMethod {
+  code: string; // e.g., 'BTC', 'ETH'
+  name: string; // e.g., 'Bitcoin', 'Ethereum'
+  network: string; // e.g., 'mainnet', 'ERC20'
+  required_confirmations: number;
+  min_amount: number;
+  max_amount: number;
+}
+
+/**
+ * Response from GET /checkout/payment-methods
+ */
+export interface PaymentMethodsResponse {
+  data: PaymentMethod[];
+  total: number;
+}
+
+/**
+ * Payable item in checkout preview/confirmation
+ */
+export interface CheckoutPayable {
+  type: string; // e.g., 'plan'
+  id: number;
+  name: string;
+  price_cents: number;
+  price_usd: number;
+  interval?: string; // e.g., 'monthly', 'yearly'
+}
+
+/**
+ * Crypto details in checkout preview/confirmation
+ */
+export interface CheckoutCryptoDetails {
+  currency: string; // e.g., 'BTC'
+  amount: string; // Crypto amount as string
+  exchange_rate_cents: number;
+  exchange_rate_usd: number;
+}
+
+/**
+ * Payment details in checkout preview
+ */
+export interface CheckoutPaymentDetails {
+  method: string; // e.g., 'crypto'
+  amount_cents: number;
+  amount_usd: number;
+  crypto?: CheckoutCryptoDetails;
+}
+
+/**
+ * Request body for POST /checkout/preview and POST /checkout/confirm
+ */
+export interface CheckoutRequest {
+  payable_type: string; // e.g., 'plan'
+  payable_id: number;
+  payment_method: string; // e.g., 'crypto'
+  options: {
+    currency: string; // e.g., 'BTC'
+  };
+}
+
+/**
+ * Response from POST /checkout/preview
+ */
+export interface CheckoutPreviewResponse {
+  payable: CheckoutPayable;
+  payment: CheckoutPaymentDetails;
+  preview_expires_in_seconds: number;
+  message: string;
+}
+
+/**
+ * Payment record from checkout confirmation
+ */
+export interface CheckoutPayment {
+  id: string; // UUID
+  user_id: string; // UUID
+  payable_type: string;
+  payable_id: number;
+  payment_method: string;
+  amount_cents: number;
+  amount_usd: number;
+  status: string; // 'pending', 'completed', 'expired', etc.
+  expires_at: string;
+  completed_at: string | null;
+  created_at: string;
+  updated_at?: string;
+}
+
+/**
+ * Crypto details for confirmed payment
+ */
+export interface ConfirmedCryptoDetails {
+  currency: string;
+  amount_crypto: string;
+  payment_address: string;
+  transaction_hash: string | null;
+  exchange_rate_cents: number;
+  exchange_rate_usd: number;
+  required_confirmations: number;
+  confirmations: number;
+  status: string;
+  confirmed_at: string | null;
+}
+
+/**
+ * Payment instructions after confirmation
+ */
+export interface PaymentInstructions {
+  message: string;
+  expires_in_minutes: number;
+  qr_code_data: string;
+}
+
+/**
+ * Response from POST /checkout/confirm
+ */
+export interface CheckoutConfirmResponse {
+  payment: CheckoutPayment;
+  crypto_details: ConfirmedCryptoDetails;
+  instructions: PaymentInstructions;
+}
+
+/**
+ * Subscription details in completed payment
+ */
+export interface PaymentSubscription {
+  id: number;
+  status: string;
+  started_at: string;
+}
+
+/**
+ * Response from GET /checkout/payments/{id}
+ */
+export interface CheckoutPaymentStatusResponse {
+  payment: CheckoutPayment;
+  crypto_details: ConfirmedCryptoDetails;
+  payable: CheckoutPayable;
+  subscription?: PaymentSubscription;
+}
+
+/**
+ * Payment status polling response (simplified for /checkout/payments/{id})
+ * Used in payment status page
+ * This is the ACTUAL response structure from the API
+ */
+export interface PaymentStatusPollResponse {
+  payment_id: number;
+  status: 'pending' | 'processing' | 'completed' | 'failed' | 'expired' | 'cancelled';
+  amount_cents: number;
+  currency: string; // e.g., 'USD'
+  payment_method: string;
+  created_at: string;
+  expires_at: string;
+  completed_at: string | null;
+  crypto?: {
+    currency: string;
+    network: string;
+    amount: string;
+    payment_address: string;
+    exchange_rate_cents: number;
+    transaction_hash: string | null;
+    confirmations: number;
+    required_confirmations: number;
+    qr_code_svg: string;
+    payment_uri: string;
+  };
+  subscription?: {
+    id: number;
+    status: string;
+    started_at: string;
+  };
+  payable?: {
+    type: string;
+    id: number;
+    name: string;
+    price_cents: number;
+    price_usd: number;
+    interval?: string;
+  };
 }

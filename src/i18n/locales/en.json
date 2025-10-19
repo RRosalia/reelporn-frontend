@@ -213,6 +213,7 @@
   },
   "signup": {
     "title": "Choose Your Membership",
+    "name": "Full Name",
     "username": "Username",
     "email": "Email Address",
     "password": "Password",
@@ -222,6 +223,8 @@
     "paypal": "PayPal",
     "crypto": "Cryptocurrency",
     "submit": "Complete Registration",
+    "processing": "Processing...",
+    "createAccount": "Create Account",
     "subscribeFor": "Subscribe for",
     "selectPlan": "Select a plan",
     "cancel": "Cancel",
@@ -443,8 +446,12 @@
     "serverNotice": "Please try again later. Our engineers have been notified and are working to resolve this issue as quickly as possible."
   },
   "subscriptions": {
-    "title": "Choose Your Experience",
-    "subtitle": "Unlock premium features and exclusive content",
+    "meta": {
+      "title": "Premium Subscription Plans - Unlock Exclusive Content | ReelPorn",
+      "description": "Unlock premium features and exclusive content with our subscription plans. Secure cryptocurrency payments for your privacy."
+    },
+    "title": "Premium Subscription Plans",
+    "subtitle": "Unlock exclusive content and premium features",
     "billing": {
       "monthly": "Monthly",
       "yearly": "Yearly",
@@ -470,17 +477,13 @@
         "question": "Can I change plans anytime?",
         "answer": "Yes! You can upgrade or downgrade your subscription at any time. Changes take effect at your next billing cycle."
       },
-      "freeTrial": {
-        "question": "Is there a free trial?",
-        "answer": "New users get 7 days free trial of Premium. No credit card required to start."
-      },
       "cancel": {
         "question": "How do I cancel?",
         "answer": "You can cancel your subscription anytime from your account settings. You'll keep access until the end of your billing period."
       },
       "payment": {
         "question": "What payment methods are accepted?",
-        "answer": "We accept all major credit cards, PayPal, and cryptocurrency for your privacy."
+        "answer": "We accept cryptocurrency payments for your privacy and security."
       }
     },
     "guarantee": {
@@ -1206,6 +1209,17 @@
     "cancelPayment": "Cancel Payment",
     "awaitingPayment": "Awaiting Payment",
     "paymentCompleted": "Payment Completed!",
+    "expired": {
+      "title": "Payment Expired",
+      "message": "This payment has expired. Would you like to create a new payment to complete your purchase?",
+      "retryButton": "Retry Payment",
+      "creatingPayment": "Creating New Payment...",
+      "returnHome": "Return to Home"
+    },
+    "earlyRetry": {
+      "button": "Start New Payment",
+      "message": "Payment expiring soon? Start a new one now."
+    },
     "paymentFailed": "Payment Failed",
     "paymentCancelled": "Payment Cancelled",
     "failedToLoadData": "Failed to load payment data",
@@ -1224,5 +1238,93 @@
   },
   "common": {
     "cancel": "Cancel"
+  },
+  "checkout": {
+    "title": "Complete Your Purchase",
+    "selectPaymentMethod": "Select Payment Method",
+    "reviewPayment": "Review Payment",
+    "loading": "Loading...",
+    "loadingPlan": "Loading plan details...",
+    "processing": "Processing...",
+    "cancel": "Cancel",
+    "back": "Back",
+    "backToSubscriptions": "Back to Subscriptions",
+    "confirmPayment": "Confirm Payment",
+    "tryAgain": "Try Again",
+    "minAmount": "Min",
+    "orderSummary": "Order Summary",
+    "paymentDetails": "Payment Details",
+    "paymentMethod": "Payment Method",
+    "amountUsd": "Amount (USD)",
+    "amountCrypto": "Amount (Crypto)",
+    "exchangeRate": "Exchange Rate",
+    "status": {
+      "awaitingPayment": "Awaiting Payment",
+      "completed": "Payment Completed!",
+      "expired": "Payment Expired",
+      "failed": "Payment Failed",
+      "sendPayment": "Send Payment",
+      "paymentAddress": "Payment Address",
+      "exactAmount": "Exact Amount to Send",
+      "confirmations": "Confirmations",
+      "expiresIn": "Expires In",
+      "subscriptionActivated": "Subscription Activated!",
+      "thankYou": "Thank you for your purchase. Your subscription is now active.",
+      "paymentExpired": "This payment has expired. Please start a new payment.",
+      "paymentFailed": "Payment failed. Please try again or use a different payment method."
+    },
+    "error": {
+      "title": "Error",
+      "planNotFound": "Plan not found. Please select a valid subscription plan.",
+      "planNotFoundTitle": "Oops! This Plan Is Not Available",
+      "planNotFoundDescription": "The subscription plan you're looking for doesn't exist or is no longer available. Don't worry, we have other great options for you!",
+      "alternativePlans": "Check Out These Popular Plans",
+      "selectPlan": "Select This Plan",
+      "viewAllPlans": "View All Plans",
+      "goBack": "Go Back"
+    }
+  },
+  "videos": {
+    "loading": "Loading video...",
+    "error": "Error loading video",
+    "notFound": "Video not found",
+    "notFoundTitle": "Video Not Found or Deleted",
+    "notFoundDescription": "This video may have been removed, deleted, or the link is incorrect.",
+    "goBack": "Go Back",
+    "goHome": "Go to Homepage",
+    "suggestions": "Suggestions:",
+    "suggestionCheckUrl": "Check if the URL is correct",
+    "suggestionVideoDeleted": "The video may have been deleted by the creator",
+    "suggestionBrowseCategories": "Browse our categories to find similar content",
+    "premium": "Premium",
+    "videoNotSupported": "Your browser does not support the video tag.",
+    "views": "views",
+    "likes": "likes",
+    "comments": "comments",
+    "uploadedMinutesAgo": "{minutes}m ago",
+    "uploadedHoursAgo": "{hours}h ago",
+    "uploadedDaysAgo": "{days}d ago",
+    "uploadedMonthsAgo": "{months}mo ago",
+    "uploadedYearsAgo": "{years}y ago",
+    "subscribe": "Subscribe",
+    "description": "Description",
+    "category": "Category",
+    "tags": "Tags",
+    "like": "Like",
+    "liked": "Liked",
+    "share": "Share",
+    "report": "Report",
+    "relatedVideos": "Related Videos",
+    "tryTheseVideos": "Try These Videos Instead",
+    "linkCopied": "Link copied to clipboard!",
+    "loginToLike": "Like this video?",
+    "loginToLikeDescription": "Create a free account or login to like videos and build your favorites collection."
+  },
+  "authModal": {
+    "defaultTitle": "Login Required",
+    "defaultMessage": "Please login or create an account to continue.",
+    "login": "Login",
+    "register": "Create Account",
+    "maybeLater": "Maybe Later"
   }
 }
