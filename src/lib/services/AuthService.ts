@@ -7,10 +7,10 @@ interface LoginResponse {
 }
 
 interface RegisterData {
+  name: string;
   email: string;
   password: string;
   password_confirmation: string;
-  name?: string;
   [key: string]: any;
 }
 
@@ -66,16 +66,16 @@ class AuthService {
     const response = await AuthRepository.register(userData);
 
     // Handle nested data structure ($.data.token)
-    const data = response.data || response;
+    const data = response.data;
 
     // Store token if present in response
-    const token = data.token || response.token;
+    const token = data.token;
     if (token) {
       this.setToken(token);
     }
 
     // Store user data if present
-    const user = data.user || response.user;
+    const user = data.user;
     if (user) {
       this.setUser(user);
     }
