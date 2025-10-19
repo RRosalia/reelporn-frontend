@@ -118,11 +118,11 @@ function Header() {
                                 {t('header.categories')}
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href="/pornstars">
                                 {t('pornstars.title')}
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href={"/blog" as any}>
                                 {t('blog.title')}

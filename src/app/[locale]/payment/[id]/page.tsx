@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import Echo from 'laravel-echo';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import { PaymentStatusPollResponse } from '@/types/Payment';
 
@@ -21,6 +22,7 @@ export default function PaymentStatusPage() {
   const [copiedAmount, setCopiedAmount] = useState(false);
   const [copiedAddress, setCopiedAddress] = useState(false);
   const [copiedUri, setCopiedUri] = useState(false);
+  const [copiedHash, setCopiedHash] = useState(false);
   const [showExpiredModal, setShowExpiredModal] = useState(false);
   const [isRetrying, setIsRetrying] = useState(false);
   const [retryError, setRetryError] = useState<string | null>(null);
@@ -32,21 +34,15 @@ export default function PaymentStatusPage() {
       const data = await CheckoutRepository.getPaymentStatus(paymentId);
       console.log('Payment status response:', data);
       if (data.crypto) {
-        console.log('Confirmations:', data.crypto.confirmations, '/', data.crypto.required_confirmations);
+        console.log('Confirmations:', data.crypto.confirmations, '- Min:', data.crypto.min_confirmations, '- Required:', data.crypto.required_confirmations);
       }
 
       setPaymentData(data);
       setError(null);
 
-      // If payment is completed, redirect to account page after 3 seconds
-      if (data?.status === 'completed' && data?.subscription) {
-        setTimeout(() => {
-          router.push('/account');
-        }, 3000);
-      }
-
       // Check if payment is expired based on expires_at timestamp
-      if (data?.expires_at) {
+      // Only show retry modal if payment is still in pending state
+      if (data?.expires_at && data?.status === 'pending') {
         const expiresAt = new Date(data.expires_at);
         const now = new Date();
         if (now.getTime() > expiresAt.getTime() && !showExpiredModal) {
@@ -61,7 +57,45 @@ export default function PaymentStatusPage() {
     }
   }, [paymentId, router, t]);
 
-  // Poll for payment status every 5 seconds
+  // Listen to Laravel Echo channel for real-time payment updates
+  useEffect(() => {
+    if (!paymentId) return;
+
+    // Get the global Echo instance
+    const echoInstance = (window as any).Echo;
+    if (!echoInstance) {
+      console.warn('[Echo] Echo instance not found on window');
+      return;
+    }
+
+    const channelName = `payments.${paymentId}`;
+    console.log('[Echo] Attempting to subscribe to PRIVATE channel:', channelName);
+    console.log('[Echo] Echo instance available:', !!echoInstance);
+    console.log('[Echo] Connector state:', echoInstance.connector?.pusher?.connection?.state);
+
+    const channel = echoInstance.private(channelName);
+
+    // Log channel subscription events
+    channel.subscribed(() => {
+      console.log('[Echo] ✅ Successfully subscribed to channel:', channelName);
+    });
+
+    channel.error((error: any) => {
+      console.error('[Echo] ❌ Channel subscription error:', error);
+    });
+
+    // TODO: Add event listeners here when events are defined
+
+    console.log('[Echo] Channel object created:', channel);
+    console.log('[Echo] Active channels:', Object.keys(echoInstance.connector?.channels || {}));
+
+    return () => {
+      console.log('[Echo] Unsubscribing from channel:', channelName);
+      echoInstance.leaveChannel(channelName);
+    };
+  }, [paymentId, fetchPaymentStatus]);
+
+  // Poll for payment status every 5 seconds (as fallback to Echo)
   useEffect(() => {
     fetchPaymentStatus();
 
@@ -113,9 +147,73 @@ export default function PaymentStatusPage() {
     return () => clearInterval(interval);
   }, [paymentData, showExpiredModal]);
 
-  const copyToClipboard = async (text: string, type: 'amount' | 'address' | 'uri') => {
+  // Track GTM ecommerce purchase event when payment is completed
+  useEffect(() => {
+    if (paymentData?.status === 'completed' && typeof window !== 'undefined' && window.dataLayer) {
+      // Send ecommerce purchase event
+      window.dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object
+      window.dataLayer.push({
+        event: 'purchase',
+        ecommerce: {
+          transaction_id: paymentId,
+          value: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0,
+          currency: 'USD',
+          payment_method: paymentData.payment_method || 'crypto',
+          items: [{
+            item_id: paymentData.payable?.id || paymentId,
+            item_name: paymentData.payable?.name || 'Subscription',
+            item_category: paymentData.payable?.type || 'subscription',
+            price: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0,
+            quantity: 1
+          }]
+        },
+        // Additional custom parameters
+        payment_id: paymentId,
+        crypto_currency: paymentData.crypto?.currency,
+        crypto_amount: paymentData.crypto?.amount,
+        transaction_hash: paymentData.crypto?.transaction_hash,
+        blockchain_url: paymentData.crypto?.blockchain_url,
+        subscription_id: paymentData.subscription?.id,
+        timestamp: new Date().toISOString()
+      });
+      console.log('GTM Ecommerce Purchase Event Tracked:', {
+        transaction_id: paymentId,
+        value: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0
+      });
+    }
+  }, [paymentData?.status, paymentId, paymentData]);
+
+  const copyToClipboard = async (text: string, type: 'amount' | 'address' | 'uri' | 'hash') => {
     try {
       await navigator.clipboard.writeText(text);
+
+      // Track GTM event for copy action
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        const eventData: any = {
+          event: 'payment_copy',
+          copy_type: type,
+          payment_id: paymentId,
+          payment_status: paymentData?.status || 'unknown',
+          payment_method: paymentData?.payment_method || 'crypto',
+          currency: paymentData?.crypto?.currency || 'unknown',
+          amount_usd: paymentData?.amount_cents ? (paymentData.amount_cents / 100).toFixed(2) : '0.00',
+          page_url: window.location.href,
+          timestamp: new Date().toISOString(),
+        };
+
+        // Add specific data based on copy type
+        if (type === 'amount' && paymentData?.crypto) {
+          eventData.crypto_amount = paymentData.crypto.amount;
+        } else if (type === 'address' && paymentData?.crypto) {
+          eventData.payment_address = paymentData.crypto.payment_address;
+        } else if (type === 'hash' && paymentData?.crypto) {
+          eventData.transaction_hash = paymentData.crypto.transaction_hash;
+        }
+
+        window.dataLayer.push(eventData);
+        console.log('GTM Event Tracked:', eventData);
+      }
+
       if (type === 'amount') {
         setCopiedAmount(true);
         setTimeout(() => setCopiedAmount(false), 2000);
@@ -125,6 +223,9 @@ export default function PaymentStatusPage() {
       } else if (type === 'uri') {
         setCopiedUri(true);
         setTimeout(() => setCopiedUri(false), 2000);
+      } else if (type === 'hash') {
+        setCopiedHash(true);
+        setTimeout(() => setCopiedHash(false), 2000);
       }
     } catch (err) {
       console.error('Failed to copy:', err);
@@ -168,6 +269,23 @@ export default function PaymentStatusPage() {
   };
 
   const handleWalletButtonClick = async (paymentUri: string, e: React.MouseEvent) => {
+    // Track GTM event for wallet button click
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'payment_wallet_open',
+        payment_id: paymentId,
+        payment_status: paymentData?.status || 'unknown',
+        payment_method: paymentData?.payment_method || 'crypto',
+        currency: paymentData?.crypto?.currency || 'unknown',
+        network: paymentData?.crypto?.network || 'unknown',
+        amount_usd: paymentData?.amount_cents ? (paymentData.amount_cents / 100).toFixed(2) : '0.00',
+        crypto_amount: paymentData?.crypto?.amount || '0',
+        page_url: window.location.href,
+        timestamp: new Date().toISOString(),
+      });
+      console.log('GTM Event Tracked: payment_wallet_open');
+    }
+
     // Try to open the wallet app
     window.location.href = paymentUri;
 
@@ -200,8 +318,9 @@ export default function PaymentStatusPage() {
     switch (status) {
       case 'completed':
         return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400';
-      case 'pending':
       case 'processing':
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400';
+      case 'pending':
         return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400';
       case 'failed':
       case 'expired':
@@ -244,33 +363,6 @@ export default function PaymentStatusPage() {
   }
 
   const { status, crypto, payable, subscription } = paymentData;
-
-  // Completed payment
-  if (status === 'completed') {
-    return (
-      <div className="flex items-center justify-center bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4 py-20">
-        <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
-          <div className="text-green-500 text-6xl mb-4">✓</div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('paymentCompleted')}
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Thank you for your {payable ? `subscription to ${payable.name}` : 'payment'}!
-          </p>
-          {subscription && (
-            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 mb-6">
-              <p className="text-sm text-green-800 dark:text-green-300">
-                Subscription #{subscription.id} activated on {new Date(subscription.started_at).toLocaleDateString()}
-              </p>
-            </div>
-          )}
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-            Redirecting to your account...
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   // Failed/Expired/Cancelled payment
   if (['failed', 'expired', 'cancelled'].includes(status)) {
@@ -355,14 +447,57 @@ export default function PaymentStatusPage() {
         </div>
       )}
 
-      <div className="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4 py-12">
         <div className="max-w-2xl mx-auto">
-        {/* Header */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-6">
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              {t('awaitingPayment')}
-            </h1>
+        {/* Progress Indicator */}
+        <div className="mb-8">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center justify-between relative">
+              {/* Step 1 - Completed */}
+              <div className="flex flex-col items-center z-10 relative">
+                <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2 shadow-lg">
+                  <i className="bi bi-check-lg text-white text-xl font-bold"></i>
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-white">{t('checkout.progress.step1', { defaultValue: 'Select Plan' })}</span>
+              </div>
+
+              {/* Connecting line */}
+              <div className={`absolute top-6 left-0 right-0 h-1 ${status === 'completed' ? 'bg-green-500' : 'bg-gradient-to-r from-green-500 via-green-500 to-pink-500'}`} style={{ zIndex: 0, width: '100%', transform: 'translateY(-50%)' }}></div>
+
+              {/* Step 2 - Completed */}
+              <div className="flex flex-col items-center z-10 relative">
+                <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2 shadow-lg">
+                  <i className="bi bi-check-lg text-white text-xl font-bold"></i>
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-white">{t('checkout.progress.step2', { defaultValue: 'Choose Payment' })}</span>
+              </div>
+
+              {/* Step 3 - Active or Completed */}
+              <div className="flex flex-col items-center z-10 relative">
+                {status === 'completed' ? (
+                  <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2 shadow-lg">
+                    <i className="bi bi-check-lg text-white text-xl font-bold"></i>
+                  </div>
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center mb-2 shadow-lg animate-pulse">
+                    <span className="text-white text-lg font-bold">3</span>
+                  </div>
+                )}
+                <span className={`text-xs md:text-sm font-semibold ${status === 'completed' ? 'text-white' : 'bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent'}`}>
+                  {t('checkout.progress.step3', { defaultValue: 'Confirm' })}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Header - Hide when completed */}
+        {status !== 'completed' && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-6">
+            <div className="text-center mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                {status === 'processing' ? t('processingPayment') : t('awaitingPayment')}
+              </h1>
             <div className="inline-flex items-center gap-2">
               <span className={`px-4 py-2 rounded-full text-sm font-semibold ${getStatusColor(status)}`}>
                 {t(`status.${status}`)}
@@ -429,9 +564,214 @@ export default function PaymentStatusPage() {
             </div>
           </div>
         </div>
+        )}
+
+        {/* Completed State */}
+        {status === 'completed' && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-6">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left Side - Image */}
+              <div className="relative bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-700 p-8 md:p-12 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-white/20 backdrop-blur-sm mb-6">
+                    <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {t('completed.welcome')}
+                  </h2>
+                  <p className="text-lg text-white/90">
+                    {t('completed.congratulations')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Side - Details */}
+              <div className="p-8 md:p-12">
+                <div className="mb-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full mb-4">
+                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <span className="text-sm font-semibold text-green-800 dark:text-green-400">
+                      {t('completed.subscriptionActive')}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    {t('completed.title')}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {t('completed.message')}
+                  </p>
+                </div>
+
+                {/* Transaction Details */}
+                {crypto && (
+                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                      {t('completed.transactionDetails')}
+                    </h4>
+
+                    {crypto.transaction_hash && (
+                      <div className="mb-4">
+                        <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-2">
+                          Transaction Hash
+                        </label>
+                        <code className="block font-mono text-xs text-gray-900 dark:text-white break-all bg-white dark:bg-gray-800 p-3 rounded">
+                          {crypto.transaction_hash}
+                        </code>
+                      </div>
+                    )}
+
+                    {crypto.blockchain_url && (
+                      <a
+                        href={crypto.blockchain_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        {t('completed.viewOnBlockchain')}
+                      </a>
+                    )}
+                  </div>
+                )}
+
+                {/* Action Button */}
+                <button
+                  onClick={() => router.push('/account')}
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all text-lg"
+                >
+                  {t('completed.goToAccount')}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Processing State */}
+        {status === 'processing' && crypto && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-6">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 mb-4">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-white"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                {t('processing.title')}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
+                {t('processing.message')}
+              </p>
+
+              {/* Transaction Hash */}
+              {crypto.transaction_hash && (
+                <div className="mb-6 bg-gray-50 dark:bg-gray-900 rounded-xl p-4">
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Transaction Hash {copiedHash && <span className="text-green-600 dark:text-green-400 text-xs ml-2">✓ Copied!</span>}
+                  </label>
+                  <code
+                    onClick={() => copyToClipboard(crypto.transaction_hash || '', 'hash')}
+                    className="block font-mono text-sm text-gray-900 dark:text-white break-all cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-3 p-2 rounded bg-white dark:bg-gray-800"
+                  >
+                    {crypto.transaction_hash}
+                  </code>
+                  {crypto.blockchain_url && (
+                    <a
+                      href={crypto.blockchain_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      View on Blockchain Explorer
+                    </a>
+                  )}
+                </div>
+              )}
+
+              {/* Confirmations - Combined Progress */}
+              <div className="mb-6">
+                <div className="flex justify-between items-center mb-2">
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    {t('confirmationProgress')}
+                  </label>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    {crypto.confirmations} / {crypto.required_confirmations}
+                  </span>
+                </div>
+
+                {/* Combined Progress Bar with Marker */}
+                <div className="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-2">
+                  {/* Progress Bar */}
+                  <div
+                    className="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full transition-all duration-500"
+                    style={{
+                      width: `${Math.min((crypto.confirmations / crypto.required_confirmations) * 100, 100)}%`,
+                    }}
+                  />
+
+                  {/* Min Confirmations Marker */}
+                  <div
+                    className="absolute top-0 bottom-0 w-1 bg-yellow-500 dark:bg-yellow-400 cursor-help group"
+                    style={{
+                      left: `${(crypto.min_confirmations / crypto.required_confirmations) * 100}%`,
+                      transform: 'translateX(-50%)',
+                    }}
+                    title="Payment confirmed at this point"
+                  >
+                    {/* Tooltip on hover */}
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-10 w-max max-w-xs">
+                      <div className="bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg px-3 py-2 shadow-lg">
+                        <div className="font-semibold mb-1">Payment Confirmed ({crypto.min_confirmations} confirmations)</div>
+                        <div className="text-gray-300 dark:text-gray-400">
+                          Your subscription will be activated when the transaction reaches this marker
+                        </div>
+                        {/* Arrow pointing down */}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
+                          <div className="border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Status Text */}
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {crypto.confirmations >= crypto.required_confirmations ? (
+                    <span className="text-green-600 dark:text-green-400 font-semibold">✓ Transaction is final and irreversible</span>
+                  ) : crypto.confirmations >= crypto.min_confirmations ? (
+                    <span className="text-green-600 dark:text-green-400 font-semibold">✓ Payment confirmed - You now have access! ({crypto.required_confirmations - crypto.confirmations} more for finality)</span>
+                  ) : (
+                    <span>{crypto.min_confirmations - crypto.confirmations} more confirmation(s) to activate your subscription</span>
+                  )}
+                </p>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      {t('processing.waiting')}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  {t('processing.safeToClose')}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Payment Instructions */}
-        {crypto && (
+        {crypto && status !== 'processing' && status !== 'completed' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
               Send Payment
@@ -512,23 +852,18 @@ export default function PaymentStatusPage() {
               </div>
             </div>
 
-            {/* Confirmations */}
-            <div className="mb-6">
-              <div className="flex justify-between items-center mb-2">
-                <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  {t('confirmationProgress')}
-                </label>
-                <span className="text-sm text-gray-600 dark:text-gray-400">
-                  {crypto.confirmations} / {crypto.required_confirmations}
-                </span>
-              </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full transition-all duration-500"
-                  style={{
-                    width: `${Math.min((crypto.confirmations / crypto.required_confirmations) * 100, 100)}%`,
-                  }}
-                />
+            {/* Network Warning */}
+            <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-xl p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="text-red-600 dark:text-red-400 text-xl mt-0.5">⚠️</div>
+                <div>
+                  <p className="text-sm font-semibold text-red-800 dark:text-red-300 mb-1">
+                    Only send {crypto.currency} via the {crypto.currency} network ({crypto.network || 'mainnet'}).
+                  </p>
+                  <p className="text-xs text-red-700 dark:text-red-400">
+                    Sending {crypto.currency} on any other network (BEP20, ERC20, TRC20, etc.) will result in loss of funds.
+                  </p>
+                </div>
               </div>
             </div>
 

@@ -31,7 +31,8 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   // State management
   const [currentStep, setCurrentStep] = useState<CheckoutStep>('selection');
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
-  const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
+  const [selectedMethod, setSelectedMethod] = useState<PaymentMethod | null>(null); // Selected native crypto
+  const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null); // Code to use (native or token)
   const [preview, setPreview] = useState<CheckoutPreviewResponse | null>(null);
   const [confirmedPayment, setConfirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
   const [paymentStatus, setPaymentStatus] = useState<CheckoutPaymentStatusResponse | null>(null);
@@ -39,6 +40,8 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   const [loadingPreview, setLoadingPreview] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pollingInterval, setPollingInterval] = useState<NodeJS.Timeout | null>(null);
+  const [previewTimeRemaining, setPreviewTimeRemaining] = useState<number>(300); // 5 minutes in seconds
+  const [previewExpired, setPreviewExpired] = useState(false);
 
   // Fetch payment methods on mount
   useEffect(() => {
@@ -105,9 +108,9 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
     }
   }, [currentStep, confirmedPayment, onSuccess]);
 
-  // Auto-preview when payment method is selected
+  // Auto-preview when currency is selected (native crypto or token)
   useEffect(() => {
-    if (selectedMethod && currentStep === 'selection') {
+    if (selectedCurrency && currentStep === 'selection') {
       const loadPreview = async () => {
         try {
           setLoadingPreview(true);
@@ -116,9 +119,12 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
             payable_type: payableType,
             payable_id: payableId,
             payment_method: 'crypto',
-            options: { currency: selectedMethod },
+            options: { currency: selectedCurrency },
           });
           setPreview(response);
+          // Reset countdown timer when new preview loads
+          setPreviewTimeRemaining(300); // 5 minutes
+          setPreviewExpired(false);
         } catch (err) {
           console.error('Error previewing checkout:', err);
           setError(err instanceof Error ? err.message : 'Failed to preview payment');
@@ -129,11 +135,47 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
       loadPreview();
     }
-  }, [selectedMethod, payableType, payableId, currentStep]);
+  }, [selectedCurrency, payableType, payableId, currentStep]);
 
-  // Confirm checkout
+  // Countdown timer for preview expiration
+  useEffect(() => {
+    if (!preview || currentStep !== 'selection') return;
+
+    const timer = setInterval(() => {
+      setPreviewTimeRemaining((prev) => {
+        if (prev <= 1) {
+          setPreviewExpired(true);
+          // Auto-refresh preview
+          if (selectedCurrency) {
+            const refreshPreview = async () => {
+              try {
+                const response = await CheckoutRepository.previewCheckout({
+                  payable_type: payableType,
+                  payable_id: payableId,
+                  payment_method: 'crypto',
+                  options: { currency: selectedCurrency },
+                });
+                setPreview(response);
+                setPreviewTimeRemaining(300);
+                setPreviewExpired(false);
+              } catch (err) {
+                console.error('Error refreshing preview:', err);
+              }
+            };
+            refreshPreview();
+          }
+          return 300;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [preview, currentStep, selectedCurrency, payableType, payableId]);
+
+  // Confirm checkout and redirect to payment page
   const handleConfirm = async () => {
-    if (!selectedMethod) return;
+    if (!selectedCurrency) return;
 
     try {
       setLoading(true);
@@ -142,27 +184,50 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
         payable_type: payableType,
         payable_id: payableId,
         payment_method: 'crypto',
-        options: { currency: selectedMethod },
+        options: { currency: selectedCurrency },
       });
-      setConfirmedPayment(response);
-      setCurrentStep('status');
+
+      // Extract payment_id from response - API returns { data: { payment_id: ... } }
+      const paymentId = response.data?.payment_id || response.payment_id || response.payment?.id || response.payment?.payment_id;
+      if (paymentId) {
+        // Use window.location.href to navigate to payment page
+        // The router will automatically handle localization
+        window.location.href = `/payment/${paymentId}`;
+      } else {
+        console.error('Payment response:', response);
+        throw new Error('No payment ID returned from server');
+      }
     } catch (err) {
       console.error('Error confirming checkout:', err);
       setError(err instanceof Error ? err.message : 'Failed to confirm payment');
-    } finally {
       setLoading(false);
     }
   };
 
-  // Handle method selection
-  const handleMethodSelect = (currency: string) => {
-    setSelectedMethod(currency);
+  // Handle native cryptocurrency selection (e.g., ETH, BTC)
+  const handleMethodSelect = (method: PaymentMethod) => {
+    setSelectedMethod(method);
+    // Default to native currency
+    setSelectedCurrency(method.code);
+    setError(null);
+  };
+
+  // Handle token selection (e.g., USDT on ETH)
+  const handleTokenSelect = (tokenCode: string) => {
+    setSelectedCurrency(tokenCode);
     setError(null);
   };
 
   // Copy to clipboard
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
+  };
+
+  // Format time remaining for countdown
+  const formatCountdown = (seconds: number): string => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
   // Format time remaining
@@ -182,7 +247,14 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   // Render combined selection and preview
   const renderSelectionStep = () => (
     <div className="checkout-step">
-      <h2 className="checkout-title">{t('checkout.selectPaymentMethod')}</h2>
+      <div className="mb-6">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          {t('checkout.selectPaymentMethod')}
+        </h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          {t('checkout.selectPaymentMethodDescription')}
+        </p>
+      </div>
 
       {error && (
         <div className="checkout-error">
@@ -198,23 +270,23 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
         </div>
       ) : (
         <>
+          {/* Step 1: Select native cryptocurrency */}
           <div className="payment-methods-grid">
-            {paymentMethods.map((method) => (
+            {paymentMethods.filter(method => !method.is_token).map((method) => (
               <button
                 key={method.code}
-                className={`payment-method-card ${selectedMethod === method.code ? 'selected' : ''}`}
-                onClick={() => handleMethodSelect(method.code)}
+                className={`payment-method-card ${selectedMethod?.code === method.code ? 'selected' : ''}`}
+                onClick={() => handleMethodSelect(method)}
                 disabled={loadingPreview}
               >
                 <div className="payment-method-icon">
                   <i className="bi bi-currency-bitcoin"></i>
                 </div>
                 <h3>{method.name}</h3>
-                <p className="payment-method-network">{method.network}</p>
                 <p className="payment-method-details">
                   {t('checkout.minAmount')}: {method.min_amount} {method.code}
                 </p>
-                {selectedMethod === method.code && (
+                {selectedMethod?.code === method.code && (
                   <div className="selected-indicator">
                     <i className="bi bi-check-circle-fill"></i>
                   </div>
@@ -223,55 +295,63 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
             ))}
           </div>
 
-          {/* Show preview when method is selected */}
-          {selectedMethod && preview && (
-            <div className="checkout-preview">
-              <div className="preview-section">
-                <h3>{t('checkout.orderSummary')}</h3>
-                <div className="preview-item">
-                  <span>{preview.payable.name}</span>
-                  <span className="preview-price">${preview.payable.price_usd.toFixed(2)}</span>
-                </div>
-                {preview.payable.interval && (
-                  <p className="preview-interval">{preview.payable.interval}</p>
-                )}
-              </div>
-
-              <div className="preview-section">
-                <h3>{t('checkout.paymentDetails')}</h3>
-                <div className="preview-item">
-                  <span>{t('checkout.paymentMethod')}</span>
-                  <span>{selectedMethod}</span>
-                </div>
-                <div className="preview-item">
-                  <span>{t('checkout.amountUsd')}</span>
-                  <span>${preview.payment.amount_usd.toFixed(2)}</span>
-                </div>
-                {preview.payment.crypto && (
-                  <>
-                    <div className="preview-item">
-                      <span>{t('checkout.amountCrypto')}</span>
-                      <span>{preview.payment.crypto.amount} {preview.payment.crypto.currency}</span>
+          {/* Step 2: Show token options if selected method has tokens */}
+          {selectedMethod && selectedMethod.tokens && selectedMethod.tokens.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                Or pay with a token on {selectedMethod.name}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Option to use native currency */}
+                <button
+                  className={`p-4 rounded-lg border-2 transition-all ${
+                    selectedCurrency === selectedMethod.code
+                      ? 'border-pink-500 bg-pink-50 dark:bg-pink-900/20'
+                      : 'border-gray-300 dark:border-gray-600 hover:border-pink-300'
+                  }`}
+                  onClick={() => handleTokenSelect(selectedMethod.code)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-left">
+                      <p className="font-semibold text-gray-900 dark:text-white">
+                        {selectedMethod.name} ({selectedMethod.code})
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        Native cryptocurrency
+                      </p>
                     </div>
-                    <div className="preview-item">
-                      <span>{t('checkout.exchangeRate')}</span>
-                      <span>1 {preview.payment.crypto.currency} = ${preview.payment.crypto.exchange_rate_usd.toFixed(2)}</span>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <p className="preview-note">{preview.message}</p>
-
-              <div className="checkout-actions">
-                {onCancel && (
-                  <button className="checkout-btn-secondary" onClick={onCancel} disabled={loading}>
-                    {t('checkout.cancel')}
-                  </button>
-                )}
-                <button className="checkout-btn-primary" onClick={handleConfirm} disabled={loading}>
-                  {loading ? t('checkout.processing') : t('checkout.confirmPayment')}
+                    {selectedCurrency === selectedMethod.code && (
+                      <i className="bi bi-check-circle-fill text-pink-500 text-xl"></i>
+                    )}
+                  </div>
                 </button>
+
+                {/* Token options */}
+                {selectedMethod.tokens.map((token) => (
+                  <button
+                    key={token.code}
+                    className={`p-4 rounded-lg border-2 transition-all ${
+                      selectedCurrency === token.code
+                        ? 'border-pink-500 bg-pink-50 dark:bg-pink-900/20'
+                        : 'border-gray-300 dark:border-gray-600 hover:border-pink-300'
+                    }`}
+                    onClick={() => handleTokenSelect(token.code)}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="text-left">
+                        <p className="font-semibold text-gray-900 dark:text-white">
+                          {token.name}
+                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          Min: {token.min_amount}
+                        </p>
+                      </div>
+                      {selectedCurrency === token.code && (
+                        <i className="bi bi-check-circle-fill text-pink-500 text-xl"></i>
+                      )}
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
           )}
@@ -280,6 +360,76 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
             <div className="checkout-loading">
               <div className="spinner"></div>
               <p>{t('checkout.loading')}</p>
+            </div>
+          )}
+
+          {/* Show preview when method is selected */}
+          {selectedMethod && preview && !loadingPreview && (
+            <div className="checkout-preview">
+              {/* Countdown Timer */}
+              <div className={`px-4 py-3 rounded-lg mb-4 text-center font-mono font-bold ${
+                previewTimeRemaining < 60 ? 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400' : 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400'
+              }`}>
+                {previewExpired ? (
+                  <span>{t('checkout.priceExpired')}</span>
+                ) : previewTimeRemaining < 60 ? (
+                  <span>{t('checkout.priceExpiringSoon')} {formatCountdown(previewTimeRemaining)}</span>
+                ) : (
+                  <span>{t('checkout.priceLocked')} {formatCountdown(previewTimeRemaining)}</span>
+                )}
+              </div>
+
+              {/* Simplified Payment Summary - No redundant order summary */}
+              <div className="preview-section">
+                <h3>{t('checkout.paymentDetails')}</h3>
+                {preview.payment.crypto && (
+                  <>
+                    <div className="preview-item">
+                      <span>{t('checkout.amountCrypto')}</span>
+                      <span className="font-semibold text-lg">{preview.payment.crypto.amount} {preview.payment.crypto.currency}</span>
+                    </div>
+                    <div className="preview-item">
+                      <span>{t('checkout.exchangeRate')}</span>
+                      <span className="text-sm">1 {preview.payment.crypto.currency} = ${preview.payment.crypto.exchange_rate_usd.toFixed(2)}</span>
+                    </div>
+                    <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-blue-800 dark:text-blue-300 font-semibold">{t('checkout.amountUsd')}</span>
+                        <span className="text-lg font-bold text-blue-900 dark:text-blue-200">${preview.payment.amount_usd.toFixed(2)}</span>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <div className="checkout-actions">
+                <button
+                  className="checkout-btn-primary relative overflow-hidden group"
+                  onClick={handleConfirm}
+                  disabled={loading}
+                  style={{
+                    boxShadow: loading ? 'none' : '0 4px 14px 0 rgba(236, 72, 153, 0.39)',
+                  }}
+                >
+                  {loading ? (
+                    <>
+                      <div className="inline-block animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      {t('checkout.processing')}
+                    </>
+                  ) : (
+                    <>
+                      <span className="relative z-10 flex items-center justify-center">
+                        {t('checkout.unlockAccess')}
+                        <span className="ml-2">→</span>
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </>
+                  )}
+                </button>
+                <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  {t('checkout.startWatching')}
+                </p>
+              </div>
             </div>
           )}
         </>

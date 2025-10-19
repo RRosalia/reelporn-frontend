@@ -179,15 +179,29 @@ export interface Subscription {
  */
 
 /**
+ * Token that runs on a native cryptocurrency (e.g., USDT on Ethereum)
+ */
+export interface PaymentToken {
+  code: string; // e.g., 'USDT_ERC20', 'USDC_ERC20'
+  name: string; // e.g., 'Tether (ERC-20)', 'USD Coin (ERC-20)'
+  is_token: true;
+  min_amount: number;
+  max_amount: number;
+}
+
+/**
  * Payment method from GET /checkout/payment-methods
+ * Can be either a native cryptocurrency or have tokens
  */
 export interface PaymentMethod {
   code: string; // e.g., 'BTC', 'ETH'
   name: string; // e.g., 'Bitcoin', 'Ethereum'
-  network: string; // e.g., 'mainnet', 'ERC20'
-  required_confirmations: number;
+  is_token: boolean; // false for native crypto, true for tokens
+  network?: string; // e.g., 'mainnet', 'ERC20' (deprecated, keeping for compatibility)
+  required_confirmations?: number;
   min_amount: number;
   max_amount: number;
+  tokens?: PaymentToken[]; // Tokens that can run on this network (e.g., USDT, USDC on ETH)
 }
 
 /**
@@ -345,9 +359,11 @@ export interface PaymentStatusPollResponse {
     exchange_rate_cents: number;
     transaction_hash: string | null;
     confirmations: number;
-    required_confirmations: number;
+    min_confirmations: number; // When payment is confirmed for user (they get access)
+    required_confirmations: number; // When transaction is final (irreversible)
     qr_code_svg: string;
     payment_uri: string;
+    blockchain_url?: string;
   };
   subscription?: {
     id: number;

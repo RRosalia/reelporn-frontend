@@ -212,8 +212,8 @@ export default function HomePage() {
                 </div>
             </div>
 
-            {/* Pornstars Section */}
-            <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
+            {/* Pornstars Section - Hidden for now */}
+            {/* <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center mb-8">
                         <h2 className="text-2xl md:text-3xl font-bold mb-0" style={{
@@ -299,7 +299,7 @@ export default function HomePage() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Premium CTA Section */}
             <div className="py-20" style={{

@@ -142,7 +142,7 @@ export default function SubscriptionCheckoutPage() {
                         {!isFree ? (
                           <div className="mb-4">
                             <span className="text-4xl font-bold text-pink-500">
-                              ${parseFloat(displayPlan.price).toFixed(2)}
+                              ${(parseFloat(displayPlan.price) / 100).toFixed(2)}
                             </span>
                             <span className="ml-2 text-gray-600">
                               /{displayPlan.periodicity_type}
@@ -205,31 +205,218 @@ export default function SubscriptionCheckoutPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        {/* Plan Summary Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            {t('checkout.title')}
-          </h1>
-          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg inline-block">
-            <h2 className="text-xl font-semibold mb-1">{plan.name}</h2>
-            <p className="text-2xl font-bold text-pink-500">
-              ${parseFloat(plan.price).toFixed(2)}
-              <span className="text-sm text-gray-600 dark:text-gray-400 ml-2">
-                / {plan.periodicity} {plan.periodicity_type}
-              </span>
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-8 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Progress Indicator */}
+        <div className="mb-8">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center justify-between relative">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center z-10 relative">
+                <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2 shadow-lg">
+                  <i className="bi bi-check-lg text-white text-xl font-bold"></i>
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-white">{t('checkout.progress.step1')}</span>
+              </div>
+
+              {/* Connecting line 1 */}
+              <div className="absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-pink-500 to-gray-600" style={{ zIndex: 0, width: '100%', transform: 'translateY(-50%)' }}></div>
+
+              {/* Step 2 - Active */}
+              <div className="flex flex-col items-center z-10 relative">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center mb-2 shadow-lg animate-pulse">
+                  <span className="text-white text-lg font-bold">2</span>
+                </div>
+                <span className="text-xs md:text-sm font-semibold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">{t('checkout.progress.step2')}</span>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center z-10 relative">
+                <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center mb-2">
+                  <span className="text-gray-400 text-lg font-bold">3</span>
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-gray-400">{t('checkout.progress.step3')}</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Checkout Flow Component */}
-        <CheckoutFlow
-          payableType="plan"
-          payableId={plan.id}
-          onSuccess={handleSuccess}
-          onCancel={handleCancel}
-        />
+        {/* Page Title */}
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          {t('checkout.title')}
+        </h1>
+
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Left Column - Subscription Details */}
+          <div className="space-y-6">
+            {/* Plan Summary Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 border-2 border-pink-500/20">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{plan.name}</h2>
+                <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  {plan.periodicity_type}
+                </div>
+              </div>
+
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-5xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+                  ${(parseFloat(plan.price) / 100).toFixed(2)}
+                </span>
+                <span className="text-lg text-gray-500 dark:text-gray-400">
+                  / {plan.periodicity} {plan.periodicity_type}
+                </span>
+              </div>
+
+              {plan.features && plan.features.length > 0 && (
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                    {t('checkout.whatsIncluded')}
+                  </h3>
+                  <ul className="space-y-3">
+                    {plan.features.map((feature: any) => (
+                      <li key={feature.id} className="flex items-start text-sm text-gray-700 dark:text-gray-300">
+                        <i className="bi bi-check-circle-fill text-green-500 mr-3 mt-0.5 flex-shrink-0 text-lg"></i>
+                        <span>
+                          {feature.name}
+                          {feature.consumable && feature.quota && ` (${feature.quota})`}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Trust Badges & Security */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 border-2 border-pink-500/20">
+              <div className="text-center mb-6">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <i className="bi bi-shield-check text-4xl text-green-500"></i>
+                  <i className="bi bi-lock-fill text-4xl text-blue-500"></i>
+                  <i className="bi bi-lightning-charge-fill text-4xl text-yellow-500"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{t('checkout.securePayment')}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  {t('checkout.securePaymentDescription')}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600 dark:text-gray-400">
+                  <span className="flex items-center gap-2">
+                    <i className="bi bi-shield-fill-check text-green-500 text-lg"></i>
+                    {t('checkout.sslEncrypted')}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <i className="bi bi-credit-card-2-front text-gray-500 text-lg"></i>
+                    {t('checkout.noCreditCard')}
+                  </span>
+                </div>
+              </div>
+
+              {/* Live Member Counter */}
+              <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-lg p-4">
+                <p className="text-center text-sm text-gray-700 dark:text-gray-300">
+                  <i className="bi bi-people-fill text-pink-500 mr-2"></i>
+                  <span className="font-semibold">{t('checkout.joinMembers', { count: '2,847' })}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Payment Method Selection */}
+          <div>
+            <CheckoutFlow
+              payableType="plan"
+              payableId={plan.id}
+              onSuccess={handleSuccess}
+              onCancel={handleCancel}
+            />
+          </div>
+        </div>
+
+        {/* Crypto Payment Methods Trust Section */}
+        <div className="mt-12 pb-8">
+          <div className="text-center mb-6">
+            <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">
+              {t('checkout.acceptedCryptocurrencies')}
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+            {/* Bitcoin */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <i className="bi bi-currency-bitcoin text-3xl text-orange-400"></i>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.bitcoin')}</span>
+            </div>
+
+            {/* Ethereum */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <svg className="w-8 h-8" viewBox="0 0 256 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M127.961 0L125.45 8.536V285.168L127.961 287.678L255.922 212.32L127.961 0Z" fill="#8A92B2"/>
+                  <path d="M127.962 0L0 212.32L127.962 287.678V153.983V0Z" fill="#62688F"/>
+                  <path d="M127.961 312.187L126.385 314.097V411.791L127.961 416.616L256 237.276L127.961 312.187Z" fill="#62688F"/>
+                  <path d="M127.962 416.616V312.187L0 237.276L127.962 416.616Z" fill="#454A75"/>
+                </svg>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.ethereum')}</span>
+            </div>
+
+            {/* Litecoin */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <span className="text-2xl font-bold text-gray-300">Ł</span>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.litecoin')}</span>
+            </div>
+
+            {/* USDT */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <svg className="w-8 h-8" viewBox="0 0 339.43 295.27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M62.15 1.45l-61.89 130a2.52 2.52 0 000 2.13l61.89 130a2.5 2.5 0 002.14 1.19h225.26a2.5 2.5 0 002.14-1.19l61.89-130a2.52 2.52 0 000-2.13l-61.89-130A2.5 2.5 0 00289.55.26H64.29a2.5 2.5 0 00-2.14 1.19z" fill="#50AF95"/>
+                  <path d="M191.19 144.8v0c-1.2.09-7.4.46-21.23.46-11 0-18.81-.33-21.55-.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25 74.24-18.15v28.91c2.78.2 10.74.67 21.74.67 13.2 0 19.81-.55 21-.66v-28.9c42.42 1.89 74.08 9.29 74.08 18.13s-31.65 16.24-74.08 18.12zm0-39.25V79.68h59.2V40.23H89.21v39.45h59.19v25.86c-48.11 2.21-84.29 11.74-84.29 23.16s36.18 20.94 84.29 23.16v82.9h42.78v-82.93c48-2.21 84.12-11.73 84.12-23.14s-36.09-20.93-84.12-23.15z" fill="#fff"/>
+                </svg>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.usdt')}</span>
+            </div>
+
+            {/* USDC */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <svg className="w-8 h-8" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="1000" cy="1000" r="1000" fill="#2775CA"/>
+                  <path d="M1275 1158.33c0-145.83-87.5-195.83-262.5-216.66-125-16.67-150-50-150-108.34s41.67-95.83 125-95.83c75 0 116.67 25 137.5 87.5 4.17 12.5 16.67 20.83 29.17 20.83h66.66c16.67 0 29.17-12.5 29.17-29.16v-4.17c-16.67-91.67-91.67-162.5-187.5-170.83v-100c0-16.67-12.5-29.17-33.33-33.34h-62.5c-16.67 0-29.17 12.5-33.34 33.34v95.83c-125 16.67-204.16 100-204.16 216.67 0 137.5 83.33 191.66 258.33 212.5 116.67 20.83 154.17 45.83 154.17 112.5s-58.34 112.5-137.5 112.5c-108.34 0-145.84-45.84-158.34-108.34-4.16-16.66-16.66-25-29.16-25h-70.84c-16.66 0-29.16 12.5-29.16 29.17v4.17c16.66 104.16 83.33 179.16 220.83 200v100c0 16.66 12.5 29.16 33.33 33.33h62.5c16.67 0 29.17-12.5 33.34-33.33v-100c125-20.84 208.33-108.34 208.33-220.84z" fill="white"/>
+                </svg>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.usdc')}</span>
+            </div>
+
+            {/* More cryptos indicator */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <span className="text-gray-400 font-bold text-xl">+</span>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">{t('checkout.more')}</span>
+            </div>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
+            <div className="flex items-center gap-2">
+              <i className="bi bi-shield-fill-check text-green-500"></i>
+              <span>{t('checkout.securePayments')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="bi bi-lock-fill text-blue-500"></i>
+              <span>{t('checkout.encryptedTransactions')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="bi bi-lightning-charge-fill text-yellow-500"></i>
+              <span>{t('checkout.instantConfirmation')}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
