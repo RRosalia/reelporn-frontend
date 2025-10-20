@@ -36,29 +36,58 @@ export async function generateMetadata({
     }
   });
 
+  // Helper function to get localized pathname
+  const getLocalizedPath = (targetLocale: string, basePath: string): string => {
+    // Find matching pathname config in routing
+    const pathnameConfig = routing.pathnames as Record<string, string | Record<string, string>>;
+
+    // Look for exact match in pathnames
+    for (const [key, value] of Object.entries(pathnameConfig)) {
+      if (typeof value === 'string') {
+        // Simple pathname (same across all locales)
+        if (basePath === value || basePath === key) {
+          return value;
+        }
+      } else {
+        // Localized pathname
+        // Check if the current basePath matches any locale version of this route
+        const localeValues = Object.values(value);
+        if (localeValues.includes(basePath) || basePath === key) {
+          return value[targetLocale as keyof typeof value] || basePath;
+        }
+      }
+    }
+
+    // If no match found, return the original path
+    return basePath;
+  };
+
   // Generate language alternates for hreflang
   const languages: Record<string, string> = {};
 
   routing.locales.forEach((loc) => {
+    const localizedPath = getLocalizedPath(loc, pathWithoutLocale);
+
     // For default locale (en), don't add prefix when using 'as-needed'
     if (loc === routing.defaultLocale && routing.localePrefix === 'as-needed') {
-      languages[loc] = `${siteUrl}${pathWithoutLocale}`;
+      languages[loc] = `${siteUrl}${localizedPath}`;
     } else {
-      languages[loc] = `${siteUrl}/${loc}${pathWithoutLocale}`;
+      languages[loc] = `${siteUrl}/${loc}${localizedPath}`;
     }
   });
 
-  // Generate canonical URL
+  // Get the canonical URL with localized path
+  const canonicalPath = getLocalizedPath(locale, pathWithoutLocale);
   const canonical = locale === routing.defaultLocale && routing.localePrefix === 'as-needed'
-    ? `${siteUrl}${pathWithoutLocale}`
-    : `${siteUrl}/${locale}${pathWithoutLocale}`;
+    ? `${siteUrl}${canonicalPath}`
+    : `${siteUrl}/${locale}${canonicalPath}`;
 
   return {
     alternates: {
       canonical,
       languages: {
         ...languages,
-        'x-default': `${siteUrl}${pathWithoutLocale}`, // Default to English version
+        'x-default': `${siteUrl}${getLocalizedPath(routing.defaultLocale, pathWithoutLocale)}`, // Default to English version
       },
     },
   };
