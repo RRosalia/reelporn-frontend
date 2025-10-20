@@ -13,46 +13,5 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return (
-    <html suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var path = window.location.pathname;
-                  var isExcluded = path.includes('/blocked') ||
-                                   path.includes('/error-codes/') ||
-                                   path.includes('/parental-controls');
-
-                  // Check if this is a crawler (cookie set by middleware)
-                  var isCrawler = document.cookie.split('; ').find(row => row.startsWith('crawler-bypass='));
-
-                  // Skip age verification for crawlers
-                  if (isCrawler || isExcluded) {
-                    return;
-                  }
-
-                  var verified = localStorage.getItem('ageVerified');
-                  var blocked = localStorage.getItem('ageBlocked');
-
-                  if (blocked === 'true') {
-                    // Add class to hide content during redirect
-                    document.documentElement.classList.add('age-verification-pending');
-                    window.location.href = '/blocked';
-                  } else if (verified !== 'true') {
-                    document.documentElement.classList.add('age-verification-pending');
-                  }
-                } catch (e) {
-                  console.error('Age verification check error:', e);
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body suppressHydrationWarning>{children}</body>
-    </html>
-  );
+  return children;
 }
