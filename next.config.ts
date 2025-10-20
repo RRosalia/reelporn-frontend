@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig: NextConfig = {
   output: 'standalone',
   experimental: {
-    // Optimize for i18n
+    turbopackFileSystemCacheForDev: true,
     optimizePackageImports: ['bootstrap-icons'],
   },
   async rewrites() {

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 (beta) frontend application for ReelPorn - a multi-lingual adult content platform with real-time payment processing via WebSockets and cryptocurrency support. The project uses React 19, TypeScript, Tailwind CSS 4, and Bun as the package manager. It's part of a larger monorepo structure with separate backend (Laravel), crypto-rpc, and video-generator services.
+This is a Next.js 16 (beta) frontend application for ReelPorn - a multi-lingual adult content platform with real-time payment processing via WebSockets and cryptocurrency support. The project uses React 19, TypeScript, Tailwind CSS 4, and Bun as the package manager. It's part of a larger monorepo structure with separate backend (Laravel), crypto-rpc, and video-generator services.
 
 ## Development Environment
 
