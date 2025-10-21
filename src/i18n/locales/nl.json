@@ -377,6 +377,7 @@
   "pornstars": {
     "title": "Pornsterren",
     "subtitle": "Bekijk onze {count} geweldige artiesten",
+    "noResults": "Geen pornsterren gevonden die voldoen aan uw filters",
     "sort": {
       "popular": "Meest Populair",
       "newest": "Nieuwste",
@@ -385,6 +386,26 @@
     },
     "pagination": {
       "showing": "Toont {start}-{end} van {total} pornsterren"
+    },
+    "filters": {
+      "title": "Filters",
+      "clearAll": "Alles Wissen",
+      "name": "Zoeken op Naam",
+      "namePlaceholder": "Voer naam in...",
+      "age": "Leeftijd",
+      "country": "Land",
+      "allCountries": "Alle Landen",
+      "height": "Lengte",
+      "weight": "Gewicht",
+      "hairColor": "Haarkleur",
+      "allHairColors": "Alle Haarkleuren",
+      "eyeColor": "Oogkleur",
+      "allEyeColors": "Alle Oogkleuren",
+      "ethnicity": "Etniciteit",
+      "allEthnicities": "Alle Etniciteiten"
+    },
+    "errors": {
+      "fetchFailed": "Kan pornsterren niet laden. Probeer het opnieuw."
     }
   },
   "pornstar": {
@@ -1262,7 +1283,9 @@
     }
   },
   "common": {
-    "cancel": "Annuleren"
+    "cancel": "Annuleren",
+    "loading": "Laden...",
+    "retry": "Opnieuw Proberen"
   },
   "checkout": {
     "title": "Voltooi Uw Aankoop",

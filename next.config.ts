@@ -9,17 +9,27 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
     optimizePackageImports: ['bootstrap-icons'],
   },
+  skipMiddlewareUrlNormalize: true,
   async rewrites() {
-    return [
-      {
-        source: '/2257',
-        destination: '/section2257',
-      },
-      {
-        source: '/:locale/2257',
-        destination: '/:locale/section2257',
-      },
-    ];
+    return {
+      beforeFiles: [
+        // Bypass i18n middleware for XML files
+        {
+          source: '/:path*.xml',
+          destination: '/:path*.xml',
+        },
+      ],
+      afterFiles: [
+        {
+          source: '/2257',
+          destination: '/section2257',
+        },
+        {
+          source: '/:locale/2257',
+          destination: '/:locale/section2257',
+        },
+      ],
+    };
   },
 };
 

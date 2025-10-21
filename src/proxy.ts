@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -47,10 +47,10 @@ async function isCrawler(request: NextRequest): Promise<boolean> {
   }
 
   // Verify IP against backend
-  // Backend returns 200 if crawler, 404 if not
+  // Backend returns 200 if crawler, 403 if not
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:9000';
-    const response = await fetch(`${apiUrl}/api/crawlers/${ip}/check`, {
+    const response = await fetch(`${apiUrl}/crawlers/${ip}/check`, {
       headers: {
         'Accept': 'application/json',
       },
@@ -59,7 +59,7 @@ async function isCrawler(request: NextRequest): Promise<boolean> {
     });
 
     // Returns true only if backend returns 200 (crawler confirmed)
-    // Returns false if 404 (not a crawler) or any other status
+    // Returns false if 403 (not a crawler) or any other status
     return response.ok && response.status === 200;
   } catch (error) {
     console.error('Error checking crawler IP:', error);
@@ -68,6 +68,11 @@ async function isCrawler(request: NextRequest): Promise<boolean> {
 }
 
 export default async function middleware(request: NextRequest) {
+  // Skip middleware for XML files (sitemaps)
+  if (request.nextUrl.pathname.endsWith('.xml')) {
+    return NextResponse.next();
+  }
+
   // Get the pathname for hreflang metadata
   const pathname = request.nextUrl.pathname;
 
@@ -84,7 +89,7 @@ export default async function middleware(request: NextRequest) {
     // Set a cookie to bypass age verification for crawlers
     if (isFromCrawler) {
       response.cookies.set('crawler-bypass', 'true', {
-        httpOnly: true,
+        httpOnly: false, // Must be false so client-side JS can read it
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
         maxAge: 60 * 60, // 1 hour
@@ -97,5 +102,10 @@ export default async function middleware(request: NextRequest) {
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(nl|de|fr)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  // Exclude: API routes, static files, images
+  matcher: [
+    '/',
+    '/(nl|de|fr)/:path*',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt).*)'
+  ]
 };

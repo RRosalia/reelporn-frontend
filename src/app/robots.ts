@@ -23,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: `${BASE_URL}/sitemap-index.xml`,
     host: BASE_URL,
   };
 }

@@ -377,6 +377,7 @@
   "pornstars": {
     "title": "Pornostars",
     "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
+    "noResults": "Keine Pornostars gefunden, die Ihren Filtern entsprechen",
     "sort": {
       "popular": "Beliebteste",
       "newest": "Neueste",
@@ -385,6 +386,26 @@
     },
     "pagination": {
       "showing": "Zeige {start}-{end} von {total} Pornostars"
+    },
+    "filters": {
+      "title": "Filter",
+      "clearAll": "Alle Löschen",
+      "name": "Nach Name Suchen",
+      "namePlaceholder": "Name eingeben...",
+      "age": "Alter",
+      "country": "Land",
+      "allCountries": "Alle Länder",
+      "height": "Größe",
+      "weight": "Gewicht",
+      "hairColor": "Haarfarbe",
+      "allHairColors": "Alle Haarfarben",
+      "eyeColor": "Augenfarbe",
+      "allEyeColors": "Alle Augenfarben",
+      "ethnicity": "Ethnizität",
+      "allEthnicities": "Alle Ethnizitäten"
+    },
+    "errors": {
+      "fetchFailed": "Pornostars konnten nicht geladen werden. Bitte versuchen Sie es erneut."
     }
   },
   "pornstar": {
@@ -1262,7 +1283,9 @@
     }
   },
   "common": {
-    "cancel": "Abbrechen"
+    "cancel": "Abbrechen",
+    "loading": "Laden...",
+    "retry": "Erneut Versuchen"
   },
   "checkout": {
     "title": "Kauf Abschließen",

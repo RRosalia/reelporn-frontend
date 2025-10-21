@@ -1,53 +1,61 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
+import PornstarsFilter from '@/components/pornstars/PornstarsFilter';
+import { Pornstar, PornstarFilters } from '@/types/Pornstar';
+import { PaginatedResponse } from '@/lib/types/PaginatedResponse';
 import './styles.css';
 
-function PornstarsPage() {const t = useTranslations();
+function PornstarsPage() {
+    const t = useTranslations();
     const params = useParams();
     const locale = (params?.locale as string) || 'en';
-    const [currentPage, setCurrentPage] = useState(1);
+
     const [viewMode, setViewMode] = useState('grid'); // grid or list
-    const pornstarsPerPage = 24;
+    const [filters, setFilters] = useState<PornstarFilters>({ per_page: 24, page: 1 });
+    const [pornstars, setPornstars] = useState<Pornstar[]>([]);
+    const [pagination, setPagination] = useState<PaginatedResponse<Pornstar> | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    // Mock data - replace with API call
-    const generateMockPornstars = () => {
-        return Array.from({ length: 150 }, (_, i) => ({
-            id: i + 1,
-            name: `Star ${i + 1}`,
-            stageName: `PornStar${i + 1}`,
-            avatar: `https://images.unsplash.com/photo-${1500000000000 + i * 1000000}?w=400&h=400&fit=crop&auto=format&q=80`,
-            videos: Math.floor(Math.random() * 200) + 10,
-            views: `${Math.floor(Math.random() * 999) + 1}M`,
-            likes: `${Math.floor(Math.random() * 999) + 1}K`,
-            verified: Math.random() > 0.5,
-            country: ['USA', 'UK', 'Germany', 'France', 'Netherlands'][Math.floor(Math.random() * 5)],
-            age: Math.floor(Math.random() * 15) + 20,
-            category: ['Amateur', 'Professional', 'Rising Star'][Math.floor(Math.random() * 3)]
-        }));
-    };
+    // Fetch pornstars when filters change
+    useEffect(() => {
+        const fetchPornstars = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+                const response = await PornstarsRepository.getAll(filters);
+                setPornstars(response.getData());
+                setPagination(response);
+            } catch (err) {
+                console.error('Error fetching pornstars:', err);
+                setError(t('pornstars.errors.fetchFailed'));
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    const allPornstars = generateMockPornstars();
+        fetchPornstars();
+    }, [filters, t]);
 
-    // Calculate pagination
-    const indexOfLastPornstar = currentPage * pornstarsPerPage;
-    const indexOfFirstPornstar = indexOfLastPornstar - pornstarsPerPage;
-    const currentPornstars = allPornstars.slice(indexOfFirstPornstar, indexOfLastPornstar);
-    const totalPages = Math.ceil(allPornstars.length / pornstarsPerPage);
-
-    const getLocalizedPath = (path: string) => {
-        return locale === 'en' ? path : `/${locale}${path}`;
+    const handleFilterChange = (newFilters: PornstarFilters) => {
+        setFilters({ ...newFilters, per_page: 24, page: 1 });
     };
 
     const handlePageChange = (pageNumber: number) => {
-        setCurrentPage(pageNumber);
+        setFilters({ ...filters, page: pageNumber });
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const renderPagination = () => {
+        if (!pagination) return null;
+
+        const currentPage = pagination.getCurrentPage();
+        const totalPages = pagination.getLastPage();
         const pages = [];
         const maxVisiblePages = 5;
         let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
@@ -140,7 +148,7 @@ function PornstarsPage() {const t = useTranslations();
                                 {t('pornstars.title')}
                             </h1>
                             <p className="pornstars-subtitle">
-                                {t('pornstars.subtitle', { count: allPornstars.length })}
+                                {t('pornstars.subtitle', { count: pagination?.getTotal() || 0 })}
                             </p>
                         </div>
                         <div className="w-full lg:w-6/12">
@@ -176,92 +184,136 @@ function PornstarsPage() {const t = useTranslations();
 
             {/* Content */}
             <div className="container mx-auto px-4 py-12">
-                {viewMode === 'grid' ? (
-                    <div className="flex flex-wrap gap-4">
-                        {currentPornstars.map(pornstar => (
-                            <div key={pornstar.id} className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] lg:w-[calc(25%-0.75rem)] xl:w-[calc(16.666%-0.83rem)]">
-                                <Link
-                                    href={`/pornstar/${pornstar.id}` as any}
-                                    className="pornstar-card"
-                                >
-                                    <div className="pornstar-avatar-wrapper">
-                                        <div
-                                            className="pornstar-avatar"
-                                            style={{
-                                                backgroundImage: `url(${pornstar.avatar})`,
-                                                backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
-                                            }}
-                                        >
-                                            {pornstar.verified && (
-                                                <span className="verified-badge">
-                                                    <i className="bi bi-check-circle-fill"></i>
-                                                </span>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <div className="pornstar-info">
-                                        <h3 className="pornstar-name">{pornstar.stageName}</h3>
-                                        <div className="pornstar-stats">
-                                            <span><i className="bi bi-camera-video"></i> {pornstar.videos}</span>
-                                            <span><i className="bi bi-eye"></i> {pornstar.views}</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
+                <div className="flex flex-wrap lg:flex-nowrap gap-8">
+                    {/* Left Sidebar - Filter */}
+                    <div className="w-full lg:w-64 flex-shrink-0">
+                        <PornstarsFilter
+                            filters={filters}
+                            onFilterChange={handleFilterChange}
+                        />
                     </div>
-                ) : (
-                    <div className="pornstars-list">
-                        {currentPornstars.map(pornstar => (
-                            <Link
-                                key={pornstar.id}
-                                href={`/pornstar/${pornstar.id}` as any}
-                                className="pornstar-list-item"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div
-                                        className="pornstar-list-avatar"
-                                        style={{
-                                            backgroundImage: `url(${pornstar.avatar})`,
-                                            backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
-                                        }}
-                                    >
-                                        {pornstar.verified && (
-                                            <span className="verified-badge">
-                                                <i className="bi bi-check-circle-fill"></i>
-                                            </span>
-                                        )}
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="pornstar-list-name">{pornstar.stageName}</h3>
-                                        <div className="pornstar-list-details">
-                                            <span className="inline-block px-2 py-1 bg-gray-600 text-white text-xs rounded">{pornstar.category}</span>
-                                            <span>{pornstar.country}</span>
-                                            <span>{pornstar.age} years</span>
-                                        </div>
-                                    </div>
-                                    <div className="pornstar-list-stats">
-                                        <div><i className="bi bi-camera-video"></i> {pornstar.videos} videos</div>
-                                        <div><i className="bi bi-eye"></i> {pornstar.views} views</div>
-                                        <div><i className="bi bi-heart"></i> {pornstar.likes} likes</div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                )}
 
-                {/* Pagination */}
-                <div className="pagination-wrapper">
-                    <div className="pagination-info">
-                        {t('pornstars.pagination.showing', {
-                            start: indexOfFirstPornstar + 1,
-                            end: Math.min(indexOfLastPornstar, allPornstars.length),
-                            total: allPornstars.length
-                        })}
-                    </div>
-                    <div className="pagination">
-                        {renderPagination()}
+                    {/* Main Content */}
+                    <div className="flex-1">
+                        {/* Loading State */}
+                        {loading && (
+                            <div className="text-center py-20">
+                                <i className="bi bi-hourglass-split text-5xl text-pink-500 animate-spin mb-4 block"></i>
+                                <p className="text-gray-600">{t('common.loading')}</p>
+                            </div>
+                        )}
+
+                        {/* Error State */}
+                        {error && !loading && (
+                            <div className="text-center py-20">
+                                <i className="bi bi-exclamation-triangle text-5xl text-red-500 mb-4 block"></i>
+                                <p className="text-red-600 mb-4">{error}</p>
+                                <button
+                                    className="px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
+                                    onClick={() => setFilters({ ...filters })}
+                                >
+                                    {t('common.retry')}
+                                </button>
+                            </div>
+                        )}
+
+                        {/* Empty State */}
+                        {!loading && !error && pornstars.length === 0 && (
+                            <div className="text-center py-20">
+                                <i className="bi bi-search text-5xl text-gray-400 mb-4 block"></i>
+                                <p className="text-gray-600 mb-4">{t('pornstars.noResults')}</p>
+                                <button
+                                    className="px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
+                                    onClick={() => setFilters({ per_page: 24, page: 1 })}
+                                >
+                                    {t('pornstars.filters.clearAll')}
+                                </button>
+                            </div>
+                        )}
+
+                        {/* Pornstars Grid/List */}
+                        {!loading && !error && pornstars.length > 0 && (
+                            <>
+                                {viewMode === 'grid' ? (
+                                    <div className="flex flex-wrap gap-4">
+                                        {pornstars.map(pornstar => (
+                                            <div key={pornstar.id} className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] lg:w-[calc(25%-0.75rem)] xl:w-[calc(20%-0.8rem)]">
+                                                <Link
+                                                    href={`/pornstar/${pornstar.slug}` as any}
+                                                    className="pornstar-card"
+                                                >
+                                                    <div className="pornstar-avatar-wrapper">
+                                                        <div
+                                                            className="pornstar-avatar"
+                                                            style={{
+                                                                backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
+                                                            }}
+                                                        >
+                                                        </div>
+                                                    </div>
+                                                    <div className="pornstar-info">
+                                                        <h3 className="pornstar-name">{pornstar.name}</h3>
+                                                        <div className="pornstar-stats">
+                                                            {pornstar.age && <span><i className="bi bi-calendar"></i> {pornstar.age}</span>}
+                                                            {pornstar.country && <span><i className="bi bi-geo-alt"></i> {pornstar.country.iso}</span>}
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className="pornstars-list">
+                                        {pornstars.map(pornstar => (
+                                            <Link
+                                                key={pornstar.id}
+                                                href={`/pornstar/${pornstar.slug}` as any}
+                                                className="pornstar-list-item"
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <div
+                                                        className="pornstar-list-avatar"
+                                                        style={{
+                                                            backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
+                                                        }}
+                                                    >
+                                                    </div>
+                                                    <div className="flex-1">
+                                                        <h3 className="pornstar-list-name">{pornstar.name}</h3>
+                                                        <div className="pornstar-list-details">
+                                                            {pornstar.age && <span>{pornstar.age} years</span>}
+                                                            {pornstar.country && <span>{pornstar.country.name}</span>}
+                                                            {pornstar.ethnicity && <span>{pornstar.ethnicity}</span>}
+                                                        </div>
+                                                    </div>
+                                                    <div className="pornstar-list-stats">
+                                                        {pornstar.height_cm && <div><i className="bi bi-arrows-vertical"></i> {pornstar.height_cm}cm</div>}
+                                                        {pornstar.weight_kg && <div><i className="bi bi-speedometer"></i> {pornstar.weight_kg}kg</div>}
+                                                        {pornstar.measurements && <div><i className="bi bi-rulers"></i> {pornstar.measurements}</div>}
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {/* Pagination */}
+                                {pagination && pagination.getLastPage() > 1 && (
+                                    <div className="pagination-wrapper">
+                                        <div className="pagination-info">
+                                            {t('pornstars.pagination.showing', {
+                                                start: pagination.getFrom(),
+                                                end: pagination.getTo(),
+                                                total: pagination.getTotal()
+                                            })}
+                                        </div>
+                                        <div className="pagination">
+                                            {renderPagination()}
+                                        </div>
+                                    </div>
+                                )}
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

@@ -377,6 +377,7 @@
   "pornstars": {
     "title": "Pornstars",
     "subtitle": "Browse our {count} amazing performers",
+    "noResults": "No pornstars found matching your filters",
     "sort": {
       "popular": "Most Popular",
       "newest": "Newest",
@@ -385,6 +386,26 @@
     },
     "pagination": {
       "showing": "Showing {start}-{end} of {total} pornstars"
+    },
+    "filters": {
+      "title": "Filters",
+      "clearAll": "Clear All",
+      "name": "Search by Name",
+      "namePlaceholder": "Enter name...",
+      "age": "Age",
+      "country": "Country",
+      "allCountries": "All Countries",
+      "height": "Height",
+      "weight": "Weight",
+      "hairColor": "Hair Color",
+      "allHairColors": "All Hair Colors",
+      "eyeColor": "Eye Color",
+      "allEyeColors": "All Eye Colors",
+      "ethnicity": "Ethnicity",
+      "allEthnicities": "All Ethnicities"
+    },
+    "errors": {
+      "fetchFailed": "Failed to load pornstars. Please try again."
     }
   },
   "pornstar": {
@@ -1262,7 +1283,9 @@
     }
   },
   "common": {
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "retry": "Retry"
   },
   "checkout": {
     "title": "Complete Your Purchase",

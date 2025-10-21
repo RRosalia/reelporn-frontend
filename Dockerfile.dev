@@ -2,6 +2,25 @@ FROM oven/bun:latest
 
 WORKDIR /app
 
+# Install Cypress dependencies for headless and GUI mode
+# Based on https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies
+RUN apt-get update && apt-get install -y \
+    libgtk2.0-0 \
+    libgtk-3-0 \
+    libgbm-dev \
+    libnotify-dev \
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    libxtst6 \
+    xauth \
+    xvfb \
+    # Additional dependencies for Cypress
+    libgconf-2-4 \
+    libglu1-mesa \
+    # Clean up to reduce image size
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy package files
 COPY package.json bun.lock* ./
 

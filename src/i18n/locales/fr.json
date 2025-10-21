@@ -260,6 +260,7 @@
   "pornstars": {
     "title": "Pornstars",
     "subtitle": "Parcourez nos {count} artistes incroyables",
+    "noResults": "Aucune pornstar trouvée correspondant à vos filtres",
     "sort": {
       "popular": "Les plus populaires",
       "newest": "Les plus récents",
@@ -268,6 +269,26 @@
     },
     "pagination": {
       "showing": "Affichage de {start}-{end} sur {total} pornstars"
+    },
+    "filters": {
+      "title": "Filtres",
+      "clearAll": "Tout Effacer",
+      "name": "Rechercher par Nom",
+      "namePlaceholder": "Entrez le nom...",
+      "age": "Âge",
+      "country": "Pays",
+      "allCountries": "Tous les Pays",
+      "height": "Taille",
+      "weight": "Poids",
+      "hairColor": "Couleur de Cheveux",
+      "allHairColors": "Toutes les Couleurs de Cheveux",
+      "eyeColor": "Couleur des Yeux",
+      "allEyeColors": "Toutes les Couleurs des Yeux",
+      "ethnicity": "Ethnicité",
+      "allEthnicities": "Toutes les Ethnicités"
+    },
+    "errors": {
+      "fetchFailed": "Impossible de charger les pornstars. Veuillez réessayer."
     }
   },
   "pornstar": {
@@ -1262,7 +1283,9 @@
     }
   },
   "common": {
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "loading": "Chargement...",
+    "retry": "Réessayer"
   },
   "checkout": {
     "title": "Finaliser Votre Achat",
