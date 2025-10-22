@@ -57,6 +57,13 @@ function CategoriesPage() {const t = useTranslations();
 
     // Ad banner component that gracefully disappears for premium users
     const AdBanner = ({ position, style = {} }: { position: string; style?: React.CSSProperties }) => {
+        const [adIndex, setAdIndex] = useState(0);
+
+        useEffect(() => {
+            // Set random ad index after mount to avoid hydration mismatch
+            setAdIndex(Math.floor(Math.random() * 4));
+        }, []);
+
         if (isPremium) return null; // Premium users don't see ads
 
         const adTypes = [
@@ -66,7 +73,8 @@ function CategoriesPage() {const t = useTranslations();
             { text: '50% OFF Premium Membership', cta: 'Claim Offer', gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)' }
         ];
 
-        const ad = adTypes[Math.floor(Math.random() * adTypes.length)];
+        // Use the stateful index to select ad
+        const ad = adTypes[adIndex];
 
         return (
             <div className="ad-banner-wrapper" style={style}>

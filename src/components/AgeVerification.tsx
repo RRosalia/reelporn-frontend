@@ -44,20 +44,27 @@ function AgeVerification() {
                 return;
             }
 
-            const verified = localStorage.getItem('ageVerified');
-            const blocked = localStorage.getItem('ageBlocked');
+            try {
+                const verified = localStorage.getItem('ageVerified');
+                const blocked = localStorage.getItem('ageBlocked');
 
-            if (blocked === 'true') {
-                // User previously clicked "under 18", redirect to blocked
-                router.push('/blocked');
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
-            } else if (verified === 'true') {
-                // Already verified
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
-            } else {
-                // Need to verify age - class already added by inline script
+                if (blocked === 'true') {
+                    // User previously clicked "under 18", redirect to blocked
+                    router.push('/blocked');
+                    setShowModal(false);
+                    document.documentElement.classList.remove('age-verification-pending');
+                } else if (verified === 'true') {
+                    // Already verified
+                    setShowModal(false);
+                    document.documentElement.classList.remove('age-verification-pending');
+                } else {
+                    // Need to verify age - class already added by inline script
+                    setShowModal(true);
+                }
+            } catch (e) {
+                // localStorage not available (e.g., disabled by user)
+                // Show modal but won't be able to remember choice
+                console.warn('localStorage not available:', e);
                 setShowModal(true);
             }
         }
@@ -65,8 +72,13 @@ function AgeVerification() {
 
     const handleEnter = () => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem('ageVerified', 'true');
-            localStorage.removeItem('ageBlocked');
+            try {
+                localStorage.setItem('ageVerified', 'true');
+                localStorage.removeItem('ageBlocked');
+            } catch (e) {
+                console.warn('Could not save age verification:', e);
+                // Continue anyway - user can still access the site
+            }
         }
         document.documentElement.classList.remove('age-verification-pending');
         setShowModal(false);
@@ -74,8 +86,13 @@ function AgeVerification() {
 
     const handleExit = () => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem('ageBlocked', 'true');
-            localStorage.removeItem('ageVerified');
+            try {
+                localStorage.setItem('ageBlocked', 'true');
+                localStorage.removeItem('ageVerified');
+            } catch (e) {
+                console.warn('Could not save age block:', e);
+                // Continue anyway - redirect to blocked page
+            }
         }
         document.documentElement.classList.remove('age-verification-pending');
         router.push('/blocked');
