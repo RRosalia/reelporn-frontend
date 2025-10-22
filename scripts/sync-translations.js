@@ -86,6 +86,7 @@ function findMissingKeys(sourceData, targetData) {
 
 /**
  * Translate text using DeepL API
+ * Preserves placeholders like {country}, {name}, etc. from being translated
  */
 async function translateText(text, targetLang) {
   try {
@@ -94,12 +95,31 @@ async function translateText(text, targetLang) {
       return text;
     }
 
-    const result = await translator.translateText(text, null, targetLang, {
+    // Extract placeholders (e.g., {country}, {name}) to preserve them
+    const placeholderPattern = /\{[^}]+\}/g;
+    const placeholders = text.match(placeholderPattern) || [];
+
+    // Replace placeholders with tokens that won't be translated
+    let textToTranslate = text;
+    const placeholderMap = {};
+    placeholders.forEach((placeholder, index) => {
+      const token = `__PLACEHOLDER_${index}__`;
+      placeholderMap[token] = placeholder;
+      textToTranslate = textToTranslate.replace(placeholder, token);
+    });
+
+    const result = await translator.translateText(textToTranslate, null, targetLang, {
       formality: 'default',
       preserveFormatting: true,
     });
 
-    return result.text;
+    // Restore placeholders in the translated text
+    let translatedText = result.text;
+    Object.entries(placeholderMap).forEach(([token, placeholder]) => {
+      translatedText = translatedText.replace(token, placeholder);
+    });
+
+    return translatedText;
   } catch (error) {
     console.error(`Error translating "${text}" to ${targetLang}:`, error.message);
     return text; // Return original if translation fails

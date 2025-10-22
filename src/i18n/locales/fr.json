@@ -1417,5 +1417,9 @@
     "login": "Se Connecter",
     "register": "Créer un Compte",
     "maybeLater": "Peut-être Plus Tard"
+  },
+  "test": {
+    "welcomeMessage": "Bienvenue {username}, vous avez {count} nouvelles notifications !",
+    "simpleMessage": "Il s'agit d'une traduction test"
   }
 }

@@ -1,1421 +1,1425 @@
 {
-  "dateFormat": "d/m/Y",
+  "dateFormat": "m/d/Y",
+  "test": {
+    "welcomeMessage": "Välkommen {username}, du har {count} nya meddelanden!",
+    "simpleMessage": "Detta är en testöversättning"
+  },
   "header": {
-    "home": "Inicio",
-    "categories": "Categorías",
-    "about": "Acerca de",
-    "contact": "Contacto",
-    "watch": "Ver",
-    "login": "Iniciar sesión",
-    "register": "Registrarse"
+    "home": "Hem",
+    "categories": "Kategorier",
+    "about": "Om",
+    "contact": "Kontakt",
+    "watch": "Titta på",
+    "login": "Logga in",
+    "register": "Registrera"
   },
   "profile": {
-    "register": "Registrarse",
-    "login": "Iniciar sesión",
-    "liked": "Videos favoritos",
-    "account": "Mi cuenta",
-    "subscriptions": "Suscripciones",
-    "faq": "Preguntas frecuentes",
-    "support": "Soporte",
-    "logout": "Cerrar sesión"
+    "register": "Registrera",
+    "login": "Logga in",
+    "liked": "Gillade videor",
+    "account": "Mitt konto",
+    "subscriptions": "Prenumerationer",
+    "faq": "FRÅGOR OCH SVAR",
+    "support": "Kontakta support",
+    "logout": "Logga ut"
   },
   "home": {
     "hero": {
-      "title": "Descubre Reels Calientes de 15 Segundos",
-      "subtitle": "Mira miles de clips cortos para adultos. Desliza, dale me gusta y disfruta.",
-      "watchNow": "Ver ahora",
-      "getPremium": "Obtener Premium",
-      "featuredContent": "Contenido destacado",
-      "trending": "🔥 Tendencias"
+      "title": "Upptäck heta 15-sekundersrullar",
+      "subtitle": "Titta på tusentals korta vuxenklipp. Svep, gilla och njut.",
+      "watchNow": "Titta nu",
+      "getPremium": "Få Premium",
+      "featuredContent": "Utvalt innehåll",
+      "trending": "🔥 Trending"
     },
     "stats": {
-      "videos": "Videos",
-      "users": "Usuarios activos",
-      "daily": "Actualizaciones diarias"
+      "videos": "Videor",
+      "users": "Aktiva användare",
+      "daily": "Dagliga uppdateringar"
     },
-    "viewAll": "Ver todo",
+    "viewAll": "Visa alla",
     "search": {
-      "placeholder": "Buscar videos..."
+      "placeholder": "Sök efter videor..."
     },
-    "loadMore": "Cargar más videos",
+    "loadMore": "Ladda fler videor",
     "premium": {
-      "title": "Desbloquea funciones Premium",
-      "subtitle": "Obtén acceso ilimitado a contenido exclusivo y funciones",
-      "feature1": "Experiencia de transmisión sin anuncios",
-      "feature2": "Calidad de video HD y 4K",
-      "feature3": "Descarga videos para ver sin conexión",
-      "feature4": "Acceso anticipado a nuevos lanzamientos",
-      "cta": "Obtener Premium ahora"
+      "title": "Lås upp premiumfunktioner",
+      "subtitle": "Få obegränsad tillgång till exklusivt innehåll och funktioner",
+      "feature1": "Annonsfri streamingupplevelse",
+      "feature2": "HD- och 4K-videokvalitet",
+      "feature3": "Ladda ner videor för offlinevisning",
+      "feature4": "Tidig tillgång till nya utgåvor",
+      "cta": "Skaffa Premium nu"
     }
   },
   "category": {
-    "trending": "Tendencias",
-    "new": "Nuevo",
-    "popular": "Popular",
-    "amateur": "Amateur",
-    "professional": "Profesional",
-    "featured": "Destacado",
-    "topRated": "Mejor valorado",
-    "mostViewed": "Más visto"
+    "trending": "Trendande",
+    "new": "Nya",
+    "popular": "Populär",
+    "amateur": "Amatör",
+    "professional": "Professionell",
+    "featured": "Utvalda",
+    "topRated": "Högsta betyg",
+    "mostViewed": "Mest visade"
   },
   "login": {
-    "title": "¡Bienvenido de nuevo!",
-    "welcomeBack": "¡Bienvenido de nuevo!",
-    "signIn": "Iniciar sesión",
+    "title": "Välkommen tillbaka!",
+    "welcomeBack": "Välkommen tillbaka!",
+    "signIn": "Logga in",
     "hero": {
-      "title": "¿Listo para continuar?",
-      "subtitle": "Tu contenido favorito te espera",
-      "description": "Accede a tu biblioteca personalizada y continúa donde lo dejaste"
+      "title": "Är du redo att fortsätta?",
+      "subtitle": "Ditt favoritinnehåll väntar",
+      "description": "Få tillgång till ditt personliga bibliotek och fortsätt där du slutade"
     },
-    "email": "Correo electrónico",
-    "emailPlaceholder": "Ingresa tu correo electrónico",
-    "username": "Usuario o correo electrónico",
-    "password": "Contraseña",
-    "passwordPlaceholder": "Ingresa tu contraseña",
-    "rememberMe": "Recuérdame",
-    "forgotPassword": "¿Olvidaste tu contraseña?",
-    "submit": "Iniciar sesión",
-    "loading": "Iniciando sesión...",
-    "noAccount": "¿No tienes una cuenta?",
-    "createAccount": "Crear cuenta",
+    "email": "E-postadress",
+    "emailPlaceholder": "Ange din e-postadress",
+    "username": "Användarnamn eller e-post",
+    "password": "Lösenord",
+    "passwordPlaceholder": "Ange ditt lösenord",
+    "rememberMe": "Kom ihåg mig",
+    "forgotPassword": "Glömt lösenord?",
+    "submit": "Logga in",
+    "loading": "Jag skriver in mig...",
+    "noAccount": "Har du inget konto?",
+    "createAccount": "Skapa konto",
     "error": {
-      "rateLimitExceeded": "Demasiados intentos de inicio de sesión. Por favor, inténtalo más tarde.",
-      "invalidCredentials": "Correo electrónico o contraseña inválidos. Por favor, inténtalo de nuevo.",
-      "validationFailed": "Por favor, verifica tu información e inténtalo de nuevo.",
-      "network": "Error de red. Por favor, verifica tu conexión e inténtalo de nuevo.",
-      "server": "Error del servidor. Por favor, inténtalo más tarde.",
-      "generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+      "rateLimitExceeded": "För många inloggningsförsök. Vänligen försök igen senare.",
+      "invalidCredentials": "Ogiltig e-postadress eller ogiltigt lösenord. Vänligen försök igen.",
+      "validationFailed": "Kontrollera din inmatning och försök igen.",
+      "network": "Fel i nätverket. Kontrollera din anslutning och försök igen.",
+      "server": "Serverfel. Vänligen försök igen senare.",
+      "generic": "Ett fel har inträffat. Vänligen försök igen."
     },
     "info": {
-      "loginRequired": "Por favor, inicia sesión para continuar.",
-      "logoutSuccess": "Has cerrado sesión exitosamente."
+      "loginRequired": "Vänligen logga in för att fortsätta.",
+      "logoutSuccess": "Du har framgångsrikt loggats ut."
     }
   },
   "account": {
-    "title": "Mi cuenta",
+    "title": "Mitt konto",
     "profile": {
-      "title": "Información del perfil",
-      "name": "Nombre",
-      "nickname": "Apodo",
-      "nicknameHint": "Solo puedes cambiar tu apodo una vez al mes.",
-      "email": "Correo electrónico",
-      "emailVerified": "Correo verificado",
-      "update": "Actualizar perfil",
-      "updating": "Actualizando...",
-      "updateSuccess": "¡Perfil actualizado exitosamente!"
+      "title": "Information om profilen",
+      "name": "Namn",
+      "nickname": "Smeknamn",
+      "nicknameHint": "Du kan bara ändra ditt smeknamn en gång per månad.",
+      "email": "E-postadress",
+      "emailVerified": "E-post verifierad",
+      "update": "Uppdatera profil",
+      "updating": "Uppdaterar...",
+      "updateSuccess": "Profilen har uppdaterats framgångsrikt!"
     },
     "password": {
-      "title": "Cambiar contraseña",
-      "current": "Contraseña actual",
-      "new": "Nueva contraseña",
-      "confirm": "Confirmar nueva contraseña",
-      "update": "Cambiar contraseña",
-      "updating": "Cambiando...",
-      "updateSuccess": "¡Contraseña cambiada exitosamente!",
-      "mismatch": "Las nuevas contraseñas no coinciden."
+      "title": "Ändra lösenord",
+      "current": "Aktuellt lösenord",
+      "new": "Nytt lösenord",
+      "confirm": "Bekräfta nytt lösenord",
+      "update": "Ändra lösenord",
+      "updating": "Förändring...",
+      "updateSuccess": "Lösenordet har ändrats framgångsrikt!",
+      "mismatch": "De nya lösenorden stämmer inte överens."
     },
     "logout": {
-      "title": "Cerrar sesión",
-      "description": "Cerrar sesión de tu cuenta",
-      "button": "Cerrar sesión",
-      "confirm": "¿Estás seguro de que quieres cerrar sesión?"
+      "title": "Logga ut",
+      "description": "Logga ut från ditt konto",
+      "button": "Logga ut",
+      "confirm": "Är du säker på att du vill logga ut?"
     },
     "info": {
-      "title": "Información de la cuenta",
-      "memberId": "ID de miembro",
-      "memberSince": "Miembro desde",
-      "lastUpdated": "Última actualización"
+      "title": "Kontoinformation",
+      "memberId": "Medlems-ID",
+      "memberSince": "Medlem sedan",
+      "lastUpdated": "Senast uppdaterad"
     },
     "error": {
-      "validationFailed": "Por favor, verifica tu información e inténtalo de nuevo.",
-      "network": "Error de red. Por favor, verifica tu conexión e inténtalo de nuevo.",
-      "generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+      "validationFailed": "Kontrollera din inmatning och försök igen.",
+      "network": "Fel i nätverket. Kontrollera din anslutning och försök igen.",
+      "generic": "Ett fel har inträffat. Vänligen försök igen."
     },
     "twoFactor": {
-      "title": "Autenticación de dos factores",
-      "description": "Agrega una capa adicional de seguridad a tu cuenta habilitando la autenticación de dos factores.",
-      "enable": "Habilitar autenticación de dos factores",
-      "enabling": "Habilitando...",
-      "enableButton": "Habilitar autenticación de dos factores",
-      "enableSuccess": "¡La autenticación de dos factores se ha habilitado exitosamente!",
-      "scanQR": "Escanea este código QR con tu aplicación de autenticación (Google Authenticator, Authy, etc.):",
-      "secretKey": "Clave secreta",
-      "confirmCode": "Ingresa el código de confirmación",
-      "confirm": "Confirmar y habilitar",
-      "confirming": "Confirmando...",
-      "enabled": "2FA habilitado",
-      "recoveryCodes": "Códigos de recuperación",
-      "recoveryCodesDescription": "Guarda estos códigos de recuperación en un lugar seguro. Puedes usarlos para acceder a tu cuenta si pierdes el acceso a tu aplicación de autenticación.",
-      "showRecoveryCodes": "Mostrar códigos de recuperación",
-      "hideRecoveryCodes": "Ocultar códigos de recuperación",
-      "regenerateRecoveryCodes": "Regenerar códigos",
-      "regenerateConfirm": "¿Estás seguro? Esto invalidará tus códigos de recuperación actuales.",
-      "regenerateSuccess": "¡Códigos de recuperación regenerados exitosamente!",
-      "disable": "Deshabilitar 2FA",
-      "disableConfirm": "¿Estás seguro de que quieres deshabilitar la autenticación de dos factores?",
-      "disableSuccess": "La autenticación de dos factores se ha deshabilitado.",
+      "title": "Tvåfaktorsautentisering",
+      "description": "Lägg till ett extra säkerhetslager på ditt konto genom att aktivera tvåfaktorsautentisering.",
+      "enable": "Aktivera tvåfaktorsautentisering",
+      "enabling": "Möjliggör...",
+      "enableButton": "Aktivera tvåfaktorsautentisering",
+      "enableSuccess": "Tvåfaktorsautentisering har aktiverats framgångsrikt!",
+      "scanQR": "Skanna denna QR-kod med din autentiseringsapp (Google Authenticator, Authy, etc.):",
+      "secretKey": "Hemlig nyckel",
+      "confirmCode": "Ange bekräftelsekod",
+      "confirm": "Bekräfta & Aktivera",
+      "confirming": "Bekräftar...",
+      "enabled": "2FA aktiverad",
+      "recoveryCodes": "Återställningskoder",
+      "recoveryCodesDescription": "Förvara dessa återställningskoder på en säker plats. Du kan använda dem för att komma åt ditt konto om du förlorar åtkomsten till din autentiseringsapp.",
+      "showRecoveryCodes": "Visa återställningskoder",
+      "hideRecoveryCodes": "Dölj återställningskoder",
+      "regenerateRecoveryCodes": "Regenerera koder",
+      "regenerateConfirm": "Är du säker på det? Detta kommer att ogiltigförklara dina nuvarande återställningskoder.",
+      "regenerateSuccess": "Återställningskoder regenererade framgångsrikt!",
+      "disable": "Avaktivera 2FA",
+      "disableConfirm": "Är du säker på att du vill avaktivera tvåfaktorsautentisering?",
+      "disableSuccess": "Tvåfaktorsautentisering har avaktiverats.",
       "setup": {
-        "title": "Habilitar autenticación de dos factores",
-        "description": "Agrega una capa adicional de seguridad a tu cuenta. Necesitarás ingresar un código de tu aplicación de autenticación cada vez que inicies sesión.",
-        "enable": "Habilitar 2FA",
-        "enabling": "Habilitando...",
-        "cancel": "Cancelar"
+        "title": "Aktivera tvåfaktorsautentisering",
+        "description": "Lägg till ett extra säkerhetslager på ditt konto. Du måste ange en kod från din autentiseringsapp varje gång du loggar in.",
+        "enable": "Aktivera 2FA",
+        "enabling": "Möjliggör...",
+        "cancel": "Avbryt"
       },
       "scan": {
-        "title": "Configura tu aplicación de autenticación",
-        "instruction": "Escanea este código QR con tu aplicación de autenticación (Google Authenticator, Authy, etc.):",
-        "showSecret": "Mostrar clave secreta para entrada manual",
-        "hideSecret": "Ocultar clave secreta",
-        "enterCode": "Después de escanear el código QR, ingresa el código de 6 dígitos de tu aplicación de autenticación para verificar:",
-        "verify": "Verificar y continuar",
-        "verifying": "Verificando..."
+        "title": "Konfigurera din Authenticator-app",
+        "instruction": "Skanna denna QR-kod med din autentiseringsapp (Google Authenticator, Authy, etc.):",
+        "showSecret": "Visa hemlig nyckel för manuell inmatning",
+        "hideSecret": "Dölj hemlig nyckel",
+        "enterCode": "När du har skannat QR-koden anger du den sexsiffriga koden från din autentiseringsapp för att verifiera:",
+        "verify": "Verifiera och fortsätt",
+        "verifying": "Verifierar..."
       },
       "recovery": {
-        "title": "Guarda tus códigos de recuperación",
-        "important": "Importante",
-        "warning": "Guarda estos códigos de recuperación en un lugar seguro. Puedes usarlos para acceder a tu cuenta si pierdes el acceso a tu aplicación de autenticación.",
-        "download": "Descargar códigos",
-        "copy": "Copiar al portapapeles",
-        "continue": "He guardado mis códigos de recuperación"
+        "title": "Spara dina återvinningskoder",
+        "important": "Viktigt",
+        "warning": "Förvara dessa återställningskoder på en säker plats. Du kan använda dem för att komma åt ditt konto om du förlorar åtkomsten till din autentiseringsapp.",
+        "download": "Ladda ner koder",
+        "copy": "Kopiera till Urklipp",
+        "continue": "Jag har sparat mina återställningskoder"
       },
       "manage": {
-        "title": "Autenticación de dos factores",
-        "enabled": "La autenticación de dos factores está actualmente habilitada en tu cuenta.",
-        "description": "Tu cuenta está protegida con autenticación de dos factores. Puedes administrar tus códigos de recuperación o deshabilitar 2FA a continuación.",
-        "recoveryCodes": "Códigos de recuperación",
-        "viewCodes": "Ver códigos de recuperación",
-        "hideCodes": "Ocultar códigos",
-        "loading": "Cargando...",
-        "regenerate": "Regenerar códigos de recuperación",
-        "regenerating": "Regenerando...",
-        "regenerateConfirm": "¿Estás seguro de que quieres regenerar tus códigos de recuperación? Esto invalidará tus códigos de recuperación antiguos.",
-        "regenerateSuccess": "¡Códigos de recuperación regenerados exitosamente! Por favor, guárdalos en un lugar seguro.",
-        "copiedSuccess": "¡Códigos de recuperación copiados al portapapeles!",
-        "disableTitle": "Deshabilitar autenticación de dos factores",
-        "disableDescription": "Deshabilitar 2FA hará que tu cuenta sea menos segura. ¿Estás seguro de que quieres continuar?",
-        "disable": "Deshabilitar 2FA",
-        "disabling": "Deshabilitando...",
-        "disableConfirm": "¿Estás seguro de que quieres deshabilitar la autenticación de dos factores? Esto hará que tu cuenta sea menos segura.",
-        "confirmDisable": "Confirmar y deshabilitar 2FA"
+        "title": "Tvåfaktorsautentisering",
+        "enabled": "Tvåfaktorsautentisering är för närvarande aktiverat på ditt konto.",
+        "description": "Ditt konto är skyddat med tvåfaktorsautentisering. Du kan hantera dina återställningskoder eller inaktivera 2FA nedan.",
+        "recoveryCodes": "Återställningskoder",
+        "viewCodes": "Visa återställningskoder",
+        "hideCodes": "Dölj koder",
+        "loading": "Laddar...",
+        "regenerate": "Regenerate Återhämtningskoder",
+        "regenerating": "Regenererande...",
+        "regenerateConfirm": "Är du säker på att du vill förnya dina återställningskoder? Detta kommer att ogiltigförklara dina gamla återställningskoder.",
+        "regenerateSuccess": "Återställningskoderna har regenererats framgångsrikt! Vänligen spara dem på en säker plats.",
+        "copiedSuccess": "Återställningskoder kopieras till urklipp!",
+        "disableTitle": "Inaktivera tvåfaktorsautentisering",
+        "disableDescription": "Om du avaktiverar 2FA blir ditt konto mindre säkert. Är du säker på att du vill fortsätta?",
+        "disable": "Avaktivera 2FA",
+        "disabling": "Inaktivera...",
+        "disableConfirm": "Är du säker på att du vill avaktivera tvåfaktorsautentisering? Detta kommer att göra ditt konto mindre säkert.",
+        "confirmDisable": "Bekräfta och avaktivera 2FA"
       },
       "error": {
-        "enableFailed": "Error al habilitar la autenticación de dos factores. Por favor, inténtalo de nuevo.",
-        "invalidCode": "El código de autenticación de dos factores proporcionado era inválido.",
-        "verifyFailed": "Error al verificar el código. Por favor, inténtalo de nuevo.",
-        "fetchCodesFailed": "Error al obtener los códigos de recuperación. Por favor, inténtalo de nuevo.",
-        "regenerateFailed": "Error al regenerar los códigos de recuperación. Por favor, inténtalo de nuevo.",
-        "disableFailed": "Error al deshabilitar la autenticación de dos factores. Por favor, inténtalo de nuevo."
+        "enableFailed": "Det gick inte att aktivera tvåfaktorsautentisering. Vänligen försök igen.",
+        "invalidCode": "Den angivna koden för tvåfaktorsautentisering var ogiltig.",
+        "verifyFailed": "Misslyckades med att verifiera koden. Vänligen försök igen.",
+        "fetchCodesFailed": "Misslyckades med att hämta återställningskoder. Vänligen försök igen.",
+        "regenerateFailed": "Misslyckades med att regenerera återställningskoder. Vänligen försök igen.",
+        "disableFailed": "Misslyckades med att inaktivera tvåfaktorsautentisering. Vänligen försök igen."
       }
     }
   },
   "register": {
-    "title": "¡Únete hoy!",
-    "choosePlan": "Elige tu plan de membresía"
+    "title": "Bli en del av oss idag!",
+    "choosePlan": "Välj din medlemsplan"
   },
   "signup": {
-    "title": "Elige tu membresía",
-    "name": "Nombre completo",
-    "username": "Usuario",
-    "email": "Correo electrónico",
-    "password": "Contraseña",
-    "confirmPassword": "Confirmar contraseña",
-    "paymentMethod": "Método de pago",
-    "creditCard": "Tarjeta de crédito",
+    "title": "Välj ditt medlemskap",
+    "name": "Full Name",
+    "username": "Användarnamn",
+    "email": "E-postadress",
+    "password": "Lösenord",
+    "confirmPassword": "Bekräfta lösenord",
+    "paymentMethod": "Betalningsmetod",
+    "creditCard": "Kreditkort",
     "paypal": "PayPal",
-    "crypto": "Criptomoneda",
-    "submit": "Completar registro",
-    "processing": "Procesando...",
-    "createAccount": "Crear cuenta",
-    "subscribeFor": "Suscribirse por",
-    "selectPlan": "Selecciona un plan",
-    "cancel": "Cancelar",
-    "billedAt": "Facturado a",
-    "haveAccount": "¿Ya tienes una cuenta?",
-    "clickHere": "Haz clic aquí",
+    "crypto": "Kryptovaluta",
+    "submit": "Fullständig registrering",
+    "processing": "Bearbetning...",
+    "createAccount": "Skapa konto",
+    "subscribeFor": "Prenumerera på",
+    "selectPlan": "Välj en plan",
+    "cancel": "Avbryt",
+    "billedAt": "Faktureras vid",
+    "haveAccount": "Har du redan ett konto?",
+    "clickHere": "Klicka här",
     "promo": {
-      "title": "¡Mira contenido exclusivo ahora!",
-      "subtitle": "Únete a miles de miembros satisfechos",
-      "description": "Obtén acceso ilimitado a contenido premium"
+      "title": "Titta på exklusivt innehåll nu!",
+      "subtitle": "Bli en av tusentals nöjda medlemmar",
+      "description": "Få obegränsad tillgång till premiuminnehåll"
     }
   },
   "membership": {
     "noAds": {
-      "title": "Sin anuncios",
-      "description": "Elimina todos los anuncios"
+      "title": "Inga annonser",
+      "description": "Ta bort alla annonser"
     },
     "premium": {
       "title": "Premium",
-      "description": "Acceso completo a todas las funciones"
+      "description": "Full tillgång till alla funktioner"
     },
     "premiumPlus": {
       "title": "Premium Plus",
-      "description": "Experiencia VIP definitiva"
+      "description": "Ultimat VIP-upplevelse"
     },
-    "from": "desde",
-    "perMonth": "mes",
-    "popular": "Popular",
-    "bestValue": "Mejor valor",
-    "exclusive": "Exclusivo",
-    "save": "Ahorra",
-    "features": "Funciones incluidas",
+    "from": "från",
+    "perMonth": "månad",
+    "popular": "Populär",
+    "bestValue": "Bästa värde",
+    "exclusive": "Exklusivt",
+    "save": "Spara",
+    "features": "Funktioner som ingår",
     "duration": {
-      "1month": "1 mes",
-      "6months": "6 meses",
-      "12months": "12 meses"
+      "1month": "1 månad",
+      "6months": "6 månader",
+      "12months": "12 månader"
     },
     "feature": {
-      "noAds": "Experiencia sin anuncios",
-      "basicSupport": "Soporte básico",
-      "hdStreaming": "Transmisión HD",
-      "downloadVideos": "Descargar videos",
-      "exclusiveContent": "Contenido exclusivo",
-      "prioritySupport": "Soporte prioritario",
-      "4kStreaming": "Transmisión 4K Ultra HD",
-      "unlimitedDownloads": "Descargas ilimitadas",
-      "earlyAccess": "Acceso anticipado a nuevo contenido",
-      "vipSupport": "Soporte VIP 24/7",
-      "customPlaylist": "Listas de reproducción personalizadas"
+      "noAds": "Annonsfri upplevelse",
+      "basicSupport": "Grundläggande stöd",
+      "hdStreaming": "HD-streaming",
+      "downloadVideos": "Ladda ner videor",
+      "exclusiveContent": "Exklusivt innehåll",
+      "prioritySupport": "Prioriterat stöd",
+      "4kStreaming": "4K Ultra HD-streaming",
+      "unlimitedDownloads": "Obegränsade nedladdningar",
+      "earlyAccess": "Tidig tillgång till nytt innehåll",
+      "vipSupport": "vIP-support 24/7",
+      "customPlaylist": "Anpassade spellistor"
     }
   },
   "footer": {
-    "description": "Tu destino principal para contenido de video de alta calidad en formato corto. Descubre, mira y comparte reels increíbles.",
-    "quickLinks": "Enlaces rápidos",
-    "shorts": "Cortos",
-    "account": "Cuenta",
-    "support": "Soporte",
-    "legal": "Legal",
-    "terms": "Términos de servicio",
-    "privacy": "Política de privacidad",
+    "description": "Din främsta destination för högkvalitativt videoinnehåll i kortformat. Upptäck, titta på och dela fantastiska rullar.",
+    "quickLinks": "Snabblänkar",
+    "shorts": "Shorts",
+    "account": "Konto",
+    "support": "Stöd",
+    "legal": "Juridisk",
+    "terms": "Villkor för tjänsten",
+    "privacy": "Integritetspolicy",
     "dmca": "DMCA",
-    "cookies": "Política de cookies",
-    "language": "Idioma",
-    "cookieSettings": "Configuración de cookies",
-    "copyright": "Todos los derechos reservados"
+    "cookies": "Policy för cookies",
+    "language": "Språk",
+    "cookieSettings": "Inställningar för cookies",
+    "copyright": "Alla rättigheter förbehålls"
   },
   "age": {
-    "title": "Este es un sitio web para adultos (18+)",
-    "notice": "Aviso a los usuarios",
-    "warning1": "Este sitio web contiene materiales restringidos por edad, incluidas desnudez y representaciones explícitas de actividad sexual. Al ingresar, afirmas que tienes al menos 18 años de edad o la mayoría de edad en la jurisdicción desde la que accedes al sitio web y consientes ver contenido sexualmente explícito.",
-    "warning2": "Nuestra página de controles parentales explica cómo puedes bloquear fácilmente el acceso a este sitio.",
-    "enter": "Tengo 18 años o más - Entrar",
-    "exit": "Soy menor de 18 - Salir",
-    "parentalInfo": "Más información en nuestra",
-    "parentalLink": "página de control parental"
+    "title": "Detta är en webbplats för vuxna (18+)",
+    "notice": "Meddelande till användare",
+    "warning1": "Denna webbplats innehåller åldersbegränsat material, inklusive nakenhet och uttryckliga skildringar av sexuell aktivitet. Genom att gå in bekräftar du att du är minst 18 år gammal eller har uppnått myndighetsåldern i den jurisdiktion du besöker webbplatsen från och att du samtycker till att se sexuellt explicit innehåll.",
+    "warning2": "Vår sida om föräldrakontroll förklarar hur du enkelt kan blockera åtkomst till denna webbplats.",
+    "enter": "Jag är 18 år eller äldre - Ange",
+    "exit": "Jag är under 18 år - Avsluta",
+    "parentalInfo": "Läs mer på vår hemsida",
+    "parentalLink": "sida för föräldrakontroll"
   },
   "blocked": {
-    "title": "Este sitio web es exclusivamente para usuarios mayores de 18 años.",
-    "message": "Nos tomamos muy en serio nuestra responsabilidad de evitar que los menores accedan al contenido para adultos. Si crees que has llegado a esta página por error, cierra esta ventana y contacta a nuestro equipo de soporte.",
+    "title": "Denna webbplats är endast avsedd för användare som är 18 år eller äldre.",
+    "message": "Vi tar vårt ansvar för att förhindra att minderåriga får tillgång till innehåll för vuxna på största allvar. Om du tror att du har kommit till den här sidan av misstag, stäng det här fönstret och kontakta vårt supportteam.",
     "geo": {
       "title": "Åtkomst inte tillgänglig i din region",
       "message": "Vi beklagar, men vår tjänst är inte tillgänglig i {country}. Denna begränsning gäller på grund av lokala bestämmelser och rättsliga krav."
     }
   },
   "parental": {
-    "title": "Controles parentales",
-    "subtitle": "Protegiendo a los niños del acceso a contenido restringido por edad",
+    "title": "Föräldrakontroll",
+    "subtitle": "Skydda barn från att få tillgång till åldersbegränsat innehåll",
     "intro": {
-      "title": "Acerca de los controles parentales",
-      "text1": "ReelPorn está comprometido a evitar que los menores accedan al contenido para adultos. Alentamos encarecidamente a los padres y tutores a tomar un papel activo en el monitoreo y control del uso de Internet de sus hijos.",
-      "text2": "Esta página proporciona información sobre varios métodos y herramientas que puedes usar para evitar el acceso a sitios web para adultos, incluido ReelPorn.com, en dispositivos utilizados por niños."
+      "title": "Om föräldrakontroll",
+      "text1": "ReelPorn har åtagit sig att förhindra att minderåriga får tillgång till innehåll för vuxna. Vi uppmuntrar starkt föräldrar och vårdnadshavare att ta en aktiv roll i att övervaka och kontrollera sina barns internetanvändning.",
+      "text2": "På den här sidan finns information om olika metoder och verktyg som du kan använda för att förhindra åtkomst till webbplatser för vuxna, inklusive ReelPorn.se, på enheter som används av barn."
     },
     "methods": {
-      "title": "Cómo bloquear contenido para adultos",
-      "intro": "Hay varias formas efectivas de restringir el acceso a sitios web para adultos:",
+      "title": "Hur man blockerar innehåll för vuxna",
+      "intro": "Det finns flera effektiva sätt att begränsa åtkomsten till webbplatser för vuxna:",
       "router": {
-        "title": "Bloqueo a nivel de enrutador",
-        "text": "La mayoría de los enrutadores modernos incluyen funciones de control parental que te permiten bloquear sitios web específicos o categorías de contenido en todos los dispositivos conectados a tu red doméstica. Consulta la documentación de tu enrutador o contacta al fabricante para obtener instrucciones de configuración."
+        "title": "Blockering på routernivå",
+        "text": "De flesta moderna routrar innehåller föräldrakontrollfunktioner som gör att du kan blockera specifika webbplatser eller kategorier av innehåll på alla enheter som är anslutna till ditt hemnätverk. Läs igenom dokumentationen för din router eller kontakta routertillverkaren för installationsinstruktioner."
       },
       "isp": {
-        "title": "Controles del proveedor de servicios de Internet (ISP)",
-        "text": "Muchos proveedores de servicios de Internet ofrecen servicios de control parental que pueden filtrar el contenido antes de que llegue a tu hogar. Contacta a tu ISP para conocer las opciones de control parental disponibles y cómo habilitarlas."
+        "title": "Kontroller av Internetleverantörer (ISP)",
+        "text": "Många internetleverantörer erbjuder tjänster för föräldrakontroll som kan filtrera innehåll innan det når ditt hem. Kontakta din internetleverantör för att få information om vilka alternativ för föräldrakontroll som finns och hur du aktiverar dem."
       },
       "device": {
-        "title": "Controles a nivel de dispositivo",
-        "text": "Tanto las computadoras como los dispositivos móviles tienen funciones de control parental integradas. En Windows, usa Family Safety. En Mac, usa Screen Time y Controles parentales. En dispositivos iOS y Android, usa las funciones integradas de Screen Time y Family Link respectivamente."
+        "title": "Kontroller på enhetsnivå",
+        "text": "Både datorer och mobila enheter har inbyggda funktioner för föräldrakontroll. I Windows använder du Family Safety. På Mac använder du Screen Time och Parental Controls. På iOS- och Android-enheter använder du de inbyggda funktionerna Screen Time respektive Family Link."
       }
     },
     "software": {
-      "title": "Software de filtrado de terceros",
-      "intro": "Varias compañías de renombre ofrecen soluciones integrales de control parental y filtrado de contenido:",
-      "netnanny": "Software integral de filtrado de Internet y control parental para dispositivos Windows, Mac, Android e iOS.",
-      "norton": "Servicio gratuito de control parental de Norton que ayuda a proteger a los niños del contenido inapropiado.",
-      "qustodio": "Software de control parental multiplataforma con filtrado web, límites de tiempo y monitoreo de actividad.",
-      "opendns": "Servicio gratuito de filtrado basado en DNS que bloquea contenido para adultos a nivel de red."
+      "title": "Filtreringsprogramvara från tredje part",
+      "intro": "Flera välrenommerade företag erbjuder omfattande lösningar för föräldrakontroll och innehållsfiltrering:",
+      "netnanny": "Omfattande programvara för internetfiltrering och föräldrakontroll för Windows-, Mac-, Android- och iOS-enheter.",
+      "norton": "Gratis föräldrakontrolltjänst från Norton som hjälper till att skydda barn från olämpligt innehåll.",
+      "qustodio": "Plattformsoberoende föräldrakontrollprogram med webbfiltrering, tidsgränser och aktivitetsövervakning.",
+      "opendns": "Gratis DNS-baserad filtreringstjänst som blockerar innehåll för vuxna på nätverksnivå."
     },
     "resources": {
-      "title": "Recursos adicionales",
-      "text": "Para obtener más información sobre seguridad en Internet y protección de niños en línea, visita estos recursos:"
+      "title": "Ytterligare resurser",
+      "text": "För mer information om säkerhet på internet och skydd av barn online, besök dessa resurser:"
     },
     "notice": {
-      "title": "Aviso importante",
-      "text": "Si bien hacemos todos los esfuerzos para evitar que los menores accedan a nuestro sitio mediante verificación de edad, la responsabilidad final de evitar que los niños accedan al contenido para adultos recae en los padres y tutores. Recomendamos encarecidamente implementar múltiples capas de protección utilizando los métodos descritos anteriormente."
+      "title": "Viktigt meddelande",
+      "text": "Vi gör allt vi kan för att förhindra att minderåriga får tillgång till vår webbplats genom åldersverifiering, men det yttersta ansvaret för att förhindra att barn får tillgång till innehåll för vuxna ligger hos föräldrar och vårdnadshavare. Vi rekommenderar starkt att du implementerar flera lager av skydd med hjälp av de metoder som beskrivs ovan."
     }
   },
   "cookies": {
-    "title": "Usamos cookies",
-    "description": "Usamos cookies y tecnologías similares para mejorar tu experiencia de navegación, personalizar contenido y anuncios, proporcionar funciones de redes sociales y analizar nuestro tráfico. Puedes elegir qué cookies aceptar.",
-    "acceptAll": "Aceptar todas las cookies",
-    "customize": "Personalizar cookies",
-    "cancel": "Cancelar",
-    "savePreferences": "Guardar preferencias",
+    "title": "Vi använder cookies",
+    "description": "Vi använder cookies och liknande tekniker för att förbättra din surfupplevelse, anpassa innehåll och annonser, tillhandahålla funktioner för sociala medier och analysera vår trafik. Du kan välja vilka cookies du vill acceptera.",
+    "acceptAll": "Acceptera alla cookies",
+    "customize": "Anpassa cookies",
+    "cancel": "Avbryt",
+    "savePreferences": "Spara inställningar",
     "preferences": {
-      "title": "Preferencias de cookies",
-      "description": "Usamos diferentes tipos de cookies para optimizar tu experiencia en nuestro sitio web. Haz clic en las categorías a continuación para obtener más información y personalizar tus preferencias. Ten en cuenta que bloquear algunos tipos de cookies puede afectar tu experiencia."
+      "title": "Preferenser för cookies",
+      "description": "Vi använder olika typer av cookies för att optimera din upplevelse på vår webbplats. Klicka på kategorierna nedan för att lära dig mer och anpassa dina preferenser. Observera att blockering av vissa typer av cookies kan påverka din upplevelse."
     },
     "essential": {
-      "title": "Cookies esenciales",
-      "description": "Estas cookies son necesarias para que el sitio web funcione y no se pueden deshabilitar. Generalmente solo se configuran en respuesta a acciones realizadas por ti, como configurar tus preferencias de privacidad, iniciar sesión o completar formularios."
+      "title": "Viktiga kakor",
+      "description": "Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte inaktiveras. De ställs vanligtvis bara in som svar på åtgärder som du gör, till exempel när du ställer in dina sekretesspreferenser, loggar in eller fyller i formulär."
     },
     "functional": {
-      "title": "Cookies funcionales",
-      "description": "Estas cookies permiten funcionalidades mejoradas y personalización, como videos y chats en vivo. Pueden ser establecidas por nosotros o por proveedores externos cuyos servicios hemos agregado a nuestras páginas."
+      "title": "Funktionella cookies",
+      "description": "Dessa cookies möjliggör förbättrad funktionalitet och personalisering, till exempel videor och livechattar. De kan sättas av oss eller av tredjepartsleverantörer vars tjänster vi har lagt till på våra sidor."
     },
     "analytics": {
-      "title": "Cookies analíticas",
-      "description": "Estas cookies nos permiten contar visitas y fuentes de tráfico para que podamos medir y mejorar el rendimiento de nuestro sitio. Nos ayudan a comprender qué páginas son más y menos populares y ver cómo los visitantes se mueven por el sitio."
+      "title": "Cookies för analys",
+      "description": "Dessa cookies gör det möjligt för oss att räkna besök och trafikkällor så att vi kan mäta och förbättra prestandan på vår webbplats. De hjälper oss att förstå vilka sidor som är mest och minst populära och att se hur besökarna rör sig på webbplatsen."
     },
     "advertising": {
-      "title": "Cookies de publicidad/orientación",
-      "description": "Estas cookies pueden ser establecidas a través de nuestro sitio por nuestros socios publicitarios. Pueden ser utilizadas por esas empresas para crear un perfil de tus intereses y mostrarte anuncios relevantes en otros sitios."
+      "title": "Cookies för målgruppsanpassning och annonsering",
+      "description": "Dessa cookies kan placeras på vår webbplats av våra reklampartners. De kan användas av dessa företag för att skapa en profil av dina intressen och visa dig relevanta annonser på andra webbplatser."
     }
   },
   "pornstars": {
-    "title": "Personajes",
-    "subtitle": "Explora nuestros {count} increíbles artistas",
-    "noResults": "No se encontraron personajes que coincidan con tus filtros",
+    "title": "Karaktärer",
+    "subtitle": "Bläddra bland våra {count} fantastiska artister",
+    "noResults": "Inga tecken hittades som matchade dina filter",
     "sort": {
-      "popular": "Más populares",
-      "newest": "Más recientes",
-      "mostVideos": "Más videos",
-      "mostViewed": "Más vistos"
+      "popular": "Mest populära",
+      "newest": "Nyaste",
+      "mostVideos": "De flesta videor",
+      "mostViewed": "Mest visade"
     },
     "pagination": {
-      "showing": "Mostrando {start}-{end} de {total} personajes"
+      "showing": "Visar {start}-{end} av {total} tecken"
     },
     "filters": {
-      "title": "Filtros",
-      "clearAll": "Limpiar todo",
-      "name": "Buscar por nombre",
-      "namePlaceholder": "Ingresa nombre...",
-      "age": "Edad",
-      "country": "País",
-      "allCountries": "Todos los países",
-      "height": "Altura",
-      "weight": "Peso",
-      "hairColor": "Color de cabello",
-      "allHairColors": "Todos los colores",
-      "eyeColor": "Color de ojos",
-      "allEyeColors": "Todos los colores",
-      "ethnicity": "Etnia",
-      "allEthnicities": "Todas las etnias"
+      "title": "Filter",
+      "clearAll": "Rensa alla",
+      "name": "Sök efter namn",
+      "namePlaceholder": "Ange namn...",
+      "age": "Ålder",
+      "country": "Land",
+      "allCountries": "Alla länder",
+      "height": "Höjd",
+      "weight": "Vikt",
+      "hairColor": "Hårfärg",
+      "allHairColors": "Alla hårfärger",
+      "eyeColor": "Ögonfärg",
+      "allEyeColors": "Alla ögonfärger",
+      "ethnicity": "Etnisk tillhörighet",
+      "allEthnicities": "Alla etniciteter"
     },
     "errors": {
-      "fetchFailed": "Error al cargar personajes. Por favor, inténtalo de nuevo."
+      "fetchFailed": "Misslyckades med att ladda tecken. Vänligen försök igen."
     }
   },
   "pornstar": {
     "stats": {
-      "videos": "Videos",
-      "views": "Vistas",
-      "likes": "Me gusta",
-      "followers": "Seguidores"
+      "videos": "Videor",
+      "views": "Utsikt",
+      "likes": "Gillar",
+      "followers": "Följare"
     },
-    "follow": "Seguir",
-    "following": "Siguiendo",
-    "message": "Mensaje",
-    "tip": "Enviar propina",
+    "follow": "Följ",
+    "following": "Följande",
+    "message": "Meddelande",
+    "tip": "Skicka tips",
     "tabs": {
-      "videos": "Videos",
-      "photos": "Fotos",
-      "about": "Acerca de"
+      "videos": "Videor",
+      "photos": "Bilder",
+      "about": "Om"
     },
-    "loadMore": "Cargar más videos",
+    "loadMore": "Ladda fler videor",
     "about": {
-      "bio": "Biografía",
-      "categories": "Categorías",
-      "social": "Redes sociales",
-      "details": "Detalles personales"
+      "bio": "Biografi",
+      "categories": "Kategorier",
+      "social": "Sociala medier",
+      "details": "Personliga detaljer"
     },
     "details": {
-      "age": "Edad",
-      "country": "País",
-      "height": "Altura",
-      "weight": "Peso",
-      "measurements": "Medidas",
-      "hair": "Color de cabello",
-      "eyes": "Color de ojos",
-      "ethnicity": "Etnia"
+      "age": "Ålder",
+      "country": "Land",
+      "height": "Höjd",
+      "weight": "Vikt",
+      "measurements": "Mätningar",
+      "hair": "Hårfärg",
+      "eyes": "Ögonfärg",
+      "ethnicity": "Etnisk tillhörighet"
     }
   },
   "error": {
     "403": {
-      "title": "Acceso prohibido",
-      "message": "Lo sentimos, no tienes permiso para acceder a esta página. Esta área podría estar restringida o requerir autorización especial."
+      "title": "Åtkomst förbjuden",
+      "message": "Tyvärr, du har inte behörighet att komma åt den här sidan. Det här området kan vara begränsat eller kräva särskilt tillstånd."
     },
     "404": {
-      "title": "Página no encontrada",
-      "message": "¡Ups! La página que buscas no existe. Podría haberse movido o eliminado."
+      "title": "Sidan hittades inte",
+      "message": "Oops! Sidan du letar efter finns inte. Den kan ha flyttats eller raderats."
     },
     "500": {
-      "title": "Error interno del servidor",
-      "message": "Algo salió mal de nuestro lado. Nuestros ingenieros han sido notificados y están trabajando para solucionar el problema."
+      "title": "Internt serverfel",
+      "message": "Något gick fel på vår sida. Våra tekniker har underrättats och arbetar med att åtgärda problemet."
     },
     "503": {
-      "title": "Servicio no disponible",
-      "message": "Actualmente estamos en mantenimiento o experimentando alto tráfico. Nuestros ingenieros han sido notificados y están trabajando para restaurar el servicio."
+      "title": "Tjänsten är inte tillgänglig",
+      "message": "Vi genomgår för närvarande underhåll eller upplever hög trafik. Våra tekniker har informerats och arbetar för att återställa tjänsten."
     },
     "default": {
-      "title": "Algo salió mal",
-      "message": "Ocurrió un error inesperado. Por favor, inténtalo más tarde."
+      "title": "Något gick fel",
+      "message": "Ett oväntat fel har inträffat. Vänligen försök igen senare."
     },
-    "goHome": "Volver al inicio",
-    "serverNotice": "Por favor, inténtalo más tarde. Nuestros ingenieros han sido notificados y están trabajando para resolver este problema lo más rápido posible."
+    "goHome": "Gå tillbaka hem",
+    "serverNotice": "Vänligen försök igen senare. Våra tekniker har underrättats och arbetar för att lösa problemet så snabbt som möjligt."
   },
   "subscriptions": {
     "meta": {
-      "title": "Planes de suscripción Premium - Desbloquea contenido exclusivo | ReelPorn",
-      "description": "Desbloquea funciones premium y contenido exclusivo con nuestros planes de suscripción. Pagos seguros con criptomonedas para tu privacidad."
+      "title": "Premiumabonnemang - Lås upp exklusivt innehåll | ReelPorn",
+      "description": "Lås upp premiumfunktioner och exklusivt innehåll med våra prenumerationsplaner. Säkra kryptovalutabetalningar för din integritet."
     },
-    "title": "Planes de suscripción Premium",
-    "subtitle": "Desbloquea contenido exclusivo y funciones premium",
+    "title": "Premiumabonnemang",
+    "subtitle": "Lås upp exklusivt innehåll och premiumfunktioner",
     "billing": {
-      "monthly": "Mensual",
-      "yearly": "Anual",
-      "saveUpTo": "Ahorra hasta 40%"
+      "monthly": "Månadsvis",
+      "yearly": "Årligen",
+      "saveUpTo": "Spara upp till 40%"
     },
     "price": {
-      "perMonth": "/mes",
-      "billedYearly": "facturado anualmente",
+      "perMonth": "/månad",
+      "billedYearly": "faktureras årsvis",
       "free": "Gratis",
-      "forever": "Para siempre"
+      "forever": "För alltid"
     },
     "button": {
-      "getCurrentPlan": "Plan actual",
-      "getStarted": "Comenzar"
+      "getCurrentPlan": "Nuvarande plan",
+      "getStarted": "Kom igång"
     },
     "comparison": {
-      "title": "Comparación detallada de funciones",
-      "feature": "Función"
+      "title": "Detaljerad jämförelse av funktioner",
+      "feature": "Funktion"
     },
     "faq": {
-      "title": "Preguntas frecuentes sobre suscripciones",
+      "title": "Vanliga frågor om prenumeration",
       "changePlans": {
-        "question": "¿Puedo cambiar de plan en cualquier momento?",
-        "answer": "¡Sí! Puedes actualizar o degradar tu suscripción en cualquier momento. Los cambios entran en vigencia en tu próximo ciclo de facturación."
+        "question": "Kan jag ändra mina planer när som helst?",
+        "answer": "Ja! Du kan uppgradera eller nedgradera din prenumeration när som helst. Ändringar träder i kraft vid din nästa faktureringscykel."
       },
       "cancel": {
-        "question": "¿Cómo cancelo?",
-        "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Mantendrás el acceso hasta el final de tu período de facturación."
+        "question": "Hur avbokar jag?",
+        "answer": "Du kan säga upp din prenumeration när som helst från dina kontoinställningar. Du behåller åtkomst till slutet av din faktureringsperiod."
       },
       "payment": {
-        "question": "¿Qué métodos de pago se aceptan?",
-        "answer": "Aceptamos pagos con criptomonedas para tu privacidad y seguridad."
+        "question": "Vilka betalningsmetoder accepteras?",
+        "answer": "Vi accepterar betalningar med kryptovalutor för din integritet och säkerhet."
       }
     },
     "guarantee": {
-      "title": "Garantía de devolución de dinero de 30 días",
-      "description": "¿No estás satisfecho? Obtén un reembolso completo dentro de los 30 días, sin preguntas."
+      "title": "30 dagars pengarna tillbaka-garanti",
+      "description": "Är du inte nöjd? Få full återbetalning inom 30 dagar, inga frågor ställs."
     },
-    "loading": "Cargando planes de suscripción...",
+    "loading": "Laddar abonnemangsplaner...",
     "error": {
-      "title": "No se pueden cargar los planes",
-      "description": "No pudimos cargar los planes de suscripción. Por favor, inténtalo más tarde.",
-      "retry": "Reintentar"
+      "title": "Det går inte att ladda planer",
+      "description": "Vi kunde inte ladda abonnemangsplanerna. Vänligen försök igen senare.",
+      "retry": "Försök igen"
     }
   },
   "blog": {
-    "title": "Blog",
-    "subtitle": "Últimas noticias, actualizaciones e información",
-    "allCategories": "Todas las categorías",
-    "minRead": "min de lectura",
-    "views": "vistas",
-    "previous": "Anterior",
-    "next": "Siguiente",
-    "noPosts": "No se encontraron publicaciones de blog",
-    "backToBlog": "Volver al blog",
-    "relatedPosts": "Publicaciones relacionadas",
-    "notFound": "Publicación de blog no encontrada",
-    "notFoundDescription": "La publicación de blog que buscas no existe o ha sido eliminada."
+    "title": "Blogg",
+    "subtitle": "Senaste nytt, uppdateringar och insikter",
+    "allCategories": "Alla kategorier",
+    "minRead": "min läsning",
+    "views": "utsikt",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "noPosts": "Inga blogginlägg hittades",
+    "backToBlog": "Tillbaka till bloggen",
+    "relatedPosts": "Relaterade inlägg",
+    "notFound": "Blogginlägget hittades inte",
+    "notFoundDescription": "Blogginlägget du letar efter finns inte eller har tagits bort."
   },
   "terms": {
-    "title": "Términos de servicio",
-    "lastUpdated": "Última actualización",
+    "title": "Villkor för tjänsten",
+    "lastUpdated": "Senast uppdaterad",
     "sections": {
       "acceptance": {
-        "title": "Aceptación de los términos",
-        "content1": "Al acceder o usar ReelPorn.ai (\"el Servicio\"), aceptas estar sujeto a estos Términos de servicio y todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, se te prohíbe usar o acceder a este sitio.",
-        "content2": "Debes tener al menos 18 años de edad (o la mayoría de edad en tu jurisdicción) para usar este Servicio. Al usar el Servicio, declaras y garantizas que cumples con este requisito de edad."
+        "title": "Godkännande av villkor",
+        "content1": "Genom att komma åt eller använda ReelPorn.ai (\"Tjänsten\") samtycker du till att vara bunden av dessa användarvillkor och alla tillämpliga lagar och förordningar. Om du inte samtycker till något av dessa villkor är du förbjuden att använda eller komma åt den här webbplatsen.",
+        "content2": "Du måste vara minst 18 år gammal (eller ha uppnått myndighetsålder i din jurisdiktion) för att använda denna tjänst. Genom att använda Tjänsten intygar och garanterar du att du uppfyller detta ålderskrav."
       },
       "account": {
-        "title": "Registro de cuenta",
-        "intro": "Para acceder a ciertas funciones del Servicio, debes registrarte para obtener una cuenta. Aceptas:",
-        "item1": "Proporcionar información precisa, actual y completa durante el registro",
-        "item2": "Mantener y actualizar rápidamente la información de tu cuenta",
-        "item3": "Mantener la seguridad y confidencialidad de tu contraseña",
-        "item4": "Aceptar la responsabilidad de todas las actividades que ocurran bajo tu cuenta",
-        "item5": "Notificarnos inmediatamente de cualquier uso no autorizado de tu cuenta",
-        "outro": "Nos reservamos el derecho de suspender o cancelar cuentas que violen estos términos o participen en actividades fraudulentas o ilegales."
+        "title": "Registrering av konto",
+        "intro": "För att få tillgång till vissa funktioner i Tjänsten måste du registrera dig för ett konto. Du samtycker till att:",
+        "item1": "Lämna korrekt, aktuell och fullständig information vid registreringen",
+        "item2": "Upprätthålla och omedelbart uppdatera din kontoinformation",
+        "item3": "Upprätthålla säkerheten och sekretessen för ditt lösenord",
+        "item4": "Ta ansvar för alla aktiviteter som sker under ditt konto",
+        "item5": "Meddela oss omedelbart om obehörig användning av ditt konto",
+        "outro": "Vi förbehåller oss rätten att stänga av eller avsluta konton som bryter mot dessa villkor eller som ägnar sig åt bedräglig eller olaglig verksamhet."
       },
       "subscription": {
-        "title": "Suscripción y pago",
-        "intro": "Algunos aspectos del Servicio requieren una suscripción paga. Al comprar una suscripción, aceptas pagar todas las tarifas asociadas con tu plan elegido.",
-        "item1": "Las suscripciones se renuevan automáticamente a menos que se cancelen antes de la fecha de renovación",
-        "item2": "Los precios pueden cambiar con 30 días de aviso",
-        "item3": "Los reembolsos se proporcionan solo según lo exija la ley o a nuestra entera discreción",
-        "item4": "Eres responsable de todos los impuestos asociados con tu suscripción",
-        "item5": "La información de pago debe ser precisa y actual"
+        "title": "Prenumeration och betalning",
+        "intro": "Vissa aspekter av tjänsten kräver en betald prenumeration. Genom att köpa en prenumeration samtycker du till att betala alla avgifter som är kopplade till den valda planen.",
+        "item1": "Prenumerationer förnyas automatiskt om de inte sägs upp före förnyelsedatumet",
+        "item2": "Priserna kan ändras med 30 dagars varsel",
+        "item3": "Återbetalning sker endast om det krävs enligt lag eller efter vårt eget gottfinnande",
+        "item4": "Du är ansvarig för alla skatter som är kopplade till din prenumeration",
+        "item5": "Betalningsinformationen måste vara korrekt och aktuell"
       },
       "userContent": {
-        "title": "Contenido del usuario",
-        "intro": "Los usuarios pueden enviar contenido al Servicio. Al enviar contenido, tú:",
-        "item1": "Nos otorgas una licencia mundial, no exclusiva y libre de regalías para usar, mostrar y distribuir tu contenido",
-        "item2": "Garantizas que eres dueño o tienes derechos sobre todo el contenido que envías",
-        "item3": "Confirmas que todas las personas en tu contenido tienen más de 18 años y han consentido su distribución",
-        "item4": "Aceptas la responsabilidad de mantener registros 2257 cuando corresponda",
-        "item5": "Aceptas no enviar contenido que sea ilegal, dañino o viole los derechos de otros"
+        "title": "Användarinnehåll",
+        "intro": "Användare kan skicka in innehåll till Tjänsten. Genom att skicka in innehåll gör du det:",
+        "item1": "Ge oss en världsomspännande, icke-exklusiv, royaltyfri licens att använda, visa och distribuera ditt innehåll",
+        "item2": "Garantera att du äger eller har rättigheter till allt innehåll du skickar",
+        "item3": "Bekräfta att alla personer i ditt innehåll är 18+ och har samtyckt till distributionen",
+        "item4": "Acceptera ansvar för att upprätthålla 2257-register där så är tillämpligt",
+        "item5": "Samtycker till att inte skicka innehåll som är olagligt, skadligt eller kränker andras rättigheter"
       },
       "prohibited": {
-        "title": "Conducta prohibida",
-        "intro": "Aceptas no:",
-        "item1": "Usar el Servicio para ningún propósito ilegal o en violación de ninguna ley",
-        "item2": "Subir contenido que involucre menores o personas que no consientan",
-        "item3": "Acosar, abusar o dañar a otros usuarios",
-        "item4": "Hacerse pasar por cualquier persona o entidad",
-        "item5": "Interferir o interrumpir el Servicio o los servidores",
-        "item6": "Intentar obtener acceso no autorizado a ninguna parte del Servicio",
-        "item7": "Usar sistemas automatizados o software para extraer datos del Servicio",
-        "item8": "Transmitir virus, malware u otro código dañino",
-        "item9": "Violar los derechos de propiedad intelectual de otros",
-        "item10": "Participar en cualquier conducta que restrinja o inhiba el uso del Servicio por parte de otros"
+        "title": "Förbjudet uppträdande",
+        "intro": "Du samtycker till att inte göra det:",
+        "item1": "Använda Tjänsten för olagliga ändamål eller i strid med gällande lagar",
+        "item2": "Ladda upp innehåll som involverar minderåriga eller personer som inte samtycker",
+        "item3": "Trakassera, missbruka eller skada andra användare",
+        "item4": "Utge sig för att vara någon annan person eller enhet",
+        "item5": "Störa eller avbryta tjänsten eller servrarna",
+        "item6": "Försök att få obehörig åtkomst till någon del av Tjänsten",
+        "item7": "Använda automatiserade system eller programvara för att extrahera data från Tjänsten",
+        "item8": "Överföra virus, skadlig kod eller annan skadlig kod",
+        "item9": "Kränka andras immateriella rättigheter",
+        "item10": "Engagera sig i något beteende som begränsar eller hindrar andras användning av Tjänsten"
       },
       "intellectualProperty": {
-        "title": "Propiedad intelectual",
-        "content1": "El Servicio y su contenido original (excluyendo el contenido del usuario) son y seguirán siendo propiedad exclusiva de ReelPorn y sus licenciantes. El Servicio está protegido por leyes de derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.",
-        "content2": "Nuestras marcas comerciales y trade dress no pueden usarse en conexión con ningún producto o servicio sin nuestro consentimiento previo por escrito."
+        "title": "Immateriella rättigheter",
+        "content1": "Tjänsten och dess ursprungliga innehåll (exklusive användarinnehåll) är och kommer att förbli ReelPorns och dess licensgivares exklusiva egendom. Tjänsten skyddas av upphovsrätt, varumärke och andra lagar om immateriella rättigheter.",
+        "content2": "Våra varumärken och vår varumärkesprofil får inte användas i samband med någon produkt eller tjänst utan vårt föregående skriftliga medgivande."
       },
       "privacy": {
-        "title": "Privacidad",
-        "content": "Tu uso del Servicio también está regido por nuestra Política de privacidad. Por favor, revisa nuestra Política de privacidad, que también rige el Sitio e informa a los usuarios sobre nuestras prácticas de recopilación de datos."
+        "title": "Integritet",
+        "content": "Din användning av tjänsten regleras också av vår integritetspolicy. Läs igenom vår integritetspolicy, som också gäller för webbplatsen och informerar användarna om vår datainsamlingspraxis."
       },
       "dmca": {
-        "title": "Cumplimiento de DMCA",
-        "content": "Respetamos los derechos de propiedad intelectual y responderemos a avisos de eliminación DMCA válidos. Si crees que tu contenido se ha utilizado sin autorización, contacta a nuestro agente de DMCA en dmca@reelporn.ai."
+        "title": "DMCA-överensstämmelse",
+        "content": "Vi respekterar immateriella rättigheter och kommer att svara på giltiga DMCA-meddelanden om borttagning. Om du tror att ditt innehåll har använts utan tillstånd, vänligen kontakta vår DMCA-agent på dmca@reelporn.ai."
       },
       "disclaimers": {
-        "title": "Descargos de responsabilidad",
-        "content1": "EL SERVICIO SE PROPORCIONA \"TAL CUAL\" SIN GARANTÍAS DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA. RECHAZAMOS TODAS LAS GARANTÍAS, INCLUIDAS LA COMERCIABILIDAD, LA IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y LA NO INFRACCIÓN.",
-        "content2": "No garantizamos que el Servicio sea ininterrumpido, seguro o libre de errores. No garantizamos la exactitud o integridad de ningún contenido."
+        "title": "Ansvarsfriskrivning",
+        "content1": "TJÄNSTEN TILLHANDAHÅLLS \"I BEFINTLIGT SKICK\" UTAN GARANTIER AV NÅGOT SLAG, VARE SIG UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA. VI FRÅNSÄGER OSS ALLA GARANTIER, INKLUSIVE SÄLJBARHET, LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL OCH ICKE-INTRÅNG.",
+        "content2": "Vi garanterar inte att Tjänsten kommer att vara oavbruten, säker eller felfri. Vi garanterar inte att något innehåll är korrekt eller fullständigt."
       },
       "liability": {
-        "title": "Limitación de responsabilidad",
-        "content1": "EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY, REELPORN NO SERÁ RESPONSABLE DE NINGÚN DAÑO INDIRECTO, INCIDENTAL, ESPECIAL, CONSECUENTE O PUNITIVO, O CUALQUIER PÉRDIDA DE GANANCIAS O INGRESOS, YA SEA INCURRIDOS DIRECTA O INDIRECTAMENTE, O CUALQUIER PÉRDIDA DE DATOS, USO, BUENA VOLUNTAD U OTRAS PÉRDIDAS INTANGIBLES.",
-        "content2": "Nuestra responsabilidad total no excederá la cantidad que nos hayas pagado en los doce meses anteriores al reclamo."
+        "title": "Begränsning av ansvar",
+        "content1": "I DEN UTSTRÄCKNING SOM TILLÅTS ENLIGT LAG SKA REELPORN INTE HÅLLAS ANSVARIGT FÖR INDIREKTA, TILLFÄLLIGA, SÄRSKILDA, FÖLJDSKADOR ELLER STRAFFSKADOR, ELLER FÖRLUST AV VINST ELLER INTÄKTER, OAVSETT OM DE UPPKOMMIT DIREKT ELLER INDIREKT, ELLER FÖRLUST AV DATA, ANVÄNDNING, GOODWILL ELLER ANDRA IMMATERIELLA FÖRLUSTER.",
+        "content2": "Vårt totala ansvar ska inte överstiga det belopp som du betalade till oss under de tolv månader som föregick anspråket."
       },
       "indemnification": {
-        "title": "Indemnización",
-        "content": "Aceptas indemnizar y eximir de responsabilidad a ReelPorn y sus funcionarios, directores, empleados y agentes de cualquier reclamo, daño, pérdida, responsabilidad y gasto (incluidos los honorarios legales) que surjan de tu uso del Servicio o violación de estos Términos."
+        "title": "Skadestånd",
+        "content": "Du samtycker till att ersätta och hålla ReelPorn och dess tjänstemän, styrelseledamöter, anställda och ombud skadeslösa från alla anspråk, skador, förluster, skulder och utgifter (inklusive juridiska avgifter) som uppstår till följd av din användning av Tjänsten eller brott mot dessa Villkor."
       },
       "termination": {
-        "title": "Terminación",
-        "content1": "Podemos cancelar o suspender tu cuenta y acceso al Servicio de inmediato, sin previo aviso o responsabilidad, por cualquier motivo, incluido el incumplimiento de estos Términos.",
-        "content2": "Tras la terminación, tu derecho a usar el Servicio cesará inmediatamente. Todas las disposiciones de estos Términos que por su naturaleza deban sobrevivir a la terminación sobrevivirán."
+        "title": "Uppsägning",
+        "content1": "Vi kan säga upp eller stänga av ditt konto och din tillgång till Tjänsten omedelbart, utan föregående meddelande eller ansvar, av vilken anledning som helst, inklusive brott mot dessa Villkor.",
+        "content2": "Vid uppsägning upphör din rätt att använda Tjänsten omedelbart. Alla bestämmelser i dessa villkor som enligt sin natur bör överleva uppsägningen ska överleva."
       },
       "governingLaw": {
-        "title": "Ley aplicable",
-        "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la jurisdicción en la que opera ReelPorn, sin tener en cuenta sus disposiciones sobre conflictos de leyes. Aceptas someterte a la jurisdicción personal de los tribunales ubicados dentro de esa jurisdicción."
+        "title": "Tillämplig lag",
+        "content": "Dessa villkor ska styras av och tolkas i enlighet med lagarna i den jurisdiktion där ReelPorn verkar, utan hänsyn till dess bestämmelser om lagkonflikt. Du samtycker till att underkasta dig den personliga jurisdiktionen för de domstolar som finns inom den jurisdiktionen."
       },
       "changes": {
-        "title": "Cambios en los términos",
-        "content1": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Notificaremos a los usuarios de cualquier cambio material publicando los nuevos Términos en esta página y actualizando la fecha de \"Última actualización\".",
-        "content2": "Tu uso continuado del Servicio después de cualquier cambio constituye la aceptación de los nuevos Términos."
+        "title": "Ändringar av villkor",
+        "content1": "Vi förbehåller oss rätten att när som helst ändra dessa villkor. Vi kommer att meddela användare om eventuella väsentliga ändringar genom att publicera de nya villkoren på den här sidan och uppdatera datumet \"Senast uppdaterad\".",
+        "content2": "Din fortsatta användning av tjänsten efter eventuella ändringar innebär att du godkänner de nya villkoren."
       },
       "contact": {
-        "title": "Información de contacto",
-        "intro": "Para preguntas sobre estos Términos de servicio, contáctanos en:",
+        "title": "Kontaktuppgifter",
+        "intro": "För frågor om dessa användarvillkor, vänligen kontakta oss på:",
         "email": "support@reelporn.ai"
       }
     }
   },
   "privacy": {
-    "title": "Política de privacidad",
-    "lastUpdated": "Última actualización",
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad",
     "sections": {
       "infoCollect": {
-        "title": "Información que recopilamos",
-        "provideTitle": "Información que proporcionas",
-        "provide1": "Información de cuenta (correo electrónico, nombre de usuario, contraseña)",
-        "provide2": "Información de perfil (nombre para mostrar, biografía, preferencias)",
-        "provide3": "Información de pago (procesada de forma segura a través de proveedores externos)",
-        "provide4": "Contenido que subes (videos, fotos, comentarios)",
-        "provide5": "Comunicaciones con nosotros (tickets de soporte, correos electrónicos)",
-        "autoTitle": "Información recopilada automáticamente",
-        "auto1": "Dirección IP e información del dispositivo",
-        "auto2": "Tipo de navegador y sistema operativo",
-        "auto3": "Datos de uso (páginas visitadas, videos vistos, interacciones)",
-        "auto4": "Cookies y tecnologías de seguimiento similares",
-        "auto5": "Datos de ubicación (solo a nivel de país/región)"
+        "title": "Information som vi samlar in",
+        "provideTitle": "Information som du tillhandahåller",
+        "provide1": "Kontoinformation (e-post, användarnamn, lösenord)",
+        "provide2": "Profilinformation (visningsnamn, biografi, preferenser)",
+        "provide3": "Betalningsinformation (behandlas säkert via tredjepartsleverantörer)",
+        "provide4": "Innehåll som du laddar upp (videor, foton, kommentarer)",
+        "provide5": "Kommunikation med oss (supportärenden, e-postmeddelanden)",
+        "autoTitle": "Information som samlas in automatiskt",
+        "auto1": "IP-adress och enhetsinformation",
+        "auto2": "Typ av webbläsare och operativsystem",
+        "auto3": "Användningsdata (besökta sidor, tittade videor, interaktioner)",
+        "auto4": "Cookies och liknande spårningstekniker",
+        "auto5": "Platsdata (endast på lands-/regionnivå)"
       },
       "infoUse": {
-        "title": "Cómo usamos tu información",
-        "intro": "Usamos la información recopilada para:",
-        "item1": "Proporcionar y mantener nuestro Servicio",
-        "item2": "Procesar transacciones y enviar información relacionada",
-        "item3": "Enviar información administrativa y actualizaciones",
-        "item4": "Responder a tus comentarios y preguntas",
-        "item5": "Personalizar tu experiencia y proporcionar recomendaciones",
-        "item6": "Monitorear y analizar el uso y las tendencias",
-        "item7": "Detectar y prevenir fraudes y abusos",
-        "item8": "Cumplir con obligaciones legales"
+        "title": "Hur vi använder din information",
+        "intro": "Vi använder insamlad information för att:",
+        "item1": "Tillhandahålla och underhålla vår tjänst",
+        "item2": "Behandla transaktioner och skicka relaterad information",
+        "item3": "Skicka administrativ information och uppdateringar",
+        "item4": "Svara på dina kommentarer och frågor",
+        "item5": "Anpassa din upplevelse och ge rekommendationer",
+        "item6": "Övervaka och analysera användning och trender",
+        "item7": "Upptäcka och förhindra bedrägerier och missbruk",
+        "item8": "Uppfylla rättsliga skyldigheter"
       },
       "infoSharing": {
-        "title": "Compartir información",
-        "intro": "No vendemos tu información personal. Podemos compartir información en estas circunstancias:",
-        "item1": "Proveedores de servicios: Con terceros de confianza que ayudan a operar nuestro Servicio",
-        "item2": "Requisitos legales: Cuando lo exija la ley o para proteger derechos y seguridad",
-        "item3": "Transferencias comerciales: En relación con una fusión, venta o adquisición",
-        "item4": "Con consentimiento: Cuando aceptes explícitamente compartir",
-        "item5": "Datos agregados: Datos estadísticos no identificables para análisis"
+        "title": "Delning av information",
+        "intro": "Vi säljer inte din personliga information. Vi kan dela information under dessa omständigheter:",
+        "item1": "Tjänsteleverantörer: Med betrodda tredje parter som hjälper till att driva vår tjänst",
+        "item2": "Rättsliga krav: När så krävs enligt lag eller för att skydda rättigheter och säkerhet",
+        "item3": "Överföring av verksamhet: I samband med en fusion, försäljning eller ett förvärv",
+        "item4": "Med samtycke: När du uttryckligen samtycker till att dela",
+        "item5": "Aggregerade uppgifter: Icke-identifierbara statistiska data för analys"
       },
       "dataSecurity": {
-        "title": "Seguridad de datos",
-        "intro": "Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información personal, que incluyen:",
-        "item1": "Cifrado SSL/TLS para transmisión de datos",
-        "item2": "Almacenamiento cifrado de información sensible",
-        "item3": "Auditorías y actualizaciones de seguridad regulares",
-        "item4": "Acceso limitado a información personal",
-        "item5": "Procesamiento de pagos seguro a través de proveedores compatibles con PCI",
-        "outro": "Sin embargo, ningún método de transmisión o almacenamiento es 100% seguro. No podemos garantizar la seguridad absoluta."
+        "title": "Datasäkerhet",
+        "intro": "Vi genomför lämpliga tekniska och organisatoriska säkerhetsåtgärder för att skydda din personliga information, inklusive:",
+        "item1": "SSL/TLS-kryptering för dataöverföring",
+        "item2": "Krypterad lagring av känslig information",
+        "item3": "Regelbundna säkerhetsrevisioner och uppdateringar",
+        "item4": "Begränsad tillgång till personlig information",
+        "item5": "Säker betalningshantering genom PCI-kompatibla leverantörer",
+        "outro": "Ingen metod för överföring eller lagring är dock 100% säker. Vi kan inte garantera absolut säkerhet."
       },
       "privacyRights": {
-        "title": "Tus derechos de privacidad",
-        "intro": "Dependiendo de tu ubicación, puedes tener ciertos derechos con respecto a tu información personal:",
-        "item1": "Acceso: Solicitar una copia de tu información personal",
-        "item2": "Corrección: Solicitar corrección de información inexacta",
-        "item3": "Eliminación: Solicitar eliminación de tu cuenta y datos asociados",
-        "item4": "Portabilidad: Recibir tus datos en un formato portátil",
-        "item5": "Objeción: Oponerte a cierto procesamiento de tu información",
-        "item6": "Restricción: Solicitar procesamiento limitado de tu información",
-        "outro": "Para ejercer estos derechos, contáctanos en support@reelporn.ai"
+        "title": "Din rätt till integritet",
+        "intro": "Beroende på var du befinner dig kan du ha vissa rättigheter när det gäller dina personuppgifter:",
+        "item1": "Tillgång till information: Begär en kopia av dina personuppgifter",
+        "item2": "Rättelse: Begär rättelse av felaktig information",
+        "item3": "Radering: Begära radering av ditt konto och tillhörande data",
+        "item4": "Portabilitet: Ta emot dina data i ett portabelt format",
+        "item5": "Invändning: Invändning mot viss behandling av din information",
+        "item6": "Begränsning: Begär begränsad behandling av dina uppgifter",
+        "outro": "För att utöva dessa rättigheter, kontakta oss på support@reelporn.ai"
       },
       "cookies": {
-        "title": "Cookies y seguimiento",
-        "content1": "Usamos cookies y tecnologías similares para mejorar tu experiencia. Para información detallada, consulta nuestra Política de cookies.",
-        "content2": "Puedes controlar las cookies a través de la configuración de tu navegador y nuestro centro de preferencias de cookies."
+        "title": "Cookies och spårning",
+        "content1": "Vi använder cookies och liknande tekniker för att förbättra din upplevelse. För detaljerad information, se vår cookiepolicy.",
+        "content2": "Du kan styra cookies genom dina webbläsarinställningar och vårt cookiepreferenscenter."
       },
       "thirdParty": {
-        "title": "Servicios de terceros",
-        "intro1": "Nuestro Servicio puede contener enlaces a sitios web y servicios de terceros. No somos responsables de sus prácticas de privacidad. Te animamos a revisar sus políticas de privacidad.",
-        "intro2": "Los servicios de terceros que usamos incluyen:",
-        "item1": "Procesadores de pago (Stripe, PayPal)",
-        "item2": "Proveedores de análisis (Google Analytics)",
-        "item3": "Redes de entrega de contenido (CloudFlare)",
-        "item4": "Herramientas de comunicación (servicios de correo electrónico)"
+        "title": "Tjänster från tredje part",
+        "intro1": "Vår tjänst kan innehålla länkar till tredje parts webbplatser och tjänster. Vi är inte ansvariga för deras sekretesspraxis. Vi uppmuntrar dig att granska deras integritetspolicy.",
+        "intro2": "Tjänster från tredje part som vi använder inkluderar:",
+        "item1": "Betalningsförmedlare (Stripe, PayPal)",
+        "item2": "Analysleverantörer (Google Analytics)",
+        "item3": "Nätverk för innehållsleverans (CloudFlare)",
+        "item4": "Kommunikationsverktyg (e-posttjänster)"
       },
       "childrenPrivacy": {
-        "title": "Privacidad de los niños",
-        "content": "Nuestro Servicio es estrictamente para adultos mayores de 18 años. No recopilamos conscientemente información de personas menores de 18 años. Si descubrimos que hemos recopilado información de un menor, la eliminaremos de inmediato."
+        "title": "Barns integritet",
+        "content": "Vår tjänst är endast avsedd för vuxna som är 18 år och äldre. Vi samlar inte medvetet in information från någon under 18 år. Om vi upptäcker att vi har samlat in information från en minderårig kommer vi att radera den omedelbart."
       },
       "dataRetention": {
-        "title": "Retención de datos",
-        "intro": "Retenemos tu información personal durante el tiempo necesario para:",
-        "item1": "Proporcionarte nuestro Servicio",
-        "item2": "Cumplir con obligaciones legales",
-        "item3": "Resolver disputas y hacer cumplir acuerdos",
-        "item4": "Mantener registros comerciales",
-        "outro": "Cuando elimines tu cuenta, eliminaremos o anonimizaremos tu información personal, excepto cuando la retención sea requerida por ley."
+        "title": "Lagring av data",
+        "intro": "Vi behåller din personliga information så länge som det är nödvändigt för att:",
+        "item1": "Förse dig med vår tjänst",
+        "item2": "Uppfylla rättsliga skyldigheter",
+        "item3": "Lösa tvister och verkställa avtal",
+        "item4": "Upprätthålla affärsregister",
+        "outro": "När du raderar ditt konto kommer vi att radera eller anonymisera dina personuppgifter, utom där lagring krävs enligt lag."
       },
       "internationalTransfers": {
-        "title": "Transferencias internacionales de datos",
-        "content": "Tu información puede ser transferida y procesada en países distintos al tuyo. Estos países pueden tener leyes de protección de datos diferentes. Nos aseguramos de que existan salvaguardas apropiadas para dichas transferencias."
+        "title": "Internationella dataöverföringar",
+        "content": "Din information kan komma att överföras till och behandlas i andra länder än ditt eget. Dessa länder kan ha olika dataskyddslagar. Vi säkerställer att lämpliga skyddsåtgärder finns på plats för sådana överföringar."
       },
       "californiaRights": {
-        "title": "Derechos de privacidad de California",
-        "intro": "Los residentes de California tienen derechos adicionales bajo la Ley de Privacidad del Consumidor de California (CCPA):",
-        "item1": "Derecho a saber qué información personal se recopila",
-        "item2": "Derecho a saber si la información personal se vende o divulga",
-        "item3": "Derecho a optar por no vender información personal",
-        "item4": "Derecho a la no discriminación por ejercer los derechos de privacidad"
+        "title": "Sekretessrättigheter i Kalifornien",
+        "intro": "Personer bosatta i Kalifornien har ytterligare rättigheter enligt California Consumer Privacy Act (CCPA):",
+        "item1": "Rätt att veta vilken personlig information som samlas in",
+        "item2": "Rätt att få veta om personlig information säljs eller lämnas ut",
+        "item3": "Rätt att avstå från försäljning av personuppgifter",
+        "item4": "Rätt till icke-diskriminering vid utövande av rätten till privatliv"
       },
       "europeanRights": {
-        "title": "Derechos de privacidad europeos",
-        "content": "Si te encuentras en el Espacio Económico Europeo (EEE), tienes derechos adicionales bajo el Reglamento General de Protección de Datos (RGPD), incluido el derecho a presentar una queja ante tu autoridad local de protección de datos."
+        "title": "Europeiska integritetsrättigheter",
+        "content": "Om du befinner dig inom Europeiska ekonomiska samarbetsområdet (EES) har du ytterligare rättigheter enligt den allmänna dataskyddsförordningen (GDPR), inklusive rätten att lämna in ett klagomål till din lokala dataskyddsmyndighet."
       },
       "policyUpdates": {
-        "title": "Actualizaciones de esta política",
-        "content1": "Podemos actualizar esta Política de privacidad de vez en cuando. Te notificaremos de cualquier cambio publicando la nueva Política de privacidad en esta página y actualizando la fecha de \"Última actualización\".",
-        "content2": "Para cambios significativos, proporcionaremos un aviso adicional (como notificación por correo electrónico o un aviso destacado en nuestro Servicio)."
+        "title": "Uppdateringar av denna policy",
+        "content1": "Vi kan komma att uppdatera denna integritetspolicy från tid till annan. Vi kommer att meddela dig om eventuella ändringar genom att publicera den nya integritetspolicyn på denna sida och uppdatera datumet för \"Senast uppdaterad\".",
+        "content2": "För betydande ändringar kommer vi att tillhandahålla ytterligare meddelande (t.ex. e-postmeddelande eller ett framträdande meddelande på vår tjänst)."
       },
       "contact": {
-        "title": "Información de contacto",
-        "intro": "Si tienes preguntas sobre esta Política de privacidad o nuestras prácticas de privacidad, contáctanos:",
+        "title": "Kontaktuppgifter",
+        "intro": "Om du har frågor om denna integritetspolicy eller våra integritetsrutiner, vänligen kontakta oss:",
         "email": "support@reelporn.ai",
-        "dpoTitle": "Oficial de protección de datos",
-        "dpo": "Departamento Legal de ReelPorn",
+        "dpoTitle": "Dataskyddsombud",
+        "dpo": "ReelPorns juridiska avdelning",
         "dpoEmail": "support@reelporn.ai"
       }
     }
   },
   "dmca": {
-    "title": "Política de notificación y eliminación de DMCA",
-    "subtitle": "Cumplimiento de la Ley de Derechos de Autor del Milenio Digital",
+    "title": "DMCA-meddelande och Takedown-policy",
+    "subtitle": "Efterlevnad av Digital Millennium Copyright Act",
     "sections": {
       "notification": {
-        "title": "Notificación de infracción de derechos de autor",
-        "content": "ReelPorn respeta los derechos de propiedad intelectual de otros y espera que sus usuarios hagan lo mismo. De acuerdo con la Ley de Derechos de Autor del Milenio Digital de 1998 (\"DMCA\"), responderemos rápidamente a reclamos de infracción de derechos de autor cometidos usando el sitio web ReelPorn."
+        "title": "Anmälan om upphovsrättsintrång",
+        "content": "ReelPorn respekterar andras immateriella rättigheter och förväntar sig att dess användare gör detsamma. I enlighet med Digital Millennium Copyright Act från 1998 (\"DMCA\") kommer vi att svara snabbt på påståenden om upphovsrättsintrång som begås med hjälp av ReelPorns webbplats."
       },
       "filing": {
-        "title": "Presentar un aviso de DMCA",
-        "intro": "Si crees que tu trabajo con derechos de autor ha sido copiado de una manera que constituye infracción de derechos de autor y es accesible en este sitio, puedes notificar a nuestro agente de derechos de autor, como se establece en la DMCA. Para que tu queja sea válida bajo la DMCA, debes proporcionar la siguiente información por escrito:",
-        "item1": "Una firma electrónica o física de una persona autorizada para actuar en nombre del propietario de los derechos de autor",
-        "item2": "Identificación del trabajo con derechos de autor que afirmas que ha sido infringido",
-        "item3": "Identificación del material que se afirma que está infringiendo y dónde se encuentra en el sitio",
-        "item4": "Información razonablemente suficiente para permitirnos contactarte, como tu dirección, número de teléfono y dirección de correo electrónico",
-        "item5": "Una declaración de que tienes una creencia de buena fe de que el uso del material de la manera reclamada no está autorizado por el propietario de los derechos de autor, su agente o la ley",
-        "item6": "Una declaración, hecha bajo pena de perjurio, de que la información anterior es precisa y que eres el propietario de los derechos de autor o estás autorizado para actuar en nombre del propietario"
+        "title": "Lämna in ett DMCA-meddelande",
+        "intro": "Om du anser att ditt upphovsrättsskyddade arbete har kopierats på ett sätt som utgör upphovsrättsintrång och är tillgängligt på denna webbplats, kan du meddela vårt upphovsrättsombud, enligt vad som anges i DMCA. För att ditt klagomål ska vara giltigt enligt DMCA måste du tillhandahålla följande information skriftligen:",
+        "item1": "En elektronisk eller fysisk signatur från en person som är behörig att agera på uppdrag av upphovsrättsinnehavaren",
+        "item2": "Identifiering av det upphovsrättsskyddade verk som du hävdar har utsatts för intrång",
+        "item3": "Identifiering av det material som påstås utgöra intrång och var det finns på webbplatsen",
+        "item4": "Information som är rimlig för att vi ska kunna kontakta dig, till exempel din adress, ditt telefonnummer och din e-postadress",
+        "item5": "Ett uttalande om att du i god tro anser att användning av materialet på det sätt som klagomålet avser inte är tillåtet av upphovsrättsinnehavaren, dess ombud eller lag",
+        "item6": "En försäkran under ed om att ovanstående information är korrekt och att du är upphovsrättsinnehavare eller behörig att agera för ägarens räkning"
       },
       "agent": {
-        "title": "Agente de derechos de autor designado",
-        "intro": "Envía todos los avisos de DMCA a nuestro agente designado:",
+        "title": "Utsett ombud för upphovsrätt",
+        "intro": "Vänligen skicka alla DMCA-meddelanden till vår utsedda agent:",
         "email": "dmca@reelporn.ai",
-        "name": "Agente de DMCA",
-        "department": "Departamento Legal de ReelPorn"
+        "name": "DMCA-ombud",
+        "department": "ReelPorns juridiska avdelning"
       },
       "counter": {
-        "title": "Contra-notificación",
-        "intro": "Si crees que tu contenido fue eliminado o el acceso a él fue deshabilitado por error o identificación errónea, puedes presentar una contra-notificación con nosotros. Para ser efectiva, una contra-notificación debe ser una comunicación escrita que incluya lo siguiente:",
-        "item1": "Tu firma física o electrónica",
-        "item2": "Identificación del material que ha sido eliminado o al que se ha deshabilitado el acceso y la ubicación en la que apareció el material antes de que fuera eliminado o deshabilitado el acceso",
-        "item3": "Una declaración bajo pena de perjurio de que tienes una creencia de buena fe de que el material fue eliminado o deshabilitado como resultado de un error o identificación errónea",
-        "item4": "Tu nombre, dirección, número de teléfono y dirección de correo electrónico",
-        "item5": "Una declaración de que consientes a la jurisdicción del Tribunal de Distrito Federal para el distrito judicial en el que se encuentra tu dirección"
+        "title": "Motanmälan",
+        "intro": "Om du anser att ditt innehåll har tagits bort eller att åtkomsten till det har inaktiverats av misstag eller felidentifiering, kan du lämna in en motanmälan till oss. För att vara effektiv måste en motanmälan vara en skriftlig kommunikation som innehåller följande:",
+        "item1": "Din fysiska eller elektroniska signatur",
+        "item2": "Identifiering av det material som har tagits bort eller till vilket åtkomst har inaktiverats och den plats där materialet fanns innan det togs bort eller åtkomsten inaktiverades",
+        "item3": "Ett uttalande under straffansvar för mened om att du har en god tro på att materialet togs bort eller inaktiverades till följd av misstag eller felidentifiering",
+        "item4": "Ditt namn, din adress, ditt telefonnummer och din e-postadress",
+        "item5": "Ett uttalande om att du samtycker till jurisdiktionen för den federala distriktsdomstolen för det rättsliga distrikt där din adress är belägen"
       },
       "repeat": {
-        "title": "Infractores reincidentes",
-        "content": "De acuerdo con la DMCA y otras leyes aplicables, hemos adoptado una política de terminación, en circunstancias apropiadas, de usuarios que se consideren infractores reincidentes. También podemos, a nuestra entera discreción, limitar el acceso al sitio y/o terminar las cuentas de cualquier usuario que infrinja cualquier derecho de propiedad intelectual de otros."
+        "title": "Upprepade överträdelser",
+        "content": "I enlighet med DMCA och annan tillämplig lag har vi antagit en policy för att under lämpliga omständigheter säga upp användare som anses vara upprepade intrångsgörare. Vi kan också efter eget gottfinnande begränsa tillgången till webbplatsen och/eller avsluta konton för användare som gör intrång i andras immateriella rättigheter."
       },
       "notice": {
-        "title": "Aviso importante",
-        "content": "Ten en cuenta: bajo la Sección 512(f) de la DMCA, cualquier persona que a sabiendas tergiversa materialmente que el material o la actividad es infractor puede estar sujeta a responsabilidad por daños, incluidos costos y honorarios de abogados. Consulta a tu asesor legal antes de presentar un aviso o contra-aviso."
+        "title": "Viktigt meddelande",
+        "content": "Observera: Enligt avsnitt 512(f) i DMCA kan en person som medvetet i väsentlig grad ger en felaktig bild av att material eller aktivitet gör intrång bli skadeståndsskyldig, inklusive kostnader och advokatarvoden. Rådgör med din juridiska rådgivare innan du lämnar in ett meddelande eller en motanmälan."
       },
-      "lastUpdated": "Última actualización"
+      "lastUpdated": "Senast uppdaterad"
     }
   },
   "faq": {
-    "title": "Preguntas frecuentes",
-    "subtitle": "Todo lo que necesitas saber sobre ReelPorn",
+    "title": "Vanliga frågor och svar",
+    "subtitle": "Allt du behöver veta om ReelPorn",
     "categories": {
       "general": {
-        "title": "Preguntas generales",
+        "title": "Allmänna frågor",
         "q1": {
-          "question": "¿Qué es ReelPorn?",
-          "answer": "ReelPorn es una plataforma premium de contenido para adultos especializada en contenido de video de formato corto (reels de 15 segundos). Proporcionamos una experiencia tipo TikTok para entretenimiento para adultos con funcionalidad de deslizamiento, feeds personalizados y contenido generado por IA de alta calidad."
+          "question": "Vad är ReelPorn?",
+          "answer": "ReelPorn är en plattform för premiuminnehåll för vuxna som specialiserar sig på kortformat videoinnehåll (15-sekundersrullar). Vi erbjuder en TikTok-liknande upplevelse för vuxenunderhållning med svepfunktionalitet, personliga flöden och högkvalitativt AI-genererat innehåll."
         },
         "q2": {
-          "question": "¿ReelPorn es gratis?",
-          "answer": "ReelPorn ofrece contenido gratuito y premium. Puedes navegar y ver contenido limitado de forma gratuita, pero una suscripción premium desbloquea acceso ilimitado a todos los videos, calidad HD/4K, funciones de descarga y visualización sin anuncios."
+          "question": "Är ReelPorn gratis att använda?",
+          "answer": "ReelPorn erbjuder både gratis och premiuminnehåll. Du kan bläddra och titta på begränsat innehåll gratis, men en premiumprenumeration låser upp obegränsad tillgång till alla videor, HD/4K-kvalitet, nedladdningsfunktioner och reklamfri visning."
         },
         "q3": {
-          "question": "¿Cómo verifico mi edad?",
-          "answer": "La verificación de edad es necesaria para acceder a ReelPorn. Cuando visites por primera vez, debes confirmar que tienes 18 años o más. Este es un requisito legal para garantizar que los menores no puedan acceder al contenido para adultos."
+          "question": "Hur verifierar jag min ålder?",
+          "answer": "Åldersverifiering krävs för att få tillgång till ReelPorn. Vid ditt första besök måste du bekräfta att du är 18 år eller äldre. Detta är ett lagkrav för att säkerställa att minderåriga inte kan komma åt vuxeninnehåll."
         },
         "q4": {
-          "question": "¿Mis datos están seguros y privados?",
-          "answer": "Sí, nos tomamos muy en serio la privacidad. Todos los datos están cifrados, nunca compartimos información personal con terceros sin consentimiento y puedes navegar de forma anónima. Por favor, revisa nuestra Política de privacidad para obtener información detallada."
+          "question": "Är mina uppgifter säkra och privata?",
+          "answer": "Ja, vi tar integritet på allvar. All data krypteras, vi delar aldrig personlig information med tredje part utan samtycke och du kan surfa anonymt. Läs vår integritetspolicy för detaljerad information."
         }
       },
       "account": {
-        "title": "Cuenta y suscripción",
+        "title": "Konto & Prenumeration",
         "q1": {
-          "question": "¿Cómo creo una cuenta?",
-          "answer": "Haz clic en el botón \"Registrarse\", elige tu plan de membresía, ingresa tu correo electrónico y crea una contraseña. Verifica tu dirección de correo electrónico y ¡estarás listo para comenzar a ver!"
+          "question": "Hur skapar jag ett konto?",
+          "answer": "Klicka på knappen \"Registrera dig\", välj din medlemsplan, ange din e-postadress och skapa ett lösenord. Verifiera din e-postadress och du är redo att börja titta!"
         },
         "q2": {
-          "question": "¿Qué métodos de pago aceptan?",
-          "answer": "Aceptamos las principales tarjetas de crédito (Visa, MasterCard, American Express), PayPal y pagos con criptomonedas (Bitcoin, Ethereum). Todas las transacciones se procesan de forma segura y discreta."
+          "question": "Vilka betalningsmetoder accepterar du?",
+          "answer": "Vi accepterar större kreditkort (Visa, MasterCard, American Express), PayPal och betalningar med kryptovalutor (Bitcoin, Ethereum). Alla transaktioner behandlas på ett säkert och diskret sätt."
         },
         "q3": {
-          "question": "¿Cómo cancelo mi suscripción?",
-          "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Ve a Perfil > Suscripción > Cancelar suscripción. Continuarás teniendo acceso hasta el final de tu período de facturación."
+          "question": "Hur säger jag upp min prenumeration?",
+          "answer": "Du kan säga upp din prenumeration när som helst från dina kontoinställningar. Gå till Profil > Prenumeration > Avbryt prenumeration. Du kommer att fortsätta att ha åtkomst till slutet av din faktureringsperiod."
         },
         "q4": {
-          "question": "¿Los cargos aparecerán como \"ReelPorn\" en mi extracto?",
-          "answer": "No, para tu privacidad, los cargos aparecen bajo un nombre de facturación discreto como \"RP Media Services\" o \"Digital Entertainment Services\" en tu extracto bancario."
+          "question": "Kommer debiteringarna att visas som \"ReelPorn\" på mitt kontoutdrag?",
+          "answer": "Nej, av integritetsskäl visas avgifterna under ett diskret faktureringsnamn som \"RP Media Services\" eller \"Digital Entertainment Services\" på ditt kontoutdrag."
         },
         "q5": {
-          "question": "¿Puedo actualizar o degradar mi plan?",
-          "answer": "Sí, puedes cambiar tu plan de suscripción en cualquier momento. El nuevo plan entrará en vigencia en tu próximo ciclo de facturación. Cualquier diferencia de precio será prorrateada."
+          "question": "Kan jag uppgradera eller nedgradera mitt abonnemang?",
+          "answer": "Ja, du kan ändra din prenumerationsplan när som helst. Den nya planen träder i kraft vid din nästa faktureringscykel. Eventuell prisskillnad kommer att fördelas proportionellt."
         }
       },
       "content": {
-        "title": "Contenido y funciones",
+        "title": "Innehåll och funktioner",
         "q1": {
-          "question": "¿Qué tipo de contenido está disponible?",
-          "answer": "Ofrecemos una amplia variedad de contenido para adultos en formato reel de 15 segundos, incluido amateur, profesional, varias categorías y fetiches. Todo el contenido proviene de adultos verificados y cumple con los requisitos legales."
+          "question": "Vilken typ av innehåll finns tillgängligt?",
+          "answer": "Vi erbjuder ett brett utbud av vuxeninnehåll i 15-sekunders rullformat, inklusive amatör, professionell, olika kategorier och fetischer. Allt innehåll är från verifierade vuxna och uppfyller lagliga krav."
         },
         "q2": {
-          "question": "¿Puedo descargar videos para verlos sin conexión?",
-          "answer": "Los miembros premium pueden descargar videos para verlos sin conexión. Las descargas están cifradas y solo se pueden ver a través de nuestra aplicación mientras tu suscripción esté activa."
+          "question": "Kan jag ladda ner videor för offlinevisning?",
+          "answer": "Premiummedlemmar kan ladda ner videor för offlinevisning. Nedladdningarna är krypterade och kan endast ses via vår app medan din prenumeration är aktiv."
         },
         "q3": {
-          "question": "¿Cómo funciona el algoritmo de recomendación?",
-          "answer": "Nuestro algoritmo impulsado por IA aprende de tus hábitos de visualización, me gusta y preferencias para mostrarte contenido personalizado. Cuanto más interactúes, mejores serán las recomendaciones."
+          "question": "Hur fungerar rekommendationsalgoritmen?",
+          "answer": "Vår AI-drivna algoritm lär sig av dina tittarvanor, likes och preferenser för att visa dig personligt anpassat innehåll. Ju mer du interagerar, desto bättre blir rekommendationerna."
         },
         "q4": {
-          "question": "¿Puedo subir mi propio contenido?",
-          "answer": "Sí, los creadores verificados pueden subir contenido. Debes completar nuestro proceso de verificación de creador, proporcionar documentación 2257 y cumplir con nuestras pautas de contenido."
+          "question": "Kan jag ladda upp mitt eget innehåll?",
+          "answer": "Ja, verifierade skapare kan ladda upp innehåll. Du måste slutföra vår verifieringsprocess för skapare, tillhandahålla 2257-dokumentation och följa våra innehållsriktlinjer."
         },
         "q5": {
-          "question": "¿Cómo reporto contenido inapropiado?",
-          "answer": "Cada video tiene un botón de reporte. Haz clic en él para reportar contenido que viole nuestros términos, sea no consensual, involucre menores o sea inapropiado. Revisamos todos los reportes dentro de las 24 horas."
+          "question": "Hur rapporterar jag olämpligt innehåll?",
+          "answer": "Varje video har en rapporteringsknapp. Klicka på den för att rapportera innehåll som bryter mot våra villkor, är icke-konsensuellt, involverar minderåriga eller på annat sätt är olämpligt. Vi granskar alla rapporter inom 24 timmar."
         }
       },
       "creators": {
-        "title": "Para creadores",
+        "title": "För kreatörer",
         "q1": {
-          "question": "¿Cómo me convierto en un creador verificado?",
-          "answer": "Solicita a través del Portal de Creadores, proporciona una identificación emitida por el gobierno, completa la documentación 2257 y pasa nuestro proceso de verificación. La aprobación generalmente toma 24-48 horas."
+          "question": "Hur blir jag en verifierad skapare?",
+          "answer": "Ansök via Creator Portal, uppge statligt utfärdat ID, fyll i 2257-dokumentation och passera vår verifieringsprocess. Godkännande tar vanligtvis 24-48 timmar."
         },
         "q2": {
-          "question": "¿Cuánto puedo ganar como creador?",
-          "answer": "Los creadores ganan a través de múltiples fuentes de ingresos: reparto de ingresos publicitarios (60%), propinas de fans, contenido de pago por visualización y niveles de suscripción. Los creadores principales ganan miles por mes."
+          "question": "Hur mycket kan jag tjäna som kreatör?",
+          "answer": "Skaparna tjänar genom flera intäktsströmmar: andel av annonsintäkter (60%), tips från fans, innehåll som betalas per visning och prenumerationsnivåer. De bästa skaparna tjänar tusentals kronor per månad."
         },
         "q3": {
-          "question": "¿Cuáles son los requisitos de contenido?",
-          "answer": "Los videos deben ser de 15 segundos o menos, calidad mínima de 720p, todos los participantes deben ser mayores de 18 años y el contenido debe ser consensual. Prohibimos contenido ilegal, violencia y material no consensual."
+          "question": "Vilka är kraven på innehållet?",
+          "answer": "Videor måste vara 15 sekunder eller kortare, ha en kvalitet på minst 720p, alla deltagare måste vara över 18 år och innehållet måste vara samtyckande. Vi förbjuder olagligt innehåll, våld och material som inte är förenligt med samtycke."
         },
         "q4": {
-          "question": "¿Cómo me pagan?",
-          "answer": "Los pagos se procesan semanalmente a través de depósito directo, PayPal o criptomoneda. El pago mínimo es de $50. Recibirás informes detallados de ganancias en tu panel de creador."
+          "question": "Hur får jag betalt?",
+          "answer": "Betalningar behandlas varje vecka via direktinsättning, PayPal eller kryptovaluta. Minsta utbetalning är $50. Du kommer att få detaljerade resultatrapporter i din skapares instrumentpanel."
         },
         "q5": {
-          "question": "¿Conservo los derechos de mi contenido?",
-          "answer": "Sí, conservas la propiedad de tu contenido. Nos otorgas una licencia para mostrarlo en nuestra plataforma. Puedes eliminar tu contenido en cualquier momento desde tu panel de creador."
+          "question": "Behåller jag rättigheterna till mitt innehåll?",
+          "answer": "Ja, du behåller äganderätten till ditt innehåll. Du ger oss en licens för att visa det på vår plattform. Du kan när som helst ta bort ditt innehåll från din kontrollpanel för skapare."
         }
       },
       "technical": {
-        "title": "Soporte técnico",
+        "title": "Teknisk support",
         "q1": {
-          "question": "¿Qué dispositivos son compatibles?",
-          "answer": "ReelPorn funciona en todos los navegadores modernos (Chrome, Firefox, Safari, Edge) en escritorio y móvil. También tenemos aplicaciones nativas para iOS y Android (disponibles fuera de las tiendas de aplicaciones)."
+          "question": "Vilka enheter stöds?",
+          "answer": "ReelPorn fungerar i alla moderna webbläsare (Chrome, Firefox, Safari, Edge) på datorer och mobiler. Vi har också inbyggda appar för iOS och Android (tillgängliga utanför appbutiker)."
         },
         "q2": {
-          "question": "¿Por qué la reproducción de video está entrecortada?",
-          "answer": "Esto generalmente se debe a una conexión a Internet lenta. Intenta reducir la calidad de video en la configuración, cerrar otras pestañas/aplicaciones o cambiar a una red más rápida. Los miembros premium obtienen transmisión prioritaria."
+          "question": "Varför hackar videouppspelningen?",
+          "answer": "Detta beror vanligtvis på långsam internetanslutning. Försök att minska videokvaliteten i inställningarna, stäng andra flikar/appar eller byt till ett snabbare nätverk. Premium-medlemmar får prioriterad streaming."
         },
         "q3": {
-          "question": "¿Cómo borro mi historial de visualización?",
-          "answer": "Ve a Perfil > Configuración de privacidad > Borrar historial. Puedes borrar todo el historial o eliminar elementos selectivamente. También puedes habilitar el modo incógnito para navegación privada."
+          "question": "Hur rensar jag min visningshistorik?",
+          "answer": "Gå till Profil > Sekretessinställningar > Rensa historik. Du kan rensa all historik eller selektivt ta bort objekt. Du kan också aktivera inkognitoläge för privat surfning."
         },
         "q4": {
-          "question": "¿Puedo usar una VPN?",
-          "answer": "Sí, se permite y recomienda el uso de VPN para la privacidad. Sin embargo, algunas funciones pueden estar limitadas según la ubicación de la VPN debido a restricciones de contenido regional."
+          "question": "Kan jag använda ett VPN?",
+          "answer": "Ja, VPN-användning är tillåten och rekommenderas för integritet. Vissa funktioner kan dock vara begränsade baserat på VPN-platsen på grund av regionala innehållsbegränsningar."
         }
       },
       "legal": {
-        "title": "Legal y seguridad",
+        "title": "Juridik & säkerhet",
         "q1": {
-          "question": "¿Cómo verifican que los artistas son mayores de 18 años?",
-          "answer": "Cumplimos con los requisitos de 18 U.S.C. 2257. Todos los creadores deben proporcionar identificación emitida por el gobierno y mantenemos registros detallados. Usamos IA y revisión manual para verificar las edades."
+          "question": "Hur kontrollerar du att modellerna är 18+?",
+          "answer": "Vi uppfyller kraven i 18 U.S.C. 2257. Alla skapare måste tillhandahålla statligt utfärdat ID och vi för detaljerade register. Vi använder AI och manuell granskning för att verifiera åldrar."
         },
         "q2": {
-          "question": "¿Qué pasa si mi contenido se subió sin permiso?",
-          "answer": "Envía una solicitud de eliminación de DMCA a dmca@reelporn.ai con prueba de propiedad. Eliminamos contenido infractor dentro de las 24 horas de recibir avisos válidos."
+          "question": "Vad händer om mitt innehåll har laddats upp utan tillstånd?",
+          "answer": "Skicka en DMCA-begäran om borttagning till dmca@reelporn.ai med bevis på äganderätt. Vi tar bort intrångsgörande innehåll inom 24 timmar efter att ha mottagit giltiga meddelanden."
         },
         "q3": {
-          "question": "¿ReelPorn es legal en mi país?",
-          "answer": "Las leyes de contenido para adultos varían según el país. Es tu responsabilidad asegurarte de que estás cumpliendo con las leyes locales. Bloqueamos el acceso desde países donde el contenido para adultos está prohibido."
+          "question": "Är ReelPorn lagligt i mitt land?",
+          "answer": "Lagar om innehåll för vuxna varierar från land till land. Det är ditt ansvar att se till att du följer lokala lagar. Vi blockerar åtkomst från länder där vuxet innehåll är förbjudet."
         },
         "q4": {
-          "question": "¿Cómo previenen que los menores accedan?",
-          "answer": "Usamos puertas de verificación de edad, requerimos creación de cuenta con confirmación de edad, proporcionamos información de control parental y cooperamos con servicios de filtrado."
+          "question": "Hur förhindrar du att minderåriga får åtkomst?",
+          "answer": "Vi använder åldersverifieringsgrindar, kräver att konto skapas med åldersbekräftelse, tillhandahåller information om föräldrakontroll och samarbetar med filtreringstjänster."
         }
       }
     },
     "help": {
-      "title": "¿Aún necesitas ayuda?",
-      "description": "¿No encuentras la respuesta que buscas? ¡Nuestro equipo de soporte está aquí para ayudarte!",
-      "emailSupport": "Soporte por correo electrónico",
-      "liveChat": "Chat en vivo"
+      "title": "Behöver du fortfarande hjälp?",
+      "description": "Hittar du inte svaret du letar efter? Vårt supportteam finns här för att hjälpa dig!",
+      "emailSupport": "Support via e-post",
+      "liveChat": "Chatt i realtid"
     }
   },
   "cookiePolicy": {
-    "title": "Política de cookies",
-    "subtitle": "Cómo usamos cookies y tecnologías similares",
-    "lastUpdated": "Última actualización",
+    "title": "Policy för cookies",
+    "subtitle": "Hur vi använder cookies och liknande teknik",
+    "lastUpdated": "Senast uppdaterad",
     "sections": {
       "whatAre": {
-        "title": "¿Qué son las cookies?",
-        "content1": "Las cookies son pequeños archivos de texto que se colocan en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a brindarte una mejor experiencia al recordar tus preferencias, analizar el tráfico del sitio y personalizar el contenido.",
-        "content2": "También usamos tecnologías similares como píxeles, almacenamiento local y huellas digitales de dispositivos para mejorar tu experiencia de navegación y mejorar nuestros servicios."
+        "title": "Vad är cookies?",
+        "content1": "Cookies är små textfiler som placeras på din enhet när du besöker vår webbplats. De hjälper oss att ge dig en bättre upplevelse genom att komma ihåg dina preferenser, analysera trafiken på webbplatsen och anpassa innehållet.",
+        "content2": "Vi använder också liknande tekniker som pixlar, lokal lagring och fingeravtryck från enheter för att förbättra din surfupplevelse och förbättra våra tjänster."
       },
       "howWeUse": {
-        "title": "Cómo usamos las cookies",
-        "intro": "Usamos cookies y tecnologías similares para los siguientes propósitos:",
+        "title": "Hur vi använder cookies",
+        "intro": "Vi använder cookies och liknande teknik för följande ändamål:",
         "essential": {
-          "title": "Operaciones esenciales",
-          "description": "Para proporcionar funcionalidad básica como autenticación de usuario, seguridad e integridad del sitio"
+          "title": "Viktig verksamhet",
+          "description": "För att tillhandahålla kärnfunktioner som användarautentisering, säkerhet och webbplatsintegritet"
         },
         "preferences": {
-          "title": "Preferencias y configuración",
-          "description": "Para recordar tus elecciones como preferencias de idioma, calidad de reproducción y configuración de visualización"
+          "title": "Preferenser och inställningar",
+          "description": "För att komma ihåg dina val, t.ex. språkinställningar, uppspelningskvalitet och skärminställningar"
         },
         "analytics": {
-          "title": "Análisis y rendimiento",
-          "description": "Para comprender cómo los usuarios interactúan con nuestro sitio y mejorar nuestros servicios"
+          "title": "Analys och prestanda",
+          "description": "För att förstå hur användare interagerar med vår webbplats och förbättra våra tjänster"
         },
         "marketing": {
-          "title": "Marketing y publicidad",
-          "description": "Para entregar anuncios relevantes y medir su efectividad"
+          "title": "Marknadsföring & reklam",
+          "description": "För att leverera relevanta annonser och mäta deras effektivitet"
         }
       },
       "types": {
-        "title": "Tipos de cookies que usamos",
+        "title": "Typer av cookies som vi använder",
         "essential": {
-          "title": "Cookies esenciales",
-          "description": "Estas cookies son necesarias para que el sitio web funcione correctamente. Habilitan funciones básicas como navegación de páginas, acceso a áreas seguras y verificación de edad.",
+          "title": "Viktiga kakor",
+          "description": "Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt. De möjliggör grundläggande funktioner som sidnavigering, åtkomst till säkra områden och åldersverifiering.",
           "items": [
-            "Gestión de sesión",
-            "Estado de verificación de edad",
-            "Tokens de seguridad",
-            "Equilibrio de carga"
+            "Session management",
+            "Age verification status",
+            "Security tokens",
+            "Load balancing"
           ]
         },
         "functional": {
-          "title": "Cookies funcionales",
-          "description": "Estas cookies permiten funcionalidades mejoradas y personalización. Pueden ser establecidas por nosotros o por proveedores externos cuyos servicios usamos.",
+          "title": "Funktionella cookies",
+          "description": "Dessa cookies möjliggör förbättrad funktionalitet och personalisering. De kan sättas av oss eller av tredjepartsleverantörer vars tjänster vi använder.",
           "items": [
-            "Preferencias de idioma",
-            "Configuración del reproductor de video",
-            "Contenido visto recientemente",
-            "Personalización de la interfaz de usuario"
+            "Language preferences",
+            "Video player settings",
+            "Recently viewed content",
+            "User interface customization"
           ]
         },
         "analyticsType": {
-          "title": "Cookies analíticas",
-          "description": "Estas cookies nos ayudan a comprender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima.",
+          "title": "Cookies för analys",
+          "description": "Dessa cookies hjälper oss att förstå hur besökare interagerar med vår webbplats genom att samla in och rapportera information anonymt.",
           "items": [
             "Google Analytics",
-            "Seguimiento de vistas de página",
-            "Análisis de comportamiento del usuario",
-            "Monitoreo de rendimiento"
+            "Page view tracking",
+            "User behavior analysis",
+            "Performance monitoring"
           ]
         },
         "advertising": {
-          "title": "Cookies publicitarias",
-          "description": "Estas cookies se utilizan para entregar anuncios que sean relevantes para ti y tus intereses. También ayudan a limitar la cantidad de veces que ves un anuncio.",
+          "title": "Cookies för reklam",
+          "description": "Dessa cookies används för att leverera annonser som är relevanta för dig och dina intressen. De hjälper också till att begränsa antalet gånger du ser en annons.",
           "items": [
-            "Publicidad dirigida",
-            "Limitación de frecuencia de anuncios",
-            "Medición de rendimiento de campañas",
-            "Publicidad basada en intereses"
+            "Targeted advertising",
+            "Ad frequency capping",
+            "Campaign performance measurement",
+            "Interest-based advertising"
           ]
         }
       },
       "thirdParty": {
-        "title": "Cookies de terceros",
-        "intro1": "Algunas cookies son colocadas por servicios de terceros que aparecen en nuestras páginas. No controlamos estas cookies y te animamos a consultar los sitios web de terceros para obtener más información sobre cómo usan las cookies.",
-        "intro2": "Los servicios de terceros que usamos incluyen:",
+        "title": "Cookies från tredje part",
+        "intro1": "Vissa cookies placeras av tjänster från tredje part som visas på våra sidor. Vi kontrollerar inte dessa cookies och uppmanar dig att kontrollera tredjepartswebbplatserna för mer information om hur de använder cookies.",
+        "intro2": "Tjänster från tredje part som vi använder inkluderar:",
         "items": [
-          "Google Analytics - para análisis del sitio web",
-          "CloudFlare - para seguridad y rendimiento",
-          "Procesadores de pago - para transacciones seguras",
-          "Plataformas de redes sociales - para compartir contenido"
+          "Google Analytics - for website analytics",
+          "CloudFlare - for security and performance",
+          "Payment processors - for secure transactions",
+          "Social media platforms - for content sharing"
         ]
       },
       "managing": {
-        "title": "Administrar tus preferencias de cookies",
-        "intro": "Tienes control sobre qué cookies usamos. Puedes administrar tus preferencias en cualquier momento:",
-        "buttonText": "Administrar configuración de cookies",
-        "buttonDescription": "Haz clic en el botón de arriba para revisar y actualizar tus preferencias de cookies.",
-        "browserIntro": "También puedes controlar las cookies a través de la configuración de tu navegador:",
+        "title": "Hantera dina cookiepreferenser",
+        "intro": "Du har kontroll över vilka cookies vi använder. Du kan när som helst ändra dina preferenser:",
+        "buttonText": "Hantera inställningar för cookies",
+        "buttonDescription": "Klicka på knappen ovan för att se över och uppdatera dina cookie-inställningar.",
+        "browserIntro": "Du kan också styra cookies genom inställningarna i din webbläsare:",
         "browsers": {
-          "chrome": "Chrome: Configuración → Privacidad y seguridad → Cookies y otros datos del sitio",
-          "firefox": "Firefox: Configuración → Privacidad y seguridad → Cookies y datos del sitio",
-          "safari": "Safari: Preferencias → Privacidad → Administrar datos del sitio web",
-          "edge": "Edge: Configuración → Privacidad, búsqueda y servicios → Cookies y permisos del sitio"
+          "chrome": "Chrome: Inställningar → Sekretess och säkerhet → Cookies och annan webbplatsdata",
+          "firefox": "Firefox (Firefox): Inställningar → Sekretess & säkerhet → Cookies och webbplatsdata",
+          "safari": "Safari: Inställningar → Sekretess → Hantera webbplatsdata",
+          "edge": "Edge: Inställningar → Sekretess, sök och tjänster → Cookies och webbplatsbehörigheter"
         }
       },
       "duration": {
-        "title": "Duración de las cookies",
-        "intro": "Las cookies pueden ser de sesión o persistentes:",
+        "title": "Cookie Varaktighet",
+        "intro": "Cookies kan vara antingen sessionscookies eller permanenta cookies:",
         "session": {
-          "title": "Cookies de sesión",
-          "description": "Estas son cookies temporales que caducan cuando cierras tu navegador. Las usamos para seguridad y funciones esenciales del sitio."
+          "title": "Cookies för session",
+          "description": "Det här är tillfälliga cookies som upphör att gälla när du stänger din webbläsare. Vi använder dem för säkerhet och viktiga funktioner på webbplatsen."
         },
         "persistent": {
-          "title": "Cookies persistentes",
-          "description": "Estas cookies permanecen en tu dispositivo durante un período establecido o hasta que las elimines. Las usamos para recordar tus preferencias y proporcionar funciones personalizadas."
+          "title": "Permanenta cookies",
+          "description": "Dessa cookies ligger kvar på din enhet under en viss tid eller tills du tar bort dem. Vi använder dem för att komma ihåg dina preferenser och tillhandahålla personliga funktioner."
         }
       },
       "updates": {
-        "title": "Actualizaciones de esta política",
-        "content": "Podemos actualizar esta Política de cookies de vez en cuando para reflejar cambios en nuestras prácticas o por otras razones operativas, legales o regulatorias. Te notificaremos de cualquier cambio significativo publicando la nueva política en esta página con una fecha de revisión actualizada."
+        "title": "Uppdateringar av denna policy",
+        "content": "Vi kan komma att uppdatera denna cookiepolicy från tid till annan för att återspegla förändringar i vår praxis eller av andra operativa, juridiska eller regleringsmässiga skäl. Vi kommer att meddela dig om eventuella betydande ändringar genom att publicera den nya policyn på denna sida med ett uppdaterat revisionsdatum."
       },
       "contact": {
-        "title": "Contáctanos",
-        "intro": "Si tienes alguna pregunta sobre nuestro uso de cookies o esta política, contáctanos:",
+        "title": "Kontakta oss",
+        "intro": "Om du har några frågor om vår användning av cookies eller denna policy, vänligen kontakta oss:",
         "email": "support@reelporn.ai"
       }
     }
   },
   "about": {
     "hero": {
-      "title": "Redefiniendo el entretenimiento para adultos",
-      "subtitle": "ReelPorn está revolucionando cómo los adultos descubren y disfrutan contenido íntimo a través de videos innovadores de formato corto y tecnología de vanguardia.",
-      "getStarted": "Comenzar",
-      "meetCreators": "Conoce a nuestros creadores"
+      "title": "Omdefiniering av underhållning för vuxna",
+      "subtitle": "ReelPorn revolutionerar hur vuxna upptäcker och njuter av intimt innehåll genom innovativa kortfilmer och banbrytande teknik.",
+      "getStarted": "Kom igång",
+      "meetCreators": "Möt våra skapare"
     },
     "stats": {
       "users": {
         "number": "10M+",
-        "label": "Usuarios activos"
+        "label": "Aktiva användare"
       },
       "videos": {
         "number": "500K+",
-        "label": "Videos"
+        "label": "Videor"
       },
       "creators": {
         "number": "50K+",
-        "label": "Creadores"
+        "label": "Skapare"
       },
       "countries": {
         "number": "150+",
-        "label": "Países"
+        "label": "Länder"
       }
     },
     "mission": {
-      "title": "Nuestra misión",
-      "paragraph1": "Creemos que el entretenimiento para adultos debe ser seguro, consensual y accesible. ReelPorn combina la naturaleza adictiva del contenido de formato corto con la intimidad del entretenimiento para adultos, creando una plataforma única donde los espectadores pueden descubrir nuevas experiencias y los creadores pueden prosperar.",
-      "paragraph2": "Nuestro motor de recomendación impulsado por IA aprende tus preferencias para ofrecer contenido personalizado mientras mantiene la privacidad completa. Cada video es verificado, cada creador está autenticado y cada interacción es segura.",
-      "imageCaption": "Innovación en movimiento"
+      "title": "Vårt uppdrag",
+      "paragraph1": "Vi anser att vuxenunderhållning ska vara säker, samtyckande och tillgänglig. ReelPorn kombinerar den beroendeframkallande karaktären hos kortformat innehåll med intimiteten i vuxenunderhållning, vilket skapar en unik plattform där tittare kan upptäcka nya upplevelser och skapare kan blomstra.",
+      "paragraph2": "Vår AI-drivna rekommendationsmotor lär sig dina preferenser för att leverera personligt innehåll samtidigt som den fullständiga integriteten upprätthålls. Varje video är verifierad, varje skapare är autentiserad och varje interaktion är säker.",
+      "imageCaption": "Innovation i rörelse"
     },
     "values": {
-      "title": "Nuestros valores fundamentales",
+      "title": "Våra kärnvärden",
       "privacyFirst": {
-        "title": "Privacidad primero",
-        "description": "Tu privacidad es nuestra máxima prioridad. Usamos cifrado avanzado y nunca compartimos tus datos."
+        "title": "Integritet först",
+        "description": "Din integritet är vår högsta prioritet. Vi använder avancerad kryptering och delar aldrig med oss av dina uppgifter."
       },
       "verifiedContent": {
-        "title": "Contenido verificado",
-        "description": "Todo el contenido proviene de adultos verificados. Cumplimos con todos los requisitos legales, incluido 2257."
+        "title": "Verifierat innehåll",
+        "description": "Allt innehåll är från verifierade vuxna. Vi uppfyller alla rättsliga krav, inklusive 2257."
       },
       "innovation": {
-        "title": "Innovación",
-        "description": "Pioneros del futuro del entretenimiento para adultos con tecnología y funciones de vanguardia."
+        "title": "Innovation",
+        "description": "Banbrytande för framtidens underhållning för vuxna med banbrytande teknik och funktioner."
       },
       "creatorSupport": {
-        "title": "Apoyo a creadores",
-        "description": "Empoderando a los creadores con reparto justo de ingresos y herramientas poderosas para hacer crecer su audiencia."
+        "title": "Stöd för skapare",
+        "description": "Vi ger kreatörer rättvis intäktsdelning och kraftfulla verktyg för att öka sin publik."
       }
     },
     "technology": {
-      "title": "Impulsado por tecnología",
+      "title": "Drivs av teknik",
       "aiRecommendations": {
-        "title": "Recomendaciones de IA",
-        "description": "Algoritmos avanzados de aprendizaje automático personalizan tu feed en tiempo real."
+        "title": "AI-rekommendationer",
+        "description": "Avancerade maskininlärningsalgoritmer anpassar ditt flöde i realtid."
       },
       "encryption": {
-        "title": "Cifrado de extremo a extremo",
-        "description": "Cifrado de grado militar protege tus datos e historial de visualización."
+        "title": "End-to-End-kryptering",
+        "description": "Kryptering av militär kvalitet skyddar dina data och din visningshistorik."
       },
       "cdn": {
-        "title": "CDN global",
-        "description": "Transmisión ultrarrápida desde servidores en todo el mundo para visualización sin interrupciones."
+        "title": "Globalt CDN",
+        "description": "Blixtsnabb streaming från servrar över hela världen för buffertfri visning."
       },
       "crossPlatform": {
-        "title": "Multiplataforma",
-        "description": "Experiencia perfecta en todos los dispositivos: escritorio, móvil y tablet."
+        "title": "Plattformsoberoende",
+        "description": "Sömlös upplevelse på alla enheter - dator, mobil och surfplatta."
       }
     },
     "team": {
-      "title": "Equipo de liderazgo",
+      "title": "Ledningsgrupp",
       "ceo": {
-        "role": "CEO y fundador",
-        "bio": "Líder visionario con más de 15 años en tecnología y entretenimiento"
+        "role": "VD & grundare",
+        "bio": "Visionär ledare med mer än 15 år inom teknik och underhållning"
       },
       "cto": {
         "role": "CTO",
-        "bio": "Experto en IA/ML e infraestructura escalable de transmisión de video"
+        "bio": "Expert inom AI/ML och skalbar infrastruktur för videostreaming"
       },
       "headSafety": {
-        "role": "Jefe de seguridad",
-        "bio": "Dedicado a la seguridad de la plataforma y el cumplimiento legal"
+        "role": "Säkerhetschef",
+        "bio": "Engagerad i plattformssäkerhet och efterlevnad av lagar och regler"
       },
       "headCreators": {
-        "role": "Jefe de creadores",
-        "bio": "Apoyando y haciendo crecer nuestra increíble comunidad de creadores"
+        "role": "Chef för kreatörer",
+        "bio": "Stödja och utveckla vår fantastiska kreatörsgrupp"
       }
     },
     "becomeCreator": {
-      "title": "Conviértete en creador",
-      "description": "Únete a miles de creadores que ganan en ReelPorn. Ofrecemos el reparto de ingresos más alto de la industria, análisis poderosos y una comunidad de apoyo.",
-      "revenueShare": "80% de reparto de ingresos",
-      "growthTools": "Herramientas de crecimiento",
-      "support": "Soporte 24/7",
-      "applyButton": "Solicitar para convertirse en creador"
+      "title": "Bli en skapare",
+      "description": "Gå med i tusentals skapare som tjänar på ReelPorn. Vi erbjuder den högsta intäktsandelen i branschen, kraftfulla analyser och en stödjande gemenskap.",
+      "revenueShare": "80% andel av intäkterna",
+      "growthTools": "Verktyg för tillväxt",
+      "support": "support 24/7",
+      "applyButton": "Ansök om att bli kreatör"
     },
     "contact": {
-      "title": "Ponte en contacto",
+      "title": "Ta kontakt med oss",
       "general": {
-        "title": "Consultas generales",
+        "title": "Allmänna frågor",
         "email": "support@reelporn.ai"
       },
       "support": {
-        "title": "Soporte",
+        "title": "Stöd",
         "email": "support@reelporn.ai"
       },
       "business": {
-        "title": "Negocios",
+        "title": "Företag",
         "email": "support@reelporn.ai"
       }
     }
   },
   "contactPage": {
-    "title": "Contáctanos",
-    "subtitle": "Ponte en contacto con nuestro equipo",
-    "description": "¿Tienes una pregunta o necesitas asistencia? Estamos aquí para ayudarte. Contáctanos usando la información a continuación.",
+    "title": "Kontakta oss",
+    "subtitle": "Ta kontakt med vårt team",
+    "description": "Har du en fråga eller behöver du hjälp? Vi är här för att hjälpa dig. Kontakta oss med hjälp av informationen nedan.",
     "email": {
-      "title": "Soporte por correo electrónico",
-      "description": "Para consultas generales, soporte técnico o asociaciones comerciales",
+      "title": "Support via e-post",
+      "description": "För allmänna förfrågningar, teknisk support eller affärssamarbeten",
       "address": "support@reelporn.ai",
-      "responseTime": "Normalmente respondemos dentro de 24-48 horas"
+      "responseTime": "Vi svarar vanligtvis inom 24-48 timmar"
     },
     "dmca": {
-      "title": "Avisos de DMCA",
-      "description": "Para avisos de infracción de derechos de autor",
+      "title": "DMCA-meddelanden",
+      "description": "För meddelanden om upphovsrättsintrång",
       "address": "dmca@reelporn.ai",
-      "note": "Por favor, incluye toda la información requerida según se describe en nuestra política de DMCA"
+      "note": "Vänligen inkludera all nödvändig information enligt vår DMCA-policy"
     },
     "hours": {
-      "title": "Horario de soporte",
-      "description": "Nuestro equipo de soporte está disponible:",
-      "weekdays": "Lunes - Viernes: 9:00 AM - 6:00 PM (EST)",
-      "weekends": "Sábado - Domingo: 10:00 AM - 4:00 PM (EST)"
+      "title": "Supporttimmar",
+      "description": "Vårt supportteam är tillgängligt:",
+      "weekdays": "Måndag - fredag: 9:00 - 18:00 (EST)",
+      "weekends": "Lördag - söndag: 10:00 - 16:00 (EST)"
     },
     "faq": {
-      "title": "Preguntas frecuentes",
-      "description": "¿Buscas respuestas rápidas? Consulta nuestro",
-      "link": "página de preguntas frecuentes",
-      "suffix": "para preguntas y soluciones comunes."
+      "title": "Vanliga frågor och svar",
+      "description": "Letar du efter snabba svar? Kolla in vår",
+      "link": "FAQ-sida",
+      "suffix": "för vanliga frågor och lösningar."
     }
   },
   "payment": {
-    "cryptoPayment": "Pago con criptomoneda",
-    "cryptoPaymentDescription": "Pago seguro y anónimo con criptomoneda",
-    "quickTransaction": "Transacción rápida",
-    "selectPlan": "Selecciona tu plan",
-    "selectCryptocurrency": "Selecciona criptomoneda",
-    "plan": "Plan",
-    "currency": "Moneda",
-    "total": "Total",
-    "month": "mes",
-    "proceedToPayment": "Proceder al pago",
+    "cryptoPayment": "Kryptobetalning",
+    "cryptoPaymentDescription": "Säker och anonym betalning med kryptovaluta",
+    "quickTransaction": "Snabb transaktion",
+    "selectPlan": "Välj din plan",
+    "selectCryptocurrency": "Välj kryptovaluta",
+    "plan": "Planera",
+    "currency": "Valuta",
+    "total": "Totalt",
+    "month": "månad",
+    "proceedToPayment": "Fortsätt till betalning",
     "processing": {
-      "title": "¡Transacción detectada!",
-      "message": "Hemos recibido tu pago y se está procesando en la blockchain.",
-      "waiting": "Esperando confirmaciones",
-      "safeToClose": "Tu suscripción se activará automáticamente una vez que se alcancen las confirmaciones mínimas. Puedes cerrar esta página de forma segura."
+      "title": "Transaktion upptäckt!",
+      "message": "Vi har tagit emot din betalning och den behandlas i blockkedjan.",
+      "waiting": "Väntar på bekräftelser",
+      "safeToClose": "Din prenumeration kommer att aktiveras automatiskt när minsta antal bekräftelser har uppnåtts. Du kan tryggt stänga den här sidan."
     },
-    "loading": "Cargando...",
-    "continue": "Continuar",
-    "sendExactly": "Enviar exactamente",
-    "sendExactAmount": "Enviar esta cantidad exacta",
-    "toAddress": "A la dirección",
-    "toThisAddress": "A esta dirección",
-    "network": "Red",
-    "confirmations": "Confirmaciones",
-    "confirmationProgress": "Progreso de confirmación",
-    "expiresAt": "Expira a las {time}",
-    "paymentExpiresAt": "El pago expira a las {time}",
-    "viewOnBlockchain": "Ver en blockchain",
-    "scanQRCode": "Escanea el código QR con tu billetera cripto",
-    "copyAddress": "Copiar dirección",
-    "copy": "Copiar",
-    "copied": "¡Copiado!",
-    "cancelPayment": "Cancelar pago",
-    "awaitingPayment": "Esperando pago",
-    "processingPayment": "Procesando pago",
-    "paymentCompleted": "¡Pago completado!",
+    "loading": "Laddar...",
+    "continue": "Fortsätt",
+    "sendExactly": "Skicka exakt",
+    "sendExactAmount": "Skicka detta exakta belopp",
+    "toAddress": "Till adress",
+    "toThisAddress": "Till denna adress",
+    "network": "Nätverk",
+    "confirmations": "Bekräftelser",
+    "confirmationProgress": "Framsteg för bekräftelse",
+    "expiresAt": "Upphör att gälla vid {time}",
+    "paymentExpiresAt": "Betalningen upphör att gälla vid {time}",
+    "viewOnBlockchain": "Syn på Blockchain",
+    "scanQRCode": "Skanna QR-koden med din kryptoplånbok",
+    "copyAddress": "Kopiera adress",
+    "copy": "Kopia",
+    "copied": "Kopierat!",
+    "cancelPayment": "Avbryt betalning",
+    "awaitingPayment": "Väntar på betalning",
+    "processingPayment": "Behandling av betalning",
+    "paymentCompleted": "Betalning genomförd!",
     "completed": {
-      "title": "¡Pago completado!",
-      "message": "Tu transacción se ha confirmado exitosamente y tu suscripción está ahora activa.",
-      "welcome": "¡Bienvenido a Premium!",
-      "congratulations": "¡Felicidades por convertirte en miembro!",
-      "subscriptionActive": "Suscripción activa",
-      "transactionDetails": "Detalles de la transacción",
-      "viewOnBlockchain": "Ver en explorador de blockchain",
-      "goToAccount": "Ir a mi cuenta"
+      "title": "Betalning genomförd!",
+      "message": "Din transaktion har framgångsrikt bekräftats och din prenumeration är nu aktiv.",
+      "welcome": "Välkommen till Premium!",
+      "congratulations": "Grattis till medlemskapet!",
+      "subscriptionActive": "Prenumeration Aktiv",
+      "transactionDetails": "Transaktionsdetaljer",
+      "viewOnBlockchain": "Utsikt över Blockchain Explorer",
+      "goToAccount": "Gå till Mitt konto"
     },
     "checkout": {
       "progress": {
-        "step1": "Seleccionar plan",
-        "step2": "Elegir pago",
-        "step3": "Confirmar"
+        "step1": "Välj plan",
+        "step2": "Välj betalning",
+        "step3": "Bekräfta"
       }
     },
     "expired": {
-      "title": "Pago expirado",
-      "message": "Este pago ha expirado. ¿Te gustaría crear un nuevo pago para completar tu compra?",
-      "retryButton": "Reintentar pago",
-      "creatingPayment": "Creando nuevo pago...",
-      "returnHome": "Volver al inicio"
+      "title": "Betalning utgått",
+      "message": "Den här betalningen har löpt ut. Vill du skapa en ny betalning för att slutföra ditt köp?",
+      "retryButton": "Försök igen med betalning",
+      "creatingPayment": "Skapa ny betalning...",
+      "returnHome": "Återgå till hemsidan"
     },
     "earlyRetry": {
-      "button": "Iniciar nuevo pago",
-      "message": "¿El pago está por expirar? Inicia uno nuevo ahora."
+      "button": "Starta ny betalning",
+      "message": "Betalning som snart löper ut? Starta en ny nu."
     },
-    "paymentFailed": "Pago fallido",
-    "paymentCancelled": "Pago cancelado",
-    "failedToLoadData": "Error al cargar datos de pago",
-    "failedToInitiatePayment": "Error al iniciar pago",
-    "failedToCancelPayment": "Error al cancelar pago",
-    "unavailable": "No disponible",
+    "paymentFailed": "Betalningen misslyckades",
+    "paymentCancelled": "Avbruten betalning",
+    "failedToLoadData": "Misslyckades med att ladda betalningsdata",
+    "failedToInitiatePayment": "Misslyckades med att initiera betalning",
+    "failedToCancelPayment": "Misslyckades med att avbryta betalningen",
+    "unavailable": "Ej tillgänglig",
     "status": {
-      "pending": "Pendiente",
-      "processing": "Procesando",
-      "awaiting_confirmation": "Esperando confirmación",
-      "confirming": "Confirmando",
-      "completed": "Completado",
-      "failed": "Fallido",
-      "expired": "Expirado",
-      "cancelled": "Cancelado"
+      "pending": "Avvaktande",
+      "processing": "Bearbetning",
+      "awaiting_confirmation": "Inväntar bekräftelse",
+      "confirming": "Bekräftelse",
+      "completed": "Färdigställd",
+      "failed": "Misslyckades",
+      "expired": "Utgått",
+      "cancelled": "Avbruten"
     }
   },
   "common": {
-    "cancel": "Cancelar",
-    "loading": "Cargando...",
-    "retry": "Reintentar"
+    "cancel": "Avbryt",
+    "loading": "Laddar...",
+    "retry": "Försök igen"
   },
   "checkout": {
-    "title": "Completa tu compra",
-    "selectPaymentMethod": "Selecciona método de pago",
-    "selectPaymentMethodDescription": "Elige tu método de pago con criptomoneda preferido",
-    "reviewPayment": "Revisar pago",
-    "loading": "Cargando...",
-    "loadingPlan": "Cargando detalles del plan...",
-    "processing": "Procesando...",
-    "cancel": "Cancelar",
-    "back": "Atrás",
-    "backToSubscriptions": "Volver a suscripciones",
-    "confirmPayment": "Confirmar pago",
-    "tryAgain": "Intentar de nuevo",
-    "minAmount": "Mín",
-    "orderSummary": "Resumen del pedido",
-    "paymentDetails": "Detalles del pago",
-    "paymentMethod": "Método de pago",
-    "amountUsd": "Cantidad (USD)",
-    "amountCrypto": "Cantidad (Cripto)",
-    "exchangeRate": "Tipo de cambio",
-    "whatsIncluded": "Qué incluye",
-    "securePayment": "Pago seguro",
-    "securePaymentDescription": "Tu transacción está cifrada y segura",
-    "acceptedCryptocurrencies": "Criptomonedas aceptadas",
+    "title": "Slutför ditt köp",
+    "selectPaymentMethod": "Välj betalningsmetod",
+    "selectPaymentMethodDescription": "Välj önskad betalningsmetod för kryptovaluta",
+    "reviewPayment": "Granska betalning",
+    "loading": "Laddar...",
+    "loadingPlan": "Laddar plan detaljer...",
+    "processing": "Bearbetning...",
+    "cancel": "Avbryt",
+    "back": "Tillbaka",
+    "backToSubscriptions": "Tillbaka till Prenumerationer",
+    "confirmPayment": "Bekräfta betalning",
+    "tryAgain": "Försök igen",
+    "minAmount": "Min",
+    "orderSummary": "Sammanfattning av ordern",
+    "paymentDetails": "Betalningsinformation",
+    "paymentMethod": "Betalningsmetod",
+    "amountUsd": "Belopp (USD)",
+    "amountCrypto": "Belopp (krypto)",
+    "exchangeRate": "Valutakurs",
+    "whatsIncluded": "Vad ingår?",
+    "securePayment": "Säker betalning",
+    "securePaymentDescription": "Din transaktion är krypterad och säker",
+    "acceptedCryptocurrencies": "Accepterade kryptovalutor",
     "bitcoin": "Bitcoin",
     "ethereum": "Ethereum",
     "litecoin": "Litecoin",
     "usdt": "USDT",
     "usdc": "USDC",
-    "more": "Más",
-    "securePayments": "Pagos seguros",
-    "encryptedTransactions": "Transacciones cifradas",
-    "instantConfirmation": "Confirmación instantánea",
+    "more": "Mer om",
+    "securePayments": "Säkra betalningar",
+    "encryptedTransactions": "Krypterade transaktioner",
+    "instantConfirmation": "Omedelbar bekräftelse",
     "progress": {
-      "step1": "Seleccionar plan",
-      "step2": "Elegir pago",
-      "step3": "Confirmar"
+      "step1": "Välj plan",
+      "step2": "Välj betalning",
+      "step3": "Bekräfta"
     },
-    "priceLocked": "Precio bloqueado por",
-    "priceExpiringSoon": "El precio expira en",
-    "priceExpired": "Precio expirado - Actualizando...",
-    "unlockAccess": "Desbloquea acceso Premium",
-    "startWatching": "Comienza a ver en 2 minutos",
-    "payWith": "Paga {amount} con {crypto}",
-    "moneyBackGuarantee": "Garantía de devolución de dinero de 30 días",
-    "moneyBackDescription": "¿No estás satisfecho? Obtén un reembolso completo dentro de los 30 días",
-    "noCreditCard": "No se requiere tarjeta de crédito",
-    "sslEncrypted": "Cifrado SSL de 256 bits",
-    "joinMembers": "Únete a {count} miembros que actualizaron esta semana",
-    "popularChoice": "Elección popular",
-    "fastSecure": "Rápido • Seguro • Anónimo",
-    "confirmTime": "Confirma en ~{time}",
-    "testimonial1": "¡La mejor calidad de transmisión que he experimentado!",
-    "testimonial2": "Pago con cripto súper fácil. Tomó menos de 5 minutos.",
-    "testimonial3": "Me encanta la privacidad. No se necesita tarjeta de crédito.",
+    "priceLocked": "Priset är låst för",
+    "priceExpiringSoon": "Priset upphör att gälla i",
+    "priceExpired": "Priset har gått ut - Uppfriskande...",
+    "unlockAccess": "Lås upp Premium Access",
+    "startWatching": "Börja titta på 2 minuter",
+    "payWith": "Betala {amount} med {crypto}",
+    "moneyBackGuarantee": "30 dagars pengarna-tillbaka-garanti",
+    "moneyBackDescription": "Är du inte nöjd? Få full återbetalning inom 30 dagar",
+    "noCreditCard": "Inget kreditkort krävs",
+    "sslEncrypted": "256-bitars SSL-kryptering",
+    "joinMembers": "Gå med i {count} medlemmar som uppgraderade denna vecka",
+    "popularChoice": "Populärt val",
+    "fastSecure": "Snabbt - säkert - anonymt",
+    "confirmTime": "Bekräftar i ~{time}",
+    "testimonial1": "Bästa streamingkvaliteten jag någonsin har upplevt!",
+    "testimonial2": "Super enkel kryptobetalning. Tog mindre än 5 minuter.",
+    "testimonial3": "Älskar integriteten. Inget kreditkort behövs.",
     "testimonialAuthor1": "Sarah M.",
     "testimonialAuthor2": "Mike T.",
     "testimonialAuthor3": "Alex K.",
-    "recentActivity": "Actividad reciente",
-    "recentSubscription": "{name} de {country} acaba de suscribirse",
-    "liveSupport": "¿Preguntas? Chatea con nosotros",
-    "avgReplyTime": "Tiempo de respuesta promedio: <2 min",
-    "savesInFees": "💡 {token} ahorra ${amount} en tarifas",
+    "recentActivity": "Senaste aktivitet",
+    "recentSubscription": "{name} från {country} prenumererade just",
+    "liveSupport": "Har du några frågor? Chatta med oss",
+    "avgReplyTime": "Avg svar: <2 min",
+    "savesInFees": "💡 {token} sparar ${amount} i avgifter",
     "status": {
-      "awaitingPayment": "Esperando pago",
-      "completed": "¡Pago completado!",
-      "expired": "Pago expirado",
-      "failed": "Pago fallido",
-      "sendPayment": "Enviar pago",
-      "paymentAddress": "Dirección de pago",
-      "exactAmount": "Cantidad exacta a enviar",
-      "confirmations": "Confirmaciones",
-      "expiresIn": "Expira en",
-      "subscriptionActivated": "¡Suscripción activada!",
-      "thankYou": "Gracias por tu compra. Tu suscripción está ahora activa.",
-      "paymentExpired": "Este pago ha expirado. Por favor, inicia un nuevo pago.",
-      "paymentFailed": "El pago falló. Por favor, inténtalo de nuevo o usa un método de pago diferente."
+      "awaitingPayment": "Väntar på betalning",
+      "completed": "Betalning genomförd!",
+      "expired": "Betalning utgått",
+      "failed": "Betalningen misslyckades",
+      "sendPayment": "Skicka betalning",
+      "paymentAddress": "Betalningsadress",
+      "exactAmount": "Exakt belopp att skicka",
+      "confirmations": "Bekräftelser",
+      "expiresIn": "Upphör att gälla",
+      "subscriptionActivated": "Prenumeration aktiverad!",
+      "thankYou": "Tack för ditt köp. Din prenumeration är nu aktiv.",
+      "paymentExpired": "Den här betalningen har löpt ut. Vänligen starta en ny betalning.",
+      "paymentFailed": "Betalningen misslyckades. Vänligen försök igen eller använd en annan betalningsmetod."
     },
     "error": {
-      "title": "Error",
-      "planNotFound": "Plan no encontrado. Por favor, selecciona un plan de suscripción válido.",
-      "planNotFoundTitle": "¡Ups! Este plan no está disponible",
-      "planNotFoundDescription": "El plan de suscripción que buscas no existe o ya no está disponible. ¡No te preocupes, tenemos otras excelentes opciones para ti!",
-      "alternativePlans": "Mira estos planes populares",
-      "selectPlan": "Seleccionar este plan",
-      "viewAllPlans": "Ver todos los planes",
-      "goBack": "Volver"
+      "title": "Fel",
+      "planNotFound": "Planen hittades inte. Vänligen välj en giltig prenumerationsplan.",
+      "planNotFoundTitle": "Hoppsan! Denna plan är inte tillgänglig",
+      "planNotFoundDescription": "Den prenumerationsplan du söker finns inte eller är inte längre tillgänglig. Oroa dig inte, vi har andra bra alternativ för dig!",
+      "alternativePlans": "Kolla in dessa populära planer",
+      "selectPlan": "Välj denna plan",
+      "viewAllPlans": "Visa alla planer",
+      "goBack": "Gå tillbaka"
     }
   },
   "videos": {
-    "loading": "Cargando video...",
-    "error": "Error al cargar video",
-    "notFound": "Video no encontrado",
-    "notFoundTitle": "Video no encontrado o eliminado",
-    "notFoundDescription": "Este video puede haber sido eliminado, borrado o el enlace es incorrecto.",
-    "goBack": "Volver",
-    "goHome": "Ir al inicio",
-    "suggestions": "Sugerencias:",
-    "suggestionCheckUrl": "Verifica si la URL es correcta",
-    "suggestionVideoDeleted": "El video puede haber sido eliminado por el creador",
-    "suggestionBrowseCategories": "Navega por nuestras categorías para encontrar contenido similar",
+    "loading": "Laddar video...",
+    "error": "Fel vid laddning av video",
+    "notFound": "Videon hittades inte",
+    "notFoundTitle": "Video hittades inte eller raderades",
+    "notFoundDescription": "Den här videon kan ha tagits bort, raderats eller så är länken felaktig.",
+    "goBack": "Gå tillbaka",
+    "goHome": "Gå till hemsidan",
+    "suggestions": "Förslag:",
+    "suggestionCheckUrl": "Kontrollera om webbadressen är korrekt",
+    "suggestionVideoDeleted": "Videon kan ha raderats av upphovsmannen",
+    "suggestionBrowseCategories": "Bläddra bland våra kategorier för att hitta liknande innehåll",
     "premium": "Premium",
-    "videoNotSupported": "Tu navegador no soporta la etiqueta de video.",
-    "views": "vistas",
-    "likes": "me gusta",
-    "comments": "comentarios",
-    "uploadedMinutesAgo": "hace {minutes}m",
-    "uploadedHoursAgo": "hace {hours}h",
-    "uploadedDaysAgo": "hace {days}d",
-    "uploadedMonthsAgo": "hace {months}m",
-    "uploadedYearsAgo": "hace {years}a",
-    "subscribe": "Suscribirse",
-    "description": "Descripción",
-    "category": "Categoría",
-    "tags": "Etiquetas",
-    "like": "Me gusta",
-    "liked": "Me gusta",
-    "share": "Compartir",
-    "report": "Reportar",
-    "relatedVideos": "Videos relacionados",
-    "tryTheseVideos": "Prueba estos videos en su lugar",
-    "linkCopied": "¡Enlace copiado al portapapeles!",
-    "loginToLike": "¿Te gusta este video?",
-    "loginToLikeDescription": "Crea una cuenta gratuita o inicia sesión para dar me gusta a videos y crear tu colección de favoritos."
+    "videoNotSupported": "Din webbläsare stöder inte videotaggen.",
+    "views": "utsikt",
+    "likes": "gillar",
+    "comments": "kommentarer",
+    "uploadedMinutesAgo": "{minutes}m sedan",
+    "uploadedHoursAgo": "{hours}h sedan",
+    "uploadedDaysAgo": "{days}d sedan",
+    "uploadedMonthsAgo": "{months}mo sedan",
+    "uploadedYearsAgo": "{years}för ett år sedan",
+    "subscribe": "Prenumerera",
+    "description": "Beskrivning",
+    "category": "Kategori",
+    "tags": "Etiketter",
+    "like": "Liksom",
+    "liked": "Gillade",
+    "share": "Aktie",
+    "report": "Rapport",
+    "relatedVideos": "Relaterade videor",
+    "tryTheseVideos": "Prova dessa videor istället",
+    "linkCopied": "Länken kopierad till urklipp!",
+    "loginToLike": "Gillar du den här videon?",
+    "loginToLikeDescription": "Skapa ett gratis konto eller logga in för att gilla videor och bygga upp din favoritsamling."
   },
   "authModal": {
-    "defaultTitle": "Inicio de sesión requerido",
-    "defaultMessage": "Por favor, inicia sesión o crea una cuenta para continuar.",
-    "login": "Iniciar sesión",
-    "register": "Crear cuenta",
-    "maybeLater": "Quizás más tarde"
+    "defaultTitle": "Inloggning krävs",
+    "defaultMessage": "Logga in eller skapa ett konto för att fortsätta.",
+    "login": "Logga in",
+    "register": "Skapa konto",
+    "maybeLater": "Kanske senare"
   }
 }

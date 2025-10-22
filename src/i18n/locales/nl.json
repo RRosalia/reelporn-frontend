@@ -1417,5 +1417,9 @@
     "login": "Inloggen",
     "register": "Account Aanmaken",
     "maybeLater": "Misschien Later"
+  },
+  "test": {
+    "welcomeMessage": "Welkom {username}, u hebt {count} nieuwe meldingen!",
+    "simpleMessage": "Dit is een testvertaling"
   }
 }
