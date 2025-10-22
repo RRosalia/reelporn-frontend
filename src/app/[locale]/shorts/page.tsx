@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import ShortsPlayer from '@/components/shorts/ShortsPlayer';
 import ForcedAdvert from '@/components/promotions/ForcedAdvert';
@@ -16,18 +16,19 @@ function ShortsPage() {
     const hasInitialized = useRef(false);
 
     // Mock shorts data - replace with API call later
-    const mockShorts = Array.from({ length: 20 }, (_, i) => ({
+    const mockShorts = useMemo(() => Array.from({ length: 20 }, (_, i) => ({
         id: 100000 + i + 1, // Unique video IDs
         videoUrl: `https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4`,
         thumbnail: `https://picsum.photos/seed/${i + 1}/1080/1920`,
         title: `Hot Short ${i + 1}`,
         username: `user${i + 1}`,
         avatar: `https://i.pravatar.cc/150?img=${i + 1}`,
-        likes: Math.floor(Math.random() * 100000),
-        comments: Math.floor(Math.random() * 10000),
+        // Use deterministic values based on index to avoid hydration issues
+        likes: ((i + 1) * 12345) % 100000,
+        comments: ((i + 1) * 2345) % 10000,
         description: `Check out this amazing short video #${i + 1} 🔥`,
-        uploadedAt: `${Math.floor(Math.random() * 24)}h ago`
-    }));
+        uploadedAt: `${((i + 1) * 3) % 24}h ago`
+    })), []);
 
     // Insert ads every 3 videos for non-premium users
     const createContentWithAds = () => {

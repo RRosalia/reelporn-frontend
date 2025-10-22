@@ -123,8 +123,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
           });
           setPreview(response);
           // Reset countdown timer when new preview loads
-          setPreviewTimeRemaining(300); // 5 minutes
-          setPreviewExpired(false);
+          setTimeout(() => {
+            setPreviewTimeRemaining(300); // 5 minutes
+            setPreviewExpired(false);
+          }, 0);
         } catch (err) {
           console.error('Error previewing checkout:', err);
           setError(err instanceof Error ? err.message : 'Failed to preview payment');
@@ -144,7 +146,9 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
     const timer = setInterval(() => {
       setPreviewTimeRemaining((prev) => {
         if (prev <= 1) {
-          setPreviewExpired(true);
+          setTimeout(() => {
+            setPreviewExpired(true);
+          }, 0);
           // Auto-refresh preview
           if (selectedCurrency) {
             const refreshPreview = async () => {
@@ -156,8 +160,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                   options: { currency: selectedCurrency },
                 });
                 setPreview(response);
-                setPreviewTimeRemaining(300);
-                setPreviewExpired(false);
+                setTimeout(() => {
+                  setPreviewTimeRemaining(300);
+                  setPreviewExpired(false);
+                }, 0);
               } catch (err) {
                 console.error('Error refreshing preview:', err);
               }

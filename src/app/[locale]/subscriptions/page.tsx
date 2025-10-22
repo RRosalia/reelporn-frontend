@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import { GroupedPlans, Plan, PeriodicityType } from '@/types/Payment';
 import './styles.css';

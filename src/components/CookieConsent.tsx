@@ -49,10 +49,14 @@ function CookieConsent() {
         if (typeof window !== 'undefined') {
             const consent = localStorage.getItem('cookieConsent');
             if (!consent) {
-                setShowBanner(true);
+                setTimeout(() => {
+                    setShowBanner(true);
+                }, 0);
             } else {
                 const savedPreferences = JSON.parse(consent);
-                setCookiePreferences(savedPreferences);
+                setTimeout(() => {
+                    setCookiePreferences(savedPreferences);
+                }, 0);
             }
         }
     }, []);

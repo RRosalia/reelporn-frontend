@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';

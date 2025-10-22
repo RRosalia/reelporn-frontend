@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import './ForcedAdvert.css';
 
 interface AdData {
@@ -28,8 +28,10 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
 
     useEffect(() => {
         if (isActive) {
-            setTimeRemaining(adData.duration || 15);
-            setCanSkip(false);
+            setTimeout(() => {
+                setTimeRemaining(adData.duration || 15);
+                setCanSkip(false);
+            }, 0);
 
             // Start countdown
             intervalRef.current = setInterval(() => {
@@ -83,7 +85,12 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
         'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
     ];
 
-    const randomBg = adBackgrounds[Math.floor(Math.random() * adBackgrounds.length)];
+    // Use useMemo to generate a stable random background
+    const randomBg = useMemo(() => {
+        // Use a deterministic value based on some prop or use index-based selection
+        const index = adData?.duration ? (adData.duration % adBackgrounds.length) : 0;
+        return adBackgrounds[index];
+    }, [adData?.duration, adBackgrounds]);
 
     return (
         <div className="forced-advert" style={{ background: randomBg }}>

@@ -27,8 +27,10 @@ function AgeVerification() {
     useEffect(() => {
         // Don't do anything on excluded pages (blocked, error, parental controls)
         if (isExcludedPage) {
-            setShowModal(false);
-            document.documentElement.classList.remove('age-verification-pending');
+            setTimeout(() => {
+                setShowModal(false);
+                document.documentElement.classList.remove('age-verification-pending');
+            }, 0);
             return;
         }
 
@@ -39,8 +41,10 @@ function AgeVerification() {
 
             if (isCrawler) {
                 // Skip age verification for crawlers
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
+                setTimeout(() => {
+                    setShowModal(false);
+                    document.documentElement.classList.remove('age-verification-pending');
+                }, 0);
                 return;
             }
 
@@ -51,21 +55,29 @@ function AgeVerification() {
                 if (blocked === 'true') {
                     // User previously clicked "under 18", redirect to blocked
                     router.push('/blocked');
-                    setShowModal(false);
-                    document.documentElement.classList.remove('age-verification-pending');
+                    setTimeout(() => {
+                        setShowModal(false);
+                        document.documentElement.classList.remove('age-verification-pending');
+                    }, 0);
                 } else if (verified === 'true') {
                     // Already verified
-                    setShowModal(false);
-                    document.documentElement.classList.remove('age-verification-pending');
+                    setTimeout(() => {
+                        setShowModal(false);
+                        document.documentElement.classList.remove('age-verification-pending');
+                    }, 0);
                 } else {
                     // Need to verify age - class already added by inline script
-                    setShowModal(true);
+                    setTimeout(() => {
+                        setShowModal(true);
+                    }, 0);
                 }
             } catch (e) {
                 // localStorage not available (e.g., disabled by user)
                 // Show modal but won't be able to remember choice
                 console.warn('localStorage not available:', e);
-                setShowModal(true);
+                setTimeout(() => {
+                    setShowModal(true);
+                }, 0);
             }
         }
     }, [isExcludedPage, router]);
