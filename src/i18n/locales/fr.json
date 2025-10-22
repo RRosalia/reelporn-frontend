@@ -187,7 +187,11 @@
   },
   "blocked": {
     "title": "Ce site est exclusivement réservé aux utilisateurs de 18 ans et plus.",
-    "message": "Nous prenons très au sérieux notre responsabilité d'empêcher les mineurs d'accéder à du contenu pour adultes. Si vous pensez avoir atteint cette page par erreur, veuillez fermer cette fenêtre et contacter notre équipe d'assistance."
+    "message": "Nous prenons très au sérieux notre responsabilité d'empêcher les mineurs d'accéder à du contenu pour adultes. Si vous pensez avoir atteint cette page par erreur, veuillez fermer cette fenêtre et contacter notre équipe d'assistance.",
+    "geo": {
+      "title": "Accès non disponible dans votre région",
+      "message": "Nous sommes désolés, mais notre service n'est pas disponible dans {country}. Cette restriction est due aux réglementations locales et aux exigences légales."
+    }
   },
   "parental": {
     "title": "Contrôle Parental",

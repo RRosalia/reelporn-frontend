@@ -304,7 +304,11 @@
   },
   "blocked": {
     "title": "This website is exclusively for users 18 years and older.",
-    "message": "We take our responsibility to prevent minors from accessing adult content very seriously. If you believe you have reached this page in error, please close this window and contact our support team."
+    "message": "We take our responsibility to prevent minors from accessing adult content very seriously. If you believe you have reached this page in error, please close this window and contact our support team.",
+    "geo": {
+      "title": "Access Not Available in Your Region",
+      "message": "We're sorry, but our service is not available in {country}. This restriction is in place due to local regulations and legal requirements."
+    }
   },
   "parental": {
     "title": "Parental Controls",

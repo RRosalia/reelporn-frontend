@@ -304,7 +304,11 @@
   },
   "blocked": {
     "title": "Questo sito web è esclusivamente per utenti di età superiore ai 18 anni.",
-    "message": "Prendiamo molto sul serio la nostra responsabilità di impedire ai minori di accedere a contenuti per adulti. Se pensi di essere arrivato a questa pagina per errore, chiudi questa finestra e contatta il nostro team di supporto."
+    "message": "Prendiamo molto sul serio la nostra responsabilità di impedire ai minori di accedere a contenuti per adulti. Se pensi di essere arrivato a questa pagina per errore, chiudi questa finestra e contatta il nostro team di supporto.",
+    "geo": {
+      "title": "Accesso non disponibile nella vostra regione",
+      "message": "Siamo spiacenti, ma il nostro servizio non è disponibile in {country}. Questa restrizione è dovuta alle normative locali e ai requisiti legali."
+    }
   },
   "parental": {
     "title": "Controlli parentali",
@@ -969,22 +973,42 @@
         "essential": {
           "title": "Cookie essenziali",
           "description": "Questi cookie sono necessari per il corretto funzionamento del sito web. Abilitano funzionalità di base come la navigazione delle pagine, l'accesso ad aree sicure e la verifica dell'età.",
-          "items": ["Gestione sessione", "Stato verifica età", "Token di sicurezza", "Bilanciamento del carico"]
+          "items": [
+            "Gestione sessione",
+            "Stato verifica età",
+            "Token di sicurezza",
+            "Bilanciamento del carico"
+          ]
         },
         "functional": {
           "title": "Cookie funzionali",
           "description": "Questi cookie abilitano funzionalità migliorate e personalizzazione. Possono essere impostati da noi o da fornitori terzi i cui servizi utilizziamo.",
-          "items": ["Preferenze linguistiche", "Impostazioni player video", "Contenuti visti di recente", "Personalizzazione UI"]
+          "items": [
+            "Preferenze linguistiche",
+            "Impostazioni player video",
+            "Contenuti visti di recente",
+            "Personalizzazione UI"
+          ]
         },
         "analyticsType": {
           "title": "Cookie analitici",
           "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il nostro sito web raccogliendo e segnalando informazioni in forma anonima.",
-          "items": ["Google Analytics", "Tracciamento visualizzazioni pagina", "Analisi comportamento utente", "Monitoraggio prestazioni"]
+          "items": [
+            "Google Analytics",
+            "Tracciamento visualizzazioni pagina",
+            "Analisi comportamento utente",
+            "Monitoraggio prestazioni"
+          ]
         },
         "advertising": {
           "title": "Cookie pubblicitari",
           "description": "Questi cookie vengono utilizzati per fornire annunci che sono pertinenti per te e i tuoi interessi. Aiutano anche a limitare il numero di volte che vedi un annuncio.",
-          "items": ["Pubblicità mirata", "Limitazione frequenza annunci", "Misurazione prestazioni campagne", "Pubblicità basata su interessi"]
+          "items": [
+            "Pubblicità mirata",
+            "Limitazione frequenza annunci",
+            "Misurazione prestazioni campagne",
+            "Pubblicità basata su interessi"
+          ]
         }
       },
       "thirdParty": {
@@ -1186,7 +1210,12 @@
     "total": "Totale",
     "month": "mese",
     "proceedToPayment": "Procedi al pagamento",
-    "processing": "Elaborazione...",
+    "processing": {
+      "title": "Transazione rilevata!",
+      "message": "Abbiamo ricevuto il tuo pagamento e viene elaborato sulla blockchain.",
+      "waiting": "In attesa di conferme",
+      "safeToClose": "Il tuo abbonamento verrà attivato automaticamente una volta raggiunte le conferme minime. Puoi chiudere questa pagina in sicurezza."
+    },
     "loading": "Caricamento...",
     "continue": "Continua",
     "sendExactly": "Invia esattamente",
@@ -1207,12 +1236,6 @@
     "awaitingPayment": "In attesa di pagamento",
     "processingPayment": "Elaborazione pagamento",
     "paymentCompleted": "Pagamento completato!",
-    "processing": {
-      "title": "Transazione rilevata!",
-      "message": "Abbiamo ricevuto il tuo pagamento e viene elaborato sulla blockchain.",
-      "waiting": "In attesa di conferme",
-      "safeToClose": "Il tuo abbonamento verrà attivato automaticamente una volta raggiunte le conferme minime. Puoi chiudere questa pagina in sicurezza."
-    },
     "completed": {
       "title": "Pagamento completato!",
       "message": "La tua transazione è stata confermata con successo e il tuo abbonamento è ora attivo.",
