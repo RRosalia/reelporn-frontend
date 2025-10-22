@@ -163,4 +163,5 @@ class PornstarsRepository {
   }
 }
 
-export default new PornstarsRepository();
+const pornstarsRepository = new PornstarsRepository();
+export default pornstarsRepository;

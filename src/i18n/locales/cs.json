@@ -294,7 +294,13 @@
     "cookies": "Zásady používání souborů cookie",
     "language": "Jazyk",
     "cookieSettings": "Nastavení souborů cookie",
-    "copyright": "Všechna práva vyhrazena"
+    "copyright": "Všechna práva vyhrazena",
+    "features": {
+      "hdQuality": "HD kvalita",
+      "downloads": "Stahování",
+      "noAds": "Bez reklam",
+      "exclusive": "Exkluzivní"
+    }
   },
   "age": {
     "title": "Toto jsou webové stránky pro dospělé (18+)",

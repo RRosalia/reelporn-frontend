@@ -10,9 +10,14 @@ function TopLoader() {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        // Start loading on route change
-        setIsLoading(true);
-        setProgress(0);
+        // Start loading on route change - defer state updates
+        const startLoading = () => {
+            setIsLoading(true);
+            setProgress(0);
+        };
+
+        // Defer the state update to avoid synchronous setState
+        const timeout = setTimeout(startLoading, 0);
 
         // Simulate progress
         const progressInterval = setInterval(() => {
@@ -37,6 +42,7 @@ function TopLoader() {
         }, 300);
 
         return () => {
+            clearTimeout(timeout);
             clearInterval(progressInterval);
             clearTimeout(timer);
         };

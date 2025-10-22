@@ -83,4 +83,5 @@ class BlogService {
   }
 }
 
-export default new BlogService();
+const blogService = new BlogService();
+export default blogService;

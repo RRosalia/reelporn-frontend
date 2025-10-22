@@ -25,4 +25,5 @@ class CrawlerRepository {
   }
 }
 
-export default new CrawlerRepository();
+const crawlerRepository = new CrawlerRepository();
+export default crawlerRepository;

@@ -28,20 +28,14 @@ function PornstarProfilePage() {
             try {
                 setLoading(true);
                 setError(null);
-                console.log('Fetching pornstar with slug:', slug);
                 const data = await PornstarsRepository.getBySlug(slug);
-                console.log('Pornstar data received:', data);
                 setPornstar(data);
             } catch (err: any) {
                 console.error('Error fetching pornstar:', err);
-                console.error('Error type:', err.constructor.name);
-                console.error('Is NotFoundException?', err instanceof NotFoundException);
 
                 if (err instanceof NotFoundException || err.name === 'NotFoundException') {
-                    console.log('Setting error to: Pornstar not found');
                     setError('Pornstar not found');
                 } else {
-                    console.log('Setting error to: Failed to load pornstar data');
                     setError('Failed to load pornstar data');
                 }
             } finally {

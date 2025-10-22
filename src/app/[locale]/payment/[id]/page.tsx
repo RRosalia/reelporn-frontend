@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import Echo from 'laravel-echo';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import { PaymentStatusPollResponse } from '@/types/Payment';
 
@@ -12,7 +11,6 @@ export default function PaymentStatusPage() {
   const params = useParams();
   const router = useRouter();
   const t = useTranslations('payment');
-  const locale = params.locale as string;
   const paymentId = params.id as string;
 
   const [paymentData, setPaymentData] = useState<PaymentStatusPollResponse | null>(null);
@@ -32,10 +30,6 @@ export default function PaymentStatusPage() {
   const fetchPaymentStatus = useCallback(async () => {
     try {
       const data = await CheckoutRepository.getPaymentStatus(paymentId);
-      console.log('Payment status response:', data);
-      if (data.crypto) {
-        console.log('Confirmations:', data.crypto.confirmations, '- Min:', data.crypto.min_confirmations, '- Required:', data.crypto.required_confirmations);
-      }
 
       setPaymentData(data);
       setError(null);
@@ -69,28 +63,16 @@ export default function PaymentStatusPage() {
     }
 
     const channelName = `payments.${paymentId}`;
-    console.log('[Echo] Attempting to subscribe to PRIVATE channel:', channelName);
-    console.log('[Echo] Echo instance available:', !!echoInstance);
-    console.log('[Echo] Connector state:', echoInstance.connector?.pusher?.connection?.state);
-
     const channel = echoInstance.private(channelName);
 
     // Log channel subscription events
-    channel.subscribed(() => {
-      console.log('[Echo] ✅ Successfully subscribed to channel:', channelName);
-    });
-
     channel.error((error: any) => {
-      console.error('[Echo] ❌ Channel subscription error:', error);
+      console.error('[Echo] Channel subscription error:', error);
     });
 
     // TODO: Add event listeners here when events are defined
 
-    console.log('[Echo] Channel object created:', channel);
-    console.log('[Echo] Active channels:', Object.keys(echoInstance.connector?.channels || {}));
-
     return () => {
-      console.log('[Echo] Unsubscribing from channel:', channelName);
       echoInstance.leaveChannel(channelName);
     };
   }, [paymentId, fetchPaymentStatus]);
@@ -176,10 +158,6 @@ export default function PaymentStatusPage() {
         subscription_id: paymentData.subscription?.id,
         timestamp: new Date().toISOString()
       });
-      console.log('GTM Ecommerce Purchase Event Tracked:', {
-        transaction_id: paymentId,
-        value: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0
-      });
     }
   }, [paymentData?.status, paymentId, paymentData]);
 
@@ -211,7 +189,6 @@ export default function PaymentStatusPage() {
         }
 
         window.dataLayer.push(eventData);
-        console.log('GTM Event Tracked:', eventData);
       }
 
       if (type === 'amount') {
@@ -268,7 +245,7 @@ export default function PaymentStatusPage() {
     }
   };
 
-  const handleWalletButtonClick = async (paymentUri: string, e: React.MouseEvent) => {
+  const handleWalletButtonClick = async (paymentUri: string, _e: React.MouseEvent) => {
     // Track GTM event for wallet button click
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
@@ -283,7 +260,6 @@ export default function PaymentStatusPage() {
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
       });
-      console.log('GTM Event Tracked: payment_wallet_open');
     }
 
     // Try to open the wallet app
@@ -292,7 +268,7 @@ export default function PaymentStatusPage() {
     // After a short delay, offer to copy the URI in case the app didn't open
     setTimeout(async () => {
       // Ask user if they want to copy the payment URI instead
-      const shouldCopy = await new Promise<boolean>((resolve) => {
+      await new Promise<boolean>((resolve) => {
         // Only show the copy option if we're still on the same page (app didn't open)
         const timeout = setTimeout(() => {
           resolve(false);
@@ -362,7 +338,7 @@ export default function PaymentStatusPage() {
     );
   }
 
-  const { status, crypto, payable, subscription } = paymentData;
+  const { status, crypto, payable } = paymentData;
 
   // Failed/Expired/Cancelled payment
   if (['failed', 'expired', 'cancelled'].includes(status)) {

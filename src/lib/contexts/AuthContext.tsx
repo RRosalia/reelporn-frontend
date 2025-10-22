@@ -3,19 +3,13 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { initializeEcho } from '@/lib/echo-config';
 import AuthService from '@/lib/services/AuthService';
-
-interface User {
-  id: number;
-  email: string;
-  name?: string;
-  [key: string]: any;
-}
+import type { User, LoginResponse } from '@/types/User';
 
 interface AuthContextType {
   isAuthenticated: boolean;
   user: User | null;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<any>;
+  login: (email: string, password: string) => Promise<LoginResponse>;
   logout: () => Promise<void>;
   updateUser: (userData: User) => void;
 }
@@ -60,7 +54,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const token = AuthService.getToken();
     if (token) {
       initializeEcho(token);
-      console.log('[Echo] Reconfigured after login');
     }
 
     return data;
@@ -73,7 +66,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // Reconfigure Echo without authentication
     initializeEcho();
-    console.log('[Echo] Reconfigured after logout');
   };
 
   const updateUser = (userData: User) => {

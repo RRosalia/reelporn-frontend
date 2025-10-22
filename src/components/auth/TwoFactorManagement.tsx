@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import TwoFactorService from '@/lib/services/TwoFactorService';
 
