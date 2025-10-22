@@ -3,12 +3,10 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { useMiniPlayer } from '@/lib/contexts/MiniPlayerContext';
 import VideoCard from '@/components/VideoCard';
 
 export default function HomePage() {
     const t = useTranslations();
-    const { openMiniPlayer } = useMiniPlayer();
     const [activeTab, setActiveTab] = useState('trending');
 
     // Mock data - replace with API call later
@@ -21,17 +19,6 @@ export default function HomePage() {
         views: `${((i * 13) % 100) + 1}K`,
         likes: `${((i * 11) % 50) + 1}K`,
         uploadedAt: `${((i * 5) % 24) + 1}h ago`
-    }));
-
-    const mockPornstars = Array.from({ length: 12 }, (_, i) => ({
-        id: i + 1,
-        name: `Star ${i + 1}`,
-        avatar: `https://images.unsplash.com/photo-${1600000000000 + (i * 987654321)}?w=200&h=200&fit=crop&auto=format`,
-        videos: ((i * 37) % 200) + 50,
-        views: `${((i * 3) % 10) + 1}M`,
-        verified: i % 3 !== 0,
-        isOnline: i % 2 === 0,
-        rating: (((i * 7) % 20) / 10 + 3).toFixed(1)
     }));
 
     const categories = [
@@ -355,28 +342,28 @@ export default function HomePage() {
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-badge-hd text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">HD Quality</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.hdQuality')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-download text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Downloads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.downloads')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-x-octagon text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">No Ads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.noAds')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-stars text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Exclusive</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.exclusive')}</h5>
                                 </div>
                             </div>
                         </div>

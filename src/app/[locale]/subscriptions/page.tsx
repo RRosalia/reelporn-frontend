@@ -3,14 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import { GroupedPlans, Plan, PeriodicityType } from '@/types/Payment';
 import './styles.css';
 
 function SubscriptionsPage() {const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const router = useRouter();
     const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
     const [groupedPlans, setGroupedPlans] = useState<GroupedPlans[]>([]);
@@ -296,7 +293,6 @@ function SubscriptionsPage() {const t = useTranslations();
                                     <tr>
                                         <th>{t('subscriptions.comparison.feature')}</th>
                                         {groupedPlans.map((group) => {
-                                            const plan = getPlanForBillingCycle(group);
                                             return (
                                                 <th key={group.group}>
                                                     <span className="plan-header-cell">

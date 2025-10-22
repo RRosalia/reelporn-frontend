@@ -294,7 +294,13 @@
     "cookies": "Policy för cookies",
     "language": "Språk",
     "cookieSettings": "Inställningar för cookies",
-    "copyright": "Alla rättigheter förbehålls"
+    "copyright": "Alla rättigheter förbehålls",
+    "features": {
+      "hdQuality": "HD-kvalitet",
+      "downloads": "Nedladdningar",
+      "noAds": "Ingen reklam",
+      "exclusive": "Exklusivt"
+    }
   },
   "age": {
     "title": "Detta är en webbplats för vuxna (18+)",

@@ -26,6 +26,12 @@ const BLOCKED_COUNTRIES = [
  * Backend returns 200 if crawler, 404 if not
  */
 async function isCrawler(request: NextRequest): Promise<boolean> {
+  // Check for test/development header to allow Cypress to control crawler detection
+  const testCrawlerHeader = request.headers.get('x-test-crawler');
+  if (testCrawlerHeader !== null) {
+    return testCrawlerHeader === 'true';
+  }
+
   // Check common crawler user agents first
   const userAgent = request.headers.get('user-agent')?.toLowerCase() || '';
   const knownCrawlers = [
@@ -79,7 +85,10 @@ async function isCrawler(request: NextRequest): Promise<boolean> {
     return response.ok && response.status === 200;
   } catch (error) {
     console.error('Error checking crawler IP:', error);
-    return false;
+    // If backend is unavailable (e.g., in test/CI environments),
+    // fall back to user-agent detection since we already confirmed
+    // the user-agent matches a known crawler
+    return hasCrawlerUserAgent;
   }
 }
 

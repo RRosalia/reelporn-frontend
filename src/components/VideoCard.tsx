@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface Video {
     id: string | number;
@@ -54,10 +55,11 @@ function VideoCard({ video }: VideoCardProps) {
                         hsl(${(Number(video.id) * 37 + 60) % 360}, 70%, 20%) 100%)`
                 }}>
                     {!imageError && (
-                        <img
+                        <Image
                             src={video.thumbnail}
                             alt={video.title}
-                            className="object-cover absolute top-0 left-0 w-full h-full"
+                            fill
+                            className="object-cover"
                             loading="lazy"
                             onError={handleImageError}
                             style={{ opacity: imageError ? 0 : 1 }}

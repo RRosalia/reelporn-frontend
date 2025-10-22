@@ -65,4 +65,5 @@ class TwoFactorService {
   }
 }
 
-export default new TwoFactorService();
+const twoFactorService = new TwoFactorService();
+export default twoFactorService;

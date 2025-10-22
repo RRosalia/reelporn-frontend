@@ -173,7 +173,13 @@
     "cookies": "Politique de cookies",
     "language": "Langue",
     "cookieSettings": "Paramètres des cookies",
-    "copyright": "Tous droits réservés"
+    "copyright": "Tous droits réservés",
+    "features": {
+      "hdQuality": "Qualité HD",
+      "downloads": "Téléchargements",
+      "noAds": "Sans publicité",
+      "exclusive": "Exclusif"
+    }
   },
   "age": {
     "title": "Ceci est un site pour adultes (18+)",

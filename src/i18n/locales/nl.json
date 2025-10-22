@@ -290,7 +290,13 @@
     "cookies": "Cookiebeleid",
     "language": "Taal",
     "cookieSettings": "Cookie-instellingen",
-    "copyright": "Alle rechten voorbehouden"
+    "copyright": "Alle rechten voorbehouden",
+    "features": {
+      "hdQuality": "HD-kwaliteit",
+      "downloads": "Downloads",
+      "noAds": "Geen advertenties",
+      "exclusive": "Exclusief"
+    }
   },
   "age": {
     "title": "Dit is een volwassen (18+) website",

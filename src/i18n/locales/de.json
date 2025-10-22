@@ -290,7 +290,13 @@
     "cookies": "Cookie-Richtlinie",
     "language": "Sprache",
     "cookieSettings": "Cookie-Einstellungen",
-    "copyright": "Alle Rechte vorbehalten"
+    "copyright": "Alle Rechte vorbehalten",
+    "features": {
+      "hdQuality": "HD-Qualität",
+      "downloads": "Downloads",
+      "noAds": "Keine Werbung",
+      "exclusive": "Exklusiv"
+    }
   },
   "age": {
     "title": "Dies ist eine Erwachsenen (18+) Website",
