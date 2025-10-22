@@ -11,7 +11,6 @@ export default function SubscriptionCheckoutPage() {
   const t = useTranslations();
   const params = useParams();
   const router = useRouter();
-  const locale = (params?.locale as string) || 'en';
   const planId = parseInt(params?.id as string, 10);
 
   const [plan, setPlan] = useState<Plan | null>(null);
@@ -54,20 +53,18 @@ export default function SubscriptionCheckoutPage() {
     }
   }, [planId]);
 
-  const handleSuccess = (subscription?: any) => {
+  const handleSuccess = () => {
     // Redirect to account subscriptions page or show success message
-    const path = locale === 'en' ? '/account' : `/${locale}/account`;
-    router.push(path);
+    router.push('/account');
   };
 
   const handleCancel = () => {
     // Go back to subscriptions page
-    const path = locale === 'en' ? '/subscriptions' : `/${locale}/subscriptions`;
-    router.push(path);
+    router.push('/subscriptions');
   };
 
   const getLocalizedPath = (path: string) => {
-    return locale === 'en' ? path : `/${locale}${path}`;
+    return path;
   };
 
   const getPlanForDisplay = (group: GroupedPlans): Plan | undefined => {

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
 import PornstarsFilter from '@/components/pornstars/PornstarsFilter';
 import { Pornstar, PornstarFilters } from '@/types/Pornstar';
@@ -12,8 +11,6 @@ import './styles.css';
 
 function PornstarsPage() {
     const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
 
     const [viewMode, setViewMode] = useState('grid'); // grid or list
     const [filters, setFilters] = useState<PornstarFilters>({ per_page: 24, page: 1 });

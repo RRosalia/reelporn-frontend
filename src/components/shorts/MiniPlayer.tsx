@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useRouter } from '@/i18n/routing';
-import { useParams } from 'next/navigation';
 import './MiniPlayer.css';
 
 interface Short {
@@ -22,8 +21,6 @@ interface MiniPlayerProps {
 
 function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPlayerProps) {
     const router = useRouter();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const videoRef = useRef<HTMLVideoElement>(null);
     const playerRef = useRef<HTMLDivElement>(null);
     const [isPlaying, setIsPlaying] = useState(true);

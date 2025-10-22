@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import {
@@ -24,7 +24,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   payableType,
   payableId,
   onSuccess,
-  onCancel,
+  onCancel: _onCancel,
 }) => {
   const t = useTranslations();
 
@@ -34,7 +34,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod | null>(null); // Selected native crypto
   const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null); // Code to use (native or token)
   const [preview, setPreview] = useState<CheckoutPreviewResponse | null>(null);
-  const [confirmedPayment, setConfirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
+  const [confirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatusPollResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [loadingPreview, setLoadingPreview] = useState(false);

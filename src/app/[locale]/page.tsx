@@ -3,12 +3,10 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { useMiniPlayer } from '@/lib/contexts/MiniPlayerContext';
 import VideoCard from '@/components/VideoCard';
 
 export default function HomePage() {
     const t = useTranslations();
-    const { openMiniPlayer } = useMiniPlayer();
     const [activeTab, setActiveTab] = useState('trending');
 
     // Mock data - replace with API call later
@@ -21,17 +19,6 @@ export default function HomePage() {
         views: `${((i * 13) % 100) + 1}K`,
         likes: `${((i * 11) % 50) + 1}K`,
         uploadedAt: `${((i * 5) % 24) + 1}h ago`
-    }));
-
-    const mockPornstars = Array.from({ length: 12 }, (_, i) => ({
-        id: i + 1,
-        name: `Star ${i + 1}`,
-        avatar: `https://images.unsplash.com/photo-${1600000000000 + (i * 987654321)}?w=200&h=200&fit=crop&auto=format`,
-        videos: ((i * 37) % 200) + 50,
-        views: `${((i * 3) % 10) + 1}M`,
-        verified: i % 3 !== 0,
-        isOnline: i % 2 === 0,
-        rating: (((i * 7) % 20) / 10 + 3).toFixed(1)
     }));
 
     const categories = [

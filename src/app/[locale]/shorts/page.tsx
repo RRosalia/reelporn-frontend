@@ -1,15 +1,11 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { useParams, useSearchParams, useRouter, usePathname } from 'next/navigation';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import ShortsPlayer from '@/components/shorts/ShortsPlayer';
 import ForcedAdvert from '@/components/promotions/ForcedAdvert';
 
 function ShortsPage() {
-    const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const searchParams = useSearchParams();
     const router = useRouter();
     const pathname = usePathname();

@@ -3,12 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import './styles.css';
 
 function CategoriesPage() {const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const [viewMode, setViewMode] = useState('grid'); // grid or list
     const [sortBy, setSortBy] = useState('popular');
     const [isPremium, setIsPremium] = useState(false); // Simulate premium status
@@ -37,10 +34,6 @@ function CategoriesPage() {const t = useTranslations();
         { id: 20, name: 'Vintage', slug: 'vintage', videos: 2345, icon: '📼', color: '#6d4c41', description: 'Classic content' }
     ];
 
-    const getLocalizedPath = (path: string) => {
-        return locale === 'en' ? path : `/${locale}${path}`;
-    };
-
     // Sort categories
     const sortedCategories = [...categories].sort((a, b) => {
         switch (sortBy) {
@@ -56,7 +49,7 @@ function CategoriesPage() {const t = useTranslations();
     });
 
     // Ad banner component that gracefully disappears for premium users
-    const AdBanner = ({ position, style = {} }: { position: string; style?: React.CSSProperties }) => {
+    const AdBanner = ({ position: _position, style = {} }: { position: string; style?: React.CSSProperties }) => {
         const [adIndex, setAdIndex] = useState(0);
 
         useEffect(() => {

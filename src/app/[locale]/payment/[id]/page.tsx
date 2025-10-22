@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import Echo from 'laravel-echo';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import { PaymentStatusPollResponse } from '@/types/Payment';
 
@@ -12,7 +11,6 @@ export default function PaymentStatusPage() {
   const params = useParams();
   const router = useRouter();
   const t = useTranslations('payment');
-  const locale = params.locale as string;
   const paymentId = params.id as string;
 
   const [paymentData, setPaymentData] = useState<PaymentStatusPollResponse | null>(null);
@@ -268,7 +266,7 @@ export default function PaymentStatusPage() {
     }
   };
 
-  const handleWalletButtonClick = async (paymentUri: string, e: React.MouseEvent) => {
+  const handleWalletButtonClick = async (paymentUri: string, _e: React.MouseEvent) => {
     // Track GTM event for wallet button click
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
@@ -292,7 +290,7 @@ export default function PaymentStatusPage() {
     // After a short delay, offer to copy the URI in case the app didn't open
     setTimeout(async () => {
       // Ask user if they want to copy the payment URI instead
-      const shouldCopy = await new Promise<boolean>((resolve) => {
+      await new Promise<boolean>((resolve) => {
         // Only show the copy option if we're still on the same page (app didn't open)
         const timeout = setTimeout(() => {
           resolve(false);
@@ -362,7 +360,7 @@ export default function PaymentStatusPage() {
     );
   }
 
-  const { status, crypto, payable, subscription } = paymentData;
+  const { status, crypto, payable } = paymentData;
 
   // Failed/Expired/Cancelled payment
   if (['failed', 'expired', 'cancelled'].includes(status)) {

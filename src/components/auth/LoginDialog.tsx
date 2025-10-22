@@ -6,10 +6,9 @@ import { useTranslations } from 'next-intl';
 interface LoginDialogProps {
     isOpen: boolean;
     onClose: () => void;
-    onSwitchToRegister?: () => void;
 }
 
-function LoginDialog({ isOpen, onClose, onSwitchToRegister }: LoginDialogProps) {
+function LoginDialog({ isOpen, onClose }: LoginDialogProps) {
     const t = useTranslations();
 
     if (!isOpen) return null;

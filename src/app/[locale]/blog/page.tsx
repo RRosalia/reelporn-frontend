@@ -3,14 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams, useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import BlogService from '@/lib/services/BlogService';
 import { BlogPost } from '@/lib/repositories/BlogRepository';
 
 function BlogPage() {
     const t = useTranslations();
     const params = useParams();
-    const searchParams = useSearchParams();
     const locale = (params?.locale as string) || 'en';
 
     const [posts, setPosts] = useState<BlogPost[]>([]);

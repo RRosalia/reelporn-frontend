@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import CategoryService from '@/lib/services/CategoryService';
@@ -26,9 +25,7 @@ interface Video {
 }
 
 function CategoryDetailPage() {
-    const t = useTranslations();
     const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const slug = params?.slug as string;
     const [category, setCategory] = useState<Category | null>(null);
     const [videos, setVideos] = useState<Video[]>([]);

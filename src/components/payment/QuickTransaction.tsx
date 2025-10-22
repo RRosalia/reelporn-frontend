@@ -116,9 +116,9 @@ export default function QuickTransaction({
       setQrCode(response.qrCode);
       setCryptoAmount(response.amountCrypto);
       setExpiresAt(response.expiresAt);
-    } catch (err: any) {
-      setError(err.message || 'Failed to initiate payment');
-      config.onError?.(err.message);
+    } catch {
+      setError('Failed to initiate payment');
+      config.onError?.('Failed to initiate payment');
     } finally {
       setLoading(false);
     }

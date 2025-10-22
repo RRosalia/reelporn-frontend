@@ -22,14 +22,12 @@ interface ForcedAdvertProps {
 function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProps) {
     const [timeRemaining, setTimeRemaining] = useState(adData.duration || 15);
     const [canSkip, setCanSkip] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const skipAfter = adData.skipAfter || 5;
 
     useEffect(() => {
         if (isActive) {
-            setIsPlaying(true);
             setTimeRemaining(adData.duration || 15);
             setCanSkip(false);
 
@@ -55,7 +53,6 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
                 });
             }, 1000);
         } else {
-            setIsPlaying(false);
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
             }
