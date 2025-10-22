@@ -7,7 +7,7 @@ import Pusher from 'pusher-js';
 declare global {
   interface Window {
     Pusher: typeof Pusher;
-    Echo: Echo<unknown>;
+    Echo: Echo<any>;
   }
 }
 
@@ -86,7 +86,7 @@ export function initializeEcho(authToken?: string | null) {
   }
 
   // Create Echo instance and attach to window
-  const echoInstance = new Echo<unknown>(echoConfig);
+  const echoInstance = new Echo<any>(echoConfig);
   window.Echo = echoInstance;
 
   echoConfigured = true;

@@ -64,7 +64,7 @@ function Header() {
         try {
             await logout();
             setShowProfileMenu(false);
-            router.push('/login?message=logoutSuccess')!;
+            router.push('/login');
         } catch (error) {
             console.error('Logout failed:', error);
         }
