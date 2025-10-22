@@ -304,7 +304,11 @@
   },
   "blocked": {
     "title": "Este sitio web es exclusivamente para usuarios mayores de 18 años.",
-    "message": "Nos tomamos muy en serio nuestra responsabilidad de evitar que los menores accedan al contenido para adultos. Si crees que has llegado a esta página por error, cierra esta ventana y contacta a nuestro equipo de soporte."
+    "message": "Nos tomamos muy en serio nuestra responsabilidad de evitar que los menores accedan al contenido para adultos. Si crees que has llegado a esta página por error, cierra esta ventana y contacta a nuestro equipo de soporte.",
+    "geo": {
+      "title": "Přístup není ve vašem regionu k dispozici",
+      "message": "Je nám líto, ale naše služba není v {krajině} dostupná. Toto omezení platí z důvodu místních předpisů a zákonných požadavků."
+    }
   },
   "parental": {
     "title": "Controles parentales",
@@ -969,22 +973,42 @@
         "essential": {
           "title": "Cookies esenciales",
           "description": "Estas cookies son necesarias para que el sitio web funcione correctamente. Habilitan funciones básicas como navegación de páginas, acceso a áreas seguras y verificación de edad.",
-          "items": ["Gestión de sesión", "Estado de verificación de edad", "Tokens de seguridad", "Equilibrio de carga"]
+          "items": [
+            "Gestión de sesión",
+            "Estado de verificación de edad",
+            "Tokens de seguridad",
+            "Equilibrio de carga"
+          ]
         },
         "functional": {
           "title": "Cookies funcionales",
           "description": "Estas cookies permiten funcionalidades mejoradas y personalización. Pueden ser establecidas por nosotros o por proveedores externos cuyos servicios usamos.",
-          "items": ["Preferencias de idioma", "Configuración del reproductor de video", "Contenido visto recientemente", "Personalización de la interfaz de usuario"]
+          "items": [
+            "Preferencias de idioma",
+            "Configuración del reproductor de video",
+            "Contenido visto recientemente",
+            "Personalización de la interfaz de usuario"
+          ]
         },
         "analyticsType": {
           "title": "Cookies analíticas",
           "description": "Estas cookies nos ayudan a comprender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima.",
-          "items": ["Google Analytics", "Seguimiento de vistas de página", "Análisis de comportamiento del usuario", "Monitoreo de rendimiento"]
+          "items": [
+            "Google Analytics",
+            "Seguimiento de vistas de página",
+            "Análisis de comportamiento del usuario",
+            "Monitoreo de rendimiento"
+          ]
         },
         "advertising": {
           "title": "Cookies publicitarias",
           "description": "Estas cookies se utilizan para entregar anuncios que sean relevantes para ti y tus intereses. También ayudan a limitar la cantidad de veces que ves un anuncio.",
-          "items": ["Publicidad dirigida", "Limitación de frecuencia de anuncios", "Medición de rendimiento de campañas", "Publicidad basada en intereses"]
+          "items": [
+            "Publicidad dirigida",
+            "Limitación de frecuencia de anuncios",
+            "Medición de rendimiento de campañas",
+            "Publicidad basada en intereses"
+          ]
         }
       },
       "thirdParty": {
@@ -1186,7 +1210,12 @@
     "total": "Total",
     "month": "mes",
     "proceedToPayment": "Proceder al pago",
-    "processing": "Procesando...",
+    "processing": {
+      "title": "¡Transacción detectada!",
+      "message": "Hemos recibido tu pago y se está procesando en la blockchain.",
+      "waiting": "Esperando confirmaciones",
+      "safeToClose": "Tu suscripción se activará automáticamente una vez que se alcancen las confirmaciones mínimas. Puedes cerrar esta página de forma segura."
+    },
     "loading": "Cargando...",
     "continue": "Continuar",
     "sendExactly": "Enviar exactamente",
@@ -1207,12 +1236,6 @@
     "awaitingPayment": "Esperando pago",
     "processingPayment": "Procesando pago",
     "paymentCompleted": "¡Pago completado!",
-    "processing": {
-      "title": "¡Transacción detectada!",
-      "message": "Hemos recibido tu pago y se está procesando en la blockchain.",
-      "waiting": "Esperando confirmaciones",
-      "safeToClose": "Tu suscripción se activará automáticamente una vez que se alcancen las confirmaciones mínimas. Puedes cerrar esta página de forma segura."
-    },
     "completed": {
       "title": "¡Pago completado!",
       "message": "Tu transacción se ha confirmado exitosamente y tu suscripción está ahora activa.",
