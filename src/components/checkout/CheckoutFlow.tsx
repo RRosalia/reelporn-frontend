@@ -187,8 +187,8 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
         options: { currency: selectedCurrency },
       });
 
-      // Extract payment_id from response
-      const paymentId = response.payment.id;
+      // Extract payment_id from response (backend returns data.payment_id)
+      const paymentId = response.data.payment_id;
       if (paymentId) {
         // Use window.location.href to navigate to payment page
         // The router will automatically handle localization

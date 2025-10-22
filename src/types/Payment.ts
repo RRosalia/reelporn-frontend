@@ -313,9 +313,12 @@ export interface PaymentInstructions {
  * Response from POST /checkout/confirm
  */
 export interface CheckoutConfirmResponse {
-  payment: CheckoutPayment;
-  crypto_details: ConfirmedCryptoDetails;
-  instructions: PaymentInstructions;
+  data: {
+    payment_id: number;
+  };
+  payment?: CheckoutPayment;
+  crypto_details?: ConfirmedCryptoDetails;
+  instructions?: PaymentInstructions;
 }
 
 /**
