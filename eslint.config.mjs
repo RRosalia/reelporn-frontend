@@ -41,7 +41,12 @@ const eslintConfig = [
       "**/__tests__/**",
       "**/*.cy.*",
       "**/test/**",
-      "**/tests/**"
+      "**/tests/**",
+      // Scripts folder (Node.js scripts)
+      "scripts/**",
+      "**/scripts/**",
+      // Temporary files
+      "**/translate_locales_temp.js"
     ]
   },
   {
