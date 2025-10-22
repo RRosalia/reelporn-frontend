@@ -80,11 +80,12 @@ Cypress.Commands.add('checkPageHidden', () => {
 
 // Mock the crawler verification API
 Cypress.Commands.add('mockCrawlerAPI', (isCrawler: boolean) => {
-  const apiUrl = Cypress.env('NEXT_PUBLIC_API_URL') || 'http://localhost:9000';
-  cy.intercept('GET', `${apiUrl}/crawlers/*/check`, {
-    statusCode: isCrawler ? 200 : 403,
-    body: isCrawler ? { crawler: true } : { crawler: false }
-  }).as('crawlerCheck');
+  // Set test header to control crawler detection in middleware
+  // This works because middleware checks x-test-crawler header before calling backend
+  cy.intercept('**/*', (req) => {
+    req.headers['x-test-crawler'] = isCrawler ? 'true' : 'false';
+    req.continue();
+  }).as('testCrawlerHeader');
 });
 
 export {};

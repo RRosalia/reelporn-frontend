@@ -26,6 +26,12 @@ const BLOCKED_COUNTRIES = [
  * Backend returns 200 if crawler, 404 if not
  */
 async function isCrawler(request: NextRequest): Promise<boolean> {
+  // Check for test/development header to allow Cypress to control crawler detection
+  const testCrawlerHeader = request.headers.get('x-test-crawler');
+  if (testCrawlerHeader !== null) {
+    return testCrawlerHeader === 'true';
+  }
+
   // Check common crawler user agents first
   const userAgent = request.headers.get('user-agent')?.toLowerCase() || '';
   const knownCrawlers = [
