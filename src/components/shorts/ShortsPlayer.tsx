@@ -34,14 +34,18 @@ function ShortsPlayer({ short, isActive, onNext, onPrevious: _onPrevious }: Shor
         if (!videoRef.current) return;
 
         if (isActive) {
-            videoRef.current.play().catch(() => {
+            videoRef.current.play().catch((_e) => {
                 // Autoplay prevented - ignore silently
             });
-            setIsPlaying(true);
+            setTimeout(() => {
+                setIsPlaying(true);
+            }, 0);
         } else {
             videoRef.current.pause();
-            setIsPlaying(false);
-            setProgress(0);
+            setTimeout(() => {
+                setIsPlaying(false);
+                setProgress(0);
+            }, 0);
         }
     }, [isActive]);
 
@@ -57,7 +61,9 @@ function ShortsPlayer({ short, isActive, onNext, onPrevious: _onPrevious }: Shor
         };
 
         video.addEventListener('timeupdate', updateProgress);
-        return () => video.removeEventListener('timeupdate', updateProgress);
+        return () => {
+            video.removeEventListener('timeupdate', updateProgress);
+        };
     }, []);
 
     const togglePlayPause = () => {

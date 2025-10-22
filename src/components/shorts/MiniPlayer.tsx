@@ -27,21 +27,18 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
     const [isMuted, setIsMuted] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
     const [isResizing, setIsResizing] = useState(false);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState(() => {
+        // Calculate initial position on the client side
+        if (typeof window !== 'undefined') {
+            return { x: window.innerWidth - 420, y: window.innerHeight - 350 };
+        }
+        return { x: 0, y: 0 };
+    });
     const [size, setSize] = useState({ width: 400, height: 300 });
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
     const [resizeStart, setResizeStart] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
     const currentShort = queue[currentIndex];
-
-    // Set initial position on mount
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setTimeout(() => {
-                setPosition({ x: window.innerWidth - 420, y: window.innerHeight - 350 });
-            }, 0);
-        }
-    }, []);
 
     // Auto-play video
     useEffect(() => {
