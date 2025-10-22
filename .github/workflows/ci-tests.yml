@@ -2,11 +2,21 @@ name: CI Tests
 
 on:
   pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+    # Run on all PRs to any branch
+    paths:
+      - 'src/**'
+      - 'cypress/**'
+      - 'package.json'
+      - 'bun.lockb'
+      - 'tsconfig.json'
+      - 'next.config.ts'
+      - 'next.config.js'
+      - '.eslintrc*'
+      - 'eslint.config.*'
+      - 'tailwind.config.ts'
+      - 'postcss.config.js'
+      - 'i18n/**'
+      - '.github/workflows/ci-tests.yml'
 
 permissions:
   contents: read
