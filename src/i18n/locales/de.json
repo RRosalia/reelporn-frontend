@@ -1,4 +1,5 @@
 {
+  "dateFormat": "d.m.Y",
   "header": {
     "home": "Startseite",
     "categories": "Kategorien",
@@ -375,9 +376,9 @@
     }
   },
   "pornstars": {
-    "title": "Pornostars",
+    "title": "Charaktere",
     "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
-    "noResults": "Keine Pornostars gefunden, die Ihren Filtern entsprechen",
+    "noResults": "Keine Charaktere gefunden, die Ihren Filtern entsprechen",
     "sort": {
       "popular": "Beliebteste",
       "newest": "Neueste",
@@ -385,7 +386,7 @@
       "mostViewed": "Am meisten angesehen"
     },
     "pagination": {
-      "showing": "Zeige {start}-{end} von {total} Pornostars"
+      "showing": "Zeige {start}-{end} von {total} Charaktere"
     },
     "filters": {
       "title": "Filter",
@@ -405,7 +406,7 @@
       "allEthnicities": "Alle Ethnizitäten"
     },
     "errors": {
-      "fetchFailed": "Pornostars konnten nicht geladen werden. Bitte versuchen Sie es erneut."
+      "fetchFailed": "Charaktere konnten nicht geladen werden. Bitte versuchen Sie es erneut."
     }
   },
   "pornstar": {
@@ -627,7 +628,7 @@
       "contact": {
         "title": "Kontaktinformationen",
         "intro": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte unter:",
-        "email": "legal@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -690,7 +691,7 @@
         "item4": "Portabilität: Erhalt Ihrer Daten in einem tragbaren Format",
         "item5": "Widerspruch: Widerspruch gegen bestimmte Verarbeitung Ihrer Informationen",
         "item6": "Einschränkung: Anforderung eingeschränkter Verarbeitung Ihrer Informationen",
-        "outro": "Um diese Rechte auszuüben, kontaktieren Sie uns unter privacy@reelporn.ai"
+        "outro": "Um diese Rechte auszuüben, kontaktieren Sie uns unter support@reelporn.ai"
       },
       "cookies": {
         "title": "Cookies und Tracking",
@@ -743,10 +744,10 @@
       "contact": {
         "title": "Kontaktinformationen",
         "intro": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder unseren Datenschutzpraktiken haben, kontaktieren Sie uns bitte:",
-        "email": "privacy@reelporn.ai",
+        "email": "support@reelporn.ai",
         "dpoTitle": "Datenschutzbeauftragter",
         "dpo": "ReelPorn Rechtsabteilung",
-        "dpoEmail": "dpo@reelporn.ai"
+        "dpoEmail": "support@reelporn.ai"
       }
     }
   },
@@ -791,60 +792,6 @@
       "notice": {
         "title": "Wichtiger Hinweis",
         "content": "Bitte beachten: Gemäß Section 512(f) des DMCA kann jede Person, die wissentlich falsch darstellt, dass Material oder eine Aktivität rechtsverletzend ist, für Schäden haftbar gemacht werden, einschließlich Kosten und Anwaltsgebühren. Bitte konsultieren Sie Ihren Rechtsberater, bevor Sie eine Mitteilung oder Gegenmitteilung einreichen."
-      },
-      "lastUpdated": "Zuletzt Aktualisiert"
-    }
-  },
-  "section2257": {
-    "title": "18 U.S.C. 2257 Konformitätserklärung",
-    "subtitle": "Erklärung zur Einhaltung der Aufzeichnungsanforderungen",
-    "sections": {
-      "compliance": {
-        "title": "Konformitätserklärung",
-        "content1": "Alle auf dieser Website angezeigten visuellen Darstellungen, ob von tatsächlich sexuell explizitem Verhalten, simuliertem sexuellem Inhalt oder anderweitig, sind visuelle Darstellungen von Personen, die zum Zeitpunkt der Erstellung dieser visuellen Darstellungen mindestens 18 Jahre alt waren.",
-        "content2": "Alle anderen auf dieser Website angezeigten visuellen Darstellungen sind von den Bestimmungen von 18 U.S.C. Abschnitt 2257 und 28 C.F.R. 75 ausgenommen, da diese visuellen Darstellungen nicht aus Darstellungen von Verhalten bestehen, wie es in 18 U.S.C. Abschnitt 2256 (2) (A) bis (D) spezifisch aufgeführt ist, sondern lediglich Darstellungen von nicht sexuell expliziter Nacktheit sind oder Darstellungen von simuliertem sexuellem Verhalten sind oder anderweitig ausgenommen sind, weil die visuellen Darstellungen vor dem 3. Juli 1995 erstellt wurden."
-      },
-      "custodian": {
-        "title": "Aufbewahrer der Aufzeichnungen",
-        "intro": "Die Eigentümer und Betreiber von ReelPorn.ai verpflichten sich zur Einhaltung des US-Bundesgesetzes 18 U.S.C. 2257 und aller damit verbundenen Vorschriften.",
-        "custodianTitle": "Der Aufbewahrer der Aufzeichnungen für ReelPorn.ai ist:",
-        "name": "ReelPorn Rechtskonformität",
-        "role": "Aufbewahrer der Aufzeichnungen",
-        "department": "Compliance-Abteilung"
-      },
-      "producers": {
-        "title": "Inhaltsproduzenten",
-        "intro": "In Bezug auf alle auf dieser Website angezeigten visuellen Darstellungen, ob von tatsächlich sexuell explizitem Verhalten, simuliertem sexuellem Inhalt oder anderweitig, wurden alle Inhalte von Drittanbietern, Webmastern oder Benutzern der Website bereitgestellt, die garantiert haben, dass:",
-        "item1": "Sie der Aufbewahrer der Aufzeichnungen für alle bereitgestellten Inhalte sind",
-        "item2": "Alle Models, Schauspieler, Schauspielerinnen und andere Personen, die in visuellen Darstellungen erscheinen, zum Zeitpunkt der Erstellung dieser Darstellungen über 18 Jahre alt waren",
-        "item3": "Sie Aufzeichnungen gemäß US-Gesetz 18 U.S.C. 2257 führen",
-        "item4": "Alle dargestellten Inhalte und Aktivitäten einvernehmlich sind"
-      },
-      "original": {
-        "title": "Originalproduzenten",
-        "intro1": "Die Originalproduzenten der auf dieser Website enthaltenen visuellen Inhalte sind verschiedene Drittanbieter. Jeder Produzent führt Aufzeichnungen in Übereinstimmung mit den in 18 U.S.C. 2257 und seinen Vorschriften festgelegten Anforderungen.",
-        "intro2": "Für Aufzeichnungen zu spezifischen Inhalten dienen die folgenden Einheiten als Aufbewahrer der Aufzeichnungen für ihre jeweiligen Produktionen:",
-        "item1": "Von Benutzern hochgeladene Inhalte: Einzelne Uploader sind für die Führung ihrer eigenen 2257-Aufzeichnungen verantwortlich",
-        "item2": "Lizenzierte Inhalte: Der Originalproduzent führt die Aufzeichnungen",
-        "item3": "Partnerinhalte: Partnerstudios führen ihre jeweiligen Aufzeichnungen"
-      },
-      "exemptions": {
-        "title": "Ausnahmen",
-        "intro": "Einige auf dieser Website angezeigte Inhalte sind von den Aufzeichnungsanforderungen von 18 U.S.C. 2257 ausgenommen, einschließlich:",
-        "item1": "Visuelle Darstellungen nur von nicht sexuell expliziter Nacktheit",
-        "item2": "Visuelle Darstellungen, die vor dem 3. Juli 1995 erstellt wurden",
-        "item3": "Visuelle Darstellungen, die kein Verhalten darstellen, wie in 18 U.S.C. 2256(2)(A) beschrieben",
-        "item4": "Inhalte, die nur simuliertes sexuelles Verhalten enthalten, bei dem kein tatsächliches sexuelles Verhalten stattfand"
-      },
-      "legal": {
-        "title": "Rechtliche Informationen",
-        "content1": "Wichtig: ReelPorn.ai fungiert als Plattform und produziert keine Originalinhalte. Alle Inhalte werden von Drittanbietern bereitgestellt, die ihre Einhaltung aller geltenden Gesetze, einschließlich 18 U.S.C. 2257, vertreten und garantiert haben.",
-        "content2": "Jede Person, die Inhalte auf ReelPorn.ai hochlädt, einreicht oder anderweitig bereitstellt, versichert und garantiert, dass sie die Aufzeichnungsanforderungen von 18 U.S.C. 2257 in Bezug auf solche Inhalte erfüllt hat."
-      },
-      "contact": {
-        "title": "Kontaktinformationen",
-        "intro": "Für Anfragen bezüglich 2257-Konformität oder zur Anforderung des Zugriffs auf Aufzeichnungen kontaktieren Sie bitte:",
-        "email": "legal@reelporn.ai"
       },
       "lastUpdated": "Zuletzt Aktualisiert"
     }
@@ -1022,22 +969,42 @@
         "essential": {
           "title": "Essenzielle Cookies",
           "description": "Diese Cookies sind notwendig, damit die Website ordnungsgemäß funktioniert. Sie ermöglichen grundlegende Funktionen wie Seitennavigation, Zugriff auf sichere Bereiche und Altersverifikation.",
-          "items": ["Sitzungsverwaltung", "Altersverifikationsstatus", "Sicherheitstoken", "Lastenausgleich"]
+          "items": [
+            "Sitzungsverwaltung",
+            "Altersverifikationsstatus",
+            "Sicherheitstoken",
+            "Lastenausgleich"
+          ]
         },
         "functional": {
           "title": "Funktionale Cookies",
           "description": "Diese Cookies ermöglichen erweiterte Funktionen und Personalisierung. Sie können von uns oder von Drittanbietern gesetzt werden, deren Dienste wir nutzen.",
-          "items": ["Sprachpräferenzen", "Videoplayer-Einstellungen", "Kürzlich angesehene Inhalte", "Benutzeroberflächen-Anpassung"]
+          "items": [
+            "Sprachpräferenzen",
+            "Videoplayer-Einstellungen",
+            "Kürzlich angesehene Inhalte",
+            "Benutzeroberflächen-Anpassung"
+          ]
         },
         "analyticsType": {
           "title": "Analyse-Cookies",
           "description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden.",
-          "items": ["Google Analytics", "Seitenaufrufe-Tracking", "Benutzerverhalten-Analyse", "Leistungsüberwachung"]
+          "items": [
+            "Google Analytics",
+            "Seitenaufrufe-Tracking",
+            "Benutzerverhalten-Analyse",
+            "Leistungsüberwachung"
+          ]
         },
         "advertising": {
           "title": "Werbe-Cookies",
           "description": "Diese Cookies werden verwendet, um Werbung zu liefern, die für Sie und Ihre Interessen relevant ist. Sie helfen auch dabei, die Häufigkeit zu begrenzen, mit der Sie eine Anzeige sehen.",
-          "items": ["Gezielte Werbung", "Anzeigenfrequenz-Begrenzung", "Kampagnenleistungsmessung", "Interessenbasierte Werbung"]
+          "items": [
+            "Gezielte Werbung",
+            "Anzeigenfrequenz-Begrenzung",
+            "Kampagnenleistungsmessung",
+            "Interessenbasierte Werbung"
+          ]
         }
       },
       "thirdParty": {
@@ -1083,7 +1050,7 @@
       "contact": {
         "title": "Kontaktieren Sie Uns",
         "intro": "Wenn Sie Fragen zu unserer Verwendung von Cookies oder dieser Richtlinie haben, kontaktieren Sie uns bitte:",
-        "email": "privacy@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -1187,7 +1154,7 @@
       "title": "Kontaktieren Sie Uns",
       "general": {
         "title": "Allgemeine Anfragen",
-        "email": "info@reelporn.ai"
+        "email": "support@reelporn.ai"
       },
       "support": {
         "title": "Support",
@@ -1195,8 +1162,37 @@
       },
       "business": {
         "title": "Geschäftlich",
-        "email": "business@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
+    }
+  },
+  "contactPage": {
+    "title": "Kontaktieren Sie Uns",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf",
+    "description": "Haben Sie eine Frage oder benötigen Unterstützung? Wir sind hier um zu helfen. Kontaktieren Sie uns über die untenstehenden Informationen.",
+    "email": {
+      "title": "E-Mail Support",
+      "description": "Für allgemeine Anfragen, technischen Support oder Geschäftspartnerschaften",
+      "address": "support@reelporn.ai",
+      "responseTime": "Wir antworten normalerweise innerhalb von 24-48 Stunden"
+    },
+    "dmca": {
+      "title": "DMCA Meldungen",
+      "description": "Für Urheberrechtsverletzungsmeldungen",
+      "address": "dmca@reelporn.ai",
+      "note": "Bitte fügen Sie alle erforderlichen Informationen gemäß unserer DMCA-Richtlinie bei"
+    },
+    "hours": {
+      "title": "Support-Zeiten",
+      "description": "Unser Support-Team ist verfügbar:",
+      "weekdays": "Montag - Freitag: 9:00 - 18:00 Uhr (EST)",
+      "weekends": "Samstag - Sonntag: 10:00 - 16:00 Uhr (EST)"
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen",
+      "description": "Suchen Sie schnelle Antworten? Besuchen Sie unsere",
+      "link": "FAQ-Seite",
+      "suffix": "für häufige Fragen und Lösungen."
     }
   },
   "payment": {
@@ -1210,7 +1206,12 @@
     "total": "Gesamt",
     "month": "Monat",
     "proceedToPayment": "Zur Zahlung fortfahren",
-    "processing": "Wird bearbeitet...",
+    "processing": {
+      "title": "Transaktion Erkannt!",
+      "message": "Wir haben Ihre Zahlung erhalten und sie wird auf der Blockchain verarbeitet.",
+      "waiting": "Warten auf Bestätigungen",
+      "safeToClose": "Ihr Abonnement wird automatisch aktiviert, sobald die Mindestanzahl an Bestätigungen erreicht ist. Sie können diese Seite sicher schließen."
+    },
     "loading": "Lädt...",
     "continue": "Weiter",
     "sendExactly": "Genau senden",
@@ -1231,12 +1232,6 @@
     "awaitingPayment": "Warte auf Zahlung",
     "processingPayment": "Zahlung wird verarbeitet",
     "paymentCompleted": "Zahlung abgeschlossen!",
-    "processing": {
-      "title": "Transaktion Erkannt!",
-      "message": "Wir haben Ihre Zahlung erhalten und sie wird auf der Blockchain verarbeitet.",
-      "waiting": "Warten auf Bestätigungen",
-      "safeToClose": "Ihr Abonnement wird automatisch aktiviert, sobald die Mindestanzahl an Bestätigungen erreicht ist. Sie können diese Seite sicher schließen."
-    },
     "completed": {
       "title": "Zahlung Abgeschlossen!",
       "message": "Ihre Transaktion wurde erfolgreich bestätigt und Ihr Abonnement ist jetzt aktiv.",

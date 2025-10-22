@@ -2,9 +2,12 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { formatDate, getLastUpdatedDate } from '@/lib/utils/dateFormatter';
+import './styles.css';
 
 function PrivacyPolicyPage() {
     const t = useTranslations('privacy');
+    const dateFormat = useTranslations()('dateFormat');
 
     return (
         <div className="legal-page">
@@ -13,7 +16,7 @@ function PrivacyPolicyPage() {
                     <div className="w-full lg:w-10/12">
                         <div className="page-header mb-5">
                             <h1 className="page-title">{t('title')}</h1>
-                            <p className="page-subtitle">{t('lastUpdated')}: {new Date().toLocaleDateString()}</p>
+                            <p className="page-subtitle">{t('lastUpdated')}: {formatDate(getLastUpdatedDate(), dateFormat)}</p>
                         </div>
 
                         <div className="content-card">

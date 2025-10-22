@@ -19,7 +19,6 @@ function AboutPage() {
     const stats = [
         { number: t('stats.users.number'), label: t('stats.users.label'), icon: 'bi-people-fill' },
         { number: t('stats.videos.number'), label: t('stats.videos.label'), icon: 'bi-camera-video-fill' },
-        { number: t('stats.creators.number'), label: t('stats.creators.label'), icon: 'bi-star-fill' },
         { number: t('stats.countries.number'), label: t('stats.countries.label'), icon: 'bi-globe' }
     ];
 
@@ -38,11 +37,6 @@ function AboutPage() {
             icon: 'bi-lightning-charge',
             title: t('values.innovation.title'),
             description: t('values.innovation.description')
-        },
-        {
-            icon: 'bi-heart',
-            title: t('values.creatorSupport.title'),
-            description: t('values.creatorSupport.description')
         }
     ];
 
@@ -61,11 +55,6 @@ function AboutPage() {
             role: t('team.headSafety.role'),
             bio: t('team.headSafety.bio'),
             color: '#48bb78'
-        },
-        {
-            role: t('team.headCreators.role'),
-            bio: t('team.headCreators.bio'),
-            color: '#6c63ff'
         }
     ];
 
@@ -83,12 +72,6 @@ function AboutPage() {
                                 onClick={() => router.push('/signup')}
                             >
                                 {t('hero.getStarted')}
-                            </button>
-                            <button
-                                className="btn-secondary"
-                                onClick={() => router.push('/pornstars')}
-                            >
-                                {t('hero.meetCreators')}
                             </button>
                         </div>
                     </div>

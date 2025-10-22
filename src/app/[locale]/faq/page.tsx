@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
+import Script from 'next/script';
 import './styles.css';
 
 function FAQPage() {
     const t = useTranslations();
-    const [activeCategory, setActiveCategory] = useState<'general' | 'account' | 'content' | 'creators' | 'technical' | 'legal'>('general');
+    const [activeCategory, setActiveCategory] = useState<'general' | 'account' | 'content' | 'technical' | 'legal'>('general');
     const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
     const toggleItem = (id: string) => {
@@ -15,6 +16,37 @@ function FAQPage() {
             [id]: !prev[id]
         }));
     };
+
+    // Generate FAQ structured data for Google
+    const faqStructuredData = useMemo(() => {
+        const allQuestions: Array<{ question: string; answer: string }> = [];
+        const categories = ['general', 'account', 'content', 'technical', 'legal'];
+
+        categories.forEach(cat => {
+            const category = cat as 'general' | 'account' | 'content' | 'technical' | 'legal';
+            const questionCount = category === 'general' ? 4 : category === 'account' ? 5 : category === 'content' ? 5 : category === 'technical' ? 4 : 4;
+
+            for (let i = 1; i <= questionCount; i++) {
+                allQuestions.push({
+                    question: t(`faq.categories.${category}.q${i}.question`),
+                    answer: t(`faq.categories.${category}.q${i}.answer`)
+                });
+            }
+        });
+
+        return {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": allQuestions.map(q => ({
+                "@type": "Question",
+                "name": q.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": q.answer
+                }
+            }))
+        };
+    }, [t]);
 
     const faqCategories = {
         general: {
@@ -49,17 +81,6 @@ function FAQPage() {
                 { id: 'q5', question: t('faq.categories.content.q5.question'), answer: t('faq.categories.content.q5.answer') }
             ]
         },
-        creators: {
-            title: t('faq.categories.creators.title'),
-            icon: 'bi-stars',
-            questions: [
-                { id: 'q1', question: t('faq.categories.creators.q1.question'), answer: t('faq.categories.creators.q1.answer') },
-                { id: 'q2', question: t('faq.categories.creators.q2.question'), answer: t('faq.categories.creators.q2.answer') },
-                { id: 'q3', question: t('faq.categories.creators.q3.question'), answer: t('faq.categories.creators.q3.answer') },
-                { id: 'q4', question: t('faq.categories.creators.q4.question'), answer: t('faq.categories.creators.q4.answer') },
-                { id: 'q5', question: t('faq.categories.creators.q5.question'), answer: t('faq.categories.creators.q5.answer') }
-            ]
-        },
         technical: {
             title: t('faq.categories.technical.title'),
             icon: 'bi-gear',
@@ -83,7 +104,13 @@ function FAQPage() {
     };
 
     return (
-        <div className="faq-page">
+        <>
+            <Script
+                id="faq-structured-data"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+            />
+            <div className="faq-page">
             <div className="container mx-auto px-4 py-12">
                 <div className="page-header mb-5">
                     <h1 className="page-title">{t('faq.title')}</h1>
@@ -97,7 +124,7 @@ function FAQPage() {
                                 <button
                                     key={key}
                                     className={`category-btn ${activeCategory === key ? 'active' : ''}`}
-                                    onClick={() => setActiveCategory(key as 'general' | 'account' | 'content' | 'creators' | 'technical' | 'legal')}
+                                    onClick={() => setActiveCategory(key as 'general' | 'account' | 'content' | 'technical' | 'legal')}
                                 >
                                     <i className={`bi ${category.icon}`}></i>
                                     <span>{category.title}</span>
@@ -137,13 +164,9 @@ function FAQPage() {
                             <h3>{t('faq.help.title')}</h3>
                             <p>{t('faq.help.description')}</p>
                             <div className="help-actions">
-                                <a href="mailto:support@reelporn.ai" className="btn-help">
+                                <a href={`mailto:${process.env.NEXT_PUBLIC_SUPPORT_EMAIL || 'support@reelporn.ai'}`} className="btn-help">
                                     <i className="bi bi-envelope"></i>
                                     {t('faq.help.emailSupport')}
-                                </a>
-                                <a href="#" className="btn-help">
-                                    <i className="bi bi-chat-dots"></i>
-                                    {t('faq.help.liveChat')}
                                 </a>
                             </div>
                         </div>
@@ -151,6 +174,7 @@ function FAQPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

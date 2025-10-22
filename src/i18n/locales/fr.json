@@ -1,4 +1,5 @@
 {
+  "dateFormat": "d/m/Y",
   "header": {
     "home": "Accueil",
     "categories": "Catégories",
@@ -258,9 +259,9 @@
     }
   },
   "pornstars": {
-    "title": "Pornstars",
+    "title": "Personnages",
     "subtitle": "Parcourez nos {count} artistes incroyables",
-    "noResults": "Aucune pornstar trouvée correspondant à vos filtres",
+    "noResults": "Aucun personnage trouvé correspondant à vos filtres",
     "sort": {
       "popular": "Les plus populaires",
       "newest": "Les plus récents",
@@ -268,7 +269,7 @@
       "mostViewed": "Les plus vus"
     },
     "pagination": {
-      "showing": "Affichage de {start}-{end} sur {total} pornstars"
+      "showing": "Affichage de {start}-{end} sur {total} personnages"
     },
     "filters": {
       "title": "Filtres",
@@ -288,7 +289,7 @@
       "allEthnicities": "Toutes les Ethnicités"
     },
     "errors": {
-      "fetchFailed": "Impossible de charger les pornstars. Veuillez réessayer."
+      "fetchFailed": "Impossible de charger les personnages. Veuillez réessayer."
     }
   },
   "pornstar": {
@@ -713,7 +714,7 @@
       "contact": {
         "title": "Informations de Contact",
         "intro": "Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter à :",
-        "email": "legal@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -776,7 +777,7 @@
         "item4": "Portabilité : Recevoir vos données dans un format portable",
         "item5": "Opposition : S'opposer à certains traitements de vos informations",
         "item6": "Restriction : Demander un traitement limité de vos informations",
-        "outro": "Pour exercer ces droits, contactez-nous à privacy@reelporn.ai"
+        "outro": "Pour exercer ces droits, contactez-nous à support@reelporn.ai"
       },
       "cookies": {
         "title": "Cookies et Suivi",
@@ -829,10 +830,10 @@
       "contact": {
         "title": "Informations de Contact",
         "intro": "Si vous avez des questions sur cette Politique de Confidentialité ou nos pratiques en matière de confidentialité, veuillez nous contacter :",
-        "email": "privacy@reelporn.ai",
+        "email": "support@reelporn.ai",
         "dpoTitle": "Délégué à la Protection des Données",
         "dpo": "Département Juridique ReelPorn",
-        "dpoEmail": "dpo@reelporn.ai"
+        "dpoEmail": "support@reelporn.ai"
       }
     }
   },
@@ -881,60 +882,6 @@
       "lastUpdated": "Dernière Mise à Jour"
     }
   },
-  "section2257": {
-    "title": "Avis de Conformité 18 U.S.C. 2257",
-    "subtitle": "Déclaration de Conformité aux Exigences de Tenue de Registres",
-    "sections": {
-      "compliance": {
-        "title": "Déclaration de Conformité",
-        "content1": "Toutes les représentations visuelles affichées sur ce site Web, qu'il s'agisse de conduite sexuellement explicite réelle, de contenu sexuel simulé ou autre, sont des représentations visuelles de personnes qui avaient au moins 18 ans lorsque ces représentations visuelles ont été créées.",
-        "content2": "Toutes les autres représentations visuelles affichées sur ce site Web sont exemptées de la disposition de 18 U.S.C. section 2257 et 28 C.F.R. 75 parce que lesdites représentations visuelles ne consistent pas en des représentations de conduite telles que spécifiquement énumérées dans 18 U.S.C section 2256 (2) (A) à (D), mais sont simplement des représentations de nudité non sexuellement explicite, ou sont des représentations de conduite sexuelle simulée, ou sont autrement exemptées parce que les représentations visuelles ont été créées avant le 3 juillet 1995."
-      },
-      "custodian": {
-        "title": "Dépositaire des Registres",
-        "intro": "Les propriétaires et exploitants de ReelPorn.ai s'engagent à respecter la loi fédérale américaine 18 U.S.C. 2257 et tous les règlements associés.",
-        "custodianTitle": "Le Dépositaire des Registres pour ReelPorn.ai est :",
-        "name": "Conformité Juridique ReelPorn",
-        "role": "Dépositaire des Registres",
-        "department": "Département de Conformité"
-      },
-      "producers": {
-        "title": "Producteurs de Contenu",
-        "intro": "En ce qui concerne toutes les représentations visuelles affichées sur ce site Web, qu'il s'agisse de conduite sexuellement explicite réelle, de contenu sexuel simulé ou autre, tout le contenu a été fourni par des producteurs tiers, des webmasters ou des utilisateurs du site Web qui ont garanti que :",
-        "item1": "Ils sont le dépositaire des registres pour tout le contenu fourni",
-        "item2": "Tous les modèles, acteurs, actrices et autres personnes apparaissant dans toute représentation visuelle avaient plus de dix-huit ans au moment de la création de ces représentations",
-        "item3": "Ils conservent les dossiers requis conformément à la loi américaine 18 U.S.C. 2257",
-        "item4": "Tout le contenu et les activités représentés sont consensuels"
-      },
-      "original": {
-        "title": "Producteurs Originaux",
-        "intro1": "Les producteurs originaux du contenu visuel contenu sur ce site Web sont diverses entités tierces. Chaque producteur conserve des dossiers conformément aux exigences énoncées dans 18 U.S.C. 2257 et ses règlements.",
-        "intro2": "Pour les dossiers relatifs à un contenu spécifique, les entités suivantes servent de dépositaire des dossiers pour leurs productions respectives :",
-        "item1": "Contenu téléchargé par les utilisateurs : Les téléchargeurs individuels sont responsables de la tenue de leurs propres dossiers 2257",
-        "item2": "Contenu sous licence : Le producteur original conserve la garde des dossiers",
-        "item3": "Contenu partenaire : Les studios partenaires conservent leurs dossiers respectifs"
-      },
-      "exemptions": {
-        "title": "Exemptions",
-        "intro": "Certains contenus affichés sur ce site Web sont exemptés des exigences de tenue de registres de 18 U.S.C. 2257, notamment :",
-        "item1": "Représentations visuelles de nudité non sexuellement explicite uniquement",
-        "item2": "Représentations visuelles créées avant le 3 juillet 1995",
-        "item3": "Représentations visuelles qui ne représentent pas de conduite telle que décrite dans 18 U.S.C. 2256(2)(A)",
-        "item4": "Contenu qui ne contient que de la conduite sexuelle simulée où aucune conduite sexuelle réelle ne s'est produite"
-      },
-      "legal": {
-        "title": "Informations Juridiques",
-        "content1": "Important : ReelPorn.ai fonctionne comme une plateforme et ne produit pas de contenu original. Tout le contenu est fourni par des producteurs tiers qui ont déclaré et garanti leur conformité à toutes les lois applicables, y compris 18 U.S.C. 2257.",
-        "content2": "Toute personne qui télécharge, soumet ou fournit autrement du contenu à ReelPorn.ai déclare et garantit qu'elle s'est conformée aux exigences de tenue de registres de 18 U.S.C. 2257 concernant ce contenu."
-      },
-      "contact": {
-        "title": "Informations de Contact",
-        "intro": "Pour toute demande concernant la conformité 2257 ou pour demander l'accès aux dossiers, veuillez contacter :",
-        "email": "legal@reelporn.ai"
-      },
-      "lastUpdated": "Dernière Mise à Jour"
-    }
-  },
   "cookiePolicy": {
     "title": "Politique de Cookies",
     "subtitle": "Comment nous utilisons les cookies et technologies similaires",
@@ -970,22 +917,42 @@
         "essential": {
           "title": "Cookies Essentiels",
           "description": "Ces cookies sont nécessaires au bon fonctionnement du site Web. Ils permettent des fonctions de base telles que la navigation entre les pages, l'accès aux zones sécurisées et la vérification de l'âge.",
-          "items": ["Gestion de session", "Statut de vérification d'âge", "Jetons de sécurité", "Équilibrage de charge"]
+          "items": [
+            "Gestion de session",
+            "Statut de vérification d'âge",
+            "Jetons de sécurité",
+            "Équilibrage de charge"
+          ]
         },
         "functional": {
           "title": "Cookies Fonctionnels",
           "description": "Ces cookies permettent des fonctionnalités améliorées et la personnalisation. Ils peuvent être définis par nous ou par des fournisseurs tiers dont nous utilisons les services.",
-          "items": ["Préférences linguistiques", "Paramètres du lecteur vidéo", "Contenu récemment consulté", "Personnalisation de l'interface utilisateur"]
+          "items": [
+            "Préférences linguistiques",
+            "Paramètres du lecteur vidéo",
+            "Contenu récemment consulté",
+            "Personnalisation de l'interface utilisateur"
+          ]
         },
         "analyticsType": {
           "title": "Cookies Analytiques",
           "description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site Web en collectant et en rapportant des informations de manière anonyme.",
-          "items": ["Google Analytics", "Suivi des pages vues", "Analyse du comportement des utilisateurs", "Surveillance des performances"]
+          "items": [
+            "Google Analytics",
+            "Suivi des pages vues",
+            "Analyse du comportement des utilisateurs",
+            "Surveillance des performances"
+          ]
         },
         "advertising": {
           "title": "Cookies Publicitaires",
           "description": "Ces cookies sont utilisés pour diffuser des publicités pertinentes pour vous et vos intérêts. Ils aident également à limiter le nombre de fois que vous voyez une publicité.",
-          "items": ["Publicité ciblée", "Limitation de la fréquence des annonces", "Mesure des performances des campagnes", "Publicité basée sur les intérêts"]
+          "items": [
+            "Publicité ciblée",
+            "Limitation de la fréquence des annonces",
+            "Mesure des performances des campagnes",
+            "Publicité basée sur les intérêts"
+          ]
         }
       },
       "thirdParty": {
@@ -1031,7 +998,7 @@
       "contact": {
         "title": "Nous Contacter",
         "intro": "Si vous avez des questions sur notre utilisation des cookies ou cette politique, veuillez nous contacter :",
-        "email": "privacy@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -1135,7 +1102,7 @@
       "title": "Nous Contacter",
       "general": {
         "title": "Demandes Générales",
-        "email": "info@reelporn.ai"
+        "email": "support@reelporn.ai"
       },
       "support": {
         "title": "Support",
@@ -1143,8 +1110,37 @@
       },
       "business": {
         "title": "Affaires",
-        "email": "business@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
+    }
+  },
+  "contactPage": {
+    "title": "Contactez-Nous",
+    "subtitle": "Contactez notre équipe",
+    "description": "Vous avez une question ou besoin d'assistance? Nous sommes là pour vous aider. Contactez-nous en utilisant les informations ci-dessous.",
+    "email": {
+      "title": "Support par E-mail",
+      "description": "Pour les demandes générales, le support technique ou les partenariats commerciaux",
+      "address": "support@reelporn.ai",
+      "responseTime": "Nous répondons généralement dans les 24-48 heures"
+    },
+    "dmca": {
+      "title": "Avis DMCA",
+      "description": "Pour les avis de violation de droits d'auteur",
+      "address": "dmca@reelporn.ai",
+      "note": "Veuillez inclure toutes les informations requises comme indiqué dans notre politique DMCA"
+    },
+    "hours": {
+      "title": "Heures de Support",
+      "description": "Notre équipe de support est disponible:",
+      "weekdays": "Lundi - Vendredi: 9h00 - 18h00 (EST)",
+      "weekends": "Samedi - Dimanche: 10h00 - 16h00 (EST)"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Vous cherchez des réponses rapides? Consultez notre",
+      "link": "page FAQ",
+      "suffix": "pour les questions courantes et les solutions."
     }
   },
   "payment": {
@@ -1158,7 +1154,12 @@
     "total": "Total",
     "month": "mois",
     "proceedToPayment": "Procéder au Paiement",
-    "processing": "Traitement...",
+    "processing": {
+      "title": "Transaction Détectée!",
+      "message": "Nous avons reçu votre paiement et il est en cours de traitement sur la blockchain.",
+      "waiting": "En attente de confirmations",
+      "safeToClose": "Votre abonnement sera automatiquement activé une fois le nombre minimum de confirmations atteint. Vous pouvez fermer cette page en toute sécurité."
+    },
     "loading": "Chargement...",
     "continue": "Continuer",
     "sendExactly": "Envoyer Exactement",
@@ -1179,12 +1180,6 @@
     "awaitingPayment": "En Attente de Paiement",
     "processingPayment": "Traitement du Paiement",
     "paymentCompleted": "Paiement Terminé!",
-    "processing": {
-      "title": "Transaction Détectée!",
-      "message": "Nous avons reçu votre paiement et il est en cours de traitement sur la blockchain.",
-      "waiting": "En attente de confirmations",
-      "safeToClose": "Votre abonnement sera automatiquement activé une fois le nombre minimum de confirmations atteint. Vous pouvez fermer cette page en toute sécurité."
-    },
     "completed": {
       "title": "Paiement Terminé!",
       "message": "Votre transaction a été confirmée avec succès et votre abonnement est maintenant actif.",
