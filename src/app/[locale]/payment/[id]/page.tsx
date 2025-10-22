@@ -43,9 +43,10 @@ export default function PaymentStatusPage() {
           setShowExpiredModal(true);
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to fetch payment status:', err);
-      setError(err.message || t('failedToLoadData'));
+      const errorMessage = err instanceof Error ? err.message : t('failedToLoadData');
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -56,7 +57,7 @@ export default function PaymentStatusPage() {
     if (!paymentId) return;
 
     // Get the global Echo instance
-    const echoInstance = (window as any).Echo;
+    const echoInstance = window.Echo;
     if (!echoInstance) {
       console.warn('[Echo] Echo instance not found on window');
       return;
@@ -66,9 +67,11 @@ export default function PaymentStatusPage() {
     const channel = echoInstance.private(channelName);
 
     // Log channel subscription events
-    channel.error((error: any) => {
-      console.error('[Echo] Channel subscription error:', error);
-    });
+    if (channel && typeof channel === 'object' && 'error' in channel && typeof channel.error === 'function') {
+      channel.error((error: any) => {
+        console.error('[Echo] Channel subscription error:', error);
+      });
+    }
 
     // TODO: Add event listeners here when events are defined
 
@@ -237,9 +240,10 @@ export default function PaymentStatusPage() {
       } else {
         throw new Error('No payment ID returned');
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to retry payment:', err);
-      setRetryError(err.message || 'Failed to create new payment. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create new payment. Please try again.';
+      setRetryError(errorMessage);
     } finally {
       setIsRetrying(false);
     }

@@ -128,7 +128,7 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
     };
 
     const goFullscreen = () => {
-        router.push(`/shorts?view=${currentShort.id}` as any);
+        router.push(`/shorts?view=${currentShort.id}`)!;
     };
 
     const handleVideoEnd = () => {

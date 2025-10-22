@@ -41,7 +41,7 @@ class ReelRepository {
             resolve(transformReelApiResponse(mockVideo));
           } else {
             // Simulate 404 error
-            const error: any = new Error('Video not found');
+            const error = new Error('Video not found') as Error & { response: { status: number } };
             error.response = { status: 404 };
             reject(error);
           }

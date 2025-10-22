@@ -58,7 +58,7 @@ function LoginPage() {
 
             // Redirect to intended location or home page
             router.push(redirectTo);
-        } catch (err: any) {
+        } catch (err: unknown) {
             // Handle custom exceptions
             if (err instanceof RateLimitException) {
                 setError(t('login.error.rateLimitExceeded'));

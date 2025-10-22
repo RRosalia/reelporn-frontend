@@ -7,7 +7,7 @@ import Pusher from 'pusher-js';
 declare global {
   interface Window {
     Pusher: typeof Pusher;
-    Echo: Echo;
+    Echo: Echo<unknown>;
   }
 }
 
@@ -46,6 +46,16 @@ interface EchoConnector {
   };
 }
 
+/**
+ * Echo Channel interface
+ */
+export interface EchoChannel {
+  listen: (event: string, callback: (data: unknown) => void) => EchoChannel;
+  listenForWhisper: (event: string, callback: (data: unknown) => void) => EchoChannel;
+  notification: (callback: (data: unknown) => void) => EchoChannel;
+  stopListening: (event: string) => EchoChannel;
+}
+
 export function initializeEcho(authToken?: string | null) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:9000';
   const authEndpoint = `${apiUrl}/broadcasting/auth`;
@@ -76,7 +86,7 @@ export function initializeEcho(authToken?: string | null) {
   }
 
   // Create Echo instance and attach to window
-  const echoInstance = new Echo(echoConfig);
+  const echoInstance = new Echo<unknown>(echoConfig);
   window.Echo = echoInstance;
 
   echoConfigured = true;

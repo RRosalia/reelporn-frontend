@@ -50,7 +50,7 @@ class BlogRepository {
    * @returns Blog posts with pagination
    */
   async getAllPosts(page: number = 1, perPage: number = 12, category?: string): Promise<BlogListResponse> {
-    const params: any = { page, per_page: perPage };
+    const params: { page: number; per_page: number; category?: string } = { page, per_page: perPage };
     if (category) {
       params.category = category;
     }

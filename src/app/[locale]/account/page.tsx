@@ -12,23 +12,13 @@ import {
   ApiException,
   NetworkException,
 } from "@/lib/api/exceptions";
-
-interface Profile {
-  id: number;
-  email: string;
-  name: string | null;
-  nickname: string | null;
-  created_at: string;
-  updated_at: string;
-  email_verified_at: string | null;
-  two_factor_enabled: boolean;
-}
+import type { User } from "@/types/User";
 
 function AccountPageContent() {
   const t = useTranslations();
 
   // Profile state
-  const [profile, setProfile] = useState<Profile | null>(null);
+  const [profile, setProfile] = useState<User | null>(null);
   const [isLoadingProfile, setIsLoadingProfile] = useState(true);
 
   // Edit profile state
@@ -708,11 +698,11 @@ function AccountPageContent() {
                   </p>
                   <p className="mb-2">
                     <strong>{t("account.info.memberSince")}:</strong>{" "}
-                    {new Date(profile.created_at).toLocaleDateString()}
+                    {profile.created_at ? new Date(profile.created_at).toLocaleDateString() : "N/A"}
                   </p>
                   <p className="mb-0">
                     <strong>{t("account.info.lastUpdated")}:</strong>{" "}
-                    {new Date(profile.updated_at).toLocaleDateString()}
+                    {profile.updated_at ? new Date(profile.updated_at).toLocaleDateString() : "N/A"}
                   </p>
                 </div>
               </div>

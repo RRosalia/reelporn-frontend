@@ -4,6 +4,10 @@
 export interface ApiErrorResponse {
   message?: string;
   errors?: Record<string, string[]>;
+  data?: {
+    reason?: string;
+    [key: string]: unknown;
+  };
   [key: string]: unknown;
 }
 

@@ -69,12 +69,15 @@ function VideoPage() {
         setNotFound(false);
         const data = await ReelRepository.getBySlug(slug);
         setReel(data);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error('Error fetching reel:', err);
 
         // If 404, show inline not found instead of separate page
-        if (err?.response?.status === 404) {
-          setNotFound(true);
+        if (err && typeof err === 'object' && 'response' in err) {
+          const errorResponse = err as { response?: { status?: number } };
+          if (errorResponse.response?.status === 404) {
+            setNotFound(true);
+          }
         }
       } finally {
         setLoading(false);
@@ -192,9 +195,9 @@ function VideoPage() {
 
         // Track successful share via native API
         trackShareEvent('native_share', true);
-      } catch (error: any) {
+      } catch (error: unknown) {
         // User cancelled or error occurred
-        if (error.name !== 'AbortError') {
+        if (error instanceof Error && error.name !== 'AbortError') {
           console.error('Error sharing:', error);
           // Fallback to copy
           copyToClipboard(shareUrl);
@@ -238,8 +241,8 @@ function VideoPage() {
     if (!reel) return;
 
     // Push event to Google Tag Manager dataLayer
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'video_share',
         video_id: reel.id,
         video_slug: reel.slug,
@@ -307,8 +310,8 @@ function VideoPage() {
     if (!reel) return;
 
     // Push event to Google Tag Manager dataLayer
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'video_like',
         video_id: reel.id,
         video_slug: reel.slug,

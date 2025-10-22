@@ -14,7 +14,7 @@ import './checkout.css';
 interface CheckoutFlowProps {
   payableType: string; // e.g., 'plan'
   payableId: number;
-  onSuccess?: (subscription?: any) => void;
+  onSuccess?: (subscription?: { id: number; status: string }) => void;
   onCancel?: () => void;
 }
 
@@ -64,10 +64,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
   // Poll payment status when payment is confirmed
   useEffect(() => {
-    if (currentStep === 'status' && confirmedPayment) {
+    if (currentStep === 'status' && confirmedPayment && confirmedPayment.payment) {
       const pollStatus = async () => {
         try {
-          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment.id);
+          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment!.id);
           setPaymentStatus(status);
 
           // If payment is completed, stop polling and call onSuccess

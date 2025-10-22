@@ -62,13 +62,14 @@ const PornstarsFilter: React.FC<PornstarsFilterProps> = ({ filters, onFilterChan
     fetchFilterData();
   }, []);
 
-  const handleInputChange = (key: keyof PornstarFilters, value: any) => {
+  const handleInputChange = (key: keyof PornstarFilters, value: string | number | boolean | null | undefined) => {
     const newFilters = { ...filters };
 
     if (value === '' || value === null || value === undefined) {
       delete newFilters[key];
     } else {
-      newFilters[key] = value;
+      // Type assertion needed because TypeScript can't narrow the union type properly
+      (newFilters as Record<string, string | number | boolean>)[key] = value as string | number | boolean;
     }
 
     onFilterChange(newFilters);

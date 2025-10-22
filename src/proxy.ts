@@ -101,7 +101,7 @@ export default async function middleware(request: NextRequest) {
   // Check for geo-blocking based on Vercel's x-vercel-ip-country header
   const country = request.headers.get('x-vercel-ip-country');
 
-  if (country && BLOCKED_COUNTRIES.includes(country as any)) {
+  if (country && BLOCKED_COUNTRIES.includes(country as typeof BLOCKED_COUNTRIES[number])) {
     // Redirect to /blocked page with country information
     const url = new URL('/blocked', request.url);
     url.searchParams.set('reason', 'geo');

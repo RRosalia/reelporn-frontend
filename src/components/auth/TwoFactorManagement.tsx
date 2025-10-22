@@ -26,8 +26,9 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
       const codes = await TwoFactorService.getRecoveryCodes();
       setRecoveryCodes(codes);
       setShowRecoveryCodes(true);
-    } catch (err: any) {
-      setError(err.message || t('account.twoFactor.error.fetchCodesFailed'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('account.twoFactor.error.fetchCodesFailed');
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -47,8 +48,9 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
       setRecoveryCodes(codes);
       setShowRecoveryCodes(true);
       setSuccess(t('account.twoFactor.manage.regenerateSuccess'));
-    } catch (err: any) {
-      setError(err.message || t('account.twoFactor.error.regenerateFailed'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('account.twoFactor.error.regenerateFailed');
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -80,8 +82,9 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
     try {
       await TwoFactorService.disableTwoFactor(disableCode);
       onDisabled();
-    } catch (err: any) {
-      setError(err.message || t('account.twoFactor.error.disableFailed'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('account.twoFactor.error.disableFailed');
+      setError(errorMessage);
       setIsLoading(false);
     }
   };

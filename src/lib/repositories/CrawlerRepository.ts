@@ -14,10 +14,13 @@ class CrawlerRepository {
     try {
       const response = await apiClient.get(`/api/crawlers/${ip}/check`);
       return response.status === 200;
-    } catch (error: any) {
+    } catch (error) {
       // Backend returns 404 for non-crawlers
-      if (error.response?.status === 404) {
-        return false;
+      if (error && typeof error === 'object' && 'response' in error) {
+        const axiosError = error as { response?: { status: number } };
+        if (axiosError.response?.status === 404) {
+          return false;
+        }
       }
       console.error('Failed to check crawler IP:', error);
       return false;

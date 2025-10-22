@@ -28,8 +28,8 @@ function AuthModal({
 
   // Track when AuthModal opens
   useEffect(() => {
-    if (isOpen && typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (isOpen && typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'auth_modal_shown',
         modal_trigger: trigger,
         modal_icon: icon,

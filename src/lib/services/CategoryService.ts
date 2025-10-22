@@ -1,14 +1,7 @@
 import CategoryRepository from '@/lib/repositories/CategoryRepository';
 import { PaginatedResponse } from '@/lib/types/PaginatedResponse';
-
-interface Category {
-  id: number;
-  slug: string;
-  name: string;
-  description?: string;
-  videos_count?: number;
-  thumbnail?: string | null;
-}
+import type { Category, CategoryResponse } from '@/types/Category';
+import type { Reel } from '@/types/Reel';
 
 interface FormattedCategory {
   id: number;
@@ -28,18 +21,18 @@ class CategoryService {
    * Get all categories
    * @param {number} page - Page number
    * @param {number} perPage - Items per page
-   * @returns {Promise<PaginatedResponse>}
+   * @returns {Promise<PaginatedResponse<Category>>}
    */
-  async getAllCategories(page: number = 1, perPage: number = 15): Promise<PaginatedResponse> {
+  async getAllCategories(page: number = 1, perPage: number = 15): Promise<PaginatedResponse<Category>> {
     return await CategoryRepository.getAll(page, perPage);
   }
 
   /**
    * Get category details by slug
    * @param {string} slug - Category slug
-   * @returns {Promise<any>}
+   * @returns {Promise<CategoryResponse>}
    */
-  async getCategoryBySlug(slug: string): Promise<any> {
+  async getCategoryBySlug(slug: string): Promise<CategoryResponse> {
     return await CategoryRepository.getBySlug(slug);
   }
 
@@ -48,9 +41,9 @@ class CategoryService {
    * @param {string} slug - Category slug
    * @param {number} page - Page number
    * @param {number} perPage - Items per page
-   * @returns {Promise<PaginatedResponse>}
+   * @returns {Promise<PaginatedResponse<Reel>>}
    */
-  async getCategoryVideos(slug: string, page: number = 1, perPage: number = 15): Promise<PaginatedResponse> {
+  async getCategoryVideos(slug: string, page: number = 1, perPage: number = 15): Promise<PaginatedResponse<Reel>> {
     return await CategoryRepository.getVideos(slug, page, perPage);
   }
 
@@ -58,9 +51,9 @@ class CategoryService {
    * Search categories by name or description
    * @param {string} query - Search query
    * @param {number} page - Page number
-   * @returns {Promise<PaginatedResponse>}
+   * @returns {Promise<PaginatedResponse<Category>>}
    */
-  async searchCategories(query: string, page: number = 1): Promise<PaginatedResponse> {
+  async searchCategories(query: string, page: number = 1): Promise<PaginatedResponse<Category>> {
     if (!query || query.trim() === '') {
       return await this.getAllCategories(page);
     }
