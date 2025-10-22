@@ -6,6 +6,7 @@ import { ClientProviders } from '@/components/ClientProviders';
 import MainLayout from '@/components/MainLayout';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
+import Script from 'next/script';
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -83,6 +84,9 @@ export async function generateMetadata({
     : `${siteUrl}/${locale}${canonicalPath}`;
 
   return {
+    other: {
+      rating: 'RTA-5042-1996-1400-1577-RTA',
+    },
     alternates: {
       canonical,
       languages: {
@@ -115,9 +119,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
-        <meta name="rating" content="RTA-5042-1996-1400-1577-RTA"></meta>
-        <script
+      <body suppressHydrationWarning>
+        <Script
+          id="age-verification-check"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -152,8 +157,6 @@ export default async function LocaleLayout({
             `,
           }}
         />
-      </head>
-      <body suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ClientProviders>
             <MainLayout>
