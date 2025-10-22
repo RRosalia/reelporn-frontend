@@ -48,7 +48,9 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
 
                     // Enable skip button after skipAfter seconds
                     if (prev === (adData.duration || 15) - skipAfter + 1) {
-                        setCanSkip(true);
+                        setTimeout(() => {
+                            setCanSkip(true);
+                        }, 0);
                     }
 
                     return prev - 1;
