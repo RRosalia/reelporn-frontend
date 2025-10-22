@@ -68,8 +68,10 @@ function ShortsPage() {
             const videoId = parseInt(viewParam);
             const index = content.findIndex(item => !item.isAd && item.id === videoId);
             if (index !== -1) {
-                setCurrentIndex(index);
-                isScrolling.current = true;
+                setTimeout(() => {
+                    setCurrentIndex(index);
+                    isScrolling.current = true;
+                }, 0);
 
                 setTimeout(() => {
                     const container = containerRef.current;
@@ -146,7 +148,29 @@ function ShortsPage() {
             isScrolling.current = false;
             setCurrentIndex(index);
         }, 500);
-    };
+    }, [content, currentIndex]);
+
+    // Handle keyboard navigation
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            const currentContent = content[currentIndex];
+
+            // Prevent navigation during forced ad playback
+            if (currentContent?.isAd && currentContent.isForced) {
+                e.preventDefault();
+                return;
+            }
+
+            if (e.key === 'ArrowDown' && currentIndex < content.length - 1) {
+                scrollToIndex(currentIndex + 1);
+            } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+                scrollToIndex(currentIndex - 1);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [currentIndex, content, scrollToIndex]);
 
     const handleAdComplete = () => {
         // Auto-advance to next video after ad completes
