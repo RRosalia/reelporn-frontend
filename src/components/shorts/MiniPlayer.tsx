@@ -37,7 +37,9 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
     // Set initial position on mount
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setPosition({ x: window.innerWidth - 420, y: window.innerHeight - 350 });
+            setTimeout(() => {
+                setPosition({ x: window.innerWidth - 420, y: window.innerHeight - 350 });
+            }, 0);
         }
     }, []);
 

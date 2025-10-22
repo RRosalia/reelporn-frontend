@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import ShortsPlayer from '@/components/shorts/ShortsPlayer';
 import ForcedAdvert from '@/components/promotions/ForcedAdvert';
@@ -126,29 +126,7 @@ function ShortsPage() {
         }
     };
 
-    // Handle keyboard navigation
-    useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            const currentContent = content[currentIndex];
-
-            // Prevent navigation during forced ad playback
-            if (currentContent?.isAd && currentContent.isForced) {
-                e.preventDefault();
-                return;
-            }
-
-            if (e.key === 'ArrowDown' && currentIndex < content.length - 1) {
-                scrollToIndex(currentIndex + 1);
-            } else if (e.key === 'ArrowUp' && currentIndex > 0) {
-                scrollToIndex(currentIndex - 1);
-            }
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [currentIndex, content.length]);
-
-    const scrollToIndex = (index: number) => {
+    const scrollToIndex = useCallback((index: number) => {
         const container = containerRef.current;
         if (!container) return;
 
