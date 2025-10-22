@@ -43,13 +43,10 @@ export function useUserChannel(): any {
     // Subscribe to the user's private channel
     window.Echo.private(channelName);
 
-    console.log(`Subscribed to private channel: ${channelName}`);
-
     // Cleanup: leave the channel when component unmounts or user logs out
     return () => {
       if (typeof window !== 'undefined' && window.Echo) {
         window.Echo.leave(channelName);
-        console.log(`Left private channel: ${channelName}`);
       }
     };
   }, [isAuthenticated, user?.id, isLoading]);

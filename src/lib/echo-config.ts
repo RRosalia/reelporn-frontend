@@ -20,7 +20,6 @@ export function initializeEcho(authToken?: string | null) {
 
   // Disconnect existing Echo instance if reconfiguring with auth
   if (echoConfigured && (window as any).Echo) {
-    console.log('[Echo] Disconnecting existing Echo instance for reconfiguration');
     (window as any).Echo.disconnect();
   }
 
@@ -44,50 +43,17 @@ export function initializeEcho(authToken?: string | null) {
     };
   }
 
-  console.log('[Echo] Configuring with:', {
-    ...echoConfig,
-    hasAuthToken: !!authToken,
-    authEndpoint: authEndpoint,
-    apiUrl: apiUrl,
-  });
-
   // Create Echo instance and attach to window
   const echoInstance = new Echo(echoConfig);
   (window as any).Echo = echoInstance;
 
   echoConfigured = true;
 
-  console.log('[Echo] Configuration complete', {
-    authenticated: !!authToken,
-    wsUrl: `${echoConfig.forceTLS ? 'wss' : 'ws'}://${echoConfig.wsHost}:${echoConfig.wsPort}`,
-    authEndpoint: authToken ? authEndpoint : 'none',
-  });
-
-  // Log connector info
-  console.log('[Echo] Connector:', echoInstance.connector);
-  console.log('[Echo] Socket state:', (echoInstance.connector as any)?.pusher?.connection?.state);
-
-  // Add connection event listeners for debugging
+  // Add connection event listeners for error tracking
   const connector = echoInstance.connector as any;
   if (connector?.pusher) {
-    connector.pusher.connection.bind('connected', () => {
-      console.log('[Echo] ✅ WebSocket connected successfully');
-    });
-
-    connector.pusher.connection.bind('connecting', () => {
-      console.log('[Echo] 🔄 WebSocket connecting...');
-    });
-
-    connector.pusher.connection.bind('disconnected', () => {
-      console.log('[Echo] ❌ WebSocket disconnected');
-    });
-
     connector.pusher.connection.bind('error', (error: any) => {
-      console.error('[Echo] ❌ WebSocket error:', error);
-    });
-
-    connector.pusher.connection.bind('state_change', (states: any) => {
-      console.log('[Echo] State change:', states.previous, '->', states.current);
+      console.error('[Echo] WebSocket error:', error);
     });
   }
 

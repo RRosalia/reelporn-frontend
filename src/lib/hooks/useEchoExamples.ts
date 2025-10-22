@@ -30,8 +30,8 @@ export function useNotifications(userId: number | string) {
     `user.${userId}`,
     "NotificationSent",
     (e: any) => {
-      console.log("New notification:", e.notification);
       // Handle notification (e.g., show toast, update state, etc.)
+      // Add your notification handling logic here
     },
   );
 
@@ -57,8 +57,8 @@ export function useOrderUpdates(orderId: number | string) {
     `orders.${orderId}`,
     ["OrderShipmentStatusUpdated", "OrderShipped", "OrderDelivered"],
     (e: any) => {
-      console.log("Order update:", e);
       // Handle different order events
+      // Add your order update handling logic here
     },
   );
 }
@@ -80,8 +80,8 @@ export function useOrderUpdates(orderId: number | string) {
  */
 export function usePublicPosts() {
   useEchoPublic("posts", "PostPublished", (e: any) => {
-    console.log("New post published:", e.post);
     // Update UI with new post
+    // Add your post handling logic here
   });
 }
 
@@ -111,15 +111,15 @@ export function useChatRoomPresence(roomId: number | string) {
     {
       // Called when a user joins the channel
       here: (users: any[]) => {
-        console.log("Users currently in room:", users);
+        // Handle users currently in room
       },
       // Called when a new user joins
       joining: (user: any) => {
-        console.log("User joining:", user);
+        // Handle user joining
       },
       // Called when a user leaves
       leaving: (user: any) => {
-        console.log("User leaving:", user);
+        // Handle user leaving
       },
     } as any
   );

@@ -60,7 +60,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const token = AuthService.getToken();
     if (token) {
       initializeEcho(token);
-      console.log('[Echo] Reconfigured after login');
     }
 
     return data;
@@ -73,7 +72,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // Reconfigure Echo without authentication
     initializeEcho();
-    console.log('[Echo] Reconfigured after logout');
   };
 
   const updateUser = (userData: User) => {

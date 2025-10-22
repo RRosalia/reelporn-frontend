@@ -46,8 +46,8 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
     // Auto-play video
     useEffect(() => {
         if (videoRef.current && isPlaying) {
-            videoRef.current.play().catch(err => {
-                console.log('Autoplay prevented:', err);
+            videoRef.current.play().catch(() => {
+                // Autoplay prevented - ignore silently
             });
         }
     }, [currentShort, isPlaying]);

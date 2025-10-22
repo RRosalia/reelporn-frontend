@@ -34,8 +34,8 @@ function ShortsPlayer({ short, isActive, onNext, onPrevious: _onPrevious }: Shor
         if (!videoRef.current) return;
 
         if (isActive) {
-            videoRef.current.play().catch(err => {
-                console.log('Autoplay prevented:', err);
+            videoRef.current.play().catch(() => {
+                // Autoplay prevented - ignore silently
             });
             setIsPlaying(true);
         } else {
