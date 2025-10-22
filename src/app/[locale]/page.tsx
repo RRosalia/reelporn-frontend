@@ -355,28 +355,28 @@ export default function HomePage() {
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-badge-hd text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">HD Quality</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.hdQuality')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-download text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Downloads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.downloads')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-x-octagon text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">No Ads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.noAds')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-stars text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Exclusive</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.exclusive')}</h5>
                                 </div>
                             </div>
                         </div>
