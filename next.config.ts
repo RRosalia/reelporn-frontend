@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
   experimental: {
     turbopackFileSystemCacheForDev: true,
     optimizePackageImports: ['bootstrap-icons'],
-    // Force Webpack in test mode to allow Babel instrumentation for code coverage
-    ...(process.env.NEXT_PRIVATE_TEST_MODE === '1' && {
-      turbo: undefined as any
-    }),
   },
   skipMiddlewareUrlNormalize: true,
   async rewrites() {

@@ -12,7 +12,6 @@
 
 # testing
 /coverage
-/.nyc_output
 
 # cypress
 cypress/videos
