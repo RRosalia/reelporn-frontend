@@ -125,7 +125,7 @@ function SignupPage() {
                 // Redirect to account/dashboard
                 router.push('/account');
             }
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error('Registration error:', err);
 
             // Handle validation errors

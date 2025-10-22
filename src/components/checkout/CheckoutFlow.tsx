@@ -14,7 +14,7 @@ import './checkout.css';
 interface CheckoutFlowProps {
   payableType: string; // e.g., 'plan'
   payableId: number;
-  onSuccess?: (subscription?: any) => void;
+  onSuccess?: (subscription?: { id: number; status: string }) => void;
   onCancel?: () => void;
 }
 

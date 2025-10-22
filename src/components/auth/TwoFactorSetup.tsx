@@ -34,7 +34,7 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
       setQrCode(qrCode);
       setSecretKey(secret);
       setStep('scan');
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message || t('account.twoFactor.error.enableFailed'));
     } finally {
       setIsLoading(false);
@@ -51,7 +51,7 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
       const codes = await TwoFactorService.confirmTwoFactor(verificationCode);
       setRecoveryCodes(codes);
       setStep('recovery');
-    } catch (err: any) {
+    } catch (err: unknown) {
       if (err instanceof ValidationException) {
         setError(err.errors.code?.[0] || t('account.twoFactor.error.invalidCode'));
       } else {

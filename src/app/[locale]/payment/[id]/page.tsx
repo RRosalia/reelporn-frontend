@@ -43,7 +43,7 @@ export default function PaymentStatusPage() {
           setShowExpiredModal(true);
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to fetch payment status:', err);
       setError(err.message || t('failedToLoadData'));
     } finally {
@@ -56,7 +56,7 @@ export default function PaymentStatusPage() {
     if (!paymentId) return;
 
     // Get the global Echo instance
-    const echoInstance = (window as any).Echo;
+    const echoInstance = window.Echo;
     if (!echoInstance) {
       console.warn('[Echo] Echo instance not found on window');
       return;
@@ -237,7 +237,7 @@ export default function PaymentStatusPage() {
       } else {
         throw new Error('No payment ID returned');
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to retry payment:', err);
       setRetryError(err.message || 'Failed to create new payment. Please try again.');
     } finally {

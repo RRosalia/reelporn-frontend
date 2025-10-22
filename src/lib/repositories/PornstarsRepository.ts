@@ -15,7 +15,7 @@ class PornstarsRepository {
   async getAll(filters: PornstarFilters = {}): Promise<PaginatedResponse<Pornstar>> {
     try {
       // Sort parameters alphabetically as required by API
-      const sortedParams: Record<string, any> = {};
+      const sortedParams: Record<string, string | number | boolean> = {};
       const keys = Object.keys(filters).sort();
       keys.forEach(key => {
         const value = filters[key as keyof PornstarFilters];

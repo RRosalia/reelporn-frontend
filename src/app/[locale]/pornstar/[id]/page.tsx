@@ -30,7 +30,7 @@ function PornstarProfilePage() {
                 setError(null);
                 const data = await PornstarsRepository.getBySlug(slug);
                 setPornstar(data);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error('Error fetching pornstar:', err);
 
                 if (err instanceof NotFoundException || err.name === 'NotFoundException') {

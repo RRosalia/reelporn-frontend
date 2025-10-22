@@ -33,8 +33,11 @@ export function usePaymentWebSocket(
   const [latestUpdate, setLatestUpdate] = useState<PaymentStatusUpdate | null>(null);
 
   const handlePaymentUpdate = useCallback(
-    (event: any) => {
-      const update: PaymentStatusUpdate = event.payment || event;
+    (event: unknown) => {
+      const eventData = event as { payment?: PaymentStatusUpdate } | PaymentStatusUpdate;
+      const update: PaymentStatusUpdate = (eventData && typeof eventData === 'object' && 'payment' in eventData && eventData.payment)
+        ? eventData.payment
+        : eventData as PaymentStatusUpdate;
       setLatestUpdate(update);
 
       if (onUpdate) {
@@ -88,8 +91,11 @@ export function useUserPaymentNotifications(
   onPaymentUpdate?: (update: PaymentStatusUpdate) => void
 ) {
   const handleUpdate = useCallback(
-    (event: any) => {
-      const update: PaymentStatusUpdate = event.payment || event;
+    (event: unknown) => {
+      const eventData = event as { payment?: PaymentStatusUpdate } | PaymentStatusUpdate;
+      const update: PaymentStatusUpdate = (eventData && typeof eventData === 'object' && 'payment' in eventData && eventData.payment)
+        ? eventData.payment
+        : eventData as PaymentStatusUpdate;
 
       if (onPaymentUpdate) {
         onPaymentUpdate(update);

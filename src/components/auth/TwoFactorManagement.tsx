@@ -26,7 +26,7 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
       const codes = await TwoFactorService.getRecoveryCodes();
       setRecoveryCodes(codes);
       setShowRecoveryCodes(true);
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message || t('account.twoFactor.error.fetchCodesFailed'));
     } finally {
       setIsLoading(false);
@@ -47,7 +47,7 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
       setRecoveryCodes(codes);
       setShowRecoveryCodes(true);
       setSuccess(t('account.twoFactor.manage.regenerateSuccess'));
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message || t('account.twoFactor.error.regenerateFailed'));
     } finally {
       setIsLoading(false);
@@ -80,7 +80,7 @@ const TwoFactorManagement: React.FC<TwoFactorManagementProps> = ({ onDisabled })
     try {
       await TwoFactorService.disableTwoFactor(disableCode);
       onDisabled();
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message || t('account.twoFactor.error.disableFailed'));
       setIsLoading(false);
     }
