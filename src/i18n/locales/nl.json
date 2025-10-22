@@ -307,7 +307,7 @@
     "message": "We nemen onze verantwoordelijkheid om te voorkomen dat minderjarigen toegang krijgen tot inhoud voor volwassenen zeer serieus. Als u denkt dat u deze pagina per ongeluk heeft bereikt, sluit dan dit venster en neem contact op met ons ondersteuningsteam.",
     "geo": {
       "title": "Toegang niet beschikbaar in uw regio",
-      "message": "Het spijt ons, maar onze service is niet beschikbaar in {land}. Deze beperking is ingesteld vanwege lokale regelgeving en wettelijke vereisten."
+      "message": "Het spijt ons, maar onze service is niet beschikbaar in {country}. Deze beperking is ingesteld vanwege lokale regelgeving en wettelijke vereisten."
     }
   },
   "parental": {

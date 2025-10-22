@@ -307,7 +307,7 @@
     "message": "Wir nehmen unsere Verantwortung, Minderjährige vom Zugriff auf Inhalte für Erwachsene abzuhalten, sehr ernst. Wenn Sie glauben, dass Sie diese Seite irrtümlich erreicht haben, schließen Sie bitte dieses Fenster und kontaktieren Sie unser Support-Team.",
     "geo": {
       "title": "Zugang in Ihrer Region nicht verfügbar",
-      "message": "Es tut uns leid, aber unser Dienst ist in {Land} nicht verfügbar. Diese Einschränkung beruht auf lokalen Vorschriften und gesetzlichen Bestimmungen."
+      "message": "Es tut uns leid, aber unser Dienst ist in {country} nicht verfügbar. Diese Einschränkung beruht auf lokalen Vorschriften und gesetzlichen Bestimmungen."
     }
   },
   "parental": {

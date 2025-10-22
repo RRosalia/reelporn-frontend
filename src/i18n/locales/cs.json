@@ -307,7 +307,7 @@
     "message": "Nos tomamos muy en serio nuestra responsabilidad de evitar que los menores accedan al contenido para adultos. Si crees que has llegado a esta página por error, cierra esta ventana y contacta a nuestro equipo de soporte.",
     "geo": {
       "title": "Přístup není ve vašem regionu k dispozici",
-      "message": "Je nám líto, ale naše služba není v {krajině} dostupná. Toto omezení platí z důvodu místních předpisů a zákonných požadavků."
+      "message": "Je nám líto, ale naše služba není v {country} dostupná. Toto omezení platí z důvodu místních předpisů a zákonných požadavků."
     }
   },
   "parental": {

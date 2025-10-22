@@ -307,7 +307,7 @@
     "message": "Prendiamo molto sul serio la nostra responsabilità di impedire ai minori di accedere a contenuti per adulti. Se pensi di essere arrivato a questa pagina per errore, chiudi questa finestra e contatta il nostro team di supporto.",
     "geo": {
       "title": "Accesso non disponibile nella vostra regione",
-      "message": "Siamo spiacenti, ma il nostro servizio non è disponibile in {paese}. Questa restrizione è dovuta alle normative locali e ai requisiti legali."
+      "message": "Siamo spiacenti, ma il nostro servizio non è disponibile in {country}. Questa restrizione è dovuta alle normative locali e ai requisiti legali."
     }
   },
   "parental": {

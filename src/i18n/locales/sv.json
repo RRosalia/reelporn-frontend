@@ -307,7 +307,7 @@
     "message": "Nos tomamos muy en serio nuestra responsabilidad de evitar que los menores accedan al contenido para adultos. Si crees que has llegado a esta página por error, cierra esta ventana y contacta a nuestro equipo de soporte.",
     "geo": {
       "title": "Åtkomst inte tillgänglig i din region",
-      "message": "Vi beklagar, men vår tjänst är inte tillgänglig i {land}. Denna begränsning gäller på grund av lokala bestämmelser och rättsliga krav."
+      "message": "Vi beklagar, men vår tjänst är inte tillgänglig i {country}. Denna begränsning gäller på grund av lokala bestämmelser och rättsliga krav."
     }
   },
   "parental": {
