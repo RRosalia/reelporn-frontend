@@ -1,5 +1,9 @@
 {
   "dateFormat": "m/d/Y",
+  "test": {
+    "welcomeMessage": "Welcome {username}, you have {count} new notifications!",
+    "simpleMessage": "This is a test translation"
+  },
   "header": {
     "home": "Home",
     "categories": "Categories",
