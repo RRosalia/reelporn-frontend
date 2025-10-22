@@ -1,0 +1,148 @@
+/* Contact Page Styles */
+.contact-page {
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    padding-top: 10px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(194, 51, 138, 0.5);
+    box-shadow: 0 10px 30px rgba(194, 51, 138, 0.2);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.contact-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-card-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-email-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8c537;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-email-link:hover {
+    color: #c2338a;
+    text-decoration: underline;
+}
+
+.contact-note {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.hours-list {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hours-list p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.hours-list i {
+    color: #f8c537;
+    margin-right: 10px;
+}
+
+.faq-link {
+    color: #c2338a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.faq-link:hover {
+    color: #f8c537;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 32px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .contact-card-title {
+        font-size: 20px;
+    }
+
+    .contact-card-description {
+        font-size: 14px;
+    }
+}

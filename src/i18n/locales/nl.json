@@ -1,4 +1,5 @@
 {
+  "dateFormat": "d-m-Y",
   "header": {
     "home": "Home",
     "categories": "Categorieën",
@@ -375,9 +376,9 @@
     }
   },
   "pornstars": {
-    "title": "Pornsterren",
+    "title": "Personages",
     "subtitle": "Bekijk onze {count} geweldige artiesten",
-    "noResults": "Geen pornsterren gevonden die voldoen aan uw filters",
+    "noResults": "Geen personages gevonden die voldoen aan uw filters",
     "sort": {
       "popular": "Meest Populair",
       "newest": "Nieuwste",
@@ -385,7 +386,7 @@
       "mostViewed": "Meest Bekeken"
     },
     "pagination": {
-      "showing": "Toont {start}-{end} van {total} pornsterren"
+      "showing": "Toont {start}-{end} van {total} personages"
     },
     "filters": {
       "title": "Filters",
@@ -405,7 +406,7 @@
       "allEthnicities": "Alle Etniciteiten"
     },
     "errors": {
-      "fetchFailed": "Kan pornsterren niet laden. Probeer het opnieuw."
+      "fetchFailed": "Kan personages niet laden. Probeer het opnieuw."
     }
   },
   "pornstar": {
@@ -765,7 +766,7 @@
       "contact": {
         "title": "Contactinformatie",
         "intro": "Voor vragen over deze Servicevoorwaarden, neem contact met ons op via:",
-        "email": "legal@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -828,7 +829,7 @@
         "item4": "Overdraagbaarheid: Uw gegevens ontvangen in een overdraagbaar formaat",
         "item5": "Bezwaar: Bezwaar maken tegen bepaalde verwerking van uw informatie",
         "item6": "Beperking: Beperkte verwerking van uw informatie aanvragen",
-        "outro": "Om deze rechten uit te oefenen, neem contact met ons op via privacy@reelporn.ai"
+        "outro": "Om deze rechten uit te oefenen, neem contact met ons op via support@reelporn.ai"
       },
       "cookies": {
         "title": "Cookies en Tracking",
@@ -881,10 +882,10 @@
       "contact": {
         "title": "Contactinformatie",
         "intro": "Als u vragen heeft over dit Privacybeleid of onze privacypraktijken, neem dan contact met ons op:",
-        "email": "privacy@reelporn.ai",
+        "email": "support@reelporn.ai",
         "dpoTitle": "Functionaris voor Gegevensbescherming",
         "dpo": "ReelPorn Juridische Afdeling",
-        "dpoEmail": "dpo@reelporn.ai"
+        "dpoEmail": "support@reelporn.ai"
       }
     }
   },
@@ -933,60 +934,6 @@
       "lastUpdated": "Laatst Bijgewerkt"
     }
   },
-  "section2257": {
-    "title": "18 U.S.C. 2257 Nalevingskennisgeving",
-    "subtitle": "Verklaring van Naleving van Administratieve Vereisten",
-    "sections": {
-      "compliance": {
-        "title": "Nalevingsverklaring",
-        "content1": "Alle visuele afbeeldingen die op deze website worden weergegeven, of het nu gaat om daadwerkelijk seksueel expliciet gedrag, gesimuleerde seksuele inhoud of anderszins, zijn visuele afbeeldingen van personen die ten minste 18 jaar oud waren toen die visuele afbeeldingen werden gemaakt.",
-        "content2": "Alle andere visuele afbeeldingen die op deze website worden weergegeven, zijn vrijgesteld van de bepalingen van 18 U.S.C. sectie 2257 en 28 C.F.R. 75 omdat genoemde visuele afbeeldingen niet bestaan uit afbeeldingen van gedrag zoals specifiek vermeld in 18 U.S.C sectie 2256 (2) (A) tot (D), maar slechts afbeeldingen zijn van niet-seksueel expliciete naaktheid, of afbeeldingen zijn van gesimuleerd seksueel gedrag, of anderszins zijn vrijgesteld omdat de visuele afbeeldingen vóór 3 juli 1995 zijn gemaakt."
-      },
-      "custodian": {
-        "title": "Bewaarder van Administratie",
-        "intro": "De eigenaren en exploitanten van ReelPorn.ai zetten zich in voor naleving van de Amerikaanse federale wet 18 U.S.C. 2257 en alle bijbehorende regelgeving.",
-        "custodianTitle": "De Bewaarder van Administratie voor ReelPorn.ai is:",
-        "name": "ReelPorn Juridische Naleving",
-        "role": "Bewaarder van Administratie",
-        "department": "Nalevingsafdeling"
-      },
-      "producers": {
-        "title": "Inhoudproducenten",
-        "intro": "Met betrekking tot alle visuele afbeeldingen die op deze website worden weergegeven, of het nu gaat om daadwerkelijk seksueel expliciet gedrag, gesimuleerde seksuele inhoud of anderszins, is alle inhoud verstrekt door externe producenten, webmasters of gebruikers van de website die hebben gegarandeerd dat:",
-        "item1": "Zij de bewaarder zijn van de administratie voor alle verstrekte inhoud",
-        "item2": "Alle modellen, acteurs, actrices en andere personen die verschijnen in visuele afbeeldingen ouder waren dan achttien jaar op het moment van het maken van dergelijke afbeeldingen",
-        "item3": "Zij de vereiste administratie bijhouden volgens de Amerikaanse wet 18 U.S.C. 2257",
-        "item4": "Alle inhoud en afgebeelde activiteiten consensueel zijn"
-      },
-      "original": {
-        "title": "Oorspronkelijke Producenten",
-        "intro1": "De oorspronkelijke producenten van de visuele inhoud op deze website zijn verschillende externe entiteiten. Elke producent houdt administratie bij in overeenstemming met de vereisten zoals uiteengezet in 18 U.S.C. 2257 en de regelgeving.",
-        "intro2": "Voor administratie met betrekking tot specifieke inhoud dienen de volgende entiteiten als bewaarder van administratie voor hun respectievelijke producties:",
-        "item1": "Door gebruikers geüploade inhoud: Individuele uploaders zijn verantwoordelijk voor het bijhouden van hun eigen 2257-administratie",
-        "item2": "Gelicentieerde inhoud: Oorspronkelijke producent behoudt de bewaring van administratie",
-        "item3": "Partnerinhoud: Partnerstudio's houden hun respectievelijke administratie bij"
-      },
-      "exemptions": {
-        "title": "Vrijstellingen",
-        "intro": "Sommige inhoud die op deze website wordt weergegeven, is vrijgesteld van de administratieve vereisten van 18 U.S.C. 2257, waaronder:",
-        "item1": "Visuele afbeeldingen van alleen niet-seksueel expliciete naaktheid",
-        "item2": "Visuele afbeeldingen gemaakt vóór 3 juli 1995",
-        "item3": "Visuele afbeeldingen die geen gedrag afbeelden zoals beschreven in 18 U.S.C. 2256(2)(A)",
-        "item4": "Inhoud die alleen gesimuleerd seksueel gedrag bevat waarbij geen daadwerkelijk seksueel gedrag heeft plaatsgevonden"
-      },
-      "legal": {
-        "title": "Juridische Informatie",
-        "content1": "Belangrijk: ReelPorn.ai functioneert als een platform en produceert geen originele inhoud. Alle inhoud wordt verstrekt door externe producenten die hebben verklaard en gegarandeerd dat zij voldoen aan alle toepasselijke wetten, inclusief 18 U.S.C. 2257.",
-        "content2": "Elke persoon die inhoud uploadt, indient of anderszins verstrekt aan ReelPorn.ai verklaart en garandeert dat hij/zij heeft voldaan aan de administratieve vereisten van 18 U.S.C. 2257 met betrekking tot dergelijke inhoud."
-      },
-      "contact": {
-        "title": "Contactinformatie",
-        "intro": "Voor vragen over 2257-naleving of om toegang tot administratie aan te vragen, neem contact op met:",
-        "email": "legal@reelporn.ai"
-      },
-      "lastUpdated": "Laatst Bijgewerkt"
-    }
-  },
   "cookiePolicy": {
     "title": "Cookiebeleid",
     "subtitle": "Hoe we cookies en vergelijkbare technologieën gebruiken",
@@ -1022,22 +969,42 @@
         "essential": {
           "title": "Essentiële Cookies",
           "description": "Deze cookies zijn noodzakelijk voor het goed functioneren van de website. Ze maken basisfuncties mogelijk zoals paginanavigatie, toegang tot beveiligde gebieden en leeftijdsverificatie.",
-          "items": ["Sessiebeheer", "Leeftijdsverificatiestatus", "Beveiligingstokens", "Taakverdeling"]
+          "items": [
+            "Sessiebeheer",
+            "Leeftijdsverificatiestatus",
+            "Beveiligingstokens",
+            "Taakverdeling"
+          ]
         },
         "functional": {
           "title": "Functionele Cookies",
           "description": "Deze cookies maken verbeterde functionaliteit en personalisatie mogelijk. Ze kunnen door ons of door externe providers worden ingesteld wiens diensten we gebruiken.",
-          "items": ["Taalvoorkeuren", "Videospeler-instellingen", "Recent bekeken inhoud", "Gebruikersinterface-aanpassing"]
+          "items": [
+            "Taalvoorkeuren",
+            "Videospeler-instellingen",
+            "Recent bekeken inhoud",
+            "Gebruikersinterface-aanpassing"
+          ]
         },
         "analyticsType": {
           "title": "Analytische Cookies",
           "description": "Deze cookies helpen ons te begrijpen hoe bezoekers met onze website omgaan door anoniem informatie te verzamelen en te rapporteren.",
-          "items": ["Google Analytics", "Paginaweergave tracking", "Gebruikersgedrag analyse", "Prestatiebewaking"]
+          "items": [
+            "Google Analytics",
+            "Paginaweergave tracking",
+            "Gebruikersgedrag analyse",
+            "Prestatiebewaking"
+          ]
         },
         "advertising": {
           "title": "Advertentiecookies",
           "description": "Deze cookies worden gebruikt om advertenties te leveren die relevant zijn voor u en uw interesses. Ze helpen ook om het aantal keren dat u een advertentie ziet te beperken.",
-          "items": ["Gerichte advertenties", "Advertentiefrequentie beperking", "Campagneprestatiemeting", "Op interesse gebaseerde advertenties"]
+          "items": [
+            "Gerichte advertenties",
+            "Advertentiefrequentie beperking",
+            "Campagneprestatiemeting",
+            "Op interesse gebaseerde advertenties"
+          ]
         }
       },
       "thirdParty": {
@@ -1083,7 +1050,7 @@
       "contact": {
         "title": "Neem Contact Met Ons Op",
         "intro": "Als u vragen heeft over ons gebruik van cookies of dit beleid, neem dan contact met ons op:",
-        "email": "privacy@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
     }
   },
@@ -1187,7 +1154,7 @@
       "title": "Neem Contact Op",
       "general": {
         "title": "Algemene Vragen",
-        "email": "info@reelporn.ai"
+        "email": "support@reelporn.ai"
       },
       "support": {
         "title": "Ondersteuning",
@@ -1195,8 +1162,37 @@
       },
       "business": {
         "title": "Zakelijk",
-        "email": "business@reelporn.ai"
+        "email": "support@reelporn.ai"
       }
+    }
+  },
+  "contactPage": {
+    "title": "Neem Contact Op",
+    "subtitle": "Neem contact op met ons team",
+    "description": "Heeft u een vraag of hulp nodig? Wij zijn er om te helpen. Neem contact met ons op via onderstaande gegevens.",
+    "email": {
+      "title": "E-mail Ondersteuning",
+      "description": "Voor algemene vragen, technische ondersteuning of zakelijke partnerschappen",
+      "address": "support@reelporn.ai",
+      "responseTime": "We reageren meestal binnen 24-48 uur"
+    },
+    "dmca": {
+      "title": "DMCA Meldingen",
+      "description": "Voor auteursrechtinbreuk meldingen",
+      "address": "dmca@reelporn.ai",
+      "note": "Voeg alle vereiste informatie toe zoals beschreven in ons DMCA-beleid"
+    },
+    "hours": {
+      "title": "Ondersteuningsuren",
+      "description": "Ons ondersteuningsteam is beschikbaar:",
+      "weekdays": "Maandag - Vrijdag: 9:00 - 18:00 (EST)",
+      "weekends": "Zaterdag - Zondag: 10:00 - 16:00 (EST)"
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "description": "Op zoek naar snelle antwoorden? Bekijk onze",
+      "link": "FAQ-pagina",
+      "suffix": "voor veelgestelde vragen en oplossingen."
     }
   },
   "payment": {
@@ -1210,7 +1206,12 @@
     "total": "Totaal",
     "month": "maand",
     "proceedToPayment": "Doorgaan naar Betaling",
-    "processing": "Verwerken...",
+    "processing": {
+      "title": "Transactie Gedetecteerd!",
+      "message": "We hebben uw betaling ontvangen en deze wordt verwerkt op de blockchain.",
+      "waiting": "Wachten op bevestigingen",
+      "safeToClose": "Uw abonnement wordt automatisch geactiveerd zodra het minimale aantal bevestigingen is bereikt. U kunt deze pagina veilig sluiten."
+    },
     "loading": "Laden...",
     "continue": "Doorgaan",
     "sendExactly": "Stuur Exact",
@@ -1231,12 +1232,6 @@
     "awaitingPayment": "Wachten op Betaling",
     "processingPayment": "Betaling Verwerken",
     "paymentCompleted": "Betaling Voltooid!",
-    "processing": {
-      "title": "Transactie Gedetecteerd!",
-      "message": "We hebben uw betaling ontvangen en deze wordt verwerkt op de blockchain.",
-      "waiting": "Wachten op bevestigingen",
-      "safeToClose": "Uw abonnement wordt automatisch geactiveerd zodra het minimale aantal bevestigingen is bereikt. U kunt deze pagina veilig sluiten."
-    },
     "completed": {
       "title": "Betaling Voltooid!",
       "message": "Uw transactie is succesvol bevestigd en uw abonnement is nu actief.",

@@ -15,7 +15,9 @@
     "cypress:run:firefox": "cypress run --browser firefox",
     "test:e2e": "cypress run",
     "test:e2e:headed": "cypress run --headed",
-    "test:e2e:video": "cypress run --config video=true"
+    "test:e2e:video": "cypress run --config video=true",
+    "translate:sync": "node scripts/sync-translations.js",
+    "translate:validate": "node scripts/validate-translations.js"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -40,6 +42,7 @@
     "@types/react-gtm-module": "^2.0.3",
     "autoprefixer": "^10.4.21",
     "cypress": "^15.5.0",
+    "deepl-node": "^1.20.0",
     "eslint": "^9",
     "eslint-config-next": "beta",
     "postcss": "^8.4.49",

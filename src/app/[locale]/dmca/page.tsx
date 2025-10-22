@@ -2,10 +2,12 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { formatDate, getLastUpdatedDate } from '@/lib/utils/dateFormatter';
 import './styles.css';
 
 function DMCAPage() {
     const t = useTranslations('dmca');
+    const dateFormat = useTranslations()('dateFormat');
 
     return (
         <div className="dmca-page">
@@ -79,7 +81,7 @@ function DMCAPage() {
 
                             <section className="content-section">
                                 <p className="text-gray-400">
-                                    {t('sections.lastUpdated')}: {new Date().toLocaleDateString()}
+                                    {t('sections.lastUpdated')}: {formatDate(getLastUpdatedDate(), dateFormat)}
                                 </p>
                             </section>
                         </div>

@@ -149,11 +149,6 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/2257">
-                                    2257
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/cookie-policy">
                                     {t('footer.cookies')}
                                 </Link>
@@ -169,7 +164,7 @@ function Footer() {
                         <p className="footer-description max-w-md">
                             {t('footer.description')}
                         </p>
-                        <div className="social-links mt-4">
+                        {/* <div className="social-links mt-4">
                             <a href="#" className="social-icon" aria-label="Twitter">
                                 <i className="bi bi-twitter"></i>
                             </a>
@@ -182,7 +177,7 @@ function Footer() {
                             <a href="#" className="social-icon" aria-label="Telegram">
                                 <i className="bi bi-telegram"></i>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

@@ -14,10 +14,12 @@ export async function GET() {
     <loc>${BASE_URL}/content-sitemap.xml</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
+  <!--
   <sitemap>
     <loc>${BASE_URL}/categories-sitemap.xml</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
+  -->
   <sitemap>
     <loc>${BASE_URL}/pornstars-sitemap.xml</loc>
     <lastmod>${lastmod}</lastmod>

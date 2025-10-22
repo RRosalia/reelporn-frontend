@@ -1,0 +1,138 @@
+/* Privacy Policy Page Styles */
+.legal-page {
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+    padding-top: 80px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c2338a 0%, #f8c537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-section {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+.content-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(194, 51, 138, 0.5);
+}
+
+.content-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0 15px 0;
+}
+
+.content-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+}
+
+.content-section ol,
+.content-section ul {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.content-section li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #f8c537;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #c2338a;
+}
+
+.contact-link i {
+    font-size: 24px;
+}
+
+.highlight-box {
+    background: rgba(194, 51, 138, 0.1);
+    border: 1px solid rgba(194, 51, 138, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.highlight-box p {
+    margin-bottom: 10px;
+}
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 32px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+
+    .content-card {
+        padding: 30px 20px;
+    }
+
+    .content-section h2 {
+        font-size: 22px;
+    }
+
+    .content-section h3 {
+        font-size: 18px;
+    }
+}

@@ -116,6 +116,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
+        <meta name="rating" content="RTA-5042-1996-1400-1577-RTA"></meta>
         <script
           dangerouslySetInnerHTML={{
             __html: `
