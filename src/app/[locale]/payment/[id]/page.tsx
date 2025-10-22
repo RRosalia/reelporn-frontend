@@ -30,10 +30,6 @@ export default function PaymentStatusPage() {
   const fetchPaymentStatus = useCallback(async () => {
     try {
       const data = await CheckoutRepository.getPaymentStatus(paymentId);
-      console.log('Payment status response:', data);
-      if (data.crypto) {
-        console.log('Confirmations:', data.crypto.confirmations, '- Min:', data.crypto.min_confirmations, '- Required:', data.crypto.required_confirmations);
-      }
 
       setPaymentData(data);
       setError(null);
@@ -67,28 +63,16 @@ export default function PaymentStatusPage() {
     }
 
     const channelName = `payments.${paymentId}`;
-    console.log('[Echo] Attempting to subscribe to PRIVATE channel:', channelName);
-    console.log('[Echo] Echo instance available:', !!echoInstance);
-    console.log('[Echo] Connector state:', echoInstance.connector?.pusher?.connection?.state);
-
     const channel = echoInstance.private(channelName);
 
     // Log channel subscription events
-    channel.subscribed(() => {
-      console.log('[Echo] ✅ Successfully subscribed to channel:', channelName);
-    });
-
     channel.error((error: any) => {
-      console.error('[Echo] ❌ Channel subscription error:', error);
+      console.error('[Echo] Channel subscription error:', error);
     });
 
     // TODO: Add event listeners here when events are defined
 
-    console.log('[Echo] Channel object created:', channel);
-    console.log('[Echo] Active channels:', Object.keys(echoInstance.connector?.channels || {}));
-
     return () => {
-      console.log('[Echo] Unsubscribing from channel:', channelName);
       echoInstance.leaveChannel(channelName);
     };
   }, [paymentId, fetchPaymentStatus]);
@@ -174,10 +158,6 @@ export default function PaymentStatusPage() {
         subscription_id: paymentData.subscription?.id,
         timestamp: new Date().toISOString()
       });
-      console.log('GTM Ecommerce Purchase Event Tracked:', {
-        transaction_id: paymentId,
-        value: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0
-      });
     }
   }, [paymentData?.status, paymentId, paymentData]);
 
@@ -209,7 +189,6 @@ export default function PaymentStatusPage() {
         }
 
         window.dataLayer.push(eventData);
-        console.log('GTM Event Tracked:', eventData);
       }
 
       if (type === 'amount') {
@@ -281,7 +260,6 @@ export default function PaymentStatusPage() {
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
       });
-      console.log('GTM Event Tracked: payment_wallet_open');
     }
 
     // Try to open the wallet app
