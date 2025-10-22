@@ -80,4 +80,5 @@ class PaymentRepository {
   }
 }
 
-export default new PaymentRepository();
+const paymentRepository = new PaymentRepository();
+export default paymentRepository;

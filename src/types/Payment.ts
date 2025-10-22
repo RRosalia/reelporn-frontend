@@ -89,7 +89,7 @@ export interface QuickTransactionConfig {
   amount: number;
   currencyCode: string; // Crypto currency code
   description: string;
-  metadata?: Record<string, any>; // Additional data to send to backend
+  metadata?: Record<string, unknown>; // Additional data to send to backend
   onSuccess?: (transactionId: string) => void;
   onCancel?: () => void;
   onError?: (error: string) => void;

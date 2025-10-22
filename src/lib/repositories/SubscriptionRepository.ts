@@ -46,4 +46,5 @@ class SubscriptionRepository {
   }
 }
 
-export default new SubscriptionRepository();
+const subscriptionRepository = new SubscriptionRepository();
+export default subscriptionRepository;

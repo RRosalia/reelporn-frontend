@@ -60,4 +60,5 @@ class ReelRepository {
   }
 }
 
-export default new ReelRepository();
+const reelRepository = new ReelRepository();
+export default reelRepository;

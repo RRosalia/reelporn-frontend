@@ -86,4 +86,5 @@ class TwoFactorRepository {
   }
 }
 
-export default new TwoFactorRepository();
+const twoFactorRepository = new TwoFactorRepository();
+export default twoFactorRepository;

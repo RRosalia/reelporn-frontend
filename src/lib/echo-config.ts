@@ -3,9 +3,17 @@
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 
+// Extend Window interface to include Pusher and Echo
+declare global {
+  interface Window {
+    Pusher: typeof Pusher;
+    Echo: Echo;
+  }
+}
+
 // Make Pusher available globally for Echo
 if (typeof window !== 'undefined') {
-  (window as any).Pusher = Pusher;
+  window.Pusher = Pusher;
 }
 
 /**
@@ -14,16 +22,40 @@ if (typeof window !== 'undefined') {
  */
 let echoConfigured = false;
 
+interface EchoConfig {
+  broadcaster: string;
+  key: string;
+  wsHost: string;
+  wsPort: number;
+  wssPort: number;
+  forceTLS: boolean;
+  enabledTransports: string[];
+  authEndpoint: string;
+  auth?: {
+    headers: {
+      Authorization: string;
+    };
+  };
+}
+
+interface EchoConnector {
+  pusher?: {
+    connection: {
+      bind: (event: string, callback: (error: Error) => void) => void;
+    };
+  };
+}
+
 export function initializeEcho(authToken?: string | null) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:9000';
   const authEndpoint = `${apiUrl}/broadcasting/auth`;
 
   // Disconnect existing Echo instance if reconfiguring with auth
-  if (echoConfigured && (window as any).Echo) {
-    (window as any).Echo.disconnect();
+  if (echoConfigured && window.Echo) {
+    window.Echo.disconnect();
   }
 
-  const echoConfig: any = {
+  const echoConfig: EchoConfig = {
     broadcaster: 'reverb',
     key: process.env.NEXT_PUBLIC_REVERB_APP_KEY || 'app-key',
     wsHost: process.env.NEXT_PUBLIC_REVERB_HOST || 'localhost',
@@ -45,14 +77,14 @@ export function initializeEcho(authToken?: string | null) {
 
   // Create Echo instance and attach to window
   const echoInstance = new Echo(echoConfig);
-  (window as any).Echo = echoInstance;
+  window.Echo = echoInstance;
 
   echoConfigured = true;
 
   // Add connection event listeners for error tracking
-  const connector = echoInstance.connector as any;
+  const connector = echoInstance.connector as EchoConnector;
   if (connector?.pusher) {
-    connector.pusher.connection.bind('error', (error: any) => {
+    connector.pusher.connection.bind('error', (error: Error) => {
       console.error('[Echo] WebSocket error:', error);
     });
   }

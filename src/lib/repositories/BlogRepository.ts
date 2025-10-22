@@ -104,4 +104,5 @@ class BlogRepository {
   }
 }
 
-export default new BlogRepository();
+const blogRepository = new BlogRepository();
+export default blogRepository;
