@@ -47,7 +47,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           install: false
-          build: bun run build
+          build: bun run build:coverage
           start: bun run start
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
@@ -56,6 +56,8 @@ jobs:
         env:
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'http://localhost:9000' }}
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000' }}
+          CYPRESS_COVERAGE: true
+          NODE_ENV: test
 
       - name: Upload Cypress screenshots on failure
         uses: actions/upload-artifact@v4
@@ -72,6 +74,24 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore
+
+      - name: Upload code coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: code-coverage
+          path: coverage
+          if-no-files-found: ignore
+
+      - name: Generate coverage summary
+        if: always()
+        run: |
+          if [ -f coverage/coverage-summary.json ]; then
+            echo "## Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            cat coverage/coverage-summary.json >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
 
   type-check:
     runs-on: ubuntu-latest

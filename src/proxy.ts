@@ -104,7 +104,14 @@ export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // Check if request is from a crawler
+  const userAgent = request.headers.get('user-agent') || 'unknown';
   const isFromCrawler = await isCrawler(request);
+
+  // Temporary logging to debug Google Search Console Live Test
+  if (userAgent.toLowerCase().includes('google')) {
+    console.log('[CRAWLER DEBUG] User-Agent:', userAgent);
+    console.log('[CRAWLER DEBUG] Is crawler detected:', isFromCrawler);
+  }
 
   // Run next-intl middleware
   const response = intlMiddleware(request);

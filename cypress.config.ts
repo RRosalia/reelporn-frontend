@@ -2,7 +2,7 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:5173',
+    baseUrl: process.env.CYPRESS_BASE_URL || 'http://localhost:3000',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.ts',
     viewportWidth: 1280,
@@ -13,7 +13,10 @@ export default defineConfig({
     screenshotOnRunFailure: true,
     screenshotsFolder: 'cypress/screenshots',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Code coverage plugin
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      require('@cypress/code-coverage/task')(on, config);
+      return config;
     },
   },
   component: {
