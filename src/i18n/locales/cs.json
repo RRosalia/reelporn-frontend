@@ -1,1 +1,1425 @@
-{}
+{
+  "dateFormat": "m/d/Y",
+  "test": {
+    "welcomeMessage": "Vítejte {username}, máte {count} nová oznámení!",
+    "simpleMessage": "Jedná se o zkušební překlad"
+  },
+  "header": {
+    "home": "Home",
+    "categories": "Kategorie",
+    "about": "O stránkách",
+    "contact": "Kontakt",
+    "watch": "Sledujte",
+    "login": "Přihlášení",
+    "register": "Registrace"
+  },
+  "profile": {
+    "register": "Registrace",
+    "login": "Přihlášení",
+    "liked": "Oblíbená videa",
+    "account": "Můj účet",
+    "subscriptions": "Předplatné",
+    "faq": "OTÁZKY A ODPOVĚDI",
+    "support": "Kontaktovat podporu",
+    "logout": "Odhlášení"
+  },
+  "home": {
+    "hero": {
+      "title": "Objevte horké 15vteřinové navijáky",
+      "subtitle": "Sledujte tisíce krátkých klipů pro dospělé. Táhněte prstem, lajkujte a užívejte si.",
+      "watchNow": "Sledujte nyní",
+      "getPremium": "Získat prémii Premium",
+      "featuredContent": "Doporučený obsah",
+      "trending": "🔥 Trendy"
+    },
+    "stats": {
+      "videos": "Videa",
+      "users": "Aktivní uživatelé",
+      "daily": "Denní aktualizace"
+    },
+    "viewAll": "Zobrazit vše",
+    "search": {
+      "placeholder": "Vyhledávání videí..."
+    },
+    "loadMore": "Načíst další videa",
+    "premium": {
+      "title": "Odemknutí prémiových funkcí",
+      "subtitle": "Získejte neomezený přístup k exkluzivnímu obsahu a funkcím",
+      "feature1": "Streamování bez reklam",
+      "feature2": "Kvalita videa HD a 4K",
+      "feature3": "Stahování videí pro sledování offline",
+      "feature4": "Včasný přístup k novým verzím",
+      "cta": "Získat Premium nyní"
+    }
+  },
+  "category": {
+    "trending": "Trendy",
+    "new": "Nový",
+    "popular": "Oblíbené stránky",
+    "amateur": "Amatérské",
+    "professional": "Profesionální",
+    "featured": "Doporučené stránky",
+    "topRated": "Nejlépe hodnocené",
+    "mostViewed": "Nejsledovanější"
+  },
+  "login": {
+    "title": "Vítejte zpět!",
+    "welcomeBack": "Vítejte zpět!",
+    "signIn": "Přihlásit se",
+    "hero": {
+      "title": "Jste připraveni pokračovat?",
+      "subtitle": "Váš oblíbený obsah čeká",
+      "description": "Přístup k personalizované knihovně a pokračování tam, kde jste skončili"
+    },
+    "email": "E-mailová adresa",
+    "emailPlaceholder": "Zadejte svůj e-mail",
+    "username": "Uživatelské jméno nebo e-mail",
+    "password": "Heslo",
+    "passwordPlaceholder": "Zadejte své heslo",
+    "rememberMe": "Pamatuj si mě",
+    "forgotPassword": "Zapomněli jste heslo?",
+    "submit": "Přihlásit se",
+    "loading": "Přihlášení...",
+    "noAccount": "Nemáte účet?",
+    "createAccount": "Vytvořit účet",
+    "error": {
+      "rateLimitExceeded": "Příliš mnoho pokusů o přihlášení. Zkuste to prosím později.",
+      "invalidCredentials": "Neplatný e-mail nebo heslo. Zkuste to prosím znovu.",
+      "validationFailed": "Zkontrolujte zadání a zkuste to znovu.",
+      "network": "Chyba sítě. Zkontrolujte prosím připojení a zkuste to znovu.",
+      "server": "Chyba serveru. Zkuste to prosím později.",
+      "generic": "Došlo k chybě. Zkuste to prosím znovu."
+    },
+    "info": {
+      "loginRequired": "Pro pokračování se prosím přihlaste.",
+      "logoutSuccess": "Byli jste úspěšně odhlášeni."
+    }
+  },
+  "account": {
+    "title": "Můj účet",
+    "profile": {
+      "title": "Informace o profilu",
+      "name": "Název",
+      "nickname": "Přezdívka",
+      "nicknameHint": "You can only change your nickname once per month.",
+      "email": "Email Address",
+      "emailVerified": "Email Verified",
+      "update": "Aktualizace profilu",
+      "updating": "Aktualizace...",
+      "updateSuccess": "Profil byl úspěšně aktualizován!"
+    },
+    "password": {
+      "title": "Změna hesla",
+      "current": "Aktuální heslo",
+      "new": "Nové heslo",
+      "confirm": "Potvrzení nového hesla",
+      "update": "Změna hesla",
+      "updating": "Změna...",
+      "updateSuccess": "Heslo bylo úspěšně změněno!",
+      "mismatch": "Nová hesla se neshodují."
+    },
+    "logout": {
+      "title": "Odhlášení",
+      "description": "Odhlášení z účtu",
+      "button": "Odhlášení",
+      "confirm": "Určitě se chcete odhlásit?"
+    },
+    "info": {
+      "title": "Informace o účtu",
+      "memberId": "ID člena",
+      "memberSince": "Členem od",
+      "lastUpdated": "Poslední aktualizace"
+    },
+    "error": {
+      "validationFailed": "Zkontrolujte zadání a zkuste to znovu.",
+      "network": "Chyba sítě. Zkontrolujte prosím připojení a zkuste to znovu.",
+      "generic": "Došlo k chybě. Zkuste to prosím znovu."
+    },
+    "twoFactor": {
+      "title": "Dvoufaktorové ověřování",
+      "description": "Povolením dvoufaktorového ověřování přidáte k účtu další úroveň zabezpečení.",
+      "enable": "Povolení dvoufaktorového ověřování",
+      "enabling": "Umožnění...",
+      "enableButton": "Povolení dvoufaktorového ověřování",
+      "enableSuccess": "Dvoufaktorové ověřování bylo úspěšně povoleno!",
+      "scanQR": "Naskenujte tento QR kód pomocí aplikace autentizátoru (Google Authenticator, Authy atd.):",
+      "secretKey": "Tajný klíč",
+      "confirmCode": "Zadejte potvrzovací kód",
+      "confirm": "Potvrzení a povolení",
+      "confirming": "Potvrzení...",
+      "enabled": "povolená 2FA",
+      "recoveryCodes": "Kódy pro obnovu",
+      "recoveryCodesDescription": "Tyto kódy pro obnovení uložte na bezpečném místě. Můžete je použít k přístupu ke svému účtu, pokud ztratíte přístup k aplikaci autentizátoru.",
+      "showRecoveryCodes": "Zobrazit kódy pro obnovení",
+      "hideRecoveryCodes": "Skrýt kódy pro obnovení",
+      "regenerateRecoveryCodes": "Regenerovat kódy",
+      "regenerateConfirm": "Jste si jistý? Tím se zneplatní vaše stávající kódy pro obnovení.",
+      "regenerateSuccess": "Kódy pro obnovení úspěšně regenerovány!",
+      "disable": "Zakázat 2FA",
+      "disableConfirm": "Opravdu chcete vypnout dvoufaktorové ověřování?",
+      "disableSuccess": "Dvoufaktorové ověřování bylo zakázáno.",
+      "setup": {
+        "title": "Povolení dvoufaktorového ověřování",
+        "description": "Přidejte k účtu další úroveň zabezpečení. Při každém přihlášení budete muset zadat kód z aplikace autentizátoru.",
+        "enable": "Povolení 2FA",
+        "enabling": "Umožnění...",
+        "cancel": "Zrušit"
+      },
+      "scan": {
+        "title": "Nastavení aplikace Authenticator",
+        "instruction": "Naskenujte tento QR kód pomocí aplikace autentizátoru (Google Authenticator, Authy atd.):",
+        "showSecret": "Zobrazit tajný klíč pro ruční zadávání",
+        "hideSecret": "Skrýt tajný klíč",
+        "enterCode": "Po naskenování kódu QR zadejte šestimístný kód z aplikace autentizátoru pro ověření:",
+        "verify": "Ověřit a pokračovat",
+        "verifying": "Ověřování..."
+      },
+      "recovery": {
+        "title": "Uložení kódů pro zotavení",
+        "important": "Důležité",
+        "warning": "Tyto kódy pro obnovení uložte na bezpečném místě. Můžete je použít k přístupu ke svému účtu, pokud ztratíte přístup k aplikaci autentizátoru.",
+        "download": "Kódy ke stažení",
+        "copy": "Kopírování do schránky",
+        "continue": "Uložil jsem si kódy pro obnovení"
+      },
+      "manage": {
+        "title": "Dvoufaktorové ověřování",
+        "enabled": "Na vašem účtu je aktuálně povoleno dvoufaktorové ověřování.",
+        "description": "Váš účet je chráněn dvoufaktorovým ověřováním. Níže můžete spravovat své kódy pro obnovení nebo vypnout 2FA.",
+        "recoveryCodes": "Kódy pro obnovu",
+        "viewCodes": "Zobrazit kódy pro zotavení",
+        "hideCodes": "Skrýt kódy",
+        "loading": "Načítání...",
+        "regenerate": "Regenerovat kódy pro obnovení",
+        "regenerating": "Regenerace...",
+        "regenerateConfirm": "Jste si jisti, že chcete obnovit kódy pro obnovení? Staré kódy obnovení se tím zneplatní.",
+        "regenerateSuccess": "Kódy pro obnovení úspěšně regenerovány! Uložte je na bezpečné místo.",
+        "copiedSuccess": "Kódy pro obnovu zkopírované do schránky!",
+        "disableTitle": "Vypnutí dvoufaktorového ověřování",
+        "disableDescription": "Vypnutím funkce 2FA bude váš účet méně bezpečný. Jste si jisti, že chcete pokračovat?",
+        "disable": "Zakázat 2FA",
+        "disabling": "Vypnutí...",
+        "disableConfirm": "Opravdu chcete vypnout dvoufaktorové ověřování? Tím se váš účet stane méně bezpečným.",
+        "confirmDisable": "Potvrzení a zakázání 2FA"
+      },
+      "error": {
+        "enableFailed": "Nepodařilo se povolit dvoufaktorové ověřování. Zkuste to prosím znovu.",
+        "invalidCode": "Zadaný dvoufaktorový ověřovací kód byl neplatný.",
+        "verifyFailed": "Nepodařilo se ověřit kód. Zkuste to prosím znovu.",
+        "fetchCodesFailed": "Nepodařilo se načíst kódy pro obnovení. Zkuste to prosím znovu.",
+        "regenerateFailed": "Nepodařilo se regenerovat kódy pro obnovení. Zkuste to prosím znovu.",
+        "disableFailed": "Nepodařilo se zakázat dvoufaktorové ověřování. Zkuste to prosím znovu."
+      }
+    }
+  },
+  "register": {
+    "title": "Připojte se k nám ještě dnes!",
+    "choosePlan": "Vyberte si svůj plán členství"
+  },
+  "signup": {
+    "title": "Vyberte si své členství",
+    "name": "Celé jméno",
+    "username": "Uživatelské jméno",
+    "email": "E-mailová adresa",
+    "password": "Heslo",
+    "confirmPassword": "Potvrzení hesla",
+    "paymentMethod": "Způsob platby",
+    "creditCard": "Kreditní karta",
+    "paypal": "PayPal",
+    "crypto": "Kryptoměna",
+    "submit": "Dokončení registrace",
+    "processing": "Zpracování...",
+    "createAccount": "Vytvořit účet",
+    "subscribeFor": "Přihlaste se k odběru",
+    "selectPlan": "Výběr plánu",
+    "cancel": "Zrušit",
+    "billedAt": "Účtováno na",
+    "haveAccount": "Už máte účet?",
+    "clickHere": "Klikněte zde",
+    "promo": {
+      "title": "Sledujte exkluzivní obsah nyní!",
+      "subtitle": "Připojte se k tisícům spokojených členů",
+      "description": "Získejte neomezený přístup k prémiovému obsahu"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "Žádné reklamy",
+      "description": "Odstranění všech reklam"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Plný přístup ke všem funkcím"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "Nejvyšší zážitek pro VIP"
+    },
+    "from": "z",
+    "perMonth": "měsíc",
+    "popular": "Oblíbené stránky",
+    "bestValue": "Nejlepší hodnota",
+    "exclusive": "Exkluzivní",
+    "save": "Uložit",
+    "features": "Zahrnuté funkce",
+    "duration": {
+      "1month": "1 měsíc",
+      "6months": "6 měsíců",
+      "12months": "12 měsíců"
+    },
+    "feature": {
+      "noAds": "Zážitek bez reklam",
+      "basicSupport": "Základní podpora",
+      "hdStreaming": "Streamování ve vysokém rozlišení",
+      "downloadVideos": "Stáhnout videa",
+      "exclusiveContent": "Exkluzivní obsah",
+      "prioritySupport": "Prioritní podpora",
+      "4kStreaming": "streamování v rozlišení 4K Ultra HD",
+      "unlimitedDownloads": "Neomezené stahování",
+      "earlyAccess": "Předčasný přístup k novému obsahu",
+      "vipSupport": "podpora VIP 24/7",
+      "customPlaylist": "Vlastní seznamy skladeb"
+    }
+  },
+  "footer": {
+    "description": "Vaše hlavní destinace pro vysoce kvalitní krátký video obsah. Objevujte, sledujte a sdílejte úžasné filmy.",
+    "quickLinks": "Rychlé odkazy",
+    "shorts": "Šortky",
+    "account": "Účet",
+    "support": "Podpora",
+    "legal": "Právní",
+    "terms": "Podmínky služby",
+    "privacy": "Zásady ochrany osobních údajů",
+    "dmca": "DMCA",
+    "cookies": "Zásady používání souborů cookie",
+    "language": "Jazyk",
+    "cookieSettings": "Nastavení souborů cookie",
+    "copyright": "Všechna práva vyhrazena"
+  },
+  "age": {
+    "title": "Toto jsou webové stránky pro dospělé (18+)",
+    "notice": "Upozornění pro uživatele",
+    "warning1": "Tyto webové stránky obsahují materiály omezené věkem, včetně nahoty a explicitních zobrazení sexuálních aktivit. Vstupem potvrzujete, že je vám nejméně 18 let nebo že jste plnoletí v jurisdikci, ze které na webové stránky přistupujete, a že souhlasíte se zobrazením sexuálně explicitního obsahu.",
+    "warning2": "Na naší stránce rodičovské kontroly se dozvíte, jak můžete snadno zablokovat přístup na tyto stránky.",
+    "enter": "Je mi 18 let nebo více - Zadejte",
+    "exit": "Je mi méně než 18 let - Exit",
+    "parentalInfo": "Další informace najdete na naší",
+    "parentalLink": "stránka rodičovské kontroly"
+  },
+  "blocked": {
+    "title": "Tyto webové stránky jsou určeny výhradně pro uživatele starší 18 let.",
+    "message": "Naši odpovědnost za to, abychom zabránili přístupu nezletilých k obsahu pro dospělé, bereme velmi vážně. Pokud se domníváte, že jste se na tuto stránku dostali omylem, zavřete prosím toto okno a kontaktujte náš tým podpory.",
+    "geo": {
+      "title": "Přístup není ve vašem regionu k dispozici",
+      "message": "Omlouváme se, ale naše služba není v {country} dostupná. Toto omezení platí z důvodu místních předpisů a zákonných požadavků."
+    }
+  },
+  "parental": {
+    "title": "Rodičovská kontrola",
+    "subtitle": "Ochrana dětí před přístupem k obsahu omezenému věkem",
+    "intro": {
+      "title": "O rodičovské kontrole",
+      "text1": "Společnost ReelPorn se zavazuje zabránit přístupu nezletilých k obsahu pro dospělé. Důrazně doporučujeme rodičům a opatrovníkům, aby se aktivně podíleli na sledování a kontrole používání internetu svými dětmi.",
+      "text2": "Na této stránce najdete informace o různých metodách a nástrojích, které můžete použít k zabránění přístupu na webové stránky pro dospělé, včetně ReelPorn.com, na zařízeních používaných dětmi."
+    },
+    "methods": {
+      "title": "Jak blokovat obsah pro dospělé",
+      "intro": "Existuje několik účinných způsobů, jak omezit přístup na webové stránky pro dospělé:",
+      "router": {
+        "title": "Blokování na úrovni směrovače",
+        "text": "Většina moderních routerů obsahuje funkce rodičovské kontroly, které umožňují blokovat konkrétní webové stránky nebo kategorie obsahu ve všech zařízeních připojených k domácí síti. Pokyny k nastavení naleznete v dokumentaci ke svému směrovači nebo je získáte od výrobce směrovače."
+      },
+      "isp": {
+        "title": "Kontroly poskytovatele internetových služeb (ISP)",
+        "text": "Mnoho poskytovatelů internetových služeb nabízí služby rodičovské kontroly, které mohou filtrovat obsah ještě předtím, než se dostane k vám domů. Informace o dostupných možnostech rodičovské kontroly a o tom, jak je aktivovat, získáte u svého poskytovatele internetových služeb."
+      },
+      "device": {
+        "title": "Ovládání na úrovni zařízení",
+        "text": "Počítače i mobilní zařízení mají zabudované funkce rodičovské kontroly. V systému Windows použijte funkci Zabezpečení rodiny. Na Macu použijte Čas u obrazovky a Rodičovskou kontrolu. V zařízeních se systémem iOS a Android použijte vestavěné funkce Čas u obrazovky a Family Link."
+      }
+    },
+    "software": {
+      "title": "Filtrační software třetích stran",
+      "intro": "Několik renomovaných společností nabízí komplexní řešení rodičovské kontroly a filtrování obsahu:",
+      "netnanny": "Komplexní software pro filtrování internetu a rodičovskou kontrolu pro zařízení se systémy Windows, Mac, Android a iOS.",
+      "norton": "Bezplatná služba rodičovské kontroly od společnosti Norton, která pomáhá chránit děti před nevhodným obsahem.",
+      "qustodio": "Multiplatformní software pro rodičovskou kontrolu s filtrováním webu, časovými limity a sledováním aktivity.",
+      "opendns": "Bezplatná služba filtrování založená na DNS, která blokuje obsah pro dospělé na úrovni sítě."
+    },
+    "resources": {
+      "title": "Další zdroje",
+      "text": "Další informace o bezpečnosti na internetu a ochraně dětí na internetu naleznete v těchto zdrojích:"
+    },
+    "notice": {
+      "title": "Důležité upozornění",
+      "text": "Přestože se snažíme zabránit přístupu nezletilých k našim stránkám prostřednictvím ověřování věku, konečnou odpovědnost za zabránění přístupu dětí k obsahu pro dospělé nesou rodiče a opatrovníci. Důrazně doporučujeme zavést více úrovní ochrany pomocí výše popsaných metod."
+    }
+  },
+  "cookies": {
+    "title": "Používáme soubory cookie",
+    "description": "Soubory cookie a podobné technologie používáme k vylepšení vašeho prohlížení, personalizaci obsahu a reklam, poskytování funkcí sociálních médií a analýze návštěvnosti. Můžete si vybrat, které soubory cookie chcete přijmout.",
+    "acceptAll": "Přijmout všechny soubory cookie",
+    "customize": "Přizpůsobení souborů cookie",
+    "cancel": "Zrušit",
+    "savePreferences": "Uložení předvoleb",
+    "preferences": {
+      "title": "Předvolby souborů cookie",
+      "description": "Používáme různé typy souborů cookie, abychom optimalizovali váš zážitek z našich webových stránek. Kliknutím na níže uvedené kategorie se dozvíte více a můžete si přizpůsobit své preference. Upozorňujeme, že blokování některých typů souborů cookie může mít vliv na vaše používání."
+    },
+    "essential": {
+      "title": "Základní soubory cookie",
+      "description": "Tyto soubory cookie jsou nezbytné pro fungování webových stránek a nelze je zakázat. Obvykle se nastavují pouze v reakci na vaše akce, jako je nastavení preferencí ochrany osobních údajů, přihlášení nebo vyplnění formulářů."
+    },
+    "functional": {
+      "title": "Funkční soubory cookie",
+      "description": "Tyto soubory cookie umožňují rozšířené funkce a personalizaci, například videa a živé chaty. Můžeme je nastavit my nebo poskytovatelé třetích stran, jejichž služby jsme přidali na naše stránky."
+    },
+    "analytics": {
+      "title": "Analytické soubory cookie",
+      "description": "Tyto soubory cookie nám umožňují počítat návštěvy a zdroje návštěvnosti, abychom mohli měřit a zlepšovat výkon našich stránek. Pomáhají nám pochopit, které stránky jsou nejoblíbenější a které nejméně, a zjistit, jak se návštěvníci na webu pohybují."
+    },
+    "advertising": {
+      "title": "Soubory cookie pro cílení/reklamu",
+      "description": "Tyto soubory cookie mohou být na našich stránkách nastaveny našimi reklamními partnery. Tyto společnosti je mohou používat k vytvoření profilu vašich zájmů a zobrazování relevantních reklam na jiných stránkách."
+    }
+  },
+  "pornstars": {
+    "title": "Postavy",
+    "subtitle": "Prohlédněte si naše {count} úžasné interprety",
+    "noResults": "Nebyly nalezeny žádné znaky odpovídající vašim filtrům",
+    "sort": {
+      "popular": "Nejoblíbenější",
+      "newest": "Nejnovější",
+      "mostVideos": "Většina videí",
+      "mostViewed": "Nejsledovanější"
+    },
+    "pagination": {
+      "showing": "Zobrazení znaků {start}-{end} z {total}"
+    },
+    "filters": {
+      "title": "Filtry",
+      "clearAll": "Vymazat vše",
+      "name": "Vyhledávání podle jména",
+      "namePlaceholder": "Zadejte jméno...",
+      "age": "Věk",
+      "country": "Země",
+      "allCountries": "Všechny země",
+      "height": "Výška",
+      "weight": "Hmotnost",
+      "hairColor": "Barva vlasů",
+      "allHairColors": "Všechny barvy vlasů",
+      "eyeColor": "Barva očí",
+      "allEyeColors": "Všechny barvy očí",
+      "ethnicity": "Etnická příslušnost",
+      "allEthnicities": "Všechna etnika"
+    },
+    "errors": {
+      "fetchFailed": "Nepodařilo se načíst znaky. Zkuste to prosím znovu."
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Videa",
+      "views": "Zobrazení",
+      "likes": "Líbí se mi",
+      "followers": "Následovníci"
+    },
+    "follow": "Sledujte",
+    "following": "Po",
+    "message": "Zpráva",
+    "tip": "Odeslat tip",
+    "tabs": {
+      "videos": "Videa",
+      "photos": "Fotografie",
+      "about": "O stránkách"
+    },
+    "loadMore": "Načíst další videa",
+    "about": {
+      "bio": "Životopis",
+      "categories": "Kategorie",
+      "social": "Sociální média",
+      "details": "Osobní údaje"
+    },
+    "details": {
+      "age": "Věk",
+      "country": "Země",
+      "height": "Výška",
+      "weight": "Hmotnost",
+      "measurements": "Měření",
+      "hair": "Barva vlasů",
+      "eyes": "Barva očí",
+      "ethnicity": "Etnická příslušnost"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Přístup zakázán",
+      "message": "Omlouváme se, ale nemáte oprávnění k přístupu na tuto stránku. Tato oblast může být omezena nebo vyžaduje zvláštní oprávnění."
+    },
+    "404": {
+      "title": "Stránka nebyla nalezena",
+      "message": "Ups! Hledaná stránka neexistuje. Možná byla přesunuta nebo smazána."
+    },
+    "500": {
+      "title": "Chyba vnitřního serveru",
+      "message": "Na naší straně se něco pokazilo. Naši technici byli informováni a pracují na odstranění problému."
+    },
+    "503": {
+      "title": "Služba není k dispozici",
+      "message": "V současné době probíhá údržba nebo máme vysokou návštěvnost. Naši technici byli informováni a pracují na obnovení služby."
+    },
+    "default": {
+      "title": "Něco se pokazilo",
+      "message": "Došlo k neočekávané chybě. Zkuste to prosím později."
+    },
+    "goHome": "Vrátit se domů",
+    "serverNotice": "Zkuste to prosím později. Naši technici byli informováni a pracují na co nejrychlejším vyřešení tohoto problému."
+  },
+  "subscriptions": {
+    "meta": {
+      "title": "Prémiové předplatné - odemkněte exkluzivní obsah | ReelPorn",
+      "description": "Odemkněte si prémiové funkce a exkluzivní obsah s našimi plány předplatného. Zabezpečené platby v kryptoměnách pro vaše soukromí."
+    },
+    "title": "Prémiové plány předplatného",
+    "subtitle": "Odemkněte exkluzivní obsah a prémiové funkce",
+    "billing": {
+      "monthly": "Měsíční",
+      "yearly": "Roční",
+      "saveUpTo": "Ušetřete až 40 %"
+    },
+    "price": {
+      "perMonth": "/měsíc",
+      "billedYearly": "účtováno ročně",
+      "free": "Zdarma",
+      "forever": "Navždy"
+    },
+    "button": {
+      "getCurrentPlan": "Současný plán",
+      "getStarted": "Začněte"
+    },
+    "comparison": {
+      "title": "Podrobné srovnání funkcí",
+      "feature": "Funkce"
+    },
+    "faq": {
+      "title": "Nejčastější dotazy k předplatnému",
+      "changePlans": {
+        "question": "Mohu kdykoli změnit plány?",
+        "answer": "Ano! Své předplatné můžete kdykoli upgradovat nebo downgradovat. Změny se projeví v dalším zúčtovacím cyklu."
+      },
+      "cancel": {
+        "question": "Jak to mohu zrušit?",
+        "answer": "Předplatné můžete kdykoli zrušit v nastavení účtu. Přístup vám zůstane zachován až do konce vašeho zúčtovacího období."
+      },
+      "payment": {
+        "question": "Jaké platební metody jsou přijímány?",
+        "answer": "Pro vaše soukromí a bezpečnost přijímáme platby v kryptoměnách."
+      }
+    },
+    "guarantee": {
+      "title": "30denní záruka vrácení peněz",
+      "description": "Nejste spokojeni? Získejte plnou náhradu do 30 dnů bez jakýchkoli otázek."
+    },
+    "loading": "Načítání plánů předplatného...",
+    "error": {
+      "title": "Nelze načíst plány",
+      "description": "Nemohli jsme načíst plány předplatného. Zkuste to prosím později.",
+      "retry": "Opakování"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Nejnovější zprávy, aktualizace a poznatky",
+    "allCategories": "Všechny kategorie",
+    "minRead": "min čtení",
+    "views": "zobrazení",
+    "previous": "Předchozí",
+    "next": "Další",
+    "noPosts": "Nebyly nalezeny žádné příspěvky na blogu",
+    "backToBlog": "Zpět na blog",
+    "relatedPosts": "Související příspěvky",
+    "notFound": "Příspěvek na blogu nebyl nalezen",
+    "notFoundDescription": "Hledaný příspěvek na blogu neexistuje nebo byl odstraněn."
+  },
+  "terms": {
+    "title": "Podmínky služby",
+    "lastUpdated": "Poslední aktualizace",
+    "sections": {
+      "acceptance": {
+        "title": "Přijetí podmínek",
+        "content1": "Přístupem na stránky ReelPorn.ai (\"služba\") nebo jejich používáním souhlasíte s tím, že se budete řídit těmito podmínkami služby a všemi platnými zákony a předpisy. Pokud s některou z těchto podmínek nesouhlasíte, je vám zakázáno používat tyto stránky nebo k nim přistupovat.",
+        "content2": "Abyste mohli tuto službu používat, musíte být starší 18 let (nebo plnoletí ve vaší jurisdikci). Používáním Služby prohlašujete a zaručujete, že tento věkový požadavek splňujete."
+      },
+      "account": {
+        "title": "Registrace účtu",
+        "intro": "Pro přístup k některým funkcím služby je nutné se zaregistrovat. Souhlasíte s tím, že:",
+        "item1": "Poskytnout přesné, aktuální a úplné informace při registraci",
+        "item2": "Udržovat a včas aktualizovat informace o svém účtu",
+        "item3": "Zachování bezpečnosti a důvěrnosti vašeho hesla",
+        "item4": "Přijmout odpovědnost za všechny činnosti, které se odehrávají pod vaším účtem",
+        "item5": "Okamžitě nás informovat o jakémkoli neoprávněném použití vašeho účtu",
+        "outro": "Vyhrazujeme si právo pozastavit nebo zrušit účty, které porušují tyto podmínky nebo se dopouštějí podvodných či nezákonných činností."
+      },
+      "subscription": {
+        "title": "Předplatné a platba",
+        "intro": "Některé aspekty služby vyžadují placené předplatné. Zakoupením předplatného souhlasíte s úhradou všech poplatků spojených se zvoleným plánem.",
+        "item1": "Předplatné se automaticky obnovuje, pokud není zrušeno před datem obnovení",
+        "item2": "Ceny se mohou změnit s 30denním předstihem",
+        "item3": "Náhrady jsou poskytovány pouze v případech vyžadovaných zákonem nebo podle našeho uvážení",
+        "item4": "Jste zodpovědní za všechny daně spojené s vaším předplatným",
+        "item5": "Platební údaje musí být přesné a aktuální"
+      },
+      "userContent": {
+        "title": "Uživatelský obsah",
+        "intro": "Uživatelé mohou do služby vkládat obsah. Odesláním obsahu:",
+        "item1": "Udělit nám celosvětovou, nevýhradní a bezplatnou licenci na používání, zobrazování a šíření vašeho obsahu",
+        "item2": "Ručíte za to, že vlastníte veškerý obsah, který jste odeslali, nebo máte na něj práva",
+        "item3": "Potvrzení, že všechny osoby ve vašem obsahu jsou starší 18 let a souhlasily s jeho šířením",
+        "item4": "Přijmout odpovědnost za případné vedení záznamů 2257",
+        "item5": "Souhlasit s tím, že nebudete odesílat obsah, který je nezákonný, škodlivý nebo porušuje práva ostatních"
+      },
+      "prohibited": {
+        "title": "Zakázané chování",
+        "intro": "Souhlasíte s tím, že nebudete:",
+        "item1": "Používat Službu k nezákonným účelům nebo v rozporu s jakýmikoliv zákony",
+        "item2": "Nahrávání obsahu, který zahrnuje nezletilé osoby nebo osoby, které s tím nesouhlasí",
+        "item3": "Obtěžovat, zneužívat nebo poškozovat ostatní uživatele",
+        "item4": "Vydávat se za jakoukoli osobu nebo subjekt",
+        "item5": "Zasahovat do služby nebo serverů nebo je narušovat",
+        "item6": "Pokusit se získat neoprávněný přístup k jakékoli části Služby",
+        "item7": "Použití automatizovaných systémů nebo softwaru pro získávání dat ze služby",
+        "item8": "Přenášet viry, malware nebo jiný škodlivý kód",
+        "item9": "Porušovat práva duševního vlastnictví jiných osob",
+        "item10": "Účastnit se jakéhokoli chování, které omezuje nebo brání ostatním v používání Služby"
+      },
+      "intellectualProperty": {
+        "title": "Duševní vlastnictví",
+        "content1": "Služba a její původní obsah (s výjimkou uživatelského obsahu) jsou a zůstanou výhradním vlastnictvím společnosti ReelPorn a jejích poskytovatelů licence. Služba je chráněna autorským právem, ochrannou známkou a dalšími zákony o duševním vlastnictví.",
+        "content2": "Naše ochranné známky a obchodní vzhled nesmí být použity v souvislosti s jakýmkoli produktem nebo službou bez našeho předchozího písemného souhlasu."
+      },
+      "privacy": {
+        "title": "Ochrana osobních údajů",
+        "content": "Používání Služby se řídí také našimi Zásadami ochrany osobních údajů. Prostudujte si prosím naše Zásady ochrany osobních údajů, kterými se řídí i tyto stránky a které informují uživatele o našich postupech při shromažďování údajů."
+      },
+      "dmca": {
+        "title": "Dodržování DMCA",
+        "content": "Respektujeme práva duševního vlastnictví a budeme reagovat na platná oznámení DMCA o stažení. Pokud se domníváte, že váš obsah byl použit neoprávněně, kontaktujte našeho zástupce pro DMCA na adrese dmca@reelporn.ai."
+      },
+      "disclaimers": {
+        "title": "Odmítnutí odpovědnosti",
+        "content1": "SLUŽBA JE POSKYTOVÁNA \"TAK, JAK JE\", BEZ JAKÝCHKOLI ZÁRUK, AŤ UŽ VÝSLOVNÝCH NEBO PŘEDPOKLÁDANÝCH. ZŘÍKÁME SE VŠECH ZÁRUK VČETNĚ PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL A NEPORUŠOVÁNÍ PRÁV.",
+        "content2": "Nezaručujeme, že služba bude nepřetržitá, bezpečná nebo bezchybná. Nezaručujeme přesnost ani úplnost jakéhokoli obsahu."
+      },
+      "liability": {
+        "title": "Omezení odpovědnosti",
+        "content1": "V MAXIMÁLNÍM ROZSAHU POVOLENÉM ZÁKONEM SPOLEČNOST REELPORN NEODPOVÍDÁ ZA ŽÁDNÉ NEPŘÍMÉ, NÁHODNÉ, ZVLÁŠTNÍ, NÁSLEDNÉ NEBO SANKČNĚ NAHRAZOVANÉ ŠKODY ANI ZA ZTRÁTU ZISKU NEBO PŘÍJMŮ, AŤ UŽ VZNIKLA PŘÍMO NEBO NEPŘÍMO, NEBO ZA ZTRÁTU DAT, POUŽÍVÁNÍ, DOBRÉ POVĚSTI NEBO JINÉ NEHMOTNÉ ZTRÁTY.",
+        "content2": "Naše celková odpovědnost nepřesáhne částku, kterou jste nám zaplatili během dvanácti měsíců předcházejících pojistné události."
+      },
+      "indemnification": {
+        "title": "Odškodnění",
+        "content": "Souhlasíte s tím, že odškodníte společnost ReelPorn a její vedoucí pracovníky, ředitele, zaměstnance a zástupce za jakékoli nároky, škody, ztráty, závazky a výdaje (včetně právních poplatků) vyplývající z vašeho používání služby nebo porušení těchto podmínek."
+      },
+      "termination": {
+        "title": "Ukončení",
+        "content1": "Váš účet a přístup ke službě můžeme okamžitě zrušit nebo pozastavit, a to bez předchozího upozornění nebo odpovědnosti, z jakéhokoli důvodu, včetně porušení těchto podmínek.",
+        "content2": "Ukončením služby okamžitě zaniká vaše právo na její používání. Všechna ustanovení těchto Podmínek, která by podle své povahy měla zůstat v platnosti i po ukončení, zůstávají v platnosti."
+      },
+      "governingLaw": {
+        "title": "Rozhodné právo",
+        "content": "Tyto Podmínky se řídí a vykládají v souladu se zákony jurisdikce, ve které ReelPorn působí, bez ohledu na její kolizní ustanovení. Souhlasíte s tím, že se podřídíte osobní jurisdikci soudů nacházejících se v této jurisdikci."
+      },
+      "changes": {
+        "title": "Změny podmínek",
+        "content1": "Vyhrazujeme si právo tyto podmínky kdykoli změnit. O všech podstatných změnách budeme uživatele informovat zveřejněním nových podmínek na této stránce a aktualizací data \"Poslední aktualizace\".",
+        "content2": "Vaše další používání Služby po jakýchkoli změnách znamená souhlas s novými podmínkami."
+      },
+      "contact": {
+        "title": "Kontaktní informace",
+        "intro": "V případě dotazů týkajících se těchto podmínek služby nás prosím kontaktujte na adrese:",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace",
+    "sections": {
+      "infoCollect": {
+        "title": "Informace, které shromažďujeme",
+        "provideTitle": "Informace, které poskytujete",
+        "provide1": "Informace o účtu (e-mail, uživatelské jméno, heslo)",
+        "provide2": "Informace o profilu (zobrazované jméno, životopis, preference)",
+        "provide3": "Platební údaje (zpracovávané bezpečně prostřednictvím poskytovatelů třetích stran)",
+        "provide4": "Nahraný obsah (videa, fotografie, komentáře)",
+        "provide5": "Komunikace s námi (lístky podpory, e-maily)",
+        "autoTitle": "Automaticky shromažďované informace",
+        "auto1": "IP adresa a informace o zařízení",
+        "auto2": "Typ prohlížeče a operační systém",
+        "auto3": "Údaje o používání (navštívené stránky, zhlédnutá videa, interakce)",
+        "auto4": "Soubory cookie a podobné sledovací technologie",
+        "auto5": "Údaje o poloze (pouze na úrovni země/regionu)"
+      },
+      "infoUse": {
+        "title": "Jak používáme vaše informace",
+        "intro": "Shromážděné informace používáme k:",
+        "item1": "Poskytování a údržba našich služeb",
+        "item2": "Zpracovávat transakce a odesílat související informace",
+        "item3": "Zasílání administrativních informací a aktualizací",
+        "item4": "Reagovat na vaše připomínky a dotazy",
+        "item5": "Přizpůsobení zkušeností a poskytování doporučení",
+        "item6": "Sledování a analýza používání a trendů",
+        "item7": "Odhalování a prevence podvodů a zneužití",
+        "item8": "Dodržování zákonných povinností"
+      },
+      "infoSharing": {
+        "title": "Sdílení informací",
+        "intro": "Vaše osobní údaje neprodáváme. Za těchto okolností můžeme informace sdílet:",
+        "item1": "Poskytovatelé služeb: S důvěryhodnými třetími stranami, které nám pomáhají s provozem našich služeb",
+        "item2": "Právní požadavky: Pokud to vyžaduje zákon nebo ochrana práv a bezpečnosti",
+        "item3": "Převody podniků: V souvislosti s fúzí, prodejem nebo akvizicí",
+        "item4": "Se souhlasem: Když výslovně souhlasíte se sdílením",
+        "item5": "Souhrnné údaje: Neidentifikovatelné statistické údaje pro analýzu"
+      },
+      "dataSecurity": {
+        "title": "Zabezpečení dat",
+        "intro": "K ochraně vašich osobních údajů zavádíme vhodná technická a organizační bezpečnostní opatření, včetně:",
+        "item1": "Šifrování SSL/TLS pro přenos dat",
+        "item2": "Šifrované ukládání citlivých informací",
+        "item3": "Pravidelné bezpečnostní audity a aktualizace",
+        "item4": "Omezený přístup k osobním údajům",
+        "item5": "Bezpečné zpracování plateb prostřednictvím poskytovatelů splňujících požadavky PCI",
+        "outro": "Žádný způsob přenosu nebo ukládání však není stoprocentně bezpečný. Nemůžeme zaručit absolutní bezpečnost."
+      },
+      "privacyRights": {
+        "title": "Vaše práva na ochranu osobních údajů",
+        "intro": "V závislosti na vaší poloze můžete mít určitá práva týkající se vašich osobních údajů:",
+        "item1": "Přístup: Požádejte o kopii svých osobních údajů",
+        "item2": "Oprava: Žádost o opravu nepřesných informací",
+        "item3": "Vymazání: Požádejte o vymazání svého účtu a souvisejících dat",
+        "item4": "Přenositelnost: Přijímejte data v přenosném formátu",
+        "item5": "Námitka: Vznesení námitky proti určitému zpracování vašich údajů",
+        "item6": "Omezení: Požadavek na omezené zpracování vašich údajů",
+        "outro": "Chcete-li tato práva uplatnit, kontaktujte nás na adrese support@reelporn.ai"
+      },
+      "cookies": {
+        "title": "Soubory cookie a sledování",
+        "content1": "Používáme soubory cookie a podobné technologie, abychom vylepšili váš zážitek. Podrobné informace naleznete v našich Zásadách používání souborů cookie.",
+        "content2": "Soubory cookie můžete ovládat prostřednictvím nastavení prohlížeče a našeho centra pro předvolby souborů cookie."
+      },
+      "thirdParty": {
+        "title": "Služby třetích stran",
+        "intro1": "Naše služba může obsahovat odkazy na webové stránky a služby třetích stran. Nejsme zodpovědní za jejich postupy ochrany osobních údajů. Doporučujeme vám, abyste si prostudovali jejich zásady ochrany osobních údajů.",
+        "intro2": "Mezi služby třetích stran, které využíváme, patří:",
+        "item1": "Zpracovatelé plateb (Stripe, PayPal)",
+        "item2": "Poskytovatelé analytických služeb (Google Analytics)",
+        "item3": "Sítě pro doručování obsahu (CloudFlare)",
+        "item4": "Komunikační nástroje (e-mailové služby)"
+      },
+      "childrenPrivacy": {
+        "title": "Soukromí dětí",
+        "content": "Naše služba je určena výhradně pro dospělé od 18 let. Vědomě neshromažďujeme informace od osob mladších 18 let. Pokud zjistíme, že jsme shromáždili informace od nezletilé osoby, okamžitě je odstraníme."
+      },
+      "dataRetention": {
+        "title": "Uchovávání dat",
+        "intro": "Vaše osobní údaje uchováváme po dobu nezbytně nutnou k:",
+        "item1": "Poskytnout vám naše služby",
+        "item2": "Dodržování zákonných povinností",
+        "item3": "Řešení sporů a vymáhání dohod",
+        "item4": "Vedení obchodních záznamů",
+        "outro": "Když vymažete svůj účet, vymažeme nebo anonymizujeme vaše osobní údaje, s výjimkou případů, kdy je jejich uchování vyžadováno zákonem."
+      },
+      "internationalTransfers": {
+        "title": "Mezinárodní přenosy dat",
+        "content": "Vaše údaje mohou být přenášeny a zpracovávány v jiných zemích, než je vaše země. Tyto země mohou mít odlišné zákony o ochraně osobních údajů. Pro takové přenosy zajišťujeme odpovídající ochranná opatření."
+      },
+      "californiaRights": {
+        "title": "Práva na ochranu osobních údajů v Kalifornii",
+        "intro": "Obyvatelé Kalifornie mají další práva podle kalifornského zákona o ochraně soukromí spotřebitelů (CCPA):",
+        "item1": "Právo vědět, jaké osobní údaje jsou shromažďovány",
+        "item2": "Právo na informace o prodeji nebo zveřejnění osobních údajů",
+        "item3": "Právo odmítnout prodej osobních údajů",
+        "item4": "Právo na nediskriminaci při výkonu práva na soukromí"
+      },
+      "europeanRights": {
+        "title": "Evropská práva na ochranu soukromí",
+        "content": "Pokud se nacházíte v Evropském hospodářském prostoru (EHP), máte podle obecného nařízení o ochraně osobních údajů (GDPR) další práva, včetně práva podat stížnost u místního úřadu pro ochranu osobních údajů."
+      },
+      "policyUpdates": {
+        "title": "Aktualizace těchto zásad",
+        "content1": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O všech změnách vás budeme informovat zveřejněním nových Zásad ochrany osobních údajů na této stránce a aktualizací data \"Poslední aktualizace\".",
+        "content2": "V případě významných změn vám poskytneme další upozornění (například e-mailové oznámení nebo viditelné upozornění na naší službě)."
+      },
+      "contact": {
+        "title": "Kontaktní informace",
+        "intro": "Pokud máte dotazy týkající se těchto zásad ochrany osobních údajů nebo našich postupů ochrany osobních údajů, kontaktujte nás:",
+        "email": "support@reelporn.ai",
+        "dpoTitle": "Pověřenec pro ochranu osobních údajů",
+        "dpo": "Právní oddělení ReelPorn",
+        "dpoEmail": "support@reelporn.ai"
+      }
+    }
+  },
+  "dmca": {
+    "title": "Oznámení DMCA a zásady převzetí",
+    "subtitle": "Dodržování zákona o autorských právech v digitálním tisíciletí",
+    "sections": {
+      "notification": {
+        "title": "Oznámení o porušení autorských práv",
+        "content": "ReelPorn respektuje práva duševního vlastnictví ostatních a očekává, že jeho uživatelé budou dělat totéž. V souladu se zákonem Digital Millennium Copyright Act z roku 1998 (\"DMCA\") budeme rychle reagovat na tvrzení o porušení autorských práv, ke kterému došlo prostřednictvím webových stránek ReelPorn."
+      },
+      "filing": {
+        "title": "Podání oznámení DMCA",
+        "intro": "Pokud se domníváte, že vaše dílo chráněné autorskými právy bylo zkopírováno způsobem, který představuje porušení autorských práv, a je přístupné na těchto stránkách, můžete to oznámit našemu zástupci pro autorská práva, jak je uvedeno v DMCA. Aby byla vaše stížnost podle zákona DMCA platná, musíte písemně poskytnout následující informace:",
+        "item1": "Elektronický nebo fyzický podpis osoby oprávněné jednat jménem vlastníka autorských práv",
+        "item2": "Identifikace díla chráněného autorským právem, o kterém tvrdíte, že bylo porušeno",
+        "item3": "Identifikace materiálu, o němž se tvrdí, že porušuje autorská práva, a místa, kde se na webu nachází",
+        "item4": "Informace, které jsou dostatečné k tomu, abychom vás mohli kontaktovat, jako je vaše adresa, telefonní číslo a e-mailová adresa",
+        "item5": "Prohlášení, že jste v dobré víře přesvědčeni, že použití materiálu způsobem, který je předmětem stížnosti, není povoleno vlastníkem autorských práv, jeho zástupcem nebo zákonem",
+        "item6": "Prohlášení pod hrozbou trestu za křivou přísahu, že výše uvedené informace jsou přesné a že jste vlastníkem autorských práv nebo jste oprávněni jednat jménem vlastníka"
+      },
+      "agent": {
+        "title": "Určený zástupce pro autorská práva",
+        "intro": "Všechna oznámení DMCA zasílejte našemu určenému zástupci:",
+        "email": "dmca@reelporn.ai",
+        "name": "Agent DMCA",
+        "department": "Právní oddělení ReelPorn"
+      },
+      "counter": {
+        "title": "Protinávrh",
+        "intro": "Pokud se domníváte, že váš obsah byl odstraněn nebo přístup k němu byl znemožněn omylem nebo nesprávnou identifikací, můžete u nás podat protioznámení. Aby bylo protioznámení účinné, musí být písemným sdělením, které obsahuje následující údaje:",
+        "item1": "Váš fyzický nebo elektronický podpis",
+        "item2": "Identifikace materiálu, který byl odstraněn nebo ke kterému byl znemožněn přístup, a místo, kde se materiál nacházel před odstraněním nebo znemožněním přístupu",
+        "item3": "Prohlášení pod trestem křivé přísahy, že jste v dobré víře přesvědčeni, že materiál byl odstraněn nebo zakázán v důsledku omylu nebo nesprávné identifikace",
+        "item4": "Vaše jméno, adresa, telefonní číslo a e-mailová adresa",
+        "item5": "Prohlášení, že souhlasíte s příslušností federálního okresního soudu pro soudní obvod, v němž se nachází vaše adresa"
+      },
+      "repeat": {
+        "title": "Opakované porušování předpisů",
+        "content": "V souladu se zákonem DMCA a dalšími platnými zákony jsme přijali politiku ukončování uživatelů, kteří jsou považováni za osoby opakovaně porušující autorská práva, a to za vhodných okolností. Dle vlastního uvážení můžeme také omezit přístup na stránky a/nebo zrušit účty uživatelů, kteří porušují práva duševního vlastnictví jiných osob."
+      },
+      "notice": {
+        "title": "Důležité upozornění",
+        "content": "Upozornění: Podle článku 512(f) zákona DMCA může být každá osoba, která vědomě uvede nepravdivé informace o tom, že materiál nebo činnost porušují autorská práva, vystavena odpovědnosti za škody, včetně nákladů a poplatků za právní zastoupení. Před podáním oznámení nebo protioznámení se poraďte se svým právním poradcem."
+      },
+      "lastUpdated": "Poslední aktualizace"
+    }
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebujete vědět o ReelPornu",
+    "categories": {
+      "general": {
+        "title": "Obecné otázky",
+        "q1": {
+          "question": "Co je ReelPorn?",
+          "answer": "ReelPorn je prémiová platforma pro obsah pro dospělé, která se specializuje na krátký videoobsah (15sekundové kotouče). Poskytujeme zážitek podobný zábavě pro dospělé na TikToku s funkcí swipe, personalizovanými kanály a vysoce kvalitním obsahem generovaným umělou inteligencí."
+        },
+        "q2": {
+          "question": "Je ReelPorn zdarma?",
+          "answer": "ReelPorn nabízí bezplatný i prémiový obsah. Zdarma si můžete prohlížet a sledovat omezený obsah, ale prémiové předplatné vám zpřístupní neomezený přístup ke všem videím, kvalitu HD/4K, funkce stahování a sledování bez reklam."
+        },
+        "q3": {
+          "question": "Jak mohu ověřit svůj věk?",
+          "answer": "Pro přístup k ReelPornu je nutné ověření věku. Při první návštěvě musíte potvrdit, že je vám 18 let nebo více. Jedná se o zákonný požadavek, který zajišťuje, aby nezletilí neměli přístup k obsahu pro dospělé."
+        },
+        "q4": {
+          "question": "Jsou moje data bezpečná a soukromá?",
+          "answer": "Ano, soukromí bereme vážně. Všechna data jsou šifrována, nikdy nesdílíme osobní údaje s třetími stranami bez souhlasu a můžete procházet anonymně. Podrobné informace naleznete v našich Zásadách ochrany osobních údajů."
+        }
+      },
+      "account": {
+        "title": "Účet a předplatné",
+        "q1": {
+          "question": "Jak si mohu vytvořit účet?",
+          "answer": "Klikněte na tlačítko \"Zaregistrovat se\", vyberte si členský plán, zadejte svůj e-mail a vytvořte si heslo. Ověřte svou e-mailovou adresu a můžete začít sledovat!"
+        },
+        "q2": {
+          "question": "Jaké platební metody přijímáte?",
+          "answer": "Přijímáme hlavní kreditní karty (Visa, MasterCard, American Express), PayPal a platby kryptoměnami (Bitcoin, Ethereum). Všechny transakce jsou zpracovávány bezpečně a diskrétně."
+        },
+        "q3": {
+          "question": "Jak mohu zrušit předplatné?",
+          "answer": "Předplatné můžete kdykoli zrušit v nastavení účtu. Přejděte na Profil > Předplatné > Zrušit předplatné. Přístup budete mít i nadále až do konce zúčtovacího období."
+        },
+        "q4": {
+          "question": "Zobrazí se poplatky na mém výpisu jako \"ReelPorn\"?",
+          "answer": "Ne, v zájmu ochrany vašeho soukromí se poplatky na vašem bankovním výpisu zobrazují pod diskrétním fakturačním názvem, například \"RP Media Services\" nebo \"Digital Entertainment Services\"."
+        },
+        "q5": {
+          "question": "Mohu svůj tarif zvýšit nebo snížit?",
+          "answer": "Ano, svůj plán předplatného můžete kdykoli změnit. Nový plán vstoupí v platnost v příštím zúčtovacím cyklu. Případný cenový rozdíl bude poměrně snížen."
+        }
+      },
+      "content": {
+        "title": "Obsah a funkce",
+        "q1": {
+          "question": "Jaký obsah je k dispozici?",
+          "answer": "Nabízíme širokou škálu obsahu pro dospělé ve formátu 15 vteřin, včetně amatérského, profesionálního, různých kategorií a fetišů. Veškerý obsah pochází od ověřených dospělých a splňuje zákonné požadavky."
+        },
+        "q2": {
+          "question": "Mohu si stáhnout videa pro sledování offline?",
+          "answer": "Prémioví členové si mohou stahovat videa pro offline prohlížení. Stahování je šifrované a lze je prohlížet pouze prostřednictvím naší aplikace, dokud je vaše předplatné aktivní."
+        },
+        "q3": {
+          "question": "Jak funguje doporučovací algoritmus?",
+          "answer": "Náš algoritmus poháněný umělou inteligencí se učí na základě vašich zvyklostí, zálib a preferencí a zobrazuje vám přizpůsobený obsah. Čím více s ním komunikujete, tím lepší jsou doporučení."
+        },
+        "q4": {
+          "question": "Mohu nahrát vlastní obsah?",
+          "answer": "Ano, ověření tvůrci mohou nahrávat obsah. Musíte dokončit náš proces ověření tvůrce, poskytnout dokumentaci 2257 a dodržovat naše pokyny k obsahu."
+        },
+        "q5": {
+          "question": "Jak nahlásit nevhodný obsah?",
+          "answer": "Každé video má tlačítko pro nahlášení. Kliknutím na něj nahlásíte obsah, který porušuje naše podmínky, je nepovolený, zahrnuje nezletilé nebo je jinak nevhodný. Všechna hlášení přezkoumáme do 24 hodin."
+        }
+      },
+      "creators": {
+        "title": "Pro tvůrce",
+        "q1": {
+          "question": "Jak se mohu stát ověřeným tvůrcem?",
+          "answer": "Podejte žádost prostřednictvím portálu Creator Portal, předložte průkaz totožnosti vydaný vládou, vyplňte dokumentaci 2257 a projděte naším ověřovacím procesem. Schválení obvykle trvá 24-48 hodin."
+        },
+        "q2": {
+          "question": "Kolik si mohu jako tvůrce vydělat?",
+          "answer": "Tvůrci vydělávají prostřednictvím několika zdrojů příjmů: podílu z reklamy (60 %), tipů od fanoušků, placeného obsahu a předplatného. Nejlepší tvůrci vydělávají tisíce měsíčně."
+        },
+        "q3": {
+          "question": "Jaké jsou požadavky na obsah?",
+          "answer": "Videa musí trvat maximálně 15 sekund, musí mít minimální kvalitu 720p, všichni účastníci musí být starší 18 let a obsah musí být dobrovolný. Zakazujeme nelegální obsah, násilí a materiály, které nejsou dobrovolné."
+        },
+        "q4": {
+          "question": "Jak dostanu zaplaceno?",
+          "answer": "Platby probíhají každý týden prostřednictvím přímého vkladu, služby PayPal nebo kryptoměny. Minimální výplata je 50 dolarů. Podrobné zprávy o výdělcích budete dostávat na svém panelu tvůrce."
+        },
+        "q5": {
+          "question": "Zachovávám si práva na svůj obsah?",
+          "answer": "Ano, vlastnictví obsahu si ponecháváte. Udělujete nám licenci k jeho zobrazení na naší platformě. Svůj obsah můžete kdykoli odstranit z ovládacího panelu tvůrce."
+        }
+      },
+      "technical": {
+        "title": "Technická podpora",
+        "q1": {
+          "question": "Jaká zařízení jsou podporována?",
+          "answer": "ReelPorn funguje ve všech moderních prohlížečích (Chrome, Firefox, Safari, Edge) na počítači i v mobilu. Máme také nativní aplikace pro iOS a Android (dostupné mimo obchody s aplikacemi)."
+        },
+        "q2": {
+          "question": "Proč se přehrávání videa zadrhává?",
+          "answer": "To je obvykle způsobeno pomalým připojením k internetu. Zkuste snížit kvalitu videa v nastavení, zavřít jiné karty/aplikace nebo přepnout na rychlejší síť. Prémioví členové mají přednostní streamování."
+        },
+        "q3": {
+          "question": "Jak mohu vymazat historii prohlížení?",
+          "answer": "Přejděte na Profil > Nastavení soukromí > Vymazat historii. Můžete vymazat celou historii nebo selektivně odstranit položky. Můžete také povolit režim inkognito pro soukromé prohlížení."
+        },
+        "q4": {
+          "question": "Mohu používat VPN?",
+          "answer": "Ano, používání VPN je povoleno a doporučeno kvůli ochraně soukromí. Některé funkce však mohou být omezeny v závislosti na umístění sítě VPN z důvodu regionálních omezení obsahu."
+        }
+      },
+      "legal": {
+        "title": "Právní předpisy a bezpečnost",
+        "q1": {
+          "question": "Jak ověříte, že je účinkujícím více než 18 let?",
+          "answer": "Splňujeme požadavky 18 U.S.C. 2257. Všichni tvůrci musí předložit průkaz totožnosti vydaný vládou a vedeme o nich podrobné záznamy. K ověření věku používáme umělou inteligenci a ruční kontrolu."
+        },
+        "q2": {
+          "question": "Co když byl můj obsah nahrán bez povolení?",
+          "answer": "Pošlete žádost o stažení DMCA na adresu dmca@reelporn.ai s dokladem o vlastnictví. Obsah porušující autorská práva odstraníme do 24 hodin od obdržení platného oznámení."
+        },
+        "q3": {
+          "question": "Je ReelPorn v mé zemi legální?",
+          "answer": "Zákony týkající se obsahu pro dospělé se v jednotlivých zemích liší. Je vaší odpovědností zajistit, abyste dodržovali místní zákony. Blokujeme přístup ze zemí, kde je obsah pro dospělé zakázán."
+        },
+        "q4": {
+          "question": "Jak zabráníte přístupu nezletilých?",
+          "answer": "Používáme brány pro ověření věku, vyžadujeme vytvoření účtu s potvrzením věku, poskytujeme informace o rodičovské kontrole a spolupracujeme s filtrovacími službami."
+        }
+      }
+    },
+    "help": {
+      "title": "Stále potřebujete pomoc?",
+      "description": "Nemůžete najít odpověď, kterou hledáte? Náš tým podpory je zde, aby vám pomohl!",
+      "emailSupport": "E-mailová podpora",
+      "liveChat": "Živý chat"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Zásady používání souborů cookie",
+    "subtitle": "Jak používáme soubory cookie a podobné technologie",
+    "lastUpdated": "Poslední aktualizace",
+    "sections": {
+      "whatAre": {
+        "title": "Co jsou to soubory cookie?",
+        "content1": "Soubory cookie jsou malé textové soubory, které se ukládají do vašeho zařízení při návštěvě našich webových stránek. Pomáhají nám poskytovat vám lepší služby tím, že si pamatují vaše preference, analyzují návštěvnost stránek a přizpůsobují obsah.",
+        "content2": "Používáme také podobné technologie, jako jsou pixely, místní úložiště a otisk zařízení, abychom zlepšili vaše prohlížení a zlepšili naše služby."
+      },
+      "howWeUse": {
+        "title": "Jak používáme soubory cookie",
+        "intro": "Soubory cookie a podobné technologie používáme k následujícím účelům:",
+        "essential": {
+          "title": "Základní operace",
+          "description": "Poskytování základních funkcí, jako je ověřování uživatelů, zabezpečení a integrita webu"
+        },
+        "preferences": {
+          "title": "Předvolby a nastavení",
+          "description": "Zapamatování vašich voleb, například jazykových preferencí, kvality přehrávání a nastavení displeje"
+        },
+        "analytics": {
+          "title": "Analýza a výkonnost",
+          "description": "Abychom pochopili, jak uživatelé pracují s našimi stránkami, a zlepšili naše služby"
+        },
+        "marketing": {
+          "title": "Marketing a reklama",
+          "description": "Poskytování relevantních reklam a měření jejich účinnosti"
+        }
+      },
+      "types": {
+        "title": "Typy souborů cookie, které používáme",
+        "essential": {
+          "title": "Základní soubory cookie",
+          "description": "Tyto soubory cookie jsou nezbytné pro správné fungování webových stránek. Umožňují základní funkce, jako je navigace na stránce, přístup do zabezpečených oblastí a ověření věku.",
+          "items": [
+            "Session management",
+            "Age verification status",
+            "Security tokens",
+            "Load balancing"
+          ]
+        },
+        "functional": {
+          "title": "Funkční soubory cookie",
+          "description": "Tyto soubory cookie umožňují lepší funkčnost a personalizaci. Můžeme je nastavit my nebo poskytovatelé třetích stran, jejichž služby využíváme.",
+          "items": [
+            "Language preferences",
+            "Video player settings",
+            "Recently viewed content",
+            "User interface customization"
+          ]
+        },
+        "analyticsType": {
+          "title": "Analytické soubory cookie",
+          "description": "Tyto soubory cookie nám pomáhají pochopit, jak návštěvníci interagují s našimi webovými stránkami, a to prostřednictvím anonymního shromažďování a vykazování informací.",
+          "items": [
+            "Google Analytics",
+            "Page view tracking",
+            "User behavior analysis",
+            "Performance monitoring"
+          ]
+        },
+        "advertising": {
+          "title": "Reklamní soubory cookie",
+          "description": "Tyto soubory cookie se používají k poskytování reklam, které jsou pro vás a vaše zájmy relevantní. Pomáhají také omezit počet zobrazení reklamy.",
+          "items": [
+            "Targeted advertising",
+            "Ad frequency capping",
+            "Campaign performance measurement",
+            "Interest-based advertising"
+          ]
+        }
+      },
+      "thirdParty": {
+        "title": "Soubory cookie třetích stran",
+        "intro1": "Některé soubory cookie umisťují služby třetích stran, které se zobrazují na našich stránkách. Tyto soubory cookie nekontrolujeme a doporučujeme vám, abyste si na webových stránkách třetích stran vyhledali další informace o tom, jak soubory cookie používají.",
+        "intro2": "Mezi služby třetích stran, které využíváme, patří:",
+        "items": [
+          "Google Analytics - for website analytics",
+          "CloudFlare - for security and performance",
+          "Payment processors - for secure transactions",
+          "Social media platforms - for content sharing"
+        ]
+      },
+      "managing": {
+        "title": "Správa předvoleb souborů cookie",
+        "intro": "Máte kontrolu nad tím, které soubory cookie používáme. Své preference můžete kdykoli spravovat:",
+        "buttonText": "Správa nastavení souborů cookie",
+        "buttonDescription": "Kliknutím na výše uvedené tlačítko můžete zkontrolovat a aktualizovat své předvolby souborů cookie.",
+        "browserIntro": "Soubory cookie můžete ovládat také prostřednictvím nastavení prohlížeče:",
+        "browsers": {
+          "chrome": "Chrome: Nastavení → Soukromí a zabezpečení → Soubory cookie a další údaje o webu",
+          "firefox": "Firefox: Nastavení → Soukromí a zabezpečení → Soubory cookie a data webu",
+          "safari": "Safari: Předvolby → Soukromí → Správa dat webových stránek",
+          "edge": "Edge: Nastavení → Soukromí, vyhledávání a služby → Soubory cookie a oprávnění k webu"
+        }
+      },
+      "duration": {
+        "title": "Doba trvání souboru cookie",
+        "intro": "Soubory cookie mohou být buď relační, nebo trvalé:",
+        "session": {
+          "title": "Soubory cookie relace",
+          "description": "Jedná se o dočasné soubory cookie, jejichž platnost vyprší po zavření prohlížeče. Používáme je pro zabezpečení a základní funkce webu."
+        },
+        "persistent": {
+          "title": "Trvalé soubory cookie",
+          "description": "Tyto soubory cookie zůstávají ve vašem zařízení po stanovenou dobu nebo dokud je neodstraníte. Používáme je k zapamatování vašich preferencí a k poskytování personalizovaných funkcí."
+        }
+      },
+      "updates": {
+        "title": "Aktualizace těchto zásad",
+        "content": "Tyto zásady používání souborů cookie můžeme čas od času aktualizovat, aby odrážely změny v našich postupech nebo z jiných provozních, právních nebo regulačních důvodů. O všech významných změnách vás budeme informovat zveřejněním nových zásad na této stránce s datem aktualizace."
+      },
+      "contact": {
+        "title": "Kontaktujte nás",
+        "intro": "Pokud máte jakékoli dotazy týkající se používání souborů cookie nebo těchto zásad, kontaktujte nás:",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Nová definice zábavy pro dospělé",
+      "subtitle": "ReelPorn mění způsob, jakým dospělí objevují a užívají si intimní obsah prostřednictvím inovativních krátkých videí a nejmodernějších technologií.",
+      "getStarted": "Začněte",
+      "meetCreators": "Seznamte se s našimi tvůrci"
+    },
+    "stats": {
+      "users": {
+        "number": "10M+",
+        "label": "Aktivní uživatelé"
+      },
+      "videos": {
+        "number": "500K+",
+        "label": "Videa"
+      },
+      "creators": {
+        "number": "50K+",
+        "label": "Tvůrci"
+      },
+      "countries": {
+        "number": "150+",
+        "label": "Země"
+      }
+    },
+    "mission": {
+      "title": "Naše poslání",
+      "paragraph1": "Věříme, že zábava pro dospělé by měla být bezpečná, dobrovolná a dostupná. ReelPorn kombinuje návykovost krátkého obsahu s intimitou zábavy pro dospělé a vytváří jedinečnou platformu, kde mohou diváci objevovat nové zážitky a tvůrci se mohou rozvíjet.",
+      "paragraph2": "Náš doporučovací engine s umělou inteligencí se učí vaše preference a poskytuje personalizovaný obsah při zachování naprostého soukromí. Každé video je ověřeno, každý tvůrce je ověřen a každá interakce je bezpečná.",
+      "imageCaption": "Inovace v pohybu"
+    },
+    "values": {
+      "title": "Naše základní hodnoty",
+      "privacyFirst": {
+        "title": "Ochrana soukromí na prvním místě",
+        "description": "Vaše soukromí je pro nás nejvyšší prioritou. Používáme pokročilé šifrování a vaše údaje nikdy nesdílíme."
+      },
+      "verifiedContent": {
+        "title": "Ověřený obsah",
+        "description": "Veškerý obsah pochází od ověřených dospělých osob. Dodržujeme všechny zákonné požadavky včetně 2257."
+      },
+      "innovation": {
+        "title": "Inovace",
+        "description": "Průkopník budoucnosti zábavy pro dospělé s nejmodernějšími technologiemi a funkcemi."
+      },
+      "creatorSupport": {
+        "title": "Podpora tvůrce",
+        "description": "Umožňuje tvůrcům spravedlivé sdílení příjmů a výkonné nástroje pro růst jejich publika."
+      }
+    },
+    "technology": {
+      "title": "Powered by Technology",
+      "aiRecommendations": {
+        "title": "Doporučení týkající se umělé inteligence",
+        "description": "Pokročilé algoritmy strojového učení přizpůsobují váš kanál v reálném čase."
+      },
+      "encryption": {
+        "title": "Šifrování od konce ke konci",
+        "description": "Šifrování vojenské úrovně chrání vaše data a historii prohlížení."
+      },
+      "cdn": {
+        "title": "Globální síť CDN",
+        "description": "Bleskurychlé streamování ze serverů po celém světě pro sledování bez vyrovnávací paměti."
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform",
+        "description": "Bezproblémové používání na všech zařízeních - stolních počítačích, mobilních telefonech i tabletech."
+      }
+    },
+    "team": {
+      "title": "Vedoucí tým",
+      "ceo": {
+        "role": "Generální ředitel a zakladatel",
+        "bio": "Vizionářský lídr s více než 15 lety v oblasti technologií a zábavy"
+      },
+      "cto": {
+        "role": "CTO",
+        "bio": "Odborník na AI/ML a škálovatelnou infrastrukturu pro streamování videa"
+      },
+      "headSafety": {
+        "role": "Vedoucí oddělení bezpečnosti",
+        "bio": "Věnuje se bezpečnosti platforem a dodržování právních předpisů"
+      },
+      "headCreators": {
+        "role": "Vedoucí oddělení tvůrců",
+        "bio": "Podpora a rozvoj naší úžasné komunity tvůrců"
+      }
+    },
+    "becomeCreator": {
+      "title": "Staňte se tvůrcem",
+      "description": "Připojte se k tisícům tvůrců, kteří vydělávají na ReelPornu. Nabízíme nejvyšší podíl na příjmech v oboru, výkonnou analytiku a podpůrnou komunitu.",
+      "revenueShare": "80% podíl na příjmech",
+      "growthTools": "Nástroje pro růst",
+      "support": "podpora 24/7",
+      "applyButton": "Přihlaste se jako tvůrce"
+    },
+    "contact": {
+      "title": "Spojte se s námi",
+      "general": {
+        "title": "Obecné dotazy",
+        "email": "support@reelporn.ai"
+      },
+      "support": {
+        "title": "Podpora",
+        "email": "support@reelporn.ai"
+      },
+      "business": {
+        "title": "Obchodní",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Spojte se s naším týmem",
+    "description": "Máte dotaz nebo potřebujete pomoc? Jsme tu pro vás. Obraťte se na nás pomocí níže uvedených informací.",
+    "email": {
+      "title": "E-mailová podpora",
+      "description": "Pro obecné dotazy, technickou podporu nebo obchodní partnerství",
+      "address": "support@reelporn.ai",
+      "responseTime": "Obvykle odpovídáme do 24-48 hodin"
+    },
+    "dmca": {
+      "title": "Oznámení DMCA",
+      "description": "Oznámení o porušení autorských práv",
+      "address": "dmca@reelporn.ai",
+      "note": "Uveďte prosím všechny požadované informace, jak je uvedeno v našich zásadách DMCA"
+    },
+    "hours": {
+      "title": "Hodiny podpory",
+      "description": "Náš tým podpory je k dispozici:",
+      "weekdays": "Pondělí - pátek: 9:00 - 18:00 (EST)",
+      "weekends": "Sobota - neděle: 10:00 - 16:00 (EST)"
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "description": "Hledáte rychlé odpovědi? Podívejte se na naše",
+      "link": "Stránka s nejčastějšími dotazy",
+      "suffix": "pro běžné dotazy a řešení."
+    }
+  },
+  "payment": {
+    "cryptoPayment": "Kryptografická platba",
+    "cryptoPaymentDescription": "Bezpečná a anonymní platba kryptoměnou",
+    "quickTransaction": "Rychlá transakce",
+    "selectPlan": "Vyberte si svůj plán",
+    "selectCryptocurrency": "Vyberte kryptoměnu",
+    "plan": "Plán",
+    "currency": "Měna",
+    "total": "Celkem",
+    "month": "měsíc",
+    "proceedToPayment": "Přejděte k platbě",
+    "processing": {
+      "title": "Transakce detekována!",
+      "message": "Obdrželi jsme vaši platbu a zpracováváme ji v blockchainu.",
+      "waiting": "Čekání na potvrzení",
+      "safeToClose": "Vaše předplatné bude automaticky aktivováno po dosažení minimálního počtu potvrzení. Tuto stránku můžete bezpečně zavřít."
+    },
+    "loading": "Načítání...",
+    "continue": "Pokračovat",
+    "sendExactly": "Odeslat Přesně",
+    "sendExactAmount": "Odeslat tuto přesnou částku",
+    "toAddress": "Na adresu",
+    "toThisAddress": "Na tuto adresu",
+    "network": "Síť",
+    "confirmations": "Potvrzení",
+    "confirmationProgress": "Potvrzení o pokroku",
+    "expiresAt": "Platnost končí na {time}",
+    "paymentExpiresAt": "Platba končí na {time}",
+    "viewOnBlockchain": "Pohled na Blockchain",
+    "scanQRCode": "Skenování QR kódu pomocí kryptopeněženky",
+    "copyAddress": "Kopírovat adresu",
+    "copy": "Kopírovat",
+    "copied": "Zkopírováno!",
+    "cancelPayment": "Zrušit platbu",
+    "awaitingPayment": "Čekáme na platbu",
+    "processingPayment": "Zpracování platby",
+    "paymentCompleted": "Platba dokončena!",
+    "completed": {
+      "title": "Platba dokončena!",
+      "message": "Vaše transakce byla úspěšně potvrzena a vaše předplatné je nyní aktivní.",
+      "welcome": "Vítejte ve službě Premium!",
+      "congratulations": "Gratulujeme k členství!",
+      "subscriptionActive": "Předplatné Aktivní",
+      "transactionDetails": "Podrobnosti o transakci",
+      "viewOnBlockchain": "Zobrazit na Blockchain Explorer",
+      "goToAccount": "Přejít na můj účet"
+    },
+    "checkout": {
+      "progress": {
+        "step1": "Zvolte plán",
+        "step2": "Zvolit platbu",
+        "step3": "Potvrďte"
+      }
+    },
+    "expired": {
+      "title": "Platba vypršela",
+      "message": "Platnost této platby vypršela. Chcete vytvořit novou platbu a dokončit nákup?",
+      "retryButton": "Opakovaná platba",
+      "creatingPayment": "Vytváření nových platebních...",
+      "returnHome": "Návrat na domovskou stránku"
+    },
+    "earlyRetry": {
+      "button": "Zahájení nové platby",
+      "message": "Platba brzy vyprší? Založte si novou."
+    },
+    "paymentFailed": "Platba se nezdařila",
+    "paymentCancelled": "Zrušená platba",
+    "failedToLoadData": "Nepodařilo se načíst platební údaje",
+    "failedToInitiatePayment": "Nepodařilo se iniciovat platbu",
+    "failedToCancelPayment": "Nepodařilo se zrušit platbu",
+    "unavailable": "Nedostupné",
+    "status": {
+      "pending": "Čeká se na",
+      "processing": "Zpracování",
+      "awaiting_confirmation": "Čeká se na potvrzení",
+      "confirming": "Potvrzení",
+      "completed": "Dokončeno",
+      "failed": "Neúspěšný",
+      "expired": "Vypršela platnost",
+      "cancelled": "Zrušeno"
+    }
+  },
+  "common": {
+    "cancel": "Zrušit",
+    "loading": "Načítání...",
+    "retry": "Opakování"
+  },
+  "checkout": {
+    "title": "Dokončete svůj nákup",
+    "selectPaymentMethod": "Zvolte způsob platby",
+    "selectPaymentMethodDescription": "Vyberte si preferovaný způsob platby kryptoměnami",
+    "reviewPayment": "Přezkoumání platby",
+    "loading": "Načítání...",
+    "loadingPlan": "Načítání detailů plánu...",
+    "processing": "Zpracování...",
+    "cancel": "Zrušit",
+    "back": "Zpět",
+    "backToSubscriptions": "Zpět na předplatné",
+    "confirmPayment": "Potvrzení platby",
+    "tryAgain": "Zkuste to znovu",
+    "minAmount": "Min",
+    "orderSummary": "Přehled objednávek",
+    "paymentDetails": "Podrobnosti o platbě",
+    "paymentMethod": "Způsob platby",
+    "amountUsd": "Částka (USD)",
+    "amountCrypto": "Částka (Crypto)",
+    "exchangeRate": "Směnný kurz",
+    "whatsIncluded": "Co je zahrnuto v ceně",
+    "securePayment": "Bezpečná platba",
+    "securePaymentDescription": "Vaše transakce je šifrovaná a zabezpečená",
+    "acceptedCryptocurrencies": "Akceptované kryptoměny",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "litecoin": "Litecoin",
+    "usdt": "USDT",
+    "usdc": "USDC",
+    "more": "Více na",
+    "securePayments": "Zabezpečené platby",
+    "encryptedTransactions": "Šifrované transakce",
+    "instantConfirmation": "Okamžité potvrzení",
+    "progress": {
+      "step1": "Zvolte plán",
+      "step2": "Zvolit platbu",
+      "step3": "Potvrďte"
+    },
+    "priceLocked": "Cena uzamčena pro",
+    "priceExpiringSoon": "Cena vyprší v",
+    "priceExpired": "Cena vypršela - Osvěžující...",
+    "unlockAccess": "Odemknutí prémiového přístupu",
+    "startWatching": "Začněte sledovat za 2 minuty",
+    "payWith": "Zaplaťte {amount} pomocí {crypto}",
+    "moneyBackGuarantee": "30denní záruka vrácení peněz",
+    "moneyBackDescription": "Nejste spokojeni? Získejte plnou náhradu do 30 dnů",
+    "noCreditCard": "Kreditní karta není vyžadována",
+    "sslEncrypted": "256bitové šifrování SSL",
+    "joinMembers": "Připojte se k členům {count}, kteří tento týden upgradovali",
+    "popularChoice": "Populární volba",
+    "fastSecure": "Rychlé - bezpečné - anonymní",
+    "confirmTime": "Potvrzuje v ~{time}",
+    "testimonial1": "Nejlepší kvalita streamování, jakou jsem kdy zažil!",
+    "testimonial2": "Super snadná kryptografická platba. Trvalo to méně než 5 minut.",
+    "testimonial3": "Líbí se vám soukromí. Není potřeba žádná kreditní karta.",
+    "testimonialAuthor1": "Sarah M.",
+    "testimonialAuthor2": "Mike T.",
+    "testimonialAuthor3": "Alex K.",
+    "recentActivity": "Nedávná aktivita",
+    "recentSubscription": "{name} z {country} se právě přihlásil k odběru",
+    "liveSupport": "Máte otázky? Chatujte s námi",
+    "avgReplyTime": "Avg odpověď: <2 min",
+    "savesInFees": "💡 {token} uloží ${amount} v poplatcích",
+    "status": {
+      "awaitingPayment": "Čekáme na platbu",
+      "completed": "Platba dokončena!",
+      "expired": "Platba vypršela",
+      "failed": "Platba se nezdařila",
+      "sendPayment": "Odeslat platbu",
+      "paymentAddress": "Platební adresa",
+      "exactAmount": "Přesná částka k odeslání",
+      "confirmations": "Potvrzení",
+      "expiresIn": "Platnost končí v",
+      "subscriptionActivated": "Předplatné aktivováno!",
+      "thankYou": "Děkujeme vám za váš nákup. Vaše předplatné je nyní aktivní.",
+      "paymentExpired": "Platnost této platby vypršela. Založte prosím novou platbu.",
+      "paymentFailed": "Platba se nezdařila. Zkuste to prosím znovu nebo použijte jiný způsob platby."
+    },
+    "error": {
+      "title": "Chyba",
+      "planNotFound": "Plán nebyl nalezen. Vyberte prosím platný plán předplatného.",
+      "planNotFoundTitle": "Ups! Tento plán není k dispozici",
+      "planNotFoundDescription": "Hledaný plán předplatného neexistuje nebo již není k dispozici. Nebojte se, máme pro vás další skvělé možnosti!",
+      "alternativePlans": "Podívejte se na tyto oblíbené plány",
+      "selectPlan": "Vyberte tento plán",
+      "viewAllPlans": "Zobrazit všechny plány",
+      "goBack": "Zpět"
+    }
+  },
+  "videos": {
+    "loading": "Načítání videa...",
+    "error": "Chyba při načítání videa",
+    "notFound": "Video nebylo nalezeno",
+    "notFoundTitle": "Video nenalezeno nebo odstraněno",
+    "notFoundDescription": "Toto video mohlo být odstraněno, smazáno nebo je odkaz nesprávný.",
+    "goBack": "Zpět",
+    "goHome": "Přejít na domovskou stránku",
+    "suggestions": "Návrhy:",
+    "suggestionCheckUrl": "Zkontrolujte, zda je adresa URL správná",
+    "suggestionVideoDeleted": "Je možné, že autor video smazal",
+    "suggestionBrowseCategories": "Projděte si naše kategorie a najděte podobný obsah",
+    "premium": "Premium",
+    "videoNotSupported": "Váš prohlížeč nepodporuje značku videa.",
+    "views": "zobrazení",
+    "likes": "má rád",
+    "comments": "komentáře",
+    "uploadedMinutesAgo": "{minutes}m ago",
+    "uploadedHoursAgo": "{hours}h před",
+    "uploadedDaysAgo": "{days}d ago",
+    "uploadedMonthsAgo": "{months}mo ago",
+    "uploadedYearsAgo": "{years}y ago",
+    "subscribe": "Přihlaste se k odběru na",
+    "description": "Popis",
+    "category": "Kategorie",
+    "tags": "Štítky",
+    "like": "Stejně jako",
+    "liked": "Oblíbené",
+    "share": "Sdílet",
+    "report": "Nahlásit",
+    "relatedVideos": "Související videa",
+    "tryTheseVideos": "Zkuste místo toho tato videa",
+    "linkCopied": "Odkaz zkopírován do schránky!",
+    "loginToLike": "Líbí se vám toto video?",
+    "loginToLikeDescription": "Vytvořte si bezplatný účet nebo se přihlaste, abyste mohli lajkovat videa a vytvářet sbírku oblíbených."
+  },
+  "authModal": {
+    "defaultTitle": "Vyžaduje se přihlášení",
+    "defaultMessage": "Pro pokračování se prosím přihlaste nebo si vytvořte účet.",
+    "login": "Přihlášení",
+    "register": "Vytvořit účet",
+    "maybeLater": "Možná později"
+  }
+}

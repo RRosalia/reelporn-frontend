@@ -1,1 +1,1425 @@
-{}
+{
+  "dateFormat": "m/d/Y",
+  "test": {
+    "welcomeMessage": "Bienvenido {username}, ¡tienes {count} nuevas notificaciones!",
+    "simpleMessage": "Esta es una traducción de prueba"
+  },
+  "header": {
+    "home": "Inicio",
+    "categories": "Categorías",
+    "about": "Acerca de",
+    "contact": "Contact",
+    "watch": "Ver",
+    "login": "Inicio de sesión",
+    "register": "Regístrese en"
+  },
+  "profile": {
+    "register": "Regístrese en",
+    "login": "Iniciar sesión",
+    "liked": "Vídeos favoritos",
+    "account": "Mi cuenta",
+    "subscriptions": "Suscripciones",
+    "faq": "PREGUNTAS Y RESPUESTAS",
+    "support": "Contacto",
+    "logout": "Cierre de sesión"
+  },
+  "home": {
+    "hero": {
+      "title": "Descubra Hot 15-Second Reels",
+      "subtitle": "Mira miles de vídeos cortos para adultos. Desliza el dedo, dale a me gusta y disfruta.",
+      "watchNow": "Ver ahora",
+      "getPremium": "Conseguir Premium",
+      "featuredContent": "Contenido destacado",
+      "trending": "🔥 Trending"
+    },
+    "stats": {
+      "videos": "Vídeos",
+      "users": "Usuarios activos",
+      "daily": "Actualizaciones diarias"
+    },
+    "viewAll": "Ver todos",
+    "search": {
+      "placeholder": "Buscar vídeos..."
+    },
+    "loadMore": "Cargar más vídeos",
+    "premium": {
+      "title": "Desbloquear funciones Premium",
+      "subtitle": "Acceso ilimitado a contenidos y funciones exclusivas",
+      "feature1": "Streaming sin anuncios",
+      "feature2": "Calidad de vídeo HD y 4K",
+      "feature3": "Descargar vídeos para verlos sin conexión",
+      "feature4": "Acceso anticipado a los nuevos lanzamientos",
+      "cta": "Conseguir Premium ahora"
+    }
+  },
+  "category": {
+    "trending": "Tendencias",
+    "new": "Nuevo",
+    "popular": "Popular",
+    "amateur": "Aficionado",
+    "professional": "Profesional",
+    "featured": "Destacados",
+    "topRated": "Mejor valorados",
+    "mostViewed": "Más vistos"
+  },
+  "login": {
+    "title": "¡Bienvenido de nuevo!",
+    "welcomeBack": "¡Bienvenido de nuevo!",
+    "signIn": "Iniciar sesión",
+    "hero": {
+      "title": "¿Listo para continuar?",
+      "subtitle": "Sus contenidos favoritos le esperan",
+      "description": "Accede a tu biblioteca personalizada y continúa donde lo dejaste"
+    },
+    "email": "Dirección de correo electrónico",
+    "emailPlaceholder": "Introduzca su dirección de correo electrónico",
+    "username": "Nombre de usuario o correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Introduzca su contraseña",
+    "rememberMe": "Acuérdate de mí",
+    "forgotPassword": "¿Ha olvidado su contraseña?",
+    "submit": "Iniciar sesión",
+    "loading": "Iniciar sesión...",
+    "noAccount": "¿No tiene cuenta?",
+    "createAccount": "Crear cuenta",
+    "error": {
+      "rateLimitExceeded": "Demasiados intentos de conexión. Vuelva a intentarlo más tarde.",
+      "invalidCredentials": "Correo electrónico o contraseña no válidos. Por favor, inténtalo de nuevo.",
+      "validationFailed": "Por favor, compruebe sus datos e inténtelo de nuevo.",
+      "network": "Error de red. Compruebe su conexión e inténtelo de nuevo.",
+      "server": "Error en el servidor. Vuelva a intentarlo más tarde.",
+      "generic": "Se ha producido un error. Por favor, inténtelo de nuevo."
+    },
+    "info": {
+      "loginRequired": "Inicia sesión para continuar.",
+      "logoutSuccess": "Se ha cerrado la sesión correctamente."
+    }
+  },
+  "account": {
+    "title": "Mi cuenta",
+    "profile": {
+      "title": "Información sobre el perfil",
+      "name": "Nombre",
+      "nickname": "Apodo",
+      "nicknameHint": "Sólo puedes cambiar tu alias una vez al mes.",
+      "email": "Dirección de correo electrónico",
+      "emailVerified": "Correo electrónico verificado",
+      "update": "Actualizar perfil",
+      "updating": "Actualizando...",
+      "updateSuccess": "¡Perfil actualizado correctamente!"
+    },
+    "password": {
+      "title": "Cambiar contraseña",
+      "current": "Contraseña actual",
+      "new": "Nueva contraseña",
+      "confirm": "Confirmar nueva contraseña",
+      "update": "Cambiar contraseña",
+      "updating": "Cambiando...",
+      "updateSuccess": "¡Contraseña cambiada con éxito!",
+      "mismatch": "Las nuevas contraseñas no coinciden."
+    },
+    "logout": {
+      "title": "Cierre de sesión",
+      "description": "Salir de tu cuenta",
+      "button": "Cierre de sesión",
+      "confirm": "¿Seguro que quieres cerrar la sesión?"
+    },
+    "info": {
+      "title": "Información sobre la cuenta",
+      "memberId": "ID de miembro",
+      "memberSince": "Miembro desde",
+      "lastUpdated": "Última actualización"
+    },
+    "error": {
+      "validationFailed": "Por favor, compruebe sus datos e inténtelo de nuevo.",
+      "network": "Error de red. Compruebe su conexión e inténtelo de nuevo.",
+      "generic": "Se ha producido un error. Por favor, inténtelo de nuevo."
+    },
+    "twoFactor": {
+      "title": "Autenticación de dos factores",
+      "description": "Añade una capa adicional de seguridad a tu cuenta activando la autenticación de dos factores.",
+      "enable": "Activar la autenticación de dos factores",
+      "enabling": "Permitir...",
+      "enableButton": "Activar la autenticación de dos factores",
+      "enableSuccess": "La autenticación de dos factores se ha activado correctamente",
+      "scanQR": "Escanea este código QR con tu aplicación de autenticación (Google Authenticator, Authy, etc.):",
+      "secretKey": "Clave secreta",
+      "confirmCode": "Introduzca el código de confirmación",
+      "confirm": "Confirmar y activar",
+      "confirming": "Confirmando...",
+      "enabled": "2FA Activado",
+      "recoveryCodes": "Códigos de recuperación",
+      "recoveryCodesDescription": "Guarda estos códigos de recuperación en un lugar seguro. Puedes utilizarlos para acceder a tu cuenta si pierdes el acceso a la aplicación de autenticación.",
+      "showRecoveryCodes": "Mostrar códigos de recuperación",
+      "hideRecoveryCodes": "Ocultar códigos de recuperación",
+      "regenerateRecoveryCodes": "Regenerar códigos",
+      "regenerateConfirm": "¿Está seguro? Esto invalidará sus códigos de recuperación actuales.",
+      "regenerateSuccess": "Los códigos de recuperación se han regenerado correctamente",
+      "disable": "Desactivar 2FA",
+      "disableConfirm": "¿Estás seguro de que quieres desactivar la autenticación de dos factores?",
+      "disableSuccess": "Se ha desactivado la autenticación de dos factores.",
+      "setup": {
+        "title": "Activar la autenticación de dos factores",
+        "description": "Añade una capa adicional de seguridad a tu cuenta. Tendrás que introducir un código desde tu aplicación de autenticación cada vez que inicies sesión.",
+        "enable": "Activar 2FA",
+        "enabling": "Permitir...",
+        "cancel": "Cancelar"
+      },
+      "scan": {
+        "title": "Configure su aplicación Authenticator",
+        "instruction": "Escanea este código QR con tu aplicación de autenticación (Google Authenticator, Authy, etc.):",
+        "showSecret": "Mostrar clave secreta para entrada manual",
+        "hideSecret": "Ocultar clave secreta",
+        "enterCode": "Después de escanear el código QR, introduce el código de 6 dígitos de tu aplicación de autenticación para verificarlo:",
+        "verify": "Verificar y continuar",
+        "verifying": "Verificando..."
+      },
+      "recovery": {
+        "title": "Guarde sus códigos de recuperación",
+        "important": "Importante",
+        "warning": "Guarda estos códigos de recuperación en un lugar seguro. Puedes utilizarlos para acceder a tu cuenta si pierdes el acceso a la aplicación de autenticación.",
+        "download": "Descargar códigos",
+        "copy": "Copiar al portapapeles",
+        "continue": "He guardado mis códigos de recuperación"
+      },
+      "manage": {
+        "title": "Autenticación de dos factores",
+        "enabled": "La autenticación de dos factores está actualmente activada en su cuenta.",
+        "description": "Tu cuenta está protegida con autenticación de dos factores. Puede gestionar sus códigos de recuperación o desactivar 2FA a continuación.",
+        "recoveryCodes": "Códigos de recuperación",
+        "viewCodes": "Ver códigos de recuperación",
+        "hideCodes": "Ocultar códigos",
+        "loading": "Cargando...",
+        "regenerate": "Regenerar códigos de recuperación",
+        "regenerating": "Regenerar...",
+        "regenerateConfirm": "¿Estás seguro de que quieres regenerar tus códigos de recuperación? Esto invalidará sus antiguos códigos de recuperación.",
+        "regenerateSuccess": "Los códigos de recuperación se han regenerado correctamente Por favor, guárdelos en un lugar seguro.",
+        "copiedSuccess": "Códigos de recuperación copiados en el portapapeles",
+        "disableTitle": "Desactivar la autenticación de dos factores",
+        "disableDescription": "Desactivar 2FA hará que tu cuenta sea menos segura. Estás seguro de que quieres continuar?",
+        "disable": "Desactivar 2FA",
+        "disabling": "Desactivando...",
+        "disableConfirm": "¿Estás seguro de que quieres desactivar la autenticación de dos factores? Esto hará que tu cuenta sea menos segura.",
+        "confirmDisable": "Confirmar y desactivar 2FA"
+      },
+      "error": {
+        "enableFailed": "Error al activar la autenticación de dos factores. Inténtalo de nuevo.",
+        "invalidCode": "El código de autenticación de dos factores proporcionado no es válido.",
+        "verifyFailed": "No se ha podido verificar el código. Por favor, inténtalo de nuevo.",
+        "fetchCodesFailed": "No se han podido recuperar los códigos de recuperación. Por favor, inténtelo de nuevo.",
+        "regenerateFailed": "No se han podido regenerar los códigos de recuperación. Por favor, inténtelo de nuevo.",
+        "disableFailed": "Error al desactivar la autenticación de dos factores. Inténtalo de nuevo."
+      }
+    }
+  },
+  "register": {
+    "title": "Únase a nosotros hoy mismo",
+    "choosePlan": "Elija su plan de afiliación"
+  },
+  "signup": {
+    "title": "Elija su afiliación",
+    "name": "Nombre y apellidos",
+    "username": "Nombre de usuario",
+    "email": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "paymentMethod": "Forma de pago",
+    "creditCard": "Tarjeta de crédito",
+    "paypal": "PayPal",
+    "crypto": "Criptomoneda",
+    "submit": "Registro completo",
+    "processing": "Procesando...",
+    "createAccount": "Crear una cuenta",
+    "subscribeFor": "Suscribirse",
+    "selectPlan": "Seleccione un plan",
+    "cancel": "Cancelar",
+    "billedAt": "Facturado en",
+    "haveAccount": "¿Ya tiene una cuenta?",
+    "clickHere": "Pulse aquí",
+    "promo": {
+      "title": "Ver contenido exclusivo",
+      "subtitle": "Únase a miles de afiliados satisfechos",
+      "description": "Acceso ilimitado a contenidos premium"
+    }
+  },
+  "membership": {
+    "noAds": {
+      "title": "No Ads",
+      "description": "Eliminar todos los anuncios"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Acceso completo a todas las funciones"
+    },
+    "premiumPlus": {
+      "title": "Premium Plus",
+      "description": "La experiencia VIP definitiva"
+    },
+    "from": "de",
+    "perMonth": "mes",
+    "popular": "Popular",
+    "bestValue": "La mejor relación calidad-precio",
+    "exclusive": "Exclusivo",
+    "save": "Guardar",
+    "features": "Características incluidas",
+    "duration": {
+      "1month": "1 mes",
+      "6months": "6 meses",
+      "12months": "12 meses"
+    },
+    "feature": {
+      "noAds": "Experiencia sin anuncios",
+      "basicSupport": "Apoyo básico",
+      "hdStreaming": "Transmisión en HD",
+      "downloadVideos": "Descargar vídeos",
+      "exclusiveContent": "Contenido exclusivo",
+      "prioritySupport": "Asistencia prioritaria",
+      "4kStreaming": "transmisión en 4K Ultra HD",
+      "unlimitedDownloads": "Descargas ilimitadas",
+      "earlyAccess": "Acceso anticipado a nuevos contenidos",
+      "vipSupport": "asistencia VIP 24 horas al día, 7 días a la semana",
+      "customPlaylist": "Listas de reproducción personalizadas"
+    }
+  },
+  "footer": {
+    "description": "Tu principal destino para vídeos cortos de alta calidad. Descubre, mira y comparte vídeos increíbles.",
+    "quickLinks": "Enlaces rápidos",
+    "shorts": "Pantalones cortos",
+    "account": "Cuenta",
+    "support": "Ayuda",
+    "legal": "Legal",
+    "terms": "Condiciones de uso",
+    "privacy": "Política de privacidad",
+    "dmca": "DMCA",
+    "cookies": "Política de cookies",
+    "language": "Idioma",
+    "cookieSettings": "Configuración de cookies",
+    "copyright": "Todos los derechos reservados"
+  },
+  "age": {
+    "title": "Este es un sitio web para adultos (18+)",
+    "notice": "Aviso a los usuarios",
+    "warning1": "Este sitio web contiene material restringido a la edad, incluidos desnudos y representaciones explícitas de actividad sexual. Al entrar, usted afirma que tiene al menos 18 años o la mayoría de edad en la jurisdicción desde la que accede al sitio web y da su consentimiento para ver contenido sexualmente explícito.",
+    "warning2": "Nuestra página de control parental explica cómo bloquear fácilmente el acceso a este sitio.",
+    "enter": "Tengo 18 años o más - Entrar",
+    "exit": "Soy menor de 18 años - Salir",
+    "parentalInfo": "Más información",
+    "parentalLink": "parental control page"
+  },
+  "blocked": {
+    "title": "Este sitio web está dirigido exclusivamente a usuarios mayores de 18 años.",
+    "message": "Nos tomamos muy en serio nuestra responsabilidad de impedir que los menores accedan a contenidos para adultos. Si cree que ha llegado a esta página por error, cierre esta ventana y póngase en contacto con nuestro equipo de asistencia.",
+    "geo": {
+      "title": "Acceso no disponible en su región",
+      "message": "Lo sentimos, pero nuestro servicio no está disponible en {country}. Esta restricción se debe a normativas locales y requisitos legales."
+    }
+  },
+  "parental": {
+    "title": "Control parental",
+    "subtitle": "Proteger a los menores del acceso a contenidos restringidos por edad",
+    "intro": {
+      "title": "Acerca del control parental",
+      "text1": "ReelPorn se compromete a evitar que los menores accedan a contenidos para adultos. Recomendamos encarecidamente a los padres y tutores que adopten un papel activo en la supervisión y el control del uso de Internet por parte de sus hijos.",
+      "text2": "Esta página proporciona información sobre diversos métodos y herramientas que puede utilizar para impedir el acceso a sitios web para adultos, incluido ReelPorn.com, en dispositivos utilizados por menores."
+    },
+    "methods": {
+      "title": "Cómo bloquear contenidos para adultos",
+      "intro": "Hay varias formas eficaces de restringir el acceso a sitios web para adultos:",
+      "router": {
+        "title": "Bloqueo a nivel de router",
+        "text": "La mayoría de los routers modernos incluyen funciones de control parental que permiten bloquear determinados sitios web o categorías de contenidos en todos los dispositivos conectados a la red doméstica. Consulta la documentación de tu router o ponte en contacto con el fabricante para obtener instrucciones de configuración."
+      },
+      "isp": {
+        "title": "Controles de los proveedores de servicios de Internet (ISP)",
+        "text": "Muchos proveedores de servicios de Internet ofrecen servicios de control parental que pueden filtrar contenidos antes de que lleguen a su casa. Póngase en contacto con su proveedor de servicios de Internet para conocer las opciones de control parental disponibles y cómo activarlas."
+      },
+      "device": {
+        "title": "Controles a nivel de dispositivo",
+        "text": "Tanto los ordenadores como los dispositivos móviles incorporan funciones de control parental. En Windows, utilice Protección infantil. En Mac, utilice Tiempo de pantalla y Control parental. En los dispositivos iOS y Android, utilice las funciones integradas Tiempo de pantalla y Family Link, respectivamente."
+      }
+    },
+    "software": {
+      "title": "Software de filtrado de terceros",
+      "intro": "Varias empresas de renombre ofrecen soluciones completas de control parental y filtrado de contenidos:",
+      "netnanny": "Completo software de filtrado de Internet y control parental para dispositivos Windows, Mac, Android e iOS.",
+      "norton": "Servicio gratuito de control parental de Norton que ayuda a proteger a los niños de contenidos inapropiados.",
+      "qustodio": "Software de control parental multiplataforma con filtrado web, límites de tiempo y supervisión de actividades.",
+      "opendns": "Servicio gratuito de filtrado basado en DNS que bloquea los contenidos para adultos a nivel de red."
+    },
+    "resources": {
+      "title": "Recursos adicionales",
+      "text": "Para más información sobre la seguridad en Internet y la protección de los menores en la red, visite estos recursos:"
+    },
+    "notice": {
+      "title": "Aviso importante",
+      "text": "Aunque hacemos todo lo posible para evitar que los menores accedan a nuestro sitio mediante la verificación de la edad, la responsabilidad última de evitar que los niños accedan a contenidos para adultos recae en los padres y tutores. Recomendamos encarecidamente implementar múltiples capas de protección utilizando los métodos descritos anteriormente."
+    }
+  },
+  "cookies": {
+    "title": "Utilizamos cookies",
+    "description": "Utilizamos cookies y tecnologías similares para mejorar su experiencia de navegación, personalizar contenidos y anuncios, ofrecer funciones de redes sociales y analizar nuestro tráfico. Puede elegir qué cookies aceptar.",
+    "acceptAll": "Aceptar todas las cookies",
+    "customize": "Personalizar las cookies",
+    "cancel": "Cancelar",
+    "savePreferences": "Guardar preferencias",
+    "preferences": {
+      "title": "Preferencias de cookies",
+      "description": "Utilizamos diferentes tipos de cookies para optimizar su experiencia en nuestro sitio web. Haga clic en las categorías siguientes para obtener más información y personalizar sus preferencias. Tenga en cuenta que bloquear algunos tipos de cookies puede afectar a su experiencia."
+    },
+    "essential": {
+      "title": "Galletas esenciales",
+      "description": "Estas cookies son necesarias para el funcionamiento del sitio web y no pueden desactivarse. Normalmente solo se instalan en respuesta a acciones realizadas por usted, como configurar sus preferencias de privacidad, iniciar sesión o rellenar formularios."
+    },
+    "functional": {
+      "title": "Cookies funcionales",
+      "description": "Estas cookies permiten una mayor funcionalidad y personalización, como vídeos y chats en directo. Pueden ser instaladas por nosotros o por terceros proveedores cuyos servicios hemos añadido a nuestras páginas."
+    },
+    "analytics": {
+      "title": "Cookies analíticas",
+      "description": "Estas cookies nos permiten contar las visitas y las fuentes de tráfico para que podamos medir y mejorar el rendimiento de nuestro sitio. Nos ayudan a entender qué páginas son más y menos populares y a ver cómo se mueven los visitantes por el sitio."
+    },
+    "advertising": {
+      "title": "Cookies de segmentación/publicidad",
+      "description": "Estas cookies pueden ser instaladas a través de nuestro sitio por nuestros socios publicitarios. Estas empresas pueden utilizarlas para elaborar un perfil de sus intereses y mostrarle anuncios relevantes en otros sitios."
+    }
+  },
+  "pornstars": {
+    "title": "Personajes",
+    "subtitle": "Eche un vistazo a nuestros {count} asombrosos artistas",
+    "noResults": "No se han encontrado caracteres que coincidan con sus filtros",
+    "sort": {
+      "popular": "Más populares",
+      "newest": "Más reciente",
+      "mostVideos": "La mayoría de los vídeos",
+      "mostViewed": "Más vistos"
+    },
+    "pagination": {
+      "showing": "Mostrando {start}-{end} de {total} caracteres"
+    },
+    "filters": {
+      "title": "Filtros",
+      "clearAll": "Borrar todo",
+      "name": "Buscar por nombre",
+      "namePlaceholder": "Introduce el nombre...",
+      "age": "Edad",
+      "country": "País",
+      "allCountries": "Todos los países",
+      "height": "Altura",
+      "weight": "Peso",
+      "hairColor": "Color de pelo",
+      "allHairColors": "Todos los colores de pelo",
+      "eyeColor": "Color de ojos",
+      "allEyeColors": "Todos los colores de ojos",
+      "ethnicity": "Etnia",
+      "allEthnicities": "Todas las etnias"
+    },
+    "errors": {
+      "fetchFailed": "No se han podido cargar los caracteres. Por favor, inténtelo de nuevo."
+    }
+  },
+  "pornstar": {
+    "stats": {
+      "videos": "Vídeos",
+      "views": "Vistas",
+      "likes": "Le gusta",
+      "followers": "Seguidores"
+    },
+    "follow": "Siga",
+    "following": "Después de",
+    "message": "Mensaje",
+    "tip": "Enviar Sugerencia",
+    "tabs": {
+      "videos": "Vídeos",
+      "photos": "Fotos",
+      "about": "Acerca de"
+    },
+    "loadMore": "Cargar más vídeos",
+    "about": {
+      "bio": "Biografía",
+      "categories": "Categorías",
+      "social": "Social Media",
+      "details": "Datos personales"
+    },
+    "details": {
+      "age": "Edad",
+      "country": "País",
+      "height": "Altura",
+      "weight": "Peso",
+      "measurements": "Medidas",
+      "hair": "Color de pelo",
+      "eyes": "Color de ojos",
+      "ethnicity": "Etnia"
+    }
+  },
+  "error": {
+    "403": {
+      "title": "Acceso prohibido",
+      "message": "Lo sentimos, no tiene permiso para acceder a esta página. Esta zona puede estar restringida o requerir una autorización especial."
+    },
+    "404": {
+      "title": "Página no encontrada",
+      "message": "¡Uy! La página que busca no existe. Es posible que se haya movido o eliminado."
+    },
+    "500": {
+      "title": "Error interno del servidor",
+      "message": "Algo ha fallado. Nuestros ingenieros han sido informados y están trabajando para solucionar el problema."
+    },
+    "503": {
+      "title": "Servicio no disponible",
+      "message": "En estos momentos estamos realizando tareas de mantenimiento o experimentando un tráfico elevado. Nuestros ingenieros han sido avisados y están trabajando para restablecer el servicio."
+    },
+    "default": {
+      "title": "Algo salió mal",
+      "message": "Se ha producido un error inesperado. Vuelva a intentarlo más tarde."
+    },
+    "goHome": "Volver al inicio",
+    "serverNotice": "Vuelva a intentarlo más tarde. Nuestros ingenieros han sido notificados y están trabajando para resolver este problema lo antes posible."
+  },
+  "subscriptions": {
+    "meta": {
+      "title": "Planes de suscripción Premium - Desbloquea contenido exclusivo | ReelPorn",
+      "description": "Desbloquea funciones premium y contenidos exclusivos con nuestros planes de suscripción. Pagos seguros en criptomoneda para tu privacidad."
+    },
+    "title": "Planes de suscripción Premium",
+    "subtitle": "Desbloquea contenidos exclusivos y funciones premium",
+    "billing": {
+      "monthly": "Mensualmente",
+      "yearly": "Anualmente",
+      "saveUpTo": "Ahorre hasta un 40"
+    },
+    "price": {
+      "perMonth": "/mes",
+      "billedYearly": "facturado anualmente",
+      "free": "Gratis",
+      "forever": "Para siempre"
+    },
+    "button": {
+      "getCurrentPlan": "Plan actual",
+      "getStarted": "Comenzar"
+    },
+    "comparison": {
+      "title": "Comparación detallada de funciones",
+      "feature": "Característica"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre la suscripción",
+      "changePlans": {
+        "question": "¿Puedo cambiar de planes en cualquier momento?",
+        "answer": "Sí, puede ampliar o reducir su suscripción en cualquier momento. Los cambios entrarán en vigor en su próximo ciclo de facturación."
+      },
+      "cancel": {
+        "question": "¿Cómo se cancela?",
+        "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Mantendrás el acceso hasta el final de tu periodo de facturación."
+      },
+      "payment": {
+        "question": "¿Qué métodos de pago se aceptan?",
+        "answer": "Aceptamos pagos en criptomoneda para su privacidad y seguridad."
+      }
+    },
+    "guarantee": {
+      "title": "garantía de devolución del dinero en 30 días",
+      "description": "¿No está satisfecho? Obtenga un reembolso completo en un plazo de 30 días, sin preguntas."
+    },
+    "loading": "Cargando planes de suscripción...",
+    "error": {
+      "title": "No se pueden cargar planes",
+      "description": "No hemos podido cargar los planes de suscripción. Vuelva a intentarlo más tarde.",
+      "retry": "Reintentar"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Últimas noticias, actualizaciones e información",
+    "allCategories": "Todas las categorías",
+    "minRead": "min leer",
+    "views": "vistas",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "noPosts": "No se han encontrado entradas de blog",
+    "backToBlog": "Volver al blog",
+    "relatedPosts": "Entradas relacionadas",
+    "notFound": "Entrada de blog no encontrada",
+    "notFoundDescription": "La entrada de blog que busca no existe o ha sido eliminada."
+  },
+  "terms": {
+    "title": "Condiciones de uso",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "acceptance": {
+        "title": "Aceptación de las condiciones",
+        "content1": "Al acceder o utilizar ReelPorn.ai (\"el Servicio\"), usted acepta quedar vinculado por estas Condiciones de servicio y por todas las leyes y normativas aplicables. Si usted no está de acuerdo con cualquiera de estos términos, se le prohíbe el uso o acceso a este sitio.",
+        "content2": "Usted debe tener al menos 18 años de edad (o la mayoría de edad en su jurisdicción) para utilizar este Servicio. Al utilizar el Servicio, usted declara y garantiza que cumple este requisito de edad."
+      },
+      "account": {
+        "title": "Registro de cuentas",
+        "intro": "Para acceder a determinadas funciones del Servicio, debe registrarse para obtener una cuenta. Usted se compromete a:",
+        "item1": "Proporcionar información exacta, actualizada y completa durante el registro",
+        "item2": "Mantener y actualizar puntualmente la información de su cuenta",
+        "item3": "Mantener la seguridad y confidencialidad de su contraseña",
+        "item4": "Aceptar la responsabilidad de todas las actividades que se produzcan en su cuenta",
+        "item5": "Notifíquenos inmediatamente cualquier uso no autorizado de su cuenta",
+        "outro": "Nos reservamos el derecho a suspender o cancelar las cuentas que infrinjan estas condiciones o participen en actividades fraudulentas o ilegales."
+      },
+      "subscription": {
+        "title": "Suscripción y pago",
+        "intro": "Algunos aspectos del Servicio requieren una suscripción de pago. Al adquirir una suscripción, acepta pagar todas las tarifas asociadas al plan elegido.",
+        "item1": "Las suscripciones se renuevan automáticamente a menos que se cancelen antes de la fecha de renovación",
+        "item2": "Los precios pueden cambiar con un preaviso de 30 días",
+        "item3": "Los reembolsos sólo se efectuarán por imperativo legal o a nuestra entera discreción",
+        "item4": "Usted es responsable de todos los impuestos asociados a su suscripción",
+        "item5": "Los datos de pago deben ser exactos y actuales"
+      },
+      "userContent": {
+        "title": "Contenido del usuario",
+        "intro": "Los usuarios pueden enviar contenidos al Servicio. Al enviar contenidos, usted:",
+        "item1": "Otorgarnos una licencia mundial, no exclusiva y libre de derechos de autor para utilizar, mostrar y distribuir sus contenidos",
+        "item2": "Garantizar que es propietario o tiene derechos sobre todos los contenidos que envíe",
+        "item3": "Confirme que todas las personas que aparecen en su contenido son mayores de 18 años y han dado su consentimiento para su distribución",
+        "item4": "Aceptar la responsabilidad de mantener los registros 2257 cuando proceda",
+        "item5": "Comprometerse a no enviar contenidos ilegales, perjudiciales o que violen los derechos de terceros"
+      },
+      "prohibited": {
+        "title": "Conductas prohibidas",
+        "intro": "Usted se compromete a no hacerlo:",
+        "item1": "Utilizar el Servicio para cualquier fin ilegal o infringiendo cualquier ley",
+        "item2": "Cargar contenidos en los que participen menores o personas sin su consentimiento",
+        "item3": "Acosar, abusar o dañar a otros usuarios",
+        "item4": "Suplantar la identidad de cualquier persona o entidad",
+        "item5": "Interferir o interrumpir el Servicio o los servidores",
+        "item6": "Intentar obtener acceso no autorizado a cualquier parte del Servicio",
+        "item7": "Utilizar sistemas o programas informáticos automatizados para extraer datos del Servicio",
+        "item8": "Transmitir virus, programas maliciosos u otros códigos dañinos",
+        "item9": "Violar los derechos de propiedad intelectual de terceros",
+        "item10": "Participar en cualquier conducta que restrinja o inhiba el uso del Servicio por parte de otros"
+      },
+      "intellectualProperty": {
+        "title": "Propiedad intelectual",
+        "content1": "El Servicio y su contenido original (excluyendo el contenido del usuario) son y seguirán siendo propiedad exclusiva de ReelPorn y sus licenciantes. El Servicio está protegido por derechos de autor, marcas registradas y otras leyes de propiedad intelectual.",
+        "content2": "Nuestras marcas e imagen comercial no pueden utilizarse en relación con ningún producto o servicio sin nuestro consentimiento previo por escrito."
+      },
+      "privacy": {
+        "title": "Privacidad",
+        "content": "Su uso del Servicio también se rige por nuestra Política de Privacidad. Por favor, revise nuestra Política de Privacidad, que también rige el Sitio e informa a los usuarios de nuestras prácticas de recopilación de datos."
+      },
+      "dmca": {
+        "title": "Cumplimiento de la DMCA",
+        "content": "Respetamos los derechos de propiedad intelectual y responderemos a las notificaciones válidas de retirada de contenidos en virtud de la DMCA. Si cree que su contenido se ha utilizado sin autorización, póngase en contacto con nuestro agente de la DMCA en dmca@reelporn.ai."
+      },
+      "disclaimers": {
+        "title": "Descargo de responsabilidad",
+        "content1": "EL SERVICIO SE PROPORCIONA \"TAL CUAL\", SIN GARANTÍAS DE NINGÚN TIPO, NI EXPRESAS NI IMPLÍCITAS. RENUNCIAMOS A TODAS LAS GARANTÍAS, INCLUIDAS LAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN DETERMINADO Y NO INFRACCIÓN.",
+        "content2": "No garantizamos que el Servicio sea ininterrumpido, seguro o esté libre de errores. No garantizamos la exactitud o integridad de ningún contenido."
+      },
+      "liability": {
+        "title": "Limitación de responsabilidad",
+        "content1": "EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, REELPORN NO SERÁ RESPONSABLE DE NINGÚN DAÑO INDIRECTO, INCIDENTAL, ESPECIAL, CONSECUENTE O PUNITIVO, NI DE NINGUNA PÉRDIDA DE BENEFICIOS O INGRESOS, YA SEA INCURRIDA DIRECTA O INDIRECTAMENTE, NI DE NINGUNA PÉRDIDA DE DATOS, USO, FONDO DE COMERCIO U OTRAS PÉRDIDAS INTANGIBLES.",
+        "content2": "Nuestra responsabilidad total no superará el importe que nos haya abonado en los doce meses anteriores al siniestro."
+      },
+      "indemnification": {
+        "title": "Indemnización",
+        "content": "Usted se compromete a indemnizar y eximir de toda responsabilidad a ReelPorn y a sus directivos, administradores, empleados y agentes frente a cualesquiera reclamaciones, daños, pérdidas, responsabilidades y gastos (incluidos los honorarios de abogados) que se deriven del uso que haga del Servicio o de la infracción de las presentes Condiciones."
+      },
+      "termination": {
+        "title": "Terminación",
+        "content1": "Podemos cancelar o suspender su cuenta y el acceso al Servicio inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluido el incumplimiento de estas Condiciones.",
+        "content2": "En caso de rescisión, cesará inmediatamente su derecho a utilizar el Servicio. Todas las disposiciones de estas Condiciones que, por su naturaleza, deban subsistir tras la rescisión, subsistirán."
+      },
+      "governingLaw": {
+        "title": "Derecho aplicable",
+        "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la jurisdicción en la que opera ReelPorn, sin tener en cuenta su conflicto de disposiciones legales. Usted acepta someterse a la jurisdicción personal de los tribunales ubicados en dicha jurisdicción."
+      },
+      "changes": {
+        "title": "Cambios en las condiciones",
+        "content1": "Nos reservamos el derecho a modificar estas Condiciones en cualquier momento. Notificaremos a los usuarios cualquier cambio sustancial publicando las nuevas Condiciones en esta página y actualizando la fecha de \"Última actualización\".",
+        "content2": "Su uso continuado del Servicio después de cualquier cambio constituye la aceptación de las nuevas Condiciones."
+      },
+      "contact": {
+        "title": "Información de contacto",
+        "intro": "Si tiene alguna pregunta sobre estas Condiciones de servicio, póngase en contacto con nosotros:",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "infoCollect": {
+        "title": "Información que recopilamos",
+        "provideTitle": "Información que facilita",
+        "provide1": "Información de la cuenta (correo electrónico, nombre de usuario, contraseña)",
+        "provide2": "Información del perfil (nombre, biografía, preferencias)",
+        "provide3": "Información de pago (procesada de forma segura a través de terceros proveedores)",
+        "provide4": "Contenido que subes (vídeos, fotos, comentarios)",
+        "provide5": "Comunicaciones con nosotros (tickets de soporte, correos electrónicos)",
+        "autoTitle": "Información recogida automáticamente",
+        "auto1": "Dirección IP e información del dispositivo",
+        "auto2": "Tipo de navegador y sistema operativo",
+        "auto3": "Datos de uso (páginas visitadas, vídeos vistos, interacciones)",
+        "auto4": "Cookies y tecnologías de seguimiento similares",
+        "auto5": "Datos de localización (sólo a nivel de país/región)"
+      },
+      "infoUse": {
+        "title": "Cómo utilizamos su información",
+        "intro": "Utilizamos la información recopilada para:",
+        "item1": "Proporcionar y mantener nuestro Servicio",
+        "item2": "Procesar transacciones y enviar información relacionada",
+        "item3": "Enviar información administrativa y actualizaciones",
+        "item4": "Responder a sus comentarios y preguntas",
+        "item5": "Personalizar su experiencia y ofrecerle recomendaciones",
+        "item6": "Supervisar y analizar el uso y las tendencias",
+        "item7": "Detectar y prevenir el fraude y los abusos",
+        "item8": "Cumplir las obligaciones legales"
+      },
+      "infoSharing": {
+        "title": "Intercambio de información",
+        "intro": "No vendemos su información personal. Podemos compartir información en estas circunstancias:",
+        "item1": "Proveedores de servicios: Con terceros de confianza que ayudan en el funcionamiento de nuestro Servicio",
+        "item2": "Requisitos legales: Cuando lo exija la ley o para proteger los derechos y la seguridad",
+        "item3": "Transferencia de empresas: En relación con una fusión, venta o adquisición",
+        "item4": "Con consentimiento: Cuando aceptas explícitamente compartir",
+        "item5": "Datos agregados: Datos estadísticos no identificables para análisis"
+      },
+      "dataSecurity": {
+        "title": "Seguridad de los datos",
+        "intro": "Aplicamos las medidas de seguridad técnicas y organizativas adecuadas para proteger su información personal, entre las que se incluyen:",
+        "item1": "Cifrado SSL/TLS para la transmisión de datos",
+        "item2": "Almacenamiento cifrado de información sensible",
+        "item3": "Auditorías de seguridad y actualizaciones periódicas",
+        "item4": "Acceso limitado a la información personal",
+        "item5": "Procesamiento de pagos seguro a través de proveedores que cumplen la normativa PCI",
+        "outro": "Sin embargo, ningún método de transmisión o almacenamiento es 100% seguro. No podemos garantizar una seguridad absoluta."
+      },
+      "privacyRights": {
+        "title": "Sus derechos de privacidad",
+        "intro": "Dependiendo de su ubicación, usted puede tener ciertos derechos en relación con su información personal:",
+        "item1": "Acceso: Solicitar una copia de sus datos personales",
+        "item2": "Rectificación: Solicitar la corrección de información inexacta",
+        "item3": "Supresión: Solicita la eliminación de tu cuenta y datos asociados",
+        "item4": "Portabilidad: Reciba sus datos en un formato portátil",
+        "item5": "Oposición: Oponerse a determinados tratamientos de sus datos",
+        "item6": "Restricción: Solicitar un tratamiento limitado de sus datos",
+        "outro": "Para ejercer estos derechos, póngase en contacto con nosotros en support@reelporn.ai"
+      },
+      "cookies": {
+        "title": "Cookies y rastreo",
+        "content1": "Utilizamos cookies y tecnologías similares para mejorar su experiencia. Para obtener información detallada, consulte nuestra Política de cookies.",
+        "content2": "Puede controlar las cookies a través de la configuración de su navegador y de nuestro centro de preferencias de cookies."
+      },
+      "thirdParty": {
+        "title": "Servicios de terceros",
+        "intro1": "Nuestro Servicio puede contener enlaces a sitios web y servicios de terceros. No somos responsables de sus prácticas de privacidad. Le recomendamos que consulte sus políticas de privacidad.",
+        "intro2": "Entre los servicios de terceros que utilizamos se incluyen:",
+        "item1": "Procesadores de pago (Stripe, PayPal)",
+        "item2": "Proveedores de análisis (Google Analytics)",
+        "item3": "Redes de distribución de contenidos (CloudFlare)",
+        "item4": "Herramientas de comunicación (servicios de correo electrónico)"
+      },
+      "childrenPrivacy": {
+        "title": "Privacidad infantil",
+        "content": "Nuestro Servicio es estrictamente para adultos mayores de 18 años. No recopilamos conscientemente información de menores de 18 años. Si descubrimos que hemos recopilado información de un menor, la eliminaremos inmediatamente."
+      },
+      "dataRetention": {
+        "title": "Conservación de datos",
+        "intro": "Conservamos su información personal durante el tiempo necesario para:",
+        "item1": "Prestarle nuestro servicio",
+        "item2": "Cumplir las obligaciones legales",
+        "item3": "Resolver litigios y hacer cumplir los acuerdos",
+        "item4": "Mantener registros empresariales",
+        "outro": "Cuando elimine su cuenta, borraremos o anonimizaremos su información personal, excepto cuando la ley exija su conservación."
+      },
+      "internationalTransfers": {
+        "title": "Transferencias internacionales de datos",
+        "content": "Su información puede ser transferida y procesada en países distintos al suyo. Estos países pueden tener leyes de protección de datos diferentes. Nos aseguramos de que existan las salvaguardias adecuadas para dichas transferencias."
+      },
+      "californiaRights": {
+        "title": "Derechos de privacidad en California",
+        "intro": "Los residentes en California tienen derechos adicionales en virtud de la Ley de Privacidad del Consumidor de California (CCPA):",
+        "item1": "Derecho a saber qué datos personales se recogen",
+        "item2": "Derecho a saber si se venden o divulgan datos personales",
+        "item3": "Derecho a oponerse a la venta de información personal",
+        "item4": "Derecho a la no discriminación por ejercer el derecho a la intimidad"
+      },
+      "europeanRights": {
+        "title": "Derecho europeo a la intimidad",
+        "content": "Si se encuentra en el Espacio Económico Europeo (EEE), tiene derechos adicionales en virtud del Reglamento General de Protección de Datos (RGPD), incluido el derecho a presentar una reclamación ante la autoridad local de protección de datos."
+      },
+      "policyUpdates": {
+        "title": "Actualizaciones de esta política",
+        "content1": "Podemos actualizar esta Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de \"Última actualización\".",
+        "content2": "En caso de cambios significativos, proporcionaremos un aviso adicional (como una notificación por correo electrónico o un aviso destacado en nuestro Servicio)."
+      },
+      "contact": {
+        "title": "Información de contacto",
+        "intro": "Si tiene alguna pregunta sobre esta Política de privacidad o sobre nuestras prácticas de privacidad, póngase en contacto con nosotros:",
+        "email": "support@reelporn.ai",
+        "dpoTitle": "Responsable de protección de datos",
+        "dpo": "Departamento jurídico de ReelPorn",
+        "dpoEmail": "support@reelporn.ai"
+      }
+    }
+  },
+  "dmca": {
+    "title": "Aviso DMCA y política de retirada",
+    "subtitle": "Cumplimiento de la Ley de Derechos de Autor del Milenio Digital",
+    "sections": {
+      "notification": {
+        "title": "Notificación de infracción de los derechos de autor",
+        "content": "ReelPorn respeta los derechos de propiedad intelectual de terceros y espera que sus usuarios hagan lo mismo. De acuerdo con la Ley de Derechos de Autor del Milenio Digital de 1998 (\"DMCA\"), responderemos rápidamente a las reclamaciones de infracción de derechos de autor cometidas utilizando el sitio web de ReelPorn."
+      },
+      "filing": {
+        "title": "Notificación DMCA",
+        "intro": "Si usted cree que su trabajo protegido por derechos de autor ha sido copiado de una manera que constituye una infracción de los derechos de autor y es accesible en este sitio, usted puede notificar a nuestro agente de derechos de autor, como se establece en la DMCA. Para que su reclamación sea válida en virtud de la DMCA, debe facilitar la siguiente información por escrito:",
+        "item1": "Una firma electrónica o física de una persona autorizada a actuar en nombre del titular de los derechos de autor",
+        "item2": "Identificación de la obra protegida por derechos de autor que alega ha sido infringida",
+        "item3": "Identificación del material cuya infracción se reclama y su ubicación en el sitio web",
+        "item4": "Información razonablemente suficiente para permitirnos ponernos en contacto con usted, como su dirección, número de teléfono y dirección de correo electrónico",
+        "item5": "Una declaración de que usted cree de buena fe que el uso del material de la manera reclamada no está autorizado por el propietario de los derechos de autor, su agente o la ley",
+        "item6": "Una declaración, bajo pena de perjurio, de que la información anterior es exacta y de que usted es el titular de los derechos de autor o está autorizado para actuar en nombre del titular"
+      },
+      "agent": {
+        "title": "Agente de derechos de autor designado",
+        "intro": "Envíe todas las notificaciones DMCA a nuestro agente designado:",
+        "email": "dmca@reelporn.ai",
+        "name": "Agente DMCA",
+        "department": "Departamento jurídico de ReelPorn"
+      },
+      "counter": {
+        "title": "Contranotificación",
+        "intro": "Si cree que su contenido ha sido eliminado o que se ha inhabilitado el acceso al mismo por error o identificación errónea, puede presentarnos una contranotificación. Para ser efectiva, una contranotificación debe ser una comunicación escrita que incluya lo siguiente:",
+        "item1": "Su firma física o electrónica",
+        "item2": "Identificación del material que se ha retirado o cuyo acceso se ha inhabilitado y la ubicación en la que aparecía el material antes de ser retirado o de que se inhabilitara el acceso",
+        "item3": "Una declaración bajo pena de perjurio de que usted cree de buena fe que el material fue retirado o inutilizado como consecuencia de un error o una identificación errónea",
+        "item4": "Su nombre, dirección, número de teléfono y dirección de correo electrónico",
+        "item5": "Una declaración de que acepta la jurisdicción del Tribunal Federal de Distrito para el distrito judicial en el que se encuentra su dirección"
+      },
+      "repeat": {
+        "title": "Infractores reincidentes",
+        "content": "De conformidad con la DMCA y otras leyes aplicables, hemos adoptado una política de cese, en las circunstancias apropiadas, de los usuarios considerados infractores reincidentes. También podemos, a nuestra entera discreción, limitar el acceso al sitio y/o cancelar las cuentas de cualquier usuario que infrinja cualquier derecho de propiedad intelectual de terceros."
+      },
+      "notice": {
+        "title": "Aviso importante",
+        "content": "Tenga en cuenta que, en virtud del artículo 512(f) de la DMCA, cualquier persona que, a sabiendas, tergiverse materialmente que el material o la actividad infringe la ley puede ser objeto de responsabilidad por daños y perjuicios, incluidos los costes y honorarios de abogados. Consulte a su asesor jurídico antes de presentar una notificación o contranotificación."
+      },
+      "lastUpdated": "Última actualización"
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre ReelPorn",
+    "categories": {
+      "general": {
+        "title": "Cuestiones generales",
+        "q1": {
+          "question": "¿Qué es ReelPorn?",
+          "answer": "ReelPorn es una plataforma de contenidos premium para adultos especializada en contenidos de vídeo de formato corto (vídeos de 15 segundos). Ofrecemos una experiencia de entretenimiento para adultos similar a la de TikTok, con funciones de deslizamiento, feeds personalizados y contenidos de alta calidad generados por inteligencia artificial."
+        },
+        "q2": {
+          "question": "¿ReelPorn es gratuito?",
+          "answer": "ReelPorn ofrece contenidos gratuitos y premium. Puede navegar y ver contenido limitado de forma gratuita, pero una suscripción premium desbloquea el acceso ilimitado a todos los vídeos, calidad HD/4K, funciones de descarga y visualización sin anuncios."
+        },
+        "q3": {
+          "question": "¿Cómo puedo verificar mi edad?",
+          "answer": "Es necesario verificar la edad para acceder a ReelPorn. En tu primera visita, debes confirmar que tienes 18 años o más. Se trata de un requisito legal para garantizar que los menores no puedan acceder a contenidos para adultos."
+        },
+        "q4": {
+          "question": "¿Mis datos están seguros y son privados?",
+          "answer": "Sí, nos tomamos muy en serio la privacidad. Todos los datos están encriptados, nunca compartimos información personal con terceros sin su consentimiento y puede navegar de forma anónima. Consulte nuestra Política de privacidad para obtener información detallada."
+        }
+      },
+      "account": {
+        "title": "Cuenta y suscripción",
+        "q1": {
+          "question": "¿Cómo puedo crear una cuenta?",
+          "answer": "Haga clic en el botón \"Registrarse\", elija su plan de afiliación, introduzca su correo electrónico y cree una contraseña. Verifica tu dirección de correo electrónico y ¡ya puedes empezar a ver!"
+        },
+        "q2": {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos las principales tarjetas de crédito (Visa, MasterCard, American Express), PayPal y pagos en criptomoneda (Bitcoin, Ethereum). Todas las transacciones se procesan de forma segura y discreta."
+        },
+        "q3": {
+          "question": "¿Cómo cancelo mi suscripción?",
+          "answer": "Puede cancelar su suscripción en cualquier momento desde la configuración de su cuenta. Vaya a Perfil > Suscripción > Cancelar suscripción. Seguirás teniendo acceso hasta el final de tu periodo de facturación."
+        },
+        "q4": {
+          "question": "¿Aparecerán los cargos como \"ReelPorn\" en mi extracto?",
+          "answer": "No, para tu privacidad, los cargos aparecen bajo un nombre de facturación discreto como \"RP Media Services\" o \"Digital Entertainment Services\" en tu extracto bancario."
+        },
+        "q5": {
+          "question": "¿Puedo cambiar de plan?",
+          "answer": "Sí, puede cambiar su plan de suscripción en cualquier momento. El nuevo plan entrará en vigor en su próximo ciclo de facturación. Cualquier diferencia de precio se prorrateará."
+        }
+      },
+      "content": {
+        "title": "Contenido",
+        "q1": {
+          "question": "¿Qué tipo de contenidos hay disponibles?",
+          "answer": "Ofrecemos una amplia variedad de contenido para adultos en formato de carrete de 15 segundos, incluyendo amateur, profesional, varias categorías y fetiches. Todo el contenido procede de adultos verificados y cumple los requisitos legales."
+        },
+        "q2": {
+          "question": "¿Puedo descargar vídeos para verlos sin conexión?",
+          "answer": "Los usuarios Premium pueden descargar vídeos para verlos sin conexión. Las descargas están encriptadas y solo se pueden ver a través de nuestra aplicación mientras la suscripción esté activa."
+        },
+        "q3": {
+          "question": "¿Cómo funciona el algoritmo de recomendación?",
+          "answer": "Nuestro algoritmo, basado en inteligencia artificial, aprende de tus hábitos, gustos y preferencias para mostrarte contenidos personalizados. Cuanto más interactúes, mejores serán las recomendaciones."
+        },
+        "q4": {
+          "question": "¿Puedo cargar mis propios contenidos?",
+          "answer": "Sí, los creadores verificados pueden subir contenidos. Debes completar nuestro proceso de verificación de creadores, aportar la documentación 2257 y cumplir nuestras directrices de contenidos."
+        },
+        "q5": {
+          "question": "¿Cómo denuncio un contenido inapropiado?",
+          "answer": "Todos los vídeos tienen un botón de denuncia. Haz clic en él para denunciar contenidos que infrinjan nuestras condiciones, no sean consentidos, impliquen a menores o sean inapropiados por cualquier otro motivo. Revisamos todas las denuncias en un plazo de 24 horas."
+        }
+      },
+      "creators": {
+        "title": "Para creadores",
+        "q1": {
+          "question": "¿Cómo me convierto en creador verificado?",
+          "answer": "Presente su solicitud a través del Portal del Creador, proporcione un documento de identidad expedido por el gobierno, complete la documentación 2257 y pase nuestro proceso de verificación. La aprobación suele tardar entre 24 y 48 horas."
+        },
+        "q2": {
+          "question": "¿Cuánto puedo ganar como creador?",
+          "answer": "Los creadores ganan a través de múltiples fuentes de ingresos: participación en los ingresos por publicidad (60%), propinas de los fans, contenidos de pago por visión y niveles de suscripción. Los mejores creadores ganan miles de euros al mes."
+        },
+        "q3": {
+          "question": "¿Cuáles son los requisitos de contenido?",
+          "answer": "Los vídeos deben durar 15 segundos o menos, tener una calidad mínima de 720p, todos los participantes deben ser mayores de 18 años y el contenido debe ser consentido. Prohibimos el contenido ilegal, la violencia y el material no consentido."
+        },
+        "q4": {
+          "question": "¿Cómo cobro?",
+          "answer": "Los pagos se procesan semanalmente a través de depósito directo, PayPal o criptomoneda. El pago mínimo es de 50 $. Recibirás informes de ganancias detallados en tu panel de creador."
+        },
+        "q5": {
+          "question": "¿Conservo los derechos sobre mis contenidos?",
+          "answer": "Sí, usted conserva la propiedad de sus contenidos. Nos concede una licencia para mostrarlo en nuestra plataforma. Puedes eliminar tu contenido en cualquier momento desde tu panel de creador."
+        }
+      },
+      "technical": {
+        "title": "Asistencia técnica",
+        "q1": {
+          "question": "¿Qué dispositivos son compatibles?",
+          "answer": "ReelPorn funciona en todos los navegadores modernos (Chrome, Firefox, Safari, Edge) de escritorio y móviles. También tenemos aplicaciones nativas para iOS y Android (disponibles fuera de las tiendas de aplicaciones)."
+        },
+        "q2": {
+          "question": "¿Por qué la reproducción de vídeo va entrecortada?",
+          "answer": "Esto suele deberse a una conexión a Internet lenta. Prueba a reducir la calidad de vídeo en los ajustes, cerrar otras pestañas/aplicaciones o cambiar a una red más rápida. Los usuarios Premium tienen prioridad en la transmisión."
+        },
+        "q3": {
+          "question": "¿Cómo puedo borrar mi historial de visitas?",
+          "answer": "Vaya a Perfil > Configuración de privacidad > Borrar historial. Puedes borrar todo el historial o eliminar elementos de forma selectiva. También puedes activar el modo incógnito para navegar en privado."
+        },
+        "q4": {
+          "question": "¿Puedo utilizar una VPN?",
+          "answer": "Sí, el uso de VPN está permitido y se recomienda por motivos de privacidad. Sin embargo, algunas funciones pueden estar limitadas en función de la ubicación de la VPN debido a restricciones regionales de contenido."
+        }
+      },
+      "legal": {
+        "title": "Legal y Seguridad",
+        "q1": {
+          "question": "¿Cómo se verifica que los artistas son mayores de 18 años?",
+          "answer": "Cumplimos los requisitos del 18 U.S.C. 2257. Todos los creadores deben presentar un documento de identidad expedido por el gobierno y mantenemos registros detallados. Utilizamos IA y revisión manual para verificar las edades."
+        },
+        "q2": {
+          "question": "¿Qué ocurre si mi contenido se ha cargado sin permiso?",
+          "answer": "Envíe una solicitud de retirada DMCA a dmca@reelporn.ai con una prueba de propiedad. Eliminaremos los contenidos infractores en un plazo de 24 horas desde la recepción de notificaciones válidas."
+        },
+        "q3": {
+          "question": "¿Es legal ReelPorn en mi país?",
+          "answer": "Las leyes sobre contenido para adultos varían según el país. Es su responsabilidad asegurarse de que cumple la legislación local. Bloqueamos el acceso desde países donde el contenido para adultos está prohibido."
+        },
+        "q4": {
+          "question": "¿Cómo se impide el acceso a los menores?",
+          "answer": "Utilizamos puertas de verificación de edad, exigimos la creación de cuentas con confirmación de edad, proporcionamos información de control parental y cooperamos con servicios de filtrado."
+        }
+      }
+    },
+    "help": {
+      "title": "¿Aún necesita ayuda?",
+      "description": "¿No encuentra la respuesta que busca? Nuestro equipo de asistencia está aquí para ayudarle",
+      "emailSupport": "Asistencia por correo electrónico",
+      "liveChat": "Chat en directo"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Política de cookies",
+    "subtitle": "Cómo utilizamos las cookies y tecnologías similares",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "whatAre": {
+        "title": "¿Qué son las cookies?",
+        "content1": "Las cookies son pequeños archivos de texto que se colocan en su dispositivo cuando visita nuestro sitio web. Nos ayudan a ofrecerle una mejor experiencia al recordar sus preferencias, analizar el tráfico del sitio y personalizar el contenido.",
+        "content2": "También utilizamos tecnologías similares como píxeles, almacenamiento local y huellas dactilares de dispositivos para mejorar su experiencia de navegación y mejorar nuestros servicios."
+      },
+      "howWeUse": {
+        "title": "Cómo utilizamos las cookies",
+        "intro": "Utilizamos cookies y tecnologías similares para los siguientes fines:",
+        "essential": {
+          "title": "Operaciones esenciales",
+          "description": "Proporcionar funciones básicas como la autenticación de usuarios, la seguridad y la integridad del sitio"
+        },
+        "preferences": {
+          "title": "Preferencias y configuración",
+          "description": "Para recordar tus elecciones, como las preferencias de idioma, la calidad de reproducción y los ajustes de pantalla"
+        },
+        "analytics": {
+          "title": "Análisis y rendimiento",
+          "description": "Para comprender cómo interactúan los usuarios con nuestro sitio y mejorar nuestros servicios"
+        },
+        "marketing": {
+          "title": "Marketing y publicidad",
+          "description": "Ofrecer anuncios relevantes y medir su eficacia"
+        }
+      },
+      "types": {
+        "title": "Tipos de cookies que utilizamos",
+        "essential": {
+          "title": "Galletas esenciales",
+          "description": "Estas cookies son necesarias para que el sitio web funcione correctamente. Permiten funciones básicas como la navegación por las páginas, el acceso a zonas seguras y la verificación de la edad.",
+          "items": [
+            "Session management",
+            "Age verification status",
+            "Security tokens",
+            "Load balancing"
+          ]
+        },
+        "functional": {
+          "title": "Cookies funcionales",
+          "description": "Estas cookies permiten mejorar la funcionalidad y la personalización. Podemos instalarlas nosotros o terceros proveedores cuyos servicios utilizamos.",
+          "items": [
+            "Language preferences",
+            "Video player settings",
+            "Recently viewed content",
+            "User interface customization"
+          ]
+        },
+        "analyticsType": {
+          "title": "Cookies analíticas",
+          "description": "Estas cookies nos ayudan a comprender cómo interactúan los visitantes con nuestro sitio web mediante la recopilación y notificación de información de forma anónima.",
+          "items": [
+            "Google Analytics",
+            "Page view tracking",
+            "User behavior analysis",
+            "Performance monitoring"
+          ]
+        },
+        "advertising": {
+          "title": "Cookies publicitarias",
+          "description": "Estas cookies se utilizan para ofrecer anuncios que sean relevantes para usted y sus intereses. También ayudan a limitar el número de veces que ve un anuncio.",
+          "items": [
+            "Targeted advertising",
+            "Ad frequency capping",
+            "Campaign performance measurement",
+            "Interest-based advertising"
+          ]
+        }
+      },
+      "thirdParty": {
+        "title": "Cookies de terceros",
+        "intro1": "Algunas cookies son colocadas por servicios de terceros que aparecen en nuestras páginas. No controlamos estas cookies y le animamos a que consulte los sitios web de terceros para obtener más información sobre cómo utilizan las cookies.",
+        "intro2": "Entre los servicios de terceros que utilizamos se incluyen:",
+        "items": [
+          "Google Analytics - for website analytics",
+          "CloudFlare - for security and performance",
+          "Payment processors - for secure transactions",
+          "Social media platforms - for content sharing"
+        ]
+      },
+      "managing": {
+        "title": "Gestión de sus preferencias de cookies",
+        "intro": "Usted puede decidir qué cookies utilizamos. Puede gestionar sus preferencias en cualquier momento:",
+        "buttonText": "Administrar la configuración de cookies",
+        "buttonDescription": "Haga clic en el botón de arriba para revisar y actualizar sus preferencias de cookies.",
+        "browserIntro": "También puede controlar las cookies a través de la configuración de su navegador:",
+        "browsers": {
+          "chrome": "Chrome: Configuración → Privacidad y seguridad → Cookies y otros datos del sitio",
+          "firefox": "Firefox: Configuración → Privacidad y seguridad → Cookies y datos del sitio",
+          "safari": "Safari: Preferencias → Privacidad → Administrar datos de sitios web",
+          "edge": "Edge: Configuración → Privacidad, búsqueda y servicios → Cookies y permisos del sitio"
+        }
+      },
+      "duration": {
+        "title": "Cookie Duración",
+        "intro": "Las cookies pueden ser de sesión o persistentes:",
+        "session": {
+          "title": "Cookies de sesión",
+          "description": "Se trata de cookies temporales que expiran al cerrar el navegador. Las utilizamos para la seguridad y las funciones esenciales del sitio."
+        },
+        "persistent": {
+          "title": "Cookies persistentes",
+          "description": "Estas cookies permanecen en su dispositivo durante un periodo determinado o hasta que usted las borra. Las utilizamos para recordar sus preferencias y ofrecer funciones personalizadas."
+        }
+      },
+      "updates": {
+        "title": "Actualizaciones de esta política",
+        "content": "Podemos actualizar esta Política de Cookies de vez en cuando para reflejar los cambios en nuestras prácticas o por otras razones operativas, legales o reglamentarias. Le notificaremos cualquier cambio significativo publicando la nueva política en esta página con una fecha de revisión actualizada."
+      },
+      "contact": {
+        "title": "Contacte con nosotros",
+        "intro": "Si tiene alguna pregunta sobre el uso que hacemos de las cookies o sobre esta política, póngase en contacto con nosotros:",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Redefinir el entretenimiento para adultos",
+      "subtitle": "ReelPorn está revolucionando la forma en que los adultos descubren y disfrutan de contenidos íntimos a través de vídeos cortos innovadores y tecnología punta.",
+      "getStarted": "Comenzar",
+      "meetCreators": "Conozca a nuestros creadores"
+    },
+    "stats": {
+      "users": {
+        "number": "10M+",
+        "label": "Usuarios activos"
+      },
+      "videos": {
+        "number": "500K+",
+        "label": "Vídeos"
+      },
+      "creators": {
+        "number": "50K+",
+        "label": "Creadores"
+      },
+      "countries": {
+        "number": "150+",
+        "label": "Países"
+      }
+    },
+    "mission": {
+      "title": "Nuestra misión",
+      "paragraph1": "Creemos que el entretenimiento para adultos debe ser seguro, consentido y accesible. ReelPorn combina la naturaleza adictiva de los contenidos cortos con la intimidad del entretenimiento para adultos, creando una plataforma única en la que los espectadores pueden descubrir nuevas experiencias y los creadores prosperar.",
+      "paragraph2": "Nuestro motor de recomendaciones, basado en inteligencia artificial, aprende tus preferencias para ofrecerte contenidos personalizados, manteniendo al mismo tiempo una total privacidad. Cada vídeo se verifica, cada creador se autentica y cada interacción es segura.",
+      "imageCaption": "Innovación en movimiento"
+    },
+    "values": {
+      "title": "Nuestros valores fundamentales",
+      "privacyFirst": {
+        "title": "Privacidad ante todo",
+        "description": "Su privacidad es nuestra máxima prioridad. Utilizamos un cifrado avanzado y nunca compartimos tus datos."
+      },
+      "verifiedContent": {
+        "title": "Contenido verificado",
+        "description": "Todo el contenido es de adultos verificados. Cumplimos todos los requisitos legales, incluido el 2257."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Pioneros en el futuro del entretenimiento para adultos con tecnología y funciones de vanguardia."
+      },
+      "creatorSupport": {
+        "title": "Apoyo al creador",
+        "description": "Ofrecer a los creadores un reparto justo de los ingresos y potentes herramientas para aumentar su audiencia."
+      }
+    },
+    "technology": {
+      "title": "Impulsado por la tecnología",
+      "aiRecommendations": {
+        "title": "Recomendaciones sobre IA",
+        "description": "Algoritmos avanzados de aprendizaje automático personalizan tu feed en tiempo real."
+      },
+      "encryption": {
+        "title": "Cifrado de extremo a extremo",
+        "description": "La encriptación de grado militar protege tus datos y tu historial de visionado."
+      },
+      "cdn": {
+        "title": "CDN mundial",
+        "description": "Streaming ultrarrápido desde servidores de todo el mundo para una visualización sin búferes."
+      },
+      "crossPlatform": {
+        "title": "Multiplataforma",
+        "description": "Experiencia fluida en todos los dispositivos: ordenador de sobremesa, móvil y tableta."
+      }
+    },
+    "team": {
+      "title": "Equipo directivo",
+      "ceo": {
+        "role": "Consejero Delegado y Fundador",
+        "bio": "Líder visionario con más de 15 años en tecnología y entretenimiento"
+      },
+      "cto": {
+        "role": "CTO",
+        "bio": "Experto en IA/ML e infraestructura de streaming de vídeo escalable"
+      },
+      "headSafety": {
+        "role": "Jefe de Seguridad",
+        "bio": "Dedicados a la seguridad de las plataformas y al cumplimiento de la legislación"
+      },
+      "headCreators": {
+        "role": "Jefe de Creadores",
+        "bio": "Apoyar y hacer crecer nuestra increíble comunidad de creadores"
+      }
+    },
+    "becomeCreator": {
+      "title": "Conviértete en creador",
+      "description": "Únete a miles de creadores que ganan dinero en ReelPorn. Ofrecemos la cuota de ingresos más alta del sector, potentes análisis y una comunidad de apoyo.",
+      "revenueShare": "80% de ingresos",
+      "growthTools": "Herramientas de crecimiento",
+      "support": "asistencia 24/7",
+      "applyButton": "Solicitar ser creador"
+    },
+    "contact": {
+      "title": "Ponte en contacto",
+      "general": {
+        "title": "Consultas generales",
+        "email": "support@reelporn.ai"
+      },
+      "support": {
+        "title": "Ayuda",
+        "email": "support@reelporn.ai"
+      },
+      "business": {
+        "title": "Empresas",
+        "email": "support@reelporn.ai"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Contacte con nosotros",
+    "subtitle": "Póngase en contacto con nuestro equipo",
+    "description": "¿Tiene alguna pregunta o necesita ayuda? Estamos aquí para ayudarle. Póngase en contacto con nosotros a través de la siguiente información.",
+    "email": {
+      "title": "Asistencia por correo electrónico",
+      "description": "Para consultas generales, asistencia técnica o asociaciones empresariales",
+      "address": "support@reelporn.ai",
+      "responseTime": "Normalmente respondemos en 24-48 horas"
+    },
+    "dmca": {
+      "title": "Avisos DMCA",
+      "description": "Para avisos de infracción de derechos de autor",
+      "address": "dmca@reelporn.ai",
+      "note": "Por favor, incluya toda la información requerida como se indica en nuestra política DMCA"
+    },
+    "hours": {
+      "title": "Horas de apoyo",
+      "description": "Nuestro equipo de asistencia está a su disposición:",
+      "weekdays": "Lunes - Viernes: 9:00 AM - 6:00 PM (EST)",
+      "weekends": "Sábado - Domingo: 10:00 AM - 4:00 PM (EST)"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "¿Busca respuestas rápidas? Consulte nuestro",
+      "link": "Página de preguntas frecuentes",
+      "suffix": "para consultar preguntas y soluciones habituales."
+    }
+  },
+  "payment": {
+    "cryptoPayment": "Pago criptográfico",
+    "cryptoPaymentDescription": "Pago seguro y anónimo con criptomoneda",
+    "quickTransaction": "Transacción rápida",
+    "selectPlan": "Seleccione su plan",
+    "selectCryptocurrency": "Seleccionar criptomoneda",
+    "plan": "Plan",
+    "currency": "Moneda",
+    "total": "Total",
+    "month": "mes",
+    "proceedToPayment": "Proceder al pago",
+    "processing": {
+      "title": "¡Transacción detectada!",
+      "message": "Hemos recibido tu pago y se está procesando en la cadena de bloques.",
+      "waiting": "A la espera de confirmaciones",
+      "safeToClose": "Su suscripción se activará automáticamente cuando se alcance el mínimo de confirmaciones. Puede cerrar esta página sin peligro."
+    },
+    "loading": "Cargando...",
+    "continue": "Continúe en",
+    "sendExactly": "Enviar exactamente",
+    "sendExactAmount": "Enviar esta cantidad exacta",
+    "toAddress": "A la dirección",
+    "toThisAddress": "A esta dirección",
+    "network": "Red",
+    "confirmations": "Confirmaciones",
+    "confirmationProgress": "Confirmación Progreso",
+    "expiresAt": "Expira en {time}",
+    "paymentExpiresAt": "El pago vence en {time}",
+    "viewOnBlockchain": "Opinión sobre Blockchain",
+    "scanQRCode": "Escanea el código QR con tu criptobilletera",
+    "copyAddress": "Dirección de copia",
+    "copy": "Copia",
+    "copied": "¡Copiado!",
+    "cancelPayment": "Cancelar el pago",
+    "awaitingPayment": "En espera de pago",
+    "processingPayment": "Procesamiento del pago",
+    "paymentCompleted": "Pago efectuado",
+    "completed": {
+      "title": "Pago efectuado",
+      "message": "Su transacción se ha confirmado correctamente y su suscripción ya está activa.",
+      "welcome": "¡Bienvenido a Premium!",
+      "congratulations": "¡Enhorabuena por hacerse socio!",
+      "subscriptionActive": "Suscripción activa",
+      "transactionDetails": "Detalles de la transacción",
+      "viewOnBlockchain": "Ver en Blockchain Explorer",
+      "goToAccount": "Ir a Mi cuenta"
+    },
+    "checkout": {
+      "progress": {
+        "step1": "Seleccionar plan",
+        "step2": "Elegir pago",
+        "step3": "Confirme"
+      }
+    },
+    "expired": {
+      "title": "Pago caducado",
+      "message": "Este pago ha caducado. Desea crear un nuevo pago para completar su compra?",
+      "retryButton": "Reintentar el pago",
+      "creatingPayment": "Crear un nuevo pago...",
+      "returnHome": "Volver a la página de inicio"
+    },
+    "earlyRetry": {
+      "button": "Iniciar nuevo pago",
+      "message": "¿Va a caducar pronto el pago? Inicie uno nuevo ahora."
+    },
+    "paymentFailed": "Pago fallido",
+    "paymentCancelled": "Pago cancelado",
+    "failedToLoadData": "Error al cargar los datos de pago",
+    "failedToInitiatePayment": "No se ha iniciado el pago",
+    "failedToCancelPayment": "No se ha podido cancelar el pago",
+    "unavailable": "No disponible",
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Tratamiento",
+      "awaiting_confirmation": "En espera de confirmación",
+      "confirming": "Confirmando",
+      "completed": "Completado",
+      "failed": "Fallido",
+      "expired": "Caducado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "loading": "Cargando...",
+    "retry": "Reintentar"
+  },
+  "checkout": {
+    "title": "Complete su compra",
+    "selectPaymentMethod": "Seleccione el método de pago",
+    "selectPaymentMethodDescription": "Elija el método de pago en criptomoneda que prefiera",
+    "reviewPayment": "Revisión del pago",
+    "loading": "Cargando...",
+    "loadingPlan": "Cargando detalles del plan...",
+    "processing": "Procesando...",
+    "cancel": "Cancelar",
+    "back": "Volver",
+    "backToSubscriptions": "Volver a Suscripciones",
+    "confirmPayment": "Confirmar pago",
+    "tryAgain": "Inténtalo de nuevo",
+    "minAmount": "Min",
+    "orderSummary": "Resumen del pedido",
+    "paymentDetails": "Datos de pago",
+    "paymentMethod": "Forma de pago",
+    "amountUsd": "Importe (USD)",
+    "amountCrypto": "Importe (Cripto)",
+    "exchangeRate": "Tipo de cambio",
+    "whatsIncluded": "Qué incluye",
+    "securePayment": "Pago seguro",
+    "securePaymentDescription": "Su transacción está encriptada y es segura",
+    "acceptedCryptocurrencies": "Criptomonedas aceptadas",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "litecoin": "Litecoin",
+    "usdt": "USDT",
+    "usdc": "USDC",
+    "more": "Más",
+    "securePayments": "Pagos seguros",
+    "encryptedTransactions": "Transacciones cifradas",
+    "instantConfirmation": "Confirmación instantánea",
+    "progress": {
+      "step1": "Seleccionar plan",
+      "step2": "Elegir pago",
+      "step3": "Confirme"
+    },
+    "priceLocked": "Precio bloqueado para",
+    "priceExpiringSoon": "El precio vence en",
+    "priceExpired": "Precio caducado - Refrescante...",
+    "unlockAccess": "Desbloquear el acceso Premium",
+    "startWatching": "Empezar a ver en 2 minutos",
+    "payWith": "Pague {amount} con {crypto}",
+    "moneyBackGuarantee": "garantía de devolución del dinero en 30 días",
+    "moneyBackDescription": "¿No está satisfecho? Le devolvemos el dinero en 30 días",
+    "noCreditCard": "No se necesita tarjeta de crédito",
+    "sslEncrypted": "cifrado SSL de 256 bits",
+    "joinMembers": "Únase a los miembros de {count} que han subido de categoría esta semana",
+    "popularChoice": "Elección popular",
+    "fastSecure": "Rápido - Seguro - Anónimo",
+    "confirmTime": "Confirma en ~{time}",
+    "testimonial1": "La mejor calidad de transmisión que he experimentado nunca",
+    "testimonial2": "Pago criptográfico superfácil. En menos de 5 minutos.",
+    "testimonial3": "Me encanta la privacidad. No se necesita tarjeta de crédito.",
+    "testimonialAuthor1": "Sarah M.",
+    "testimonialAuthor2": "Mike T.",
+    "testimonialAuthor3": "Alex K.",
+    "recentActivity": "Actividad reciente",
+    "recentSubscription": "{name} de {country} acaba de suscribirse",
+    "liveSupport": "¿Tiene preguntas? Chatea con nosotros",
+    "avgReplyTime": "Respuesta media: <2 min",
+    "savesInFees": "💡 {token} ahorra ${amount} en tasas",
+    "status": {
+      "awaitingPayment": "En espera de pago",
+      "completed": "Pago efectuado",
+      "expired": "Pago caducado",
+      "failed": "Pago fallido",
+      "sendPayment": "Enviar pago",
+      "paymentAddress": "Dirección de pago",
+      "exactAmount": "Importe exacto a enviar",
+      "confirmations": "Confirmaciones",
+      "expiresIn": "Expira en",
+      "subscriptionActivated": "Suscripción activada",
+      "thankYou": "Gracias por su compra. Su suscripción ya está activa.",
+      "paymentExpired": "Este pago ha caducado. Por favor, inicie un nuevo pago.",
+      "paymentFailed": "Pago fallido. Por favor, inténtelo de nuevo o utilice un método de pago diferente."
+    },
+    "error": {
+      "title": "Error",
+      "planNotFound": "Plan no encontrado. Seleccione un plan de suscripción válido.",
+      "planNotFoundTitle": "¡Oops! Este plan no está disponible",
+      "planNotFoundDescription": "El plan de suscripción que busca no existe o ya no está disponible. No te preocupes, ¡tenemos otras opciones estupendas para ti!",
+      "alternativePlans": "Consulte estos planes populares",
+      "selectPlan": "Seleccione este plan",
+      "viewAllPlans": "Ver todos los planes",
+      "goBack": "Volver atrás"
+    }
+  },
+  "videos": {
+    "loading": "Cargando vídeo...",
+    "error": "Error al cargar el vídeo",
+    "notFound": "Vídeo no encontrado",
+    "notFoundTitle": "Vídeo no encontrado o eliminado",
+    "notFoundDescription": "Este vídeo puede haber sido retirado, borrado o el enlace es incorrecto.",
+    "goBack": "Volver atrás",
+    "goHome": "Ir a la página de inicio",
+    "suggestions": "Sugerencias:",
+    "suggestionCheckUrl": "Compruebe si la URL es correcta",
+    "suggestionVideoDeleted": "El vídeo puede haber sido borrado por el creador",
+    "suggestionBrowseCategories": "Navegue por nuestras categorías para encontrar contenidos similares",
+    "premium": "Premium",
+    "videoNotSupported": "Su navegador no soporta la etiqueta de vídeo.",
+    "views": "vistas",
+    "likes": "le gusta",
+    "comments": "comentarios",
+    "uploadedMinutesAgo": "hace {minutes}m",
+    "uploadedHoursAgo": "hace {hours}h",
+    "uploadedDaysAgo": "hace {days}d",
+    "uploadedMonthsAgo": "hace {months}mo",
+    "uploadedYearsAgo": "hace {years}y",
+    "subscribe": "Suscríbase a",
+    "description": "Descripción",
+    "category": "Categoría",
+    "tags": "Etiquetas",
+    "like": "Como",
+    "liked": "Me ha gustado",
+    "share": "Compartir",
+    "report": "Informe",
+    "relatedVideos": "Vídeos relacionados",
+    "tryTheseVideos": "Pruebe estos vídeos",
+    "linkCopied": "Enlace copiado en el portapapeles",
+    "loginToLike": "¿Te gusta este vídeo?",
+    "loginToLikeDescription": "Crea una cuenta gratuita o inicia sesión para que te gusten los vídeos y crear tu colección de favoritos."
+  },
+  "authModal": {
+    "defaultTitle": "Inicio de sesión obligatorio",
+    "defaultMessage": "Inicie sesión o cree una cuenta para continuar.",
+    "login": "Inicio de sesión",
+    "register": "Crear cuenta",
+    "maybeLater": "Tal vez más tarde"
+  }
+}
