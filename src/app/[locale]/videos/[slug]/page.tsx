@@ -289,8 +289,6 @@ function VideoPage() {
 
       // Track successful like/unlike
       trackLikeEvent(isLiked ? 'unlike' : 'like', true);
-
-      console.log(`Video ${isLiked ? 'unliked' : 'liked'} successfully`);
     } catch (error) {
       console.error('Error toggling like:', error);
 
@@ -323,15 +321,6 @@ function VideoPage() {
         user_id: user?.id || null,
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
-      });
-
-      console.log('GTM Event Tracked:', {
-        event: 'video_like',
-        video_id: reel.id,
-        video_slug: reel.slug,
-        like_action: action,
-        like_success: success,
-        user_authenticated: isAuthenticated,
       });
     } else {
       console.warn('Google Tag Manager dataLayer not found');
