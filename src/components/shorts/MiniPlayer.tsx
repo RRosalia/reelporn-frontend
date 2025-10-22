@@ -79,7 +79,6 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
             });
         } else if (isResizing) {
             const deltaX = e.clientX - resizeStart.x;
-            const deltaY = e.clientY - resizeStart.y;
 
             // Maintain aspect ratio (4:3)
             const newWidth = Math.max(300, Math.min(800, resizeStart.width + deltaX));

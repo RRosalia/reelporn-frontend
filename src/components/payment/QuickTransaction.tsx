@@ -81,7 +81,7 @@ export default function QuickTransaction({
       ]);
       setCurrencies(currenciesData);
       setPrices(pricesData);
-    } catch (err) {
+    } catch {
       setError('Failed to load payment methods');
     } finally {
       setLoading(false);
