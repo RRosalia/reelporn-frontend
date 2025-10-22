@@ -34,7 +34,7 @@ export async function generateMetadata({
 
 export default function SubscriptionsLayout({
   children,
-  params,
+  params: _params,
 }: SubscriptionsLayoutProps) {
   return (
     <>

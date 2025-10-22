@@ -40,7 +40,6 @@ interface PaywalledContentStructuredData {
 function VideoPage() {
   const t = useTranslations();
   const params = useParams();
-  const router = useRouter();
   const { isAuthenticated, user } = useAuth();
   const slug = params?.slug as string;
   const locale = (params?.locale as string) || 'en';
@@ -48,7 +47,6 @@ function VideoPage() {
   const [reel, setReel] = useState<Reel | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [showShareToast, setShowShareToast] = useState(false);
   const [showLoginDialog, setShowLoginDialog] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
@@ -434,8 +432,6 @@ function VideoPage() {
                   controls
                   poster={reel.thumbnail}
                   className="video-element"
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
                 >
                   <source src={reel.videoUrl} type="video/mp4" />
                   {t('videos.videoNotSupported')}

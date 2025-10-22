@@ -12,8 +12,6 @@ import { GroupedPlans, Plan, PeriodicityType, PaymentMethod } from '@/types/Paym
 
 function SignupPage() {
     const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const router = useRouter();
     const { isAuthenticated, isLoading: authLoading } = useAuth();
 

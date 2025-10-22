@@ -21,7 +21,7 @@ interface ShortsPlayerProps {
     onPrevious: () => void;
 }
 
-function ShortsPlayer({ short, isActive, onNext, onPrevious }: ShortsPlayerProps) {
+function ShortsPlayer({ short, isActive, onNext, onPrevious: _onPrevious }: ShortsPlayerProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(true);

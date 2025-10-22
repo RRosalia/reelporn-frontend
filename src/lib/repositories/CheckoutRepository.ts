@@ -4,7 +4,6 @@ import {
   CheckoutRequest,
   CheckoutPreviewResponse,
   CheckoutConfirmResponse,
-  CheckoutPaymentStatusResponse,
   PaymentStatusPollResponse,
 } from '@/types/Payment';
 
