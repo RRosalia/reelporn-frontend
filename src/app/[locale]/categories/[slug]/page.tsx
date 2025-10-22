@@ -48,8 +48,8 @@ function CategoryDetailPage() {
         try {
             setLoading(true);
             setError(null);
-            const categoryData = await CategoryService.getCategoryBySlug(slug);
-            setCategory(categoryData);
+            const categoryResponse = await CategoryService.getCategoryBySlug(slug);
+            setCategory(categoryResponse.data);
             loadVideos(1);
         } catch (err) {
             setError('Failed to load category. Please try again later.');

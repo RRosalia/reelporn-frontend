@@ -35,7 +35,8 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
       setSecretKey(secret);
       setStep('scan');
     } catch (err: unknown) {
-      setError(err.message || t('account.twoFactor.error.enableFailed'));
+      const errorMessage = err instanceof Error ? err.message : t('account.twoFactor.error.enableFailed');
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -55,7 +56,8 @@ const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({ onSetupComplete, onCanc
       if (err instanceof ValidationException) {
         setError(err.errors.code?.[0] || t('account.twoFactor.error.invalidCode'));
       } else {
-        setError(err.message || t('account.twoFactor.error.verifyFailed'));
+        const errorMessage = err instanceof Error ? err.message : t('account.twoFactor.error.verifyFailed');
+        setError(errorMessage);
       }
     } finally {
       setIsLoading(false);

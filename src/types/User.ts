@@ -9,6 +9,7 @@ export interface User {
   id: number;
   email: string;
   name?: string;
+  nickname?: string;
   email_verified_at?: string | null;
   two_factor_enabled?: boolean;
   two_factor_confirmed_at?: string | null;

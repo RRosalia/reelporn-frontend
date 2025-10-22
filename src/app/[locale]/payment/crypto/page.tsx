@@ -52,9 +52,9 @@ export default function CryptoPaymentPage() {
     transactionId,
     (update) => {
       if (update.status === 'completed' as PaymentStatus) {
-        // Payment successful, redirect to success page
+        // Payment successful, redirect to account page
         setTimeout(() => {
-          router.push('/account?payment=success')!;
+          router.push('/account');
         }, 2000);
       } else if (update.status === 'failed' as PaymentStatus) {
         setError(update.message || t('payment.paymentFailed'));
@@ -90,7 +90,8 @@ export default function CryptoPaymentPage() {
       setPrices(pricesData);
       setPlans(plansResponse.data || []);
     } catch (err: unknown) {
-      setError(err.message || t('payment.failedToLoadData'));
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToLoadData');
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -140,7 +141,8 @@ export default function CryptoPaymentPage() {
       setCryptoAmount(response.amountCrypto);
       setExpiresAt(response.expiresAt);
     } catch (err: unknown) {
-      setError(err.message || t('payment.failedToInitiatePayment'));
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToInitiatePayment');
+      setError(errorMessage);
     } finally {
       setProcessing(false);
     }
@@ -163,7 +165,8 @@ export default function CryptoPaymentPage() {
       await PaymentService.cancelPayment(transactionId);
       resetPayment();
     } catch (err: unknown) {
-      setError(err.message || t('payment.failedToCancelPayment'));
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToCancelPayment');
+      setError(errorMessage);
     }
   };
 

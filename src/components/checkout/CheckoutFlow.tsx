@@ -64,10 +64,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
   // Poll payment status when payment is confirmed
   useEffect(() => {
-    if (currentStep === 'status' && confirmedPayment) {
+    if (currentStep === 'status' && confirmedPayment && confirmedPayment.payment) {
       const pollStatus = async () => {
         try {
-          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment.id);
+          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment!.id);
           setPaymentStatus(status);
 
           // If payment is completed, stop polling and call onSuccess

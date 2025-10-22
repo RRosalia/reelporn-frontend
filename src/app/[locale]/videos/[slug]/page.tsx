@@ -73,8 +73,11 @@ function VideoPage() {
         console.error('Error fetching reel:', err);
 
         // If 404, show inline not found instead of separate page
-        if (err?.response?.status === 404) {
-          setNotFound(true);
+        if (err && typeof err === 'object' && 'response' in err) {
+          const errorResponse = err as { response?: { status?: number } };
+          if (errorResponse.response?.status === 404) {
+            setNotFound(true);
+          }
         }
       } finally {
         setLoading(false);
@@ -194,7 +197,7 @@ function VideoPage() {
         trackShareEvent('native_share', true);
       } catch (error: unknown) {
         // User cancelled or error occurred
-        if (error.name !== 'AbortError') {
+        if (error instanceof Error && error.name !== 'AbortError') {
           console.error('Error sharing:', error);
           // Fallback to copy
           copyToClipboard(shareUrl);

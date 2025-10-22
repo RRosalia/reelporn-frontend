@@ -45,7 +45,8 @@ export default function PaymentStatusPage() {
       }
     } catch (err: unknown) {
       console.error('Failed to fetch payment status:', err);
-      setError(err.message || t('failedToLoadData'));
+      const errorMessage = err instanceof Error ? err.message : t('failedToLoadData');
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -66,9 +67,11 @@ export default function PaymentStatusPage() {
     const channel = echoInstance.private(channelName);
 
     // Log channel subscription events
-    channel.error((error: any) => {
-      console.error('[Echo] Channel subscription error:', error);
-    });
+    if (channel && typeof channel === 'object' && 'error' in channel && typeof channel.error === 'function') {
+      channel.error((error: any) => {
+        console.error('[Echo] Channel subscription error:', error);
+      });
+    }
 
     // TODO: Add event listeners here when events are defined
 
@@ -239,7 +242,8 @@ export default function PaymentStatusPage() {
       }
     } catch (err: unknown) {
       console.error('Failed to retry payment:', err);
-      setRetryError(err.message || 'Failed to create new payment. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create new payment. Please try again.';
+      setRetryError(errorMessage);
     } finally {
       setIsRetrying(false);
     }
