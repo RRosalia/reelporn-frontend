@@ -192,7 +192,6 @@ function VideoPage() {
 
         // Track successful share via native API
         trackShareEvent('native_share', true);
-        console.log('Successfully shared');
       } catch (error: any) {
         // User cancelled or error occurred
         if (error.name !== 'AbortError') {
@@ -251,14 +250,6 @@ function VideoPage() {
         share_success: success,
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
-      });
-
-      console.log('GTM Event Tracked:', {
-        event: 'video_share',
-        video_id: reel.id,
-        video_slug: reel.slug,
-        share_method: method,
-        share_success: success,
       });
     } else {
       console.warn('Google Tag Manager dataLayer not found');
