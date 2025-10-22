@@ -1417,5 +1417,9 @@
     "login": "Anmelden",
     "register": "Konto Erstellen",
     "maybeLater": "Vielleicht Später"
+  },
+  "test": {
+    "welcomeMessage": "Willkommen {username}, Sie haben {count} neue Benachrichtigungen!",
+    "simpleMessage": "Dies ist eine Testübersetzung"
   }
 }
