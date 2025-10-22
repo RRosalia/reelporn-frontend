@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getAllMockVideoSlugs, mockVideos } from '@/lib/mocks/videoMockData';
@@ -31,7 +32,7 @@ function VideosListPage() {
               className="video-card"
             >
               <div className="video-thumbnail">
-                <img src={video.thumbnail} alt={video.title} />
+                <Image src={video.thumbnail} alt={video.title} width={320} height={180} />
                 {video.is_premium && (
                   <div className="premium-badge">
                     <svg

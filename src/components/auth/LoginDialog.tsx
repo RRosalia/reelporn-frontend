@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 interface LoginDialogProps {
     isOpen: boolean;
@@ -64,9 +65,9 @@ function LoginDialog({ isOpen, onClose }: LoginDialogProps) {
                     </form>
                     <p className="text-center mt-4">
                         {t('login.noAccount')}{' '}
-                        <a className="newaccount" href="/signup">
+                        <Link className="newaccount" href="/signup">
                             {t('login.createAccount')}
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>

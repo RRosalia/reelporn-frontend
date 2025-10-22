@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
@@ -129,10 +130,12 @@ function BlogDetailPage() {
             {post.author && (
               <div className="flex items-center gap-2">
                 {post.author.avatar && (
-                  <img
+                  <Image
                     src={post.author.avatar}
                     alt={post.author.name}
-                    className="w-10 h-10 rounded-full"
+                    width={40}
+                    height={40}
+                    className="rounded-full"
                   />
                 )}
                 <span className="font-medium">{post.author.name}</span>
@@ -155,11 +158,12 @@ function BlogDetailPage() {
 
           {/* Featured Image */}
           {post.featured_image && (
-            <div className="mb-8 rounded-lg overflow-hidden">
-              <img
+            <div className="mb-8 rounded-lg overflow-hidden relative w-full" style={{ aspectRatio: '16/9' }}>
+              <Image
                 src={post.featured_image}
                 alt={post.title}
-                className="w-full h-auto"
+                fill
+                className="object-cover"
               />
             </div>
           )}
@@ -203,10 +207,11 @@ function BlogDetailPage() {
                 >
                   {relatedPost.featured_image && (
                     <div className="relative h-40 bg-gray-800 overflow-hidden">
-                      <img
+                      <Image
                         src={relatedPost.featured_image}
                         alt={relatedPost.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                   )}

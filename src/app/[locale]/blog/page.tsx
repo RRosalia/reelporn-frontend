@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
@@ -117,10 +118,11 @@ function BlogPage() {
                             {/* Featured Image */}
                             {post.featured_image && (
                                 <div className="relative h-48 bg-gray-800 overflow-hidden">
-                                    <img
+                                    <Image
                                         src={post.featured_image}
                                         alt={post.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-300"
                                     />
                                 </div>
                             )}

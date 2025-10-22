@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/routing';
 import { useSearchParams } from 'next/navigation';
@@ -254,7 +255,7 @@ export default function CryptoPaymentPage() {
                       >
                         <div className="currency-icon">
                           {currency.icon ? (
-                            <img src={currency.icon} alt={currency.name} />
+                            <Image src={currency.icon} alt={currency.name} width={40} height={40} />
                           ) : (
                             <span className="currency-symbol">{currency.symbol}</span>
                           )}
@@ -352,9 +353,11 @@ export default function CryptoPaymentPage() {
               <div className="qr-section">
                 {qrCode && (
                   <div className="qr-container">
-                    <img
+                    <Image
                       src={qrCode.startsWith('data:') ? qrCode : `data:image/png;base64,${qrCode}`}
                       alt="Payment QR Code"
+                      width={256}
+                      height={256}
                       className="qr-image"
                     />
                     <p className="qr-instruction">{t('payment.scanQRCode')}</p>
