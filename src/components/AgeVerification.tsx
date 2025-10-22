@@ -4,12 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
+import { languages } from '@/i18n/languages';
 import './AgeVerification.css';
-
-interface Language {
-    code: string;
-    name: string;
-}
 
 function AgeVerification() {
     const t = useTranslations();
@@ -27,13 +23,6 @@ function AgeVerification() {
 
     // Start with null to prevent any flash
     const [showModal, setShowModal] = useState<boolean | null>(null);
-
-    const languages: Language[] = [
-        { code: 'en', name: 'English' },
-        { code: 'nl', name: 'Nederlands' },
-        { code: 'de', name: 'Deutsch' },
-        { code: 'fr', name: 'Français' }
-    ];
 
     useEffect(() => {
         // Don't do anything on excluded pages (blocked, error, parental controls)

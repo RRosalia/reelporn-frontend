@@ -4,13 +4,8 @@ import React from 'react';
 import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import { languages } from '@/i18n/languages';
 import './Footer.css';
-
-interface Language {
-    code: string;
-    name: string;
-    flag: string;
-}
 
 function Footer() {
     const t = useTranslations();
@@ -21,13 +16,6 @@ function Footer() {
     const currentYear = new Date().getFullYear();
     const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
     const languageMenuRef = React.useRef<HTMLDivElement>(null);
-
-    const languages: Language[] = [
-        { code: 'en', name: 'English', flag: '🇬🇧' },
-        { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-        { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-        { code: 'fr', name: 'Français', flag: '🇫🇷' }
-    ];
 
     // Click outside handler to close dropdown
     React.useEffect(() => {

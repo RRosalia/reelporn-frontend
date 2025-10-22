@@ -5,13 +5,8 @@ import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
+import { languages } from '@/i18n/languages';
 import './Header.css';
-
-interface Language {
-    code: string;
-    name: string;
-    flag: string;
-}
 
 function Header() {
     const t = useTranslations();
@@ -74,13 +69,6 @@ function Header() {
             console.error('Logout failed:', error);
         }
     };
-
-    const languages: Language[] = [
-        { code: 'en', name: 'English', flag: '🇬🇧' },
-        { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-        { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-        { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    ];
 
     const handleLanguageChange = (newLocale: string) => {
         setShowLanguageMenu(false);
