@@ -12,6 +12,9 @@ describe('Age Verification - Bot Bypass', () => {
     // Clear localStorage and cookies before each test
     cy.clearAgeVerification();
     cy.clearCookies();
+
+    // Mock the crawler verification API to return success for crawlers
+    cy.mockCrawlerAPI(true);
   });
 
   describe('Googlebot Bypass', () => {
@@ -221,6 +224,9 @@ describe('Age Verification - Bot Bypass', () => {
 
   describe('Bot Detection Edge Cases', () => {
     it('should not bypass for user agent with "googlebot" in name but not legitimate', () => {
+      // Override mock to simulate failed IP verification
+      cy.mockCrawlerAPI(false);
+
       // This tests a fake/spoofed user agent
       cy.visit('/', {
         headers: {

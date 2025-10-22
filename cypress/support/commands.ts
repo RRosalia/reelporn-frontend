@@ -33,6 +33,13 @@ declare global {
        * @example cy.checkPageHidden()
        */
       checkPageHidden(): Chainable<void>;
+
+      /**
+       * Custom command to mock the crawler verification API
+       * @param isCrawler - Whether to return a crawler (200) or not (403) response
+       * @example cy.mockCrawlerAPI(true)
+       */
+      mockCrawlerAPI(isCrawler: boolean): Chainable<void>;
     }
   }
 }
@@ -69,6 +76,15 @@ Cypress.Commands.add('waitForAgeModal', () => {
 // Check if page content is hidden (class on html element)
 Cypress.Commands.add('checkPageHidden', () => {
   cy.document().its('documentElement').should('have.class', 'age-verification-pending');
+});
+
+// Mock the crawler verification API
+Cypress.Commands.add('mockCrawlerAPI', (isCrawler: boolean) => {
+  const apiUrl = Cypress.env('NEXT_PUBLIC_API_URL') || 'http://localhost:9000';
+  cy.intercept('GET', `${apiUrl}/crawlers/*/check`, {
+    statusCode: isCrawler ? 200 : 403,
+    body: isCrawler ? { crawler: true } : { crawler: false }
+  }).as('crawlerCheck');
 });
 
 export {};

@@ -294,7 +294,13 @@
     "cookies": "Política de cookies",
     "language": "Idioma",
     "cookieSettings": "Configuración de cookies",
-    "copyright": "Todos los derechos reservados"
+    "copyright": "Todos los derechos reservados",
+    "features": {
+      "hdQuality": "Calidad HD",
+      "downloads": "Descargas",
+      "noAds": "Sin anuncios",
+      "exclusive": "Exclusivo"
+    }
   },
   "age": {
     "title": "Este es un sitio web para adultos (18+)",
