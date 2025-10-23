@@ -109,7 +109,7 @@ export default function QuickTransaction({
         amount: config.amount,
         amountCrypto: amount,
         walletAddress: '', // Backend generates this
-        userId: config.metadata?.userId,
+        userId: config.metadata?.userId as string | undefined,
       });
 
       setTransactionId(response.transactionId);

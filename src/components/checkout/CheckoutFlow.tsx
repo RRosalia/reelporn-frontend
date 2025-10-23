@@ -462,7 +462,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
         {confirmedPayment && (
           <div className="payment-status">
-            {isPending && (
+            {isPending && confirmedPayment.instructions && confirmedPayment.crypto_details && (
               <>
                 <div className="status-section">
                   <h3>{t('checkout.status.sendPayment')}</h3>
@@ -474,7 +474,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                       <code>{confirmedPayment.crypto_details.payment_address}</code>
                       <button
                         className="copy-btn"
-                        onClick={() => copyToClipboard(confirmedPayment.crypto_details.payment_address)}
+                        onClick={() => copyToClipboard(confirmedPayment.crypto_details!.payment_address)}
                       >
                         <i className="bi bi-clipboard"></i>
                       </button>
@@ -487,27 +487,29 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                       <code>{confirmedPayment.crypto_details.amount_crypto} {confirmedPayment.crypto_details.currency}</code>
                       <button
                         className="copy-btn"
-                        onClick={() => copyToClipboard(confirmedPayment.crypto_details.amount_crypto)}
+                        onClick={() => copyToClipboard(confirmedPayment.crypto_details!.amount_crypto)}
                       >
                         <i className="bi bi-clipboard"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div className="qr-code-section">
-                    <img
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(confirmedPayment.instructions.qr_code_data)}`}
-                      alt="Payment QR Code"
-                      className="qr-code"
-                    />
-                  </div>
+                  {confirmedPayment.instructions.qr_code_data && (
+                    <div className="qr-code-section">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(confirmedPayment.instructions.qr_code_data)}`}
+                        alt="Payment QR Code"
+                        className="qr-code"
+                      />
+                    </div>
+                  )}
 
                   <div className="payment-status-info">
                     <div className="status-item">
                       <span>{t('checkout.status.confirmations')}</span>
                       <span>{confirmedPayment.crypto_details.confirmations} / {confirmedPayment.crypto_details.required_confirmations}</span>
                     </div>
-                    {confirmedPayment.payment.expires_at && (
+                    {confirmedPayment.payment?.expires_at && (
                       <div className="status-item">
                         <span>{t('checkout.status.expiresIn')}</span>
                         <span className="expires-timer">{formatTimeRemaining(confirmedPayment.payment.expires_at)}</span>

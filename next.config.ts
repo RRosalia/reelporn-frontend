@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['bootstrap-icons'],
   },
   skipMiddlewareUrlNormalize: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.reelporn.ai',
+        pathname: '/images/**',
+      },
+    ],
+  },
   async rewrites() {
     return {
       beforeFiles: [

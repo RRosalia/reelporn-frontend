@@ -2,19 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-
-interface Video {
-    id: string | number;
-    title: string;
-    thumbnail: string;
-    likes: number | string;
-    views: number | string;
-    duration: number;
-    uploadedAt: string;
-}
+import type { Reel } from '@/types/Reel';
 
 interface VideoCardProps {
-    video: Video;
+    video: Reel;
 }
 
 function VideoCard({ video }: VideoCardProps) {
@@ -28,7 +19,7 @@ function VideoCard({ video }: VideoCardProps) {
         //     id: video.id,
         //     title: video.title,
         //     thumbnail: video.thumbnail,
-        //     videoUrl: video.thumbnail.replace('/seed/', '/seed/video-'),
+        //     videoUrl: video.videoUrl,
         //     likes: video.likes,
         //     views: video.views,
         //     duration: video.duration
@@ -38,6 +29,30 @@ function VideoCard({ video }: VideoCardProps) {
 
     const handleImageError = () => {
         setImageError(true);
+    };
+
+    // Format number to K/M format
+    const formatNumber = (num: number): string => {
+        if (num >= 1000000) {
+            return `${(num / 1000000).toFixed(1)}M`;
+        }
+        if (num >= 1000) {
+            return `${(num / 1000).toFixed(1)}K`;
+        }
+        return num.toString();
+    };
+
+    // Format upload time
+    const formatUploadTime = (dateString: string): string => {
+        const date = new Date(dateString);
+        const now = new Date();
+        const diff = now.getTime() - date.getTime();
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const days = Math.floor(hours / 24);
+
+        if (days > 0) return `${days}d ago`;
+        if (hours > 0) return `${hours}h ago`;
+        return 'Just now';
     };
 
     return (
@@ -78,7 +93,7 @@ function VideoCard({ video }: VideoCardProps) {
                     {/* View count */}
                     <span className="absolute bottom-0 left-0 m-2 px-2 py-1 bg-dark bg-opacity-75 text-white text-xs rounded">
                         <i className="bi bi-eye mr-1"></i>
-                        {video.views}
+                        {formatNumber(video.views)}
                     </span>
                 </div>
 
@@ -90,9 +105,9 @@ function VideoCard({ video }: VideoCardProps) {
                     <div className="flex justify-between items-center">
                         <small className="text-gray-400 text-xs">
                             <i className="bi bi-heart mr-1"></i>
-                            {video.likes}
+                            {formatNumber(video.likes)}
                         </small>
-                        <small className="text-gray-400 text-xs">{video.uploadedAt}</small>
+                        <small className="text-gray-400 text-xs">{formatUploadTime(video.uploadedAt)}</small>
                     </div>
                 </div>
             </div>

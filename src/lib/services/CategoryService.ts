@@ -71,7 +71,7 @@ class CategoryService {
       slug: category.slug,
       name: category.name,
       description: category.description,
-      videosCount: category.videos_count || 0,
+      videosCount: category.video_count || 0,
       thumbnail: category.thumbnail || null,
     };
   }

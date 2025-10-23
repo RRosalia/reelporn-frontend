@@ -136,7 +136,7 @@ export default function PaymentStatusPage() {
   useEffect(() => {
     if (paymentData?.status === 'completed' && typeof window !== 'undefined' && window.dataLayer) {
       // Send ecommerce purchase event
-      window.dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object
+      window.dataLayer.push({ event: 'ecommerce_clear', ecommerce: null } as any); // Clear previous ecommerce object
       window.dataLayer.push({
         event: 'purchase',
         ecommerce: {

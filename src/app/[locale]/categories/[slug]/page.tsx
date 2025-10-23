@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import CategoryService from '@/lib/services/CategoryService';
 import VideoCard from '@/components/VideoCard';
+import type { Reel } from '@/types/Reel';
 
 interface Category {
     id: number;
@@ -14,21 +15,11 @@ interface Category {
     videos_count?: number;
 }
 
-interface Video {
-    id: string;
-    title: string;
-    thumbnail: string;
-    duration: number;
-    views: string;
-    likes: string;
-    uploadedAt: string;
-}
-
 function CategoryDetailPage() {
     const params = useParams();
     const slug = params?.slug as string;
     const [category, setCategory] = useState<Category | null>(null);
-    const [videos, setVideos] = useState<Video[]>([]);
+    const [videos, setVideos] = useState<Reel[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [pagination, setPagination] = useState<any | null>(null);
@@ -62,34 +53,12 @@ function CategoryDetailPage() {
         try {
             setLoading(true);
             const response = await CategoryService.getCategoryVideos(slug, page);
-
-            // Mock videos for now since endpoint might return empty
-            // Replace with actual data: setVideos(response.getData());
-            const mockVideos = Array.from({ length: 12 }, (_, i) => ({
-                id: `${slug}-${i + 1}`,
-                title: `${category?.name || 'Video'} ${i + 1}`,
-                thumbnail: `https://picsum.photos/seed/${slug}-${i}/300/533`,
-                duration: ((i * 7) % 15) + 1,
-                views: `${((i * 13) % 100) + 1}K`,
-                likes: `${((i * 11) % 50) + 1}K`,
-                uploadedAt: `${((i * 5) % 24) + 1}h ago`
-            }));
-
-            setVideos(mockVideos);
+            setVideos(response.getData());
             setPagination(response);
         } catch (err) {
             console.error('Error loading videos:', err);
-            // Set mock videos on error too
-            const mockVideos = Array.from({ length: 12 }, (_, i) => ({
-                id: `${slug}-${i + 1}`,
-                title: `${category?.name || 'Video'} ${i + 1}`,
-                thumbnail: `https://picsum.photos/seed/${slug}-${i}/300/533`,
-                duration: ((i * 7) % 15) + 1,
-                views: `${((i * 13) % 100) + 1}K`,
-                likes: `${((i * 11) % 50) + 1}K`,
-                uploadedAt: `${((i * 5) % 24) + 1}h ago`
-            }));
-            setVideos(mockVideos);
+            setError('Failed to load videos');
+            setVideos([]);
         } finally {
             setLoading(false);
         }
