@@ -1,32 +1,60 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import VideoCard from '@/components/VideoCard';
+import ReelService from '@/lib/services/ReelService';
+import type { Reel } from '@/types/Reel';
 
 export default function HomePage() {
     const t = useTranslations();
     const [activeTab, setActiveTab] = useState('trending');
+    const [videos, setVideos] = useState<Reel[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    // Mock data - replace with API call later
-    // Using deterministic values based on index to avoid hydration mismatches
-    const mockVideos = Array.from({ length: 24 }, (_, i) => ({
-        id: i + 1,
-        title: `Hot Video ${i + 1}`,
-        thumbnail: `https://images.unsplash.com/photo-${1500000000000 + (i * 123456789)}?w=300&h=533&fit=crop&auto=format`,
-        duration: ((i * 7) % 15) + 1,
-        views: `${((i * 13) % 100) + 1}K`,
-        likes: `${((i * 11) % 50) + 1}K`,
-        uploadedAt: `${((i * 5) % 24) + 1}h ago`
-    }));
+    // Fetch videos based on active tab
+    useEffect(() => {
+        let isMounted = true;
+
+        const fetchVideos = async () => {
+            try {
+                // For initial load, show full loading state
+                // For tab changes, show transitioning state to keep content visible
+                setIsTransitioning(true);
+                setError(null);
+                const data = await ReelService.getVideosByCategory(activeTab);
+
+                if (isMounted) {
+                    setVideos(data);
+                    setLoading(false);
+                }
+            } catch (err) {
+                console.error('Error fetching videos:', err);
+                if (isMounted) {
+                    setError('Failed to load videos');
+                    setLoading(false);
+                }
+            } finally {
+                if (isMounted) {
+                    setIsTransitioning(false);
+                }
+            }
+        };
+
+        fetchVideos();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [activeTab]);
 
     const categories = [
         { key: 'trending', label: t('category.trending'), icon: '🔥' },
         { key: 'new', label: t('category.new'), icon: '✨' },
         { key: 'popular', label: t('category.popular'), icon: '⭐' },
-        { key: 'amateur', label: t('category.amateur'), icon: '👤' },
-        { key: 'professional', label: t('category.professional'), icon: '💼' },
         { key: 'featured', label: t('category.featured'), icon: '🎬' }
     ];
 
@@ -178,25 +206,68 @@ export default function HomePage() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                    {mockVideos.map((video) => (
-                        <div key={video.id}>
-                            <VideoCard video={video} />
+                {/* Loading indicator for tab transitions */}
+                {isTransitioning && (
+                    <div className="mb-4">
+                        <div className="w-full h-1 bg-gray-200 rounded overflow-hidden">
+                            <div
+                                className="h-full bg-gradient-to-r from-pink-500 to-red-500 animate-pulse"
+                                style={{ width: '100%' }}
+                            ></div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                )}
 
-                <div className="text-center mt-12">
-                    <button
-                        className="px-12 py-3 text-lg font-bold text-white rounded-full"
-                        style={{
-                            background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
-                            boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
-                        }}
-                    >
-                        {t('home.loadMore')}
-                    </button>
-                </div>
+                {/* Initial loading state */}
+                {loading && videos.length === 0 && (
+                    <div className="text-center py-12">
+                        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+                        <p className="mt-4 text-gray-600">{t('common.loading')}</p>
+                    </div>
+                )}
+
+                {/* Error state */}
+                {error && !isTransitioning && (
+                    <div className="text-center py-12">
+                        <p className="text-red-600">{error}</p>
+                    </div>
+                )}
+
+                {/* Content */}
+                {!loading && (
+                    <>
+                        <div
+                            className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 transition-opacity duration-200 ${isTransitioning ? 'pointer-events-none' : ''}`}
+                            style={{ opacity: isTransitioning ? 0.5 : 1 }}
+                        >
+                            {videos.map((video) => (
+                                <div key={video.id}>
+                                    <VideoCard video={video} />
+                                </div>
+                            ))}
+                        </div>
+
+                        {videos.length === 0 && !error && (
+                            <div className="text-center py-12">
+                                <p className="text-gray-600">{t('common.noResults')}</p>
+                            </div>
+                        )}
+
+                        {videos.length > 0 && (
+                            <div className="text-center mt-12">
+                                <button
+                                    className="px-12 py-3 text-lg font-bold text-white rounded-full"
+                                    style={{
+                                        background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
+                                        boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
+                                    }}
+                                >
+                                    {t('home.loadMore')}
+                                </button>
+                            </div>
+                        )}
+                    </>
+                )}
             </div>
 
             {/* Pornstars Section - Hidden for now */}

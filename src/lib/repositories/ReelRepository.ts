@@ -1,14 +1,18 @@
 import apiClient from '@/lib/api/apiClient';
 import { Reel, ReelApiResponse, transformReelApiResponse } from '@/types/Reel';
-import { getMockVideoBySlug } from '@/lib/mocks/videoMockData';
+
+/**
+ * API Response wrapper for list endpoints
+ */
+interface ApiListResponse {
+  data: ReelApiResponse[];
+}
 
 /**
  * ReelRepository
  * Handles all API calls related to reels/shorts
  */
 class ReelRepository {
-  // Toggle this to switch between mock and real API
-  private useMockData = true;
 
   /**
    * Get a single reel by ID
@@ -31,30 +35,81 @@ class ReelRepository {
    * @returns {Promise<Reel>}
    */
   async getBySlug(slug: string): Promise<Reel> {
-    // Use mock data for testing
-    if (this.useMockData) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          const mockVideo = getMockVideoBySlug(slug);
-
-          if (mockVideo) {
-            resolve(transformReelApiResponse(mockVideo));
-          } else {
-            // Simulate 404 error
-            const error = new Error('Video not found') as Error & { response: { status: number } };
-            error.response = { status: 404 };
-            reject(error);
-          }
-        }, 500); // Simulate network delay
-      });
-    }
-
-    // Real API call
     try {
       const response = await apiClient.get<ReelApiResponse>(`/reels/slug/${slug}`);
       return transformReelApiResponse(response.data);
     } catch (error) {
       console.error(`Error fetching reel by slug ${slug}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get all videos
+   * @returns {Promise<Reel[]>}
+   */
+  async getAll(): Promise<Reel[]> {
+    try {
+      const response = await apiClient.get<ApiListResponse>('/videos');
+      return response.data.data.map(transformReelApiResponse);
+    } catch (error) {
+      console.error('Error fetching all videos:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get trending videos
+   * @returns {Promise<Reel[]>}
+   */
+  async getTrending(): Promise<Reel[]> {
+    try {
+      const response = await apiClient.get<ApiListResponse>('/videos/trending');
+      return response.data.data.map(transformReelApiResponse);
+    } catch (error) {
+      console.error('Error fetching trending videos:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get new videos
+   * @returns {Promise<Reel[]>}
+   */
+  async getNew(): Promise<Reel[]> {
+    try {
+      const response = await apiClient.get<ApiListResponse>('/videos/new');
+      return response.data.data.map(transformReelApiResponse);
+    } catch (error) {
+      console.error('Error fetching new videos:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get popular videos
+   * @returns {Promise<Reel[]>}
+   */
+  async getPopular(): Promise<Reel[]> {
+    try {
+      const response = await apiClient.get<ApiListResponse>('/videos/popular');
+      return response.data.data.map(transformReelApiResponse);
+    } catch (error) {
+      console.error('Error fetching popular videos:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get featured videos
+   * @returns {Promise<Reel[]>}
+   */
+  async getFeatured(): Promise<Reel[]> {
+    try {
+      const response = await apiClient.get<ApiListResponse>('/videos/featured');
+      return response.data.data.map(transformReelApiResponse);
+    } catch (error) {
+      console.error('Error fetching featured videos:', error);
       throw error;
     }
   }
