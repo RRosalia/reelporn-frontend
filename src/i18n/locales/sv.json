@@ -417,7 +417,9 @@
       "eyeColor": "Ögonfärg",
       "allEyeColors": "Alla ögonfärger",
       "ethnicity": "Etnisk tillhörighet",
-      "allEthnicities": "Alla etniciteter"
+      "allEthnicities": "Alla etniciteter",
+      "showFilters": "Visa filter",
+      "hideFilters": "Dölj filter"
     },
     "errors": {
       "fetchFailed": "Misslyckades med att ladda tecken. Vänligen försök igen."
@@ -444,7 +446,8 @@
       "bio": "Biografi",
       "categories": "Kategorier",
       "social": "Sociala medier",
-      "details": "Personliga detaljer"
+      "details": "Personliga detaljer",
+      "notTranslated": "Det här innehållet har inte översatts till ditt språk ännu och visas på originalspråket."
     },
     "details": {
       "age": "Ålder",
@@ -455,6 +458,101 @@
       "hair": "Hårfärg",
       "eyes": "Ögonfärg",
       "ethnicity": "Etnisk tillhörighet"
+    },
+    "authModal": {
+      "followTitle": "Följ den här skaparen?",
+      "followMessage": "Registrera dig eller logga in för att följa dina favoritskapare och få ett meddelande när de publicerar nytt innehåll.",
+      "messageTitle": "Skicka ett meddelande?",
+      "messageMessage": "Skapa ett kostnadsfritt konto eller logga in för att börja skicka meddelanden direkt till dina favoritskapare.",
+      "tipTitle": "Skicka ett tips?",
+      "tipMessage": "Registrera dig eller logga in för att stödja dina favoritskapare genom att skicka tips och exklusiva belöningar."
+    },
+    "notFoundDescription": "Den porrprofil du letar efter kunde inte hittas.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - Videor, foton, biografi",
+      "metaDescriptionWithVideos": "Se {count}+ exklusiva videor av {name}, {age}yo {ethnicity} från {country}. Bio, statistik, foton och premiuminnehåll.",
+      "metaDescriptionBasic": "{name} - {age} år gammal från {country}. Titta på exklusiva videor, foton och premiuminnehåll.",
+      "metaDescriptionMinimal": "Se exklusivt innehåll från {name}. Bio, statistik, foton & videor.",
+      "adultContent": "innehåll för vuxna",
+      "pornstarProfile": "pornstar profile",
+      "videos": "videor",
+      "photos": "foton",
+      "exclusiveVideos": "exklusiva videor",
+      "exclusiveContent": "exklusivt innehåll",
+      "premiumContent": "premiuminnehåll"
+    },
+    "breadcrumb": {
+      "home": "Hem",
+      "pornstars": "Pornstars"
+    },
+    "content": {
+      "about": "Om {name}",
+      "aboutDescription": "{name} är en {age} år gammal {ethnicity} artist från {country}. Med {videos} exklusiva videor och {views} visningar har {firstName} blivit en populär skapare. Upptäck premiuminnehåll, foton och få direktkontakt med {firstName}.",
+      "aboutDescriptionNoEthnicity": "{name} är en {age} år gammal modell från {country}. Med {videos} exklusiva videor och {views} visningar har {firstName} blivit en populär skapare. Upptäck premiuminnehåll, foton och få direktkontakt med {firstName}.",
+      "aboutDescriptionMinimal": "{name} är en begåvad artist. Upptäck exklusivt innehåll och få direktkontakt med {firstName}.",
+      "mediaGallery": "Media Galleri",
+      "mediaCount": "föremål",
+      "noMediaYet": "Ingen media tillgänglig ännu",
+      "checkBackSoon": "Kom tillbaka snart för nytt innehåll!",
+      "comingSoon": "Mediainnehåll kommer snart...",
+      "youMightLike": "Du kanske också gillar",
+      "relatedPornstars": "Relaterade porrstjärnor"
+    },
+    "links": {
+      "viewAllFrom": "Visa alla porrstjärnor från {country}",
+      "viewEthnicity": "Visa alla {ethnicity} porrstjärnor",
+      "viewAge": "Visa porrstjärnor i åldern {age}",
+      "moreFrom": "Mer från {country}",
+      "similarAge": "Liknande ålder"
+    },
+    "faq": {
+      "title": "Vanliga frågor om {name}",
+      "howOld": {
+        "question": "Hur gammal är {name}?",
+        "answer": "{name} är {age} år gammal."
+      },
+      "whereFrom": {
+        "question": "Varifrån kommer {firstName}?",
+        "answer": "{firstName} är från {country}."
+      },
+      "howTall": {
+        "question": "Hur lång är {firstName}?",
+        "answer": "{firstName} är {height} cm ({heightFt}) lång."
+      },
+      "howMuchWeight": {
+        "question": "Vad är {firstName}:s vikt?",
+        "answer": "{firstName} väger {weight} kg ({weightLbs} lbs)."
+      },
+      "whatEthnicity": {
+        "question": "Vilken är {firstName}:s etniska tillhörighet?",
+        "answer": "{firstName} är {ethnicity}."
+      },
+      "hairColor": {
+        "question": "Vilken är {firstName}:s hårfärg?",
+        "answer": "{firstName} har {color} hår."
+      },
+      "eyeColor": {
+        "question": "Vilken är {firstName}:s ögonfärg?",
+        "answer": "{firstName} har {color} ögon."
+      },
+      "howManyVideos": {
+        "question": "Hur många videor har {firstName}?",
+        "answer": "{firstName} har {count} exklusiva videor tillgängliga."
+      },
+      "howToWatch": {
+        "question": "Hur kan jag titta på {firstName}:s videor?",
+        "answer": "Du kan se {firstName}:s exklusiva innehåll genom att skapa ett gratiskonto. Premiummedlemmar får tillgång till HD-kvalitet och alla exklusiva videor."
+      },
+      "howToContact": {
+        "question": "Kan jag skicka ett meddelande till {firstName}?",
+        "answer": "Ja, det gör du! Skapa ett konto för att skicka direktmeddelanden till {firstName} och få kontakt med din favoritskapare."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age}-åring {ethnicity} från {country}",
+      "coverPhoto": "{name} omslagsfoto",
+      "galleryPhoto": "{name} foto",
+      "videoThumbnail": "{name} miniatyrbild av video"
     }
   },
   "error": {
@@ -1294,7 +1392,9 @@
   "common": {
     "cancel": "Avbryt",
     "loading": "Laddar...",
-    "retry": "Försök igen"
+    "retry": "Försök igen",
+    "noResults": "Inga videor hittades",
+    "notFound": "Hittades inte"
   },
   "checkout": {
     "title": "Slutför ditt köp",
@@ -1426,6 +1526,35 @@
     "defaultMessage": "Logga in eller skapa ett konto för att fortsätta.",
     "login": "Logga in",
     "register": "Skapa konto",
-    "maybeLater": "Kanske senare"
+    "maybeLater": "Kanske senare",
+    "signUp": "Registrera dig",
+    "signIn": "Logga in",
+    "createAccount": "Skapa konto",
+    "createFreeAccount": "Skapa gratis konto",
+    "emailPlaceholder": "E-post",
+    "passwordPlaceholder": "Lösenord",
+    "confirmPasswordPlaceholder": "Bekräfta lösenord",
+    "namePlaceholder": "Full Name",
+    "minimumCharacters": "Minst 6 tecken",
+    "orContinueWith": "eller fortsätt med",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "Genom att registrera dig samtycker du till att",
+    "termsOfService": "Villkor för tjänsten",
+    "alreadyHaveAccount": "Har du redan ett konto?",
+    "dontHaveAccount": "Har du inget konto?",
+    "signInLink": "Registrera dig",
+    "signUpLink": "Registrera dig",
+    "loggingIn": "Jag skriver in mig...",
+    "creatingAccount": "Skapa konto...",
+    "invalidCredentials": "Ogiltig e-postadress eller ogiltigt lösenord",
+    "registrationFailed": "Registreringen misslyckades. Vänligen försök igen.",
+    "emailRequired": "E-post krävs",
+    "passwordRequired": "Lösenord krävs",
+    "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken",
+    "passwordsDoNotMatch": "Lösenorden stämmer inte överens",
+    "showPassword": "Visa lösenord",
+    "hidePassword": "Dölj lösenord"
   }
 }

@@ -417,7 +417,9 @@
       "eyeColor": "Barva očí",
       "allEyeColors": "Všechny barvy očí",
       "ethnicity": "Etnická příslušnost",
-      "allEthnicities": "Všechna etnika"
+      "allEthnicities": "Všechna etnika",
+      "showFilters": "Zobrazit filtry",
+      "hideFilters": "Skrýt filtry"
     },
     "errors": {
       "fetchFailed": "Nepodařilo se načíst znaky. Zkuste to prosím znovu."
@@ -444,7 +446,8 @@
       "bio": "Životopis",
       "categories": "Kategorie",
       "social": "Sociální média",
-      "details": "Osobní údaje"
+      "details": "Osobní údaje",
+      "notTranslated": "Tento obsah ještě nebyl přeložen do vašeho jazyka a zobrazuje se v původním jazyce."
     },
     "details": {
       "age": "Věk",
@@ -455,6 +458,101 @@
       "hair": "Barva vlasů",
       "eyes": "Barva očí",
       "ethnicity": "Etnická příslušnost"
+    },
+    "authModal": {
+      "followTitle": "Sledujte tohoto tvůrce?",
+      "followMessage": "Zaregistrujte se nebo se přihlaste, abyste mohli sledovat své oblíbené tvůrce a dostávat upozornění na jejich nový obsah.",
+      "messageTitle": "Poslat zprávu?",
+      "messageMessage": "Vytvořte si bezplatný účet nebo se přihlaste a začněte posílat zprávy přímo svým oblíbeným tvůrcům.",
+      "tipTitle": "Poslat tip?",
+      "tipMessage": "Zaregistrujte se nebo se přihlaste a podpořte své oblíbené tvůrce zasíláním tipů a exkluzivních odměn."
+    },
+    "notFoundDescription": "Hledaný profil pornohvězdy se nepodařilo najít.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - Videa, fotky, biografie",
+      "metaDescriptionWithVideos": "Podívejte se na {count}+ exkluzivní videa {name}, {age}yo {ethnicity} z {country}. Bio, statistiky, fotografie a prémiový obsah.",
+      "metaDescriptionBasic": "{name} - {age} let od {country}. Sledujte exkluzivní videa, fotografie a prémiový obsah.",
+      "metaDescriptionMinimal": "Sledujte exkluzivní obsah od {name}. Bio, statistiky, fotky a videa.",
+      "adultContent": "obsah pro dospělé",
+      "pornstarProfile": "profil pornohvězdy",
+      "videos": "videa",
+      "photos": "fotografie",
+      "exclusiveVideos": "exkluzivní videa",
+      "exclusiveContent": "exkluzivní obsah",
+      "premiumContent": "prémiový obsah"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "pornstars": "Pornohvězdy"
+    },
+    "content": {
+      "about": "O {name}",
+      "aboutDescription": "{name} je {age}-letý {ethnicity} umělec z {country}. Díky {videos} exkluzivním videím a {views} zhlédnutím se {firstName} stal oblíbeným tvůrcem. Objevte prémiový obsah, fotografie a spojte se přímo s {firstName}.",
+      "aboutDescriptionNoEthnicity": "{name} je {age}-letý umělec z {country}. Díky {videos} exkluzivním videím a {views} zhlédnutím se {firstName} stal oblíbeným tvůrcem. Objevte prémiový obsah, fotografie a spojte se přímo s {firstName}.",
+      "aboutDescriptionMinimal": "{name} je talentovaný umělec. Objevte exkluzivní obsah a spojte se přímo s {firstName}.",
+      "mediaGallery": "Galerie médií",
+      "mediaCount": "položky",
+      "noMediaYet": "Zatím nejsou k dispozici žádná média",
+      "checkBackSoon": "Brzy se podívejte na nový obsah!",
+      "comingSoon": "Mediální obsah již brzy...",
+      "youMightLike": "Mohlo by se vám také líbit",
+      "relatedPornstars": "Související pornohvězdy"
+    },
+    "links": {
+      "viewAllFrom": "Zobrazit všechny pornohvězdy z {country}",
+      "viewEthnicity": "Zobrazit všechny {ethnicity} pornohvězdy",
+      "viewAge": "Zobrazit pornohvězdy ve věku {age}",
+      "moreFrom": "Více od {country}",
+      "similarAge": "Podobný věk"
+    },
+    "faq": {
+      "title": "Často kladené otázky týkající se {name}",
+      "howOld": {
+        "question": "Kolik je {name} let?",
+        "answer": "{name} je {age} let."
+      },
+      "whereFrom": {
+        "question": "Odkud je {firstName}?",
+        "answer": "{firstName} je z {country}."
+      },
+      "howTall": {
+        "question": "Jak vysoký je {firstName}?",
+        "answer": "{firstName} je {height} cm ({heightFt}) vysoký."
+      },
+      "howMuchWeight": {
+        "question": "Jaká je hmotnost {firstName}?",
+        "answer": "{firstName} váží {weight} kg ({weightLbs} lbs)."
+      },
+      "whatEthnicity": {
+        "question": "Jaký je etnický původ {firstName}?",
+        "answer": "{firstName} je {ethnicity}."
+      },
+      "hairColor": {
+        "question": "Jakou má {firstName} barvu vlasů?",
+        "answer": "{firstName} má {color} vlasy."
+      },
+      "eyeColor": {
+        "question": "Jakou barvu očí má {firstName}?",
+        "answer": "{firstName} má {color} oči."
+      },
+      "howManyVideos": {
+        "question": "Kolik videí má {firstName}?",
+        "answer": "{firstName} má k dispozici exkluzivní videa {count}."
+      },
+      "howToWatch": {
+        "question": "Jak mohu sledovat videa {firstName}?",
+        "answer": "Exkluzivní obsah {firstName} můžete sledovat po vytvoření bezplatného účtu. Prémioví členové získají přístup k HD kvalitě a všem exkluzivním videím."
+      },
+      "howToContact": {
+        "question": "Mohu odeslat zprávu {firstName}?",
+        "answer": "Ano! Vytvořte si účet a posílejte přímé zprávy na {firstName} a spojte se se svým oblíbeným tvůrcem."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age}-starý {ethnicity} od {country}",
+      "coverPhoto": "{name} titulní fotografie",
+      "galleryPhoto": "{name} foto",
+      "videoThumbnail": "{name} miniatura videa"
     }
   },
   "error": {
@@ -1294,7 +1392,9 @@
   "common": {
     "cancel": "Zrušit",
     "loading": "Načítání...",
-    "retry": "Opakování"
+    "retry": "Opakování",
+    "noResults": "Nebyla nalezena žádná videa",
+    "notFound": "Nenalezeno"
   },
   "checkout": {
     "title": "Dokončete svůj nákup",
@@ -1426,6 +1526,35 @@
     "defaultMessage": "Pro pokračování se prosím přihlaste nebo si vytvořte účet.",
     "login": "Přihlášení",
     "register": "Vytvořit účet",
-    "maybeLater": "Možná později"
+    "maybeLater": "Možná později",
+    "signUp": "Zaregistrujte se",
+    "signIn": "Přihlásit se",
+    "createAccount": "Vytvořit účet",
+    "createFreeAccount": "Vytvořit bezplatný účet",
+    "emailPlaceholder": "E-mail",
+    "passwordPlaceholder": "Heslo",
+    "confirmPasswordPlaceholder": "Potvrzení hesla",
+    "namePlaceholder": "Celé jméno",
+    "minimumCharacters": "Minimálně 6 znaků",
+    "orContinueWith": "nebo pokračovat pomocí",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "Registrací souhlasíte s tím, že",
+    "termsOfService": "Podmínky služby",
+    "alreadyHaveAccount": "Už máte účet?",
+    "dontHaveAccount": "Nemáte účet?",
+    "signInLink": "Přihlásit se",
+    "signUpLink": "Zaregistrujte se",
+    "loggingIn": "Přihlášení...",
+    "creatingAccount": "Vytvoření účtu...",
+    "invalidCredentials": "Neplatný e-mail nebo heslo",
+    "registrationFailed": "Registrace se nezdařila. Zkuste to prosím znovu.",
+    "emailRequired": "Je vyžadován e-mail",
+    "passwordRequired": "Heslo je vyžadováno",
+    "passwordTooShort": "Heslo musí mít alespoň 6 znaků",
+    "passwordsDoNotMatch": "Hesla se neshodují",
+    "showPassword": "Zobrazit heslo",
+    "hidePassword": "Skrýt heslo"
   }
 }
