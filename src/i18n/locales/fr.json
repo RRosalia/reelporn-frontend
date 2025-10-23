@@ -296,7 +296,9 @@
       "eyeColor": "Couleur des Yeux",
       "allEyeColors": "Toutes les Couleurs des Yeux",
       "ethnicity": "Ethnicité",
-      "allEthnicities": "Toutes les Ethnicités"
+      "allEthnicities": "Toutes les Ethnicités",
+      "showFilters": "Afficher les filtres",
+      "hideFilters": "Hide Filters"
     },
     "errors": {
       "fetchFailed": "Impossible de charger les personnages. Veuillez réessayer."
@@ -323,7 +325,8 @@
       "bio": "Biographie",
       "categories": "Catégories",
       "social": "Réseaux sociaux",
-      "details": "Détails personnels"
+      "details": "Détails personnels",
+      "notTranslated": "Ce contenu n'a pas encore été traduit dans votre langue et est affiché dans sa langue d'origine."
     },
     "details": {
       "age": "Âge",
@@ -334,6 +337,101 @@
       "hair": "Couleur de cheveux",
       "eyes": "Couleur des yeux",
       "ethnicity": "Ethnicité"
+    },
+    "authModal": {
+      "followTitle": "Suivre ce créateur ?",
+      "followMessage": "Inscrivez-vous ou connectez-vous pour suivre vos créateurs préférés et recevoir une notification lorsqu'ils publient un nouveau contenu.",
+      "messageTitle": "Envoyer un message ?",
+      "messageMessage": "Créez un compte gratuit ou connectez-vous pour envoyer directement des messages à vos créateurs préférés.",
+      "tipTitle": "Envoyer un pourboire ?",
+      "tipMessage": "Inscrivez-vous ou connectez-vous pour soutenir vos créateurs préférés en leur envoyant des conseils et des récompenses exclusives."
+    },
+    "notFoundDescription": "Le profil de la star du porno que vous recherchez n'a pas pu être trouvé.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - Vidéos, Photos, Biographie",
+      "metaDescriptionWithVideos": "Regardez les vidéos exclusives de {count}+ de {name}, {age}yo {ethnicity} de {country}. Bio, statistiques, photos et contenu premium.",
+      "metaDescriptionBasic": "{name} - {age} ans de {country}. Regardez des vidéos exclusives, des photos et du contenu premium.",
+      "metaDescriptionMinimal": "Regardez le contenu exclusif de {name}. Bio, stats, photos et vidéos.",
+      "adultContent": "contenu pour adultes",
+      "pornstarProfile": "profil d'une star du porno",
+      "videos": "vidéos",
+      "photos": "photos",
+      "exclusiveVideos": "vidéos exclusives",
+      "exclusiveContent": "contenu exclusif",
+      "premiumContent": "contenu premium"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "pornstars": "Pornstars"
+    },
+    "content": {
+      "about": "A propos de {name}",
+      "aboutDescription": "{name} est un artiste {age} âgé de {ethnicity} et originaire de {country}. Avec {videos} vidéos exclusives et {views} vues, {firstName} est devenu un créateur populaire. Découvrez du contenu premium, des photos et connectez-vous directement avec {firstName}.",
+      "aboutDescriptionNoEthnicity": "{name} est un artiste de {age} ans originaire de {country}. Avec {videos} vidéos exclusives et {views} vues, {firstName} est devenu un créateur populaire. Découvrez du contenu premium, des photos et connectez-vous directement avec {firstName}.",
+      "aboutDescriptionMinimal": "{name} est un artiste talentueux. Découvrez des contenus exclusifs et contactez directement {firstName}.",
+      "mediaGallery": "Galerie des médias",
+      "mediaCount": "articles",
+      "noMediaYet": "Aucun média n'est encore disponible",
+      "checkBackSoon": "Revenez bientôt pour un nouveau contenu !",
+      "comingSoon": "Contenu média à venir...",
+      "youMightLike": "Vous pourriez aussi aimer",
+      "relatedPornstars": "Stars du porno apparentées"
+    },
+    "links": {
+      "viewAllFrom": "Voir toutes les stars du porno de {country}",
+      "viewEthnicity": "Voir toutes les stars du porno de {ethnicity}",
+      "viewAge": "Voir les stars du porno du âge de {age}",
+      "moreFrom": "Plus de {country}",
+      "similarAge": "Âge similaire"
+    },
+    "faq": {
+      "title": "Questions fréquemment posées sur {name}_ (en anglais)",
+      "howOld": {
+        "question": "Quel âge a {name} ?",
+        "answer": "{name} a {age} ans."
+      },
+      "whereFrom": {
+        "question": "D'où vient {firstName} ?",
+        "answer": "{firstName} est de {country}."
+      },
+      "howTall": {
+        "question": "Quelle est la taille de {firstName} ?",
+        "answer": "{firstName} mesure {height} cm ({heightFt})."
+      },
+      "howMuchWeight": {
+        "question": "Quel est le poids de {firstName} ?",
+        "answer": "le {firstName} pèse {weight} kg ({weightLbs} lbs)."
+      },
+      "whatEthnicity": {
+        "question": "Quelle est l'origine ethnique de {firstName} ?",
+        "answer": "{firstName} est {ethnicity}."
+      },
+      "hairColor": {
+        "question": "Quelle est la couleur des cheveux de {firstName} ?",
+        "answer": "le {firstName} a les cheveux du {color}."
+      },
+      "eyeColor": {
+        "question": "Quelle est la couleur des yeux de {firstName} ?",
+        "answer": "le {firstName} a les yeux du {color}."
+      },
+      "howManyVideos": {
+        "question": "Combien de vidéos a {firstName} ?",
+        "answer": "le site {firstName} propose des vidéos exclusives de {count}."
+      },
+      "howToWatch": {
+        "question": "Comment puis-je regarder les vidéos de {firstName} ?",
+        "answer": "Vous pouvez regarder le contenu exclusif de {firstName} en créant un compte gratuit. Les membres Premium ont accès à la qualité HD et à toutes les vidéos exclusives."
+      },
+      "howToContact": {
+        "question": "Puis-je envoyer un message à {firstName} ?",
+        "answer": "Oui ! Créez un compte pour envoyer des messages directs à {firstName} et vous connecter avec votre créateur préféré."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age} ans {ethnicity} de {country}",
+      "coverPhoto": "photo de couverture",
+      "galleryPhoto": "photo d'une personne de la famille",
+      "videoThumbnail": "vignette de la vidéo"
     }
   },
   "error": {
@@ -1290,7 +1388,9 @@
   "common": {
     "cancel": "Annuler",
     "loading": "Chargement...",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "noResults": "Aucune vidéo trouvée",
+    "notFound": "Non trouvé"
   },
   "checkout": {
     "title": "Finaliser Votre Achat",
@@ -1422,7 +1522,36 @@
     "defaultMessage": "Veuillez vous connecter ou créer un compte pour continuer.",
     "login": "Se Connecter",
     "register": "Créer un Compte",
-    "maybeLater": "Peut-être Plus Tard"
+    "maybeLater": "Peut-être Plus Tard",
+    "signUp": "S'inscrire",
+    "signIn": "S'inscrire",
+    "createAccount": "Créer un compte",
+    "createFreeAccount": "Créer un compte gratuit",
+    "emailPlaceholder": "Courriel",
+    "passwordPlaceholder": "Mot de passe",
+    "confirmPasswordPlaceholder": "Confirmer le mot de passe",
+    "namePlaceholder": "Nom complet",
+    "minimumCharacters": "Minimum 6 caractères",
+    "orContinueWith": "ou continuer avec",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "En vous inscrivant, vous acceptez",
+    "termsOfService": "Conditions d'utilisation",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "dontHaveAccount": "Vous n'avez pas de compte ?",
+    "signInLink": "S'inscrire",
+    "signUpLink": "S'inscrire",
+    "loggingIn": "S'inscrire...",
+    "creatingAccount": "Création d'un compte...",
+    "invalidCredentials": "Courriel ou mot de passe invalide",
+    "registrationFailed": "L'enregistrement a échoué. Veuillez réessayer.",
+    "emailRequired": "L'adresse électronique est requise",
+    "passwordRequired": "Le mot de passe est requis",
+    "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères",
+    "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Cacher le mot de passe"
   },
   "test": {
     "welcomeMessage": "Bienvenue {username}, vous avez {count} nouvelles notifications !",
