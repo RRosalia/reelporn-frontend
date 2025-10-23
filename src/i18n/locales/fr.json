@@ -1290,7 +1290,8 @@
   "common": {
     "cancel": "Annuler",
     "loading": "Chargement...",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "noResults": "Aucune vidéo trouvée"
   },
   "checkout": {
     "title": "Finaliser Votre Achat",

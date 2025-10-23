@@ -1294,7 +1294,8 @@
   "common": {
     "cancel": "Annullamento",
     "loading": "Caricamento...",
-    "retry": "Riprova"
+    "retry": "Riprova",
+    "noResults": "Nessun video trovato"
   },
   "checkout": {
     "title": "Completare l'acquisto",

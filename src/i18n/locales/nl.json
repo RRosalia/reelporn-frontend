@@ -1290,7 +1290,8 @@
   "common": {
     "cancel": "Annuleren",
     "loading": "Laden...",
-    "retry": "Opnieuw Proberen"
+    "retry": "Opnieuw Proberen",
+    "noResults": "Geen video's gevonden"
   },
   "checkout": {
     "title": "Voltooi Uw Aankoop",

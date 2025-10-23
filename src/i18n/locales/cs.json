@@ -1294,7 +1294,8 @@
   "common": {
     "cancel": "Zrušit",
     "loading": "Načítání...",
-    "retry": "Opakování"
+    "retry": "Opakování",
+    "noResults": "Nebyla nalezena žádná videa"
   },
   "checkout": {
     "title": "Dokončete svůj nákup",

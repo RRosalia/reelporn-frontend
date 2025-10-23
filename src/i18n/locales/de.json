@@ -1290,7 +1290,8 @@
   "common": {
     "cancel": "Abbrechen",
     "loading": "Laden...",
-    "retry": "Erneut Versuchen"
+    "retry": "Erneut Versuchen",
+    "noResults": "Keine Videos gefunden"
   },
   "checkout": {
     "title": "Kauf Abschließen",

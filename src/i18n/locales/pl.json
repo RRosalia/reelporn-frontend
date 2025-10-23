@@ -1294,7 +1294,8 @@
   "common": {
     "cancel": "Anuluj",
     "loading": "Ładowanie...",
-    "retry": "Ponów próbę"
+    "retry": "Ponów próbę",
+    "noResults": "Nie znaleziono żadnych filmów"
   },
   "checkout": {
     "title": "Dokończ zakup",

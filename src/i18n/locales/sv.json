@@ -1294,7 +1294,8 @@
   "common": {
     "cancel": "Avbryt",
     "loading": "Laddar...",
-    "retry": "Försök igen"
+    "retry": "Försök igen",
+    "noResults": "Inga videor hittades"
   },
   "checkout": {
     "title": "Slutför ditt köp",
