@@ -4,7 +4,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: sticky !important;
     top: 0 !important;
-    z-index: 1030 !important;
+    z-index: 1050 !important;
     transition: all 0.3s ease;
 }
 
@@ -146,8 +146,32 @@
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Mobile responsiveness */
+/* Mobile Slide Menu */
 @media (max-width: 991px) {
+    .mobile-menu {
+        position: fixed;
+        top: 68px; /* Position below the header */
+        left: 0;
+        bottom: 0;
+        width: 280px;
+        max-width: 80vw;
+        background: linear-gradient(135deg, #1a1626 0%, #2b2838 100%);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        overflow-y: auto;
+        padding-top: 20px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1040; /* Below header but above content */
+    }
+
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    .mobile-menu ul {
+        padding: 1rem 0;
+    }
+
     .navbar-collapse {
         background: rgba(43, 40, 56, 0.95);
         margin-top: 1rem;
@@ -161,5 +185,18 @@
 
     .btn-danger {
         margin: 8px 0 !important;
+    }
+}
+
+/* Desktop - Reset mobile menu styles */
+@media (min-width: 992px) {
+    .mobile-menu {
+        position: relative !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: none !important;
+        background: transparent !important;
+        padding-top: 0 !important;
+        box-shadow: none !important;
     }
 }

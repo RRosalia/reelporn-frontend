@@ -1,17 +1,18 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useRouter, usePathname } from '@/i18n/routing';
+import { Link, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import { languages } from '@/i18n/languages';
+import { useLanguageSwitch } from '@/lib/hooks/useLanguageSwitch';
 import './Header.css';
 
 function Header() {
     const t = useTranslations();
     const router = useRouter();
-    const pathname = usePathname();
+    const switchLanguage = useLanguageSwitch();
     const params = useParams();
     const locale = (params?.locale as string) || 'en';
     const { isAuthenticated, user, logout } = useAuth();
@@ -72,18 +73,20 @@ function Header() {
 
     const handleLanguageChange = (newLocale: string) => {
         setShowLanguageMenu(false);
-        router.push(pathname as any, { locale: newLocale });
+        switchLanguage(newLocale);
+    };
+
+    const closeMobileMenu = () => {
+        setShowMobileMenu(false);
     };
 
     return (
         <nav ref={navbarRef} className="navbar-dark bg-gray-900 text-white">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
-                    <Link className="navbar-brand text-2xl" href="/">
-                        ReelPorn
-                    </Link>
+                    {/* Hamburger Menu - Mobile Only (Left Side) */}
                     <button
-                        className="lg:hidden p-2"
+                        className="lg:hidden p-2 order-1"
                         type="button"
                         onClick={() => setShowMobileMenu(!showMobileMenu)}
                         aria-controls="navbarNav"
@@ -94,30 +97,80 @@ function Header() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <div className={`${showMobileMenu ? 'block' : 'hidden'} lg:flex lg:items-center lg:gap-4 absolute lg:relative top-full left-0 right-0 lg:top-auto bg-gray-900 lg:bg-transparent z-50`} id="navbarNav">
+
+                    {/* Logo */}
+                    <Link className="navbar-brand text-2xl order-2 lg:order-1" href="/">
+                        ReelPorn
+                    </Link>
+
+                    {/* Mobile Auth Buttons (Right Side) */}
+                    <div className="flex items-center gap-2 lg:hidden order-3">
+                        {!isAuthenticated ? (
+                            <>
+                                <Link
+                                    href="/signup"
+                                    className="px-3 py-1.5 text-sm bg-pink-500 text-white rounded hover:bg-pink-600 transition-colors whitespace-nowrap"
+                                >
+                                    Join Free
+                                </Link>
+                                <Link
+                                    href="/login"
+                                    className="px-3 py-1.5 text-sm border border-gray-600 rounded hover:bg-gray-800 transition-colors whitespace-nowrap"
+                                >
+                                    Login
+                                </Link>
+                            </>
+                        ) : (
+                            <Link
+                                href="/account"
+                                className="p-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors"
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </Link>
+                        )}
+                    </div>
+
+                    {/* Mobile Menu Overlay - Very Slight Dim */}
+                    {showMobileMenu && (
+                        <div
+                            className="fixed inset-0 bg-black bg-opacity-20 lg:hidden transition-opacity duration-300"
+                            style={{ top: '68px', zIndex: 1030 }}
+                            onClick={() => setShowMobileMenu(false)}
+                        />
+                    )}
+
+                    {/* Desktop Navigation & Mobile Slide Menu */}
+                    <div className={`mobile-menu ${showMobileMenu ? 'open' : ''} lg:flex lg:items-center lg:gap-4 lg:relative lg:top-auto lg:bg-transparent order-4 lg:order-2`} id="navbarNav">
                         <ul className="flex flex-col lg:flex-row lg:items-center gap-0 lg:gap-4 mr-auto">
                         <li>
-                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href="/">
+                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors flex items-center gap-2" href="/" onClick={closeMobileMenu}>
+                                <i className="bi bi-house-door text-lg"></i>
                                 {t('header.home')}
                             </Link>
                         </li>
                         {/* <li>
-                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href="/categories">
+                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors flex items-center gap-2" href="/categories" onClick={closeMobileMenu}>
+                                <i className="bi bi-grid-3x3-gap text-lg"></i>
                                 {t('header.categories')}
                             </Link>
                         </li> */}
                         <li>
-                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href="/pornstars">
+                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors flex items-center gap-2" href="/pornstars" onClick={closeMobileMenu}>
+                                <i className="bi bi-stars text-lg"></i>
                                 {t('pornstars.title')}
                             </Link>
                         </li>
                         {/* <li>
-                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href={"/blog" as any}>
+                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors flex items-center gap-2" href={"/blog" as any} onClick={closeMobileMenu}>
+                                <i className="bi bi-journal-text text-lg"></i>
                                 {t('blog.title')}
                             </Link>
                         </li> */}
                         <li>
-                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors" href={"/contact" as any}>
+                            <Link className="block px-4 py-2 lg:p-0 hover:text-pink-500 transition-colors flex items-center gap-2" href={"/contact" as any} onClick={closeMobileMenu}>
+                                <i className="bi bi-envelope text-lg"></i>
                                 {t('header.contact')}
                             </Link>
                         </li>
@@ -127,10 +180,11 @@ function Header() {
                         {/* Language Switcher */}
                         <div className="relative" ref={languageMenuRef}>
                             <button
-                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer"
+                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer flex items-center gap-2 justify-center lg:justify-start"
                                 type="button"
                                 onClick={() => setShowLanguageMenu(!showLanguageMenu)}
                             >
+                                <i className="bi bi-translate text-lg lg:hidden"></i>
                                 {languages.find(l => l.code === locale)?.flag} {languages.find(l => l.code === locale)?.code.toUpperCase()}
                             </button>
                             {showLanguageMenu && (
@@ -150,20 +204,22 @@ function Header() {
                         </div>
 
                         {/* Watch Button */}
-                        <Link href="/shorts" className="block lg:inline-block px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition-colors text-center">
+                        <Link href="/shorts" className="flex items-center justify-center gap-2 px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition-colors text-center" onClick={closeMobileMenu}>
+                            <i className="bi bi-play-circle text-lg"></i>
                             {t('header.watch')}
                         </Link>
 
                         {/* Profile Dropdown */}
                         <div className="relative" ref={profileMenuRef}>
                             <button
-                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer"
+                                className="w-full lg:w-auto px-4 py-2 border border-gray-600 rounded hover:bg-gray-800 transition-colors cursor-pointer flex items-center gap-2 justify-center lg:justify-start"
                                 type="button"
                                 onClick={() => setShowProfileMenu(!showProfileMenu)}
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                 </svg>
+                                <span className="lg:hidden">{isAuthenticated ? t('profile.account') : 'Account'}</span>
                             </button>
                             {showProfileMenu && (
                                 <ul className="absolute right-0 mt-2 w-64 bg-white rounded shadow-lg z-50">

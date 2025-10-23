@@ -2,6 +2,7 @@
 
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
+import { configureEcho } from '@laravel/echo-react';
 
 // Extend Window interface to include Pusher and Echo
 declare global {
@@ -23,7 +24,7 @@ if (typeof window !== 'undefined') {
 let echoConfigured = false;
 
 interface EchoConfig {
-  broadcaster: string;
+  broadcaster: 'reverb' | 'pusher' | 'ably' | 'socket.io' | 'null';
   key: string;
   wsHost: string;
   wsPort: number;
@@ -65,8 +66,8 @@ export function initializeEcho(authToken?: string | null) {
     window.Echo.disconnect();
   }
 
-  const echoConfig: EchoConfig = {
-    broadcaster: 'reverb',
+  const baseConfig = {
+    broadcaster: 'reverb' as const,
     key: process.env.NEXT_PUBLIC_REVERB_APP_KEY || 'app-key',
     wsHost: process.env.NEXT_PUBLIC_REVERB_HOST || 'localhost',
     wsPort: process.env.NEXT_PUBLIC_REVERB_PORT ? parseInt(process.env.NEXT_PUBLIC_REVERB_PORT) : 8080,
@@ -77,13 +78,18 @@ export function initializeEcho(authToken?: string | null) {
   };
 
   // Add authorization headers if we have a token
-  if (authToken) {
-    echoConfig.auth = {
+  const echoConfig = authToken ? {
+    ...baseConfig,
+    auth: {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
-    };
-  }
+    },
+  } : baseConfig;
+
+  // Configure @laravel/echo-react package
+  // @ts-expect-error - configureEcho types are overly strict, but this config is valid
+  configureEcho(echoConfig);
 
   // Create Echo instance and attach to window
   const echoInstance = new Echo<any>(echoConfig);

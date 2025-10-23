@@ -1,16 +1,16 @@
 'use client';
 
 import React from 'react';
-import { Link, useRouter, usePathname } from '@/i18n/routing';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { languages } from '@/i18n/languages';
+import { useLanguageSwitch } from '@/lib/hooks/useLanguageSwitch';
 import './Footer.css';
 
 function Footer() {
     const t = useTranslations();
-    const router = useRouter();
-    const pathname = usePathname();
+    const switchLanguage = useLanguageSwitch();
     const params = useParams();
     const locale = (params?.locale as string) || 'en';
     const currentYear = new Date().getFullYear();
@@ -36,7 +36,7 @@ function Footer() {
 
     const handleLanguageChange = (newLang: string) => {
         setShowLanguageMenu(false);
-        router.push(pathname as any, { locale: newLang });
+        switchLanguage(newLang);
     };
 
     const handleCookieSettings = () => {

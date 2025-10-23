@@ -9,28 +9,49 @@ export interface Country {
 }
 
 /**
+ * Profile Image URLs for different sizes
+ */
+export interface ProfileImage {
+  thumb: string;
+  small: string;
+  medium: string;
+  large: string;
+  original: string;
+}
+
+/**
+ * Bio with language information
+ */
+export interface Bio {
+  content: string;
+  language: string;
+}
+
+/**
  * Pornstar Type Definition
  * Represents a pornstar in the platform
  */
 export interface Pornstar {
-  id: number;
+  id: string; // UUID
   slug: string;
-  name: string;
-  bio: string | null;
+  type: 'virtual' | 'real';
+  first_name: string;
+  last_name: string;
+  bio: Bio | null;
+  profile_image: ProfileImage | null;
   date_of_birth: string | null;
-  date_of_birth_formatted: string | null;
   age: number | null;
   country: Country | null;
   height_cm: number | null;
   weight_kg: number | null;
-  measurements: string | null;
   hair_color: string | null;
   eye_color: string | null;
   ethnicity: string | null;
+  videos_count: number;
+  images_count: number;
+  views_count: number;
   created_at: string;
-  created_at_formatted: string;
   updated_at: string;
-  updated_at_formatted: string;
 }
 
 /**

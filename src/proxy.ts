@@ -131,6 +131,16 @@ export default async function middleware(request: NextRequest) {
         maxAge: 60 * 60, // 1 hour
       });
     }
+
+    // Set visitor country cookie for API requests
+    if (country) {
+      response.cookies.set('visitor_country', country, {
+        httpOnly: false, // Must be false so client-side JS can read it
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+      });
+    }
   }
 
   return response;

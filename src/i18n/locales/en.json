@@ -390,9 +390,9 @@
     }
   },
   "pornstars": {
-    "title": "Characters",
+    "title": "Pornstars",
     "subtitle": "Browse our {count} amazing performers",
-    "noResults": "No characters found matching your filters",
+    "noResults": "No pornstars found matching your filters",
     "sort": {
       "popular": "Most Popular",
       "newest": "Newest",
@@ -400,11 +400,13 @@
       "mostViewed": "Most Viewed"
     },
     "pagination": {
-      "showing": "Showing {start}-{end} of {total} characters"
+      "showing": "Showing {start}-{end} of {total} pornstars"
     },
     "filters": {
       "title": "Filters",
       "clearAll": "Clear All",
+      "showFilters": "Show Filters",
+      "hideFilters": "Hide Filters",
       "name": "Search by Name",
       "namePlaceholder": "Enter name...",
       "age": "Age",
@@ -420,7 +422,7 @@
       "allEthnicities": "All Ethnicities"
     },
     "errors": {
-      "fetchFailed": "Failed to load characters. Please try again."
+      "fetchFailed": "Failed to load pornstars. Please try again."
     }
   },
   "pornstar": {
@@ -442,6 +444,7 @@
     "loadMore": "Load More Videos",
     "about": {
       "bio": "Biography",
+      "notTranslated": "This content has not been translated to your language yet and is being displayed in its original language.",
       "categories": "Categories",
       "social": "Social Media",
       "details": "Personal Details"
@@ -455,7 +458,16 @@
       "hair": "Hair Color",
       "eyes": "Eye Color",
       "ethnicity": "Ethnicity"
-    }
+    },
+    "authModal": {
+      "followTitle": "Follow this creator?",
+      "followMessage": "Sign up or log in to follow your favorite creators and get notified when they post new content.",
+      "messageTitle": "Send a message?",
+      "messageMessage": "Create a free account or log in to start messaging your favorite creators directly.",
+      "tipTitle": "Send a tip?",
+      "tipMessage": "Sign up or log in to support your favorite creators by sending tips and exclusive rewards."
+    },
+    "notFoundDescription": "The pornstar profile you are looking for could not be found."
   },
   "error": {
     "403": {
@@ -1295,7 +1307,8 @@
     "cancel": "Cancel",
     "loading": "Loading...",
     "retry": "Retry",
-    "noResults": "No videos found"
+    "noResults": "No videos found",
+    "notFound": "Not Found"
   },
   "checkout": {
     "title": "Complete Your Purchase",
@@ -1427,6 +1440,35 @@
     "defaultMessage": "Please login or create an account to continue.",
     "login": "Login",
     "register": "Create Account",
-    "maybeLater": "Maybe Later"
+    "maybeLater": "Maybe Later",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "createFreeAccount": "Create Free Account",
+    "emailPlaceholder": "E-mail",
+    "passwordPlaceholder": "Password",
+    "confirmPasswordPlaceholder": "Confirm Password",
+    "namePlaceholder": "Full Name",
+    "minimumCharacters": "Minimum 6 characters",
+    "orContinueWith": "or continue with",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "By signing up, you agree to",
+    "termsOfService": "Terms of Service",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signInLink": "Sign in",
+    "signUpLink": "Sign up",
+    "loggingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "invalidCredentials": "Invalid email or password",
+    "registrationFailed": "Registration failed. Please try again.",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
   }
 }
