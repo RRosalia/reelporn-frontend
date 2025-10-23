@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Postavy",
     "subtitle": "Prohlédněte si naše {count} úžasné interprety",
-    "noResults": "Nebyly nalezeny žádné znaky odpovídající vašim filtrům",
     "sort": {
       "popular": "Nejoblíbenější",
       "newest": "Nejnovější",
       "mostVideos": "Většina videí",
       "mostViewed": "Nejsledovanější"
-    },
-    "pagination": {
-      "showing": "Zobrazení znaků {start}-{end} z {total}"
     },
     "filters": {
       "title": "Filtry",
@@ -418,9 +413,6 @@
       "allEyeColors": "Všechny barvy očí",
       "ethnicity": "Etnická příslušnost",
       "allEthnicities": "Všechna etnika"
-    },
-    "errors": {
-      "fetchFailed": "Nepodařilo se načíst znaky. Zkuste to prosím znovu."
     }
   },
   "pornstar": {

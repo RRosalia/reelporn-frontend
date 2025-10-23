@@ -269,17 +269,12 @@
     }
   },
   "pornstars": {
-    "title": "Personnages",
     "subtitle": "Parcourez nos {count} artistes incroyables",
-    "noResults": "Aucun personnage trouvé correspondant à vos filtres",
     "sort": {
       "popular": "Les plus populaires",
       "newest": "Les plus récents",
       "mostVideos": "Le plus de vidéos",
       "mostViewed": "Les plus vus"
-    },
-    "pagination": {
-      "showing": "Affichage de {start}-{end} sur {total} personnages"
     },
     "filters": {
       "title": "Filtres",
@@ -297,9 +292,6 @@
       "allEyeColors": "Toutes les Couleurs des Yeux",
       "ethnicity": "Ethnicité",
       "allEthnicities": "Toutes les Ethnicités"
-    },
-    "errors": {
-      "fetchFailed": "Impossible de charger les personnages. Veuillez réessayer."
     }
   },
   "pornstar": {

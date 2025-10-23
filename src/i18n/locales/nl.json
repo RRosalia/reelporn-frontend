@@ -386,17 +386,12 @@
     }
   },
   "pornstars": {
-    "title": "Personages",
     "subtitle": "Bekijk onze {count} geweldige artiesten",
-    "noResults": "Geen personages gevonden die voldoen aan uw filters",
     "sort": {
       "popular": "Meest Populair",
       "newest": "Nieuwste",
       "mostVideos": "Meeste Video's",
       "mostViewed": "Meest Bekeken"
-    },
-    "pagination": {
-      "showing": "Toont {start}-{end} van {total} personages"
     },
     "filters": {
       "title": "Filters",
@@ -414,9 +409,6 @@
       "allEyeColors": "Alle Oogkleuren",
       "ethnicity": "Etniciteit",
       "allEthnicities": "Alle Etniciteiten"
-    },
-    "errors": {
-      "fetchFailed": "Kan personages niet laden. Probeer het opnieuw."
     }
   },
   "pornstar": {

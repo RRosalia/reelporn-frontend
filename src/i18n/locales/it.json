@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Personaggi",
     "subtitle": "Sfoglia i nostri {count} straordinari performer",
-    "noResults": "Non sono stati trovati caratteri corrispondenti ai filtri",
     "sort": {
       "popular": "I più popolari",
       "newest": "Più recente",
       "mostVideos": "La maggior parte dei video",
       "mostViewed": "I più visti"
-    },
-    "pagination": {
-      "showing": "Mostra {start}-{end} dei caratteri {total}"
     },
     "filters": {
       "title": "Filtri",
@@ -418,9 +413,6 @@
       "allEyeColors": "Tutti i colori degli occhi",
       "ethnicity": "Etnia",
       "allEthnicities": "Tutte le etnie"
-    },
-    "errors": {
-      "fetchFailed": "Impossibile caricare i caratteri. Riprovare."
     }
   },
   "pornstar": {

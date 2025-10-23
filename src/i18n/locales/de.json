@@ -386,17 +386,12 @@
     }
   },
   "pornstars": {
-    "title": "Charaktere",
     "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
-    "noResults": "Keine Charaktere gefunden, die Ihren Filtern entsprechen",
     "sort": {
       "popular": "Beliebteste",
       "newest": "Neueste",
       "mostVideos": "Meiste Videos",
       "mostViewed": "Am meisten angesehen"
-    },
-    "pagination": {
-      "showing": "Zeige {start}-{end} von {total} Charaktere"
     },
     "filters": {
       "title": "Filter",
@@ -414,9 +409,6 @@
       "allEyeColors": "Alle Augenfarben",
       "ethnicity": "Ethnizität",
       "allEthnicities": "Alle Ethnizitäten"
-    },
-    "errors": {
-      "fetchFailed": "Charaktere konnten nicht geladen werden. Bitte versuchen Sie es erneut."
     }
   },
   "pornstar": {

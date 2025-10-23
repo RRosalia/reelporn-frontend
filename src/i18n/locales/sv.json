@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Karaktärer",
     "subtitle": "Bläddra bland våra {count} fantastiska artister",
-    "noResults": "Inga tecken hittades som matchade dina filter",
     "sort": {
       "popular": "Mest populära",
       "newest": "Nyaste",
       "mostVideos": "De flesta videor",
       "mostViewed": "Mest visade"
-    },
-    "pagination": {
-      "showing": "Visar {start}-{end} av {total} tecken"
     },
     "filters": {
       "title": "Filter",
@@ -418,9 +413,6 @@
       "allEyeColors": "Alla ögonfärger",
       "ethnicity": "Etnisk tillhörighet",
       "allEthnicities": "Alla etniciteter"
-    },
-    "errors": {
-      "fetchFailed": "Misslyckades med att ladda tecken. Vänligen försök igen."
     }
   },
   "pornstar": {
