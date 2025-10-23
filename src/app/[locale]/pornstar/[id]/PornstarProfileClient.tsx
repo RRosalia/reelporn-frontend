@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
-import { useEchoPublic } from '@laravel/echo-react';
+// import { useEchoPublic } from '@laravel/echo-react';
 import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
 import { Pornstar } from '@/types/Pornstar';
 import AuthModal from '@/components/auth/AuthModal';
@@ -76,15 +76,16 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
     }, [error, pornstar, slug]);
 
     // Connect to pornstar WebSocket channel
-    const handlePornstarEvent = useCallback((event: unknown) => {
-        console.error('[Pornstar Channel] Event received:', event);
-    }, []);
+    // const handlePornstarEvent = useCallback((event: unknown) => {
+    //     console.error('[Pornstar Channel] Event received:', event);
+    // }, []);
 
-    useEchoPublic(
-        pornstar?.id ? `pornstar.${pornstar.id}` : '',
-        [],
-        handlePornstarEvent
-    );
+    // TODO: Fix Echo configuration - only subscribe when pornstar data is loaded
+    // useEchoPublic(
+    //     pornstar?.id ? `pornstar.${pornstar.id}` : '',
+    //     [],
+    //     handlePornstarEvent
+    // );
 
     // Handler for follow button
     const handleFollow = () => {
@@ -447,6 +448,13 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
                                         ? `url(${pornstar.profile_image.medium}) center/cover`
                                         : `linear-gradient(135deg, hsl(${(colorHash * 137) % 360}, 70%, 40%) 0%, hsl(${(colorHash * 137 + 60) % 360}, 70%, 30%) 100%)`
                                 }}
+                                role="img"
+                                aria-label={t('pornstar.imageAlt.profilePhoto', {
+                                    name: `${pornstar.first_name} ${pornstar.last_name}`,
+                                    age: pornstar.age || '',
+                                    ethnicity: pornstar.ethnicity || '',
+                                    country: pornstar.country?.name || '',
+                                })}
                             >
                             </div>
                         </div>
@@ -517,7 +525,7 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
                     gap: '12px'
                 }}>
                     <i className="bi bi-collection-play" style={{ color: '#c2338a' }}></i>
-                    Media Gallery
+                    {t('pornstar.content.mediaGallery')}
                     <span style={{
                         fontSize: '16px',
                         fontWeight: 'normal',
@@ -657,55 +665,416 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
                             </div>
                         </div>
 
-                        {/* Bio Section - Compact */}
-                        {pornstar.bio?.content && (
-                            <div style={{
-                                background: 'white',
-                                border: '1px solid rgba(194, 51, 138, 0.15)',
-                                borderRadius: '12px',
-                                padding: '20px'
+                        {/* About Section with SEO Content - Always Visible */}
+                        <div style={{
+                            background: 'white',
+                            border: '1px solid rgba(194, 51, 138, 0.15)',
+                            borderRadius: '12px',
+                            padding: '20px',
+                            gridColumn: pornstar.bio?.content ? 'auto' : '1 / -1',
+                        }}>
+                            <h2 style={{
+                                fontSize: '22px',
+                                fontWeight: 'bold',
+                                marginBottom: '16px',
+                                color: '#2b2838',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px'
                             }}>
-                                <h3 style={{
-                                    fontSize: '18px',
-                                    fontWeight: 'bold',
-                                    marginBottom: '12px',
-                                    color: '#2b2838',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '8px'
-                                }}>
-                                    <i className="bi bi-file-text" style={{ color: '#c2338a', fontSize: '20px' }}></i>
-                                    {t('pornstar.about.bio')}
-                                </h3>
-                                {pornstar.bio.language !== locale && (
-                                    <div style={{
-                                        padding: '8px 12px',
-                                        marginBottom: '12px',
-                                        background: 'rgba(194, 51, 138, 0.05)',
-                                        border: '1px solid rgba(194, 51, 138, 0.2)',
-                                        borderRadius: '6px',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '6px',
-                                        fontSize: '13px'
-                                    }}>
-                                        <i className="bi bi-translate" style={{ color: '#c2338a' }}></i>
-                                        <span style={{ color: '#666' }}>{t('pornstar.about.notTranslated')}</span>
-                                    </div>
+                                <i className="bi bi-person-circle" style={{ color: '#c2338a', fontSize: '24px' }}></i>
+                                {t('pornstar.content.about', { name: `${pornstar.first_name} ${pornstar.last_name}` })}
+                            </h2>
+
+                            {/* SEO-Rich Content */}
+                            <div style={{
+                                fontSize: '15px',
+                                lineHeight: '1.7',
+                                color: '#555',
+                                marginBottom: '16px',
+                            }}>
+                                {pornstar.ethnicity && pornstar.country ? (
+                                    <p style={{ marginBottom: '14px' }}>
+                                        {t('pornstar.content.aboutDescription', {
+                                            name: `${pornstar.first_name} ${pornstar.last_name}`,
+                                            age: pornstar.age || 0,
+                                            ethnicity: pornstar.ethnicity,
+                                            country: pornstar.country.name,
+                                            videos: pornstar.videos_count,
+                                            views: pornstar.views_count.toLocaleString(),
+                                            firstName: pornstar.first_name,
+                                        })}
+                                    </p>
+                                ) : pornstar.country ? (
+                                    <p style={{ marginBottom: '14px' }}>
+                                        {t('pornstar.content.aboutDescriptionNoEthnicity', {
+                                            name: `${pornstar.first_name} ${pornstar.last_name}`,
+                                            age: pornstar.age || 0,
+                                            country: pornstar.country.name,
+                                            videos: pornstar.videos_count,
+                                            views: pornstar.views_count.toLocaleString(),
+                                            firstName: pornstar.first_name,
+                                        })}
+                                    </p>
+                                ) : (
+                                    <p style={{ marginBottom: '14px' }}>
+                                        {t('pornstar.content.aboutDescriptionMinimal', {
+                                            name: `${pornstar.first_name} ${pornstar.last_name}`,
+                                            firstName: pornstar.first_name,
+                                        })}
+                                    </p>
                                 )}
-                                <p style={{
-                                    fontSize: '14px',
-                                    lineHeight: '1.6',
-                                    color: '#666',
-                                    whiteSpace: 'pre-wrap',
-                                    margin: 0
-                                }}>
-                                    {pornstar.bio.content}
-                                </p>
+
+                                {/* Bio Content (if exists) */}
+                                {pornstar.bio?.content && (
+                                    <>
+                                        {pornstar.bio.language !== locale && (
+                                            <div style={{
+                                                padding: '8px 12px',
+                                                marginBottom: '12px',
+                                                marginTop: '16px',
+                                                background: 'rgba(194, 51, 138, 0.05)',
+                                                border: '1px solid rgba(194, 51, 138, 0.2)',
+                                                borderRadius: '6px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '6px',
+                                                fontSize: '13px'
+                                            }}>
+                                                <i className="bi bi-translate" style={{ color: '#c2338a' }}></i>
+                                                <span style={{ color: '#666' }}>{t('pornstar.about.notTranslated')}</span>
+                                            </div>
+                                        )}
+                                        <p style={{
+                                            fontSize: '14px',
+                                            lineHeight: '1.6',
+                                            color: '#666',
+                                            whiteSpace: 'pre-wrap',
+                                            marginTop: '14px',
+                                            paddingTop: '14px',
+                                            borderTop: '1px solid rgba(194, 51, 138, 0.1)',
+                                        }}>
+                                            {pornstar.bio.content}
+                                        </p>
+                                    </>
+                                )}
                             </div>
-                        )}
+
+                            {/* Internal Links for SEO */}
+                            <div style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '10px',
+                                marginTop: '18px',
+                                paddingTop: '16px',
+                                borderTop: '1px solid rgba(194, 51, 138, 0.1)',
+                            }}>
+                                {pornstar.country && (
+                                    <a
+                                        href={`/${locale}/pornstars?country=${pornstar.country.id}`}
+                                        style={{
+                                            padding: '7px 14px',
+                                            background: 'rgba(194, 51, 138, 0.08)',
+                                            color: '#c2338a',
+                                            borderRadius: '18px',
+                                            textDecoration: 'none',
+                                            fontSize: '13px',
+                                            fontWeight: '500',
+                                            transition: 'all 0.2s',
+                                            border: '1px solid rgba(194, 51, 138, 0.2)',
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.15)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.08)';
+                                        }}
+                                    >
+                                        <i className="bi bi-geo-alt-fill" style={{ marginRight: '5px' }}></i>
+                                        {t('pornstar.links.moreFrom', { country: pornstar.country.name })}
+                                    </a>
+                                )}
+                                {pornstar.ethnicity && (
+                                    <a
+                                        href={`/${locale}/pornstars?ethnicity=${encodeURIComponent(pornstar.ethnicity)}`}
+                                        style={{
+                                            padding: '7px 14px',
+                                            background: 'rgba(194, 51, 138, 0.08)',
+                                            color: '#c2338a',
+                                            borderRadius: '18px',
+                                            textDecoration: 'none',
+                                            fontSize: '13px',
+                                            fontWeight: '500',
+                                            transition: 'all 0.2s',
+                                            border: '1px solid rgba(194, 51, 138, 0.2)',
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.15)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.08)';
+                                        }}
+                                    >
+                                        <i className="bi bi-globe" style={{ marginRight: '5px' }}></i>
+                                        {t('pornstar.links.viewEthnicity', { ethnicity: pornstar.ethnicity })}
+                                    </a>
+                                )}
+                                {pornstar.age && (
+                                    <a
+                                        href={`/${locale}/pornstars?age=${pornstar.age}`}
+                                        style={{
+                                            padding: '7px 14px',
+                                            background: 'rgba(194, 51, 138, 0.08)',
+                                            color: '#c2338a',
+                                            borderRadius: '18px',
+                                            textDecoration: 'none',
+                                            fontSize: '13px',
+                                            fontWeight: '500',
+                                            transition: 'all 0.2s',
+                                            border: '1px solid rgba(194, 51, 138, 0.2)',
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.15)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.background = 'rgba(194, 51, 138, 0.08)';
+                                        }}
+                                    >
+                                        <i className="bi bi-calendar-event" style={{ marginRight: '5px' }}></i>
+                                        {t('pornstar.links.similarAge')}
+                                    </a>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            {/* FAQ Section - SEO */}
+            <div className="container mx-auto px-4 py-8">
+                <section style={{
+                    background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.03) 0%, rgba(248, 197, 55, 0.03) 100%)',
+                    borderRadius: '16px',
+                    padding: '32px 24px',
+                    border: '1px solid rgba(194, 51, 138, 0.1)',
+                }}>
+                    <h2 style={{
+                        fontSize: '26px',
+                        fontWeight: 'bold',
+                        marginBottom: '24px',
+                        color: '#2b2838',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px'
+                    }}>
+                        <i className="bi bi-question-circle" style={{ color: '#c2338a' }}></i>
+                        {t('pornstar.faq.title', { name: `${pornstar.first_name} ${pornstar.last_name}` })}
+                    </h2>
+
+                    <div style={{
+                        display: 'grid',
+                        gap: '16px',
+                        maxWidth: '900px',
+                    }}>
+                        {/* Age FAQ */}
+                        {pornstar.age && (
+                            <details style={{
+                                background: 'white',
+                                borderRadius: '10px',
+                                padding: '16px 20px',
+                                border: '1px solid rgba(194, 51, 138, 0.15)',
+                            }}>
+                                <summary style={{
+                                    fontSize: '16px',
+                                    fontWeight: '600',
+                                    color: '#2b2838',
+                                    cursor: 'pointer',
+                                    listStyle: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                }}>
+                                    <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                    {t('pornstar.faq.howOld.question', { name: `${pornstar.first_name} ${pornstar.last_name}` })}
+                                </summary>
+                                <p style={{
+                                    marginTop: '12px',
+                                    paddingLeft: '22px',
+                                    color: '#666',
+                                    fontSize: '15px',
+                                    lineHeight: '1.6',
+                                }}>
+                                    {t('pornstar.faq.howOld.answer', { name: `${pornstar.first_name} ${pornstar.last_name}`, age: pornstar.age })}
+                                </p>
+                            </details>
+                        )}
+
+                        {/* Country FAQ */}
+                        {pornstar.country && (
+                            <details style={{
+                                background: 'white',
+                                borderRadius: '10px',
+                                padding: '16px 20px',
+                                border: '1px solid rgba(194, 51, 138, 0.15)',
+                            }}>
+                                <summary style={{
+                                    fontSize: '16px',
+                                    fontWeight: '600',
+                                    color: '#2b2838',
+                                    cursor: 'pointer',
+                                    listStyle: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                }}>
+                                    <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                    {t('pornstar.faq.whereFrom.question', { firstName: pornstar.first_name })}
+                                </summary>
+                                <p style={{
+                                    marginTop: '12px',
+                                    paddingLeft: '22px',
+                                    color: '#666',
+                                    fontSize: '15px',
+                                    lineHeight: '1.6',
+                                }}>
+                                    {t('pornstar.faq.whereFrom.answer', { firstName: pornstar.first_name, country: pornstar.country.name })}
+                                </p>
+                            </details>
+                        )}
+
+                        {/* Height FAQ */}
+                        {pornstar.height_cm && (
+                            <details style={{
+                                background: 'white',
+                                borderRadius: '10px',
+                                padding: '16px 20px',
+                                border: '1px solid rgba(194, 51, 138, 0.15)',
+                            }}>
+                                <summary style={{
+                                    fontSize: '16px',
+                                    fontWeight: '600',
+                                    color: '#2b2838',
+                                    cursor: 'pointer',
+                                    listStyle: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                }}>
+                                    <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                    {t('pornstar.faq.howTall.question', { firstName: pornstar.first_name })}
+                                </summary>
+                                <p style={{
+                                    marginTop: '12px',
+                                    paddingLeft: '22px',
+                                    color: '#666',
+                                    fontSize: '15px',
+                                    lineHeight: '1.6',
+                                }}>
+                                    {t('pornstar.faq.howTall.answer', {
+                                        firstName: pornstar.first_name,
+                                        height: pornstar.height_cm,
+                                        heightFt: `${Math.floor(pornstar.height_cm / 30.48)}'${Math.round((pornstar.height_cm % 30.48) / 2.54)}"`,
+                                    })}
+                                </p>
+                            </details>
+                        )}
+
+                        {/* Videos FAQ */}
+                        {pornstar.videos_count > 0 && (
+                            <details style={{
+                                background: 'white',
+                                borderRadius: '10px',
+                                padding: '16px 20px',
+                                border: '1px solid rgba(194, 51, 138, 0.15)',
+                            }}>
+                                <summary style={{
+                                    fontSize: '16px',
+                                    fontWeight: '600',
+                                    color: '#2b2838',
+                                    cursor: 'pointer',
+                                    listStyle: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                }}>
+                                    <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                    {t('pornstar.faq.howManyVideos.question', { firstName: pornstar.first_name })}
+                                </summary>
+                                <p style={{
+                                    marginTop: '12px',
+                                    paddingLeft: '22px',
+                                    color: '#666',
+                                    fontSize: '15px',
+                                    lineHeight: '1.6',
+                                }}>
+                                    {t('pornstar.faq.howManyVideos.answer', { firstName: pornstar.first_name, count: pornstar.videos_count })}
+                                </p>
+                            </details>
+                        )}
+
+                        {/* How to Watch FAQ */}
+                        <details style={{
+                            background: 'white',
+                            borderRadius: '10px',
+                            padding: '16px 20px',
+                            border: '1px solid rgba(194, 51, 138, 0.15)',
+                        }}>
+                            <summary style={{
+                                fontSize: '16px',
+                                fontWeight: '600',
+                                color: '#2b2838',
+                                cursor: 'pointer',
+                                listStyle: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                            }}>
+                                <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                {t('pornstar.faq.howToWatch.question', { firstName: pornstar.first_name })}
+                            </summary>
+                            <p style={{
+                                marginTop: '12px',
+                                paddingLeft: '22px',
+                                color: '#666',
+                                fontSize: '15px',
+                                lineHeight: '1.6',
+                            }}>
+                                {t('pornstar.faq.howToWatch.answer', { firstName: pornstar.first_name })}
+                            </p>
+                        </details>
+
+                        {/* How to Contact FAQ */}
+                        <details style={{
+                            background: 'white',
+                            borderRadius: '10px',
+                            padding: '16px 20px',
+                            border: '1px solid rgba(194, 51, 138, 0.15)',
+                        }}>
+                            <summary style={{
+                                fontSize: '16px',
+                                fontWeight: '600',
+                                color: '#2b2838',
+                                cursor: 'pointer',
+                                listStyle: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                            }}>
+                                <i className="bi bi-chevron-right" style={{ color: '#c2338a', fontSize: '14px' }}></i>
+                                {t('pornstar.faq.howToContact.question', { firstName: pornstar.first_name })}
+                            </summary>
+                            <p style={{
+                                marginTop: '12px',
+                                paddingLeft: '22px',
+                                color: '#666',
+                                fontSize: '15px',
+                                lineHeight: '1.6',
+                            }}>
+                                {t('pornstar.faq.howToContact.answer', { firstName: pornstar.first_name })}
+                            </p>
+                        </details>
+                    </div>
+                </section>
             </div>
 
             {/* Auth Modal */}
