@@ -76,6 +76,7 @@ function VideoCard({ video }: VideoCardProps) {
                             fill
                             className="object-cover"
                             loading="lazy"
+                            unoptimized
                             onError={handleImageError}
                             style={{ opacity: imageError ? 0 : 1 }}
                         />
