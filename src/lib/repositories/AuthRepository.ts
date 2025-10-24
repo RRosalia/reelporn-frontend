@@ -1,63 +1,47 @@
 import apiClient from '@/lib/api/apiClient';
+import type {
+  LoginResponse,
+  RegisterData,
+  ResetPasswordData,
+  User,
+  CurrentUserResponse,
+  RefreshTokenResponse,
+  ForgotPasswordResponse,
+  ResetPasswordResponse
+} from '@/types/User';
 
-interface LoginResponse {
-  token?: string;
-  user?: any;
-  data?: any;
-}
-
-interface RegisterData {
-  name: string;
-  email: string;
-  password: string;
-  password_confirmation: string;
-  plan_id?: number;
-  payment_method?: string;
-  payment_options?: {
-    currency?: string;
-  };
-}
-
-interface RegisterUser {
-  id: string;
-  name: string;
-  email: string;
-  created_at: string;
-}
-
-interface RegisterPaymentCrypto {
-  currency: string;
-  amount: string;
-  payment_address: string;
-  exchange_rate_cents: number;
-  exchange_rate_usd: number;
-  required_confirmations: number;
-}
-
-interface RegisterPayment {
-  payment_id: string;
-  status: string;
-  amount_cents: number;
-  amount_usd: number;
-  payment_method: string;
-  expires_at: string;
-  crypto?: RegisterPaymentCrypto;
-}
-
+/**
+ * Register response structure
+ */
 interface RegisterResponse {
   data: {
-    user: RegisterUser;
+    user: User;
     token: string;
     requires_payment: boolean;
-    payment?: RegisterPayment;
+    payment?: {
+      payment_id: string;
+      status: string;
+      amount_cents: number;
+      amount_usd: number;
+      payment_method: string;
+      expires_at: string;
+      crypto?: {
+        currency: string;
+        amount: string;
+        payment_address: string;
+        exchange_rate_cents: number;
+        exchange_rate_usd: number;
+        required_confirmations: number;
+      };
+    };
   };
 }
 
-interface ResetPasswordData {
-  token: string;
-  email: string;
-  password: string;
-  password_confirmation: string;
+/**
+ * Logout response structure
+ */
+interface LogoutResponse {
+  message: string;
 }
 
 /**
@@ -71,7 +55,7 @@ class AuthRepository {
    * @returns {Promise<LoginResponse>} Response data containing token
    */
   async login(email: string, password: string): Promise<LoginResponse> {
-    const response = await apiClient.post('/login', {
+    const response = await apiClient.post<LoginResponse>('/login', {
       email,
       password,
     });
@@ -84,67 +68,63 @@ class AuthRepository {
    * @returns {Promise<RegisterResponse>} Response data containing user, token, and optional payment details
    */
   async register(userData: RegisterData): Promise<RegisterResponse> {
-    const response = await apiClient.post('/register', userData);
+    const response = await apiClient.post<RegisterResponse>('/register', userData);
     return response.data;
   }
 
   /**
    * Logout user
-   * @returns {Promise<any>} Response data
+   * @returns {Promise<LogoutResponse>} Response data
    */
-  async logout(): Promise<any> {
-    const response = await apiClient.post('/logout');
+  async logout(): Promise<LogoutResponse> {
+    const response = await apiClient.post<LogoutResponse>('/logout');
     return response.data;
   }
 
   /**
    * Get current authenticated user
-   * @returns {Promise<any>} User data
+   * @returns {Promise<CurrentUserResponse>} User data
    */
-  async getCurrentUser(): Promise<any> {
-    const response = await apiClient.get('/user');
+  async getCurrentUser(): Promise<CurrentUserResponse> {
+    const response = await apiClient.get<CurrentUserResponse>('/user');
     return response.data;
   }
 
   /**
    * Refresh authentication token
-   * @returns {Promise<any>} Response data containing new token
+   * @returns {Promise<RefreshTokenResponse>} Response data containing new token
    */
-  async refreshToken(): Promise<any> {
-    const response = await apiClient.post('/refresh');
+  async refreshToken(): Promise<RefreshTokenResponse> {
+    const response = await apiClient.post<RefreshTokenResponse>('/refresh');
     return response.data;
   }
 
   /**
    * Request password reset
    * @param {string} email
-   * @returns {Promise<any>} Response data
+   * @returns {Promise<ForgotPasswordResponse>} Response data
    */
-  async forgotPassword(email: string): Promise<any> {
-    const response = await apiClient.post('/forgot-password', { email });
+  async forgotPassword(email: string): Promise<ForgotPasswordResponse> {
+    const response = await apiClient.post<ForgotPasswordResponse>('/forgot-password', { email });
     return response.data;
   }
 
   /**
    * Reset password with token
    * @param {ResetPasswordData} data - Contains token, email, password, password_confirmation
-   * @returns {Promise<any>} Response data
+   * @returns {Promise<ResetPasswordResponse>} Response data
    */
-  async resetPassword(data: ResetPasswordData): Promise<any> {
-    const response = await apiClient.post('/reset-password', data);
+  async resetPassword(data: ResetPasswordData): Promise<ResetPasswordResponse> {
+    const response = await apiClient.post<ResetPasswordResponse>('/reset-password', data);
     return response.data;
   }
 }
 
-export default new AuthRepository();
+const authRepository = new AuthRepository();
+export default authRepository;
 
 // Export types for use in components
 export type {
-  LoginResponse,
-  RegisterData,
-  RegisterUser,
-  RegisterPayment,
-  RegisterPaymentCrypto,
   RegisterResponse,
-  ResetPasswordData,
+  LogoutResponse,
 };

@@ -346,27 +346,52 @@
 @media (max-width: 767px) {
     .profile-cover {
         min-height: 300px;
+        padding-bottom: 0;
+    }
+
+    .profile-header {
+        padding-bottom: 0;
+    }
+
+    .profile-avatar-wrapper {
+        position: sticky;
+        top: 70px;
+        z-index: 10;
+        margin-top: -60px;
     }
 
     .profile-avatar {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
+        border-width: 3px;
+    }
+
+    .profile-info {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .profile-name {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 12px;
     }
 
     .profile-stats {
-        gap: 20px;
+        gap: 15px;
+        margin-bottom: 15px;
     }
 
     .stat-value {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .stat-label {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .profile-actions button {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     .profile-tabs {
@@ -382,5 +407,24 @@
     .about-card,
     .details-card {
         padding: 20px;
+    }
+}
+
+/* Live Indicator Animations */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 2px 16px rgba(255, 0, 0, 0.8);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
     }
 }

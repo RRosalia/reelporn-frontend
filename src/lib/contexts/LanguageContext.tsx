@@ -31,7 +31,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       }
 
       // Detect browser language
-      const browserLang = navigator.language || (navigator as any).userLanguage;
+      const browserLang = navigator.language || (navigator as Navigator & { userLanguage?: string }).userLanguage || 'en';
       const langCode = browserLang.split('-')[0].toLowerCase();
 
       // Check if we support this language

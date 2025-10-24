@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import './ForcedAdvert.css';
 
 interface AdData {
@@ -22,16 +22,16 @@ interface ForcedAdvertProps {
 function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProps) {
     const [timeRemaining, setTimeRemaining] = useState(adData.duration || 15);
     const [canSkip, setCanSkip] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const skipAfter = adData.skipAfter || 5;
 
     useEffect(() => {
         if (isActive) {
-            setIsPlaying(true);
-            setTimeRemaining(adData.duration || 15);
-            setCanSkip(false);
+            setTimeout(() => {
+                setTimeRemaining(adData.duration || 15);
+                setCanSkip(false);
+            }, 0);
 
             // Start countdown
             intervalRef.current = setInterval(() => {
@@ -48,14 +48,15 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
 
                     // Enable skip button after skipAfter seconds
                     if (prev === (adData.duration || 15) - skipAfter + 1) {
-                        setCanSkip(true);
+                        setTimeout(() => {
+                            setCanSkip(true);
+                        }, 0);
                     }
 
                     return prev - 1;
                 });
             }, 1000);
         } else {
-            setIsPlaying(false);
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
             }
@@ -86,7 +87,12 @@ function ForcedAdvert({ adData, isActive, onComplete, onSkip }: ForcedAdvertProp
         'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
     ];
 
-    const randomBg = adBackgrounds[Math.floor(Math.random() * adBackgrounds.length)];
+    // Use useMemo to generate a stable random background
+    const randomBg = useMemo(() => {
+        // Use a deterministic value based on some prop or use index-based selection
+        const index = adData?.duration ? (adData.duration % adBackgrounds.length) : 0;
+        return adBackgrounds[index];
+    }, [adData?.duration, adBackgrounds]);
 
     return (
         <div className="forced-advert" style={{ background: randomBg }}>

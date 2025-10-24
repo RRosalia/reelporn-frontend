@@ -1,47 +1,102 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { useMiniPlayer } from '@/lib/contexts/MiniPlayerContext';
 import VideoCard from '@/components/VideoCard';
+import ReelService from '@/lib/services/ReelService';
+import PornstarService from '@/lib/services/PornstarService';
+import type { Reel } from '@/types/Reel';
+import type { Pornstar } from '@/types/Pornstar';
 
 export default function HomePage() {
     const t = useTranslations();
-    const { openMiniPlayer } = useMiniPlayer();
     const [activeTab, setActiveTab] = useState('trending');
+    const [videos, setVideos] = useState<Reel[]>([]);
+    const [pornstars, setPornstars] = useState<Pornstar[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [pornstarsLoading, setPornstarsLoading] = useState(true);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    // Mock data - replace with API call later
-    // Using deterministic values based on index to avoid hydration mismatches
-    const mockVideos = Array.from({ length: 24 }, (_, i) => ({
-        id: i + 1,
-        title: `Hot Video ${i + 1}`,
-        thumbnail: `https://images.unsplash.com/photo-${1500000000000 + (i * 123456789)}?w=300&h=533&fit=crop&auto=format`,
-        duration: ((i * 7) % 15) + 1,
-        views: `${((i * 13) % 100) + 1}K`,
-        likes: `${((i * 11) % 50) + 1}K`,
-        uploadedAt: `${((i * 5) % 24) + 1}h ago`
-    }));
+    // Fetch videos based on active tab
+    useEffect(() => {
+        let isMounted = true;
 
-    const mockPornstars = Array.from({ length: 12 }, (_, i) => ({
-        id: i + 1,
-        name: `Star ${i + 1}`,
-        avatar: `https://images.unsplash.com/photo-${1600000000000 + (i * 987654321)}?w=200&h=200&fit=crop&auto=format`,
-        videos: ((i * 37) % 200) + 50,
-        views: `${((i * 3) % 10) + 1}M`,
-        verified: i % 3 !== 0,
-        isOnline: i % 2 === 0,
-        rating: (((i * 7) % 20) / 10 + 3).toFixed(1)
-    }));
+        const fetchVideos = async () => {
+            try {
+                // For initial load, show full loading state
+                // For tab changes, show transitioning state to keep content visible
+                setIsTransitioning(true);
+                setError(null);
+                const data = await ReelService.getVideosByCategory(activeTab);
+
+                if (isMounted) {
+                    setVideos(data);
+                    setLoading(false);
+                }
+            } catch (err) {
+                console.error('Error fetching videos:', err);
+                if (isMounted) {
+                    setError('Failed to load videos');
+                    setLoading(false);
+                }
+            } finally {
+                if (isMounted) {
+                    setIsTransitioning(false);
+                }
+            }
+        };
+
+        fetchVideos();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [activeTab]);
+
+    // Fetch pornstars for homepage
+    useEffect(() => {
+        let isMounted = true;
+
+        const fetchPornstars = async () => {
+            try {
+                setPornstarsLoading(true);
+                const data = await PornstarService.getFeatured();
+                if (isMounted) {
+                    setPornstars(data);
+                    setPornstarsLoading(false);
+                }
+            } catch (err) {
+                console.error('Error fetching pornstars:', err);
+                if (isMounted) {
+                    setPornstarsLoading(false);
+                }
+            }
+        };
+
+        fetchPornstars();
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
 
     const categories = [
         { key: 'trending', label: t('category.trending'), icon: '🔥' },
         { key: 'new', label: t('category.new'), icon: '✨' },
         { key: 'popular', label: t('category.popular'), icon: '⭐' },
-        { key: 'amateur', label: t('category.amateur'), icon: '👤' },
-        { key: 'professional', label: t('category.professional'), icon: '💼' },
         { key: 'featured', label: t('category.featured'), icon: '🎬' }
     ];
+
+    // Helper function to convert UUID to number for gradients
+    const getColorFromId = (id: string): number => {
+        let hash = 0;
+        for (let i = 0; i < id.length; i++) {
+            hash = id.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return Math.abs(hash);
+    };
 
     return (
         <div className="bg-gray-50">
@@ -197,75 +252,59 @@ export default function HomePage() {
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                        {mockPornstars.map((star) => (
-                            <div key={star.id}>
-                                <Link
-                                    href={`/pornstar/${star.id}` as any}
-                                    className="no-underline block"
-                                >
-                                    <div className="bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent">
-                                        <div className="relative">
-                                            <div style={{
-                                                paddingTop: '100%',
-                                                background: `linear-gradient(135deg, hsl(${star.id * 137 % 360}, 70%, 30%) 0%, hsl(${(star.id * 137 + 60) % 360}, 70%, 20%) 100%)`,
-                                                position: 'relative'
-                                            }}>
-                                                <img
-                                                    src={star.avatar}
-                                                    alt={star.name}
-                                                    className="absolute top-0 left-0 w-full h-full object-cover"
-                                                    onError={(e: any) => (e.target.style.display = 'none')}
-                                                />
-                                            </div>
-
-                                            {star.isOnline && (
-                                                <div className="absolute top-2.5 right-2.5 bg-green-500 w-3 h-3 rounded-full border-2 border-white"></div>
-                                            )}
-
-                                            {star.verified && (
+                    {pornstarsLoading ? (
+                        <div className="text-center py-12">
+                            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500"></div>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                            {pornstars.map((star) => (
+                                <div key={star.id}>
+                                    <Link
+                                        href={`/pornstar/${star.slug}` as any}
+                                        className="no-underline block"
+                                    >
+                                        <div className="bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent">
+                                            <div className="relative">
                                                 <div style={{
-                                                    position: 'absolute',
-                                                    bottom: '10px',
-                                                    right: '10px',
-                                                    background: 'linear-gradient(135deg, #c2338a 0%, #f8c537 100%)',
-                                                    color: 'white',
-                                                    width: '28px',
-                                                    height: '28px',
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    border: '2px solid white'
+                                                    paddingTop: '100%',
+                                                    background: `linear-gradient(135deg, hsl(${(getColorFromId(star.id) * 137) % 360}, 70%, 30%) 0%, hsl(${((getColorFromId(star.id) * 137) + 60) % 360}, 70%, 20%) 100%)`,
+                                                    position: 'relative'
                                                 }}>
-                                                    <i className="bi bi-check text-base font-bold"></i>
+                                                    {star.profile_image && (
+                                                        <img
+                                                            src={star.profile_image.medium}
+                                                            alt={`${star.first_name} ${star.last_name}`}
+                                                            className="absolute top-0 left-0 w-full h-full object-cover"
+                                                            onError={(e: any) => (e.target.style.display = 'none')}
+                                                        />
+                                                    )}
                                                 </div>
-                                            )}
-                                        </div>
+                                            </div>
 
-                                        <div className="p-3">
-                                            <h6 className="text-dark-secondary font-bold mb-1 text-sm truncate">
-                                                {star.name}
-                                            </h6>
-                                            <div className="text-xs text-gray-600">
-                                                <div className="flex justify-between mb-1">
-                                                    <span>{star.videos}</span>
-                                                    <span>{star.views}</span>
-                                                </div>
-                                                <div className="flex items-center">
-                                                    <span style={{ color: '#f8c537' }}>
-                                                        {'★'.repeat(Math.floor(parseFloat(star.rating)))}
-                                                        {'☆'.repeat(5 - Math.floor(parseFloat(star.rating)))}
-                                                    </span>
-                                                    <span className="ml-1">{star.rating}</span>
+                                            <div className="p-3">
+                                                <h6 className="text-dark-secondary font-bold mb-1 text-sm truncate">
+                                                    {star.first_name} {star.last_name}
+                                                </h6>
+                                                <div className="text-xs text-gray-600">
+                                                    <div className="flex justify-between mb-1">
+                                                        <span><i className="bi bi-play-circle"></i> {star.videos_count}</span>
+                                                        <span><i className="bi bi-eye"></i> {star.views_count > 1000 ? `${Math.floor(star.views_count / 1000)}K` : star.views_count}</span>
+                                                    </div>
+                                                    {star.age && star.country && (
+                                                        <div className="flex justify-between text-xs text-gray-500">
+                                                            <span>{star.age} yrs</span>
+                                                            <span>{star.country.iso}</span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -280,25 +319,68 @@ export default function HomePage() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                    {mockVideos.map((video) => (
-                        <div key={video.id}>
-                            <VideoCard video={video} />
+                {/* Loading indicator for tab transitions */}
+                {isTransitioning && (
+                    <div className="mb-4">
+                        <div className="w-full h-1 bg-gray-200 rounded overflow-hidden">
+                            <div
+                                className="h-full bg-gradient-to-r from-pink-500 to-red-500 animate-pulse"
+                                style={{ width: '100%' }}
+                            ></div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                )}
 
-                <div className="text-center mt-12">
-                    <button
-                        className="px-12 py-3 text-lg font-bold text-white rounded-full"
-                        style={{
-                            background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
-                            boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
-                        }}
-                    >
-                        {t('home.loadMore')}
-                    </button>
-                </div>
+                {/* Initial loading state */}
+                {loading && videos.length === 0 && (
+                    <div className="text-center py-12">
+                        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+                        <p className="mt-4 text-gray-600">{t('common.loading')}</p>
+                    </div>
+                )}
+
+                {/* Error state */}
+                {error && !isTransitioning && (
+                    <div className="text-center py-12">
+                        <p className="text-red-600">{error}</p>
+                    </div>
+                )}
+
+                {/* Content */}
+                {!loading && (
+                    <>
+                        <div
+                            className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 transition-opacity duration-200 ${isTransitioning ? 'pointer-events-none' : ''}`}
+                            style={{ opacity: isTransitioning ? 0.5 : 1 }}
+                        >
+                            {videos.map((video) => (
+                                <div key={video.id}>
+                                    <VideoCard video={video} />
+                                </div>
+                            ))}
+                        </div>
+
+                        {videos.length === 0 && !error && (
+                            <div className="text-center py-12">
+                                <p className="text-gray-600">{t('common.noResults')}</p>
+                            </div>
+                        )}
+
+                        {videos.length > 0 && (
+                            <div className="text-center mt-12">
+                                <button
+                                    className="px-12 py-3 text-lg font-bold text-white rounded-full"
+                                    style={{
+                                        background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
+                                        boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
+                                    }}
+                                >
+                                    {t('home.loadMore')}
+                                </button>
+                            </div>
+                        )}
+                    </>
+                )}
             </div>
 
             {/* Premium CTA Section */}
@@ -355,28 +437,28 @@ export default function HomePage() {
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-badge-hd text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">HD Quality</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.hdQuality')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-download text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Downloads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.downloads')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-x-octagon text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">No Ads</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.noAds')}</h5>
                                 </div>
                                 <div className="p-6 text-center rounded-2xl" style={{
                                     background: 'rgba(194, 51, 138, 0.1)',
                                     border: '1px solid rgba(194, 51, 138, 0.2)'
                                 }}>
                                     <i className="bi bi-stars text-6xl" style={{ color: '#f8c537' }}></i>
-                                    <h5 className="mt-4 text-white text-lg font-semibold">Exclusive</h5>
+                                    <h5 className="mt-4 text-white text-lg font-semibold">{t('footer.features.exclusive')}</h5>
                                 </div>
                             </div>
                         </div>

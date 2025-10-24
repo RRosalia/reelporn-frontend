@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useRouter } from '@/i18n/routing';
-import { useParams } from 'next/navigation';
 import './MiniPlayer.css';
 
 interface Short {
@@ -22,33 +21,30 @@ interface MiniPlayerProps {
 
 function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPlayerProps) {
     const router = useRouter();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const videoRef = useRef<HTMLVideoElement>(null);
     const playerRef = useRef<HTMLDivElement>(null);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
     const [isResizing, setIsResizing] = useState(false);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState(() => {
+        // Calculate initial position on the client side
+        if (typeof window !== 'undefined') {
+            return { x: window.innerWidth - 420, y: window.innerHeight - 350 };
+        }
+        return { x: 0, y: 0 };
+    });
     const [size, setSize] = useState({ width: 400, height: 300 });
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
     const [resizeStart, setResizeStart] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
     const currentShort = queue[currentIndex];
 
-    // Set initial position on mount
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setPosition({ x: window.innerWidth - 420, y: window.innerHeight - 350 });
-        }
-    }, []);
-
     // Auto-play video
     useEffect(() => {
         if (videoRef.current && isPlaying) {
-            videoRef.current.play().catch(err => {
-                console.log('Autoplay prevented:', err);
+            videoRef.current.play().catch(() => {
+                // Autoplay prevented - ignore silently
             });
         }
     }, [currentShort, isPlaying]);
@@ -82,7 +78,6 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
             });
         } else if (isResizing) {
             const deltaX = e.clientX - resizeStart.x;
-            const deltaY = e.clientY - resizeStart.y;
 
             // Maintain aspect ratio (4:3)
             const newWidth = Math.max(300, Math.min(800, resizeStart.width + deltaX));
@@ -133,7 +128,7 @@ function MiniPlayer({ queue, currentIndex, onClose, onNext, onPrevious }: MiniPl
     };
 
     const goFullscreen = () => {
-        router.push(`/shorts?view=${currentShort.id}` as any);
+        router.push('/shorts');
     };
 
     const handleVideoEnd = () => {

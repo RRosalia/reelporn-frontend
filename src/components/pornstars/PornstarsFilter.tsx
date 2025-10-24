@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
+import PornstarService from '@/lib/services/PornstarService';
 import { PornstarFilters, FilterCountry, HeightRange, WeightRange, FilterOption } from '@/types/Pornstar';
 import './PornstarsFilter.css';
 
@@ -38,12 +38,12 @@ const PornstarsFilter: React.FC<PornstarsFilterProps> = ({ filters, onFilterChan
           eyeColorsData,
           ethnicitiesData
         ] = await Promise.all([
-          PornstarsRepository.getFilterCountries(),
-          PornstarsRepository.getFilterHeights(),
-          PornstarsRepository.getFilterWeights(),
-          PornstarsRepository.getFilterHairColors(),
-          PornstarsRepository.getFilterEyeColors(),
-          PornstarsRepository.getFilterEthnicities()
+          PornstarService.getFilterCountries(),
+          PornstarService.getFilterHeights(),
+          PornstarService.getFilterWeights(),
+          PornstarService.getFilterHairColors(),
+          PornstarService.getFilterEyeColors(),
+          PornstarService.getFilterEthnicities()
         ]);
 
         setCountries(countriesData);
@@ -62,13 +62,14 @@ const PornstarsFilter: React.FC<PornstarsFilterProps> = ({ filters, onFilterChan
     fetchFilterData();
   }, []);
 
-  const handleInputChange = (key: keyof PornstarFilters, value: any) => {
+  const handleInputChange = (key: keyof PornstarFilters, value: string | number | boolean | null | undefined) => {
     const newFilters = { ...filters };
 
     if (value === '' || value === null || value === undefined) {
       delete newFilters[key];
     } else {
-      newFilters[key] = value;
+      // Type assertion needed because TypeScript can't narrow the union type properly
+      (newFilters as Record<string, string | number | boolean>)[key] = value as string | number | boolean;
     }
 
     onFilterChange(newFilters);

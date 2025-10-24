@@ -1,11 +1,10 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import type { Reel } from '@/types/Reel';
 
-interface Video {
-  id: number;
-  title: string;
-  [key: string]: any;
+interface Video extends Reel {
+  // Video is an alias for Reel in the mini player context
 }
 
 interface MiniPlayerContextType {

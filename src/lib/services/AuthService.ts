@@ -1,25 +1,12 @@
 import AuthRepository from '@/lib/repositories/AuthRepository';
-
-interface LoginResponse {
-  token?: string;
-  user?: any;
-  data?: any;
-}
-
-interface RegisterData {
-  name: string;
-  email: string;
-  password: string;
-  password_confirmation: string;
-  [key: string]: any;
-}
-
-interface ResetPasswordData {
-  token: string;
-  email: string;
-  password: string;
-  password_confirmation: string;
-}
+import type {
+  LoginResponse,
+  RegisterData,
+  ResetPasswordData,
+  User,
+  ForgotPasswordResponse,
+  ResetPasswordResponse
+} from '@/types/User';
 
 /**
  * Auth Service - Handles authentication business logic
@@ -59,9 +46,9 @@ class AuthService {
   /**
    * Register new user
    * @param {RegisterData} userData
-   * @returns {Promise<any>} Registration response data
+   * @returns {Promise<LoginResponse>} Registration response data
    */
-  async register(userData: RegisterData): Promise<any> {
+  async register(userData: RegisterData): Promise<LoginResponse> {
     // Call repository to register
     const response = await AuthRepository.register(userData);
 
@@ -80,7 +67,7 @@ class AuthService {
       this.setUser(user);
     }
 
-    return data;
+    return { data };
   }
 
   /**
@@ -108,21 +95,20 @@ class AuthService {
 
   /**
    * Get current authenticated user from API
-   * @returns {Promise<any>} User data
+   * @returns {Promise<User | null>} User data
    */
-  async getCurrentUser(): Promise<any> {
+  async getCurrentUser(): Promise<User | null> {
     const response = await AuthRepository.getCurrentUser();
 
     // Handle nested data structure
-    const data = response.data || response;
-    const user = data.user || data;
+    const user = response.user || (response.data?.user);
 
     // Update stored user data
     if (user) {
       this.setUser(user);
     }
 
-    return user;
+    return user || null;
   }
 
   /**
@@ -157,9 +143,9 @@ class AuthService {
 
   /**
    * Store user data
-   * @param {any} user
+   * @param {User} user
    */
-  setUser(user: any): void {
+  setUser(user: User): void {
     if (typeof window !== 'undefined') {
       localStorage.setItem(this.USER_KEY, JSON.stringify(user));
     }
@@ -167,12 +153,12 @@ class AuthService {
 
   /**
    * Get stored user data
-   * @returns {any|null}
+   * @returns {User | null}
    */
-  getUser(): any | null {
+  getUser(): User | null {
     if (typeof window !== 'undefined') {
       const user = localStorage.getItem(this.USER_KEY);
-      return user ? JSON.parse(user) : null;
+      return user ? JSON.parse(user) as User : null;
     }
     return null;
   }
@@ -205,20 +191,21 @@ class AuthService {
   /**
    * Request password reset
    * @param {string} email
-   * @returns {Promise<any>}
+   * @returns {Promise<ForgotPasswordResponse>}
    */
-  async forgotPassword(email: string): Promise<any> {
+  async forgotPassword(email: string): Promise<ForgotPasswordResponse> {
     return await AuthRepository.forgotPassword(email);
   }
 
   /**
    * Reset password with token
    * @param {ResetPasswordData} data
-   * @returns {Promise<any>}
+   * @returns {Promise<ResetPasswordResponse>}
    */
-  async resetPassword(data: ResetPasswordData): Promise<any> {
+  async resetPassword(data: ResetPasswordData): Promise<ResetPasswordResponse> {
     return await AuthRepository.resetPassword(data);
   }
 }
 
-export default new AuthService();
+const authService = new AuthService();
+export default authService;

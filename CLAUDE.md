@@ -33,6 +33,7 @@ docker exec reelporn_frontend bun run type-check
 ### Environment Setup
 
 Copy `.env.local.example` to `.env.local` and configure:
+
 - `NEXT_PUBLIC_API_URL`: Backend API URL (default: http://localhost:9000)
 - `NEXT_PUBLIC_REVERB_*`: Laravel Reverb WebSocket configuration
 - `NEXT_PUBLIC_SITE_URL`: Site URL for SEO/hreflang tags
@@ -62,23 +63,27 @@ src/
 ### Key Architectural Patterns
 
 **Service-Repository Pattern**:
+
 - **Repositories** (`lib/repositories/`): Handle API calls via `apiClient`, return raw responses
 - **Services** (`lib/services/`): Handle business logic, manage localStorage, call repositories
 - **Example**: `AuthService.login()` calls `AuthRepository.login()`, then stores token/user in localStorage
 
 **API Client** (`lib/api/apiClient.ts`):
+
 - Axios instance with interceptors
 - Auto-adds Bearer token from localStorage to requests
 - Custom exception classes (UnauthorizedException, ValidationException, etc.)
 - Auto-redirects to `/login` on 401 errors (unless already on login page)
 
 **Context Architecture**:
+
 - `AuthContext`: Authentication state, user data, login/logout handlers
 - `MiniPlayerContext`: Video mini-player state management
 - `CookieConsentContext`: GDPR cookie consent tracking
 - All wrapped in `ClientProviders` component
 
 **Real-time Communication**:
+
 - Laravel Echo + Pusher for WebSocket connections
 - Echo configured in `lib/echo-config.ts` with Laravel Reverb backend
 - Custom hooks: `useUserChannel`, `usePaymentWebSocket`
@@ -87,7 +92,7 @@ src/
 ### Internationalization (i18n)
 
 - Uses `next-intl` with file-based routing: `app/[locale]/`
-- Supported locales: en (default), nl, de, fr
+- ONLY fill in the en.json the other languages will be auto translated by the system upon deployment
 - Locale prefix: "as-needed" (default locale 'en' has no prefix in URL)
 - Localized pathnames defined in `i18n/routing.ts` (e.g., `/pornstars` → `/pornosterren` in Dutch)
 - Translation files: `i18n/locales/{locale}.json`
@@ -113,6 +118,7 @@ src/
 ## Docker & Services
 
 The monorepo uses docker-compose with these services:
+
 - **frontend**: Next.js app (port 5173)
 - **backend**: Laravel API (port 9000)
 - **reverb**: Laravel Reverb WebSocket server (port 8080)

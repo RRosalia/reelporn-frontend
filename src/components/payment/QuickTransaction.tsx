@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import PaymentService from '@/lib/services/PaymentService';
 import { usePaymentWebSocket } from '@/lib/hooks/usePaymentWebSocket';
@@ -81,7 +82,7 @@ export default function QuickTransaction({
       ]);
       setCurrencies(currenciesData);
       setPrices(pricesData);
-    } catch (err) {
+    } catch {
       setError('Failed to load payment methods');
     } finally {
       setLoading(false);
@@ -108,7 +109,7 @@ export default function QuickTransaction({
         amount: config.amount,
         amountCrypto: amount,
         walletAddress: '', // Backend generates this
-        userId: config.metadata?.userId,
+        userId: config.metadata?.userId as string | undefined,
       });
 
       setTransactionId(response.transactionId);
@@ -116,9 +117,9 @@ export default function QuickTransaction({
       setQrCode(response.qrCode);
       setCryptoAmount(response.amountCrypto);
       setExpiresAt(response.expiresAt);
-    } catch (err: any) {
-      setError(err.message || 'Failed to initiate payment');
-      config.onError?.(err.message);
+    } catch {
+      setError('Failed to initiate payment');
+      config.onError?.('Failed to initiate payment');
     } finally {
       setLoading(false);
     }
@@ -198,7 +199,7 @@ export default function QuickTransaction({
                       disabled={!currency.enabled}
                     >
                       {currency.icon ? (
-                        <img src={currency.icon} alt={currency.name} />
+                        <Image src={currency.icon} alt={currency.name} width={32} height={32} />
                       ) : (
                         <span className="currency-symbol">{currency.symbol}</span>
                       )}
@@ -237,9 +238,11 @@ export default function QuickTransaction({
 
               <div className="qr-code-section">
                 {qrCode && (
-                  <img
+                  <Image
                     src={qrCode.startsWith('data:') ? qrCode : `data:image/png;base64,${qrCode}`}
                     alt="Payment QR Code"
+                    width={200}
+                    height={200}
                     className="qr-code"
                   />
                 )}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/routing';
 import { useSearchParams } from 'next/navigation';
@@ -51,9 +52,9 @@ export default function CryptoPaymentPage() {
     transactionId,
     (update) => {
       if (update.status === 'completed' as PaymentStatus) {
-        // Payment successful, redirect to success page
+        // Payment successful, redirect to account page
         setTimeout(() => {
-          router.push('/account?payment=success' as any);
+          router.push('/account');
         }, 2000);
       } else if (update.status === 'failed' as PaymentStatus) {
         setError(update.message || t('payment.paymentFailed'));
@@ -88,8 +89,9 @@ export default function CryptoPaymentPage() {
       setCurrencies(currenciesData);
       setPrices(pricesData);
       setPlans(plansResponse.data || []);
-    } catch (err: any) {
-      setError(err.message || t('payment.failedToLoadData'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToLoadData');
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -138,8 +140,9 @@ export default function CryptoPaymentPage() {
       setQrCode(response.qrCode);
       setCryptoAmount(response.amountCrypto);
       setExpiresAt(response.expiresAt);
-    } catch (err: any) {
-      setError(err.message || t('payment.failedToInitiatePayment'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToInitiatePayment');
+      setError(errorMessage);
     } finally {
       setProcessing(false);
     }
@@ -161,8 +164,9 @@ export default function CryptoPaymentPage() {
     try {
       await PaymentService.cancelPayment(transactionId);
       resetPayment();
-    } catch (err: any) {
-      setError(err.message || t('payment.failedToCancelPayment'));
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : t('payment.failedToCancelPayment');
+      setError(errorMessage);
     }
   };
 
@@ -254,7 +258,7 @@ export default function CryptoPaymentPage() {
                       >
                         <div className="currency-icon">
                           {currency.icon ? (
-                            <img src={currency.icon} alt={currency.name} />
+                            <Image src={currency.icon} alt={currency.name} width={40} height={40} />
                           ) : (
                             <span className="currency-symbol">{currency.symbol}</span>
                           )}
@@ -352,9 +356,11 @@ export default function CryptoPaymentPage() {
               <div className="qr-section">
                 {qrCode && (
                   <div className="qr-container">
-                    <img
+                    <Image
                       src={qrCode.startsWith('data:') ? qrCode : `data:image/png;base64,${qrCode}`}
                       alt="Payment QR Code"
+                      width={256}
+                      height={256}
                       className="qr-image"
                     />
                     <p className="qr-instruction">{t('payment.scanQRCode')}</p>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import {
@@ -14,7 +14,7 @@ import './checkout.css';
 interface CheckoutFlowProps {
   payableType: string; // e.g., 'plan'
   payableId: number;
-  onSuccess?: (subscription?: any) => void;
+  onSuccess?: (subscription?: { id: number; status: string }) => void;
   onCancel?: () => void;
 }
 
@@ -24,7 +24,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   payableType,
   payableId,
   onSuccess,
-  onCancel,
+  onCancel: _onCancel,
 }) => {
   const t = useTranslations();
 
@@ -34,7 +34,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod | null>(null); // Selected native crypto
   const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null); // Code to use (native or token)
   const [preview, setPreview] = useState<CheckoutPreviewResponse | null>(null);
-  const [confirmedPayment, setConfirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
+  const [confirmedPayment] = useState<CheckoutConfirmResponse | null>(null);
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatusPollResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [loadingPreview, setLoadingPreview] = useState(false);
@@ -64,10 +64,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
   // Poll payment status when payment is confirmed
   useEffect(() => {
-    if (currentStep === 'status' && confirmedPayment) {
+    if (currentStep === 'status' && confirmedPayment && confirmedPayment.payment) {
       const pollStatus = async () => {
         try {
-          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment.id);
+          const status = await CheckoutRepository.getPaymentStatus(confirmedPayment.payment!.id);
           setPaymentStatus(status);
 
           // If payment is completed, stop polling and call onSuccess
@@ -123,8 +123,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
           });
           setPreview(response);
           // Reset countdown timer when new preview loads
-          setPreviewTimeRemaining(300); // 5 minutes
-          setPreviewExpired(false);
+          setTimeout(() => {
+            setPreviewTimeRemaining(300); // 5 minutes
+            setPreviewExpired(false);
+          }, 0);
         } catch (err) {
           console.error('Error previewing checkout:', err);
           setError(err instanceof Error ? err.message : 'Failed to preview payment');
@@ -144,7 +146,9 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
     const timer = setInterval(() => {
       setPreviewTimeRemaining((prev) => {
         if (prev <= 1) {
-          setPreviewExpired(true);
+          setTimeout(() => {
+            setPreviewExpired(true);
+          }, 0);
           // Auto-refresh preview
           if (selectedCurrency) {
             const refreshPreview = async () => {
@@ -156,8 +160,10 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                   options: { currency: selectedCurrency },
                 });
                 setPreview(response);
-                setPreviewTimeRemaining(300);
-                setPreviewExpired(false);
+                setTimeout(() => {
+                  setPreviewTimeRemaining(300);
+                  setPreviewExpired(false);
+                }, 0);
               } catch (err) {
                 console.error('Error refreshing preview:', err);
               }
@@ -187,8 +193,8 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
         options: { currency: selectedCurrency },
       });
 
-      // Extract payment_id from response
-      const paymentId = response.payment.id;
+      // Extract payment_id from response (backend returns data.payment_id)
+      const paymentId = response.data.payment_id;
       if (paymentId) {
         // Use window.location.href to navigate to payment page
         // The router will automatically handle localization
@@ -456,7 +462,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
 
         {confirmedPayment && (
           <div className="payment-status">
-            {isPending && (
+            {isPending && confirmedPayment.instructions && confirmedPayment.crypto_details && (
               <>
                 <div className="status-section">
                   <h3>{t('checkout.status.sendPayment')}</h3>
@@ -468,7 +474,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                       <code>{confirmedPayment.crypto_details.payment_address}</code>
                       <button
                         className="copy-btn"
-                        onClick={() => copyToClipboard(confirmedPayment.crypto_details.payment_address)}
+                        onClick={() => copyToClipboard(confirmedPayment.crypto_details!.payment_address)}
                       >
                         <i className="bi bi-clipboard"></i>
                       </button>
@@ -481,27 +487,29 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                       <code>{confirmedPayment.crypto_details.amount_crypto} {confirmedPayment.crypto_details.currency}</code>
                       <button
                         className="copy-btn"
-                        onClick={() => copyToClipboard(confirmedPayment.crypto_details.amount_crypto)}
+                        onClick={() => copyToClipboard(confirmedPayment.crypto_details!.amount_crypto)}
                       >
                         <i className="bi bi-clipboard"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div className="qr-code-section">
-                    <img
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(confirmedPayment.instructions.qr_code_data)}`}
-                      alt="Payment QR Code"
-                      className="qr-code"
-                    />
-                  </div>
+                  {confirmedPayment.instructions.qr_code_data && (
+                    <div className="qr-code-section">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(confirmedPayment.instructions.qr_code_data)}`}
+                        alt="Payment QR Code"
+                        className="qr-code"
+                      />
+                    </div>
+                  )}
 
                   <div className="payment-status-info">
                     <div className="status-item">
                       <span>{t('checkout.status.confirmations')}</span>
                       <span>{confirmedPayment.crypto_details.confirmations} / {confirmedPayment.crypto_details.required_confirmations}</span>
                     </div>
-                    {confirmedPayment.payment.expires_at && (
+                    {confirmedPayment.payment?.expires_at && (
                       <div className="status-item">
                         <span>{t('checkout.status.expiresIn')}</span>
                         <span className="expires-timer">{formatTimeRemaining(confirmedPayment.payment.expires_at)}</span>

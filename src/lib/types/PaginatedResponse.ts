@@ -32,7 +32,7 @@ interface PaginatedResponseData<T> {
   meta: PaginatedMeta;
 }
 
-export class PaginatedResponse<T = any> {
+export class PaginatedResponse<T = unknown> {
   data: T[];
   links: PaginatedLinks;
   meta: PaginatedMeta;

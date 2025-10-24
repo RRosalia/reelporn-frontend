@@ -2,10 +2,19 @@
 
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
+import { configureEcho } from '@laravel/echo-react';
+
+// Extend Window interface to include Pusher and Echo
+declare global {
+  interface Window {
+    Pusher: typeof Pusher;
+    Echo: Echo<any>;
+  }
+}
 
 // Make Pusher available globally for Echo
 if (typeof window !== 'undefined') {
-  (window as any).Pusher = Pusher;
+  window.Pusher = Pusher;
 }
 
 /**
@@ -14,18 +23,51 @@ if (typeof window !== 'undefined') {
  */
 let echoConfigured = false;
 
+interface EchoConfig {
+  broadcaster: 'reverb' | 'pusher' | 'ably' | 'socket.io' | 'null';
+  key: string;
+  wsHost: string;
+  wsPort: number;
+  wssPort: number;
+  forceTLS: boolean;
+  enabledTransports: string[];
+  authEndpoint: string;
+  auth?: {
+    headers: {
+      Authorization: string;
+    };
+  };
+}
+
+interface EchoConnector {
+  pusher?: {
+    connection: {
+      bind: (event: string, callback: (error: Error) => void) => void;
+    };
+  };
+}
+
+/**
+ * Echo Channel interface
+ */
+export interface EchoChannel {
+  listen: (event: string, callback: (data: unknown) => void) => EchoChannel;
+  listenForWhisper: (event: string, callback: (data: unknown) => void) => EchoChannel;
+  notification: (callback: (data: unknown) => void) => EchoChannel;
+  stopListening: (event: string) => EchoChannel;
+}
+
 export function initializeEcho(authToken?: string | null) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:9000';
   const authEndpoint = `${apiUrl}/broadcasting/auth`;
 
   // Disconnect existing Echo instance if reconfiguring with auth
-  if (echoConfigured && (window as any).Echo) {
-    console.log('[Echo] Disconnecting existing Echo instance for reconfiguration');
-    (window as any).Echo.disconnect();
+  if (echoConfigured && window.Echo) {
+    window.Echo.disconnect();
   }
 
-  const echoConfig: any = {
-    broadcaster: 'reverb',
+  const baseConfig = {
+    broadcaster: 'reverb' as const,
     key: process.env.NEXT_PUBLIC_REVERB_APP_KEY || 'app-key',
     wsHost: process.env.NEXT_PUBLIC_REVERB_HOST || 'localhost',
     wsPort: process.env.NEXT_PUBLIC_REVERB_PORT ? parseInt(process.env.NEXT_PUBLIC_REVERB_PORT) : 8080,
@@ -36,58 +78,30 @@ export function initializeEcho(authToken?: string | null) {
   };
 
   // Add authorization headers if we have a token
-  if (authToken) {
-    echoConfig.auth = {
+  const echoConfig = authToken ? {
+    ...baseConfig,
+    auth: {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
-    };
-  }
+    },
+  } : baseConfig;
 
-  console.log('[Echo] Configuring with:', {
-    ...echoConfig,
-    hasAuthToken: !!authToken,
-    authEndpoint: authEndpoint,
-    apiUrl: apiUrl,
-  });
+  // Configure @laravel/echo-react package
+  // @ts-expect-error - configureEcho types are overly strict, but this config is valid
+  configureEcho(echoConfig);
 
   // Create Echo instance and attach to window
-  const echoInstance = new Echo(echoConfig);
-  (window as any).Echo = echoInstance;
+  const echoInstance = new Echo<any>(echoConfig);
+  window.Echo = echoInstance;
 
   echoConfigured = true;
 
-  console.log('[Echo] Configuration complete', {
-    authenticated: !!authToken,
-    wsUrl: `${echoConfig.forceTLS ? 'wss' : 'ws'}://${echoConfig.wsHost}:${echoConfig.wsPort}`,
-    authEndpoint: authToken ? authEndpoint : 'none',
-  });
-
-  // Log connector info
-  console.log('[Echo] Connector:', echoInstance.connector);
-  console.log('[Echo] Socket state:', (echoInstance.connector as any)?.pusher?.connection?.state);
-
-  // Add connection event listeners for debugging
-  const connector = echoInstance.connector as any;
+  // Add connection event listeners for error tracking
+  const connector = echoInstance.connector as EchoConnector;
   if (connector?.pusher) {
-    connector.pusher.connection.bind('connected', () => {
-      console.log('[Echo] ✅ WebSocket connected successfully');
-    });
-
-    connector.pusher.connection.bind('connecting', () => {
-      console.log('[Echo] 🔄 WebSocket connecting...');
-    });
-
-    connector.pusher.connection.bind('disconnected', () => {
-      console.log('[Echo] ❌ WebSocket disconnected');
-    });
-
-    connector.pusher.connection.bind('error', (error: any) => {
-      console.error('[Echo] ❌ WebSocket error:', error);
-    });
-
-    connector.pusher.connection.bind('state_change', (states: any) => {
-      console.log('[Echo] State change:', states.previous, '->', states.current);
+    connector.pusher.connection.bind('error', (error: Error) => {
+      console.error('[Echo] WebSocket error:', error);
     });
   }
 

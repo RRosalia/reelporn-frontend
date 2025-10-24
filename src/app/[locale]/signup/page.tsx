@@ -3,17 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
-import AuthRepository, { type RegisterData, type RegisterResponse } from '@/lib/repositories/AuthRepository';
+import AuthRepository from '@/lib/repositories/AuthRepository';
+import { RegisterData, LoginResponse } from '@/types/User';
 import { GroupedPlans, Plan, PeriodicityType, PaymentMethod } from '@/types/Payment';
 
 function SignupPage() {
     const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
     const router = useRouter();
     const { isAuthenticated, isLoading: authLoading } = useAuth();
 
@@ -112,13 +110,20 @@ function SignupPage() {
             }
 
             // Call register API
-            const response: RegisterResponse = await AuthRepository.register(registerData);
+            const response = await AuthRepository.register(registerData);
 
-            // Store auth token
-            localStorage.setItem('auth_token', response.data.token);
+            // Store auth token (RegisterResponse has data.token structure)
+            const token = response.data.token;
+            const user = response.data.user;
+
+            if (token) {
+                localStorage.setItem('auth_token', token);
+            }
 
             // Store user data (optional - AuthContext might handle this)
-            localStorage.setItem('auth_user', JSON.stringify(response.data.user));
+            if (user) {
+                localStorage.setItem('auth_user', JSON.stringify(user));
+            }
 
             // Redirect based on payment requirement
             if (response.data.requires_payment && response.data.payment) {
@@ -128,16 +133,25 @@ function SignupPage() {
                 // Redirect to account/dashboard
                 router.push('/account');
             }
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error('Registration error:', err);
 
             // Handle validation errors
-            if (err.response?.data?.errors) {
-                setValidationErrors(err.response.data.errors);
-            }
+            if (err && typeof err === 'object' && 'response' in err) {
+                const errorResponse = err as { response?: { data?: { errors?: any, message?: string } } };
+                if (errorResponse.response?.data?.errors) {
+                    setValidationErrors(errorResponse.response.data.errors);
+                }
 
-            // Set general error message
-            setError(err.response?.data?.message || err.message || 'Registration failed');
+                // Set general error message
+                const message = errorResponse.response?.data?.message ||
+                               (err instanceof Error ? err.message : 'Registration failed');
+                setError(message);
+            } else if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('Registration failed');
+            }
         } finally {
             setSubmitting(false);
         }

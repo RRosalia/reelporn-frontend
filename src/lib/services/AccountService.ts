@@ -1,11 +1,11 @@
 import AccountRepository from '@/lib/repositories/AccountRepository';
 import AuthService from './AuthService';
-
-interface ProfileData {
-  name?: string;
-  nickname?: string;
-  [key: string]: any;
-}
+import type {
+  ProfileData,
+  ProfileResponse,
+  PasswordUpdateResponse
+} from '@/types/Account';
+import type { User } from '@/types/User';
 
 /**
  * Account Service - Handles account management business logic
@@ -13,33 +13,37 @@ interface ProfileData {
 class AccountService {
   /**
    * Get current user's profile
-   * @returns {Promise<any>} User profile data
+   * @returns {Promise<User>} User profile data
    */
-  async getProfile(): Promise<any> {
+  async getProfile(): Promise<User> {
     const response = await AccountRepository.getProfile();
 
     // Update stored user data if present
-    if (response.data) {
-      AuthService.setUser(response.data);
+    const user = response.user || response.data?.user;
+    if (user) {
+      AuthService.setUser(user);
+      return user;
     }
 
-    return response.data;
+    throw new Error('Failed to get user profile');
   }
 
   /**
    * Update user profile
    * @param {ProfileData} profileData - { name, nickname }
-   * @returns {Promise<any>} Updated user profile data
+   * @returns {Promise<User>} Updated user profile data
    */
-  async updateProfile(profileData: ProfileData): Promise<any> {
+  async updateProfile(profileData: ProfileData): Promise<User> {
     const response = await AccountRepository.updateProfile(profileData);
 
     // Update stored user data
-    if (response.data) {
-      AuthService.setUser(response.data);
+    const user = response.user || response.data?.user;
+    if (user) {
+      AuthService.setUser(user);
+      return user;
     }
 
-    return response.data;
+    throw new Error('Failed to update user profile');
   }
 
   /**
@@ -47,13 +51,13 @@ class AccountService {
    * @param {string} currentPassword
    * @param {string} newPassword
    * @param {string} passwordConfirmation
-   * @returns {Promise<any>} Response data
+   * @returns {Promise<PasswordUpdateResponse>} Response data
    */
   async updatePassword(
     currentPassword: string,
     newPassword: string,
     passwordConfirmation: string
-  ): Promise<any> {
+  ): Promise<PasswordUpdateResponse> {
     return await AccountRepository.updatePassword({
       current_password: currentPassword,
       password: newPassword,
@@ -62,4 +66,5 @@ class AccountService {
   }
 }
 
-export default new AccountService();
+const accountService = new AccountService();
+export default accountService;

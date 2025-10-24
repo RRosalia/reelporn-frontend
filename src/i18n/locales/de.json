@@ -290,7 +290,13 @@
     "cookies": "Cookie-Richtlinie",
     "language": "Sprache",
     "cookieSettings": "Cookie-Einstellungen",
-    "copyright": "Alle Rechte vorbehalten"
+    "copyright": "Alle Rechte vorbehalten",
+    "features": {
+      "hdQuality": "HD-Qualität",
+      "downloads": "Downloads",
+      "noAds": "Keine Werbung",
+      "exclusive": "Exklusiv"
+    }
   },
   "age": {
     "title": "Dies ist eine Erwachsenen (18+) Website",
@@ -380,17 +386,12 @@
     }
   },
   "pornstars": {
-    "title": "Charaktere",
     "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
-    "noResults": "Keine Charaktere gefunden, die Ihren Filtern entsprechen",
     "sort": {
       "popular": "Beliebteste",
       "newest": "Neueste",
       "mostVideos": "Meiste Videos",
       "mostViewed": "Am meisten angesehen"
-    },
-    "pagination": {
-      "showing": "Zeige {start}-{end} von {total} Charaktere"
     },
     "filters": {
       "title": "Filter",
@@ -407,10 +408,9 @@
       "eyeColor": "Augenfarbe",
       "allEyeColors": "Alle Augenfarben",
       "ethnicity": "Ethnizität",
-      "allEthnicities": "Alle Ethnizitäten"
-    },
-    "errors": {
-      "fetchFailed": "Charaktere konnten nicht geladen werden. Bitte versuchen Sie es erneut."
+      "allEthnicities": "Alle Ethnizitäten",
+      "showFilters": "Show Filters",
+      "hideFilters": "Hide Filters"
     }
   },
   "pornstar": {
@@ -434,7 +434,8 @@
       "bio": "Biografie",
       "categories": "Kategorien",
       "social": "Soziale Medien",
-      "details": "Persönliche Details"
+      "details": "Persönliche Details",
+      "notTranslated": "Dieser Inhalt wurde noch nicht in Ihre Sprache übersetzt und wird in seiner Originalsprache angezeigt."
     },
     "details": {
       "age": "Alter",
@@ -445,6 +446,101 @@
       "hair": "Haarfarbe",
       "eyes": "Augenfarbe",
       "ethnicity": "Ethnizität"
+    },
+    "authModal": {
+      "followTitle": "Diesem Schöpfer folgen?",
+      "followMessage": "Melden Sie sich an oder melden Sie sich an, um Ihren Lieblingskünstlern zu folgen und benachrichtigt zu werden, wenn sie neue Inhalte veröffentlichen.",
+      "messageTitle": "Eine Nachricht senden?",
+      "messageMessage": "Erstellen Sie ein kostenloses Konto oder melden Sie sich an, um Ihre Lieblingsautoren direkt zu benachrichtigen.",
+      "tipTitle": "Einen Tipp senden?",
+      "tipMessage": "Melden Sie sich an oder melden Sie sich an, um Ihre Lieblingsschöpfer zu unterstützen, indem Sie ihnen Tipps und exklusive Belohnungen schicken."
+    },
+    "notFoundDescription": "Das von Ihnen gesuchte Pornostar-Profil konnte nicht gefunden werden.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - Videos, Photos, Biography",
+      "metaDescriptionWithVideos": "Schaue {count}+ exklusive Videos von {name}, {age}yo {ethnicity} von {country}. Bio, Statistiken, Fotos & Premium-Inhalte.",
+      "metaDescriptionBasic": "{name} - {age} Jahre alt aus {country}. Sieh dir exklusive Videos, Fotos & Premium-Inhalte an.",
+      "metaDescriptionMinimal": "Sieh dir exklusive Inhalte von {name} an. Bio, Statistiken, Fotos & Videos.",
+      "adultContent": "inhalte für Erwachsene",
+      "pornstarProfile": "pornostar-Profil",
+      "videos": "videos",
+      "photos": "fotos",
+      "exclusiveVideos": "exklusive Videos",
+      "exclusiveContent": "exklusive Inhalte",
+      "premiumContent": "premiuminhalte"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "pornstars": "Pornostars"
+    },
+    "content": {
+      "about": "Über {name}",
+      "aboutDescription": "{name} ist ein {age}-jähriger {ethnicity}-Darsteller aus {country}. Mit {videos} exklusiven Videos und {views} Views ist {firstName} ein beliebter Creator geworden. Entdecken Sie Premium-Inhalte, Fotos und verbinden Sie sich direkt mit {firstName}.",
+      "aboutDescriptionNoEthnicity": "{name} ist ein {age}-jähriger Darsteller aus {country}. Mit {videos} exklusiven Videos und {views} Aufrufen ist {firstName} ein beliebter Ersteller geworden. Entdecken Sie Premium-Inhalte, Fotos und verbinden Sie sich direkt mit {firstName}.",
+      "aboutDescriptionMinimal": "{name} ist ein talentierter Darsteller. Entdecken Sie exklusive Inhalte und verbinden Sie sich direkt mit {firstName}.",
+      "mediaGallery": "Mediengalerie",
+      "mediaCount": "artikel",
+      "noMediaYet": "Noch keine Medien verfügbar",
+      "checkBackSoon": "Schauen Sie bald wieder vorbei für neue Inhalte!",
+      "comingSoon": "Medieninhalte in Kürze...",
+      "youMightLike": "Das könnte Sie auch interessieren",
+      "relatedPornstars": "Verwandte Pornostars"
+    },
+    "links": {
+      "viewAllFrom": "Alle Pornostars von {country} anzeigen",
+      "viewEthnicity": "Alle {ethnicity} Pornostars anzeigen",
+      "viewAge": "Pornostars im Alter von {age} ansehen",
+      "moreFrom": "Mehr von {country}",
+      "similarAge": "Ähnliches Alter"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen zu {name}",
+      "howOld": {
+        "question": "Wie alt ist {name}?",
+        "answer": "{name} ist {age} Jahre alt."
+      },
+      "whereFrom": {
+        "question": "Woher kommt {firstName}?",
+        "answer": "{firstName} ist von {country}."
+      },
+      "howTall": {
+        "question": "Wie groß ist {firstName}?",
+        "answer": "{firstName} ist {height} cm ({heightFt}) groß."
+      },
+      "howMuchWeight": {
+        "question": "Wie hoch ist das Gewicht von {firstName}?",
+        "answer": "{firstName} wiegt {weight} kg ({weightLbs} lbs)."
+      },
+      "whatEthnicity": {
+        "question": "Welcher Ethnie gehört {firstName} an?",
+        "answer": "{firstName} ist {ethnicity}."
+      },
+      "hairColor": {
+        "question": "Was ist die Haarfarbe von {firstName}?",
+        "answer": "{firstName} hat {color} Haare."
+      },
+      "eyeColor": {
+        "question": "Was ist die Augenfarbe von {firstName}?",
+        "answer": "{firstName} hat {color} Augen."
+      },
+      "howManyVideos": {
+        "question": "Wie viele Videos hat {firstName}?",
+        "answer": "{firstName} hat {count} exklusive Videos zur Verfügung."
+      },
+      "howToWatch": {
+        "question": "Wie kann ich die Videos von {firstName} ansehen?",
+        "answer": "Sie können sich die exklusiven Inhalte von {firstName} ansehen, indem Sie ein kostenloses Konto erstellen. Premium-Mitglieder erhalten Zugang zu HD-Qualität und allen exklusiven Videos."
+      },
+      "howToContact": {
+        "question": "Kann ich {firstName} eine Nachricht schicken?",
+        "answer": "Ja! Erstelle ein Konto, um direkte Nachrichten an {firstName} zu senden und dich mit deinem Lieblingsschöpfer zu verbinden."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age}-alt {ethnicity} von {country}",
+      "coverPhoto": "{name} Titelfoto",
+      "galleryPhoto": "{name} Foto",
+      "videoThumbnail": "{name} Video-Miniaturansicht"
     }
   },
   "error": {
@@ -1284,7 +1380,9 @@
   "common": {
     "cancel": "Abbrechen",
     "loading": "Laden...",
-    "retry": "Erneut Versuchen"
+    "retry": "Erneut Versuchen",
+    "noResults": "Keine Videos gefunden",
+    "notFound": "Nicht gefunden"
   },
   "checkout": {
     "title": "Kauf Abschließen",
@@ -1416,7 +1514,34 @@
     "defaultMessage": "Bitte melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.",
     "login": "Anmelden",
     "register": "Konto Erstellen",
-    "maybeLater": "Vielleicht Später"
+    "maybeLater": "Vielleicht Später",
+    "signUp": "Anmeldung",
+    "signIn": "Eintragen",
+    "createAccount": "Konto erstellen",
+    "createFreeAccount": "Kostenloses Konto erstellen",
+    "emailPlaceholder": "E-Mail",
+    "passwordPlaceholder": "Passwort",
+    "confirmPasswordPlaceholder": "Bestätigen Sie Ihr Passwort",
+    "namePlaceholder": "Vollständiger Name",
+    "orContinueWith": "oder weiter mit",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Diskord",
+    "continueWithX": "X",
+    "agreeToTerms": "Mit der Anmeldung erklären Sie sich einverstanden mit",
+    "termsOfService": "Bedingungen der Dienstleistung",
+    "alreadyHaveAccount": "Sie haben bereits ein Konto?",
+    "dontHaveAccount": "Sie haben noch kein Konto?",
+    "signInLink": "Eintragen",
+    "signUpLink": "Registrieren Sie sich",
+    "loggingIn": "Einloggen...",
+    "creatingAccount": "Konto erstellen...",
+    "invalidCredentials": "Ungültige E-Mail oder ungültiges Passwort",
+    "registrationFailed": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "emailRequired": "E-Mail ist erforderlich",
+    "passwordRequired": "Passwort ist erforderlich",
+    "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verstecken"
   },
   "test": {
     "welcomeMessage": "Willkommen {username}, Sie haben {count} neue Benachrichtigungen!",

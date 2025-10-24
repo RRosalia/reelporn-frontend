@@ -27,8 +27,10 @@ function AgeVerification() {
     useEffect(() => {
         // Don't do anything on excluded pages (blocked, error, parental controls)
         if (isExcludedPage) {
-            setShowModal(false);
-            document.documentElement.classList.remove('age-verification-pending');
+            setTimeout(() => {
+                setShowModal(false);
+                document.documentElement.classList.remove('age-verification-pending');
+            }, 0);
             return;
         }
 
@@ -39,34 +41,56 @@ function AgeVerification() {
 
             if (isCrawler) {
                 // Skip age verification for crawlers
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
+                setTimeout(() => {
+                    setShowModal(false);
+                    document.documentElement.classList.remove('age-verification-pending');
+                }, 0);
                 return;
             }
 
-            const verified = localStorage.getItem('ageVerified');
-            const blocked = localStorage.getItem('ageBlocked');
+            try {
+                const verified = localStorage.getItem('ageVerified');
+                const blocked = localStorage.getItem('ageBlocked');
 
-            if (blocked === 'true') {
-                // User previously clicked "under 18", redirect to blocked
-                router.push('/blocked');
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
-            } else if (verified === 'true') {
-                // Already verified
-                setShowModal(false);
-                document.documentElement.classList.remove('age-verification-pending');
-            } else {
-                // Need to verify age - class already added by inline script
-                setShowModal(true);
+                if (blocked === 'true') {
+                    // User previously clicked "under 18", redirect to blocked
+                    router.push('/blocked');
+                    setTimeout(() => {
+                        setShowModal(false);
+                        document.documentElement.classList.remove('age-verification-pending');
+                    }, 0);
+                } else if (verified === 'true') {
+                    // Already verified
+                    setTimeout(() => {
+                        setShowModal(false);
+                        document.documentElement.classList.remove('age-verification-pending');
+                    }, 0);
+                } else {
+                    // Need to verify age - class already added by inline script
+                    setTimeout(() => {
+                        setShowModal(true);
+                    }, 0);
+                }
+            } catch (e) {
+                // localStorage not available (e.g., disabled by user)
+                // Show modal but won't be able to remember choice
+                console.warn('localStorage not available:', e);
+                setTimeout(() => {
+                    setShowModal(true);
+                }, 0);
             }
         }
     }, [isExcludedPage, router]);
 
     const handleEnter = () => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem('ageVerified', 'true');
-            localStorage.removeItem('ageBlocked');
+            try {
+                localStorage.setItem('ageVerified', 'true');
+                localStorage.removeItem('ageBlocked');
+            } catch (e) {
+                console.warn('Could not save age verification:', e);
+                // Continue anyway - user can still access the site
+            }
         }
         document.documentElement.classList.remove('age-verification-pending');
         setShowModal(false);
@@ -74,8 +98,13 @@ function AgeVerification() {
 
     const handleExit = () => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem('ageBlocked', 'true');
-            localStorage.removeItem('ageVerified');
+            try {
+                localStorage.setItem('ageBlocked', 'true');
+                localStorage.removeItem('ageVerified');
+            } catch (e) {
+                console.warn('Could not save age block:', e);
+                // Continue anyway - redirect to blocked page
+            }
         }
         document.documentElement.classList.remove('age-verification-pending');
         router.push('/blocked');

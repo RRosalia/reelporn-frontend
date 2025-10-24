@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useEchoPublic } from '@laravel/echo-react';
 
 /**
@@ -10,13 +9,8 @@ import { useEchoPublic } from '@laravel/echo-react';
 export default function EchoConnectionTest() {
   // Try to connect to a public channel (doesn't require auth)
   useEchoPublic('test-channel', 'test-event', (e: any) => {
-    console.log('[Echo Test] Received event:', e);
+    console.warn('[Echo Test] Received event:', e);
   });
-
-  useEffect(() => {
-    console.log('[Echo Test] Component mounted, attempting to connect to test-channel');
-    console.log('[Echo Test] Check Network tab (WS filter) for WebSocket connection');
-  }, []);
 
   return (
     <div style={{

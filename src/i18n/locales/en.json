@@ -294,7 +294,13 @@
     "cookies": "Cookie Policy",
     "language": "Language",
     "cookieSettings": "Cookie settings",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "features": {
+      "hdQuality": "HD Quality",
+      "downloads": "Downloads",
+      "noAds": "No Ads",
+      "exclusive": "Exclusive"
+    }
   },
   "age": {
     "title": "This is an adult (18+) website",
@@ -384,9 +390,9 @@
     }
   },
   "pornstars": {
-    "title": "Characters",
+    "title": "Pornstars",
     "subtitle": "Browse our {count} amazing performers",
-    "noResults": "No characters found matching your filters",
+    "noResults": "No pornstars found matching your filters",
     "sort": {
       "popular": "Most Popular",
       "newest": "Newest",
@@ -394,11 +400,13 @@
       "mostViewed": "Most Viewed"
     },
     "pagination": {
-      "showing": "Showing {start}-{end} of {total} characters"
+      "showing": "Showing {start}-{end} of {total} pornstars"
     },
     "filters": {
       "title": "Filters",
       "clearAll": "Clear All",
+      "showFilters": "Show Filters",
+      "hideFilters": "Hide Filters",
       "name": "Search by Name",
       "namePlaceholder": "Enter name...",
       "age": "Age",
@@ -414,7 +422,7 @@
       "allEthnicities": "All Ethnicities"
     },
     "errors": {
-      "fetchFailed": "Failed to load characters. Please try again."
+      "fetchFailed": "Failed to load pornstars. Please try again."
     }
   },
   "pornstar": {
@@ -436,6 +444,7 @@
     "loadMore": "Load More Videos",
     "about": {
       "bio": "Biography",
+      "notTranslated": "This content has not been translated to your language yet and is being displayed in its original language.",
       "categories": "Categories",
       "social": "Social Media",
       "details": "Personal Details"
@@ -449,6 +458,101 @@
       "hair": "Hair Color",
       "eyes": "Eye Color",
       "ethnicity": "Ethnicity"
+    },
+    "authModal": {
+      "followTitle": "Follow this creator?",
+      "followMessage": "Sign up or log in to follow your favorite creators and get notified when they post new content.",
+      "messageTitle": "Send a message?",
+      "messageMessage": "Create a free account or log in to start messaging your favorite creators directly.",
+      "tipTitle": "Send a tip?",
+      "tipMessage": "Sign up or log in to support your favorite creators by sending tips and exclusive rewards."
+    },
+    "notFoundDescription": "The pornstar profile you are looking for could not be found.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - Videos, Photos, Biography",
+      "metaDescriptionWithVideos": "Watch {count}+ exclusive videos of {name}, {age}yo {ethnicity} from {country}. Bio, stats, photos & premium content.",
+      "metaDescriptionBasic": "{name} - {age} years old from {country}. Watch exclusive videos, photos & premium content.",
+      "metaDescriptionMinimal": "Watch exclusive content from {name}. Bio, stats, photos & videos.",
+      "adultContent": "adult content",
+      "pornstarProfile": "pornstar profile",
+      "videos": "videos",
+      "photos": "photos",
+      "exclusiveVideos": "exclusive videos",
+      "exclusiveContent": "exclusive content",
+      "premiumContent": "premium content"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "pornstars": "Pornstars"
+    },
+    "content": {
+      "about": "About {name}",
+      "aboutDescription": "{name} is a {age}-year-old {ethnicity} performer from {country}. With {videos} exclusive videos and {views} views, {firstName} has become a popular creator. Discover premium content, photos, and connect with {firstName} directly.",
+      "aboutDescriptionNoEthnicity": "{name} is a {age}-year-old performer from {country}. With {videos} exclusive videos and {views} views, {firstName} has become a popular creator. Discover premium content, photos, and connect with {firstName} directly.",
+      "aboutDescriptionMinimal": "{name} is a talented performer. Discover exclusive content and connect with {firstName} directly.",
+      "mediaGallery": "Media Gallery",
+      "mediaCount": "items",
+      "noMediaYet": "No media available yet",
+      "checkBackSoon": "Check back soon for new content!",
+      "comingSoon": "Media content coming soon...",
+      "youMightLike": "You Might Also Like",
+      "relatedPornstars": "Related Pornstars"
+    },
+    "links": {
+      "viewAllFrom": "View all pornstars from {country}",
+      "viewEthnicity": "View all {ethnicity} pornstars",
+      "viewAge": "View pornstars aged {age}",
+      "moreFrom": "More from {country}",
+      "similarAge": "Similar age"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions about {name}",
+      "howOld": {
+        "question": "How old is {name}?",
+        "answer": "{name} is {age} years old."
+      },
+      "whereFrom": {
+        "question": "Where is {firstName} from?",
+        "answer": "{firstName} is from {country}."
+      },
+      "howTall": {
+        "question": "How tall is {firstName}?",
+        "answer": "{firstName} is {height} cm ({heightFt}) tall."
+      },
+      "howMuchWeight": {
+        "question": "What is {firstName}'s weight?",
+        "answer": "{firstName} weighs {weight} kg ({weightLbs} lbs)."
+      },
+      "whatEthnicity": {
+        "question": "What is {firstName}'s ethnicity?",
+        "answer": "{firstName} is {ethnicity}."
+      },
+      "hairColor": {
+        "question": "What is {firstName}'s hair color?",
+        "answer": "{firstName} has {color} hair."
+      },
+      "eyeColor": {
+        "question": "What is {firstName}'s eye color?",
+        "answer": "{firstName} has {color} eyes."
+      },
+      "howManyVideos": {
+        "question": "How many videos does {firstName} have?",
+        "answer": "{firstName} has {count} exclusive videos available."
+      },
+      "howToWatch": {
+        "question": "How can I watch {firstName}'s videos?",
+        "answer": "You can watch {firstName}'s exclusive content by creating a free account. Premium members get access to HD quality and all exclusive videos."
+      },
+      "howToContact": {
+        "question": "Can I message {firstName}?",
+        "answer": "Yes! Create an account to send direct messages to {firstName} and connect with your favorite creator."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age}-year-old {ethnicity} from {country}",
+      "coverPhoto": "{name} cover photo",
+      "galleryPhoto": "{name} photo",
+      "videoThumbnail": "{name} video thumbnail"
     }
   },
   "error": {
@@ -1288,7 +1392,9 @@
   "common": {
     "cancel": "Cancel",
     "loading": "Loading...",
-    "retry": "Retry"
+    "retry": "Retry",
+    "noResults": "No videos found",
+    "notFound": "Not Found"
   },
   "checkout": {
     "title": "Complete Your Purchase",
@@ -1420,6 +1526,35 @@
     "defaultMessage": "Please login or create an account to continue.",
     "login": "Login",
     "register": "Create Account",
-    "maybeLater": "Maybe Later"
+    "maybeLater": "Maybe Later",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "createFreeAccount": "Create Free Account",
+    "emailPlaceholder": "E-mail",
+    "passwordPlaceholder": "Password",
+    "confirmPasswordPlaceholder": "Confirm Password",
+    "namePlaceholder": "Full Name",
+    "minimumCharacters": "Minimum 6 characters",
+    "orContinueWith": "or continue with",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "By signing up, you agree to",
+    "termsOfService": "Terms of Service",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signInLink": "Sign in",
+    "signUpLink": "Sign up",
+    "loggingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "invalidCredentials": "Invalid email or password",
+    "registrationFailed": "Registration failed. Please try again.",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
   }
 }

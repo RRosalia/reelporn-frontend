@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
-import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
+import PornstarService from '@/lib/services/PornstarService';
 import PornstarsFilter from '@/components/pornstars/PornstarsFilter';
 import { Pornstar, PornstarFilters } from '@/types/Pornstar';
 import { PaginatedResponse } from '@/lib/types/PaginatedResponse';
@@ -12,8 +11,6 @@ import './styles.css';
 
 function PornstarsPage() {
     const t = useTranslations();
-    const params = useParams();
-    const locale = (params?.locale as string) || 'en';
 
     const [viewMode, setViewMode] = useState('grid'); // grid or list
     const [filters, setFilters] = useState<PornstarFilters>({ per_page: 24, page: 1 });
@@ -21,6 +18,16 @@ function PornstarsPage() {
     const [pagination, setPagination] = useState<PaginatedResponse<Pornstar> | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+
+    // Helper function to convert UUID to number for gradients
+    const getColorFromId = (id: string): number => {
+        let hash = 0;
+        for (let i = 0; i < id.length; i++) {
+            hash = id.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return Math.abs(hash);
+    };
 
     // Fetch pornstars when filters change
     useEffect(() => {
@@ -28,7 +35,7 @@ function PornstarsPage() {
             try {
                 setLoading(true);
                 setError(null);
-                const response = await PornstarsRepository.getAll(filters);
+                const response = await PornstarService.getAll(filters);
                 setPornstars(response.getData());
                 setPagination(response);
             } catch (err) {
@@ -59,7 +66,7 @@ function PornstarsPage() {
         const pages = [];
         const maxVisiblePages = 5;
         let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+        const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
 
         if (endPage - startPage < maxVisiblePages - 1) {
             startPage = Math.max(1, endPage - maxVisiblePages + 1);
@@ -184,9 +191,18 @@ function PornstarsPage() {
 
             {/* Content */}
             <div className="container mx-auto px-4 py-12">
+                {/* Mobile Filter Toggle Button */}
+                <button
+                    className="lg:hidden mb-4 w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border-2 border-pink-500 text-pink-500 rounded-lg font-semibold hover:bg-pink-50 transition-colors"
+                    onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
+                >
+                    <i className={`bi bi-${isMobileFilterOpen ? 'x-lg' : 'funnel'}`}></i>
+                    {isMobileFilterOpen ? t('pornstars.filters.hideFilters') : t('pornstars.filters.showFilters')}
+                </button>
+
                 <div className="flex flex-wrap lg:flex-nowrap gap-8">
                     {/* Left Sidebar - Filter */}
-                    <div className="w-full lg:w-64 flex-shrink-0">
+                    <div className={`w-full lg:w-64 flex-shrink-0 ${isMobileFilterOpen ? 'block' : 'hidden lg:block'}`}>
                         <PornstarsFilter
                             filters={filters}
                             onFilterChange={handleFilterChange}
@@ -246,13 +262,13 @@ function PornstarsPage() {
                                                         <div
                                                             className="pornstar-avatar"
                                                             style={{
-                                                                backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
+                                                                backgroundColor: `hsl(${(getColorFromId(pornstar.id) * 137) % 360}, 70%, 30%)`
                                                             }}
                                                         >
                                                         </div>
                                                     </div>
                                                     <div className="pornstar-info">
-                                                        <h3 className="pornstar-name">{pornstar.name}</h3>
+                                                        <h3 className="pornstar-name">{`${pornstar.first_name} ${pornstar.last_name}`}</h3>
                                                         <div className="pornstar-stats">
                                                             {pornstar.age && <span><i className="bi bi-calendar"></i> {pornstar.age}</span>}
                                                             {pornstar.country && <span><i className="bi bi-geo-alt"></i> {pornstar.country.iso}</span>}
@@ -274,12 +290,12 @@ function PornstarsPage() {
                                                     <div
                                                         className="pornstar-list-avatar"
                                                         style={{
-                                                            backgroundColor: `hsl(${(pornstar.id * 137) % 360}, 70%, 30%)`
+                                                            backgroundColor: `hsl(${(getColorFromId(pornstar.id) * 137) % 360}, 70%, 30%)`
                                                         }}
                                                     >
                                                     </div>
                                                     <div className="flex-1">
-                                                        <h3 className="pornstar-list-name">{pornstar.name}</h3>
+                                                        <h3 className="pornstar-list-name">{`${pornstar.first_name} ${pornstar.last_name}`}</h3>
                                                         <div className="pornstar-list-details">
                                                             {pornstar.age && <span>{pornstar.age} years</span>}
                                                             {pornstar.country && <span>{pornstar.country.name}</span>}
@@ -289,7 +305,6 @@ function PornstarsPage() {
                                                     <div className="pornstar-list-stats">
                                                         {pornstar.height_cm && <div><i className="bi bi-arrows-vertical"></i> {pornstar.height_cm}cm</div>}
                                                         {pornstar.weight_kg && <div><i className="bi bi-speedometer"></i> {pornstar.weight_kg}kg</div>}
-                                                        {pornstar.measurements && <div><i className="bi bi-rulers"></i> {pornstar.measurements}</div>}
                                                     </div>
                                                 </div>
                                             </Link>

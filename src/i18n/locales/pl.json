@@ -294,7 +294,13 @@
     "cookies": "Cookie Policy",
     "language": "Język",
     "cookieSettings": "Ustawienia plików cookie",
-    "copyright": "Wszelkie prawa zastrzeżone"
+    "copyright": "Wszelkie prawa zastrzeżone",
+    "features": {
+      "hdQuality": "Jakość HD",
+      "downloads": "Pobieranie",
+      "noAds": "Bez reklam",
+      "exclusive": "Ekskluzywne"
+    }
   },
   "age": {
     "title": "To jest strona dla dorosłych (18+)",
@@ -384,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Postacie",
     "subtitle": "Przeglądaj naszych {count} niesamowitych wykonawców",
-    "noResults": "Nie znaleziono znaków pasujących do filtrów",
     "sort": {
       "popular": "Najpopularniejsze",
       "newest": "Najnowszy",
       "mostVideos": "Większość filmów",
       "mostViewed": "Najczęściej oglądane"
-    },
-    "pagination": {
-      "showing": "Wyświetlanie znaków {start}-{end} z {total}"
     },
     "filters": {
       "title": "Filtry",
@@ -411,10 +412,9 @@
       "eyeColor": "Kolor oczu",
       "allEyeColors": "Wszystkie kolory oczu",
       "ethnicity": "Pochodzenie etniczne",
-      "allEthnicities": "Wszystkie grupy etniczne"
-    },
-    "errors": {
-      "fetchFailed": "Nie udało się załadować znaków. Spróbuj ponownie."
+      "allEthnicities": "Wszystkie grupy etniczne",
+      "showFilters": "Pokaż filtry",
+      "hideFilters": "Ukryj filtry"
     }
   },
   "pornstar": {
@@ -438,7 +438,8 @@
       "bio": "Biografia",
       "categories": "Kategorie",
       "social": "Media społecznościowe",
-      "details": "Dane osobowe"
+      "details": "Dane osobowe",
+      "notTranslated": "Ta zawartość nie została jeszcze przetłumaczona na Twój język i jest wyświetlana w oryginalnej wersji językowej."
     },
     "details": {
       "age": "Wiek",
@@ -449,6 +450,101 @@
       "hair": "Kolor włosów",
       "eyes": "Kolor oczu",
       "ethnicity": "Pochodzenie etniczne"
+    },
+    "authModal": {
+      "followTitle": "Śledzić tego twórcę?",
+      "followMessage": "Zarejestruj się lub zaloguj, aby śledzić swoich ulubionych twórców i otrzymywać powiadomienia o nowych materiałach.",
+      "messageTitle": "Wysłać wiadomość?",
+      "messageMessage": "Utwórz bezpłatne konto lub zaloguj się, aby bezpośrednio wysyłać wiadomości do ulubionych twórców.",
+      "tipTitle": "Wysłać napiwek?",
+      "tipMessage": "Zarejestruj się lub zaloguj, aby wspierać swoich ulubionych twórców, wysyłając wskazówki i ekskluzywne nagrody."
+    },
+    "notFoundDescription": "Profil gwiazdy porno, którego szukasz, nie został znaleziony.",
+    "seo": {
+      "metaTitle": "{name} (@{firstName}) - wideo, zdjęcia, biografia",
+      "metaDescriptionWithVideos": "Oglądaj {count}+ ekskluzywne filmy z {name}, {age}yo {ethnicity} od {country}. Bio, statystyki, zdjęcia i treści premium.",
+      "metaDescriptionBasic": "{name} - {age} lat od {country}. Oglądaj ekskluzywne filmy, zdjęcia i treści premium.",
+      "metaDescriptionMinimal": "Oglądaj ekskluzywne treści od {name}. Bio, statystyki, zdjęcia i filmy.",
+      "adultContent": "treści dla dorosłych",
+      "pornstarProfile": "profil gwiazdy porno",
+      "videos": "filmy",
+      "photos": "zdjęcia",
+      "exclusiveVideos": "ekskluzywne materiały wideo",
+      "exclusiveContent": "ekskluzywna zawartość",
+      "premiumContent": "zawartość premium"
+    },
+    "breadcrumb": {
+      "home": "Strona główna",
+      "pornstars": "Gwiazdy porno"
+    },
+    "content": {
+      "about": "Informacje o {name}",
+      "aboutDescription": "{name} jest {age}-letnim {ethnicity} wykonawcą z {country}. Dzięki {videos} ekskluzywnym filmom i {views} wyświetleń, {firstName} stał się popularnym twórcą. Odkrywaj treści premium, zdjęcia i łącz się bezpośrednio z {firstName}.",
+      "aboutDescriptionNoEthnicity": "{name} jest {age}-letnim wykonawcą z {country}. Dzięki {videos} ekskluzywnym filmom i {views} wyświetleń, {firstName} stał się popularnym twórcą. Odkrywaj treści premium, zdjęcia i łącz się bezpośrednio z {firstName}.",
+      "aboutDescriptionMinimal": "{name} jest utalentowanym wykonawcą. Odkryj ekskluzywne treści i połącz się bezpośrednio z {firstName}.",
+      "mediaGallery": "Galeria multimediów",
+      "mediaCount": "pozycje",
+      "noMediaYet": "Media nie są jeszcze dostępne",
+      "checkBackSoon": "Wkrótce pojawi się nowa zawartość!",
+      "comingSoon": "Treści multimedialne już wkrótce...",
+      "youMightLike": "Możesz również polubić",
+      "relatedPornstars": "Powiązane gwiazdy porno"
+    },
+    "links": {
+      "viewAllFrom": "Zobacz wszystkie gwiazdy porno z {country}",
+      "viewEthnicity": "Zobacz wszystkie {ethnicity} gwiazdy porno",
+      "viewAge": "Zobacz gwiazdy porno w wieku {age}",
+      "moreFrom": "Więcej od {country}",
+      "similarAge": "Podobny wiek"
+    },
+    "faq": {
+      "title": "Często zadawane pytania dotyczące {name}",
+      "howOld": {
+        "question": "Ile lat ma {name}?",
+        "answer": "{name} ma {age} lat."
+      },
+      "whereFrom": {
+        "question": "Skąd pochodzi {firstName}?",
+        "answer": "{firstName} pochodzi z {country}."
+      },
+      "howTall": {
+        "question": "Ile wzrostu ma {firstName}?",
+        "answer": "{firstName} ma {height} cm ({heightFt}) wzrostu."
+      },
+      "howMuchWeight": {
+        "question": "Jaka jest waga {firstName}?",
+        "answer": "{firstName} waży {weight} kg ({weightLbs} funtów)."
+      },
+      "whatEthnicity": {
+        "question": "Jakie jest pochodzenie etniczne {firstName}?",
+        "answer": "{firstName} to {ethnicity}."
+      },
+      "hairColor": {
+        "question": "Jaki jest kolor włosów {firstName}?",
+        "answer": "{firstName} ma włosy {color}."
+      },
+      "eyeColor": {
+        "question": "Jaki jest kolor oczu {firstName}?",
+        "answer": "{firstName} ma oczy {color}."
+      },
+      "howManyVideos": {
+        "question": "Ile filmów ma {firstName}?",
+        "answer": "{firstName} ma dostępne ekskluzywne filmy {count}."
+      },
+      "howToWatch": {
+        "question": "Jak mogę oglądać filmy {firstName}?",
+        "answer": "Możesz oglądać ekskluzywną zawartość {firstName}, zakładając darmowe konto. Członkowie Premium mają dostęp do jakości HD i wszystkich ekskluzywnych filmów."
+      },
+      "howToContact": {
+        "question": "Czy mogę wysłać wiadomość {firstName}?",
+        "answer": "Tak! Utwórz konto, aby wysyłać bezpośrednie wiadomości do {firstName} i łączyć się ze swoim ulubionym twórcą."
+      }
+    },
+    "imageAlt": {
+      "profilePhoto": "{name} - {age}-letni {ethnicity} z {country}",
+      "coverPhoto": "{name} zdjęcie na okładkę",
+      "galleryPhoto": "{name} zdjęcie",
+      "videoThumbnail": "{name} miniatura wideo"
     }
   },
   "error": {
@@ -1288,7 +1384,9 @@
   "common": {
     "cancel": "Anuluj",
     "loading": "Ładowanie...",
-    "retry": "Ponów próbę"
+    "retry": "Ponów próbę",
+    "noResults": "Nie znaleziono żadnych filmów",
+    "notFound": "Nie znaleziono"
   },
   "checkout": {
     "title": "Dokończ zakup",
@@ -1420,6 +1518,33 @@
     "defaultMessage": "Zaloguj się lub utwórz konto, aby kontynuować.",
     "login": "Login",
     "register": "Utwórz konto",
-    "maybeLater": "Może później"
+    "maybeLater": "Może później",
+    "signUp": "Zarejestruj się",
+    "signIn": "Zaloguj się",
+    "createAccount": "Utwórz konto",
+    "createFreeAccount": "Utwórz bezpłatne konto",
+    "emailPlaceholder": "E-mail",
+    "passwordPlaceholder": "Hasło",
+    "confirmPasswordPlaceholder": "Potwierdź hasło",
+    "namePlaceholder": "Imię i nazwisko",
+    "orContinueWith": "lub kontynuować",
+    "continueWithGoogle": "Google",
+    "continueWithDiscord": "Discord",
+    "continueWithX": "X",
+    "agreeToTerms": "Rejestrując się, użytkownik wyraża zgodę na",
+    "termsOfService": "Warunki świadczenia usług",
+    "alreadyHaveAccount": "Masz już konto?",
+    "dontHaveAccount": "Nie masz konta?",
+    "signInLink": "Zaloguj się",
+    "signUpLink": "Zarejestruj się",
+    "loggingIn": "Logowanie...",
+    "creatingAccount": "Tworzenie konta...",
+    "invalidCredentials": "Nieprawidłowy adres e-mail lub hasło",
+    "registrationFailed": "Rejestracja nie powiodła się. Spróbuj ponownie.",
+    "emailRequired": "Wymagany jest adres e-mail",
+    "passwordRequired": "Wymagane jest hasło",
+    "passwordsDoNotMatch": "Hasła nie są zgodne",
+    "showPassword": "Pokaż hasło",
+    "hidePassword": "Ukryj hasło"
   }
 }

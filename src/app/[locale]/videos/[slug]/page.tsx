@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import ReelRepository from '@/lib/repositories/ReelRepository';
@@ -40,7 +40,6 @@ interface PaywalledContentStructuredData {
 function VideoPage() {
   const t = useTranslations();
   const params = useParams();
-  const router = useRouter();
   const { isAuthenticated, user } = useAuth();
   const slug = params?.slug as string;
   const locale = (params?.locale as string) || 'en';
@@ -48,7 +47,6 @@ function VideoPage() {
   const [reel, setReel] = useState<Reel | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [showShareToast, setShowShareToast] = useState(false);
   const [showLoginDialog, setShowLoginDialog] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
@@ -71,12 +69,15 @@ function VideoPage() {
         setNotFound(false);
         const data = await ReelRepository.getBySlug(slug);
         setReel(data);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error('Error fetching reel:', err);
 
         // If 404, show inline not found instead of separate page
-        if (err?.response?.status === 404) {
-          setNotFound(true);
+        if (err && typeof err === 'object' && 'response' in err) {
+          const errorResponse = err as { response?: { status?: number } };
+          if (errorResponse.response?.status === 404) {
+            setNotFound(true);
+          }
         }
       } finally {
         setLoading(false);
@@ -194,10 +195,9 @@ function VideoPage() {
 
         // Track successful share via native API
         trackShareEvent('native_share', true);
-        console.log('Successfully shared');
-      } catch (error: any) {
+      } catch (error: unknown) {
         // User cancelled or error occurred
-        if (error.name !== 'AbortError') {
+        if (error instanceof Error && error.name !== 'AbortError') {
           console.error('Error sharing:', error);
           // Fallback to copy
           copyToClipboard(shareUrl);
@@ -241,8 +241,8 @@ function VideoPage() {
     if (!reel) return;
 
     // Push event to Google Tag Manager dataLayer
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'video_share',
         video_id: reel.id,
         video_slug: reel.slug,
@@ -253,14 +253,6 @@ function VideoPage() {
         share_success: success,
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
-      });
-
-      console.log('GTM Event Tracked:', {
-        event: 'video_share',
-        video_id: reel.id,
-        video_slug: reel.slug,
-        share_method: method,
-        share_success: success,
       });
     } else {
       console.warn('Google Tag Manager dataLayer not found');
@@ -300,8 +292,6 @@ function VideoPage() {
 
       // Track successful like/unlike
       trackLikeEvent(isLiked ? 'unlike' : 'like', true);
-
-      console.log(`Video ${isLiked ? 'unliked' : 'liked'} successfully`);
     } catch (error) {
       console.error('Error toggling like:', error);
 
@@ -320,8 +310,8 @@ function VideoPage() {
     if (!reel) return;
 
     // Push event to Google Tag Manager dataLayer
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'video_like',
         video_id: reel.id,
         video_slug: reel.slug,
@@ -334,15 +324,6 @@ function VideoPage() {
         user_id: user?.id || null,
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
-      });
-
-      console.log('GTM Event Tracked:', {
-        event: 'video_like',
-        video_id: reel.id,
-        video_slug: reel.slug,
-        like_action: action,
-        like_success: success,
-        user_authenticated: isAuthenticated,
       });
     } else {
       console.warn('Google Tag Manager dataLayer not found');
@@ -434,8 +415,6 @@ function VideoPage() {
                   controls
                   poster={reel.thumbnail}
                   className="video-element"
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
                 >
                   <source src={reel.videoUrl} type="video/mp4" />
                   {t('videos.videoNotSupported')}

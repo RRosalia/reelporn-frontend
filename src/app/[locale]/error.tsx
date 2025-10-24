@@ -33,8 +33,8 @@ export default function Error({
     };
 
     const errorType = getErrorType();
-    const title = t(`${errorType}.title` as any);
-    const message = t(`${errorType}.message` as any);
+    const title = t(`${errorType}.title`)!;
+    const message = t(`${errorType}.message`)!;
 
     return (
         <div

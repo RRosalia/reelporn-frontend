@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useParams } from 'next/navigation';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import {
     UnauthorizedException,
@@ -16,10 +15,8 @@ import { useTranslations } from 'next-intl';
 
 function LoginPage() {
     const router = useRouter();
-    const params = useParams();
     const searchParams = useSearchParams();
     const t = useTranslations();
-    const locale = (params?.locale as string) || 'en';
     const { login, isAuthenticated, isLoading: authLoading } = useAuth();
 
     const [email, setEmail] = useState('');
@@ -61,7 +58,7 @@ function LoginPage() {
 
             // Redirect to intended location or home page
             router.push(redirectTo);
-        } catch (err: any) {
+        } catch (err: unknown) {
             // Handle custom exceptions
             if (err instanceof RateLimitException) {
                 setError(t('login.error.rateLimitExceeded'));

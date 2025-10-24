@@ -36,6 +36,16 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "cypress",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/__tests__/**",
+    "**/*.cy.ts",
+    "**/*.cy.tsx",
+    "**/test/**",
+    "**/tests/**"
   ]
 }

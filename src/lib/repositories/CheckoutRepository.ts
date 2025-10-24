@@ -4,7 +4,6 @@ import {
   CheckoutRequest,
   CheckoutPreviewResponse,
   CheckoutConfirmResponse,
-  CheckoutPaymentStatusResponse,
   PaymentStatusPollResponse,
 } from '@/types/Payment';
 
@@ -52,4 +51,5 @@ class CheckoutRepository {
   }
 }
 
-export default new CheckoutRepository();
+const checkoutRepository = new CheckoutRepository();
+export default checkoutRepository;

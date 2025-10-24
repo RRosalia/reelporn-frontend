@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import Echo from 'laravel-echo';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import { PaymentStatusPollResponse } from '@/types/Payment';
 
@@ -12,7 +11,6 @@ export default function PaymentStatusPage() {
   const params = useParams();
   const router = useRouter();
   const t = useTranslations('payment');
-  const locale = params.locale as string;
   const paymentId = params.id as string;
 
   const [paymentData, setPaymentData] = useState<PaymentStatusPollResponse | null>(null);
@@ -32,10 +30,6 @@ export default function PaymentStatusPage() {
   const fetchPaymentStatus = useCallback(async () => {
     try {
       const data = await CheckoutRepository.getPaymentStatus(paymentId);
-      console.log('Payment status response:', data);
-      if (data.crypto) {
-        console.log('Confirmations:', data.crypto.confirmations, '- Min:', data.crypto.min_confirmations, '- Required:', data.crypto.required_confirmations);
-      }
 
       setPaymentData(data);
       setError(null);
@@ -49,9 +43,10 @@ export default function PaymentStatusPage() {
           setShowExpiredModal(true);
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to fetch payment status:', err);
-      setError(err.message || t('failedToLoadData'));
+      const errorMessage = err instanceof Error ? err.message : t('failedToLoadData');
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -62,35 +57,25 @@ export default function PaymentStatusPage() {
     if (!paymentId) return;
 
     // Get the global Echo instance
-    const echoInstance = (window as any).Echo;
+    const echoInstance = window.Echo;
     if (!echoInstance) {
       console.warn('[Echo] Echo instance not found on window');
       return;
     }
 
     const channelName = `payments.${paymentId}`;
-    console.log('[Echo] Attempting to subscribe to PRIVATE channel:', channelName);
-    console.log('[Echo] Echo instance available:', !!echoInstance);
-    console.log('[Echo] Connector state:', echoInstance.connector?.pusher?.connection?.state);
-
     const channel = echoInstance.private(channelName);
 
     // Log channel subscription events
-    channel.subscribed(() => {
-      console.log('[Echo] ✅ Successfully subscribed to channel:', channelName);
-    });
-
-    channel.error((error: any) => {
-      console.error('[Echo] ❌ Channel subscription error:', error);
-    });
+    if (channel && typeof channel === 'object' && 'error' in channel && typeof channel.error === 'function') {
+      channel.error((error: any) => {
+        console.error('[Echo] Channel subscription error:', error);
+      });
+    }
 
     // TODO: Add event listeners here when events are defined
 
-    console.log('[Echo] Channel object created:', channel);
-    console.log('[Echo] Active channels:', Object.keys(echoInstance.connector?.channels || {}));
-
     return () => {
-      console.log('[Echo] Unsubscribing from channel:', channelName);
       echoInstance.leaveChannel(channelName);
     };
   }, [paymentId, fetchPaymentStatus]);
@@ -151,7 +136,7 @@ export default function PaymentStatusPage() {
   useEffect(() => {
     if (paymentData?.status === 'completed' && typeof window !== 'undefined' && window.dataLayer) {
       // Send ecommerce purchase event
-      window.dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object
+      window.dataLayer.push({ event: 'ecommerce_clear', ecommerce: null } as any); // Clear previous ecommerce object
       window.dataLayer.push({
         event: 'purchase',
         ecommerce: {
@@ -175,10 +160,6 @@ export default function PaymentStatusPage() {
         blockchain_url: paymentData.crypto?.blockchain_url,
         subscription_id: paymentData.subscription?.id,
         timestamp: new Date().toISOString()
-      });
-      console.log('GTM Ecommerce Purchase Event Tracked:', {
-        transaction_id: paymentId,
-        value: paymentData.amount_cents ? (paymentData.amount_cents / 100) : 0
       });
     }
   }, [paymentData?.status, paymentId, paymentData]);
@@ -211,7 +192,6 @@ export default function PaymentStatusPage() {
         }
 
         window.dataLayer.push(eventData);
-        console.log('GTM Event Tracked:', eventData);
       }
 
       if (type === 'amount') {
@@ -260,15 +240,16 @@ export default function PaymentStatusPage() {
       } else {
         throw new Error('No payment ID returned');
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Failed to retry payment:', err);
-      setRetryError(err.message || 'Failed to create new payment. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create new payment. Please try again.';
+      setRetryError(errorMessage);
     } finally {
       setIsRetrying(false);
     }
   };
 
-  const handleWalletButtonClick = async (paymentUri: string, e: React.MouseEvent) => {
+  const handleWalletButtonClick = async (paymentUri: string, _e: React.MouseEvent) => {
     // Track GTM event for wallet button click
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
@@ -283,7 +264,6 @@ export default function PaymentStatusPage() {
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
       });
-      console.log('GTM Event Tracked: payment_wallet_open');
     }
 
     // Try to open the wallet app
@@ -292,7 +272,7 @@ export default function PaymentStatusPage() {
     // After a short delay, offer to copy the URI in case the app didn't open
     setTimeout(async () => {
       // Ask user if they want to copy the payment URI instead
-      const shouldCopy = await new Promise<boolean>((resolve) => {
+      await new Promise<boolean>((resolve) => {
         // Only show the copy option if we're still on the same page (app didn't open)
         const timeout = setTimeout(() => {
           resolve(false);
@@ -362,7 +342,7 @@ export default function PaymentStatusPage() {
     );
   }
 
-  const { status, crypto, payable, subscription } = paymentData;
+  const { status, crypto, payable } = paymentData;
 
   // Failed/Expired/Cancelled payment
   if (['failed', 'expired', 'cancelled'].includes(status)) {
