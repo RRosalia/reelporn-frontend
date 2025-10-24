@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
+import PornstarService from '@/lib/services/PornstarService';
 import { PornstarFilters, FilterCountry, HeightRange, WeightRange, FilterOption } from '@/types/Pornstar';
 import './PornstarsFilter.css';
 
@@ -38,12 +38,12 @@ const PornstarsFilter: React.FC<PornstarsFilterProps> = ({ filters, onFilterChan
           eyeColorsData,
           ethnicitiesData
         ] = await Promise.all([
-          PornstarsRepository.getFilterCountries(),
-          PornstarsRepository.getFilterHeights(),
-          PornstarsRepository.getFilterWeights(),
-          PornstarsRepository.getFilterHairColors(),
-          PornstarsRepository.getFilterEyeColors(),
-          PornstarsRepository.getFilterEthnicities()
+          PornstarService.getFilterCountries(),
+          PornstarService.getFilterHeights(),
+          PornstarService.getFilterWeights(),
+          PornstarService.getFilterHairColors(),
+          PornstarService.getFilterEyeColors(),
+          PornstarService.getFilterEthnicities()
         ]);
 
         setCountries(countriesData);

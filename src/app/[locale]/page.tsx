@@ -5,13 +5,17 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import VideoCard from '@/components/VideoCard';
 import ReelService from '@/lib/services/ReelService';
+import PornstarService from '@/lib/services/PornstarService';
 import type { Reel } from '@/types/Reel';
+import type { Pornstar } from '@/types/Pornstar';
 
 export default function HomePage() {
     const t = useTranslations();
     const [activeTab, setActiveTab] = useState('trending');
     const [videos, setVideos] = useState<Reel[]>([]);
+    const [pornstars, setPornstars] = useState<Pornstar[]>([]);
     const [loading, setLoading] = useState(true);
+    const [pornstarsLoading, setPornstarsLoading] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -51,12 +55,48 @@ export default function HomePage() {
         };
     }, [activeTab]);
 
+    // Fetch pornstars for homepage
+    useEffect(() => {
+        let isMounted = true;
+
+        const fetchPornstars = async () => {
+            try {
+                setPornstarsLoading(true);
+                const data = await PornstarService.getFeatured();
+                if (isMounted) {
+                    setPornstars(data);
+                    setPornstarsLoading(false);
+                }
+            } catch (err) {
+                console.error('Error fetching pornstars:', err);
+                if (isMounted) {
+                    setPornstarsLoading(false);
+                }
+            }
+        };
+
+        fetchPornstars();
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
+
     const categories = [
         { key: 'trending', label: t('category.trending'), icon: '🔥' },
         { key: 'new', label: t('category.new'), icon: '✨' },
         { key: 'popular', label: t('category.popular'), icon: '⭐' },
         { key: 'featured', label: t('category.featured'), icon: '🎬' }
     ];
+
+    // Helper function to convert UUID to number for gradients
+    const getColorFromId = (id: string): number => {
+        let hash = 0;
+        for (let i = 0; i < id.length; i++) {
+            hash = id.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return Math.abs(hash);
+    };
 
     return (
         <div className="bg-gray-50">
@@ -195,6 +235,79 @@ export default function HomePage() {
                 </div>
             </div>
 
+            {/* Pornstars Section */}
+            <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
+                <div className="container mx-auto px-4">
+                    <div className="flex justify-between items-center mb-8">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-0" style={{
+                            background: 'linear-gradient(135deg, #c2338a 0%, #f8c537 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                        }}>
+                            {t('pornstars.title')}
+                        </h2>
+                        <Link href="/pornstars" className="no-underline font-bold" style={{ color: '#c2338a' }}>
+                            {t('home.viewAll')} →
+                        </Link>
+                    </div>
+
+                    {pornstarsLoading ? (
+                        <div className="text-center py-12">
+                            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500"></div>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                            {pornstars.map((star) => (
+                                <div key={star.id}>
+                                    <Link
+                                        href={`/pornstar/${star.slug}` as any}
+                                        className="no-underline block"
+                                    >
+                                        <div className="bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent">
+                                            <div className="relative">
+                                                <div style={{
+                                                    paddingTop: '100%',
+                                                    background: `linear-gradient(135deg, hsl(${(getColorFromId(star.id) * 137) % 360}, 70%, 30%) 0%, hsl(${((getColorFromId(star.id) * 137) + 60) % 360}, 70%, 20%) 100%)`,
+                                                    position: 'relative'
+                                                }}>
+                                                    {star.profile_image && (
+                                                        <img
+                                                            src={star.profile_image.medium}
+                                                            alt={`${star.first_name} ${star.last_name}`}
+                                                            className="absolute top-0 left-0 w-full h-full object-cover"
+                                                            onError={(e: any) => (e.target.style.display = 'none')}
+                                                        />
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            <div className="p-3">
+                                                <h6 className="text-dark-secondary font-bold mb-1 text-sm truncate">
+                                                    {star.first_name} {star.last_name}
+                                                </h6>
+                                                <div className="text-xs text-gray-600">
+                                                    <div className="flex justify-between mb-1">
+                                                        <span><i className="bi bi-play-circle"></i> {star.videos_count}</span>
+                                                        <span><i className="bi bi-eye"></i> {star.views_count > 1000 ? `${Math.floor(star.views_count / 1000)}K` : star.views_count}</span>
+                                                    </div>
+                                                    {star.age && star.country && (
+                                                        <div className="flex justify-between text-xs text-gray-500">
+                                                            <span>{star.age} yrs</span>
+                                                            <span>{star.country.iso}</span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
             {/* Video Grid */}
             <div className="container mx-auto px-4 py-12">
                 <div className="flex justify-between items-center mb-8">
@@ -269,95 +382,6 @@ export default function HomePage() {
                     </>
                 )}
             </div>
-
-            {/* Pornstars Section - Hidden for now */}
-            {/* <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
-                <div className="container mx-auto px-4">
-                    <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-0" style={{
-                            background: 'linear-gradient(135deg, #c2338a 0%, #f8c537 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text'
-                        }}>
-                            {t('pornstars.title')}
-                        </h2>
-                        <Link href="/pornstars" className="no-underline font-bold" style={{ color: '#c2338a' }}>
-                            {t('home.viewAll')} →
-                        </Link>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                        {mockPornstars.map((star) => (
-                            <div key={star.id}>
-                                <Link
-                                    href={`/pornstar/${star.id}` as any}
-                                    className="no-underline block"
-                                >
-                                    <div className="bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent">
-                                        <div className="relative">
-                                            <div style={{
-                                                paddingTop: '100%',
-                                                background: `linear-gradient(135deg, hsl(${star.id * 137 % 360}, 70%, 30%) 0%, hsl(${(star.id * 137 + 60) % 360}, 70%, 20%) 100%)`,
-                                                position: 'relative'
-                                            }}>
-                                                <img
-                                                    src={star.avatar}
-                                                    alt={star.name}
-                                                    className="absolute top-0 left-0 w-full h-full object-cover"
-                                                    onError={(e: any) => (e.target.style.display = 'none')}
-                                                />
-                                            </div>
-
-                                            {star.isOnline && (
-                                                <div className="absolute top-2.5 right-2.5 bg-green-500 w-3 h-3 rounded-full border-2 border-white"></div>
-                                            )}
-
-                                            {star.verified && (
-                                                <div style={{
-                                                    position: 'absolute',
-                                                    bottom: '10px',
-                                                    right: '10px',
-                                                    background: 'linear-gradient(135deg, #c2338a 0%, #f8c537 100%)',
-                                                    color: 'white',
-                                                    width: '28px',
-                                                    height: '28px',
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    border: '2px solid white'
-                                                }}>
-                                                    <i className="bi bi-check text-base font-bold"></i>
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        <div className="p-3">
-                                            <h6 className="text-dark-secondary font-bold mb-1 text-sm truncate">
-                                                {star.name}
-                                            </h6>
-                                            <div className="text-xs text-gray-600">
-                                                <div className="flex justify-between mb-1">
-                                                    <span>{star.videos}</span>
-                                                    <span>{star.views}</span>
-                                                </div>
-                                                <div className="flex items-center">
-                                                    <span style={{ color: '#f8c537' }}>
-                                                        {'★'.repeat(Math.floor(parseFloat(star.rating)))}
-                                                        {'☆'.repeat(5 - Math.floor(parseFloat(star.rating)))}
-                                                    </span>
-                                                    <span className="ml-1">{star.rating}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div> */}
 
             {/* Premium CTA Section */}
             <div className="py-20" style={{

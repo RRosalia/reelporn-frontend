@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import PornstarsRepository from '@/lib/repositories/PornstarsRepository';
+import PornstarService from '@/lib/services/PornstarService';
 import PornstarsFilter from '@/components/pornstars/PornstarsFilter';
 import { Pornstar, PornstarFilters } from '@/types/Pornstar';
 import { PaginatedResponse } from '@/lib/types/PaginatedResponse';
@@ -35,7 +35,7 @@ function PornstarsPage() {
             try {
                 setLoading(true);
                 setError(null);
-                const response = await PornstarsRepository.getAll(filters);
+                const response = await PornstarService.getAll(filters);
                 setPornstars(response.getData());
                 setPagination(response);
             } catch (err) {
