@@ -386,17 +386,12 @@
     }
   },
   "pornstars": {
-    "title": "Charaktere",
     "subtitle": "Durchsuchen Sie unsere {count} erstaunlichen Darsteller",
-    "noResults": "Keine Charaktere gefunden, die Ihren Filtern entsprechen",
     "sort": {
       "popular": "Beliebteste",
       "newest": "Neueste",
       "mostVideos": "Meiste Videos",
       "mostViewed": "Am meisten angesehen"
-    },
-    "pagination": {
-      "showing": "Zeige {start}-{end} von {total} Charaktere"
     },
     "filters": {
       "title": "Filter",
@@ -416,9 +411,6 @@
       "allEthnicities": "Alle Ethnizitäten",
       "showFilters": "Show Filters",
       "hideFilters": "Hide Filters"
-    },
-    "errors": {
-      "fetchFailed": "Charaktere konnten nicht geladen werden. Bitte versuchen Sie es erneut."
     }
   },
   "pornstar": {
@@ -1531,7 +1523,6 @@
     "passwordPlaceholder": "Passwort",
     "confirmPasswordPlaceholder": "Bestätigen Sie Ihr Passwort",
     "namePlaceholder": "Vollständiger Name",
-    "minimumCharacters": "Mindestens 6 Zeichen",
     "orContinueWith": "oder weiter mit",
     "continueWithGoogle": "Google",
     "continueWithDiscord": "Diskord",
@@ -1548,7 +1539,6 @@
     "registrationFailed": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "emailRequired": "E-Mail ist erforderlich",
     "passwordRequired": "Passwort ist erforderlich",
-    "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein",
     "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
     "showPassword": "Passwort anzeigen",
     "hidePassword": "Passwort verstecken"

@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Karaktärer",
     "subtitle": "Bläddra bland våra {count} fantastiska artister",
-    "noResults": "Inga tecken hittades som matchade dina filter",
     "sort": {
       "popular": "Mest populära",
       "newest": "Nyaste",
       "mostVideos": "De flesta videor",
       "mostViewed": "Mest visade"
-    },
-    "pagination": {
-      "showing": "Visar {start}-{end} av {total} tecken"
     },
     "filters": {
       "title": "Filter",
@@ -420,9 +415,6 @@
       "allEthnicities": "Alla etniciteter",
       "showFilters": "Visa filter",
       "hideFilters": "Dölj filter"
-    },
-    "errors": {
-      "fetchFailed": "Misslyckades med att ladda tecken. Vänligen försök igen."
     }
   },
   "pornstar": {
@@ -1535,7 +1527,6 @@
     "passwordPlaceholder": "Lösenord",
     "confirmPasswordPlaceholder": "Bekräfta lösenord",
     "namePlaceholder": "Full Name",
-    "minimumCharacters": "Minst 6 tecken",
     "orContinueWith": "eller fortsätt med",
     "continueWithGoogle": "Google",
     "continueWithDiscord": "Discord",
@@ -1552,7 +1543,6 @@
     "registrationFailed": "Registreringen misslyckades. Vänligen försök igen.",
     "emailRequired": "E-post krävs",
     "passwordRequired": "Lösenord krävs",
-    "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken",
     "passwordsDoNotMatch": "Lösenorden stämmer inte överens",
     "showPassword": "Visa lösenord",
     "hidePassword": "Dölj lösenord"

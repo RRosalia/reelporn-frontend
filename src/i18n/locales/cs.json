@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Postavy",
     "subtitle": "Prohlédněte si naše {count} úžasné interprety",
-    "noResults": "Nebyly nalezeny žádné znaky odpovídající vašim filtrům",
     "sort": {
       "popular": "Nejoblíbenější",
       "newest": "Nejnovější",
       "mostVideos": "Většina videí",
       "mostViewed": "Nejsledovanější"
-    },
-    "pagination": {
-      "showing": "Zobrazení znaků {start}-{end} z {total}"
     },
     "filters": {
       "title": "Filtry",
@@ -420,9 +415,6 @@
       "allEthnicities": "Všechna etnika",
       "showFilters": "Zobrazit filtry",
       "hideFilters": "Skrýt filtry"
-    },
-    "errors": {
-      "fetchFailed": "Nepodařilo se načíst znaky. Zkuste to prosím znovu."
     }
   },
   "pornstar": {
@@ -1535,7 +1527,6 @@
     "passwordPlaceholder": "Heslo",
     "confirmPasswordPlaceholder": "Potvrzení hesla",
     "namePlaceholder": "Celé jméno",
-    "minimumCharacters": "Minimálně 6 znaků",
     "orContinueWith": "nebo pokračovat pomocí",
     "continueWithGoogle": "Google",
     "continueWithDiscord": "Discord",
@@ -1552,7 +1543,6 @@
     "registrationFailed": "Registrace se nezdařila. Zkuste to prosím znovu.",
     "emailRequired": "Je vyžadován e-mail",
     "passwordRequired": "Heslo je vyžadováno",
-    "passwordTooShort": "Heslo musí mít alespoň 6 znaků",
     "passwordsDoNotMatch": "Hesla se neshodují",
     "showPassword": "Zobrazit heslo",
     "hidePassword": "Skrýt heslo"
