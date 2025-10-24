@@ -390,17 +390,12 @@
     }
   },
   "pornstars": {
-    "title": "Postacie",
     "subtitle": "Przeglądaj naszych {count} niesamowitych wykonawców",
-    "noResults": "Nie znaleziono znaków pasujących do filtrów",
     "sort": {
       "popular": "Najpopularniejsze",
       "newest": "Najnowszy",
       "mostVideos": "Większość filmów",
       "mostViewed": "Najczęściej oglądane"
-    },
-    "pagination": {
-      "showing": "Wyświetlanie znaków {start}-{end} z {total}"
     },
     "filters": {
       "title": "Filtry",
@@ -420,9 +415,6 @@
       "allEthnicities": "Wszystkie grupy etniczne",
       "showFilters": "Pokaż filtry",
       "hideFilters": "Ukryj filtry"
-    },
-    "errors": {
-      "fetchFailed": "Nie udało się załadować znaków. Spróbuj ponownie."
     }
   },
   "pornstar": {
@@ -1535,7 +1527,6 @@
     "passwordPlaceholder": "Hasło",
     "confirmPasswordPlaceholder": "Potwierdź hasło",
     "namePlaceholder": "Imię i nazwisko",
-    "minimumCharacters": "Minimum 6 znaków",
     "orContinueWith": "lub kontynuować",
     "continueWithGoogle": "Google",
     "continueWithDiscord": "Discord",
@@ -1552,7 +1543,6 @@
     "registrationFailed": "Rejestracja nie powiodła się. Spróbuj ponownie.",
     "emailRequired": "Wymagany jest adres e-mail",
     "passwordRequired": "Wymagane jest hasło",
-    "passwordTooShort": "Hasło musi składać się z co najmniej 6 znaków",
     "passwordsDoNotMatch": "Hasła nie są zgodne",
     "showPassword": "Pokaż hasło",
     "hidePassword": "Ukryj hasło"
