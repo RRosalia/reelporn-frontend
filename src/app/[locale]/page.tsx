@@ -180,40 +180,8 @@ export default function HomePage() {
                 </div>
             </div>
 
-            {/* Video Grid */}
-            <div className="container mx-auto px-4 py-12">
-                <div className="flex justify-between items-center mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-0 text-gray-900">
-                        {categories.find(c => c.key === activeTab)?.icon} {categories.find(c => c.key === activeTab)?.label}
-                    </h2>
-                    <Link href="/categories" className="no-underline font-semibold" style={{ color: '#c2338a' }}>
-                        {t('home.viewAll')} →
-                    </Link>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                    {mockVideos.map((video) => (
-                        <div key={video.id}>
-                            <VideoCard video={video} />
-                        </div>
-                    ))}
-                </div>
-
-                <div className="text-center mt-12">
-                    <button
-                        className="px-12 py-3 text-lg font-bold text-white rounded-full"
-                        style={{
-                            background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
-                            boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
-                        }}
-                    >
-                        {t('home.loadMore')}
-                    </button>
-                </div>
-            </div>
-
-            {/* Pornstars Section - Hidden for now */}
-            {/* <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
+            {/* Pornstars Section */}
+            <div className="py-12 md:py-20" style={{ background: 'linear-gradient(135deg, rgba(194, 51, 138, 0.05) 0%, rgba(248, 197, 55, 0.05) 100%)' }}>
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center mb-8">
                         <h2 className="text-2xl md:text-3xl font-bold mb-0" style={{
@@ -299,7 +267,39 @@ export default function HomePage() {
                         ))}
                     </div>
                 </div>
-            </div> */}
+            </div>
+
+            {/* Video Grid */}
+            <div className="container mx-auto px-4 py-12">
+                <div className="flex justify-between items-center mb-8">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-0 text-gray-900">
+                        {categories.find(c => c.key === activeTab)?.icon} {categories.find(c => c.key === activeTab)?.label}
+                    </h2>
+                    <Link href="/categories" className="no-underline font-semibold" style={{ color: '#c2338a' }}>
+                        {t('home.viewAll')} →
+                    </Link>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    {mockVideos.map((video) => (
+                        <div key={video.id}>
+                            <VideoCard video={video} />
+                        </div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <button
+                        className="px-12 py-3 text-lg font-bold text-white rounded-full"
+                        style={{
+                            background: 'linear-gradient(135deg, #c2338a 0%, #e74c3c 100%)',
+                            boxShadow: '0 4px 15px rgba(194, 51, 138, 0.3)'
+                        }}
+                    >
+                        {t('home.loadMore')}
+                    </button>
+                </div>
+            </div>
 
             {/* Premium CTA Section */}
             <div className="py-20" style={{
