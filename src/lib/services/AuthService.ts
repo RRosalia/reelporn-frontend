@@ -50,10 +50,10 @@ class AuthService {
    * @returns {Promise<LoginResponse>} Registration response data
    */
   async register(userData: RegisterData): Promise<LoginResponse> {
-    // Get affiliate ref from cookie if it exists
+    // Get affiliate click_id from cookie if it exists and send it as ref
     const affiliateCookie = AffiliateService.getCookie();
-    if (affiliateCookie?.ref) {
-      userData.ref = affiliateCookie.ref;
+    if (affiliateCookie?.click_id) {
+      userData.ref = affiliateCookie.click_id;
     }
 
     // Call repository to register
