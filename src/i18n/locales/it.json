@@ -300,7 +300,8 @@
       "downloads": "Download",
       "noAds": "Senza pubblicità",
       "exclusive": "Esclusivo"
-    }
+    },
+    "affiliate": "Affiliato"
   },
   "age": {
     "title": "Questo è un sito web per adulti (18+)",
@@ -415,6 +416,14 @@
       "allEthnicities": "Tutte le etnie",
       "showFilters": "Mostra filtri",
       "hideFilters": "Nascondi filtri"
+    },
+    "title": "Pornostar",
+    "noResults": "Non sono state trovate pornostar che corrispondono ai tuoi filtri",
+    "pagination": {
+      "showing": "Mostra {start}-{end} di {total} pornostar"
+    },
+    "errors": {
+      "fetchFailed": "Impossibile caricare pornostar. Si prega di riprovare."
     }
   },
   "pornstar": {
@@ -1545,6 +1554,8 @@
     "passwordRequired": "La password è necessaria",
     "passwordsDoNotMatch": "Le password non corrispondono",
     "showPassword": "Mostra password",
-    "hidePassword": "Nascondere la password"
+    "hidePassword": "Nascondere la password",
+    "minimumCharacters": "Minimo 6 caratteri",
+    "passwordTooShort": "La password deve essere di almeno 6 caratteri"
   }
 }

@@ -300,7 +300,8 @@
       "downloads": "Pobieranie",
       "noAds": "Bez reklam",
       "exclusive": "Ekskluzywne"
-    }
+    },
+    "affiliate": "Partner"
   },
   "age": {
     "title": "To jest strona dla dorosłych (18+)",
@@ -415,6 +416,14 @@
       "allEthnicities": "Wszystkie grupy etniczne",
       "showFilters": "Pokaż filtry",
       "hideFilters": "Ukryj filtry"
+    },
+    "title": "Gwiazdy porno",
+    "noResults": "Nie znaleziono gwiazd porno pasujących do twoich filtrów",
+    "pagination": {
+      "showing": "Wyświetlanie {start}-{end} z {total} gwiazd porno"
+    },
+    "errors": {
+      "fetchFailed": "Nie udało się załadować pornstars. Spróbuj ponownie."
     }
   },
   "pornstar": {
@@ -1545,6 +1554,8 @@
     "passwordRequired": "Wymagane jest hasło",
     "passwordsDoNotMatch": "Hasła nie są zgodne",
     "showPassword": "Pokaż hasło",
-    "hidePassword": "Ukryj hasło"
+    "hidePassword": "Ukryj hasło",
+    "minimumCharacters": "Minimum 6 znaków",
+    "passwordTooShort": "Hasło musi składać się z co najmniej 6 znaków"
   }
 }
