@@ -179,7 +179,8 @@
       "downloads": "Téléchargements",
       "noAds": "Sans publicité",
       "exclusive": "Exclusif"
-    }
+    },
+    "affiliate": "Affiliation"
   },
   "age": {
     "title": "Ceci est un site pour adultes (18+)",
@@ -294,6 +295,14 @@
       "allEthnicities": "Toutes les Ethnicités",
       "showFilters": "Afficher les filtres",
       "hideFilters": "Hide Filters"
+    },
+    "title": "Pornstars",
+    "noResults": "Aucune star du porno ne correspond à vos filtres",
+    "pagination": {
+      "showing": "Afficher {start}-{end} of {total} pornstars"
+    },
+    "errors": {
+      "fetchFailed": "Échec du chargement de pornstars. Veuillez réessayer."
     }
   },
   "pornstar": {
@@ -1541,7 +1550,9 @@
     "passwordRequired": "Le mot de passe est requis",
     "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
     "showPassword": "Afficher le mot de passe",
-    "hidePassword": "Cacher le mot de passe"
+    "hidePassword": "Cacher le mot de passe",
+    "minimumCharacters": "Minimum 6 caractères",
+    "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères"
   },
   "test": {
     "welcomeMessage": "Bienvenue {username}, vous avez {count} nouvelles notifications !",
