@@ -1,4 +1,5 @@
 import AuthRepository from '@/lib/repositories/AuthRepository';
+import AffiliateService from '@/lib/services/AffiliateService';
 import type {
   LoginResponse,
   RegisterData,
@@ -49,6 +50,12 @@ class AuthService {
    * @returns {Promise<LoginResponse>} Registration response data
    */
   async register(userData: RegisterData): Promise<LoginResponse> {
+    // Get affiliate ref from cookie if it exists
+    const affiliateCookie = AffiliateService.getCookie();
+    if (affiliateCookie?.ref) {
+      userData.ref = affiliateCookie.ref;
+    }
+
     // Call repository to register
     const response = await AuthRepository.register(userData);
 

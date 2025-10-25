@@ -42,6 +42,7 @@ export interface RegisterData {
   payment_options?: {
     currency?: string;
   };
+  ref?: string;
 }
 
 /**
