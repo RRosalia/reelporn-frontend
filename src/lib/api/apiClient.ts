@@ -68,8 +68,13 @@ const getCookie = (name: string): string | null => {
 // Request interceptor
 apiClient.interceptors.request.use(
   (config) => {
-    // Add auth token if available
-    if (typeof window !== "undefined") {
+    if (typeof window === "undefined") {
+      // Server-side (SSR) headers - for analytics purposes
+      config.headers["X-Request-Source"] = "ssr";
+      config.headers["X-SSR-Request"] = "true";
+    } else {
+      // Client-side headers - for browser requests
+      // Add auth token if available
       const token = localStorage.getItem("auth_token");
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;

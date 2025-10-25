@@ -16,6 +16,7 @@ function Footer() {
     const currentYear = new Date().getFullYear();
     const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
     const languageMenuRef = React.useRef<HTMLDivElement>(null);
+    const affiliateUrl = process.env.NEXT_PUBLIC_AFFILIATE_URL;
 
     // Click outside handler to close dropdown
     React.useEffect(() => {
@@ -141,6 +142,13 @@ function Footer() {
                                     {t('footer.cookies')}
                                 </Link>
                             </li>
+                            {affiliateUrl && (
+                                <li>
+                                    <a href={affiliateUrl} target="_blank" rel="noopener noreferrer">
+                                        {t('footer.affiliate')}
+                                    </a>
+                                </li>
+                            )}
                         </ul>
                     </div>
 

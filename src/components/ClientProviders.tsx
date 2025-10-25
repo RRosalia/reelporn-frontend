@@ -8,6 +8,7 @@ import { CookieConsentProvider } from '@/lib/contexts/CookieConsentContext';
 import CookieConsent from './CookieConsent';
 import AgeVerification from './AgeVerification';
 import GoogleTagManager from './GoogleTagManager';
+import AffiliateTracker from './AffiliateTracker';
 
 export function ClientProviders({ children }: { children: ReactNode }) {
   return (
@@ -15,6 +16,7 @@ export function ClientProviders({ children }: { children: ReactNode }) {
       <MiniPlayerProvider>
         <CookieConsentProvider>
           <GoogleTagManager />
+          <AffiliateTracker />
           <AgeVerification />
           {children}
           <CookieConsent />
