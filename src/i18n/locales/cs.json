@@ -300,7 +300,8 @@
       "downloads": "Stahování",
       "noAds": "Bez reklam",
       "exclusive": "Exkluzivní"
-    }
+    },
+    "affiliate": "Affiliate"
   },
   "age": {
     "title": "Toto jsou webové stránky pro dospělé (18+)",
@@ -415,6 +416,14 @@
       "allEthnicities": "Všechna etnika",
       "showFilters": "Zobrazit filtry",
       "hideFilters": "Skrýt filtry"
+    },
+    "title": "Pornohvězdy",
+    "noResults": "Nebyly nalezeny žádné pornohvězdy odpovídající vašim filtrům",
+    "pagination": {
+      "showing": "Zobrazeno {start}-{end} z {total} pornohvězdy"
+    },
+    "errors": {
+      "fetchFailed": "Nepodařilo se načíst pornohvězdy. Zkuste to prosím znovu."
     }
   },
   "pornstar": {
@@ -1545,6 +1554,8 @@
     "passwordRequired": "Heslo je vyžadováno",
     "passwordsDoNotMatch": "Hesla se neshodují",
     "showPassword": "Zobrazit heslo",
-    "hidePassword": "Skrýt heslo"
+    "hidePassword": "Skrýt heslo",
+    "minimumCharacters": "Minimálně 6 znaků",
+    "passwordTooShort": "Heslo musí mít alespoň 6 znaků"
   }
 }

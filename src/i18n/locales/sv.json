@@ -300,7 +300,8 @@
       "downloads": "Nedladdningar",
       "noAds": "Ingen reklam",
       "exclusive": "Exklusivt"
-    }
+    },
+    "affiliate": "Affiliate"
   },
   "age": {
     "title": "Detta är en webbplats för vuxna (18+)",
@@ -415,6 +416,14 @@
       "allEthnicities": "Alla etniciteter",
       "showFilters": "Visa filter",
       "hideFilters": "Dölj filter"
+    },
+    "title": "Pornstars",
+    "noResults": "Inga porrstjärnor hittades som matchade dina filter",
+    "pagination": {
+      "showing": "Visar {start}-{end} av {total} porrstjärnor"
+    },
+    "errors": {
+      "fetchFailed": "Misslyckades med att ladda pornstars. Vänligen försök igen."
     }
   },
   "pornstar": {
@@ -1545,6 +1554,8 @@
     "passwordRequired": "Lösenord krävs",
     "passwordsDoNotMatch": "Lösenorden stämmer inte överens",
     "showPassword": "Visa lösenord",
-    "hidePassword": "Dölj lösenord"
+    "hidePassword": "Dölj lösenord",
+    "minimumCharacters": "Minst 6 tecken",
+    "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken"
   }
 }

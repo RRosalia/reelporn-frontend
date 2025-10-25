@@ -29,6 +29,18 @@ export default function AffiliateTracker() {
       .then((response) => {
         if (response) {
           console.log('Affiliate click tracked successfully:', response);
+
+          // Push GTM event for affiliate lead
+          if (typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+              event: 'affiliate_lead',
+              affiliate_ref: ref,
+              affiliate_click_id: response.data.id,
+              affiliate_sub1: sub1 || null,
+              affiliate_sub2: sub2 || null,
+              affiliate_sub3: sub3 || null,
+            });
+          }
         } else {
           console.log('Affiliate already tracked, skipping API call');
         }
