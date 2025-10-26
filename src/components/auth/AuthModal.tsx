@@ -15,6 +15,8 @@ interface AuthModalProps {
   trigger?: string; // For GTM tracking - what triggered the modal to open
   mode?: 'signup' | 'login'; // Initial mode
   imageUrl?: string; // Left panel image
+  title?: string; // Custom title
+  message?: string; // Custom message
 }
 
 function AuthModal({
@@ -24,6 +26,8 @@ function AuthModal({
   trigger = 'unknown',
   mode: initialMode = 'signup',
   imageUrl = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
+  title,
+  message,
 }: AuthModalProps) {
   const t = useTranslations('authModal');
   const router = useRouter();
