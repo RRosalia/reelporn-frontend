@@ -1675,6 +1675,227 @@
     "meta": {
       "title": "Affiliate Programma - Verdien 40% Levenslange Commissie | ReelPorn",
       "description": "Word lid van ReelPorn's affiliate programma en verdien 40% levenslange commissie op elke verkoop. Ontvang voor altijd terugkerende inkomsten met ons hoog converterende affiliate programma voor volwassenen. 60 dagen cookie duur, crypto uitbetalingen en ondersteuning van wereldklasse."
+    },
+    "earnings": {
+      "realExamplesTab": "Echte voorbeelden",
+      "calculatorTab": "Rekenmachine voor inkomsten"
+    },
+    "calculator": {
+      "title": "Bereken je inkomsten",
+      "subtitle": "Kijk hoeveel je kunt verdienen met ons affiliateprogramma",
+      "referrals": "Maandelijkse verwijzingen",
+      "avgSpend": "Gemiddelde uitgave klant (USD)",
+      "calculate": "Bereken",
+      "monthlyEarnings": "Maandelijkse inkomsten",
+      "yearlyEarnings": "Jaarlijkse inkomsten",
+      "lifetimeEarnings": "Levensduur (gemiddelde 24 maanden)",
+      "lifetimeNote": "Gebaseerd op gemiddelde klantlevensduur van 24 maanden",
+      "referralsPerMonth": "verwijzingen/maand",
+      "perCustomer": "per klant",
+      "disclaimer": "Deze calculator geeft geschatte verdiensten op basis van jouw invoer. De werkelijke verdiensten kunnen variëren op basis van klantgedrag en retentiepercentages."
+    },
+    "examples": {
+      "title": "Voorbeelden van echte verdiensten",
+      "subtitle": "Bekijk hoeveel onze topfilialen verdienen",
+      "example1": {
+        "title": "Beginner Affiliate",
+        "referrals": "10 verwijzingen/maand",
+        "avgSpend": "$30 per klant",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Perfect voor wie net begint. Zelfs met bescheiden verkeer kun je een consistent inkomen verdienen."
+      },
+      "example2": {
+        "title": "Affiliate groeien",
+        "referrals": "50 verwijzingen/maand",
+        "avgSpend": "$50 per klant",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "Met een gevestigd publiek kun je je inkomsten aanzienlijk verhogen."
+      },
+      "example3": {
+        "title": "Power Affiliate",
+        "referrals": "200 verwijzingen/maand",
+        "avgSpend": "$75 per klant",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Topfilialen maken gebruik van meerdere verkeersbronnen om hun winstpotentieel te maximaliseren."
+      },
+      "note": "Alle verdiensten zijn terugkerende levenslange commissies. Deze voorbeelden zijn conservatieve schattingen - veel van onze affiliates verdienen nog meer!"
+    },
+    "paymentDetails": {
+      "title": "Betalingsgegevens en -voorwaarden",
+      "subtitle": "Duidelijke en transparante uitbetalingsinformatie",
+      "minimumPayout": {
+        "title": "Minimum uitbetaling",
+        "amount": "uSD 50",
+        "description": "Geen minimum uitbetalingsdrempel voor cryptocurrency betalingen. Traditionele betalingsmethoden hebben een minimum van $50."
+      },
+      "paymentFrequency": {
+        "title": "Betalingsfrequentie",
+        "frequency": "Binnen 60 dagen",
+        "description": "Commissies worden binnen 60 dagen na elke in aanmerking komende verkoop uitbetaald. Uitbetalingen in cryptocurrency worden sneller verwerkt."
+      },
+      "paymentMethods": {
+        "title": "Betaalmethoden",
+        "methods": "Crypto, Overschrijving, PayPal",
+        "description": "Kies uit meerdere uitbetalingsopties: Bitcoin, Ethereum, Litecoin, bankoverschrijving of PayPal (waar beschikbaar)."
+      },
+      "trackingWindow": {
+        "title": "Volgvenster",
+        "duration": "60 dagen",
+        "description": "De verlengde cookietijd van 60 dagen zorgt ervoor dat u krediet krijgt, zelfs als de klant tijd nodig heeft om te beslissen."
+      },
+      "commissionType": {
+        "title": "Type Commissie",
+        "type": "Terugkerende Levensduur",
+        "description": "Verdien 40% commissie op de eerste verkoop en alle toekomstige verlengingen voor de hele levensduur van de klant."
+      },
+      "reporting": {
+        "title": "Real-Time Rapportage",
+        "access": "24/7 Dashboardtoegang",
+        "description": "Bekijk klikken, conversies en verdiensten in realtime. Exporteer gedetailleerde rapporten voor je administratie."
+      }
+    },
+    "faq": {
+      "title": "Affiliate Programma FAQ",
+      "subtitle": "Veelgestelde vragen over ons partnerprogramma",
+      "q1": {
+        "question": "Hoeveel kan ik echt verdienen?",
+        "answer": "Je winstpotentieel is onbeperkt. Met een levenslange commissie van 40% op alle verkopen verdienen veel van onze topfilialen $5.000- $10.000+ per maand. Je succes hangt af van de kwaliteit van je verkeer, je promotiemethoden en je toewijding."
+      },
+      "q2": {
+        "question": "Wanneer word ik betaald?",
+        "answer": "Commissies worden binnen 60 dagen na elke verkoop uitbetaald. Voor cryptocurrency-betalingen van cryptoklanten kunnen uitbetalingen onmiddellijk worden verwerkt zonder minimumdrempel. Traditionele betalingsmethoden (bankoverschrijving, PayPal) hebben een minimum van $50."
+      },
+      "q3": {
+        "question": "Is er een minimum uitbetaling?",
+        "answer": "Er is geen minimum uitbetaling voor cryptocurrency betalingen. Voor traditionele betalingsmethoden zoals bankoverschrijving of PayPal is het minimum $50 USD."
+      },
+      "q4": {
+        "question": "Hoe lang blijft het koekje goed?",
+        "answer": "Onze affiliate cookie duurt 60 dagen. Dit betekent dat als iemand op je doorverwijslink klikt, je 60 dagen de tijd hebt om een aankoop te doen en je nog steeds krediet krijgt."
+      },
+      "q5": {
+        "question": "Welk promotiemateriaal leveren jullie?",
+        "answer": "Wij leveren hoog converterende banners, landingspagina's, tekstlinks, e-mailsjablonen en reclameteksten. Alle materialen worden regelmatig getest en geoptimaliseerd voor maximale conversies."
+      },
+      "q6": {
+        "question": "Kan ik betaalde reclame gebruiken?",
+        "answer": "Ja! Je kunt Google Ads, Facebook Ads, native advertising, PPV-verkeer en meer gebruiken. We bieden richtlijnen voor advertenties die aan de regels voldoen en helpen je om je campagnes te optimaliseren."
+      },
+      "q7": {
+        "question": "Bieden jullie integratie van postback/tracking?",
+        "answer": "Ja, we ondersteunen postback URL's voor realtime conversietracering. Hierdoor kun je integreren met je eigen trackingplatform voor volledige transparantie."
+      },
+      "q8": {
+        "question": "Wat voor soort ondersteuning bieden jullie?",
+        "answer": "Elke affiliate krijgt toegang tot toegewijde affiliate managers die kunnen helpen met campagneoptimalisatie, creatieve middelen en groeistrategieën. We hebben ook 24/7 technische ondersteuning."
+      },
+      "q9": {
+        "question": "Zijn er beperkingen voor promotiemethoden?",
+        "answer": "We verbieden spam, bieden op handelsmerken, cookie stuffing en misleidende claims. Voor de rest staat het je vrij om promotie te maken via websites, sociale media, betaalde advertenties, e-mailmarketing (naar geabonneerde lijsten) en meer."
+      },
+      "q10": {
+        "question": "Hoe volg ik mijn prestaties?",
+        "answer": "Je krijgt toegang tot een uitgebreid dashboard met realtime statistieken over klikken, conversies, verdiensten, conversiepercentages en meer. Je kunt op elk moment gedetailleerde rapporten exporteren."
+      },
+      "q11": {
+        "question": "Wat zijn de beschikbare betalingsmethoden?",
+        "answer": "We bieden meerdere uitbetalingsopties: Bitcoin, Ethereum, Litecoin, bankoverschrijving en PayPal (waar beschikbaar). Kies de methode die voor jou het beste werkt."
+      },
+      "q12": {
+        "question": "Hoe lang moet ik wachten op betaling?",
+        "answer": "Commissies worden binnen 60 dagen na elke verkoop uitbetaald. Voor cryptocurrency-betalingen van cryptoklanten kunnen uitbetalingen onmiddellijk worden verwerkt zonder minimumdrempel."
+      },
+      "q13": {
+        "question": "Wat is de duur van de tracking cookie?",
+        "answer": "Onze affiliate cookie duurt 60 dagen, zodat je referrals genoeg tijd hebben om een aankoop te doen terwijl jij nog steeds krediet krijgt."
+      },
+      "q14": {
+        "question": "Is de commissie terugkerend?",
+        "answer": "Ja! Je verdient 40% commissie op de eerste verkoop EN alle toekomstige verlengingen voor de hele levensduur van de klant. Dit betekent passief terugkerend inkomen zolang de klant actief blijft."
+      },
+      "q15": {
+        "question": "Heb ik toegang tot realtime rapportage?",
+        "answer": "Absoluut! Je krijgt 24/7 toegang tot het dashboard met realtime statistieken over klikken, conversies, verdiensten en meer. Exporteer gedetailleerde rapporten wanneer je ze nodig hebt."
+      },
+      "q16": {
+        "question": "Ondersteunen jullie postbacktracking?",
+        "answer": "Ja, we ondersteunen postback URL's voor realtime conversietracering. Hierdoor kun je integreren met je eigen trackingplatform voor volledige transparantie en optimalisatie."
+      }
+    },
+    "testimonials": {
+      "title": "Succesverhalen",
+      "subtitle": "Hoor van onze best presterende filialen",
+      "testimonial1": {
+        "quote": "Ik promoot al 10 jaar sites voor volwassenen en ReelPorn heeft de beste commissiestructuur die ik ooit heb gezien. De 40% lifetime recurring is onverslaanbaar. Ik verdien nu $8.000+ per maand.",
+        "author": "Mike Chen",
+        "role": "Super partner",
+        "earnings": "$8.000+/maand"
+      },
+      "testimonial2": {
+        "quote": "Het ondersteuningsteam is ongelooflijk. Mijn affiliate manager heeft me geholpen mijn campagnes te optimaliseren en mijn conversiepercentage te verdrievoudigen in slechts 2 maanden. Deze jongens geven echt om je succes.",
+        "author": "Sarah Johnson",
+        "role": "Prestatie Marketeer",
+        "earnings": "$5.200/maand"
+      },
+      "testimonial3": {
+        "quote": "Snelle crypto uitbetalingen zijn een game-changer. Geen weken meer wachten op cheques of te maken hebben met overboekingskosten. Ik word binnen enkele uren na het bereiken van mijn drempel uitbetaald.",
+        "author": "Alex Rodriguez",
+        "role": "Expert in verkeersarbitrage",
+        "earnings": "$12.000+/maand"
+      },
+      "testimonial4": {
+        "quote": "Ben 6 maanden geleden begonnen als beginner. Met hun promotiemateriaal en begeleiding ging ik van $200/maand naar $3.500/maand. Het groeipotentieel is echt.",
+        "author": "Emma Davis",
+        "role": "Schepper van inhoud",
+        "earnings": "$ 3500/maand"
+      },
+      "trustedBy": "Vertrouwd door 5.000+ affiliate marketeers wereldwijd",
+      "avgEarnings": "Gemiddelde affiliate verdient $2.400/maand"
+    },
+    "comparison": {
+      "title": "Waarom ReelPorn de concurrentie verslaat",
+      "subtitle": "Vergelijk ons affiliateprogramma met andere platforms voor volwassenen",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Concurrent A",
+      "competitor2": "Concurrent B",
+      "features": {
+        "commission": "Commissietarief",
+        "recurring": "Terugkerende commissies",
+        "cookieDuration": "Duur Cookie",
+        "minimumPayout": "Minimum uitbetaling",
+        "payoutSpeed": "Uitbetalingssnelheid",
+        "cryptoPayouts": "Crypto Uitbetalingen",
+        "dashboard": "Real-time dashboard",
+        "support": "Toegewijde ondersteuning",
+        "postbacks": "Postback-integratie",
+        "promoMaterials": "Promomaterialen"
+      },
+      "values": {
+        "commission_reelporn": "40% Levenslang",
+        "commission_competitor1": "25% eerste maand",
+        "commission_competitor2": "30% Terugkerend",
+        "recurring_reelporn": "Levenslang",
+        "recurring_competitor1": "Geen",
+        "recurring_competitor2": "6 maanden",
+        "cookie_reelporn": "60 dagen",
+        "cookie_competitor1": "30 dagen",
+        "cookie_competitor2": "45 dagen",
+        "minimum_reelporn": "$0 (crypto)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Binnen 60 dagen",
+        "speed_competitor1": "Net 30",
+        "speed_competitor2": "45-60 dagen",
+        "crypto_yes": "Ja",
+        "crypto_no": "Geen",
+        "yes": "Ja",
+        "no": "Geen",
+        "limited": "Beperkt"
+      },
+      "footer": "Word lid van het partnerprogramma dat jouw succes op de eerste plaats zet"
     }
   }
 }

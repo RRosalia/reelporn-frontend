@@ -1675,6 +1675,227 @@
     "meta": {
       "title": "Affiliateprogram - Tjäna 40% livstidsprovision | ReelPorn",
       "description": "Gå med i ReelPorns affiliateprogram och tjäna 40% livstidsprovision på varje försäljning. Få återkommande intäkter för alltid med vårt högkonverterande affiliateprogram för vuxna. 60-dagars cookie-varaktighet, kryptoutbetalningar och support i världsklass."
+    },
+    "earnings": {
+      "realExamplesTab": "Verkliga exempel",
+      "calculatorTab": "Kalkylator för intjäning"
+    },
+    "calculator": {
+      "title": "Beräkna din inkomst",
+      "subtitle": "Se hur mycket du kan tjäna med vårt affiliateprogram",
+      "referrals": "Månatliga värvningar",
+      "avgSpend": "Genomsnittlig kundomsättning (USD)",
+      "calculate": "Beräkna",
+      "monthlyEarnings": "Monthly Earnings",
+      "yearlyEarnings": "Yearly Earnings",
+      "lifetimeEarnings": "Livstidsvärde (24 månaders genomsnitt)",
+      "lifetimeNote": "Baserat på 24 månaders genomsnittlig kundlivslängd",
+      "referralsPerMonth": "remisser/månad",
+      "perCustomer": "per kund",
+      "disclaimer": "Denna kalkylator ger beräknade intäkter baserat på dina inmatningar. De faktiska intäkterna kan variera beroende på kundernas beteende och hur länge de stannar kvar."
+    },
+    "examples": {
+      "title": "Exempel på verklig intjäning",
+      "subtitle": "Se hur mycket våra bästa affiliates tjänar",
+      "example1": {
+        "title": "Affiliate för nybörjare",
+        "referrals": "10 remisser/månad",
+        "avgSpend": "$30 per kund",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Perfekt för dig som precis har börjat. Även med blygsam trafik kan du tjäna konsekvent inkomst."
+      },
+      "example2": {
+        "title": "Växande Affiliate",
+        "referrals": "50 remisser/månad",
+        "avgSpend": "50 USD per kund",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "Med en etablerad publik kan du skala upp dina intäkter avsevärt."
+      },
+      "example3": {
+        "title": "Power Affiliate",
+        "referrals": "200 remisser/månad",
+        "avgSpend": "75 USD per kund",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Affiliates i toppklass utnyttjar flera trafikkällor för att maximera sin intjäningspotential."
+      },
+      "note": "Alla intäkter är återkommande livstidsprovisioner. Dessa exempel visar konservativa uppskattningar - många av våra medlemsförbund tjänar ännu mer!"
+    },
+    "paymentDetails": {
+      "title": "Betalningsinformation och villkor",
+      "subtitle": "Tydlig och transparent information om utbetalningar",
+      "minimumPayout": {
+        "title": "Minsta utbetalning",
+        "amount": "$50 USD",
+        "description": "Ingen minsta utbetalningströskel för kryptovalutabetalningar. Traditionella betalningsmetoder har ett minimum på 50 USD."
+      },
+      "paymentFrequency": {
+        "title": "Betalningsfrekvens",
+        "frequency": "Inom 60 dagar",
+        "description": "Provisioner betalas ut inom 60 dagar efter varje kvalificerad försäljning. Utbetalningar i kryptovaluta behandlas snabbare."
+      },
+      "paymentMethods": {
+        "title": "Betalningsmetoder",
+        "methods": "Krypto, banköverföring, PayPal",
+        "description": "Välj mellan flera olika utbetalningsalternativ: Bitcoin, Ethereum, Litecoin, banköverföring eller PayPal (där det är tillgängligt)."
+      },
+      "trackingWindow": {
+        "title": "Fönster för spårning",
+        "duration": "60 dagar",
+        "description": "Förlängd 60-dagars cookie-period säkerställer att du får kredit även om kunden tar tid på sig att bestämma sig."
+      },
+      "commissionType": {
+        "title": "Typ av kommission",
+        "type": "Återkommande Livstid",
+        "description": "Tjäna 40% provision på den första försäljningen och alla framtida förnyelser under hela kundens livstid."
+      },
+      "reporting": {
+        "title": "Rapportering i realtid",
+        "access": "tillgång till instrumentpanelen 24/7",
+        "description": "Se klick, konverteringar och intäkter i realtid. Exportera detaljerade rapporter för dina register."
+      }
+    },
+    "faq": {
+      "title": "Vanliga frågor om affiliateprogram",
+      "subtitle": "Vanliga frågor om vårt affiliateprogram",
+      "q1": {
+        "question": "Hur mycket kan jag egentligen tjäna?",
+        "answer": "Din inkomstpotential är obegränsad. Med en livstidsprovision på 40% på all försäljning tjänar många av våra bästa dotterbolag $ 5,000 - $ 10,000 + per månad. Din framgång beror på din trafikkvalitet, marknadsföringsmetoder och engagemang."
+      },
+      "q2": {
+        "question": "När kommer jag att få betalt?",
+        "answer": "Provisioner betalas inom 60 dagar efter varje försäljning. För kryptovalutabetalningar från kryptokunder kan utbetalningar behandlas omedelbart utan minimitröskel. Traditionella betalningsmetoder (banköverföring, PayPal) har ett minimum på 50 USD."
+      },
+      "q3": {
+        "question": "Finns det en minsta utbetalning?",
+        "answer": "Det finns ingen minsta utbetalning för kryptovalutabetalningar. För traditionella betalningsmetoder som banköverföring eller PayPal är minimibeloppet $50 USD."
+      },
+      "q4": {
+        "question": "Hur länge håller kakan?",
+        "answer": "Vår affiliate-cookie varar i 60 dagar. Det innebär att om någon klickar på din hänvisningslänk har du 60 dagar på dig för dem att göra ett köp och du får fortfarande kredit."
+      },
+      "q5": {
+        "question": "Vilket marknadsföringsmaterial tillhandahåller du?",
+        "answer": "Vi tillhandahåller banners med hög konvertering, målsidor, textlänkar, e-postmallar och reklamtexter. Allt material testas regelbundet och optimeras för maximal konvertering."
+      },
+      "q6": {
+        "question": "Kan jag använda betald annonsering?",
+        "answer": "Ja! Du kan använda Google Ads, Facebook Ads, native advertising, PPV-trafik och mycket mer. Vi tillhandahåller riktlinjer för annonsering som uppfyller kraven och hjälper dig att optimera dina kampanjer."
+      },
+      "q7": {
+        "question": "Erbjuder ni integration av postback/tracking?",
+        "answer": "Ja, vi stöder postback-URL:er för konverteringsspårning i realtid. Detta gör att du kan integrera med din egen spårningsplattform för fullständig transparens."
+      },
+      "q8": {
+        "question": "Vilken typ av stöd erbjuder ni?",
+        "answer": "Varje affiliate får tillgång till dedikerade affiliate managers som kan hjälpa till med kampanjoptimering, kreativa tillgångar och tillväxtstrategier. Vi har också teknisk support 24/7."
+      },
+      "q9": {
+        "question": "Finns det några begränsningar för marknadsföringsmetoder?",
+        "answer": "Vi förbjuder spam, varumärkesbudgivning, cookie stuffing och vilseledande påståenden. I övrigt är du fri att marknadsföra med hjälp av webbplatser, sociala medier, betalda annonser, e-postmarknadsföring (till listor med godkända användare) med mera."
+      },
+      "q10": {
+        "question": "Hur följer jag upp min prestation?",
+        "answer": "Du får tillgång till en omfattande instrumentpanel som visar statistik i realtid över klick, konverteringar, intäkter, konverteringsfrekvenser med mera. Exportera detaljerade rapporter när som helst."
+      },
+      "q11": {
+        "question": "Vilka betalningsmetoder är tillgängliga?",
+        "answer": "Vi erbjuder flera utbetalningsalternativ: Bitcoin, Ethereum, Litecoin, banköverföring och PayPal (där det är tillgängligt). Välj den metod som fungerar bäst för dig."
+      },
+      "q12": {
+        "question": "Hur länge måste jag vänta på betalning?",
+        "answer": "Provisioner betalas inom 60 dagar efter varje försäljning. För kryptovalutabetalningar från kryptokunder kan utbetalningar behandlas omedelbart utan minimitröskel."
+      },
+      "q13": {
+        "question": "Vad är spårningscookiens varaktighet?",
+        "answer": "Vår affiliate-cookie varar i 60 dagar, vilket ger dina värvningar gott om tid att göra ett köp medan du fortfarande får kredit."
+      },
+      "q14": {
+        "question": "Är provisionen återkommande?",
+        "answer": "Ja! Du tjänar 40% provision på den första försäljningen OCH alla framtida förnyelser under kundens livstid. Detta innebär passiva återkommande inkomster så länge kunden är aktiv."
+      },
+      "q15": {
+        "question": "Kan jag få tillgång till rapportering i realtid?",
+        "answer": "Ja, absolut! Du får tillgång till instrumentpanelen 24/7 med statistik i realtid om klick, konverteringar, intäkter och mer. Exportera detaljerade rapporter när du behöver dem."
+      },
+      "q16": {
+        "question": "Har du stöd för postback-spårning?",
+        "answer": "Ja, vi stöder postback-URL:er för konverteringsspårning i realtid. Detta gör att du kan integrera med din egen spårningsplattform för fullständig transparens och optimering."
+      }
+    },
+    "testimonials": {
+      "title": "Framgångsrika berättelser",
+      "subtitle": "Hör från våra bäst presterande dotterbolag",
+      "testimonial1": {
+        "quote": "Jag har marknadsfört vuxenwebbplatser i 10 år, och ReelPorn har den bästa provisionsstrukturen jag någonsin har sett. Den återkommande livstiden på 40% är oslagbar. Jag tjänar $ 8,000 + per månad nu.",
+        "author": "Mike Chen",
+        "role": "Super Affiliate",
+        "earnings": "$8 000+/månad"
+      },
+      "testimonial2": {
+        "quote": "Supportteamet är otroligt. Min affiliate manager hjälpte mig att optimera mina kampanjer och tredubbla min konverteringsgrad på bara 2 månader. De här killarna bryr sig faktiskt om din framgång.",
+        "author": "Sarah Johnson",
+        "role": "Prestationsinriktad marknadsförare",
+        "earnings": "5 200 USD/månad"
+      },
+      "testimonial3": {
+        "quote": "Snabba kryptoutbetalningar är en spelväxlare. Inga fler veckor att vänta på checkar eller hantera banköverföringsavgifter. Jag får betalt inom några timmar efter att jag nått min tröskel.",
+        "author": "Alex Rodriguez",
+        "role": "Expert på trafikarbitrage",
+        "earnings": "$12 000+/månad"
+      },
+      "testimonial4": {
+        "quote": "Började som nybörjare för 6 månader sedan. Med deras reklammaterial och vägledning gick jag från $ 200 / månad till $ 3,500 / månad. Tillväxtpotentialen är verklig.",
+        "author": "Emma Davis",
+        "role": "Skapare av innehåll",
+        "earnings": "3 500 USD/månad"
+      },
+      "trustedBy": "Betrodda av 5 000+ affiliate-marknadsförare över hela världen",
+      "avgEarnings": "Genomsnittlig affiliate tjänar 2 400 USD/månad"
+    },
+    "comparison": {
+      "title": "Why ReelPorn Beats the Competition",
+      "subtitle": "Jämför vårt affiliateprogram med andra plattformar för vuxna",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Konkurrent A",
+      "competitor2": "Konkurrent B",
+      "features": {
+        "commission": "Provisionssats",
+        "recurring": "Återkommande provisioner",
+        "cookieDuration": "Cookie Varaktighet",
+        "minimumPayout": "Minsta utbetalning",
+        "payoutSpeed": "Utbetalningshastighet",
+        "cryptoPayouts": "Kryptoutbetalningar",
+        "dashboard": "Instrumentpanel i realtid",
+        "support": "Dedikerad support",
+        "postbacks": "Integration av postback",
+        "promoMaterials": "Kampanjmaterial"
+      },
+      "values": {
+        "commission_reelporn": "40% Livslängd",
+        "commission_competitor1": "25% Första månaden",
+        "commission_competitor2": "30% Återkommande",
+        "recurring_reelporn": "Livslängd",
+        "recurring_competitor1": "Nej",
+        "recurring_competitor2": "6 månader",
+        "cookie_reelporn": "60 dagar",
+        "cookie_competitor1": "30 dagar",
+        "cookie_competitor2": "45 dagar",
+        "minimum_reelporn": "$0 (krypto)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Inom 60 dagar",
+        "speed_competitor1": "Netto 30",
+        "speed_competitor2": "45-60 dagar",
+        "crypto_yes": "Ja",
+        "crypto_no": "Nej",
+        "yes": "Ja",
+        "no": "Nej",
+        "limited": "Begränsad"
+      },
+      "footer": "Gå med i ett affiliateprogram som faktiskt sätter din framgång i första rummet"
     }
   }
 }
