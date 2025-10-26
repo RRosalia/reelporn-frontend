@@ -144,9 +144,9 @@ function Footer() {
                             </li>
                             {affiliateUrl && (
                                 <li>
-                                    <a href={affiliateUrl} target="_blank" rel="noopener noreferrer">
+                                    <Link href="/affiliate">
                                         {t('footer.affiliate')}
-                                    </a>
+                                    </Link>
                                 </li>
                             )}
                         </ul>

@@ -1557,5 +1557,118 @@
     "passwordsDoNotMatch": "Passwords do not match",
     "showPassword": "Show password",
     "hidePassword": "Hide password"
+  },
+  "welcome": {
+    "welcomeTitle": "Welcome, {name}!",
+    "accountCreated": "Your account has been created successfully.",
+    "freeAccessTitle": "Free Access",
+    "freeAccessDesc": "Browse and watch limited content for free",
+    "limitedContentTitle": "Limited Content",
+    "limitedContentDesc": "Upgrade to access our full premium library",
+    "continueFree": "Continue with Free Account",
+    "unlockPremium": "Unlock Premium",
+    "premiumSubtitle": "Get full access to exclusive content",
+    "benefit1": "Unlimited access to all videos",
+    "benefit2": "Ad-free streaming experience",
+    "benefit3": "HD & 4K video quality",
+    "benefit4": "Download videos for offline viewing",
+    "upgradeToPremium": "Upgrade to Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Top Performing Affiliate Program",
+      "title": "Earn 40% Commission Forever",
+      "subtitle": "Join the highest-paying affiliate program in adult entertainment. Promote premium content and earn generous commissions on every sale - for life!",
+      "highlight1": "40% lifetime commission",
+      "highlight2": "60-day cookie duration",
+      "highlight3": "World-class support",
+      "joinNow": "Join Affiliate Program"
+    },
+    "stats": {
+      "commission": "Lifetime Commission",
+      "cookieDays": "Day Cookie Duration",
+      "support": "Support Available"
+    },
+    "benefits": {
+      "title": "Why Partner With ReelPorn?",
+      "subtitle": "Industry-leading commission rates and cutting-edge tools to maximize your earnings",
+      "commission": {
+        "title": "40% Lifetime Commission",
+        "description": "Earn 40% commission on every sale for the entire lifetime of each customer you refer. No caps, no limits - just ongoing passive income."
+      },
+      "cookiePolicy": {
+        "title": "60-Day Cookie Duration",
+        "description": "Extended 60-day cookie window ensures you get credited for conversions even if customers take time to decide. Your referrals are protected."
+      },
+      "realtime": {
+        "title": "Real-Time Analytics",
+        "description": "Track your traffic, conversions, and earnings in real-time with our advanced dashboard. See exactly what's working and optimize your campaigns instantly."
+      },
+      "postbacks": {
+        "title": "Postback Integration",
+        "description": "Install postbacks to receive real-time notifications for every conversion. Integrate seamlessly with your tracking systems for complete transparency."
+      },
+      "support": {
+        "title": "World-Class Support",
+        "description": "Dedicated affiliate managers ready to help you succeed. Get expert advice on campaign optimization, promotional materials, and growth strategies."
+      },
+      "cryptoPayouts": {
+        "title": "Fast Crypto Payouts",
+        "description": "Get paid quickly and securely via cryptocurrency for all crypto transactions. Instant payouts with no delays or minimum thresholds."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Sign Up for Free",
+        "description": "Create your affiliate account in minutes. Get instant access to your unique referral links and promotional materials."
+      },
+      "step2": {
+        "title": "Promote ReelPorn",
+        "description": "Share your referral links on your website, social media, or advertising campaigns. Use our high-converting banners and landing pages."
+      },
+      "step3": {
+        "title": "Track Performance",
+        "description": "Monitor your traffic, clicks, conversions, and earnings in real-time through your personalized dashboard. Optimize what works best."
+      },
+      "step4": {
+        "title": "Get Paid",
+        "description": "Receive your commissions within 60 days of each sale. Choose from multiple payout methods including cryptocurrency for fast transactions."
+      }
+    },
+    "features": {
+      "title": "Powerful Affiliate Tools",
+      "dashboard": {
+        "title": "Advanced Dashboard",
+        "description": "Comprehensive analytics showing clicks, conversions, earnings, and performance metrics in real-time."
+      },
+      "analytics": {
+        "title": "Detailed Reporting",
+        "description": "Access detailed reports with conversion rates, revenue breakdowns, and traffic sources to optimize your campaigns."
+      },
+      "tracking": {
+        "title": "Reliable Tracking",
+        "description": "Industry-leading tracking technology ensures every referral is accurately attributed and credited to your account."
+      },
+      "payouts": {
+        "title": "Flexible Payouts",
+        "description": "60-day payout window with multiple payment options including cryptocurrency for customers who pay in crypto."
+      }
+    },
+    "commission": {
+      "title": "Unbeatable Commission Structure",
+      "description": "We offer the industry's highest commission rates because we believe in rewarding our partners generously. Your success is our success.",
+      "item1": "40% commission on all subscription sales",
+      "item2": "Lifetime recurring commissions - earn forever",
+      "item3": "No commission caps or earning limits",
+      "item4": "Fast crypto payouts for crypto transactions",
+      "tagline": "Lifetime Recurring"
+    },
+    "cta": {
+      "title": "Ready to Start Earning?",
+      "description": "Join thousands of successful affiliates earning substantial income by promoting ReelPorn. Sign up today and start maximizing your earning potential!",
+      "button": "Apply Now",
+      "note": "Free to join - No monthly fees or commitments"
+    }
   }
 }

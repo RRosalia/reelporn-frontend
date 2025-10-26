@@ -156,6 +156,18 @@ export const routing = defineRouting({
       sv: '/om-oss',
       cs: '/o-nas'
     },
+    '/affiliate': {
+      en: '/affiliate',
+      nl: '/partner-programma',
+      de: '/partnerprogramm',
+      fr: '/programme-affilie',
+      es: '/programa-afiliados',
+      it: '/programma-affiliati',
+      pl: '/program-partnerski',
+      pt: '/programa-afiliados',
+      sv: '/affiliateprogram',
+      cs: '/affiliate-program'
+    },
     '/payment/crypto': {
       en: '/payment/crypto',
       nl: '/betaling/crypto',

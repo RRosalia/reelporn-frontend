@@ -7,6 +7,7 @@
  */
 export interface AffiliateLeadData {
   ref: string;
+  click_id?: string; // Existing click_id to send when already tracked
   sub1?: string;
   sub2?: string;
   sub3?: string;
@@ -17,6 +18,7 @@ export interface AffiliateLeadData {
  */
 export interface AffiliateLeadResponse {
   data: {
-    id: string; // UUID click_id from backend
+    click_id: string; // UUID click_id from backend
+    expiration_date: string; // ISO 8601 timestamp for cookie expiration
   };
 }
