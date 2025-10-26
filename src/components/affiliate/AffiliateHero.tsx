@@ -1,4 +1,5 @@
 import React from "react";
+import { trackAffiliateCTAClick } from "@/lib/utils/analytics";
 
 interface AffiliateHeroProps {
   badge: string;
@@ -51,8 +52,11 @@ export default function AffiliateHero({
           </div>
           <div className="flex flex-wrap justify-center gap-5">
             <button
-              className="inline-flex items-center gap-2.5 rounded-[35px] border-none bg-gradient-to-br from-[#c2338a] to-[#f8c537] px-12 py-4 text-xl font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(194,51,138,0.5)]"
-              onClick={onApplyClick}
+              className="inline-flex cursor-pointer items-center gap-2.5 rounded-[35px] border-none bg-gradient-to-br from-[#c2338a] to-[#f8c537] px-12 py-4 text-xl font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(194,51,138,0.5)]"
+              onClick={() => {
+                trackAffiliateCTAClick("hero");
+                onApplyClick();
+              }}
             >
               <i className="bi bi-rocket-takeoff"></i>
               {joinNow}

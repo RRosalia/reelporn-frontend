@@ -1,5 +1,11 @@
 import React from "react";
 
+interface Stat {
+  number: string;
+  label: string;
+  icon: string;
+}
+
 interface AffiliateCommissionProps {
   title: string;
   description: string;
@@ -8,6 +14,7 @@ interface AffiliateCommissionProps {
   item3: string;
   item4: string;
   tagline: string;
+  stats: Stat[];
 }
 
 export default function AffiliateCommission({
@@ -18,6 +25,7 @@ export default function AffiliateCommission({
   item3,
   item4,
   tagline,
+  stats,
 }: AffiliateCommissionProps) {
   return (
     <section className="bg-white/[0.02] py-20">
@@ -49,11 +57,31 @@ export default function AffiliateCommission({
           </div>
           <div className="min-w-[250px] text-center">
             <div className="mb-5 inline-block rounded-[20px] bg-gradient-to-br from-[#c2338a] to-[#f8c537] px-12 py-10">
-              <span className="text-[80px] font-black leading-none text-white">40</span>
+              <span className="text-[80px] font-black leading-none text-white">
+                40
+              </span>
               <span className="text-6xl font-bold text-white">%</span>
             </div>
             <p className="text-lg font-semibold text-white/90">{tagline}</p>
           </div>
+        </div>
+
+        {/* Stats integrated below commission */}
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {stats.map((stat, idx) => (
+            <div
+              key={idx}
+              className="rounded-xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:border-[rgba(248,197,55,0.3)]"
+            >
+              <i className={`bi ${stat.icon} mb-3 text-3xl text-[#f8c537]`}></i>
+              <div className="mb-2 text-3xl font-black text-white">
+                {stat.number}
+              </div>
+              <div className="text-sm font-medium uppercase tracking-wide text-white/70">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

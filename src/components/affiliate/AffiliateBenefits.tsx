@@ -7,6 +7,11 @@ interface Benefit {
   highlight: string;
 }
 
+interface Step {
+  title: string;
+  description: string;
+}
+
 interface AffiliateBenefitsProps {
   title: string;
   subtitle: string;
