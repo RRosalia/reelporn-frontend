@@ -23,22 +23,6 @@ if (typeof window !== 'undefined') {
  */
 let echoConfigured = false;
 
-interface EchoConfig {
-  broadcaster: 'reverb' | 'pusher' | 'ably' | 'socket.io' | 'null';
-  key: string;
-  wsHost: string;
-  wsPort: number;
-  wssPort: number;
-  forceTLS: boolean;
-  enabledTransports: string[];
-  authEndpoint: string;
-  auth?: {
-    headers: {
-      Authorization: string;
-    };
-  };
-}
-
 interface EchoConnector {
   pusher?: {
     connection: {

@@ -1555,6 +1555,8 @@
     "passwordRequired": "Password is required",
     "passwordTooShort": "Password must be at least 6 characters",
     "passwordsDoNotMatch": "Passwords do not match",
+    "nameRequired": "Name is required",
+    "passwordConfirmationRequired": "Password confirmation is required",
     "showPassword": "Show password",
     "hidePassword": "Hide password"
   },
@@ -1673,6 +1675,227 @@
       "description": "Join thousands of successful affiliates earning substantial income by promoting ReelPorn. Sign up today and start maximizing your earning potential!",
       "button": "Apply Now",
       "note": "Free to join - No monthly fees or commitments"
+    },
+    "earnings": {
+      "realExamplesTab": "Real Examples",
+      "calculatorTab": "Earnings Calculator"
+    },
+    "calculator": {
+      "title": "Calculate Your Earnings",
+      "subtitle": "See how much you can earn with our affiliate program",
+      "referrals": "Monthly Referrals",
+      "avgSpend": "Average Customer Spend (USD)",
+      "calculate": "Calculate",
+      "monthlyEarnings": "Monthly Earnings",
+      "yearlyEarnings": "Yearly Earnings",
+      "lifetimeEarnings": "Lifetime Value (24 mo avg)",
+      "lifetimeNote": "Based on 24-month average customer lifetime",
+      "referralsPerMonth": "referrals/month",
+      "perCustomer": "per customer",
+      "disclaimer": "This calculator provides estimated earnings based on your inputs. Actual earnings may vary based on customer behavior and retention rates."
+    },
+    "examples": {
+      "title": "Real Earnings Examples",
+      "subtitle": "See how much our top affiliates are making",
+      "example1": {
+        "title": "Beginner Affiliate",
+        "referrals": "10 referrals/month",
+        "avgSpend": "$30 per customer",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Perfect for those just starting out. Even with modest traffic, you can earn consistent income."
+      },
+      "example2": {
+        "title": "Growing Affiliate",
+        "referrals": "50 referrals/month",
+        "avgSpend": "$50 per customer",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "With an established audience, you can scale your earnings significantly."
+      },
+      "example3": {
+        "title": "Power Affiliate",
+        "referrals": "200 referrals/month",
+        "avgSpend": "$75 per customer",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Top-tier affiliates leverage multiple traffic sources to maximize their earnings potential."
+      },
+      "note": "All earnings are recurring lifetime commissions. These examples show conservative estimates - many of our affiliates earn even more!"
+    },
+    "paymentDetails": {
+      "title": "Payment Details & Terms",
+      "subtitle": "Clear and transparent payout information",
+      "minimumPayout": {
+        "title": "Minimum Payout",
+        "amount": "$50 USD",
+        "description": "No minimum payout threshold for cryptocurrency payments. Traditional payment methods have a $50 minimum."
+      },
+      "paymentFrequency": {
+        "title": "Payment Frequency",
+        "frequency": "Within 60 Days",
+        "description": "Commissions are paid within 60 days after each qualifying sale. Cryptocurrency payouts are processed faster."
+      },
+      "paymentMethods": {
+        "title": "Payment Methods",
+        "methods": "Crypto, Wire Transfer, PayPal",
+        "description": "Choose from multiple payout options: Bitcoin, Ethereum, Litecoin, bank wire transfer, or PayPal (where available)."
+      },
+      "trackingWindow": {
+        "title": "Tracking Window",
+        "duration": "60 Days",
+        "description": "Extended 60-day cookie duration ensures you get credit even if the customer takes time to decide."
+      },
+      "commissionType": {
+        "title": "Commission Type",
+        "type": "Recurring Lifetime",
+        "description": "Earn 40% commission on the initial sale and all future renewals for the lifetime of the customer."
+      },
+      "reporting": {
+        "title": "Real-Time Reporting",
+        "access": "24/7 Dashboard Access",
+        "description": "View clicks, conversions, and earnings in real-time. Export detailed reports for your records."
+      }
+    },
+    "faq": {
+      "title": "Affiliate Program FAQ",
+      "subtitle": "Common questions about our affiliate program",
+      "q1": {
+        "question": "How much can I really earn?",
+        "answer": "Your earnings potential is unlimited. With a 40% lifetime commission on all sales, many of our top affiliates earn $5,000-$10,000+ per month. Your success depends on your traffic quality, promotional methods, and dedication."
+      },
+      "q2": {
+        "question": "When will I get paid?",
+        "answer": "Commissions are paid within 60 days after each sale. For cryptocurrency payments from crypto customers, payouts can be processed immediately with no minimum threshold. Traditional payment methods (wire transfer, PayPal) have a $50 minimum."
+      },
+      "q3": {
+        "question": "Is there a minimum payout?",
+        "answer": "There's no minimum payout for cryptocurrency payments. For traditional payment methods like wire transfer or PayPal, the minimum is $50 USD."
+      },
+      "q4": {
+        "question": "How long does the cookie last?",
+        "answer": "Our affiliate cookie lasts 60 days. This means if someone clicks your referral link, you have 60 days for them to make a purchase and you'll still get credit."
+      },
+      "q5": {
+        "question": "What promotional materials do you provide?",
+        "answer": "We provide high-converting banners, landing pages, text links, email templates, and promotional copy. All materials are regularly tested and optimized for maximum conversions."
+      },
+      "q6": {
+        "question": "Can I use paid advertising?",
+        "answer": "Yes! You can use Google Ads, Facebook Ads, native advertising, PPV traffic, and more. We provide guidelines for compliant advertising and help you optimize your campaigns."
+      },
+      "q7": {
+        "question": "Do you offer postback/tracking integration?",
+        "answer": "Yes, we support postback URLs for real-time conversion tracking. This allows you to integrate with your own tracking platform for complete transparency."
+      },
+      "q8": {
+        "question": "What kind of support do you provide?",
+        "answer": "Every affiliate gets access to dedicated affiliate managers who can help with campaign optimization, creative assets, and growth strategies. We also have 24/7 technical support."
+      },
+      "q9": {
+        "question": "Are there any restrictions on promotional methods?",
+        "answer": "We prohibit spam, trademark bidding, cookie stuffing, and misleading claims. Otherwise, you're free to promote using websites, social media, paid ads, email marketing (to opted-in lists), and more."
+      },
+      "q10": {
+        "question": "How do I track my performance?",
+        "answer": "You'll get access to a comprehensive dashboard showing real-time stats on clicks, conversions, earnings, conversion rates, and more. Export detailed reports anytime."
+      },
+      "q11": {
+        "question": "What are the payment methods available?",
+        "answer": "We offer multiple payout options: Bitcoin, Ethereum, Litecoin, bank wire transfer, and PayPal (where available). Choose the method that works best for you."
+      },
+      "q12": {
+        "question": "How long do I have to wait for payment?",
+        "answer": "Commissions are paid within 60 days after each sale. For cryptocurrency payments from crypto customers, payouts can be processed immediately with no minimum threshold."
+      },
+      "q13": {
+        "question": "What is the tracking cookie duration?",
+        "answer": "Our affiliate cookie lasts 60 days, giving your referrals plenty of time to make a purchase while you still get credit."
+      },
+      "q14": {
+        "question": "Is the commission recurring?",
+        "answer": "Yes! You earn 40% commission on the initial sale AND all future renewals for the lifetime of the customer. This means passive recurring income for as long as the customer remains active."
+      },
+      "q15": {
+        "question": "Can I access real-time reporting?",
+        "answer": "Absolutely! You get 24/7 dashboard access with real-time stats on clicks, conversions, earnings, and more. Export detailed reports whenever you need them."
+      },
+      "q16": {
+        "question": "Do you support postback tracking?",
+        "answer": "Yes, we support postback URLs for real-time conversion tracking. This allows you to integrate with your own tracking platform for complete transparency and optimization."
+      }
+    },
+    "testimonials": {
+      "title": "Success Stories",
+      "subtitle": "Hear from our top-performing affiliates",
+      "testimonial1": {
+        "quote": "I've been promoting adult sites for 10 years, and ReelPorn has the best commission structure I've ever seen. The 40% lifetime recurring is unbeatable. I'm making $8,000+ per month now.",
+        "author": "Mike Chen",
+        "role": "Super Affiliate",
+        "earnings": "$8,000+/month"
+      },
+      "testimonial2": {
+        "quote": "The support team is incredible. My affiliate manager helped me optimize my campaigns and triple my conversion rate in just 2 months. These guys actually care about your success.",
+        "author": "Sarah Johnson",
+        "role": "Performance Marketer",
+        "earnings": "$5,200/month"
+      },
+      "testimonial3": {
+        "quote": "Fast crypto payouts are a game-changer. No more waiting weeks for checks or dealing with wire transfer fees. I get paid within hours of hitting my threshold.",
+        "author": "Alex Rodriguez",
+        "role": "Traffic Arbitrage Expert",
+        "earnings": "$12,000+/month"
+      },
+      "testimonial4": {
+        "quote": "Started as a beginner 6 months ago. With their promotional materials and guidance, I went from $200/month to $3,500/month. The growth potential is real.",
+        "author": "Emma Davis",
+        "role": "Content Creator",
+        "earnings": "$3,500/month"
+      },
+      "trustedBy": "Trusted by 5,000+ affiliate marketers worldwide",
+      "avgEarnings": "Average affiliate earns $2,400/month"
+    },
+    "comparison": {
+      "title": "Why ReelPorn Beats the Competition",
+      "subtitle": "Compare our affiliate program to other adult platforms",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Competitor A",
+      "competitor2": "Competitor B",
+      "features": {
+        "commission": "Commission Rate",
+        "recurring": "Recurring Commissions",
+        "cookieDuration": "Cookie Duration",
+        "minimumPayout": "Minimum Payout",
+        "payoutSpeed": "Payout Speed",
+        "cryptoPayouts": "Crypto Payouts",
+        "dashboard": "Real-Time Dashboard",
+        "support": "Dedicated Support",
+        "postbacks": "Postback Integration",
+        "promoMaterials": "Promo Materials"
+      },
+      "values": {
+        "commission_reelporn": "40% Lifetime",
+        "commission_competitor1": "25% First Month",
+        "commission_competitor2": "30% Recurring",
+        "recurring_reelporn": "Lifetime",
+        "recurring_competitor1": "No",
+        "recurring_competitor2": "6 Months",
+        "cookie_reelporn": "60 Days",
+        "cookie_competitor1": "30 Days",
+        "cookie_competitor2": "45 Days",
+        "minimum_reelporn": "$0 (Crypto)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Within 60 Days",
+        "speed_competitor1": "Net 30",
+        "speed_competitor2": "45-60 Days",
+        "crypto_yes": "Yes",
+        "crypto_no": "No",
+        "yes": "Yes",
+        "no": "No",
+        "limited": "Limited"
+      },
+      "footer": "Join the affiliate program that actually puts your success first"
     }
   }
 }

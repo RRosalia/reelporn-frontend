@@ -1552,7 +1552,9 @@
     "showPassword": "Afficher le mot de passe",
     "hidePassword": "Cacher le mot de passe",
     "minimumCharacters": "Minimum 6 caractères",
-    "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères"
+    "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères",
+    "nameRequired": "Le nom est obligatoire",
+    "passwordConfirmationRequired": "La confirmation du mot de passe est requise"
   },
   "test": {
     "welcomeMessage": "Bienvenue {username}, vous avez {count} nouvelles notifications !",
@@ -1673,6 +1675,227 @@
     "meta": {
       "title": "Programme d'affiliation - Gagnez 40% de commission à vie | ReelPorn",
       "description": "Rejoignez le programme d'affiliation de ReelPorn et gagnez 40% de commission à vie sur chaque vente. Obtenez des revenus récurrents pour toujours grâce à notre programme d'affiliation pour adultes à fort taux de conversion. durée des cookies de 60 jours, paiements en crypto-monnaie et assistance de premier ordre."
+    },
+    "earnings": {
+      "realExamplesTab": "Exemples réels",
+      "calculatorTab": "Calculateur de revenus"
+    },
+    "calculator": {
+      "title": "Calculez vos revenus",
+      "subtitle": "Découvrez combien vous pouvez gagner avec notre programme d'affiliation",
+      "referrals": "Références mensuelles",
+      "avgSpend": "Dépenses moyennes des clients (USD)",
+      "calculate": "Calculer",
+      "monthlyEarnings": "Revenus mensuels",
+      "yearlyEarnings": "Gains annuels",
+      "lifetimeEarnings": "Valeur à vie (moyenne de 24 mois)",
+      "lifetimeNote": "Sur la base de la durée de vie moyenne des clients sur 24 mois",
+      "referralsPerMonth": "références/mois",
+      "perCustomer": "par client",
+      "disclaimer": "Ce calculateur fournit des estimations de revenus basées sur vos données. Les gains réels peuvent varier en fonction du comportement des clients et des taux de fidélisation."
+    },
+    "examples": {
+      "title": "Exemples de gains réels",
+      "subtitle": "Découvrez les revenus de nos meilleurs affiliés",
+      "example1": {
+        "title": "Affilié débutant",
+        "referrals": "10 références/mois",
+        "avgSpend": "30 $ par client",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Parfait pour ceux qui débutent. Même avec un trafic modeste, vous pouvez gagner un revenu régulier."
+      },
+      "example2": {
+        "title": "Croissance de l'affiliation",
+        "referrals": "50 références/mois",
+        "avgSpend": "50 $ par client",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "Avec un public établi, vous pouvez augmenter vos revenus de manière significative."
+      },
+      "example3": {
+        "title": "Affiliation de puissance",
+        "referrals": "200 références/mois",
+        "avgSpend": "75 $ par client",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Les affiliés de haut niveau exploitent plusieurs sources de trafic pour maximiser leur potentiel de gains."
+      },
+      "note": "Tous les gains sont des commissions récurrentes à vie. Ces exemples sont des estimations prudentes - beaucoup de nos affiliés gagnent encore plus !"
+    },
+    "paymentDetails": {
+      "title": "Détails et conditions de paiement",
+      "subtitle": "Des informations claires et transparentes sur les paiements",
+      "minimumPayout": {
+        "title": "Paiement minimum",
+        "amount": "50 USD",
+        "description": "Pas de seuil de paiement minimum pour les paiements en crypto-monnaies. Les méthodes de paiement traditionnelles ont un minimum de 50 $."
+      },
+      "paymentFrequency": {
+        "title": "Fréquence des paiements",
+        "frequency": "Dans les 60 jours",
+        "description": "Les commissions sont payées dans les 60 jours suivant chaque vente qualifiée. Les paiements en crypto-monnaies sont traités plus rapidement."
+      },
+      "paymentMethods": {
+        "title": "Modes de paiement",
+        "methods": "Crypto, virement bancaire, PayPal",
+        "description": "Choisissez parmi plusieurs options de paiement : Bitcoin, Ethereum, Litecoin, virement bancaire ou PayPal (si disponible)."
+      },
+      "trackingWindow": {
+        "title": "Fenêtre de suivi",
+        "duration": "60 jours",
+        "description": "La durée prolongée du cookie de 60 jours vous permet d'être crédité même si le client prend du temps pour se décider."
+      },
+      "commissionType": {
+        "title": "Type de Commission",
+        "type": "Récurrent à vie",
+        "description": "Gagnez une commission de 40 % sur la vente initiale et sur tous les renouvellements ultérieurs pendant toute la durée de vie du client."
+      },
+      "reporting": {
+        "title": "Rapports en temps réel",
+        "access": "accès au tableau de bord 24/7",
+        "description": "Visualisez les clics, les conversions et les gains en temps réel. Exportez des rapports détaillés pour vos archives."
+      }
+    },
+    "faq": {
+      "title": "FAQ sur le programme d'affiliation",
+      "subtitle": "Questions fréquentes sur notre programme d'affiliation",
+      "q1": {
+        "question": "Combien puis-je réellement gagner ?",
+        "answer": "Votre potentiel de gains est illimité. Avec une commission à vie de 40 % sur toutes les ventes, beaucoup de nos meilleurs affiliés gagnent entre 5 000 et 10 000 $ par mois. Votre succès dépend de la qualité de votre trafic, de vos méthodes de promotion et de votre dévouement."
+      },
+      "q2": {
+        "question": "Quand serai-je payé ?",
+        "answer": "Les commissions sont payées dans les 60 jours suivant chaque vente. Pour les paiements en crypto-monnaie effectués par les clients crypto, les paiements peuvent être traités immédiatement sans seuil minimum. Les méthodes de paiement traditionnelles (virement bancaire, PayPal) ont un minimum de 50 $."
+      },
+      "q3": {
+        "question": "Y a-t-il un montant minimum à payer ?",
+        "answer": "Il n'y a pas de paiement minimum pour les paiements en crypto-monnaies. Pour les méthodes de paiement traditionnelles telles que le virement bancaire ou PayPal, le minimum est de 50 USD."
+      },
+      "q4": {
+        "question": "Quelle est la durée de vie du biscuit ?",
+        "answer": "Notre cookie d'affiliation dure 60 jours. Cela signifie que si quelqu'un clique sur votre lien de référence, vous avez 60 jours pour qu'il effectue un achat et vous serez toujours crédité."
+      },
+      "q5": {
+        "question": "Quel matériel promotionnel fournissez-vous ?",
+        "answer": "Nous fournissons des bannières, des pages d'atterrissage, des liens textuels, des modèles d'e-mails et des textes promotionnels à fort taux de conversion. Tous les supports sont régulièrement testés et optimisés pour des conversions maximales."
+      },
+      "q6": {
+        "question": "Puis-je utiliser la publicité payante ?",
+        "answer": "Oui, vous pouvez utiliser Google Ads, Facebook Ads, la publicité native, le trafic PPV, etc. Nous fournissons des lignes directrices pour une publicité conforme et nous vous aidons à optimiser vos campagnes."
+      },
+      "q7": {
+        "question": "Proposez-vous une intégration postback/tracking ?",
+        "answer": "Oui, nous prenons en charge les URL de postback pour le suivi des conversions en temps réel. Cela vous permet d'intégrer votre propre plateforme de suivi pour une transparence totale."
+      },
+      "q8": {
+        "question": "Quel type de soutien apportez-vous ?",
+        "answer": "Chaque affilié a accès à des gestionnaires d'affiliation dédiés qui peuvent l'aider à optimiser ses campagnes, à créer des actifs créatifs et à mettre en place des stratégies de croissance. Nous disposons également d'une assistance technique 24 heures sur 24 et 7 jours sur 7."
+      },
+      "q9": {
+        "question": "Existe-t-il des restrictions concernant les méthodes de promotion ?",
+        "answer": "Nous interdisons le spam, les enchères sur les marques, le bourrage de cookies et les affirmations trompeuses. Par ailleurs, vous êtes libre d'utiliser des sites web, des médias sociaux, des publicités payantes, le marketing par courrier électronique (pour les listes opt-in) et bien d'autres moyens."
+      },
+      "q10": {
+        "question": "Comment puis-je suivre mes performances ?",
+        "answer": "Vous aurez accès à un tableau de bord complet affichant des statistiques en temps réel sur les clics, les conversions, les gains, les taux de conversion, etc. Exportez des rapports détaillés à tout moment."
+      },
+      "q11": {
+        "question": "Quels sont les modes de paiement disponibles ?",
+        "answer": "Nous offrons plusieurs options de paiement : Bitcoin, Ethereum, Litecoin, virement bancaire et PayPal (si disponible). Choisissez la méthode qui vous convient le mieux."
+      },
+      "q12": {
+        "question": "Combien de temps dois-je attendre le paiement ?",
+        "answer": "Les commissions sont payées dans les 60 jours suivant chaque vente. Pour les paiements en crypto-monnaie effectués par les clients crypto, les paiements peuvent être traités immédiatement sans seuil minimum."
+      },
+      "q13": {
+        "question": "Quelle est la durée du cookie de suivi ?",
+        "answer": "Notre cookie d'affiliation dure 60 jours, ce qui donne à vos filleuls tout le temps nécessaire pour effectuer un achat tout en étant crédités."
+      },
+      "q14": {
+        "question": "La commission est-elle récurrente ?",
+        "answer": "Oui, vous touchez une commission de 40 % sur la vente initiale ET sur tous les renouvellements ultérieurs pendant toute la durée de vie du client. Cela signifie un revenu récurrent passif tant que le client reste actif."
+      },
+      "q15": {
+        "question": "Puis-je avoir accès à des rapports en temps réel ?",
+        "answer": "Absolument ! Vous avez accès à un tableau de bord 24/7 avec des statistiques en temps réel sur les clics, les conversions, les revenus et plus encore. Exportez des rapports détaillés chaque fois que vous en avez besoin."
+      },
+      "q16": {
+        "question": "Prenez-vous en charge le suivi post-back ?",
+        "answer": "Oui, nous prenons en charge les URL de postback pour le suivi des conversions en temps réel. Cela vous permet d'intégrer votre propre plateforme de suivi pour une transparence et une optimisation totales."
+      }
+    },
+    "testimonials": {
+      "title": "Histoires de réussite",
+      "subtitle": "Écouter les témoignages de nos affiliés les plus performants",
+      "testimonial1": {
+        "quote": "Je fais la promotion de sites pour adultes depuis 10 ans, et ReelPorn a la meilleure structure de commission que j'ai jamais vue. Les 40% récurrents à vie sont imbattables. Je gagne maintenant plus de 8 000 $ par mois.",
+        "author": "Mike Chen",
+        "role": "Super Affilié",
+        "earnings": "8 000+ $/mois"
+      },
+      "testimonial2": {
+        "quote": "L'équipe d'assistance est incroyable. Mon affiliate manager m'a aidé à optimiser mes campagnes et à tripler mon taux de conversion en seulement 2 mois. Ces personnes se soucient vraiment de votre succès.",
+        "author": "Sarah Johnson",
+        "role": "Spécialiste du marketing de la performance",
+        "earnings": "5 200 $/mois"
+      },
+      "testimonial3": {
+        "quote": "Les paiements cryptographiques rapides changent la donne. Plus besoin d'attendre des semaines pour recevoir des chèques ou de faire face à des frais de virement bancaire. Je suis payé dans les heures qui suivent l'atteinte de mon seuil.",
+        "author": "Alex Rodriguez",
+        "role": "Expert en arbitrage de trafic",
+        "earnings": "12 000+ $/mois"
+      },
+      "testimonial4": {
+        "quote": "J'ai commencé comme débutant il y a 6 mois. Grâce à leur matériel promotionnel et à leurs conseils, je suis passé de 200 $/mois à 3 500 $/mois. Le potentiel de croissance est réel.",
+        "author": "Emma Davis",
+        "role": "Créateur de contenu",
+        "earnings": "3 500 $/mois"
+      },
+      "trustedBy": "Plus de 5 000 spécialistes du marketing d'affiliation dans le monde entier lui font confiance",
+      "avgEarnings": "L'affilié moyen gagne 2 400 $/mois"
+    },
+    "comparison": {
+      "title": "Pourquoi ReelPorn surpasse la concurrence",
+      "subtitle": "Comparez notre programme d'affiliation à d'autres plateformes pour adultes",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Concurrent A",
+      "competitor2": "Concurrent B",
+      "features": {
+        "commission": "Taux de commission",
+        "recurring": "Commissions récurrentes",
+        "cookieDuration": "Durée du cookie",
+        "minimumPayout": "Paiement minimum",
+        "payoutSpeed": "Vitesse de paiement",
+        "cryptoPayouts": "Paiements en crypto-monnaie",
+        "dashboard": "Tableau de bord en temps réel",
+        "support": "Support dédié",
+        "postbacks": "Intégration du postback",
+        "promoMaterials": "Matériel promotionnel"
+      },
+      "values": {
+        "commission_reelporn": "40% Durée de vie",
+        "commission_competitor1": "25% Premier mois",
+        "commission_competitor2": "30 % récurrents",
+        "recurring_reelporn": "Durée de vie",
+        "recurring_competitor1": "Non",
+        "recurring_competitor2": "6 mois",
+        "cookie_reelporn": "60 jours",
+        "cookie_competitor1": "30 jours",
+        "cookie_competitor2": "45 jours",
+        "minimum_reelporn": "0 $ (Crypto)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Dans les 60 jours",
+        "speed_competitor1": "Net 30",
+        "speed_competitor2": "45-60 jours",
+        "crypto_yes": "Oui",
+        "crypto_no": "Non",
+        "yes": "Oui",
+        "no": "Non",
+        "limited": "Limitée"
+      },
+      "footer": "Rejoignez le programme d'affiliation qui place votre réussite au premier plan"
     }
   }
 }

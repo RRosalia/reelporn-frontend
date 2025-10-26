@@ -23,7 +23,7 @@ export default function AffiliateHowItWorks({
   const steps = [step1, step2, step3, step4];
 
   return (
-    <section className="bg-white/[0.02] py-20">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="mb-14 text-center text-[42px] font-bold text-white">{title}</h2>
         <div className="mx-auto mt-14 flex max-w-[900px] flex-col gap-0">

@@ -1552,7 +1552,9 @@
     "showPassword": "Passwort anzeigen",
     "hidePassword": "Passwort verstecken",
     "minimumCharacters": "Mindestens 6 Zeichen",
-    "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein"
+    "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein",
+    "nameRequired": "Name ist erforderlich",
+    "passwordConfirmationRequired": "Passwortbestätigung ist erforderlich"
   },
   "test": {
     "welcomeMessage": "Willkommen {username}, Sie haben {count} neue Benachrichtigungen!",
@@ -1673,6 +1675,227 @@
     "meta": {
       "title": "Partnerprogramm - Verdienen Sie 40% Provision auf Lebenszeit | ReelPorn",
       "description": "Nehmen Sie an ReelPorns Partnerprogramm teil und verdienen Sie 40% Provision auf Lebenszeit für jeden Verkauf. Erhalten Sie wiederkehrende Einnahmen für immer mit unserem hochkonvertierenden Partnerprogramm für Erwachsene. 60 Tage Cookie-Laufzeit, Krypto-Auszahlungen und erstklassiger Support."
+    },
+    "earnings": {
+      "realExamplesTab": "Echte Beispiele",
+      "calculatorTab": "Verdienst-Rechner"
+    },
+    "calculator": {
+      "title": "Berechnen Sie Ihren Verdienst",
+      "subtitle": "Sehen Sie, wie viel Sie mit unserem Partnerprogramm verdienen können",
+      "referrals": "Monatliche Überweisungen",
+      "avgSpend": "Durchschnittliche Kundenausgaben (USD)",
+      "calculate": "Berechnen Sie",
+      "monthlyEarnings": "Monatliche Einnahmen",
+      "yearlyEarnings": "Jährliche Einnahmen",
+      "lifetimeEarnings": "Lifetime Value (24 Monate Durchschnitt)",
+      "lifetimeNote": "Basierend auf der durchschnittlichen 24-monatigen Kundenlebensdauer",
+      "referralsPerMonth": "überweisungen/Monat",
+      "perCustomer": "pro Kunde",
+      "disclaimer": "Dieser Rechner liefert geschätzte Einnahmen auf der Grundlage Ihrer Eingaben. Der tatsächliche Verdienst kann je nach Kundenverhalten und Kundenbindung variieren."
+    },
+    "examples": {
+      "title": "Beispiele für echte Gewinne",
+      "subtitle": "Sehen Sie, wie viel unsere Top-Partner verdienen",
+      "example1": {
+        "title": "Anfänger Affiliate",
+        "referrals": "10 Überweisungen/Monat",
+        "avgSpend": "30 Dollar pro Kunde",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Perfekt für alle, die gerade erst anfangen. Selbst mit bescheidenem Traffic können Sie ein beständiges Einkommen erzielen."
+      },
+      "example2": {
+        "title": "Wachsende Tochtergesellschaft",
+        "referrals": "50 Überweisungen/Monat",
+        "avgSpend": "$50 pro Kunde",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "Mit einem etablierten Publikum können Sie Ihre Einnahmen erheblich steigern."
+      },
+      "example3": {
+        "title": "Power Affiliate",
+        "referrals": "200 Überweisungen/Monat",
+        "avgSpend": "$75 pro Kunde",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Erstklassige Partner nutzen mehrere Traffic-Quellen, um ihr Gewinnpotenzial zu maximieren."
+      },
+      "note": "Alle Einnahmen sind wiederkehrende Provisionen auf Lebenszeit. Diese Beispiele zeigen konservative Schätzungen - viele unserer Partner verdienen noch mehr!"
+    },
+    "paymentDetails": {
+      "title": "Zahlungsdetails & Bedingungen",
+      "subtitle": "Klare und transparente Auszahlungsinformationen",
+      "minimumPayout": {
+        "title": "Mindestauszahlung",
+        "amount": "$50 USD",
+        "description": "Kein Mindestauszahlungsbetrag für Zahlungen in Kryptowährungen. Traditionelle Zahlungsmethoden haben einen Mindestbetrag von $50."
+      },
+      "paymentFrequency": {
+        "title": "Häufigkeit der Zahlungen",
+        "frequency": "Innerhalb von 60 Tagen",
+        "description": "Provisionen werden innerhalb von 60 Tagen nach jedem qualifizierten Verkauf ausgezahlt. Auszahlungen in Kryptowährungen werden schneller bearbeitet."
+      },
+      "paymentMethods": {
+        "title": "Zahlungsarten",
+        "methods": "Krypto, Überweisung, PayPal",
+        "description": "Wählen Sie aus mehreren Auszahlungsoptionen: Bitcoin, Ethereum, Litecoin, Banküberweisung oder PayPal (sofern verfügbar)."
+      },
+      "trackingWindow": {
+        "title": "Tracking-Fenster",
+        "duration": "60 Tage",
+        "description": "Die verlängerte Cookie-Laufzeit von 60 Tagen stellt sicher, dass Sie auch dann eine Gutschrift erhalten, wenn sich der Kunde Zeit lässt, sich zu entscheiden."
+      },
+      "commissionType": {
+        "title": "Art der Kommission",
+        "type": "Wiederkehrende Lebenszeit",
+        "description": "Verdienen Sie 40 % Provision für den Erstverkauf und alle künftigen Verlängerungen während der gesamten Lebensdauer des Kunden."
+      },
+      "reporting": {
+        "title": "Berichterstattung in Echtzeit",
+        "access": "24/7 Zugang zum Dashboard",
+        "description": "Zeigen Sie Klicks, Konversionen und Einnahmen in Echtzeit an. Exportieren Sie detaillierte Berichte für Ihre Unterlagen."
+      }
+    },
+    "faq": {
+      "title": "Partnerprogramm FAQ",
+      "subtitle": "Häufige Fragen zu unserem Partnerprogramm",
+      "q1": {
+        "question": "Wie viel kann ich wirklich verdienen?",
+        "answer": "Ihr Verdienstpotenzial ist unbegrenzt. Mit einer 40%igen Lebenszeitprovision auf alle Verkäufe verdienen viele unserer Top-Affiliates $5.000-$10.000+ pro Monat. Ihr Erfolg hängt von der Qualität Ihres Traffics, Ihren Werbemethoden und Ihrer Hingabe ab."
+      },
+      "q2": {
+        "question": "Wann werde ich bezahlt?",
+        "answer": "Provisionen werden innerhalb von 60 Tagen nach jedem Verkauf ausgezahlt. Für Zahlungen in Kryptowährung von Krypto-Kunden können Auszahlungen sofort und ohne Mindestbetrag bearbeitet werden. Traditionelle Zahlungsmethoden (Überweisung, PayPal) haben einen Mindestbetrag von 50 $."
+      },
+      "q3": {
+        "question": "Gibt es eine Mindestauszahlung?",
+        "answer": "Es gibt keinen Mindestauszahlungsbetrag für Zahlungen in Kryptowährungen. Für traditionelle Zahlungsmethoden wie Überweisung oder PayPal beträgt der Mindestbetrag 50 USD."
+      },
+      "q4": {
+        "question": "Wie lange ist der Keks haltbar?",
+        "answer": "Unser Affiliate-Cookie ist 60 Tage lang gültig. Das heißt, wenn jemand auf Ihren Empfehlungslink klickt, haben Sie 60 Tage Zeit, um einen Kauf zu tätigen, und Sie erhalten trotzdem eine Gutschrift."
+      },
+      "q5": {
+        "question": "Welche Werbematerialien stellen Sie zur Verfügung?",
+        "answer": "Wir bieten hochgradig konvertierende Banner, Landing Pages, Textlinks, E-Mail-Vorlagen und Werbetexte. Alle Materialien werden regelmäßig getestet und für maximale Konversionen optimiert."
+      },
+      "q6": {
+        "question": "Kann ich bezahlte Werbung nutzen?",
+        "answer": "Ja! Sie können Google Ads, Facebook Ads, native Werbung, PPV-Traffic und vieles mehr nutzen. Wir bieten Richtlinien für konforme Werbung und helfen Ihnen bei der Optimierung Ihrer Kampagnen."
+      },
+      "q7": {
+        "question": "Bieten Sie Postback/Tracking-Integration an?",
+        "answer": "Ja, wir unterstützen Postback-URLs für Conversion-Tracking in Echtzeit. Dies ermöglicht Ihnen die Integration mit Ihrer eigenen Tracking-Plattform für vollständige Transparenz."
+      },
+      "q8": {
+        "question": "Welche Art von Unterstützung bieten Sie an?",
+        "answer": "Jeder Partner erhält Zugang zu engagierten Partnermanagern, die bei der Optimierung von Kampagnen, kreativen Assets und Wachstumsstrategien helfen können. Wir haben auch 24/7 technischen Support."
+      },
+      "q9": {
+        "question": "Gibt es Einschränkungen bei den Werbemethoden?",
+        "answer": "Wir verbieten Spam, das Bieten auf Marken, Cookie-Stuffing und irreführende Behauptungen. Ansonsten steht es Ihnen frei, über Websites, soziale Medien, bezahlte Anzeigen, E-Mail-Marketing (an angemeldete Listen) und mehr zu werben."
+      },
+      "q10": {
+        "question": "Wie kann ich meine Leistung verfolgen?",
+        "answer": "Sie erhalten Zugriff auf ein umfassendes Dashboard mit Echtzeit-Statistiken zu Klicks, Konversionen, Einnahmen, Konversionsraten und mehr. Exportieren Sie jederzeit detaillierte Berichte."
+      },
+      "q11": {
+        "question": "Welche Zahlungsmöglichkeiten gibt es?",
+        "answer": "Wir bieten mehrere Auszahlungsoptionen an: Bitcoin, Ethereum, Litecoin, Banküberweisung und PayPal (sofern verfügbar). Wählen Sie die Methode, die für Sie am besten geeignet ist."
+      },
+      "q12": {
+        "question": "Wie lange muss ich auf die Zahlung warten?",
+        "answer": "Provisionen werden innerhalb von 60 Tagen nach jedem Verkauf ausgezahlt. Für Zahlungen in Kryptowährung von Krypto-Kunden können Auszahlungen sofort und ohne Mindestbetrag verarbeitet werden."
+      },
+      "q13": {
+        "question": "Wie lange dauert der Tracking-Cookie?",
+        "answer": "Unser Partner-Cookie ist 60 Tage lang gültig, so dass Ihre Empfehlungen genügend Zeit haben, einen Kauf zu tätigen, während Sie weiterhin eine Gutschrift erhalten."
+      },
+      "q14": {
+        "question": "Ist die Provision wiederkehrend?",
+        "answer": "Ja! Sie erhalten 40 % Provision auf den Erstverkauf UND alle zukünftigen Verlängerungen während der gesamten Lebensdauer des Kunden. Das bedeutet passives, wiederkehrendes Einkommen, solange der Kunde aktiv bleibt."
+      },
+      "q15": {
+        "question": "Kann ich auf Echtzeitberichte zugreifen?",
+        "answer": "Auf jeden Fall! Sie erhalten rund um die Uhr Zugang zum Dashboard mit Echtzeit-Statistiken zu Klicks, Konversionen, Einnahmen und mehr. Exportieren Sie detaillierte Berichte, wann immer Sie sie benötigen."
+      },
+      "q16": {
+        "question": "Unterstützen Sie Postback-Tracking?",
+        "answer": "Ja, wir unterstützen Postback-URLs für Conversion-Tracking in Echtzeit. Dies ermöglicht Ihnen die Integration mit Ihrer eigenen Tracking-Plattform für vollständige Transparenz und Optimierung."
+      }
+    },
+    "testimonials": {
+      "title": "Erfolgsgeschichten",
+      "subtitle": "Hören Sie von unseren leistungsstärksten Partnerunternehmen",
+      "testimonial1": {
+        "quote": "Ich werbe seit 10 Jahren für Websites für Erwachsene, und ReelPorn hat die beste Provisionsstruktur, die ich je gesehen habe. Die wiederkehrenden 40% auf Lebenszeit sind unschlagbar. Ich verdiene jetzt $8.000+ pro Monat.",
+        "author": "Mike Chen",
+        "role": "Super Affiliate",
+        "earnings": "$8.000+/Monat"
+      },
+      "testimonial2": {
+        "quote": "Das Support-Team ist unglaublich. Mein Affiliate Manager hat mir geholfen, meine Kampagnen zu optimieren und meine Konversionsrate in nur 2 Monaten zu verdreifachen. Diese Leute kümmern sich wirklich um Ihren Erfolg.",
+        "author": "Sarah Johnson",
+        "role": "Leistungsvermarkter",
+        "earnings": "5.200 Dollar/Monat"
+      },
+      "testimonial3": {
+        "quote": "Schnelle Krypto-Auszahlungen sind ein entscheidender Faktor. Ich muss nicht mehr wochenlang auf Schecks warten oder mich mit Überweisungsgebühren herumschlagen. Ich werde innerhalb von Stunden nach Erreichen meines Schwellenwerts bezahlt.",
+        "author": "Alex Rodriguez",
+        "role": "Experte für Verkehrsarbitrage",
+        "earnings": "$12.000+/Monat"
+      },
+      "testimonial4": {
+        "quote": "Ich habe vor 6 Monaten als Anfänger angefangen. Mit ihren Werbematerialien und ihrer Anleitung bin ich von 200 $/Monat auf 3.500 $/Monat gestiegen. Das Wachstumspotenzial ist real.",
+        "author": "Emma Davis",
+        "role": "Ersteller von Inhalten",
+        "earnings": "3.500 Dollar/Monat"
+      },
+      "trustedBy": "Vertrauen von mehr als 5.000 Affiliate-Vermarktern weltweit",
+      "avgEarnings": "Durchschnittlicher Partner verdient $2.400/Monat"
+    },
+    "comparison": {
+      "title": "Warum ReelPorn besser ist als die Konkurrenz",
+      "subtitle": "Vergleichen Sie unser Partnerprogramm mit anderen Plattformen für Erwachsene",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Wettbewerber A",
+      "competitor2": "Mitbewerber B",
+      "features": {
+        "commission": "Kommission",
+        "recurring": "Wiederkehrende Provisionen",
+        "cookieDuration": "Cookie Dauer",
+        "minimumPayout": "Mindestauszahlung",
+        "payoutSpeed": "Auszahlungsgeschwindigkeit",
+        "cryptoPayouts": "Krypto-Auszahlungen",
+        "dashboard": "Dashboard in Echtzeit",
+        "support": "Engagierte Unterstützung",
+        "postbacks": "Postback-Integration",
+        "promoMaterials": "Werbematerialien"
+      },
+      "values": {
+        "commission_reelporn": "40% Lebenszeit",
+        "commission_competitor1": "25% Erster Monat",
+        "commission_competitor2": "30% Wiederkehrend",
+        "recurring_reelporn": "Lebenslang",
+        "recurring_competitor1": "Nein",
+        "recurring_competitor2": "6 Monate",
+        "cookie_reelporn": "60 Tage",
+        "cookie_competitor1": "30 Tage",
+        "cookie_competitor2": "45 Tage",
+        "minimum_reelporn": "$0 (Krypto)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Innerhalb von 60 Tagen",
+        "speed_competitor1": "Netto 30",
+        "speed_competitor2": "45-60 Tage",
+        "crypto_yes": "Ja",
+        "crypto_no": "Nein",
+        "yes": "Ja",
+        "no": "Nein",
+        "limited": "Begrenzt"
+      },
+      "footer": "Nehmen Sie an dem Partnerprogramm teil, bei dem Ihr Erfolg tatsächlich an erster Stelle steht"
     }
   }
 }

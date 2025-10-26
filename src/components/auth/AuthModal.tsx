@@ -11,23 +11,23 @@ import './AuthModal.css';
 interface AuthModalProps {
   isOpen: boolean;
   onClose: () => void;
-  title?: string;
-  message?: string;
   icon?: 'heart' | 'lock' | 'star' | 'user';
   trigger?: string; // For GTM tracking - what triggered the modal to open
   mode?: 'signup' | 'login'; // Initial mode
   imageUrl?: string; // Left panel image
+  title?: string; // Custom title
+  message?: string; // Custom message
 }
 
 function AuthModal({
   isOpen,
   onClose,
-  title,
-  message,
   icon = 'heart',
   trigger = 'unknown',
   mode: initialMode = 'signup',
   imageUrl = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
+  title,
+  message,
 }: AuthModalProps) {
   const t = useTranslations('authModal');
   const router = useRouter();
@@ -89,11 +89,11 @@ function AuthModal({
 
     if (mode === 'signup') {
       if (!name) {
-        errors.name = 'Name is required';
+        errors.name = t('nameRequired');
       }
 
       if (!passwordConfirmation) {
-        errors.passwordConfirmation = 'Password confirmation is required';
+        errors.passwordConfirmation = t('passwordConfirmationRequired');
       } else if (password !== passwordConfirmation) {
         errors.passwordConfirmation = t('passwordsDoNotMatch');
       }
@@ -210,8 +210,6 @@ function AuthModal({
 
   const handleSocialLogin = (provider: 'google' | 'discord' | 'x') => {
     // Placeholder for future social login implementation
-    console.log(`Social login with ${provider} - coming soon!`);
-
     // Track social login attempt
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
@@ -255,8 +253,23 @@ function AuthModal({
         <div className="auth-modal-right">
           <div className="auth-modal-form-container">
             <h2 className="auth-modal-title">
-              {mode === 'signup' ? t('createAccount') : t('signIn')}
+              {title || (mode === 'signup' ? t('createAccount') : t('signIn'))}
             </h2>
+
+            {/* Custom Message */}
+            {message && !error && (
+              <div className="auth-modal-message" style={{
+                padding: '12px 16px',
+                marginBottom: '16px',
+                backgroundColor: 'rgba(194, 51, 138, 0.1)',
+                borderRadius: '8px',
+                color: '#666',
+                fontSize: '14px',
+                lineHeight: '1.5'
+              }}>
+                {message}
+              </div>
+            )}
 
             {/* Error Message */}
             {error && (

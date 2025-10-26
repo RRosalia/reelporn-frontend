@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // Use English translations (will be auto-translated on deployment)
-  const t = await getTranslations({ locale: 'en', namespace: 'affiliate' });
+  // Use actual locale for translations (not hardcoded 'en')
+  const t = await getTranslations({ locale, namespace: 'affiliate' });
   const title = t('meta.title');
   const description = t('meta.description');
 

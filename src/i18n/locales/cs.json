@@ -1556,7 +1556,9 @@
     "showPassword": "Zobrazit heslo",
     "hidePassword": "Skrýt heslo",
     "minimumCharacters": "Minimálně 6 znaků",
-    "passwordTooShort": "Heslo musí mít alespoň 6 znaků"
+    "passwordTooShort": "Heslo musí mít alespoň 6 znaků",
+    "nameRequired": "Je vyžadováno jméno",
+    "passwordConfirmationRequired": "Je vyžadováno potvrzení hesla"
   },
   "welcome": {
     "welcomeTitle": "Vítej, {name}!",
@@ -1673,6 +1675,227 @@
     "meta": {
       "title": "Affiliate program - Získejte 40% celoživotní provizi | ReelPorn",
       "description": "Zapojte se do partnerského programu ReelPorn a získejte 40% celoživotní provizi z každého prodeje. Získejte navždy opakující se příjmy díky našemu vysoce konverznímu partnerskému programu pro dospělé. délka trvání 60 dní, výplaty v kryptoměnách a prvotřídní podpora."
+    },
+    "earnings": {
+      "realExamplesTab": "Skutečné příklady",
+      "calculatorTab": "Kalkulačka výdělku"
+    },
+    "calculator": {
+      "title": "Výpočet výdělku",
+      "subtitle": "Podívejte se, kolik můžete vydělat s naším partnerským programem",
+      "referrals": "Měsíční doporučení",
+      "avgSpend": "Průměrná útrata zákazníka (USD)",
+      "calculate": "Výpočet",
+      "monthlyEarnings": "Měsíční výdělek",
+      "yearlyEarnings": "Roční výdělek",
+      "lifetimeEarnings": "Hodnota za celou dobu životnosti (průměrná hodnota za 24 měsíců)",
+      "lifetimeNote": "Na základě 24měsíční průměrné životnosti zákazníka",
+      "referralsPerMonth": "doporučení/měsíc",
+      "perCustomer": "na zákazníka",
+      "disclaimer": "Tato kalkulačka poskytuje odhadované příjmy na základě vašich vstupů. Skutečné výdělky se mohou lišit v závislosti na chování zákazníků a míře jejich udržení."
+    },
+    "examples": {
+      "title": "Příklady skutečných výdělků",
+      "subtitle": "Podívejte se, kolik vydělávají naši nejlepší partneři",
+      "example1": {
+        "title": "Affiliate pro začátečníky",
+        "referrals": "10 doporučení/měsíc",
+        "avgSpend": "30 USD na zákazníka",
+        "monthly": "$120",
+        "yearly": "$1,440",
+        "description": "Ideální pro začínající uživatele. I se skromnou návštěvností můžete mít stálý příjem."
+      },
+      "example2": {
+        "title": "Rostoucí pobočka",
+        "referrals": "50 doporučení/měsíc",
+        "avgSpend": "50 USD na zákazníka",
+        "monthly": "$1,000",
+        "yearly": "$12,000",
+        "description": "Se zavedeným publikem můžete výrazně zvýšit své příjmy."
+      },
+      "example3": {
+        "title": "Power Affiliate",
+        "referrals": "200 doporučení/měsíc",
+        "avgSpend": "75 USD na zákazníka",
+        "monthly": "$6,000",
+        "yearly": "$72,000",
+        "description": "Partneři nejvyšší úrovně využívají více zdrojů návštěvnosti, aby maximalizovali svůj výdělečný potenciál."
+      },
+      "note": "Všechny výdělky jsou opakující se celoživotní provize. Tyto příklady ukazují konzervativní odhady - mnoho našich partnerů vydělává ještě více!"
+    },
+    "paymentDetails": {
+      "title": "Platební údaje a podmínky",
+      "subtitle": "Jasné a transparentní informace o výplatách",
+      "minimumPayout": {
+        "title": "Minimální výplata",
+        "amount": "50 USD",
+        "description": "Žádná minimální hranice výplaty pro platby v kryptoměnách. U tradičních platebních metod je minimální částka 50 dolarů."
+      },
+      "paymentFrequency": {
+        "title": "Frekvence plateb",
+        "frequency": "Do 60 dnů",
+        "description": "Provize jsou vypláceny do 60 dnů po každém kvalifikovaném prodeji. Výplaty v kryptoměnách jsou zpracovávány rychleji."
+      },
+      "paymentMethods": {
+        "title": "Způsoby platby",
+        "methods": "Kryptoměny, bankovní převod, PayPal",
+        "description": "Vyberte si z několika možností výplaty: Bitcoin, Ethereum, Litecoin, bankovní převod nebo PayPal (pokud je k dispozici)."
+      },
+      "trackingWindow": {
+        "title": "Okno sledování",
+        "duration": "60 dní",
+        "description": "Prodloužená 60denní doba platnosti souboru cookie vám zajistí, že získáte kredit, i když si zákazník vezme čas na rozmyšlenou."
+      },
+      "commissionType": {
+        "title": "Typ provize",
+        "type": "Opakující se životnost",
+        "description": "Získejte 40 % provize z prvního prodeje a všech budoucích obnovení po celou dobu trvání smlouvy se zákazníkem."
+      },
+      "reporting": {
+        "title": "Reportování v reálném čase",
+        "access": "přístup k přístrojovému panelu 24/7",
+        "description": "Zobrazte kliknutí, konverze a příjmy v reálném čase. Exportujte podrobné přehledy pro své záznamy."
+      }
+    },
+    "faq": {
+      "title": "Nejčastější dotazy k partnerskému programu",
+      "subtitle": "Časté dotazy k našemu partnerskému programu",
+      "q1": {
+        "question": "Kolik mohu skutečně vydělat?",
+        "answer": "Váš výdělečný potenciál je neomezený. Díky 40% celoživotní provizi ze všech prodejů vydělávají mnozí z našich nejlepších partnerů více než 5 000 až 10 000 dolarů měsíčně. Váš úspěch závisí na kvalitě provozu, propagačních metodách a odhodlání."
+      },
+      "q2": {
+        "question": "Kdy dostanu výplatu?",
+        "answer": "Provize jsou vypláceny do 60 dnů po každém prodeji. V případě plateb v kryptoměnách od zákazníků s kryptopenězi lze výplaty zpracovat okamžitě bez minimální hranice. Tradiční platební metody (bankovní převod, PayPal) mají minimální limit 50 USD."
+      },
+      "q3": {
+        "question": "Je stanovena minimální výplata?",
+        "answer": "Pro platby v kryptoměnách není stanovena žádná minimální výplata. U tradičních platebních metod, jako je bankovní převod nebo PayPal, je minimum 50 USD."
+      },
+      "q4": {
+        "question": "Jak dlouho cookie vydrží?",
+        "answer": "Náš partnerský soubor cookie trvá 60 dní. To znamená, že pokud někdo klikne na váš doporučující odkaz, máte 60 dní na to, aby provedl nákup a vy jste stále získali kredit."
+      },
+      "q5": {
+        "question": "Jaké propagační materiály poskytujete?",
+        "answer": "Poskytujeme bannery, vstupní stránky, textové odkazy, e-mailové šablony a propagační texty s vysokou konverzí. Všechny materiály jsou pravidelně testovány a optimalizovány pro maximální konverze."
+      },
+      "q6": {
+        "question": "Mohu použít placenou reklamu?",
+        "answer": "Ano! Můžete použít reklamy Google, Facebook Ads, nativní reklamu, PPV provoz a další. Poskytneme vám pokyny pro reklamu v souladu s předpisy a pomůžeme vám optimalizovat vaše kampaně."
+      },
+      "q7": {
+        "question": "Nabízíte integraci zpětného přístupu/sledování?",
+        "answer": "Ano, podporujeme zpětné adresy URL pro sledování konverzí v reálném čase. To vám umožní integraci s vaší vlastní platformou pro sledování pro úplnou transparentnost."
+      },
+      "q8": {
+        "question": "Jaký druh podpory poskytujete?",
+        "answer": "Každý partner získá přístup ke specializovaným partnerským manažerům, kteří mu pomohou s optimalizací kampaní, kreativními prostředky a strategiemi růstu. Máme také nepřetržitou technickou podporu."
+      },
+      "q9": {
+        "question": "Existují nějaká omezení týkající se propagačních metod?",
+        "answer": "Zakazujeme spam, nabízení ochranných známek, vkládání souborů cookie a zavádějící tvrzení. Jinak můžete volně propagovat pomocí webových stránek, sociálních médií, placených reklam, e-mailového marketingu (na seznamy přihlášených uživatelů) a dalších prostředků."
+      },
+      "q10": {
+        "question": "Jak mohu sledovat svůj výkon?",
+        "answer": "Získáte přístup ke komplexnímu řídicímu panelu, který v reálném čase zobrazuje statistiky kliknutí, konverzí, výdělků, konverzních poměrů a dalších údajů. Kdykoli můžete exportovat podrobné přehledy."
+      },
+      "q11": {
+        "question": "Jaké jsou dostupné platební metody?",
+        "answer": "Nabízíme více možností výplaty: Bitcoin, Ethereum, Litecoin, bankovní převod a PayPal (pokud je k dispozici). Vyberte si metodu, která vám nejlépe vyhovuje."
+      },
+      "q12": {
+        "question": "Jak dlouho musím čekat na platbu?",
+        "answer": "Provize jsou vypláceny do 60 dnů po každém prodeji. V případě plateb v kryptoměnách od zákazníků s kryptopenězi lze výplaty zpracovat okamžitě bez minimální hranice."
+      },
+      "q13": {
+        "question": "Jaká je doba trvání sledovacího souboru cookie?",
+        "answer": "Náš partnerský soubor cookie trvá 60 dní, což dává vašim doporučeným osobám dostatek času na nákup, zatímco vy stále získáváte kredit."
+      },
+      "q14": {
+        "question": "Opakuje se provize?",
+        "answer": "Ano! Získáváte 40 % provize z prvního prodeje a ze všech budoucích obnovení po celou dobu životnosti zákazníka. To znamená pasivní opakující se příjem po celou dobu, kdy je zákazník aktivní."
+      },
+      "q15": {
+        "question": "Mám přístup k hlášením v reálném čase?",
+        "answer": "Rozhodně! Získáte nepřetržitý přístup k ovládacímu panelu se statistikami v reálném čase o kliknutích, konverzích, výdělcích a dalších údajích. Podrobné přehledy můžete exportovat, kdykoli je budete potřebovat."
+      },
+      "q16": {
+        "question": "Podporujete zpětné sledování?",
+        "answer": "Ano, podporujeme zpětné adresy URL pro sledování konverzí v reálném čase. To vám umožní integraci s vaší vlastní platformou pro sledování, která zajistí naprostou transparentnost a optimalizaci."
+      }
+    },
+    "testimonials": {
+      "title": "Úspěšné příběhy",
+      "subtitle": "Poslechněte si naše nejvýkonnější pobočky",
+      "testimonial1": {
+        "quote": "Propaguju stránky pro dospělé už 10 let a ReelPorn má nejlepší provizní strukturu, jakou jsem kdy viděl. Celoživotní opakující se 40 % je bezkonkurenční. Nyní vydělávám více než 8 000 dolarů měsíčně.",
+        "author": "Mike Chen",
+        "role": "Super Affiliate",
+        "earnings": "více než 8 000 USD/měsíc"
+      },
+      "testimonial2": {
+        "quote": "Tým podpory je neuvěřitelný. Můj affiliate manažer mi pomohl optimalizovat kampaně a ztrojnásobit míru konverze za pouhé 2 měsíce. Těmto lidem skutečně záleží na vašem úspěchu.",
+        "author": "Sarah Johnsonová",
+        "role": "Výkonný marketér",
+        "earnings": "5 200 USD/měsíc"
+      },
+      "testimonial3": {
+        "quote": "Rychlé výplaty kryptoměn mění pravidla hry. Už žádné týdny čekání na šeky nebo poplatky za bankovní převody. Výplatu dostanu během několika hodin po dosažení prahové hodnoty.",
+        "author": "Alex Rodriguez",
+        "role": "Expert na dopravní arbitráž",
+        "earnings": "více než 12 000 USD/měsíc"
+      },
+      "testimonial4": {
+        "quote": "Začal jsem jako začátečník před 6 měsíci. Díky jejich propagačním materiálům a vedení jsem se dostal z 200 dolarů měsíčně na 3 500 dolarů měsíčně. Potenciál růstu je reálný.",
+        "author": "Emma Davisová",
+        "role": "Tvůrce obsahu",
+        "earnings": "3 500 USD/měsíc"
+      },
+      "trustedBy": "Důvěryhodný pro více než 5 000 partnerských obchodníků po celém světě",
+      "avgEarnings": "Průměrný partner vydělává 2400 dolarů měsíčně"
+    },
+    "comparison": {
+      "title": "Proč je ReelPorn lepší než konkurence",
+      "subtitle": "Porovnejte náš partnerský program s ostatními platformami pro dospělé",
+      "reelPorn": "ReelPorn",
+      "competitor1": "Soutěžící A",
+      "competitor2": "Konkurent B",
+      "features": {
+        "commission": "Sazba provize",
+        "recurring": "Opakující se provize",
+        "cookieDuration": "Doba trvání souboru cookie",
+        "minimumPayout": "Minimální výplata",
+        "payoutSpeed": "Rychlost výplaty",
+        "cryptoPayouts": "Kryptografické výplaty",
+        "dashboard": "Přístrojový panel v reálném čase",
+        "support": "Specializovaná podpora",
+        "postbacks": "Integrace funkce Postback",
+        "promoMaterials": "Propagační materiály"
+      },
+      "values": {
+        "commission_reelporn": "40% životnost",
+        "commission_competitor1": "25% První měsíc",
+        "commission_competitor2": "30 % Opakující se",
+        "recurring_reelporn": "Doživotní",
+        "recurring_competitor1": "Ne",
+        "recurring_competitor2": "6 měsíců",
+        "cookie_reelporn": "60 dní",
+        "cookie_competitor1": "30 dní",
+        "cookie_competitor2": "45 dní",
+        "minimum_reelporn": "$0 (šifrování)",
+        "minimum_competitor1": "$100",
+        "minimum_competitor2": "$50",
+        "speed_reelporn": "Do 60 dnů",
+        "speed_competitor1": "Čistá hodnota 30",
+        "speed_competitor2": "45-60 dní",
+        "crypto_yes": "Ano",
+        "crypto_no": "Ne",
+        "yes": "Ano",
+        "no": "Ne",
+        "limited": "Omezené"
+      },
+      "footer": "Připojte se k partnerskému programu, který klade váš úspěch na první místo"
     }
   }
 }

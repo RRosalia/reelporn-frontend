@@ -28,8 +28,6 @@ export default function AffiliateTracker() {
     affiliateService
       .trackClick(ref, sub1, sub2, sub3)
       .then((response) => {
-        console.log('Affiliate click tracked successfully:', response);
-
         // Push GTM event for affiliate lead
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
