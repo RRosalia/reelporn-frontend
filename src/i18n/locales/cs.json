@@ -1556,7 +1556,9 @@
     "showPassword": "Zobrazit heslo",
     "hidePassword": "Skrýt heslo",
     "minimumCharacters": "Minimálně 6 znaků",
-    "passwordTooShort": "Heslo musí mít alespoň 6 znaků"
+    "passwordTooShort": "Heslo musí mít alespoň 6 znaků",
+    "nameRequired": "Je vyžadováno jméno",
+    "passwordConfirmationRequired": "Je vyžadováno potvrzení hesla"
   },
   "welcome": {
     "welcomeTitle": "Vítej, {name}!",
