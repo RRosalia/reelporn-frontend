@@ -1556,7 +1556,9 @@
     "showPassword": "Mostra password",
     "hidePassword": "Nascondere la password",
     "minimumCharacters": "Minimo 6 caratteri",
-    "passwordTooShort": "La password deve essere di almeno 6 caratteri"
+    "passwordTooShort": "La password deve essere di almeno 6 caratteri",
+    "nameRequired": "Il nome è obbligatorio",
+    "passwordConfirmationRequired": "È richiesta la conferma della password"
   },
   "welcome": {
     "welcomeTitle": "Benvenuto, {name}!",

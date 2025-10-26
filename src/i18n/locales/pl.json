@@ -1556,7 +1556,9 @@
     "showPassword": "Pokaż hasło",
     "hidePassword": "Ukryj hasło",
     "minimumCharacters": "Minimum 6 znaków",
-    "passwordTooShort": "Hasło musi składać się z co najmniej 6 znaków"
+    "passwordTooShort": "Hasło musi składać się z co najmniej 6 znaków",
+    "nameRequired": "Nazwa jest wymagana",
+    "passwordConfirmationRequired": "Wymagane jest potwierdzenie hasła"
   },
   "welcome": {
     "welcomeTitle": "Witaj, {name}!",

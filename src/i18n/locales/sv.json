@@ -1556,7 +1556,9 @@
     "showPassword": "Visa lösenord",
     "hidePassword": "Dölj lösenord",
     "minimumCharacters": "Minst 6 tecken",
-    "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken"
+    "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken",
+    "nameRequired": "Namn är obligatoriskt",
+    "passwordConfirmationRequired": "Bekräftelse av lösenord krävs"
   },
   "welcome": {
     "welcomeTitle": "Välkommen, __PLATSINNEHAVARE_0__!",
