@@ -21,7 +21,8 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
     const router = useRouter();
     const { isAuthenticated } = useAuth();
 
-    const [isFollowing, setIsFollowing] = useState(false);
+    // TODO: Uncomment when follow feature is implemented
+    // const [isFollowing, setIsFollowing] = useState(false);
     const [pornstar, setPornstar] = useState<Pornstar | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -88,37 +89,38 @@ export default function PornstarProfileClient({ slug, locale }: PornstarProfileC
     // );
 
     // Handler for follow button
-    const handleFollow = () => {
-        if (!isAuthenticated) {
-            setAuthModalTrigger('follow');
-            setShowAuthModal(true);
+    // TODO: Uncomment when follow feature is implemented
+    // const handleFollow = () => {
+    //     if (!isAuthenticated) {
+    //         setAuthModalTrigger('follow');
+    //         setShowAuthModal(true);
 
-            // Track attempt to follow without auth
-            if (typeof window !== 'undefined' && window.dataLayer) {
-                window.dataLayer.push({
-                    event: 'pornstar_follow_unauthenticated',
-                    pornstar_id: pornstar?.id,
-                    pornstar_name: pornstar ? `${pornstar.first_name} ${pornstar.last_name}` : '',
-                    timestamp: new Date().toISOString(),
-                });
-            }
-            return;
-        }
+    //         // Track attempt to follow without auth
+    //         if (typeof window !== 'undefined' && window.dataLayer) {
+    //             window.dataLayer.push({
+    //                 event: 'pornstar_follow_unauthenticated',
+    //                 pornstar_id: pornstar?.id,
+    //                 pornstar_name: pornstar ? `${pornstar.first_name} ${pornstar.last_name}` : '',
+    //                 timestamp: new Date().toISOString(),
+    //             });
+    //         }
+    //         return;
+    //     }
 
-        // Toggle follow status
-        setIsFollowing(!isFollowing);
+    //     // Toggle follow status
+    //     setIsFollowing(!isFollowing);
 
-        // TODO: Call API to follow/unfollow pornstar
-        // Track follow/unfollow
-        if (typeof window !== 'undefined' && window.dataLayer) {
-            window.dataLayer.push({
-                event: isFollowing ? 'pornstar_unfollow' : 'pornstar_follow',
-                pornstar_id: pornstar?.id,
-                pornstar_name: pornstar ? `${pornstar.first_name} ${pornstar.last_name}` : '',
-                timestamp: new Date().toISOString(),
-            });
-        }
-    };
+    //     // TODO: Call API to follow/unfollow pornstar
+    //     // Track follow/unfollow
+    //     if (typeof window !== 'undefined' && window.dataLayer) {
+    //         window.dataLayer.push({
+    //             event: isFollowing ? 'pornstar_unfollow' : 'pornstar_follow',
+    //             pornstar_id: pornstar?.id,
+    //             pornstar_name: pornstar ? `${pornstar.first_name} ${pornstar.last_name}` : '',
+    //             timestamp: new Date().toISOString(),
+    //         });
+    //     }
+    // };
 
     // Handler for message button
     const handleMessage = () => {

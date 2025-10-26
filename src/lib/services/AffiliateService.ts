@@ -36,10 +36,6 @@ class AffiliateService {
         ...(sub3 && { sub3 }),
       };
 
-      if (existingClickId) {
-        console.log('Sending affiliate click with existing click_id:', existingClickId);
-      }
-
       // Send API call to backend
       const response = await AffiliateRepository.registerClick(data);
 

@@ -2,7 +2,6 @@ import AccountRepository from '@/lib/repositories/AccountRepository';
 import AuthService from './AuthService';
 import type {
   ProfileData,
-  ProfileResponse,
   PasswordUpdateResponse
 } from '@/types/Account';
 import type { User } from '@/types/User';

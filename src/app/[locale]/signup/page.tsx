@@ -7,7 +7,7 @@ import { useAuth } from '@/lib/contexts/AuthContext';
 import SubscriptionRepository from '@/lib/repositories/SubscriptionRepository';
 import CheckoutRepository from '@/lib/repositories/CheckoutRepository';
 import AuthRepository from '@/lib/repositories/AuthRepository';
-import { RegisterData, LoginResponse } from '@/types/User';
+import { RegisterData } from '@/types/User';
 import { GroupedPlans, Plan, PeriodicityType, PaymentMethod } from '@/types/Payment';
 
 function SignupPage() {

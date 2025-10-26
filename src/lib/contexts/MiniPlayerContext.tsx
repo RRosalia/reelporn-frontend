@@ -3,9 +3,8 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import type { Reel } from '@/types/Reel';
 
-interface Video extends Reel {
-  // Video is an alias for Reel in the mini player context
-}
+// Video is an alias for Reel in the mini player context
+type Video = Reel;
 
 interface MiniPlayerContextType {
   isOpen: boolean;

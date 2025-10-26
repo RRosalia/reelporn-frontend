@@ -84,7 +84,7 @@ export default function NotFound() {
             </p>
 
             {/* Button */}
-            <a
+            <Link
               href="/"
               style={{
                 display: 'inline-flex',
@@ -113,7 +113,7 @@ export default function NotFound() {
             >
               <i className="bi bi-house-door"></i>
               Go to Home page
-            </a>
+            </Link>
           </div>
         </div>
       </body>

@@ -1575,6 +1575,10 @@
     "upgradeToPremium": "Upgrade to Premium"
   },
   "affiliate": {
+    "metadata": {
+      "title": "Join Our Affiliate Program - Earn 40% Commission",
+      "description": "Join the highest-paying affiliate program in adult entertainment. Earn 40% lifetime commission with 60-day cookie duration, real-time analytics, and fast crypto payouts."
+    },
     "hero": {
       "badge": "Top Performing Affiliate Program",
       "title": "Earn 40% Commission Forever",

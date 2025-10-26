@@ -144,7 +144,6 @@ export default async function PornstarProfilePage({ params }: PageProps) {
         const fullName = `${pornstar.first_name} ${pornstar.last_name}`;
         const profileImageUrl = pornstar.profile_image?.large || pornstar.profile_image?.original;
         const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://reelporn.com';
-        const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'ReelPorn';
         const profileUrl = `${siteUrl}${locale !== 'en' ? `/${locale}` : ''}/pornstar/${slug}`;
 
         const schemas = [];
