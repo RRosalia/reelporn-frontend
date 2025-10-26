@@ -89,11 +89,11 @@ function AuthModal({
 
     if (mode === 'signup') {
       if (!name) {
-        errors.name = 'Name is required';
+        errors.name = t('nameRequired');
       }
 
       if (!passwordConfirmation) {
-        errors.passwordConfirmation = 'Password confirmation is required';
+        errors.passwordConfirmation = t('passwordConfirmationRequired');
       } else if (password !== passwordConfirmation) {
         errors.passwordConfirmation = t('passwordsDoNotMatch');
       }

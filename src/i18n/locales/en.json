@@ -1555,6 +1555,8 @@
     "passwordRequired": "Password is required",
     "passwordTooShort": "Password must be at least 6 characters",
     "passwordsDoNotMatch": "Passwords do not match",
+    "nameRequired": "Name is required",
+    "passwordConfirmationRequired": "Password confirmation is required",
     "showPassword": "Show password",
     "hidePassword": "Hide password"
   },
