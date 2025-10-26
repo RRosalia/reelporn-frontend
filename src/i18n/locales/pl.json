@@ -1557,5 +1557,118 @@
     "hidePassword": "Ukryj hasło",
     "minimumCharacters": "Minimum 6 znaków",
     "passwordTooShort": "Hasło musi składać się z co najmniej 6 znaków"
+  },
+  "welcome": {
+    "welcomeTitle": "Witaj, {name}!",
+    "accountCreated": "Twoje konto zostało pomyślnie utworzone.",
+    "freeAccessTitle": "Bezpłatny dostęp",
+    "freeAccessDesc": "Przeglądaj i oglądaj ograniczoną zawartość za darmo",
+    "limitedContentTitle": "Ograniczona zawartość",
+    "limitedContentDesc": "Uaktualnij, aby uzyskać dostęp do naszej pełnej biblioteki premium",
+    "continueFree": "Kontynuuj z darmowym kontem",
+    "unlockPremium": "Odblokowanie Premium",
+    "premiumSubtitle": "Pełny dostęp do ekskluzywnej zawartości",
+    "benefit1": "Nieograniczony dostęp do wszystkich filmów",
+    "benefit2": "Streaming bez reklam",
+    "benefit3": "Jakość wideo HD i 4K",
+    "benefit4": "Pobieranie filmów do oglądania offline",
+    "upgradeToPremium": "Aktualizacja do Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Najskuteczniejszy program partnerski",
+      "title": "Zarabiaj 40% prowizji na zawsze",
+      "subtitle": "Dołącz do najlepiej płatnego programu partnerskiego w branży rozrywki dla dorosłych. Promuj treści premium i zarabiaj hojne prowizje od każdej sprzedaży - dożywotnio!",
+      "highlight1": "40% dożywotniej prowizji",
+      "highlight2": "60-dniowy okres ważności plików cookie",
+      "highlight3": "Wsparcie na światowym poziomie",
+      "joinNow": "Dołącz do programu partnerskiego"
+    },
+    "stats": {
+      "commission": "Dożywotnia prowizja",
+      "cookieDays": "Dzień Czas trwania pliku cookie",
+      "support": "Dostępne wsparcie"
+    },
+    "benefits": {
+      "title": "Dlaczego warto współpracować z ReelPorn?",
+      "subtitle": "Wiodące w branży stawki prowizji i najnowocześniejsze narzędzia maksymalizujące zarobki",
+      "commission": {
+        "title": "40% dożywotniej prowizji",
+        "description": "Zarabiaj 40% prowizji od każdej sprzedaży przez cały okres życia każdego poleconego klienta. Żadnych limitów, żadnych ograniczeń - tylko ciągły dochód pasywny."
+      },
+      "cookiePolicy": {
+        "title": "60-dniowy okres ważności pliku cookie",
+        "description": "Wydłużone 60-dniowe okno plików cookie gwarantuje, że otrzymasz kredyt za konwersje, nawet jeśli klienci potrzebują czasu na podjęcie decyzji. Twoje polecenia są chronione."
+      },
+      "realtime": {
+        "title": "Analityka w czasie rzeczywistym",
+        "description": "Śledź ruch, konwersje i zarobki w czasie rzeczywistym dzięki naszemu zaawansowanemu pulpitowi nawigacyjnemu. Zobacz dokładnie, co działa i natychmiast zoptymalizuj swoje kampanie."
+      },
+      "postbacks": {
+        "title": "Integracja Postback",
+        "description": "Zainstaluj powiadomienia zwrotne, aby otrzymywać powiadomienia w czasie rzeczywistym o każdej konwersji. Płynna integracja z systemami śledzenia zapewnia pełną przejrzystość."
+      },
+      "support": {
+        "title": "Wsparcie na światowym poziomie",
+        "description": "Dedykowani menedżerowie afiliacyjni gotowi pomóc Ci odnieść sukces. Uzyskaj porady ekspertów dotyczące optymalizacji kampanii, materiałów promocyjnych i strategii rozwoju."
+      },
+      "cryptoPayouts": {
+        "title": "Szybkie wypłaty kryptowalut",
+        "description": "Otrzymuj szybkie i bezpieczne płatności w kryptowalucie za wszystkie transakcje kryptowalutowe. Natychmiastowe wypłaty bez opóźnień i minimalnych progów."
+      }
+    },
+    "howItWorks": {
+      "title": "Jak to działa",
+      "step1": {
+        "title": "Zarejestruj się za darmo",
+        "description": "Utwórz swoje konto partnerskie w kilka minut. Uzyskaj natychmiastowy dostęp do unikalnych linków polecających i materiałów promocyjnych."
+      },
+      "step2": {
+        "title": "Promuj ReelPorn",
+        "description": "Udostępniaj linki polecające na swojej stronie internetowej, w mediach społecznościowych lub w kampaniach reklamowych. Korzystaj z naszych banerów i stron docelowych o wysokiej konwersji."
+      },
+      "step3": {
+        "title": "Track Performance",
+        "description": "Monitoruj ruch, kliknięcia, konwersje i zarobki w czasie rzeczywistym za pomocą spersonalizowanego pulpitu nawigacyjnego. Optymalizuj to, co działa najlepiej."
+      },
+      "step4": {
+        "title": "Uzyskaj płatność",
+        "description": "Otrzymuj prowizje w ciągu 60 dni od każdej sprzedaży. Wybieraj spośród wielu metod wypłat, w tym kryptowalut, aby dokonywać szybkich transakcji."
+      }
+    },
+    "features": {
+      "title": "Potężne narzędzia afiliacyjne",
+      "dashboard": {
+        "title": "Zaawansowany pulpit nawigacyjny",
+        "description": "Kompleksowa analityka pokazująca kliknięcia, konwersje, zarobki i wskaźniki wydajności w czasie rzeczywistym."
+      },
+      "analytics": {
+        "title": "Szczegółowe raportowanie",
+        "description": "Uzyskaj dostęp do szczegółowych raportów ze współczynnikami konwersji, podziałem przychodów i źródłami ruchu, aby zoptymalizować swoje kampanie."
+      },
+      "tracking": {
+        "title": "Niezawodne śledzenie",
+        "description": "Wiodąca w branży technologia śledzenia zapewnia, że każde polecenie jest dokładnie przypisywane i zapisywane na koncie użytkownika."
+      },
+      "payouts": {
+        "title": "Elastyczne wypłaty",
+        "description": "60-dniowe okno wypłaty z wieloma opcjami płatności, w tym kryptowalutą dla klientów płacących w kryptowalutach."
+      }
+    },
+    "commission": {
+      "title": "Bezkonkurencyjna struktura prowizji",
+      "description": "Oferujemy najwyższe w branży stawki prowizji, ponieważ wierzymy w hojne wynagradzanie naszych partnerów. Twój sukces jest naszym sukcesem.",
+      "item1": "40% prowizji od całej sprzedaży subskrypcji",
+      "item2": "Dożywotnie prowizje cykliczne - zarabiaj bez końca",
+      "item3": "Brak limitów prowizji lub zarobków",
+      "item4": "Szybkie wypłaty kryptowalut dla transakcji kryptowalutowych",
+      "tagline": "Dożywotni powtarzający się"
+    },
+    "cta": {
+      "title": "Gotowy do rozpoczęcia zarabiania?",
+      "description": "Dołącz do tysięcy odnoszących sukcesy partnerów zarabiających znaczne dochody dzięki promowaniu ReelPorn. Zarejestruj się już dziś i zacznij maksymalizować swój potencjał zarobkowy!",
+      "button": "Aplikuj teraz",
+      "note": "Bezpłatne dołączenie - brak miesięcznych opłat i zobowiązań"
+    }
   }
 }

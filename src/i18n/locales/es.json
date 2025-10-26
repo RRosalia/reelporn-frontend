@@ -1557,5 +1557,118 @@
     "hidePassword": "Ocultar contraseña",
     "minimumCharacters": "Mínimo 6 caracteres",
     "passwordTooShort": "La contraseña debe tener al menos 6 caracteres"
+  },
+  "welcome": {
+    "welcomeTitle": "¡Bienvenido, {name}!",
+    "accountCreated": "Su cuenta se ha creado correctamente.",
+    "freeAccessTitle": "Acceso gratuito",
+    "freeAccessDesc": "Navegue y vea gratis contenidos limitados",
+    "limitedContentTitle": "Contenido limitado",
+    "limitedContentDesc": "Actualizar para acceder a nuestra biblioteca premium completa",
+    "continueFree": "Continuar con la cuenta gratuita",
+    "unlockPremium": "Desbloquear Premium",
+    "premiumSubtitle": "Acceda a contenidos exclusivos",
+    "benefit1": "Acceso ilimitado a todos los vídeos",
+    "benefit2": "Streaming sin anuncios",
+    "benefit3": "Calidad de vídeo HD y 4K",
+    "benefit4": "Descargar vídeos para verlos sin conexión",
+    "upgradeToPremium": "Pasar a Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Programa de afiliados con mejores resultados",
+      "title": "Gane un 40% de comisión para siempre",
+      "subtitle": "Únete al programa de afiliados mejor pagado del entretenimiento para adultos. Promociona contenido premium y gana generosas comisiones por cada venta, ¡de por vida!",
+      "highlight1": "40% de comisión vitalicia",
+      "highlight2": "cookie de 60 días de duración",
+      "highlight3": "Asistencia de primera clase",
+      "joinNow": "Únase al programa de afiliados"
+    },
+    "stats": {
+      "commission": "Comisión vitalicia",
+      "cookieDays": "Día Cookie Duración",
+      "support": "Asistencia disponible"
+    },
+    "benefits": {
+      "title": "¿Por qué asociarse con ReelPorn?",
+      "subtitle": "Comisiones líderes en el sector y herramientas de vanguardia para maximizar sus ganancias",
+      "commission": {
+        "title": "40% de comisión vitalicia",
+        "description": "Gane un 40% de comisión por cada venta durante toda la vida de cada cliente que recomiende. Sin topes ni límites, solo ingresos pasivos continuos."
+      },
+      "cookiePolicy": {
+        "title": "cookie de 60 días de duración",
+        "description": "La ventana de cookies ampliada de 60 días garantiza que se le abonen las conversiones aunque los clientes tarden en decidirse. Sus referidos están protegidos."
+      },
+      "realtime": {
+        "title": "Análisis en tiempo real",
+        "description": "Controle el tráfico, las conversiones y los ingresos en tiempo real con nuestro avanzado panel de control. Vea exactamente qué está funcionando y optimice sus campañas al instante."
+      },
+      "postbacks": {
+        "title": "Integración Postback",
+        "description": "Instale postbacks para recibir notificaciones en tiempo real de cada conversión. Intégrese a la perfección con sus sistemas de seguimiento para una transparencia total."
+      },
+      "support": {
+        "title": "Asistencia de primera clase",
+        "description": "Gestores de afiliación especializados dispuestos a ayudarle a triunfar. Obtenga asesoramiento experto sobre optimización de campañas, materiales promocionales y estrategias de crecimiento."
+      },
+      "cryptoPayouts": {
+        "title": "Pagos rápidos de criptomonedas",
+        "description": "Reciba pagos de forma rápida y segura a través de criptomoneda para todas las transacciones criptográficas. Pagos instantáneos sin retrasos ni umbrales mínimos."
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "step1": {
+        "title": "Regístrate gratis",
+        "description": "Cree su cuenta de afiliado en cuestión de minutos. Obtenga acceso instantáneo a sus enlaces de referencia únicos y materiales promocionales."
+      },
+      "step2": {
+        "title": "Promocionar ReelPorn",
+        "description": "Comparta sus enlaces de recomendación en su sitio web, redes sociales o campañas publicitarias. Utilice nuestros banners y páginas de destino de alta conversión."
+      },
+      "step3": {
+        "title": "Rendimiento en pista",
+        "description": "Controle su tráfico, clics, conversiones y ganancias en tiempo real a través de su panel de control personalizado. Optimiza lo que mejor funciona."
+      },
+      "step4": {
+        "title": "Cobrar",
+        "description": "Reciba sus comisiones dentro de los 60 días de cada venta. Elija entre múltiples métodos de pago, incluyendo criptomoneda para transacciones rápidas."
+      }
+    },
+    "features": {
+      "title": "Potentes herramientas de afiliación",
+      "dashboard": {
+        "title": "Cuadro de mandos avanzado",
+        "description": "Análisis exhaustivos que muestran clics, conversiones, ganancias y métricas de rendimiento en tiempo real."
+      },
+      "analytics": {
+        "title": "Informes detallados",
+        "description": "Acceda a informes detallados con tasas de conversión, desgloses de ingresos y fuentes de tráfico para optimizar sus campañas."
+      },
+      "tracking": {
+        "title": "Seguimiento fiable",
+        "description": "La tecnología de seguimiento líder del sector garantiza que cada recomendación se atribuya con precisión y se abone en su cuenta."
+      },
+      "payouts": {
+        "title": "Pagos flexibles",
+        "description": "ventana de pago de 60 días con múltiples opciones de pago, incluyendo criptomoneda para los clientes que pagan en cripto."
+      }
+    },
+    "commission": {
+      "title": "Estructura de comisiones inmejorable",
+      "description": "Ofrecemos las comisiones más altas del sector porque creemos que hay que recompensar generosamente a nuestros socios. Su éxito es nuestro éxito.",
+      "item1": "40% de comisión en todas las ventas de suscripciones",
+      "item2": "Comisiones recurrentes de por vida: gane para siempre",
+      "item3": "Sin límites de comisiones ni de ingresos",
+      "item4": "Pagos rápidos de criptomonedas",
+      "tagline": "Recurrente de por vida"
+    },
+    "cta": {
+      "title": "¿Listo para empezar a ganar?",
+      "description": "Únete a miles de exitosos afiliados que obtienen sustanciosos ingresos promocionando ReelPorn. ¡Regístrate hoy y empieza a maximizar tu potencial de ganancias!",
+      "button": "Solicitar ahora",
+      "note": "Afiliación gratuita: sin cuotas mensuales ni compromisos"
+    }
   }
 }

@@ -1557,5 +1557,118 @@
   "test": {
     "welcomeMessage": "Willkommen {username}, Sie haben {count} neue Benachrichtigungen!",
     "simpleMessage": "Dies ist eine Testübersetzung"
+  },
+  "welcome": {
+    "welcomeTitle": "Willkommen, {name}!",
+    "accountCreated": "Ihr Konto wurde erfolgreich erstellt.",
+    "freeAccessTitle": "Freier Zugang",
+    "freeAccessDesc": "Kostenloses Stöbern und Anschauen begrenzter Inhalte",
+    "limitedContentTitle": "Begrenzter Inhalt",
+    "limitedContentDesc": "Upgrade für den Zugang zu unserer vollständigen Premium-Bibliothek",
+    "continueFree": "Weiter mit kostenlosem Konto",
+    "unlockPremium": "Premium freischalten",
+    "premiumSubtitle": "Vollständiger Zugang zu exklusiven Inhalten",
+    "benefit1": "Unbegrenzter Zugang zu allen Videos",
+    "benefit2": "Werbefreies Streaming-Erlebnis",
+    "benefit3": "HD- und 4K-Videoqualität",
+    "benefit4": "Videos zur Offline-Ansicht herunterladen",
+    "upgradeToPremium": "Upgrade auf Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Top-Performing-Partnerprogramm",
+      "title": "Verdienen Sie 40% Kommission für immer",
+      "subtitle": "Nehmen Sie am bestbezahlten Partnerprogramm der Erwachsenenunterhaltung teil. Werben Sie für Premium-Inhalte und verdienen Sie großzügige Provisionen für jeden Verkauf - ein Leben lang!",
+      "highlight1": "40% Provision auf Lebenszeit",
+      "highlight2": "60 Tage Cookie-Laufzeit",
+      "highlight3": "Weltklasse-Unterstützung",
+      "joinNow": "Am Partnerprogramm teilnehmen"
+    },
+    "stats": {
+      "commission": "Kommission auf Lebenszeit",
+      "cookieDays": "Tag Cookie Dauer",
+      "support": "Unterstützung verfügbar"
+    },
+    "benefits": {
+      "title": "Warum eine Partnerschaft mit ReelPorn?",
+      "subtitle": "Branchenführende Provisionssätze und hochmoderne Tools zur Maximierung Ihrer Einnahmen",
+      "commission": {
+        "title": "40% Kommission auf Lebenszeit",
+        "description": "Verdienen Sie 40 % Provision auf jeden Verkauf während der gesamten Lebensdauer jedes von Ihnen vermittelten Kunden. Keine Obergrenzen, keine Beschränkungen - nur laufendes passives Einkommen."
+      },
+      "cookiePolicy": {
+        "title": "60-Tage Cookie-Dauer",
+        "description": "Das erweiterte 60-Tage-Cookie-Fenster stellt sicher, dass Ihnen die Umsätze gutgeschrieben werden, auch wenn die Kunden Zeit brauchen, sich zu entscheiden. Ihre Weiterempfehlungen sind geschützt."
+      },
+      "realtime": {
+        "title": "Echtzeit-Analytik",
+        "description": "Verfolgen Sie Ihre Besucherzahlen, Konversionen und Einnahmen in Echtzeit mit unserem erweiterten Dashboard. Sehen Sie genau, was funktioniert, und optimieren Sie Ihre Kampagnen sofort."
+      },
+      "postbacks": {
+        "title": "Postback-Integration",
+        "description": "Installieren Sie Postbacks, um Echtzeit-Benachrichtigungen für jede Konversion zu erhalten. Integrieren Sie nahtlos mit Ihren Tracking-Systemen für vollständige Transparenz."
+      },
+      "support": {
+        "title": "Weltklasse-Support",
+        "description": "Engagierte Affiliate-Manager, die Ihnen zum Erfolg verhelfen. Holen Sie sich fachkundigen Rat zu Kampagnenoptimierung, Werbematerialien und Wachstumsstrategien."
+      },
+      "cryptoPayouts": {
+        "title": "Schnelle Krypto-Auszahlungen",
+        "description": "Lassen Sie sich schnell und sicher per Kryptowährung für alle Krypto-Transaktionen bezahlen. Sofortige Auszahlungen ohne Verzögerungen oder Mindestbeträge."
+      }
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "step1": {
+        "title": "Kostenlos anmelden",
+        "description": "Erstellen Sie Ihr Partnerkonto in wenigen Minuten. Erhalten Sie sofortigen Zugriff auf Ihre einzigartigen Empfehlungslinks und Werbematerialien."
+      },
+      "step2": {
+        "title": "Werben Sie für ReelPorn",
+        "description": "Teilen Sie Ihre Empfehlungslinks auf Ihrer Website, in sozialen Medien oder in Werbekampagnen. Nutzen Sie unsere hochkonvertierenden Banner und Landing Pages."
+      },
+      "step3": {
+        "title": "Leistung verfolgen",
+        "description": "Überwachen Sie Ihre Besucherzahlen, Klicks, Konversionen und Einnahmen in Echtzeit über Ihr personalisiertes Dashboard. Optimieren Sie, was am besten funktioniert."
+      },
+      "step4": {
+        "title": "Bezahlt werden",
+        "description": "Erhalten Sie Ihre Provisionen innerhalb von 60 Tagen nach jedem Verkauf. Wählen Sie aus mehreren Auszahlungsmethoden, einschließlich Kryptowährungen für schnelle Transaktionen."
+      }
+    },
+    "features": {
+      "title": "Leistungsstarke Affiliate-Tools",
+      "dashboard": {
+        "title": "Erweitertes Dashboard",
+        "description": "Umfassende Analysen, die Klicks, Konversionen, Einnahmen und Leistungsmetriken in Echtzeit anzeigen."
+      },
+      "analytics": {
+        "title": "Detaillierte Berichterstattung",
+        "description": "Greifen Sie auf detaillierte Berichte mit Konversionsraten, Umsatzaufschlüsselung und Traffic-Quellen zu, um Ihre Kampagnen zu optimieren."
+      },
+      "tracking": {
+        "title": "Zuverlässiges Tracking",
+        "description": "Die branchenführende Tracking-Technologie stellt sicher, dass jede Empfehlung genau zugeordnet und Ihrem Konto gutgeschrieben wird."
+      },
+      "payouts": {
+        "title": "Flexible Auszahlungen",
+        "description": "60-Tage-Auszahlungsfenster mit mehreren Zahlungsoptionen, einschließlich Kryptowährung für Kunden, die in Krypto zahlen."
+      }
+    },
+    "commission": {
+      "title": "Unschlagbare Provisionsstruktur",
+      "description": "Wir bieten die höchsten Provisionssätze der Branche, weil wir daran glauben, unsere Partner großzügig zu belohnen. Ihr Erfolg ist unser Erfolg.",
+      "item1": "40% Provision auf alle Abonnementverkäufe",
+      "item2": "Wiederkehrende Provisionen auf Lebenszeit - verdienen Sie für immer",
+      "item3": "Keine Provisionsobergrenzen oder Einkommensgrenzen",
+      "item4": "Schnelle Krypto-Auszahlungen für Krypto-Transaktionen",
+      "tagline": "Lebenslang Wiederkehrend"
+    },
+    "cta": {
+      "title": "Sind Sie bereit, Geld zu verdienen?",
+      "description": "Schließen Sie sich Tausenden von erfolgreichen Affiliates an, die durch Werbung für ReelPorn ein beträchtliches Einkommen erzielen. Melden Sie sich noch heute an und maximieren Sie Ihr Verdienstpotenzial!",
+      "button": "Jetzt bewerben",
+      "note": "Kostenlose Mitgliedschaft - keine monatlichen Gebühren oder Verpflichtungen"
+    }
   }
 }
