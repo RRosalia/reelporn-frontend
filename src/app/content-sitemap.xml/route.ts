@@ -124,6 +124,17 @@ export async function GET() {
     },
   ];
 
+  // Conditionally add Affiliate page if NEXT_PUBLIC_AFFILIATE_URL is set
+  if (process.env.NEXT_PUBLIC_AFFILIATE_URL) {
+    // Insert after Subscriptions (index 7)
+    urls.splice(8, 0, {
+      url: `${BASE_URL}/affiliate`,
+      changefreq: 'monthly',
+      priority: '0.7',
+      alternates: createAlternates({ en: '/affiliate', nl: '/partner-programma', de: '/partnerprogramm', fr: '/programme-affilie' }),
+    });
+  }
+
   const urlEntries = urls
     .map(
       ({ url, changefreq, priority, alternates }) => `  <url>
