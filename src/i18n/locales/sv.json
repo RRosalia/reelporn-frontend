@@ -1557,5 +1557,118 @@
     "hidePassword": "Dölj lösenord",
     "minimumCharacters": "Minst 6 tecken",
     "passwordTooShort": "Lösenordet måste innehålla minst 6 tecken"
+  },
+  "welcome": {
+    "welcomeTitle": "Välkommen, __PLATSINNEHAVARE_0__!",
+    "accountCreated": "Ditt konto har skapats framgångsrikt.",
+    "freeAccessTitle": "Fri tillgång",
+    "freeAccessDesc": "Bläddra och titta på begränsat innehåll gratis",
+    "limitedContentTitle": "Begränsat innehåll",
+    "limitedContentDesc": "Uppgradera för att få tillgång till hela vårt premiumbibliotek",
+    "continueFree": "Fortsätt med gratis konto",
+    "unlockPremium": "Lås upp Premium",
+    "premiumSubtitle": "Få full tillgång till exklusivt innehåll",
+    "benefit1": "Obegränsad tillgång till alla videor",
+    "benefit2": "Annonsfri streamingupplevelse",
+    "benefit3": "HD- och 4K-videokvalitet",
+    "benefit4": "Ladda ner videor för offlinevisning",
+    "upgradeToPremium": "Uppgradera till Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Toppresterande affiliateprogram",
+      "title": "Tjäna 40% provision för alltid",
+      "subtitle": "Gå med i det högst betalande affiliateprogrammet inom vuxenunderhållning. Marknadsför premiuminnehåll och tjäna generösa provisioner på varje försäljning - för livet!",
+      "highlight1": "40% livslång provision",
+      "highlight2": "60 dagars varaktighet för cookies",
+      "highlight3": "Support i världsklass",
+      "joinNow": "Gå med i affiliateprogram"
+    },
+    "stats": {
+      "commission": "Livstids provision",
+      "cookieDays": "Dag Cookie Varaktighet",
+      "support": "Stöd tillgängligt"
+    },
+    "benefits": {
+      "title": "Varför samarbeta med ReelPorn?",
+      "subtitle": "Branschledande provisionsnivåer och avancerade verktyg för att maximera dina intäkter",
+      "commission": {
+        "title": "40% livstids provision",
+        "description": "Tjäna 40% provision på varje försäljning under hela livstiden för varje kund du värvar. Inga tak, inga gränser - bara löpande passiv inkomst."
+      },
+      "cookiePolicy": {
+        "title": "60 dagars varaktighet för cookies",
+        "description": "Förlängd 60-dagars cookie-fönster säkerställer att du får kredit för konverteringar även om kunderna tar tid på sig att bestämma sig. Dina hänvisningar är skyddade."
+      },
+      "realtime": {
+        "title": "Analys i realtid",
+        "description": "Spåra din trafik, dina konverteringar och dina intäkter i realtid med vår avancerade instrumentpanel. Se exakt vad som fungerar och optimera dina kampanjer direkt."
+      },
+      "postbacks": {
+        "title": "Integration av postback",
+        "description": "Installera postbacks för att få aviseringar i realtid för varje konvertering. Integrera sömlöst med dina spårningssystem för fullständig transparens."
+      },
+      "support": {
+        "title": "Support i världsklass",
+        "description": "Dedikerade affiliate managers som är redo att hjälpa dig att lyckas. Få expertråd om kampanjoptimering, marknadsföringsmaterial och tillväxtstrategier."
+      },
+      "cryptoPayouts": {
+        "title": "Snabba Crypto-utbetalningar",
+        "description": "Få betalt snabbt och säkert via kryptovaluta för alla kryptotransaktioner. Omedelbara utbetalningar utan fördröjningar eller minimitrösklar."
+      }
+    },
+    "howItWorks": {
+      "title": "Hur det fungerar",
+      "step1": {
+        "title": "Registrera dig gratis",
+        "description": "Skapa ditt affiliate-konto på några minuter. Få omedelbar tillgång till dina unika hänvisningslänkar och marknadsföringsmaterial."
+      },
+      "step2": {
+        "title": "Marknadsför ReelPorn",
+        "description": "Dela dina hänvisningslänkar på din webbplats, i sociala medier eller i reklamkampanjer. Använd våra banners och målsidor med hög konvertering."
+      },
+      "step3": {
+        "title": "Spåra prestanda",
+        "description": "Övervaka din trafik, klick, konverteringar och intäkter i realtid via din personliga instrumentpanel. Optimera det som fungerar bäst."
+      },
+      "step4": {
+        "title": "Få betalt",
+        "description": "Få dina provisioner inom 60 dagar efter varje försäljning. Välj mellan flera utbetalningsmetoder, inklusive kryptovaluta för snabba transaktioner."
+      }
+    },
+    "features": {
+      "title": "Kraftfulla verktyg för affiliates",
+      "dashboard": {
+        "title": "Avancerad kontrollpanel",
+        "description": "Omfattande analyser som visar klick, konverteringar, intäkter och prestationsmått i realtid."
+      },
+      "analytics": {
+        "title": "Detaljerad rapportering",
+        "description": "Få tillgång till detaljerade rapporter med konverteringsfrekvenser, intäktsuppdelningar och trafikkällor för att optimera dina kampanjer."
+      },
+      "tracking": {
+        "title": "Tillförlitlig spårning",
+        "description": "Branschledande spårningsteknik säkerställer att varje hänvisning tillskrivs korrekt och krediteras ditt konto."
+      },
+      "payouts": {
+        "title": "Flexibla utbetalningar",
+        "description": "60 dagars utbetalningsfönster med flera betalningsalternativ, inklusive kryptovaluta för kunder som betalar i krypto."
+      }
+    },
+    "commission": {
+      "title": "Oslagbar kommissionsstruktur",
+      "description": "Vi erbjuder branschens högsta provisionsnivåer eftersom vi tror på att belöna våra partners generöst. Din framgång är vår framgång.",
+      "item1": "40% provision på all abonnemangsförsäljning",
+      "item2": "Livstids återkommande provisioner - tjäna för alltid",
+      "item3": "Inga provisionstak eller intjäningsbegränsningar",
+      "item4": "Snabba kryptoutbetalningar för kryptotransaktioner",
+      "tagline": "Livstid Återkommande"
+    },
+    "cta": {
+      "title": "Redo att börja tjäna pengar?",
+      "description": "Gå med i tusentals framgångsrika affiliates som tjänar betydande inkomster genom att marknadsföra ReelPorn. Registrera dig idag och börja maximera din intjäningspotential!",
+      "button": "Ansök nu",
+      "note": "Gratis att gå med - inga månadsavgifter eller åtaganden"
+    }
   }
 }
