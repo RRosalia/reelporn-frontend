@@ -1557,5 +1557,118 @@
     "hidePassword": "Skrýt heslo",
     "minimumCharacters": "Minimálně 6 znaků",
     "passwordTooShort": "Heslo musí mít alespoň 6 znaků"
+  },
+  "welcome": {
+    "welcomeTitle": "Vítej, {name}!",
+    "accountCreated": "Váš účet byl úspěšně vytvořen.",
+    "freeAccessTitle": "Volný přístup",
+    "freeAccessDesc": "Procházení a sledování omezeného obsahu zdarma",
+    "limitedContentTitle": "Omezený obsah",
+    "limitedContentDesc": "Upgradujte a získejte přístup k naší kompletní prémiové knihovně",
+    "continueFree": "Pokračovat s bezplatným účtem",
+    "unlockPremium": "Odemknutí služby Premium",
+    "premiumSubtitle": "Získejte plný přístup k exkluzivnímu obsahu",
+    "benefit1": "Neomezený přístup ke všem videím",
+    "benefit2": "Streamování bez reklam",
+    "benefit3": "Kvalita videa HD a 4K",
+    "benefit4": "Stahování videí pro sledování offline",
+    "upgradeToPremium": "Upgrade na Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Nejvýkonnější partnerský program",
+      "title": "Vydělávejte 40 % provize navždy",
+      "subtitle": "Připojte se k nejlépe placenému partnerskému programu v oblasti zábavy pro dospělé. Propagujte prémiový obsah a získávejte štědré provize z každého prodeje - doživotně!",
+      "highlight1": "40 % provize za celý život",
+      "highlight2": "60denní doba platnosti souborů cookie",
+      "highlight3": "Podpora na světové úrovni",
+      "joinNow": "Připojte se k partnerskému programu"
+    },
+    "stats": {
+      "commission": "Doživotní provize",
+      "cookieDays": "Den Trvání cookie",
+      "support": "Dostupná podpora"
+    },
+    "benefits": {
+      "title": "Proč spolupracovat s ReelPorn?",
+      "subtitle": "Nejlepší provize v oboru a nejmodernější nástroje pro maximalizaci vašich výdělků",
+      "commission": {
+        "title": "40 % provize za celý život",
+        "description": "Získejte 40 % provize z každého prodeje po celou dobu životnosti každého doporučeného zákazníka. Žádné limity, žádné omezení - jen trvalý pasivní příjem."
+      },
+      "cookiePolicy": {
+        "title": "60denní doba platnosti souborů cookie",
+        "description": "Prodloužené 60denní okno pro soubory cookie zajišťuje, že vám budou připsány peníze za konverze, i když se zákazníci dlouho rozhodují. Vaše doporučení jsou chráněna."
+      },
+      "realtime": {
+        "title": "Analýza v reálném čase",
+        "description": "Sledujte svou návštěvnost, konverze a výdělky v reálném čase pomocí našeho pokročilého ovládacího panelu. Zjistěte, co přesně funguje, a okamžitě optimalizujte své kampaně."
+      },
+      "postbacks": {
+        "title": "Integrace funkce Postback",
+        "description": "Nainstalujte si zpětné odkazy, abyste mohli dostávat oznámení v reálném čase o každé konverzi. Bezproblémová integrace se systémy sledování pro naprostou transparentnost."
+      },
+      "support": {
+        "title": "Podpora světové úrovně",
+        "description": "Specializovaní affiliate manažeři, kteří jsou připraveni vám pomoci uspět. Získejte odborné rady ohledně optimalizace kampaní, propagačních materiálů a strategií růstu."
+      },
+      "cryptoPayouts": {
+        "title": "Rychlé kryptografické výplaty",
+        "description": "Získejte rychlou a bezpečnou platbu v kryptoměně za všechny kryptografické transakce. Okamžité výplaty bez zpoždění nebo minimálních prahů."
+      }
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "step1": {
+        "title": "Zaregistrujte se zdarma",
+        "description": "Vytvořte si partnerský účet během několika minut. Získejte okamžitý přístup ke svým jedinečným referenčním odkazům a propagačním materiálům."
+      },
+      "step2": {
+        "title": "Propagace ReelPorn",
+        "description": "Sdílejte odkazy na doporučení na svých webových stránkách, sociálních sítích nebo v reklamních kampaních. Použijte naše vysoce konverzní bannery a vstupní stránky."
+      },
+      "step3": {
+        "title": "Výkonnost trati",
+        "description": "Sledujte svou návštěvnost, prokliky, konverze a výdělky v reálném čase prostřednictvím personalizovaného ovládacího panelu. Optimalizujte to, co funguje nejlépe."
+      },
+      "step4": {
+        "title": "Získejte zaplaceno",
+        "description": "Provize obdržíte do 60 dnů od každého prodeje. Vyberte si z několika způsobů výplaty včetně kryptoměn pro rychlé transakce."
+      }
+    },
+    "features": {
+      "title": "Výkonné partnerské nástroje",
+      "dashboard": {
+        "title": "Pokročilý přístrojový panel",
+        "description": "Komplexní analytika zobrazující prokliky, konverze, příjmy a výkonnostní metriky v reálném čase."
+      },
+      "analytics": {
+        "title": "Podrobné hlášení",
+        "description": "Získejte přístup k podrobným přehledům s konverzními poměry, rozdělením příjmů a zdroji návštěvnosti, abyste mohli optimalizovat své kampaně."
+      },
+      "tracking": {
+        "title": "Spolehlivé sledování",
+        "description": "Špičková technologie sledování zajišťuje, že každé doporučení je přesně přiřazeno a připsáno na váš účet."
+      },
+      "payouts": {
+        "title": "Flexibilní výplaty",
+        "description": "60denní výplatní okno s několika možnostmi plateb včetně kryptoměn pro zákazníky, kteří platí v kryptoměnách."
+      }
+    },
+    "commission": {
+      "title": "Bezkonkurenční struktura provizí",
+      "description": "Nabízíme nejvyšší provize v oboru, protože věříme ve štědré odměňování našich partnerů. Váš úspěch je i naším úspěchem.",
+      "item1": "40% provize ze všech prodejů předplatného",
+      "item2": "Doživotní opakující se provize - vydělávejte navždy",
+      "item3": "Žádné provizní limity ani omezení výdělku",
+      "item4": "Rychlé kryptografické výplaty pro kryptografické transakce",
+      "tagline": "Opakující se doživotní"
+    },
+    "cta": {
+      "title": "Jste připraveni začít vydělávat?",
+      "description": "Připojte se k tisícům úspěšných partnerů, kteří propagací ReelPornu vydělávají značné částky. Zaregistrujte se ještě dnes a začněte maximalizovat svůj výdělečný potenciál!",
+      "button": "Použít nyní",
+      "note": "Vstup zdarma - žádné měsíční poplatky ani závazky"
+    }
   }
 }

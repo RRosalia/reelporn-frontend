@@ -5,47 +5,50 @@ import type { AffiliateLeadData, AffiliateLeadResponse } from '@/types/Affiliate
  * Affiliate Service - Handles affiliate tracking business logic
  */
 class AffiliateService {
-  private COOKIE_NAME = 'affiliate_ref';
-  private COOKIE_EXPIRY_DAYS = 60;
+  private COOKIE_NAME = 'affiliate_click_id';
 
   /**
    * Track affiliate click from URL parameters
-   * Stores cookie for 60 days and sends API call to backend ONLY on first detection (when no click_id exists)
+   * Stores cookie with backend-controlled expiration and sends API call to backend
+   * If click_id already exists, sends it along with the new click
    * @param {string} ref - Affiliate reference ID
    * @param {string} [sub1] - Optional sub ID 1
    * @param {string} [sub2] - Optional sub ID 2
    * @param {string} [sub3] - Optional sub ID 3
-   * @returns {Promise<AffiliateLeadResponse | null>} Response data or null if already tracked
+   * @returns {Promise<AffiliateLeadResponse>} Response data
    */
   async trackClick(
     ref: string,
     sub1?: string,
     sub2?: string,
     sub3?: string
-  ): Promise<AffiliateLeadResponse | null> {
-    // Check if already tracked (cookie with click_id exists)
-    if (this.hasExistingClickId()) {
-      console.log('Affiliate click_id already exists in cookie, skipping API call');
-      return null;
-    }
-
+  ): Promise<AffiliateLeadResponse> {
     try {
+      // Check if already tracked (cookie with click_id exists)
+      const existingClickId = this.getCookie();
+
       // Prepare data for API call
       const data: AffiliateLeadData = {
         ref,
+        ...(existingClickId && { click_id: existingClickId }),
         ...(sub1 && { sub1 }),
         ...(sub2 && { sub2 }),
         ...(sub3 && { sub3 }),
       };
 
-      // Send API call to backend (only happens once when click_id doesn't exist)
+      if (existingClickId) {
+        console.log('Sending affiliate click with existing click_id:', existingClickId);
+      }
+
+      // Send API call to backend
       const response = await AffiliateRepository.registerClick(data);
 
-      // Extract click_id from response
-      const clickId = response.data.id;
+      // Extract click_id and expiration_date from response
+      const clickId = response.data.click_id;
+      const expirationDate = response.data.expiration_date;
 
-      // Store cookie for 60 days with click_id
-      this.setCookie(ref, clickId, sub1, sub2, sub3);
+      // Store cookie with backend-controlled expiration (only stores click_id)
+      this.setCookie(clickId, expirationDate);
 
       return response;
     } catch (error) {
@@ -56,36 +59,25 @@ class AffiliateService {
   }
 
   /**
-   * Set affiliate cookie with 60 day expiry
-   * @param {string} ref - Affiliate reference ID
+   * Set affiliate cookie with backend-controlled expiration
    * @param {string} clickId - Unique click ID from backend
-   * @param {string} [sub1] - Optional sub ID 1
-   * @param {string} [sub2] - Optional sub ID 2
-   * @param {string} [sub3] - Optional sub ID 3
+   * @param {string} expirationDate - ISO 8601 timestamp for cookie expiration from backend
    */
-  private setCookie(ref: string, clickId: string, sub1?: string, sub2?: string, sub3?: string): void {
+  private setCookie(clickId: string, expirationDate: string): void {
     if (typeof document === 'undefined') return;
 
-    const cookieData = {
-      ref,
-      click_id: clickId,
-      ...(sub1 && { sub1 }),
-      ...(sub2 && { sub2 }),
-      ...(sub3 && { sub3 }),
-      tracked_at: new Date().toISOString(),
-    };
+    // Use backend-provided expiration date
+    const expires = new Date(expirationDate);
 
-    const expires = new Date();
-    expires.setDate(expires.getDate() + this.COOKIE_EXPIRY_DAYS);
-
-    document.cookie = `${this.COOKIE_NAME}=${encodeURIComponent(JSON.stringify(cookieData))}; expires=${expires.toUTCString()}; path=/; SameSite=Lax`;
+    // Store only the click_id as a plain string
+    document.cookie = `${this.COOKIE_NAME}=${encodeURIComponent(clickId)}; expires=${expires.toUTCString()}; path=/; SameSite=Lax`;
   }
 
   /**
-   * Get affiliate cookie data
-   * @returns {object | null} Cookie data or null if not found
+   * Get affiliate click_id from cookie
+   * @returns {string | null} Click ID or null if not found
    */
-  getCookie(): { ref: string; click_id?: string; sub1?: string; sub2?: string; sub3?: string; tracked_at: string } | null {
+  getCookie(): string | null {
     if (typeof document === 'undefined') return null;
 
     const name = this.COOKIE_NAME + '=';
@@ -99,24 +91,10 @@ class AffiliateService {
       }
       if (cookie.indexOf(name) === 0) {
         const cookieValue = cookie.substring(name.length);
-        try {
-          return JSON.parse(cookieValue);
-        } catch (e) {
-          console.error('Failed to parse affiliate cookie:', e);
-          return null;
-        }
+        return decodeURIComponent(cookieValue);
       }
     }
     return null;
-  }
-
-  /**
-   * Check if affiliate cookie with click_id already exists
-   * @returns {boolean}
-   */
-  hasExistingClickId(): boolean {
-    const cookie = this.getCookie();
-    return cookie !== null && !!cookie.click_id;
   }
 
   /**

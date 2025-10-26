@@ -42,7 +42,7 @@ export interface RegisterData {
   payment_options?: {
     currency?: string;
   };
-  ref?: string;
+  click_id?: string; // Affiliate click_id for commission tracking
 }
 
 /**

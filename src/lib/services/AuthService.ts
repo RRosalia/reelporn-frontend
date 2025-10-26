@@ -1,4 +1,4 @@
-import AuthRepository from '@/lib/repositories/AuthRepository';
+import AuthRepository, { RegisterResponse } from '@/lib/repositories/AuthRepository';
 import AffiliateService from '@/lib/services/AffiliateService';
 import type {
   LoginResponse,
@@ -47,13 +47,14 @@ class AuthService {
   /**
    * Register new user
    * @param {RegisterData} userData
-   * @returns {Promise<LoginResponse>} Registration response data
+   * @returns {Promise<RegisterResponse>} Registration response data
    */
-  async register(userData: RegisterData): Promise<LoginResponse> {
-    // Get affiliate click_id from cookie if it exists and send it as ref
-    const affiliateCookie = AffiliateService.getCookie();
-    if (affiliateCookie?.click_id) {
-      userData.ref = affiliateCookie.click_id;
+  async register(userData: RegisterData): Promise<RegisterResponse> {
+    // Get affiliate click_id from cookie if it exists and send it for commission tracking
+    const clickId = AffiliateService.getCookie();
+
+    if (clickId) {
+      userData.click_id = clickId;
     }
 
     // Call repository to register

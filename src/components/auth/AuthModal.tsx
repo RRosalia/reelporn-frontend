@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useAuth } from '@/lib/contexts/AuthContext';
 import AuthService from '@/lib/services/AuthService';
@@ -29,7 +30,8 @@ function AuthModal({
   imageUrl = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
 }: AuthModalProps) {
   const t = useTranslations('authModal');
-  const { login } = useAuth();
+  const router = useRouter();
+  const { login, refreshAuth } = useAuth();
 
   const [mode, setMode] = useState<'signup' | 'login'>(initialMode);
   const [name, setName] = useState('');
@@ -140,6 +142,9 @@ function AuthModal({
 
         const response = await AuthService.register(registerData);
 
+        // Update AuthContext with new user data (user is now logged in)
+        refreshAuth();
+
         // Track successful registration
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
@@ -150,9 +155,16 @@ function AuthModal({
           });
         }
 
-        // After successful registration, reload the page to update AuthContext
-        // This is simpler than manually updating all the state
-        window.location.reload();
+        // Redirect based on payment requirement
+        const requiresPayment = response.data?.requires_payment ?? false;
+        if (requiresPayment) {
+          // User needs to complete payment - redirect to payment page
+          const paymentId = response.data?.payment?.payment_id;
+          router.push(paymentId ? `/payment/${paymentId}` : '/payment');
+        } else {
+          // User signed up successfully without payment - redirect to welcome page
+          router.push('/welcome');
+        }
       }
     } catch (err: unknown) {
       console.error(`${mode === 'login' ? 'Login' : 'Registration'} error:`, err);

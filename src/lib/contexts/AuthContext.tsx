@@ -12,6 +12,7 @@ interface AuthContextType {
   login: (email: string, password: string) => Promise<LoginResponse>;
   logout: () => Promise<void>;
   updateUser: (userData: User) => void;
+  refreshAuth: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -73,6 +74,20 @@ export function AuthProvider({ children }: AuthProviderProps) {
     AuthService.setUser(userData);
   };
 
+  const refreshAuth = () => {
+    const authenticated = AuthService.isAuthenticated();
+    const userData = AuthService.getUser();
+
+    setIsAuthenticated(authenticated);
+    setUser(userData);
+
+    // Reconfigure Echo with authentication token if user is logged in
+    const token = AuthService.getToken();
+    if (token) {
+      initializeEcho(token);
+    }
+  };
+
   const value: AuthContextType = {
     isAuthenticated,
     user,
@@ -80,6 +95,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     login,
     logout,
     updateUser,
+    refreshAuth,
   };
 
   return (

@@ -1557,5 +1557,118 @@
   "test": {
     "welcomeMessage": "Welkom {username}, u hebt {count} nieuwe meldingen!",
     "simpleMessage": "Dit is een testvertaling"
+  },
+  "welcome": {
+    "welcomeTitle": "Welkom, {name}!",
+    "accountCreated": "Je account is succesvol aangemaakt.",
+    "freeAccessTitle": "Gratis toegang",
+    "freeAccessDesc": "Gratis bladeren en beperkte inhoud bekijken",
+    "limitedContentTitle": "Beperkte inhoud",
+    "limitedContentDesc": "Upgrade om toegang te krijgen tot onze volledige premium bibliotheek",
+    "continueFree": "Doorgaan met gratis account",
+    "unlockPremium": "Premium ontgrendelen",
+    "premiumSubtitle": "Krijg volledige toegang tot exclusieve content",
+    "benefit1": "Onbeperkte toegang tot alle video's",
+    "benefit2": "Advertentievrije streamingervaring",
+    "benefit3": "HD- & 4K-videokwaliteit",
+    "benefit4": "Video's downloaden om offline te bekijken",
+    "upgradeToPremium": "Upgrade naar Premium"
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Top presterend affiliate programma",
+      "title": "Voor altijd 40% commissie verdienen",
+      "subtitle": "Doe mee aan het bestbetaalde partnerprogramma in entertainment voor volwassenen. Promoot eersteklas content en verdien royale commissies op elke verkoop - levenslang!",
+      "highlight1": "40% levenslange commissie",
+      "highlight2": "duur van 60 dagen cookie",
+      "highlight3": "Ondersteuning van wereldklasse",
+      "joinNow": "Word lid van het partnerprogramma"
+    },
+    "stats": {
+      "commission": "Commissie voor het leven",
+      "cookieDays": "Dag Cookie Duur",
+      "support": "Beschikbare ondersteuning"
+    },
+    "benefits": {
+      "title": "Waarom samenwerken met ReelPorn?",
+      "subtitle": "Toonaangevende commissiepercentages en geavanceerde tools om je inkomsten te maximaliseren",
+      "commission": {
+        "title": "40% levenslange commissie",
+        "description": "Verdien 40% commissie op elke verkoop gedurende de hele levensduur van elke klant die je doorverwijst. Geen limieten, geen beperkingen - gewoon doorlopend passief inkomen."
+      },
+      "cookiePolicy": {
+        "title": "duur van 60 dagen",
+        "description": "Het uitgebreide cookievenster van 60 dagen zorgt ervoor dat je wordt gecrediteerd voor conversies, zelfs als klanten tijd nodig hebben om te beslissen. Je verwijzingen zijn beschermd."
+      },
+      "realtime": {
+        "title": "Real-Time Analytics",
+        "description": "Volg je verkeer, conversies en inkomsten in realtime met ons geavanceerde dashboard. Zie precies wat werkt en optimaliseer je campagnes direct."
+      },
+      "postbacks": {
+        "title": "Postback-integratie",
+        "description": "Installeer postbacks om realtime meldingen te ontvangen voor elke conversie. Integreer naadloos met je volgsystemen voor volledige transparantie."
+      },
+      "support": {
+        "title": "Ondersteuning van wereldklasse",
+        "description": "Toegewijde affiliate managers staan klaar om je te helpen slagen. Krijg deskundig advies over campagneoptimalisatie, promotiemateriaal en groeistrategieën."
+      },
+      "cryptoPayouts": {
+        "title": "Snelle Crypto Uitbetalingen",
+        "description": "Krijg snel en veilig betaald via cryptocurrency voor alle cryptotransacties. Directe uitbetalingen zonder vertragingen of minimumdrempels."
+      }
+    },
+    "howItWorks": {
+      "title": "Hoe het werkt",
+      "step1": {
+        "title": "Gratis aanmelden",
+        "description": "Maak je affiliate account aan in enkele minuten. Krijg direct toegang tot je unieke doorverwijslinks en promotiemateriaal."
+      },
+      "step2": {
+        "title": "ReelPorn promoten",
+        "description": "Deel je doorverwijslinks op je website, sociale media of reclamecampagnes. Gebruik onze banners en landingspagina's met hoge conversie."
+      },
+      "step3": {
+        "title": "Spoorprestaties",
+        "description": "Houd je verkeer, klikken, conversies en verdiensten in realtime in de gaten via je persoonlijke dashboard. Optimaliseer wat het beste werkt."
+      },
+      "step4": {
+        "title": "Betaald krijgen",
+        "description": "Ontvang je commissies binnen 60 dagen na elke verkoop. Kies uit meerdere uitbetalingsmethoden, waaronder cryptocurrency voor snelle transacties."
+      }
+    },
+    "features": {
+      "title": "Krachtige affiliate tools",
+      "dashboard": {
+        "title": "Geavanceerd dashboard",
+        "description": "Uitgebreide analyses die klikken, conversies, inkomsten en prestatiecijfers in realtime weergeven."
+      },
+      "analytics": {
+        "title": "Gedetailleerde rapportage",
+        "description": "Krijg toegang tot gedetailleerde rapporten met conversiepercentages, omzetverdelingen en verkeersbronnen om je campagnes te optimaliseren."
+      },
+      "tracking": {
+        "title": "Betrouwbaar traceren",
+        "description": "Toonaangevende trackingtechnologie zorgt ervoor dat elke verwijzing nauwkeurig wordt toegewezen en bijgeschreven op je account."
+      },
+      "payouts": {
+        "title": "Flexibele uitbetalingen",
+        "description": "uitbetalingsvenster van 60 dagen met meerdere betalingsopties, waaronder cryptocurrency voor klanten die in crypto betalen."
+      }
+    },
+    "commission": {
+      "title": "Onverslaanbare commissiestructuur",
+      "description": "We bieden de hoogste commissietarieven in de sector omdat we geloven in het royaal belonen van onze partners. Uw succes is ons succes.",
+      "item1": "40% commissie op alle abonnementenverkoop",
+      "item2": "Levenslang terugkerende commissies - voor altijd verdienen",
+      "item3": "Geen commissielimieten of verdienbeperkingen",
+      "item4": "Snelle uitbetalingen voor cryptotransacties",
+      "tagline": "Levenslang Terugkerend"
+    },
+    "cta": {
+      "title": "Klaar om te beginnen verdienen?",
+      "description": "Sluit je aan bij duizenden succesvolle affiliates die een aanzienlijk inkomen verdienen door ReelPorn te promoten. Meld je vandaag nog aan en begin met het maximaliseren van je verdienpotentieel!",
+      "button": "Nu solliciteren",
+      "note": "Gratis deelname - Geen maandelijkse kosten of verplichtingen"
+    }
   }
 }
