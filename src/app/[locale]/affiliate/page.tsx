@@ -1,25 +1,23 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import AffiliatePageClient from './AffiliatePageClient';
+import AffiliatePageClient from '@/components/affiliate/AffiliatePageClient';
 
-interface PageProps {
-  params: Promise<{
-    locale: string;
-  }>;
-}
+// Force dynamic rendering since we check environment variables
+export const dynamic = 'force-dynamic';
 
-// Generate metadata for the page
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'affiliate' });
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'ReelPorn';
+
   const affiliateUrl = process.env.NEXT_PUBLIC_AFFILIATE_URL;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://reelporn.ai';
 
   // If affiliate program is not active, add noindex
   if (!affiliateUrl) {
     return {
-      title: `${t('metadata.title')} | ${siteName}`,
-      description: t('metadata.description'),
       robots: {
         index: false,
         follow: false,
@@ -27,16 +25,58 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  // Use actual locale for translations (not hardcoded 'en')
+  const t = await getTranslations({ locale, namespace: 'affiliate' });
+  const title = t('meta.title');
+  const description = t('meta.description');
+
+  // Generate alternate language URLs based on routing config
+  const alternateLanguages: Record<string, string> = {
+    'en': `${siteUrl}/affiliate`,
+    'nl': `${siteUrl}/nl/partner-programma`,
+    'de': `${siteUrl}/de/partnerprogramm`,
+    'fr': `${siteUrl}/fr/programme-affilie`,
+  };
+
+  const canonicalUrl = alternateLanguages[locale] || `${siteUrl}/affiliate`;
+
   return {
-    title: `${t('metadata.title')} | ${siteName}`,
-    description: t('metadata.description'),
-    keywords: 'affiliate program, earn commission, adult entertainment, referral program, passive income',
-    category: 'Business',
+    title,
+    description,
+    keywords: [
+      'affiliate program',
+      'partner program',
+      '40% commission',
+      'lifetime commission',
+      'recurring revenue',
+      'crypto payouts',
+      'adult affiliate',
+      'revenue share'
+    ].join(', '),
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'ReelPorn',
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: alternateLanguages,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
-export default async function AffiliatePage({ params }: PageProps) {
-  await params; // Ensure params are consumed
-
+export default function AffiliatePage() {
   return <AffiliatePageClient />;
 }
